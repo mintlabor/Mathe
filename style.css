@@ -91,6 +91,31 @@ h2 { font-size: 1.3rem; margin: 2rem 0 1rem; }
   text-align: center;
 }
 
+/* Abschnitte innerhalb einer Einheit */
+.abschnitt { margin-top: 2.25rem; }
+.abschnitt h2 { margin-bottom: .25rem; }
+.abschnitt .beschreibung { color: var(--muted); margin: 0 0 1rem; }
+
+.kachel .nr {
+  font-size: .85rem;
+  font-weight: 600;
+  color: var(--farbe, var(--accent));
+  text-transform: uppercase;
+  letter-spacing: .04em;
+}
+
+/* Stunden, die noch nicht ausgearbeitet sind */
+.kachel.geplant {
+  border-left-color: var(--border);
+  background: #fbfbfd;
+  cursor: default;
+}
+.kachel.geplant:hover { transform: none; box-shadow: none; }
+.kachel.geplant .nr { color: var(--muted); }
+.kachel.geplant .info::after { content: " · in Planung"; }
+
+.legende { color: var(--muted); font-size: .9rem; margin-top: .5rem; }
+
 footer {
   text-align: center;
   color: var(--muted);
