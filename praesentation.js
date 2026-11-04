@@ -18,6 +18,7 @@
     <div data-gluecksrad='[["1","#e03131"],["2","#1c7ed6"],...]'>
                                   Glücksrad          (Ereignis "gedreht", detail = Feld-Index)
     .karten .karte                Klick deckt Lösung auf; [data-alle-auf] / [data-alle-zu]
+    <span class="eis" data-eis="EI"></span>   EIS-Kennzeichnung (Enaktiv · Ikonisch · Symbolisch)
 
   Tasten: → Leertaste weiter · ← zurück · T Timer · N Hinweise · F Vollbild
 */
@@ -125,6 +126,14 @@
     else if (e.key === "n" || e.key === "N") aktionen.notizen();
     else if (e.key === "f" || e.key === "F") vollbild();
     else if (e.key === "t" || e.key === "T") laeuft ? stopp() : start();
+  });
+
+  // ---------- EIS-Kennzeichnung: <span class="eis" data-eis="EI"></span> ----------
+  document.querySelectorAll(".eis[data-eis]").forEach(el => {
+    const an = el.dataset.eis.toUpperCase();
+    const namen = { E: "enaktiv – handeln", I: "ikonisch – Bild", S: "symbolisch – Zeichen/Formel" };
+    el.title = "EIS-Prinzip: " + [...an].map(b => namen[b]).filter(Boolean).join(", ");
+    el.innerHTML = ["E", "I", "S"].map(b => `<span class="${an.includes(b) ? "an" : ""}">${b}</span>`).join("");
   });
 
   // ---------- Würfel ----------

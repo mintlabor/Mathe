@@ -19,7 +19,7 @@
   @media (max-width: 900px) { .vergleich { grid-template-columns: 1fr; } }
 </style>
 </head>
-<body data-phasen='[["Einstieg",5],["Experiment",12],["Auswertung",10],["Sicherung",8],["Übung",10]]'>
+<body data-phasen='[["Problem",5],["Experiment",12],["Auswertung",10],["Sicherung",8],["Übung",7],["Abschluss",3]]'>
 
 <div class="leiste">
   <div class="pfad"><a href="../../../../">Start</a> › <a href="../../../">Klasse 8</a> › <a href="../../">Hauptschule</a> › <a href="../">Wahrscheinlichkeiten</a> › Stunde 3</div>
@@ -28,8 +28,20 @@
 <div class="buehne">
 
   <!-- 1 Titel + Einstieg -->
-  <section class="folie" data-phase="Einstieg">
+  <section class="folie" data-phase="Problem">
     <div class="kennung">Wahrscheinlichkeiten · Stunde 3</div>
+    <h2>Ein Spielstand für das Schulfest</h2>
+    <div class="problem">
+      <div class="label">Problem</div><br>
+      Eure Klasse plant für das Schulfest einen <strong>Heftzwecken-Stand</strong>, um Geld für die Klassenkasse zu verdienen:<br>
+      Ein Spiel kostet <strong>50 Cent</strong>. Man wirft eine Heftzwecke. Landet sie auf dem <strong>Kopf</strong>, bekommt man <strong>1 €</strong>.<br>
+      <strong>Verdient die Klasse damit Geld, oder macht sie Verlust?</strong>
+    </div>
+    <div class="hinweis">Problem vorlesen und erste Vermutungen sammeln. Leitfrage herausarbeiten: Wir müssen wissen, wie oft die Heftzwecke auf dem Kopf landet. Landet sie in mehr als der Hälfte der Würfe auf dem Kopf, verliert die Klasse Geld.</div>
+  </section>
+
+  <section class="folie" data-phase="Problem">
+    <div class="kennung">Problem<span class="eis" data-eis="I"></span></div>
     <h2>Wie landet die Heftzwecke?</h2>
     <div class="zwecke">
       <figure>
@@ -63,9 +75,9 @@
     <div class="hinweis">Eine Heftzwecke zeigen und einmal werfen. Abstimmung per Handzeichen, Ergebnis an der Tafel notieren. Wichtig: Anders als beim Würfel sind die beiden Ergebnisse nicht gleich wahrscheinlich, das kann man nicht „sehen“. (KC: Zufallsexperimente durchführen und auswerten, z. B. Heftzwecke)</div>
   </section>
 
-  <!-- 2 Experiment -->
+  <!-- Experiment -->
   <section class="folie" data-phase="Experiment" data-minuten="8">
-    <div class="kennung">Experiment · Gruppenarbeit</div>
+    <div class="kennung">Experiment · Gruppenarbeit<span class="eis" data-eis="E"></span></div>
     <h2>Wir werfen die Heftzwecke</h2>
     <div class="zweispaltig">
       <div>
@@ -90,7 +102,7 @@
 
   <!-- 3 Problem: Wer hatte öfter Kopf? -->
   <section class="folie" data-phase="Auswertung">
-    <div class="kennung">Auswertung</div>
+    <div class="kennung">Auswertung<span class="eis" data-eis="IS"></span></div>
     <h2>Wer hatte öfter „Kopf“?</h2>
     <div class="vergleich">
       <div class="kasten">
@@ -103,24 +115,29 @@
       </div>
     </div>
     <p class="schritt">Gruppe A hatte öfter Kopf, aber sie hat auch <strong>öfter geworfen</strong>. Ist das gerecht verglichen?</p>
+    <div class="schritt" style="display:grid; grid-template-columns: 9rem 1fr 5rem; gap:.6rem 1rem; align-items:center; font-size:1.3rem; max-width: 900px">
+      <span>Gruppe A</span><div class="balken"><div style="width:60%"></div><span class="marke" style="left:50%"></span></div><strong>?</strong>
+      <span>Gruppe B</span><div class="balken"><div style="width:65%"></div><span class="marke" style="left:50%"></span></div><strong>?</strong>
+      <span></span><span class="klein">Ganzer Balken = alle Würfe der Gruppe · Strich = Hälfte</span><span></span>
+    </div>
     <p class="schritt">Wir vergleichen den <strong>Anteil</strong>:
       &nbsp; A: <span class="bruch"><span>30</span><span>50</span></span> = 0,6 = <strong>60 %</strong>
       &nbsp;&nbsp; B: <span class="bruch"><span>26</span><span>40</span></span> = 0,65 = <strong>65 %</strong></p>
     <p class="schritt"><strong>Gruppe B</strong> hatte im Verhältnis öfter Kopf!</p>
-    <div class="hinweis">Problem erst offen diskutieren lassen. Viele Schüler vergleichen zunächst nur 30 und 26. Kernidee: Bei unterschiedlicher Gesamtzahl hilft nur der Anteil.</div>
+    <div class="hinweis">Problem erst offen diskutieren lassen. Viele Schüler vergleichen zunächst nur 30 und 26. Die Balken (ikonisch) machen sichtbar: Jeder Balken steht für alle Würfe einer Gruppe, gefüllt ist der Teil mit „Kopf“. Danach erst rechnen (symbolisch). Kernidee: Bei unterschiedlicher Gesamtzahl hilft nur der Anteil.</div>
   </section>
 
   <!-- 4 Klassentabelle -->
   <section class="folie" data-phase="Auswertung">
-    <div class="kennung">Auswertung</div>
+    <div class="kennung">Auswertung<span class="eis" data-eis="IS"></span></div>
     <h2>Unsere Ergebnisse</h2>
     <table class="strich klasse" id="klassentabelle">
       <thead>
-        <tr><th>Gruppe</th><th>Würfe gesamt</th><th>davon Kopf</th><th>Anteil (Bruch)</th><th>Dezimalzahl</th><th>Prozent</th></tr>
+        <tr><th>Gruppe</th><th>Würfe gesamt</th><th>davon Kopf</th><th>Anteil (Bruch)</th><th>Dezimalzahl</th><th>Prozent</th><th style="min-width:11rem">Anteil als Balken</th></tr>
       </thead>
       <tbody></tbody>
       <tfoot>
-        <tr class="summe"><td>Klasse</td><td data-s="wuerfe">–</td><td data-s="kopf">–</td><td data-s="bruch">–</td><td data-s="dez">–</td><td data-s="proz">–</td></tr>
+        <tr class="summe"><td>Klasse</td><td data-s="wuerfe">–</td><td data-s="kopf">–</td><td data-s="bruch">–</td><td data-s="dez">–</td><td data-s="proz">–</td><td data-s="balken"></td></tr>
       </tfoot>
     </table>
     <div class="tabellenknoepfe">
@@ -128,12 +145,12 @@
       <button class="knopf" id="leeren">Tabelle leeren</button>
     </div>
     <p class="klein" style="margin-top:.5rem">Das Klassenergebnis wird für Stunde 4 gespeichert (nur in diesem Browser).</p>
-    <div class="hinweis">Gruppen nennen ihre Zahlen, du trägst ein. Fragen: Welche Gruppe hatte den größten Anteil? Warum sind die Anteile verschieden? Was fällt beim Klassenergebnis auf?</div>
+    <div class="hinweis">Gruppen nennen ihre Zahlen, du trägst ein. Fragen: Welche Gruppe hatte den größten Anteil? Warum sind die Anteile verschieden? Liegt der Balken über oder unter der Hälfte (Strich)? Was bedeutet das für unseren Schulfest-Stand?</div>
   </section>
 
   <!-- 5 Merksatz -->
   <section class="folie" data-phase="Sicherung">
-    <div class="kennung">Sicherung</div>
+    <div class="kennung">Sicherung<span class="eis" data-eis="S"></span></div>
     <h2>Absolute und relative Häufigkeit</h2>
     <div class="merk">
       <h3>Merke</h3>
@@ -152,7 +169,7 @@
 
   <!-- 6 Übung -->
   <section class="folie" data-phase="Übung">
-    <div class="kennung">Übung</div>
+    <div class="kennung">Übung<span class="eis" data-eis="S"></span></div>
     <h2>Jetzt du!</h2>
     <div class="uebung">
       <div class="zeile"><div class="n">a</div><div>
@@ -172,7 +189,30 @@
         <div class="antwort schritt">Zusammen immer 100 % (= 1), denn bei jedem Wurf tritt genau eine Lage ein.</div>
       </div></div>
     </div>
-    <div class="hinweis">Einzelarbeit, dann Vergleich. Hausaufgabe: Werft zu Hause eine Münze 20-mal und berechnet die relative Häufigkeit von „Kopf“. Ergebnisse mitbringen, wir brauchen sie in Stunde 4.</div>
+    <div class="hinweis">Einzelarbeit, dann Vergleich. Wenn die Zeit knapp ist: c) als Hausaufgabe.</div>
+  </section>
+
+  <!-- Abschluss: zurück zum Problem -->
+  <section class="folie" data-phase="Abschluss">
+    <div class="kennung">Abschluss · zurück zum Problem<span class="eis" data-eis="S"></span></div>
+    <h2>Lohnt sich unser Schulfest-Stand?</h2>
+    <p style="margin-top:0">Angenommen, <strong>100 Personen</strong> spielen. Unser Klassenergebnis: <strong id="abP">–</strong> Kopf.</p>
+    <div class="uebung">
+      <div class="zeile"><div class="n">1</div><div>
+        <div class="frage">Einnahmen: 100 · 0,50 €</div>
+        <div class="antwort schritt">= <strong>50 €</strong></div>
+      </div></div>
+      <div class="zeile"><div class="n">2</div><div>
+        <div class="frage">Wie oft müssen wir etwa 1 € auszahlen?</div>
+        <div class="antwort schritt" id="abAus">–</div>
+      </div></div>
+      <div class="zeile"><div class="n">3</div><div>
+        <div class="frage">Gewinn oder Verlust für die Klassenkasse?</div>
+        <div class="antwort schritt" id="abErg">–</div>
+      </div></div>
+    </div>
+    <p class="schritt klein"><strong>Hausaufgabe:</strong> Wirf zu Hause eine Münze 20-mal und notiere, wie oft „Kopf“ kommt. Bring dein Ergebnis mit, wir brauchen es in Stunde 4.</p>
+    <div class="hinweis">Die Zahlen werden automatisch aus der Klassentabelle übernommen. Ist noch nichts eingetragen, wird mit 60 % gerechnet. Ausblick: Wie sicher ist unser Ergebnis? Würden wir mit mehr Würfen etwas anderes herausbekommen? → Stunde 4.</div>
   </section>
 
 </div>
@@ -194,7 +234,8 @@
       const nr = tbody.children.length + 1;
       const tr = document.createElement("tr");
       tr.innerHTML = `<td>${nr}</td><td><input type="number" min="0" value="${w}"></td><td><input type="number" min="0" value="${k}"></td>` +
-        `<td class="ergebnis"></td><td class="ergebnis"></td><td class="ergebnis"></td>`;
+        `<td class="ergebnis"></td><td class="ergebnis"></td><td class="ergebnis"></td>` +
+        `<td><div class="balken klein"><div style="width:0"></div><span class="marke" style="left:50%"></span></div></td>`;
       tr.querySelectorAll("input").forEach(i => i.addEventListener("input", berechnen));
       tbody.appendChild(tr);
     }
@@ -206,14 +247,17 @@
         const [iw, ik] = tr.querySelectorAll("input");
         const w = parseInt(iw.value), k = parseInt(ik.value);
         const zellen = tr.querySelectorAll(".ergebnis");
+        const fuellung = tr.querySelector(".balken > div");
         if (w > 0 && k >= 0 && k <= w) {
           zellen[0].innerHTML = bruch(k, w);
           zellen[1].textContent = Praes.zahl(k / w, 3);
           zellen[2].textContent = Praes.prozent(k / w);
+          fuellung.style.width = (k / w * 100) + "%";
           sw += w; sk += k;
           daten.push([w, k]);
         } else {
           zellen.forEach(z => z.textContent = (iw.value || ik.value) ? "?" : "");
+          fuellung.style.width = "0";
         }
       });
       const fuss = s => document.querySelector(`[data-s="${s}"]`);
@@ -222,10 +266,28 @@
         fuss("bruch").innerHTML = bruch(sk, sw);
         fuss("dez").textContent = Praes.zahl(sk / sw, 3);
         fuss("proz").textContent = Praes.prozent(sk / sw);
+        fuss("balken").innerHTML = `<div class="balken klein"><div style="width:${sk / sw * 100}%"></div><span class="marke" style="left:50%"></span></div>`;
       } else {
-        ["wuerfe", "kopf", "bruch", "dez", "proz"].forEach(s => fuss(s).textContent = "–");
+        ["wuerfe", "kopf", "bruch", "dez", "proz", "balken"].forEach(s => fuss(s).textContent = "–");
       }
       try { localStorage.setItem(SPEICHER, JSON.stringify(daten)); } catch (e) {}
+      abschluss(sw > 0 ? sk / sw : null);
+    }
+
+    // Abschluss: Lohnt sich der Schulfest-Stand? (100 Spieler, 50 ct Einsatz, 1 € Auszahlung bei Kopf)
+    function abschluss(p) {
+      const geschaetzt = p === null;
+      if (geschaetzt) p = 0.6;
+      const prozent = Math.round(p * 100);
+      const auszahlung = prozent; // bei 100 Spielern: prozent-mal 1 €
+      const saldo = 50 - auszahlung;
+      document.getElementById("abP").textContent = prozent + " %" + (geschaetzt ? " (Beispielwert)" : "");
+      document.getElementById("abAus").innerHTML = `etwa <strong>${auszahlung}</strong>-mal (${prozent} % von 100) → <strong>${auszahlung} €</strong> Auszahlung`;
+      document.getElementById("abErg").innerHTML = saldo > 0
+        ? `50 € − ${auszahlung} € = <strong class="ja">${saldo} € Gewinn</strong>`
+        : saldo < 0
+          ? `50 € − ${auszahlung} € = <strong class="nein">${-saldo} € Verlust</strong>. Wir müssen die Regeln ändern!`
+          : `50 € − 50 € = <strong>0 €</strong>, weder Gewinn noch Verlust.`;
     }
 
     let gespeichert = [];

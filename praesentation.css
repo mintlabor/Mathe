@@ -63,6 +63,30 @@ body {
   color: var(--accent); margin-bottom: .5rem;
 }
 .mitte { align-items: center; justify-content: center; text-align: center; }
+
+/* EIS-Kennzeichnung: Enaktiv · Ikonisch · Symbolisch */
+.eis { display: inline-flex; gap: .2rem; margin-left: .6rem; vertical-align: 1px; }
+.eis span {
+  width: 1.45rem; height: 1.45rem; border-radius: 6px; background: var(--border); color: var(--muted);
+  font-size: .8rem; display: inline-flex; align-items: center; justify-content: center; letter-spacing: 0;
+}
+.eis span.an { background: var(--accent); color: #fff; }
+
+/* Problemkasten am Stundenanfang */
+.problem {
+  background: #fff; border: 3px solid var(--text); border-radius: 18px; padding: 1.2rem 1.6rem;
+  font-size: 1.55rem; line-height: 1.45; max-width: 1000px;
+}
+.problem .label {
+  display: inline-block; background: var(--text); color: #fff; font-size: .95rem; font-weight: 700;
+  letter-spacing: .05em; text-transform: uppercase; padding: .15rem .6rem; border-radius: 6px; margin-bottom: .5rem;
+}
+
+/* Anteilsbalken (ikonische Darstellung von Anteilen) */
+.balken { height: 2rem; background: var(--border); border-radius: 8px; overflow: hidden; position: relative; min-width: 160px; }
+.balken > div { height: 100%; background: var(--accent); transition: width .6s ease; }
+.balken.klein { height: 1.3rem; border-radius: 6px; }
+.balken .marke { position: absolute; top: 0; bottom: 0; width: 2px; background: rgba(0,0,0,.35); }
 .klein { font-size: 1.2rem !important; color: var(--muted); }
 
 .schritt { visibility: hidden; opacity: 0; transition: opacity .35s ease; }
@@ -132,6 +156,12 @@ body {
 .karte.offen.moeglich .loesung { color: #a26f00; }
 .karte.offen.unmoeglich { background: var(--rot-hell); border-color: var(--rot); }
 .karte.offen.unmoeglich .loesung { color: var(--rot); }
+.karte.offen.ja { background: var(--gruen-hell); border-color: var(--gruen); }
+.karte.offen.ja .loesung { color: var(--gruen); }
+.karte.offen.nein { background: var(--rot-hell); border-color: var(--rot); }
+.karte.offen.nein .loesung { color: var(--rot); }
+.l-ja::before { background: var(--gruen); }
+.l-nein::before { background: var(--rot); }
 .legende { display: flex; gap: 1.5rem; margin: 0 0 1rem; font-size: 1.2rem; flex-wrap: wrap; align-items: center; }
 .legende span::before { content: ""; display: inline-block; width: 1rem; height: 1rem; border-radius: 4px; margin-right: .4rem; vertical-align: -2px; }
 .l-sicher::before { background: var(--gruen); }

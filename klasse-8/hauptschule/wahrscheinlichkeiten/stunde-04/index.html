@@ -32,7 +32,7 @@
   .ld-ziel::before { background: var(--rot); }
 </style>
 </head>
-<body data-phasen='[["Einstieg",5],["Erarbeitung I",10],["Erarbeitung II",10],["Sicherung",8],["Übung",10],["Abschluss",2]]'>
+<body data-phasen='[["Problem",5],["Erarbeitung I",12],["Erarbeitung II",8],["Sicherung",8],["Übung",10],["Abschluss",2]]'>
 
 <div class="leiste">
   <div class="pfad"><a href="../../../../">Start</a> › <a href="../../../">Klasse 8</a> › <a href="../../">Hauptschule</a> › <a href="../">Wahrscheinlichkeiten</a> › Stunde 4</div>
@@ -40,19 +40,50 @@
 
 <div class="buehne">
 
-  <!-- 1 Einstieg -->
-  <section class="folie" data-phase="Einstieg">
+  <!-- 1 Problem -->
+  <section class="folie" data-phase="Problem">
     <div class="kennung">Wahrscheinlichkeiten · Stunde 4</div>
-    <h2>Je öfter, desto genauer?</h2>
-    <div class="sprechblase">„Ich habe 10-mal gewürfelt und 4-mal eine Sechs bekommen. Bei meinem Würfel kommt die Sechs also in <strong>40 %</strong> aller Würfe!“</div>
-    <p style="margin-left: 1rem">– Paul</p>
-    <p class="schritt"><strong>Hat Paul recht?</strong> Was meint ihr?</p>
-    <div class="hinweis">Meinungen sammeln, noch nicht auflösen. Paul rechnet die relative Häufigkeit richtig aus (4/10 = 40 %), zieht aber aus nur 10 Würfen einen zu starken Schluss. Am Ende der Stunde zurückkommen.</div>
+    <h2>Betrug an der Losbude?</h2>
+    <div class="problem">
+      <div class="label">Problem</div><br>
+      Auf dem Schützenfest steht an der Losbude ein großes Schild: <strong>„Jedes 4. Los gewinnt!“</strong><br>
+      Tim kauft <strong>8 Lose</strong>. Nur <strong>eins</strong> davon gewinnt.
+    </div>
+    <div class="sprechblase schritt">„Das ist Betrug! Bei 8 Losen hätten <strong>2</strong> gewinnen müssen!“</div>
+    <p class="schritt" style="margin-left: 1rem">– Tim</p>
+    <p class="schritt"><strong>Hat Tim recht?</strong> Was meint ihr?</p>
+    <div class="hinweis">Meinungen sammeln, an der Tafel festhalten, noch nicht auflösen. Tim rechnet richtig (8 : 4 = 2), erwartet aber zu viel Genauigkeit von nur 8 Losen. Am Ende der Stunde zurückkommen.</div>
   </section>
 
-  <!-- 2 Hausaufgabe auswerten -->
+  <!-- 2 Losbude nachspielen -->
+  <section class="folie" data-phase="Erarbeitung I" data-minuten="5">
+    <div class="kennung">Erarbeitung I · Partnerarbeit<span class="eis" data-eis="E"></span></div>
+    <h2>Wir spielen die Losbude nach</h2>
+    <div class="zweispaltig">
+      <div>
+        <ol>
+          <li>Ihr bekommt <strong>4 Zettel</strong>. Auf einem ist ein ⭐ (Gewinn).</li>
+          <li>Faltet die Zettel und mischt sie in einem Becher.</li>
+          <li>Zieht einen Zettel, notiert „Gewinn“ oder „Niete“ und legt ihn <strong>zurück</strong>.</li>
+          <li>Das macht ihr <strong>8-mal</strong>, genau wie Tim.</li>
+        </ol>
+      </div>
+      <div class="kasten">
+        <p style="margin:0 0 .4rem"><strong>Wie viele Gewinne hattet ihr?</strong></p>
+        <p class="klein" style="margin:0">Die Lehrkraft sammelt an der Tafel:</p>
+        <table class="strich" style="margin-top:.6rem">
+          <tr><th>Gewinne</th><th>0</th><th>1</th><th>2</th><th>3</th><th>4+</th></tr>
+          <tr><th>Paare</th><td></td><td></td><td></td><td></td><td></td></tr>
+        </table>
+      </div>
+    </div>
+    <p class="schritt">Nicht alle Paare hatten genau 2 Gewinne, obwohl jedes 4. Los gewinnt!</p>
+    <div class="hinweis">Material: pro Paar 4 Zettel (einer mit Stern) und ein Becher. Ergebnisse per Handzeichen in die Tafeltabelle. Erwartbar: von 0 bis 4 Gewinnen ist alles dabei. Das ist schon die halbe Antwort auf Tims Problem.</div>
+  </section>
+
+  <!-- 3 Hausaufgabe auswerten -->
   <section class="folie" data-phase="Erarbeitung I">
-    <div class="kennung">Erarbeitung I · Hausaufgabe</div>
+    <div class="kennung">Erarbeitung I · Hausaufgabe<span class="eis" data-eis="I"></span></div>
     <h2>Unsere Münzwürfe</h2>
     <div class="eingabe">
       <label for="hausaufgabe" style="font-size:1.25rem">Wie oft „Kopf“ bei 20 Würfen?</label>
@@ -70,13 +101,15 @@
 
   <!-- 3 Simulation -->
   <section class="folie" data-phase="Erarbeitung II">
-    <div class="kennung">Erarbeitung II · Computersimulation</div>
-    <h2>Was passiert bei sehr vielen Würfen?</h2>
+    <div class="kennung">Erarbeitung II · Computersimulation<span class="eis" data-eis="I"></span></div>
+    <h2>Was passiert bei sehr vielen Versuchen?</h2>
     <div class="steuerung">
-      <button class="knopf mittel gewaehlt" data-exp="wuerfel">Würfel: Sechs</button>
+      <button class="knopf mittel gewaehlt" data-exp="los">Losbude: Gewinn</button>
+      <button class="knopf mittel" data-exp="wuerfel">Würfel: Sechs</button>
       <button class="knopf mittel" data-exp="muenze">Münze: Kopf</button>
       <span class="trenner"></span>
-      <button class="knopf mittel" data-plus="10">+10 Würfe</button>
+      <button class="knopf mittel" data-plus="8">+8</button>
+      <button class="knopf mittel" data-plus="10">+10</button>
       <button class="knopf mittel" data-plus="100">+100</button>
       <button class="knopf mittel" data-plus="1000">+1.000</button>
       <button class="knopf mittel" data-plus="10000">+10.000</button>
@@ -86,12 +119,12 @@
     </div>
     <svg class="diagramm" id="simDiagramm"></svg>
     <div class="anzeige" id="simAnzeige"></div>
-    <div class="hinweis">Erst mit „+10“ mehrmals klicken: starke Schwankungen. Dann +100, +1.000, +10.000. Vorher fragen: Wo wird sich die Linie einpendeln? Erst danach „Wert zeigen“ (Sechs: 1/6 ≈ 16,7 %, Kopf: 50 %). Mit „Neu“ mehrmals wiederholen: Der Anfang sieht jedes Mal anders aus, das Ende fast gleich.</div>
+    <div class="hinweis">Mit „Losbude“ starten: Erst „+8“ klicken (= Tims 8 Lose), mit „Neu“ mehrmals wiederholen. Mal 0, mal 1, mal 3 Gewinne. Dann +100, +1.000, +10.000. Vorher fragen: Wo wird sich die Linie einpendeln? Erst danach „Wert zeigen“ (Los: 1/4 = 25 %, Sechs: 1/6 ≈ 16,7 %, Kopf: 50 %).</div>
   </section>
 
   <!-- 4 Merksatz -->
   <section class="folie" data-phase="Sicherung">
-    <div class="kennung">Sicherung</div>
+    <div class="kennung">Sicherung<span class="eis" data-eis="S"></span></div>
     <h2>Das Gesetz der großen Zahlen</h2>
     <div class="merk">
       <h3>Merke</h3>
@@ -108,12 +141,12 @@
 
   <!-- 5 Übung -->
   <section class="folie" data-phase="Übung">
-    <div class="kennung">Übung</div>
+    <div class="kennung">Übung · zurück zum Problem<span class="eis" data-eis="S"></span></div>
     <h2>Jetzt du!</h2>
     <div class="uebung">
       <div class="zeile"><div class="n">a</div><div>
-        <div class="frage">Hat Paul recht? Begründe mit dem Gesetz der großen Zahlen.</div>
-        <div class="antwort schritt"><span class="nein">Nein.</span> 10 Würfe sind zu wenige. Bei vielen Würfen pendelt sich die Sechs bei etwa 17 % ein.</div>
+        <div class="frage">Hat Tim recht? Begründe mit dem Gesetz der großen Zahlen. Wie viele Gewinne erwartest du ungefähr, wenn an einem Abend 400 Lose verkauft werden?</div>
+        <div class="antwort schritt"><span class="nein">Nein.</span> 8 Lose sind zu wenige, da kann es stark schwanken. Bei 400 Losen erwartet man etwa 400 : 4 = <strong>100</strong> Gewinne.</div>
       </div></div>
       <div class="zeile"><div class="n">b</div><div>
         <div class="frage">Lea: „Die Münze hat fünfmal hintereinander Zahl gezeigt. Jetzt muss Kopf kommen!“ Stimmt das?</div>
@@ -197,10 +230,11 @@
   // ---------- Simulation ----------
   (function () {
     const EXP = {
-      wuerfel: { p: 1 / 6, name: "Sechs", ziel: "1/6 ≈ 16,7 %" },
-      muenze: { p: 1 / 2, name: "Kopf", ziel: "1/2 = 50 %" }
+      los: { p: 1 / 4, name: "Gewinn", ziel: "1/4 = 25 %", einheit: "Lose" },
+      wuerfel: { p: 1 / 6, name: "Sechs", ziel: "1/6 ≈ 16,7 %", einheit: "Würfe" },
+      muenze: { p: 1 / 2, name: "Kopf", ziel: "1/2 = 50 %", einheit: "Würfe" }
     };
-    let exp = "wuerfel", n = 0, treffer = 0, verlauf = [], zielZeigen = false;
+    let exp = "los", n = 0, treffer = 0, verlauf = [], zielZeigen = false;
     const svg = document.getElementById("simDiagramm");
     const anzeige = document.getElementById("simAnzeige");
 
@@ -208,8 +242,8 @@
       // höchstens ca. 800 Punkte zeichnen
       const schritt = Math.max(1, Math.ceil(verlauf.length / 800));
       const pts = verlauf.filter((_, i) => i % schritt === 0 || i === verlauf.length - 1);
-      diagramm(svg, { maxX: Math.max(n, 10), linien: [pts], ziel: zielZeigen ? EXP[exp].p : null });
-      anzeige.innerHTML = `<span>Würfe: <b>${n.toLocaleString("de-DE")}</b></span>` +
+      diagramm(svg, { maxX: Math.max(n, 8), linien: [pts], ziel: zielZeigen ? EXP[exp].p : null, xTitel: "Anzahl der " + EXP[exp].einheit });
+      anzeige.innerHTML = `<span>${EXP[exp].einheit}: <b>${n.toLocaleString("de-DE")}</b></span>` +
         `<span>davon ${EXP[exp].name}: <b>${treffer.toLocaleString("de-DE")}</b></span>` +
         `<span>relative Häufigkeit: <b>${n ? Praes.prozent(treffer / n) : "–"}</b></span>` +
         (zielZeigen ? `<span>Wahrscheinlichkeit: <b style="color:var(--rot)">${EXP[exp].ziel}</b></span>` : "");
