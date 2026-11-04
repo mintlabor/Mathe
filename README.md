@@ -6,30 +6,32 @@ Digitale Unterrichtseinheiten zum Durchspielen im Unterricht (Beamer / Browser).
 
 ```
 Mathe/
-├── index.html              ← Startseite: Auswahl Klasse 5–10
-├── style.css               ← gemeinsames Design für alle Seiten
+├── index.html                  ← Startseite: Auswahl Klasse 5–10
+├── style.css                   ← gemeinsames Design für alle Seiten
 ├── klasse-5/
-│   ├── index.html          ← Übersicht aller Einheiten der Klasse 5
-│   └── natuerliche-zahlen/ ← eine Unterrichtseinheit
-│       ├── index.html      ← Übersicht der Stunden dieser Einheit
-│       ├── stunde-1/       ← eine einzelne Stunde (Präsentation)
-│       └── stunde-2/
-├── klasse-6/
-├── klasse-7/
-├── klasse-8/
-│   ├── index.html          ← Auswahl der Schulform
-│   ├── realschule/         ← Einheiten Realschule
-│   └── hauptschule/        ← Einheiten Hauptschule
-├── klasse-9/
-└── klasse-10/
+│   ├── index.html              ← Auswahl der Schulform
+│   ├── realschule/
+│   │   ├── index.html          ← Übersicht aller Einheiten (Klasse 5, RS)
+│   │   └── natuerliche-zahlen/ ← eine Unterrichtseinheit
+│   │       ├── index.html      ← Übersicht der Stunden dieser Einheit
+│   │       ├── stunde-1/       ← eine einzelne Stunde (Präsentation)
+│   │       └── stunde-2/
+│   └── hauptschule/
+│       └── index.html          ← Übersicht aller Einheiten (Klasse 5, HS)
+├── klasse-6/   (realschule/, hauptschule/)
+├── klasse-7/   (realschule/, hauptschule/)
+├── klasse-8/   (realschule/, hauptschule/)
+├── klasse-9/   (realschule/, hauptschule/)
+└── klasse-10/  (realschule/, hauptschule/)
 ```
 
 **Ebene 1:** Startseite → Klasse wählen
-**Ebene 2:** Klasse → Unterrichtseinheit wählen
-**Ebene 3:** Unterrichtseinheit → Stunde wählen
-**Ebene 4:** Stunde → im Unterricht durchspielen
+**Ebene 2:** Klasse → Schulform wählen (Realschule / Hauptschule)
+**Ebene 3:** Schulform → Unterrichtseinheit wählen
+**Ebene 4:** Unterrichtseinheit → Stunde wählen
+**Ebene 5:** Stunde → im Unterricht durchspielen
 
-Jede Seite hat oben eine Pfad-Navigation (z. B. *Start › Klasse 7 › Prozentrechnung › Stunde 2*),
+Jede Seite hat oben eine Pfad-Navigation (z. B. *Start › Klasse 7 › Realschule › Prozentrechnung › Stunde 2*),
 damit man jederzeit eine Ebene zurückspringen kann.
 
 ## Hinweis
