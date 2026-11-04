@@ -17,6 +17,9 @@ Mathe/
 ├── klasse-6/
 ├── klasse-7/
 ├── klasse-8/
+│   ├── index.html          ← Auswahl der Schulform
+│   ├── realschule/         ← Einheiten Realschule
+│   └── hauptschule/        ← Einheiten Hauptschule
 ├── klasse-9/
 └── klasse-10/
 ```
