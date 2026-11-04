@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Stunde 4: Je öfter, desto genauer – Wahrscheinlichkeiten</title>
+<link rel="stylesheet" href="../../../../praesentation.css">
+<style>
+  .sprechblase {
+    position: relative; background: var(--card); border: 2px solid var(--text); border-radius: 18px;
+    padding: 1.1rem 1.5rem; font-size: 1.6rem; max-width: 900px; margin: .5rem 0 1.5rem;
+  }
+  .sprechblase::after {
+    content: ""; position: absolute; left: 50px; bottom: -22px; border: 11px solid transparent;
+    border-top: 11px solid var(--text);
+  }
+  .diagramm { width: 100%; height: 360px; background: var(--card); border: 1px solid var(--border); border-radius: 14px; }
+  .diagramm text { font-family: system-ui, sans-serif; }
+  .steuerung { display: flex; gap: .5rem; flex-wrap: wrap; align-items: center; margin: .25rem 0 .75rem; }
+  .steuerung .trenner { width: 1px; height: 2rem; background: var(--border); margin: 0 .4rem; }
+  .anzeige { display: flex; gap: 2rem; font-size: 1.35rem; margin-top: .6rem; flex-wrap: wrap; }
+  .anzeige b { color: var(--accent); }
+  .eingabe { display: flex; gap: .75rem; align-items: center; flex-wrap: wrap; margin-bottom: .75rem; }
+  .eingabe input {
+    font-size: 1.3rem; padding: .4rem .7rem; border: 1px solid var(--border); border-radius: 10px;
+    width: 32rem; max-width: 100%; font-family: inherit;
+  }
+  .legende-dia { display: flex; gap: 1.5rem; font-size: 1.1rem; color: var(--muted); margin-top: .4rem; flex-wrap: wrap; }
+  .legende-dia span::before { content: ""; display: inline-block; width: 1.4rem; height: .3rem; margin-right: .4rem; vertical-align: middle; border-radius: 2px; }
+  .ld-punkt::before { background: #adb5bd; height: .7rem !important; width: .7rem !important; border-radius: 50% !important; }
+  .ld-linie::before { background: var(--accent); }
+  .ld-ziel::before { background: var(--rot); }
+</style>
+</head>
+<body data-phasen='[["Einstieg",5],["Erarbeitung I",10],["Erarbeitung II",10],["Sicherung",8],["Übung",10],["Abschluss",2]]'>
+
+<div class="leiste">
+  <div class="pfad"><a href="../../../../">Start</a> › <a href="../../../">Klasse 8</a> › <a href="../../">Hauptschule</a> › <a href="../">Wahrscheinlichkeiten</a> › Stunde 4</div>
+</div>
+
+<div class="buehne">
+
+  <!-- 1 Einstieg -->
+  <section class="folie" data-phase="Einstieg">
+    <div class="kennung">Wahrscheinlichkeiten · Stunde 4</div>
+    <h2>Je öfter, desto genauer?</h2>
+    <div class="sprechblase">„Ich habe 10-mal gewürfelt und 4-mal eine Sechs bekommen. Bei meinem Würfel kommt die Sechs also in <strong>40 %</strong> aller Würfe!“</div>
+    <p style="margin-left: 1rem">– Paul</p>
+    <p class="schritt"><strong>Hat Paul recht?</strong> Was meint ihr?</p>
+    <div class="hinweis">Meinungen sammeln, noch nicht auflösen. Paul rechnet die relative Häufigkeit richtig aus (4/10 = 40 %), zieht aber aus nur 10 Würfen einen zu starken Schluss. Am Ende der Stunde zurückkommen.</div>
+  </section>
+
+  <!-- 2 Hausaufgabe auswerten -->
+  <section class="folie" data-phase="Erarbeitung I">
+    <div class="kennung">Erarbeitung I · Hausaufgabe</div>
+    <h2>Unsere Münzwürfe</h2>
+    <div class="eingabe">
+      <label for="hausaufgabe" style="font-size:1.25rem">Wie oft „Kopf“ bei 20 Würfen?</label>
+      <input id="hausaufgabe" placeholder="z. B. 12, 9, 11, 7, 13, 10 …">
+      <button class="knopf mittel" id="haAuswerten">Auswerten</button>
+    </div>
+    <svg class="diagramm" id="haDiagramm"></svg>
+    <div class="legende-dia">
+      <span class="ld-punkt">einzelne Schüler (20 Würfe)</span>
+      <span class="ld-linie">alle Würfe zusammen</span>
+    </div>
+    <div class="anzeige" id="haAnzeige"></div>
+    <div class="hinweis">Alle Anzahlen mit Komma eintragen und „Auswerten“ drücken. Beobachtung: Die einzelnen Schüler streuen stark (z. B. 30 %–65 %), die blaue Linie für alle Würfe zusammen nähert sich 50 %. Frage: Woran liegt das?</div>
+  </section>
+
+  <!-- 3 Simulation -->
+  <section class="folie" data-phase="Erarbeitung II">
+    <div class="kennung">Erarbeitung II · Computersimulation</div>
+    <h2>Was passiert bei sehr vielen Würfen?</h2>
+    <div class="steuerung">
+      <button class="knopf mittel gewaehlt" data-exp="wuerfel">Würfel: Sechs</button>
+      <button class="knopf mittel" data-exp="muenze">Münze: Kopf</button>
+      <span class="trenner"></span>
+      <button class="knopf mittel" data-plus="10">+10 Würfe</button>
+      <button class="knopf mittel" data-plus="100">+100</button>
+      <button class="knopf mittel" data-plus="1000">+1.000</button>
+      <button class="knopf mittel" data-plus="10000">+10.000</button>
+      <span class="trenner"></span>
+      <button class="knopf mittel" id="simNeu">Neu</button>
+      <button class="knopf mittel" id="simZiel">Wert zeigen</button>
+    </div>
+    <svg class="diagramm" id="simDiagramm"></svg>
+    <div class="anzeige" id="simAnzeige"></div>
+    <div class="hinweis">Erst mit „+10“ mehrmals klicken: starke Schwankungen. Dann +100, +1.000, +10.000. Vorher fragen: Wo wird sich die Linie einpendeln? Erst danach „Wert zeigen“ (Sechs: 1/6 ≈ 16,7 %, Kopf: 50 %). Mit „Neu“ mehrmals wiederholen: Der Anfang sieht jedes Mal anders aus, das Ende fast gleich.</div>
+  </section>
+
+  <!-- 4 Merksatz -->
+  <section class="folie" data-phase="Sicherung">
+    <div class="kennung">Sicherung</div>
+    <h2>Das Gesetz der großen Zahlen</h2>
+    <div class="merk">
+      <h3>Merke</h3>
+      <ul>
+        <li class="schritt">Bei <strong>wenigen</strong> Versuchen kann die relative Häufigkeit stark schwanken.</li>
+        <li class="schritt">Je <strong>öfter</strong> man ein Zufallsexperiment durchführt, desto weniger schwankt die relative Häufigkeit. Sie <strong>pendelt sich</strong> bei einem bestimmten Wert <strong>ein</strong>.</li>
+        <li class="schritt">Diesen Wert nennt man die <strong>Wahrscheinlichkeit</strong> des Ergebnisses.</li>
+        <li class="schritt">Die relative Häufigkeit bei <strong>sehr vielen</strong> Versuchen ist ein guter <strong>Schätzwert</strong> für die Wahrscheinlichkeit.</li>
+      </ul>
+    </div>
+    <p class="schritt" id="heftzweckeSatz" style="margin-top:1rem"></p>
+    <div class="hinweis">Falls in Stunde 3 die Klassentabelle in diesem Browser ausgefüllt wurde, erscheint hier automatisch euer Schätzwert für die Heftzwecke.</div>
+  </section>
+
+  <!-- 5 Übung -->
+  <section class="folie" data-phase="Übung">
+    <div class="kennung">Übung</div>
+    <h2>Jetzt du!</h2>
+    <div class="uebung">
+      <div class="zeile"><div class="n">a</div><div>
+        <div class="frage">Hat Paul recht? Begründe mit dem Gesetz der großen Zahlen.</div>
+        <div class="antwort schritt"><span class="nein">Nein.</span> 10 Würfe sind zu wenige. Bei vielen Würfen pendelt sich die Sechs bei etwa 17 % ein.</div>
+      </div></div>
+      <div class="zeile"><div class="n">b</div><div>
+        <div class="frage">Lea: „Die Münze hat fünfmal hintereinander Zahl gezeigt. Jetzt muss Kopf kommen!“ Stimmt das?</div>
+        <div class="antwort schritt"><span class="nein">Nein.</span> Die Münze „erinnert“ sich nicht. Kopf und Zahl sind auch beim nächsten Wurf gleich wahrscheinlich.</div>
+      </div></div>
+      <div class="zeile"><div class="n">c</div><div>
+        <div class="frage">Eine Heftzwecke wurde 1000-mal geworfen, 620-mal lag sie auf dem Kopf. Schätze die Wahrscheinlichkeit für „Kopf“. Wie oft erwartest du „Kopf“ bei 500 Würfen?</div>
+        <div class="antwort schritt"><span class="bruch"><span>620</span><span>1000</span></span> = 62 % · bei 500 Würfen etwa <strong>310</strong>-mal</div>
+      </div></div>
+      <div class="zeile stern"><div class="n">★</div><div>
+        <div class="frage">Jonas hat 30-mal geworfen (40 % Kopf), die Klasse zusammen 600-mal (34 % Kopf). Welchem Wert vertraust du mehr?</div>
+        <div class="antwort schritt">Dem Klassenwert: Er beruht auf viel mehr Versuchen.</div>
+      </div></div>
+    </div>
+    <div class="hinweis">b) greift eine typische Fehlvorstellung auf („Spielerfehlschluss“). Ruhig ausführlich diskutieren.</div>
+  </section>
+
+  <!-- 6 Abschluss -->
+  <section class="folie mitte" data-phase="Abschluss">
+    <div class="kennung">Abschluss</div>
+    <h2>Zufall lässt sich nicht vorhersagen …</h2>
+    <p>… aber bei <strong>vielen</strong> Versuchen zeigt sich eine <strong>Regelmäßigkeit</strong>.</p>
+    <p class="schritt klein">Nächste Stunde: Wie wahrscheinlich ist das? Wahrscheinlichkeiten als Zahl zwischen 0 und 1.</p>
+  </section>
+
+</div>
+<script src="../../../../praesentation.js"></script>
+<script>
+  // ---------- Kleines Liniendiagramm in SVG ----------
+  function diagramm(svg, { maxX, linien = [], punkte = [], ziel = null, xTitel = "Anzahl der Würfe" }) {
+    const B = svg.clientWidth || 900, H = svg.clientHeight || 360;
+    const l = 70, r = 25, o = 20, u = 50;
+    const x = v => l + (v / maxX) * (B - l - r);
+    const y = v => o + (1 - v) * (H - o - u);
+    let s = "";
+    for (let p = 0; p <= 100; p += 20) {
+      s += `<line x1="${l}" x2="${B - r}" y1="${y(p / 100)}" y2="${y(p / 100)}" stroke="#e9ecef"/>`;
+      s += `<text x="${l - 10}" y="${y(p / 100)}" text-anchor="end" dominant-baseline="central" font-size="15" fill="#5b6475">${p} %</text>`;
+    }
+    for (let i = 0; i <= 5; i++) {
+      const v = Math.round(maxX * i / 5);
+      s += `<text x="${x(v)}" y="${H - u + 22}" text-anchor="middle" font-size="15" fill="#5b6475">${v.toLocaleString("de-DE")}</text>`;
+    }
+    s += `<text x="${(l + B - r) / 2}" y="${H - 6}" text-anchor="middle" font-size="15" fill="#5b6475">${xTitel}</text>`;
+    s += `<line x1="${l}" x2="${l}" y1="${o}" y2="${H - u}" stroke="#adb5bd"/><line x1="${l}" x2="${B - r}" y1="${H - u}" y2="${H - u}" stroke="#adb5bd"/>`;
+    if (ziel !== null) {
+      s += `<line x1="${l}" x2="${B - r}" y1="${y(ziel)}" y2="${y(ziel)}" stroke="#e03131" stroke-width="2.5" stroke-dasharray="8 6"/>`;
+    }
+    punkte.forEach(([px, py]) => s += `<circle cx="${x(px)}" cy="${y(py)}" r="6" fill="#adb5bd"/>`);
+    linien.forEach(pts => {
+      if (pts.length) s += `<polyline fill="none" stroke="#1098ad" stroke-width="3" stroke-linejoin="round" points="${pts.map(([a, b]) => x(a) + "," + y(b)).join(" ")}"/>`;
+    });
+    svg.innerHTML = s;
+  }
+
+  // ---------- Hausaufgabe: Münzwürfe der Klasse ----------
+  (function () {
+    const svg = document.getElementById("haDiagramm");
+    const anzeige = document.getElementById("haAnzeige");
+    function auswerten() {
+      const werte = document.getElementById("hausaufgabe").value.split(/[,;\s]+/).map(Number).filter(v => Number.isFinite(v) && v >= 0 && v <= 20);
+      if (!werte.length) { diagramm(svg, { maxX: 100 }); anzeige.innerHTML = ""; return; }
+      let summe = 0;
+      const punkte = [], linie = [];
+      werte.forEach((k, i) => {
+        summe += k;
+        const n = (i + 1) * 20;
+        punkte.push([n, k / 20]);
+        linie.push([n, summe / n]);
+      });
+      diagramm(svg, { maxX: werte.length * 20, punkte, linien: [linie], xTitel: "Anzahl der Würfe (zusammengezählt)" });
+      const min = Math.min(...werte), max = Math.max(...werte);
+      anzeige.innerHTML = `<span>Einzelne Schüler: <b>${Praes.prozent(min / 20, 0)}</b> bis <b>${Praes.prozent(max / 20, 0)}</b></span>` +
+        `<span>Alle ${werte.length * 20} Würfe zusammen: <b>${Praes.prozent(summe / (werte.length * 20))}</b> Kopf</span>`;
+    }
+    document.getElementById("haAuswerten").onclick = auswerten;
+    document.getElementById("hausaufgabe").addEventListener("keydown", e => { if (e.key === "Enter") auswerten(); });
+    svg.closest(".folie").addEventListener("folie-aktiv", () => requestAnimationFrame(auswerten));
+  })();
+
+  // ---------- Simulation ----------
+  (function () {
+    const EXP = {
+      wuerfel: { p: 1 / 6, name: "Sechs", ziel: "1/6 ≈ 16,7 %" },
+      muenze: { p: 1 / 2, name: "Kopf", ziel: "1/2 = 50 %" }
+    };
+    let exp = "wuerfel", n = 0, treffer = 0, verlauf = [], zielZeigen = false;
+    const svg = document.getElementById("simDiagramm");
+    const anzeige = document.getElementById("simAnzeige");
+
+    function zeichnen() {
+      // höchstens ca. 800 Punkte zeichnen
+      const schritt = Math.max(1, Math.ceil(verlauf.length / 800));
+      const pts = verlauf.filter((_, i) => i % schritt === 0 || i === verlauf.length - 1);
+      diagramm(svg, { maxX: Math.max(n, 10), linien: [pts], ziel: zielZeigen ? EXP[exp].p : null });
+      anzeige.innerHTML = `<span>Würfe: <b>${n.toLocaleString("de-DE")}</b></span>` +
+        `<span>davon ${EXP[exp].name}: <b>${treffer.toLocaleString("de-DE")}</b></span>` +
+        `<span>relative Häufigkeit: <b>${n ? Praes.prozent(treffer / n) : "–"}</b></span>` +
+        (zielZeigen ? `<span>Wahrscheinlichkeit: <b style="color:var(--rot)">${EXP[exp].ziel}</b></span>` : "");
+    }
+    function werfen(anzahl) {
+      const p = EXP[exp].p;
+      for (let i = 0; i < anzahl; i++) {
+        n++;
+        if (Math.random() < p) treffer++;
+        verlauf.push([n, treffer / n]);
+      }
+      zeichnen();
+    }
+    function neu() { n = 0; treffer = 0; verlauf = []; zeichnen(); }
+
+    document.querySelectorAll("[data-plus]").forEach(b => b.onclick = () => werfen(Number(b.dataset.plus)));
+    document.querySelectorAll("[data-exp]").forEach(b => b.onclick = () => {
+      exp = b.dataset.exp;
+      document.querySelectorAll("[data-exp]").forEach(x => x.classList.toggle("gewaehlt", x === b));
+      zielZeigen = false; neu();
+    });
+    document.getElementById("simNeu").onclick = neu;
+    document.getElementById("simZiel").onclick = () => { zielZeigen = !zielZeigen; zeichnen(); };
+    svg.closest(".folie").addEventListener("folie-aktiv", () => requestAnimationFrame(zeichnen));
+    window.addEventListener("resize", zeichnen);
+  })();
+
+  // ---------- Heftzwecken-Ergebnis aus Stunde 3 ----------
+  (function () {
+    let daten = [];
+    try { daten = JSON.parse(localStorage.getItem("mathe-k8-hs-heftzwecke") || "[]"); } catch (e) {}
+    const w = daten.reduce((s, d) => s + d[0], 0), k = daten.reduce((s, d) => s + d[1], 0);
+    const el = document.getElementById("heftzweckeSatz");
+    if (w > 0) {
+      el.innerHTML = `<strong>Unsere Heftzwecke (Stunde 3):</strong> ${w} Würfe, ${k}-mal Kopf → Schätzwert für die Wahrscheinlichkeit von „Kopf“: <strong>${Praes.prozent(k / w)}</strong>`;
+    } else {
+      el.remove();
+    }
+  })();
+</script>
+</body>
+</html>

@@ -4,196 +4,16 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Stunde 1: Zufall oder nicht? – Wahrscheinlichkeiten</title>
-<style>
-  :root {
-    --bg: #f6f7fb; --card: #fff; --text: #1f2430; --muted: #5b6475;
-    --accent: #1098ad; --accent-hell: #e3f6f9; --border: #e2e6ef;
-    --gruen: #2f9e44; --gruen-hell: #e6f6ea;
-    --gelb: #e8a400; --gelb-hell: #fff6dd;
-    --rot: #e03131; --rot-hell: #fdecec;
-  }
-  * { box-sizing: border-box; }
-  html, body { height: 100%; }
-  body {
-    margin: 0; font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
-    background: var(--bg); color: var(--text);
-    display: flex; flex-direction: column; overflow: hidden;
-  }
-
-  /* ---------- Kopfleiste ---------- */
-  .leiste {
-    display: flex; align-items: center; gap: 1rem;
-    background: var(--card); border-bottom: 1px solid var(--border);
-    padding: .6rem 1.25rem; font-size: .95rem; flex-wrap: wrap;
-  }
-  .leiste a { color: var(--accent); text-decoration: none; }
-  .leiste .pfad { color: var(--muted); }
-  .phasen { display: flex; gap: .35rem; margin-left: auto; flex-wrap: wrap; }
-  .phase {
-    padding: .25rem .65rem; border-radius: 999px; background: var(--bg);
-    color: var(--muted); font-size: .85rem; white-space: nowrap; border: 1px solid var(--border);
-  }
-  .phase.aktiv { background: var(--accent); color: #fff; border-color: var(--accent); }
-  .phase.fertig { color: var(--accent); border-color: var(--accent); }
-
-  .timer {
-    display: flex; align-items: center; gap: .4rem;
-    font-variant-numeric: tabular-nums;
-  }
-  .timer .zeit {
-    font-weight: 700; font-size: 1.15rem; min-width: 4.2ch; text-align: right;
-  }
-  .timer.ablauf .zeit { color: var(--rot); }
-  .knopf {
-    border: 1px solid var(--border); background: var(--card); color: var(--text);
-    border-radius: 8px; padding: .3rem .65rem; font-size: .9rem; cursor: pointer;
-  }
-  .knopf:hover { border-color: var(--accent); color: var(--accent); }
-  .knopf.gross {
-    font-size: 1.25rem; padding: .7rem 1.4rem; border-radius: 12px;
-    background: var(--accent); color: #fff; border-color: var(--accent);
-  }
-  .knopf.gross:hover { filter: brightness(1.08); color: #fff; }
-
-  /* ---------- Folien ---------- */
-  .buehne { flex: 1; position: relative; overflow: hidden; }
-  .folie {
-    position: absolute; inset: 0; padding: 2.5rem 4rem 2rem;
-    display: none; flex-direction: column; overflow-y: auto;
-  }
-  .folie.aktiv { display: flex; }
-  .folie h1 { font-size: 3.2rem; margin: 0 0 .5rem; }
-  .folie h2 { font-size: 2.3rem; margin: 0 0 1.25rem; }
-  .folie p, .folie li { font-size: 1.55rem; line-height: 1.45; }
-  .kennung {
-    font-size: 1rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase;
-    color: var(--accent); margin-bottom: .5rem;
-  }
-  .mitte { align-items: center; justify-content: center; text-align: center; }
-
-  .schritt { visibility: hidden; opacity: 0; transition: opacity .35s ease; }
-  .schritt.sichtbar { visibility: visible; opacity: 1; }
-
-  .kasten {
-    background: var(--card); border: 1px solid var(--border); border-radius: 16px;
-    padding: 1.25rem 1.75rem;
-  }
-  .merk {
-    background: var(--accent-hell); border: 2px solid var(--accent); border-radius: 16px;
-    padding: 1.5rem 2rem;
-  }
-  .merk h3 { margin: 0 0 .75rem; font-size: 1.6rem; color: var(--accent); }
-  .merk ul { margin: 0; padding-left: 1.4rem; }
-  .merk li { margin: .35rem 0; }
-
-  /* ---------- Würfel und Münze ---------- */
-  .spielzeug { display: flex; gap: 4rem; justify-content: center; margin: 2rem 0 1rem; flex-wrap: wrap; }
-  .spielzeug .feld { display: flex; flex-direction: column; align-items: center; gap: 1.25rem; }
-  .wuerfel {
-    width: 170px; height: 170px; background: #fff; border-radius: 28px;
-    border: 4px solid var(--text); display: grid;
-    grid-template-columns: repeat(3, 1fr); grid-template-rows: repeat(3, 1fr);
-    padding: 22px; box-shadow: 0 8px 24px rgba(0,0,0,.12);
-  }
-  .wuerfel span { width: 30px; height: 30px; border-radius: 50%; background: var(--text); place-self: center; visibility: hidden; }
-  .wuerfel span.an { visibility: visible; }
-  .muenze {
-    width: 170px; height: 170px; border-radius: 50%;
-    background: radial-gradient(circle at 35% 30%, #ffe9a8, #e8b730 60%, #b8860b);
-    border: 4px solid #8a6508; display: flex; align-items: center; justify-content: center;
-    font-size: 2rem; font-weight: 800; color: #6b4d00; box-shadow: 0 8px 24px rgba(0,0,0,.12);
-  }
-  .wackeln { animation: wackeln .12s linear infinite; }
-  @keyframes wackeln {
-    0% { transform: rotate(-8deg) scale(1); } 50% { transform: rotate(8deg) scale(1.05); } 100% { transform: rotate(-8deg) scale(1); }
-  }
-  .dreh { animation: dreh .25s linear infinite; }
-  @keyframes dreh { from { transform: rotateY(0); } to { transform: rotateY(360deg); } }
-  .verlauf { font-size: 1.2rem; color: var(--muted); min-height: 1.6em; }
-
-  /* ---------- Sortierkarten ---------- */
-  .karten { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1rem; }
-  .karte {
-    background: var(--card); border: 2px solid var(--border); border-radius: 14px;
-    padding: 1rem 1.25rem; font-size: 1.35rem; cursor: pointer; user-select: none;
-    min-height: 110px; display: flex; flex-direction: column; justify-content: space-between; gap: .5rem;
-    transition: background .2s, border-color .2s;
-  }
-  .karte:hover { border-color: var(--accent); }
-  .karte .loesung { font-size: 1.05rem; font-weight: 700; visibility: hidden; }
-  .karte.offen .loesung { visibility: visible; }
-  .karte.offen.sicher { background: var(--gruen-hell); border-color: var(--gruen); }
-  .karte.offen.sicher .loesung { color: var(--gruen); }
-  .karte.offen.moeglich { background: var(--gelb-hell); border-color: var(--gelb); }
-  .karte.offen.moeglich .loesung { color: #a26f00; }
-  .karte.offen.unmoeglich { background: var(--rot-hell); border-color: var(--rot); }
-  .karte.offen.unmoeglich .loesung { color: var(--rot); }
-  .legende { display: flex; gap: 1.5rem; margin: 0 0 1rem; font-size: 1.2rem; flex-wrap: wrap; align-items: center; }
-  .legende span::before { content: ""; display: inline-block; width: 1rem; height: 1rem; border-radius: 4px; margin-right: .4rem; vertical-align: -2px; }
-  .l-sicher::before { background: var(--gruen); }
-  .l-moeglich::before { background: var(--gelb); }
-  .l-unmoeglich::before { background: var(--rot); }
-
-  /* ---------- Tabellen ---------- */
-  table.strich { border-collapse: collapse; font-size: 1.4rem; margin-top: .5rem; }
-  table.strich th, table.strich td { border: 2px solid var(--text); padding: .45rem 1.1rem; text-align: center; }
-  table.strich th { background: var(--accent-hell); }
-  table.strich td { height: 2.6rem; min-width: 4.5rem; }
-
-  .zweispaltig { display: grid; grid-template-columns: 1.1fr 1fr; gap: 2rem; align-items: start; }
-
-  .uebung { display: flex; flex-direction: column; gap: .75rem; }
-  .uebung .zeile {
-    display: grid; grid-template-columns: 2.2rem 1fr; gap: .75rem;
-    background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: .75rem 1rem;
-  }
-  .uebung .zeile .n { font-weight: 800; color: var(--accent); font-size: 1.5rem; }
-  .uebung .frage { font-size: 1.4rem; }
-  .uebung .antwort { font-size: 1.2rem; margin-top: .3rem; }
-  .ja { color: var(--gruen); font-weight: 700; }
-  .nein { color: var(--rot); font-weight: 700; }
-
-  /* ---------- Fußleiste ---------- */
-  .fuss {
-    display: flex; align-items: center; justify-content: space-between; gap: 1rem;
-    padding: .55rem 1.25rem; background: var(--card); border-top: 1px solid var(--border);
-    font-size: .95rem; color: var(--muted);
-  }
-  .fuss .nav { display: flex; gap: .5rem; align-items: center; }
-
-  /* ---------- Lehrerhinweise ---------- */
-  .hinweis {
-    display: none; margin-top: auto; padding: .9rem 1.2rem; border-radius: 12px;
-    background: #fff8e1; border: 1px dashed #d4a20a; font-size: 1.05rem; color: #5c4700;
-  }
-  .hinweis::before { content: "Lehrerhinweis: "; font-weight: 700; }
-  body.notizen .hinweis { display: block; }
-
-  @media (max-width: 900px) {
-    .folie { padding: 1.5rem; }
-    .folie h1 { font-size: 2.3rem; } .folie h2 { font-size: 1.8rem; }
-    .folie p, .folie li { font-size: 1.2rem; }
-    .zweispaltig { grid-template-columns: 1fr; }
-  }
-</style>
+<link rel="stylesheet" href="../../../../praesentation.css">
 </head>
-<body>
+<body data-phasen='[["Einstieg",5],["Erarbeitung I",10],["Erarbeitung II",12],["Sicherung",8],["Übung",8],["Abschluss",2]]'>
 
 <div class="leiste">
-  <div class="pfad">
-    <a href="../../../../">Start</a> › <a href="../../../">Klasse 8</a> › <a href="../../">Hauptschule</a> › <a href="../">Wahrscheinlichkeiten</a> › Stunde 1
-  </div>
-  <div class="phasen" id="phasen"></div>
-  <div class="timer" id="timer" title="Timer der aktuellen Phase (Taste T)">
-    <span class="zeit" id="zeit">5:00</span>
-    <button class="knopf" id="timerStart">▶</button>
-    <button class="knopf" id="timerReset" title="Zurücksetzen">↺</button>
-  </div>
+  <div class="pfad"><a href="../../../../">Start</a> › <a href="../../../">Klasse 8</a> › <a href="../../">Hauptschule</a> › <a href="../">Wahrscheinlichkeiten</a> › Stunde 1</div>
 </div>
 
-<div class="buehne" id="buehne">
+<div class="buehne">
 
-  <!-- 1: Titel -->
   <section class="folie mitte" data-phase="Einstieg">
     <div class="kennung">Wahrscheinlichkeiten · Stunde 1</div>
     <h1>Zufall oder nicht?</h1>
@@ -201,30 +21,18 @@
     <div class="hinweis">Pfeiltaste → oder Leertaste: weiter bzw. nächsten Punkt aufdecken · ← zurück · T Timer · N Hinweise ein/aus · F Vollbild</div>
   </section>
 
-  <!-- 2: Einstieg Würfel und Münze -->
   <section class="folie" data-phase="Einstieg">
     <div class="kennung">Einstieg</div>
     <h2>Wer fängt an?</h2>
     <p>Bevor ich werfe: <strong>Was kommt heraus?</strong> Gebt einen Tipp ab!</p>
     <div class="spielzeug">
-      <div class="feld">
-        <div class="wuerfel" id="wuerfel">
-          <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
-        </div>
-        <button class="knopf gross" id="wuerfeln">Würfeln</button>
-        <div class="verlauf" id="wuerfelVerlauf"></div>
-      </div>
-      <div class="feld">
-        <div class="muenze" id="muenze">?</div>
-        <button class="knopf gross" id="werfen">Münze werfen</button>
-        <div class="verlauf" id="muenzVerlauf"></div>
-      </div>
+      <div data-wuerfel></div>
+      <div data-muenze></div>
     </div>
     <p class="schritt" style="text-align:center">Konntet ihr das Ergebnis <strong>vorher wissen</strong>? Warum nicht?</p>
     <div class="hinweis">Mehrmals werfen lassen, Tipps der Klasse vorher abfragen. Ziel: Man kann das Ergebnis nicht vorhersagen, auch wenn man alle möglichen Ergebnisse kennt.</div>
   </section>
 
-  <!-- 3: Sicher, möglich, unmöglich -->
   <section class="folie" data-phase="Erarbeitung I">
     <div class="kennung">Erarbeitung I</div>
     <h2>Sicher, möglich oder unmöglich?</h2>
@@ -232,10 +40,10 @@
       <span class="l-sicher">sicher</span>
       <span class="l-moeglich">möglich (Zufall)</span>
       <span class="l-unmoeglich">unmöglich</span>
-      <button class="knopf" id="alleAufdecken" style="margin-left:auto">Alle aufdecken</button>
-      <button class="knopf" id="alleZudecken">Alle zudecken</button>
+      <button class="knopf" data-alle-auf style="margin-left:auto">Alle aufdecken</button>
+      <button class="knopf" data-alle-zu>Alle zudecken</button>
     </div>
-    <div class="karten" id="karten">
+    <div class="karten">
       <div class="karte moeglich">Beim Würfeln fällt eine 6.<span class="loesung">möglich</span></div>
       <div class="karte unmoeglich">Beim Würfeln fällt eine 7.<span class="loesung">unmöglich</span></div>
       <div class="karte sicher">Nach Montag kommt Dienstag.<span class="loesung">sicher</span></div>
@@ -248,7 +56,6 @@
     <div class="hinweis">Klasse stimmt pro Karte ab (z. B. Daumen hoch / Mitte / runter), dann Karte anklicken. Diskussion zum Elfmeter: Hier ist nicht alles Zufall (Können), aber das Ergebnis ist nicht sicher vorhersagbar.</div>
   </section>
 
-  <!-- 4: Partnerexperiment -->
   <section class="folie" data-phase="Erarbeitung II" data-minuten="8">
     <div class="kennung">Erarbeitung II · Partnerarbeit</div>
     <h2>Unser Würfelexperiment</h2>
@@ -283,7 +90,6 @@
     <div class="hinweis">Material: 1 Würfel pro Paar, Tabelle ins Heft übertragen lassen. Timer oben starten (8 Minuten). Anschließend 2–3 Paare ihre häufigste Zahl nennen lassen: Die Ergebnisse unterscheiden sich, und das ist Zufall.</div>
   </section>
 
-  <!-- 5: Merksatz -->
   <section class="folie" data-phase="Sicherung">
     <div class="kennung">Sicherung</div>
     <h2>Was ist ein Zufallsexperiment?</h2>
@@ -300,7 +106,6 @@
     <div class="hinweis">Punkte einzeln aufdecken und vorher fragen: „Was haben Würfel und Münze gemeinsam?“ Merksatz ins Heft übernehmen lassen.</div>
   </section>
 
-  <!-- 6: Beispiele Ergebnisse -->
   <section class="folie" data-phase="Sicherung">
     <div class="kennung">Sicherung</div>
     <h2>Welche Ergebnisse sind möglich?</h2>
@@ -321,7 +126,6 @@
     <div class="hinweis">Erst die Klasse antworten lassen, dann aufdecken.</div>
   </section>
 
-  <!-- 7: Übung -->
   <section class="folie" data-phase="Übung">
     <div class="kennung">Übung</div>
     <h2>Zufallsexperiment: ja oder nein?</h2>
@@ -344,14 +148,13 @@
         <div class="antwort schritt"><span class="nein">Nein.</span> Er fällt immer nach unten, das ist sicher.</div>
       </div></div>
       <div class="zeile"><div class="n">e</div><div>
-        <div class="frage">Ein Reißnagel wird geworfen.</div>
+        <div class="frage">Eine Heftzwecke wird geworfen.</div>
         <div class="antwort schritt"><span class="ja">Ja.</span> { Kopf, Seite } (liegt auf dem Kopf oder auf der Seite)</div>
       </div></div>
     </div>
     <div class="hinweis">Einzelarbeit im Heft (ca. 5 Min.), dann gemeinsam Aufgabe für Aufgabe aufdecken.</div>
   </section>
 
-  <!-- 8: Abschluss -->
   <section class="folie mitte" data-phase="Abschluss">
     <div class="kennung">Abschluss</div>
     <h2>Zufall ist überall!</h2>
@@ -363,157 +166,6 @@
   </section>
 
 </div>
-
-<div class="fuss">
-  <div id="foliennr">1 / 8</div>
-  <div class="nav">
-    <button class="knopf" id="zurueck">← Zurück</button>
-    <button class="knopf" id="weiter">Weiter →</button>
-    <button class="knopf" id="notizen" title="Taste N">Hinweise</button>
-    <button class="knopf" id="vollbild" title="Taste F">Vollbild</button>
-  </div>
-</div>
-
-<script>
-(function () {
-  // Phasen mit geplanter Dauer in Minuten (zusammen 45 Minuten)
-  const PHASEN = [
-    ["Einstieg", 5], ["Erarbeitung I", 10], ["Erarbeitung II", 12],
-    ["Sicherung", 8], ["Übung", 8], ["Abschluss", 2]
-  ];
-  const folien = Array.from(document.querySelectorAll(".folie"));
-  let aktuell = 0;
-
-  // ---------- Phasenleiste ----------
-  const phasenEl = document.getElementById("phasen");
-  PHASEN.forEach(([name, min]) => {
-    const p = document.createElement("span");
-    p.className = "phase"; p.dataset.name = name;
-    p.textContent = name + " · " + min + "′";
-    phasenEl.appendChild(p);
-  });
-
-  function phasenIndex(name) { return PHASEN.findIndex(p => p[0] === name); }
-
-  // ---------- Timer ----------
-  const zeitEl = document.getElementById("zeit");
-  const timerEl = document.getElementById("timer");
-  const startBtn = document.getElementById("timerStart");
-  let rest = 0, laeuft = false, intervall = null, timerPhase = null;
-
-  function zeigeZeit() {
-    const neg = rest < 0, s = Math.abs(rest);
-    zeitEl.textContent = (neg ? "−" : "") + Math.floor(s / 60) + ":" + String(s % 60).padStart(2, "0");
-    timerEl.classList.toggle("ablauf", rest <= 0);
-  }
-  function timerSetzen(minuten) {
-    stopp(); rest = minuten * 60; zeigeZeit();
-  }
-  function start() {
-    if (laeuft) return;
-    laeuft = true; startBtn.textContent = "❚❚";
-    intervall = setInterval(() => { rest--; zeigeZeit(); }, 1000);
-  }
-  function stopp() {
-    laeuft = false; startBtn.textContent = "▶"; clearInterval(intervall);
-  }
-  startBtn.onclick = () => laeuft ? stopp() : start();
-  document.getElementById("timerReset").onclick = () => {
-    const f = folien[aktuell];
-    timerSetzen(Number(f.dataset.minuten) || PHASEN[phasenIndex(f.dataset.phase)][1]);
-  };
-
-  // ---------- Folien ----------
-  function zeige(i) {
-    aktuell = Math.max(0, Math.min(folien.length - 1, i));
-    folien.forEach((f, n) => f.classList.toggle("aktiv", n === aktuell));
-    const f = folien[aktuell];
-    const pi = phasenIndex(f.dataset.phase);
-    phasenEl.querySelectorAll(".phase").forEach((p, n) => {
-      p.classList.toggle("aktiv", n === pi);
-      p.classList.toggle("fertig", n < pi);
-    });
-    // Timer nur neu setzen, wenn eine neue Phase oder eine Folie mit eigener Zeit beginnt
-    const schluessel = f.dataset.minuten ? "folie" + aktuell : f.dataset.phase;
-    if (schluessel !== timerPhase) {
-      timerPhase = schluessel;
-      timerSetzen(Number(f.dataset.minuten) || PHASEN[pi][1]);
-    }
-    document.getElementById("foliennr").textContent = (aktuell + 1) + " / " + folien.length;
-  }
-
-  function weiter() {
-    const verdeckt = folien[aktuell].querySelector(".schritt:not(.sichtbar)");
-    if (verdeckt) { verdeckt.classList.add("sichtbar"); return; }
-    if (aktuell < folien.length - 1) zeige(aktuell + 1);
-  }
-  function zurueck() {
-    const offen = folien[aktuell].querySelectorAll(".schritt.sichtbar");
-    if (offen.length) { offen[offen.length - 1].classList.remove("sichtbar"); return; }
-    if (aktuell > 0) zeige(aktuell - 1);
-  }
-
-  document.getElementById("weiter").onclick = weiter;
-  document.getElementById("zurueck").onclick = zurueck;
-  document.getElementById("notizen").onclick = () => document.body.classList.toggle("notizen");
-  function vollbild() {
-    if (!document.fullscreenElement) document.documentElement.requestFullscreen?.();
-    else document.exitFullscreen?.();
-  }
-  document.getElementById("vollbild").onclick = vollbild;
-
-  document.addEventListener("keydown", e => {
-    if (e.target.tagName === "INPUT" || e.target.tagName === "TEXTAREA") return;
-    if (["ArrowRight", "PageDown", " "].includes(e.key)) { e.preventDefault(); weiter(); }
-    else if (["ArrowLeft", "PageUp"].includes(e.key)) { e.preventDefault(); zurueck(); }
-    else if (e.key === "n" || e.key === "N") document.body.classList.toggle("notizen");
-    else if (e.key === "f" || e.key === "F") vollbild();
-    else if (e.key === "t" || e.key === "T") laeuft ? stopp() : start();
-  });
-
-  // ---------- Würfel ----------
-  const MUSTER = { 1: [4], 2: [0, 8], 3: [0, 4, 8], 4: [0, 2, 6, 8], 5: [0, 2, 4, 6, 8], 6: [0, 2, 3, 5, 6, 8] };
-  const wuerfel = document.getElementById("wuerfel");
-  const punkte = wuerfel.querySelectorAll("span");
-  function zeigeAugen(z) { punkte.forEach((p, i) => p.classList.toggle("an", MUSTER[z].includes(i))); }
-  zeigeAugen(5);
-  const wVerlauf = [];
-  document.getElementById("wuerfeln").onclick = function () {
-    this.disabled = true; wuerfel.classList.add("wackeln");
-    let n = 0;
-    const iv = setInterval(() => {
-      zeigeAugen(1 + Math.floor(Math.random() * 6));
-      if (++n >= 12) {
-        clearInterval(iv);
-        const z = 1 + Math.floor(Math.random() * 6);
-        zeigeAugen(z); wuerfel.classList.remove("wackeln"); this.disabled = false;
-        wVerlauf.push(z);
-        document.getElementById("wuerfelVerlauf").textContent = "Bisher: " + wVerlauf.slice(-10).join(", ");
-      }
-    }, 70);
-  };
-
-  // ---------- Münze ----------
-  const muenze = document.getElementById("muenze");
-  const mVerlauf = [];
-  document.getElementById("werfen").onclick = function () {
-    this.disabled = true; muenze.textContent = ""; muenze.classList.add("dreh");
-    setTimeout(() => {
-      const e = Math.random() < 0.5 ? "Kopf" : "Zahl";
-      muenze.classList.remove("dreh"); muenze.textContent = e; this.disabled = false;
-      mVerlauf.push(e);
-      document.getElementById("muenzVerlauf").textContent = "Bisher: " + mVerlauf.slice(-8).join(", ");
-    }, 900);
-  };
-
-  // ---------- Sortierkarten ----------
-  const karten = document.querySelectorAll("#karten .karte");
-  karten.forEach(k => k.onclick = () => k.classList.toggle("offen"));
-  document.getElementById("alleAufdecken").onclick = () => karten.forEach(k => k.classList.add("offen"));
-  document.getElementById("alleZudecken").onclick = () => karten.forEach(k => k.classList.remove("offen"));
-
-  zeige(0);
-})();
-</script>
+<script src="../../../../praesentation.js"></script>
 </body>
 </html>

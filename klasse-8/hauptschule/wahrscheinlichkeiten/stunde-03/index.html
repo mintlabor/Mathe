@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Stunde 3: Wir werfen und zählen – Wahrscheinlichkeiten</title>
+<link rel="stylesheet" href="../../../../praesentation.css">
+<style>
+  .zwecke { display: flex; gap: 3rem; justify-content: center; margin: 1rem 0; flex-wrap: wrap; }
+  .zwecke figure { margin: 0; text-align: center; }
+  .zwecke figcaption { font-size: 1.4rem; font-weight: 700; margin-top: .5rem; }
+  .abstimmung { display: flex; gap: 1rem; justify-content: center; margin-top: .5rem; flex-wrap: wrap; }
+  .vergleich { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-top: .5rem; }
+  .vergleich .kasten p { margin: .2rem 0; }
+  .vergleich .gross { font-size: 2rem; font-weight: 800; color: var(--accent); }
+  table.strich.klasse td, table.strich.klasse th { padding: .3rem .8rem; font-size: 1.25rem; }
+  table.strich.klasse tr.summe td { background: var(--accent-hell); font-weight: 700; }
+  .tabellenknoepfe { display: flex; gap: .5rem; margin-top: .75rem; }
+  @media (max-width: 900px) { .vergleich { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body data-phasen='[["Einstieg",5],["Experiment",12],["Auswertung",10],["Sicherung",8],["Übung",10]]'>
+
+<div class="leiste">
+  <div class="pfad"><a href="../../../../">Start</a> › <a href="../../../">Klasse 8</a> › <a href="../../">Hauptschule</a> › <a href="../">Wahrscheinlichkeiten</a> › Stunde 3</div>
+</div>
+
+<div class="buehne">
+
+  <!-- 1 Titel + Einstieg -->
+  <section class="folie" data-phase="Einstieg">
+    <div class="kennung">Wahrscheinlichkeiten · Stunde 3</div>
+    <h2>Wie landet die Heftzwecke?</h2>
+    <div class="zwecke">
+      <figure>
+        <svg width="200" height="150" viewBox="0 0 200 150" aria-label="Heftzwecke auf dem Kopf">
+          <line x1="20" y1="135" x2="180" y2="135" stroke="#adb5bd" stroke-width="3"/>
+          <ellipse cx="100" cy="125" rx="55" ry="10" fill="#c92a2a"/>
+          <rect x="45" y="112" width="110" height="13" rx="4" fill="#e03131"/>
+          <line x1="100" y1="112" x2="100" y2="30" stroke="#495057" stroke-width="6" stroke-linecap="round"/>
+        </svg>
+        <figcaption>Kopf</figcaption>
+      </figure>
+      <figure>
+        <svg width="200" height="150" viewBox="0 0 200 150" aria-label="Heftzwecke auf der Seite">
+          <line x1="20" y1="135" x2="180" y2="135" stroke="#adb5bd" stroke-width="3"/>
+          <g transform="rotate(-62 70 110)">
+            <ellipse cx="70" cy="122" rx="48" ry="9" fill="#c92a2a"/>
+            <rect x="22" y="110" width="96" height="12" rx="4" fill="#e03131"/>
+            <line x1="70" y1="110" x2="70" y2="40" stroke="#495057" stroke-width="6" stroke-linecap="round"/>
+          </g>
+        </svg>
+        <figcaption>Seite</figcaption>
+      </figure>
+    </div>
+    <p style="text-align:center; margin:.25rem 0">Was passiert <strong>häufiger</strong>? Stimmt ab!</p>
+    <div class="abstimmung">
+      <button class="knopf mittel" data-stimme="kopf">Kopf häufiger</button>
+      <button class="knopf mittel" data-stimme="seite">Seite häufiger</button>
+      <button class="knopf mittel" data-stimme="gleich">beides gleich oft</button>
+    </div>
+    <p class="schritt" style="text-align:center">Kann man das <strong>ausrechnen</strong> wie beim Würfel? Nein, wir müssen es <strong>ausprobieren</strong>!</p>
+    <div class="hinweis">Eine Heftzwecke zeigen und einmal werfen. Abstimmung per Handzeichen, Ergebnis an der Tafel notieren. Wichtig: Anders als beim Würfel sind die beiden Ergebnisse nicht gleich wahrscheinlich, das kann man nicht „sehen“. (KC: Zufallsexperimente durchführen und auswerten, z. B. Heftzwecke)</div>
+  </section>
+
+  <!-- 2 Experiment -->
+  <section class="folie" data-phase="Experiment" data-minuten="8">
+    <div class="kennung">Experiment · Gruppenarbeit</div>
+    <h2>Wir werfen die Heftzwecke</h2>
+    <div class="zweispaltig">
+      <div>
+        <ol>
+          <li>Werft die Heftzwecke aus etwa 20 cm Höhe auf den Tisch.</li>
+          <li>Notiert jeden Wurf als Strich: <strong>Kopf</strong> oder <strong>Seite</strong>.</li>
+          <li>Werft so oft ihr könnt, bis der Timer abläuft.</li>
+          <li>Zählt am Ende: Wie oft habt ihr <strong>insgesamt</strong> geworfen? Wie oft lag sie auf dem <strong>Kopf</strong>?</li>
+        </ol>
+      </div>
+      <div>
+        <table class="strich">
+          <tr><th>Lage</th><th>Striche</th><th>Anzahl</th></tr>
+          <tr><td>Kopf</td><td style="min-width:12rem"></td><td></td></tr>
+          <tr><td>Seite</td><td></td><td></td></tr>
+          <tr><td><strong>gesamt</strong></td><td></td><td></td></tr>
+        </table>
+      </div>
+    </div>
+    <div class="hinweis">Gruppen zu 3–4, je eine Heftzwecke (gleiche Sorte für alle Gruppen!). Rollen: Werfer, Schreiber, Kontrolleur. Gleiche Fallhöhe, damit alle unter gleichen Bedingungen werfen. Bewusst unterschiedliche Wurfzahlen zulassen, das braucht man für die Auswertung.</div>
+  </section>
+
+  <!-- 3 Problem: Wer hatte öfter Kopf? -->
+  <section class="folie" data-phase="Auswertung">
+    <div class="kennung">Auswertung</div>
+    <h2>Wer hatte öfter „Kopf“?</h2>
+    <div class="vergleich">
+      <div class="kasten">
+        <p><strong>Gruppe A</strong></p>
+        <p>50 Würfe, davon <span class="gross">30</span>-mal Kopf</p>
+      </div>
+      <div class="kasten">
+        <p><strong>Gruppe B</strong></p>
+        <p>40 Würfe, davon <span class="gross">26</span>-mal Kopf</p>
+      </div>
+    </div>
+    <p class="schritt">Gruppe A hatte öfter Kopf, aber sie hat auch <strong>öfter geworfen</strong>. Ist das gerecht verglichen?</p>
+    <p class="schritt">Wir vergleichen den <strong>Anteil</strong>:
+      &nbsp; A: <span class="bruch"><span>30</span><span>50</span></span> = 0,6 = <strong>60 %</strong>
+      &nbsp;&nbsp; B: <span class="bruch"><span>26</span><span>40</span></span> = 0,65 = <strong>65 %</strong></p>
+    <p class="schritt"><strong>Gruppe B</strong> hatte im Verhältnis öfter Kopf!</p>
+    <div class="hinweis">Problem erst offen diskutieren lassen. Viele Schüler vergleichen zunächst nur 30 und 26. Kernidee: Bei unterschiedlicher Gesamtzahl hilft nur der Anteil.</div>
+  </section>
+
+  <!-- 4 Klassentabelle -->
+  <section class="folie" data-phase="Auswertung">
+    <div class="kennung">Auswertung</div>
+    <h2>Unsere Ergebnisse</h2>
+    <table class="strich klasse" id="klassentabelle">
+      <thead>
+        <tr><th>Gruppe</th><th>Würfe gesamt</th><th>davon Kopf</th><th>Anteil (Bruch)</th><th>Dezimalzahl</th><th>Prozent</th></tr>
+      </thead>
+      <tbody></tbody>
+      <tfoot>
+        <tr class="summe"><td>Klasse</td><td data-s="wuerfe">–</td><td data-s="kopf">–</td><td data-s="bruch">–</td><td data-s="dez">–</td><td data-s="proz">–</td></tr>
+      </tfoot>
+    </table>
+    <div class="tabellenknoepfe">
+      <button class="knopf" id="zeileDazu">+ Gruppe</button>
+      <button class="knopf" id="leeren">Tabelle leeren</button>
+    </div>
+    <p class="klein" style="margin-top:.5rem">Das Klassenergebnis wird für Stunde 4 gespeichert (nur in diesem Browser).</p>
+    <div class="hinweis">Gruppen nennen ihre Zahlen, du trägst ein. Fragen: Welche Gruppe hatte den größten Anteil? Warum sind die Anteile verschieden? Was fällt beim Klassenergebnis auf?</div>
+  </section>
+
+  <!-- 5 Merksatz -->
+  <section class="folie" data-phase="Sicherung">
+    <div class="kennung">Sicherung</div>
+    <h2>Absolute und relative Häufigkeit</h2>
+    <div class="merk">
+      <h3>Merke</h3>
+      <ul>
+        <li class="schritt">Die <strong>absolute Häufigkeit</strong> gibt an, <strong>wie oft</strong> ein Ergebnis eingetreten ist.<br><span class="klein">Gruppe A: 30-mal Kopf</span></li>
+        <li class="schritt">Die <strong>relative Häufigkeit</strong> gibt den <strong>Anteil</strong> an allen Versuchen an:
+          <div class="formel">relative Häufigkeit = <span class="bruch"><span>absolute Häufigkeit</span><span>Anzahl aller Versuche</span></span></div>
+        </li>
+        <li class="schritt">Man kann sie als <strong>Bruch</strong>, <strong>Dezimalzahl</strong> oder in <strong>Prozent</strong> angeben:<br>
+          <span class="bruch"><span>30</span><span>50</span></span> = <span class="bruch"><span>3</span><span>5</span></span> = 0,6 = 60 %</li>
+        <li class="schritt">Mit relativen Häufigkeiten kann man Ergebnisse <strong>vergleichen</strong>, auch wenn unterschiedlich oft geworfen wurde.</li>
+      </ul>
+    </div>
+    <div class="hinweis">Ins Heft übernehmen. Umrechnung Bruch → Dezimalzahl → Prozent ggf. kurz wiederholen (Erweitern auf Hundertstel).</div>
+  </section>
+
+  <!-- 6 Übung -->
+  <section class="folie" data-phase="Übung">
+    <div class="kennung">Übung</div>
+    <h2>Jetzt du!</h2>
+    <div class="uebung">
+      <div class="zeile"><div class="n">a</div><div>
+        <div class="frage">Mia würfelt 20-mal und hat 4-mal eine Sechs. Gib die absolute und die relative Häufigkeit an.</div>
+        <div class="antwort schritt">absolute Häufigkeit: 4 · relative Häufigkeit: <span class="bruch"><span>4</span><span>20</span></span> = <span class="bruch"><span>1</span><span>5</span></span> = 0,2 = 20 %</div>
+      </div></div>
+      <div class="zeile"><div class="n">b</div><div>
+        <div class="frage">Basketball: Lena trifft 12-mal bei 20 Würfen, Tom trifft 14-mal bei 25 Würfen. Wer wirft besser?</div>
+        <div class="antwort schritt">Lena: <span class="bruch"><span>12</span><span>20</span></span> = 60 % · Tom: <span class="bruch"><span>14</span><span>25</span></span> = 56 % → <strong>Lena</strong> wirft besser.</div>
+      </div></div>
+      <div class="zeile"><div class="n">c</div><div>
+        <div class="frage">Eine Streichholzschachtel wird 50-mal geworfen: 33-mal Fläche, 15-mal Seite, 2-mal Stirnseite. Berechne die relativen Häufigkeiten in Prozent.</div>
+        <div class="antwort schritt">Fläche 66 % · Seite 30 % · Stirnseite 4 %</div>
+      </div></div>
+      <div class="zeile stern"><div class="n">★</div><div>
+        <div class="frage">Addiere die Prozentwerte aus c). Was fällt dir auf? Erkläre.</div>
+        <div class="antwort schritt">Zusammen immer 100 % (= 1), denn bei jedem Wurf tritt genau eine Lage ein.</div>
+      </div></div>
+    </div>
+    <div class="hinweis">Einzelarbeit, dann Vergleich. Hausaufgabe: Werft zu Hause eine Münze 20-mal und berechnet die relative Häufigkeit von „Kopf“. Ergebnisse mitbringen, wir brauchen sie in Stunde 4.</div>
+  </section>
+
+</div>
+<script src="../../../../praesentation.js"></script>
+<script>
+  // Abstimmung: gewählten Knopf markieren
+  document.querySelectorAll("[data-stimme]").forEach(b => b.onclick = () => {
+    document.querySelectorAll("[data-stimme]").forEach(x => x.classList.toggle("gewaehlt", x === b));
+  });
+
+  // Klassentabelle mit automatischer Berechnung
+  (function () {
+    const SPEICHER = "mathe-k8-hs-heftzwecke";
+    const tbody = document.querySelector("#klassentabelle tbody");
+    const ggT = (a, b) => b ? ggT(b, a % b) : a;
+    const bruch = (z, n) => { const g = ggT(z, n) || 1; return `<span class="bruch"><span>${z / g}</span><span>${n / g}</span></span>`; };
+
+    function zeileHinzufuegen(w = "", k = "") {
+      const nr = tbody.children.length + 1;
+      const tr = document.createElement("tr");
+      tr.innerHTML = `<td>${nr}</td><td><input type="number" min="0" value="${w}"></td><td><input type="number" min="0" value="${k}"></td>` +
+        `<td class="ergebnis"></td><td class="ergebnis"></td><td class="ergebnis"></td>`;
+      tr.querySelectorAll("input").forEach(i => i.addEventListener("input", berechnen));
+      tbody.appendChild(tr);
+    }
+
+    function berechnen() {
+      let sw = 0, sk = 0;
+      const daten = [];
+      tbody.querySelectorAll("tr").forEach(tr => {
+        const [iw, ik] = tr.querySelectorAll("input");
+        const w = parseInt(iw.value), k = parseInt(ik.value);
+        const zellen = tr.querySelectorAll(".ergebnis");
+        if (w > 0 && k >= 0 && k <= w) {
+          zellen[0].innerHTML = bruch(k, w);
+          zellen[1].textContent = Praes.zahl(k / w, 3);
+          zellen[2].textContent = Praes.prozent(k / w);
+          sw += w; sk += k;
+          daten.push([w, k]);
+        } else {
+          zellen.forEach(z => z.textContent = (iw.value || ik.value) ? "?" : "");
+        }
+      });
+      const fuss = s => document.querySelector(`[data-s="${s}"]`);
+      if (sw > 0) {
+        fuss("wuerfe").textContent = sw; fuss("kopf").textContent = sk;
+        fuss("bruch").innerHTML = bruch(sk, sw);
+        fuss("dez").textContent = Praes.zahl(sk / sw, 3);
+        fuss("proz").textContent = Praes.prozent(sk / sw);
+      } else {
+        ["wuerfe", "kopf", "bruch", "dez", "proz"].forEach(s => fuss(s).textContent = "–");
+      }
+      try { localStorage.setItem(SPEICHER, JSON.stringify(daten)); } catch (e) {}
+    }
+
+    let gespeichert = [];
+    try { gespeichert = JSON.parse(localStorage.getItem(SPEICHER) || "[]"); } catch (e) {}
+    if (gespeichert.length) gespeichert.forEach(([w, k]) => zeileHinzufuegen(w, k));
+    while (tbody.children.length < 6) zeileHinzufuegen();
+    berechnen();
+
+    document.getElementById("zeileDazu").onclick = () => zeileHinzufuegen();
+    document.getElementById("leeren").onclick = () => {
+      tbody.innerHTML = "";
+      for (let i = 0; i < 6; i++) zeileHinzufuegen();
+      berechnen();
+    };
+  })();
+</script>
+</body>
+</html>

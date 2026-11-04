@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Stunde 2: Ergebnisse und Ereignisse – Wahrscheinlichkeiten</title>
+<link rel="stylesheet" href="../../../../praesentation.css">
+<style>
+  .spielstand { display: flex; gap: 2rem; justify-content: center; margin-top: .5rem; flex-wrap: wrap; }
+  .spieler {
+    background: var(--card); border: 2px solid var(--border); border-radius: 14px;
+    padding: .9rem 1.4rem; min-width: 280px; text-align: center; transition: background .3s, border-color .3s;
+  }
+  .spieler .name { font-size: 1.5rem; font-weight: 800; }
+  .spieler .regel { font-size: 1.15rem; color: var(--muted); }
+  .spieler .punkte { font-size: 2.6rem; font-weight: 800; color: var(--accent); line-height: 1.2; }
+  .spieler.gewinnt { background: var(--gruen-hell); border-color: var(--gruen); }
+  .meldung { font-size: 1.5rem; font-weight: 700; text-align: center; min-height: 2.2rem; }
+
+  .augen { display: flex; gap: 1rem; justify-content: center; margin: 1rem 0 1.25rem; }
+  .auge {
+    width: 92px; height: 92px; border-radius: 16px; border: 3px solid var(--text); background: #fff;
+    display: flex; align-items: center; justify-content: center; font-size: 2.6rem; font-weight: 800;
+    transition: background .25s, border-color .25s, transform .25s;
+  }
+  .auge.drin { background: var(--accent); border-color: var(--accent); color: #fff; transform: translateY(-6px); }
+  .ereignisse { display: flex; gap: .6rem; flex-wrap: wrap; justify-content: center; }
+  .menge {
+    text-align: center; font-size: 2rem; font-weight: 700; margin-top: 1.25rem; min-height: 3rem;
+    font-variant-numeric: tabular-nums;
+  }
+  .menge .art { display: block; font-size: 1.15rem; font-weight: 600; color: var(--muted); }
+  .rad-aufgaben { display: grid; grid-template-columns: 320px 1fr; gap: 2.5rem; align-items: start; }
+  .farbe-rot { color: #e03131; font-weight: 700; } .farbe-blau { color: #1c7ed6; font-weight: 700; } .farbe-gelb { color: #d49a00; font-weight: 700; }
+  .eingetreten { font-size: 1.3rem; font-weight: 700; text-align: center; min-height: 2rem; margin-top: .5rem; }
+  @media (max-width: 900px) { .rad-aufgaben { grid-template-columns: 1fr; } .auge { width: 60px; height: 60px; font-size: 1.8rem; } }
+</style>
+</head>
+<body data-phasen='[["Einstieg",7],["Erarbeitung",10],["Sicherung",8],["Übung",15],["Abschluss",5]]'>
+
+<div class="leiste">
+  <div class="pfad"><a href="../../../../">Start</a> › <a href="../../../">Klasse 8</a> › <a href="../../">Hauptschule</a> › <a href="../">Wahrscheinlichkeiten</a> › Stunde 2</div>
+</div>
+
+<div class="buehne">
+
+  <!-- 1 Titel -->
+  <section class="folie mitte" data-phase="Einstieg">
+    <div class="kennung">Wahrscheinlichkeiten · Stunde 2</div>
+    <h1>Ergebnisse und Ereignisse</h1>
+    <p style="color: var(--muted)">Heute lernst du, wie man mehrere Ergebnisse zu einem <strong>Ereignis</strong> zusammenfasst.</p>
+    <div class="schritt kasten" style="max-width: 820px; text-align: left; margin-top: 1rem">
+      <p style="margin:0"><strong>Wiederholung:</strong> Nenne ein Zufallsexperiment aus deiner Hausaufgabe und alle möglichen Ergebnisse.</p>
+    </div>
+    <div class="hinweis">Hausaufgabe kurz vergleichen (2–3 Beispiele an die Tafel). Auf richtige Schreibweise mit geschweiften Klammern achten.</div>
+  </section>
+
+  <!-- 2 Einstiegsspiel -->
+  <section class="folie" data-phase="Einstieg">
+    <div class="kennung">Einstieg</div>
+    <h2>Anna gegen Ben</h2>
+    <div class="spielstand">
+      <div class="spieler" id="anna"><div class="name">Anna</div><div class="regel">gewinnt bei einer <strong>geraden Zahl</strong></div><div class="punkte">0</div></div>
+      <div class="spieler" id="ben"><div class="name">Ben</div><div class="regel">gewinnt bei einer <strong>Zahl größer als 4</strong></div><div class="punkte">0</div></div>
+    </div>
+    <div class="spielzeug" style="margin: 1rem 0 .25rem">
+      <div data-wuerfel id="spielwuerfel"></div>
+    </div>
+    <div class="meldung" id="meldung"></div>
+    <p class="schritt" style="text-align:center; margin-top: .25rem">Wer hat die <strong>besseren Chancen</strong>? Begründe!</p>
+    <div class="hinweis">Vor dem ersten Wurf abstimmen lassen: Wer hat bessere Chancen? Dann 10–15-mal würfeln. Bei der 6 gewinnen beide, bei 1 und 3 niemand. Begründungen sammeln, noch nicht auflösen.</div>
+  </section>
+
+  <!-- 3 Erarbeitung: Ereignisse am Würfel -->
+  <section class="folie" data-phase="Erarbeitung">
+    <div class="kennung">Erarbeitung</div>
+    <h2>Welche Ergebnisse gehören dazu?</h2>
+    <p style="margin:0">Wähle ein Ereignis. Welche Augenzahlen passen?</p>
+    <div class="augen" id="augen">
+      <div class="auge">1</div><div class="auge">2</div><div class="auge">3</div>
+      <div class="auge">4</div><div class="auge">5</div><div class="auge">6</div>
+    </div>
+    <div class="ereignisse" id="ereignisKnoepfe">
+      <button class="knopf mittel" data-e="2,4,6">gerade Zahl</button>
+      <button class="knopf mittel" data-e="5,6">Zahl größer als 4</button>
+      <button class="knopf mittel" data-e="1,3,5">ungerade Zahl</button>
+      <button class="knopf mittel" data-e="1,2">höchstens 2</button>
+      <button class="knopf mittel" data-e="3,6">durch 3 teilbar</button>
+      <button class="knopf mittel" data-e="6">eine Sechs</button>
+      <button class="knopf mittel" data-e="1,2,3,4,5,6">Zahl kleiner als 7</button>
+      <button class="knopf mittel" data-e="">eine Null</button>
+    </div>
+    <div class="menge" id="menge"></div>
+    <div class="hinweis">Erst Ereignis vorlesen, Schüler nennen die passenden Zahlen, dann klicken. Bei „Zahl kleiner als 7“ und „eine Null“ an Stunde 1 anknüpfen: sicher bzw. unmöglich.</div>
+  </section>
+
+  <!-- 4 Merksatz -->
+  <section class="folie" data-phase="Sicherung">
+    <div class="kennung">Sicherung</div>
+    <h2>Ergebnis und Ereignis</h2>
+    <div class="merk">
+      <h3>Merke</h3>
+      <ul>
+        <li class="schritt">Ein <strong>Ergebnis</strong> ist ein einzelner möglicher Ausgang eines Zufallsexperiments.<br><span class="klein">Würfel: 1, 2, 3, 4, 5 oder 6</span></li>
+        <li class="schritt">Ein <strong>Ereignis</strong> fasst ein oder mehrere Ergebnisse zusammen.<br><span class="klein">„gerade Zahl“ = { 2, 4, 6 }</span></li>
+        <li class="schritt">Ein Ereignis <strong>tritt ein</strong>, wenn eines seiner Ergebnisse fällt.<br><span class="klein">Fällt eine 4, ist „gerade Zahl“ eingetreten.</span></li>
+        <li class="schritt">Enthält ein Ereignis alle Ergebnisse, ist es ein <strong>sicheres Ereignis</strong>. Enthält es kein Ergebnis, ist es ein <strong>unmögliches Ereignis</strong>: { }</li>
+      </ul>
+    </div>
+    <div class="hinweis">Merksatz ins Heft. Abgrenzung betonen: Das Ergebnis ist das, was tatsächlich fällt. Das Ereignis ist das, worauf man wettet.</div>
+  </section>
+
+  <!-- 5 Übung 1 Glücksrad -->
+  <section class="folie" data-phase="Übung">
+    <div class="kennung">Übung · Einzelarbeit</div>
+    <h2>Das Glücksrad</h2>
+    <div class="rad-aufgaben">
+      <div>
+        <div id="rad" data-gluecksrad='[["1","#e03131"],["2","#1c7ed6"],["3","#e8a400"],["4","#e03131"],["5","#1c7ed6"],["6","#e8a400"],["7","#e03131"],["8","#1c7ed6"]]'></div>
+      </div>
+      <div>
+        <p style="margin-top:0">Schreibe die Ereignisse als Menge auf.</p>
+        <div class="uebung">
+          <div class="zeile"><div class="n">a</div><div>
+            <div class="frage">Das Rad bleibt auf <span class="farbe-rot">Rot</span> stehen.</div>
+            <div class="antwort schritt">{ 1, 4, 7 }</div>
+          </div></div>
+          <div class="zeile"><div class="n">b</div><div>
+            <div class="frage">Es kommt eine gerade Zahl.</div>
+            <div class="antwort schritt">{ 2, 4, 6, 8 }</div>
+          </div></div>
+          <div class="zeile"><div class="n">c</div><div>
+            <div class="frage">Es kommt eine Zahl kleiner als 3.</div>
+            <div class="antwort schritt">{ 1, 2 }</div>
+          </div></div>
+        </div>
+      </div>
+    </div>
+    <div class="hinweis">Zum Abschluss der Folie das Rad drehen: Ist Ereignis a, b oder c eingetreten? So wird das „Eintreten“ geübt.</div>
+  </section>
+
+  <!-- 6 Übung 2 -->
+  <section class="folie" data-phase="Übung">
+    <div class="kennung">Übung · Einzelarbeit</div>
+    <h2>Das Glücksrad: weiter geht's</h2>
+    <div class="rad-aufgaben">
+      <div>
+        <div data-gluecksrad='[["1","#e03131"],["2","#1c7ed6"],["3","#e8a400"],["4","#e03131"],["5","#1c7ed6"],["6","#e8a400"],["7","#e03131"],["8","#1c7ed6"]]'></div>
+      </div>
+      <div>
+        <div class="uebung">
+          <div class="zeile"><div class="n">d</div><div>
+            <div class="frage">Es kommt eine Zahl größer als 8. Was für ein Ereignis ist das?</div>
+            <div class="antwort schritt">{ } – ein <strong>unmögliches</strong> Ereignis</div>
+          </div></div>
+          <div class="zeile"><div class="n">e</div><div>
+            <div class="frage">Beschreibe das Ereignis { 3, 6 } in Worten.</div>
+            <div class="antwort schritt">„Das Rad bleibt auf <span class="farbe-gelb">Gelb</span> stehen.“ oder „Die Zahl ist durch 3 teilbar.“</div>
+          </div></div>
+          <div class="zeile stern"><div class="n">★</div><div>
+            <div class="frage">Es kommt eine <span class="farbe-blau">blaue</span> <strong>und</strong> gerade Zahl.</div>
+            <div class="antwort schritt">{ 2, 8 }</div>
+          </div></div>
+          <div class="zeile stern"><div class="n">★</div><div>
+            <div class="frage">Erfinde selbst ein Ereignis mit genau 3 Ergebnissen.</div>
+            <div class="antwort schritt">z. B. „ungerade Zahl kleiner als 6“ = { 1, 3, 5 }</div>
+          </div></div>
+        </div>
+      </div>
+    </div>
+    <div class="hinweis">★-Aufgaben für schnelle Schüler. Bei e) beide Beschreibungen würdigen: Zu einer Menge kann es mehrere Beschreibungen geben.</div>
+  </section>
+
+  <!-- 7 Abschluss -->
+  <section class="folie" data-phase="Abschluss">
+    <div class="kennung">Abschluss</div>
+    <h2>Zurück zu Anna und Ben</h2>
+    <div class="zweispaltig">
+      <div class="kasten">
+        <p style="margin:0"><strong>Anna:</strong> gerade Zahl</p>
+        <p class="schritt" style="margin:.3rem 0 0">{ 2, 4, 6 } → <strong>3</strong> Ergebnisse</p>
+      </div>
+      <div class="kasten">
+        <p style="margin:0"><strong>Ben:</strong> Zahl größer als 4</p>
+        <p class="schritt" style="margin:.3rem 0 0">{ 5, 6 } → <strong>2</strong> Ergebnisse</p>
+      </div>
+    </div>
+    <p class="schritt">Annas Ereignis enthält mehr Ergebnisse. Darum hat <strong>Anna die besseren Chancen</strong>.</p>
+    <p class="schritt klein">Nächste Stunde: Stimmt das auch, wenn wir oft würfeln? Wir zählen genau nach.</p>
+    <div class="hinweis">Falls Zeit bleibt: Wie müsste Bens Regel lauten, damit das Spiel fair ist? (z. B. „Zahl größer als 3“ = { 4, 5, 6 })</div>
+  </section>
+
+</div>
+<script src="../../../../praesentation.js"></script>
+<script>
+  // Anna gegen Ben
+  (function () {
+    const punkte = { anna: 0, ben: 0 };
+    const anna = document.getElementById("anna"), ben = document.getElementById("ben");
+    const meldung = document.getElementById("meldung");
+    document.getElementById("spielwuerfel").addEventListener("gewuerfelt", e => {
+      const z = e.detail;
+      const a = z % 2 === 0, b = z > 4;
+      if (a) punkte.anna++;
+      if (b) punkte.ben++;
+      anna.querySelector(".punkte").textContent = punkte.anna;
+      ben.querySelector(".punkte").textContent = punkte.ben;
+      anna.classList.toggle("gewinnt", a);
+      ben.classList.toggle("gewinnt", b);
+      meldung.textContent = a && b ? "Beide bekommen einen Punkt!" : a ? "Punkt für Anna!" : b ? "Punkt für Ben!" : "Niemand bekommt einen Punkt.";
+    });
+  })();
+
+  // Ereignisse am Würfel
+  (function () {
+    const augen = document.querySelectorAll("#augen .auge");
+    const menge = document.getElementById("menge");
+    const knoepfe = document.querySelectorAll("#ereignisKnoepfe .knopf");
+    knoepfe.forEach(k => k.onclick = () => {
+      knoepfe.forEach(x => x.classList.toggle("gewaehlt", x === k));
+      const liste = k.dataset.e ? k.dataset.e.split(",").map(Number) : [];
+      augen.forEach((a, i) => a.classList.toggle("drin", liste.includes(i + 1)));
+      let art = "";
+      if (liste.length === 6) art = "sicheres Ereignis";
+      else if (liste.length === 0) art = "unmögliches Ereignis";
+      menge.innerHTML = "„" + k.textContent + "“ = { " + liste.join(", ") + (liste.length ? " " : "") + "}" +
+        (art ? '<span class="art">' + art + "</span>" : "");
+    });
+  })();
+</script>
+</body>
+</html>
