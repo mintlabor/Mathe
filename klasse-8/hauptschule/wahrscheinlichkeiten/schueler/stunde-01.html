@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Üben: Zufall oder nicht? – Stunde 1</title>
+<link rel="stylesheet" href="../../../../schueler.css">
+</head>
+<body>
+<header><div class="inner">
+  <div class="pfad"><a href="./">🗺️ Lernlandkarte</a> › Stunde 1</div>
+  <h1>Üben: Zufall oder nicht?</h1>
+  <p class="untertitel">Stunde 1 · Zufallsexperimente und mögliche Ergebnisse</p>
+</div></header>
+<main>
+  <div id="ziele"></div>
+  <h2>Aufgaben</h2>
+  <div id="niveaus"></div>
+  <div id="fortschritt"></div>
+  <div id="aufgaben"></div>
+  <h2>Wie sicher bist du jetzt?</h2>
+  <div id="ampel"></div>
+  <p><a href="./">← Zurück zur Lernlandkarte</a></p>
+</main>
+<script>
+window.SEITE = {
+  speicher: "mathe-k8-hs-wk", stunde: 1,
+  lernziele: ["erkennen, wann etwas ein Zufallsexperiment ist", "alle möglichen Ergebnisse in { } aufschreiben", "„sicher“, „möglich“ und „unmöglich“ unterscheiden"],
+  ichKann: ["Ich kann erklären, was ein Zufallsexperiment ist.", "Ich kann alle möglichen Ergebnisse in { } aufschreiben.", "Ich kann „sicher“, „möglich“ und „unmöglich“ unterscheiden."],
+  aufgaben: [
+    { niveau: 1, typ: "auswahl", frage: "Beim Fußball wird vor dem Spiel eine Münze geworfen, um die Seiten zu wählen. Ist das ein Zufallsexperiment?",
+      optionen: ["Ja", "Nein"], loesung: 0,
+      tipps: ["Weiß vorher jemand, ob Kopf oder Zahl kommt?"],
+      erklaerung: "Ja. Es gibt mehrere mögliche Ergebnisse (Kopf, Zahl), man weiß vorher nicht, welches kommt, und man kann es beliebig oft wiederholen." },
+    { niveau: 1, typ: "auswahl", frage: "Du rechnest an der Kasse 4 · 2 € aus. Ist das ein Zufallsexperiment?",
+      optionen: ["Ja", "Nein"], loesung: 1,
+      tipps: ["Kommt bei 4 · 2 € jedes Mal etwas anderes heraus?"],
+      erklaerung: "Nein. Das Ergebnis ist immer 8 €. Man weiß es vorher, also ist es kein Zufall." },
+    { niveau: 1, typ: "auswahl", frage: "„Beim Würfeln fällt eine Zahl kleiner als 7.“ Das ist …",
+      optionen: ["sicher", "möglich", "unmöglich"], loesung: 0,
+      tipps: ["Welche Zahlen kann ein normaler Würfel zeigen?", "Sind alle Zahlen von 1 bis 6 kleiner als 7?"],
+      erklaerung: "Sicher. Ein Würfel zeigt nur 1 bis 6, und alle diese Zahlen sind kleiner als 7." },
+    { niveau: 2, typ: "menge", frage: "Ein Glücksrad hat die Farben Rot, Grün und Blau. Schreibe alle möglichen Ergebnisse auf.",
+      loesung: ["rot", "grün", "blau"],
+      tipps: ["Wo kann der Zeiger stehen bleiben?", "Schreibe die drei Farben in eine Klammer, z. B. { Rot, … }"],
+      erklaerung: "{ Rot, Grün, Blau }: Der Zeiger kann auf jeder der drei Farben stehen bleiben." },
+    { niveau: 2, typ: "menge", frage: "Aus einer Kiste mit Karten 1 bis 5 wird blind eine Karte gezogen. Schreibe alle möglichen Ergebnisse auf.",
+      loesung: ["1", "2", "3", "4", "5"],
+      tipps: ["Welche Zahlen stehen auf den Karten?"],
+      erklaerung: "{ 1, 2, 3, 4, 5 }: Jede der fünf Karten kann gezogen werden." },
+    { niveau: 2, typ: "auswahl", frage: "„Aus einer Tüte mit 5 roten Gummibärchen ziehe ich ein grünes.“ Das ist …",
+      optionen: ["sicher", "möglich", "unmöglich"], loesung: 2,
+      tipps: ["Gibt es in der Tüte überhaupt grüne Gummibärchen?"],
+      erklaerung: "Unmöglich. In der Tüte sind nur rote Gummibärchen." },
+    { niveau: 3, typ: "auswahl", frage: "Warum ist ein Elfmeter kein „reines“ Zufallsexperiment, ein Münzwurf aber schon?",
+      optionen: ["Weil es beim Elfmeter nur ein Ergebnis gibt.", "Weil beim Elfmeter das Können des Schützen und des Torwarts mitspielt.", "Weil man einen Elfmeter nicht wiederholen kann."], loesung: 1,
+      tipps: ["Kann ein guter Schütze das Ergebnis beeinflussen?"],
+      erklaerung: "Beim Elfmeter beeinflusst das Können das Ergebnis. Bei einer fairen Münze kann niemand das Ergebnis beeinflussen. Das Ergebnis ist trotzdem nicht sicher vorhersagbar." },
+    { niveau: 3, typ: "menge", frage: "Zwei Freunde spielen Schere-Stein-Papier. Schreibe alle möglichen Ergebnisse für <strong>einen</strong> Spieler auf (was er zeigt).",
+      loesung: ["schere", "stein", "papier"],
+      tipps: ["Welche drei Handzeichen gibt es?"],
+      erklaerung: "{ Schere, Stein, Papier }. Ob es wirklich Zufall ist, ist eine spannende Frage: Viele Menschen haben Lieblingszeichen!" }
+  ]
+};
+</script>
+<script src="../../../../schueler.js"></script>
+</body>
+</html>

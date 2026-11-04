@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Üben: Relative Häufigkeit – Stunde 3</title>
+<link rel="stylesheet" href="../../../../schueler.css">
+</head>
+<body>
+<header><div class="inner">
+  <div class="pfad"><a href="./">🗺️ Lernlandkarte</a> › Stunde 3</div>
+  <h1>Üben: Wir werfen und zählen</h1>
+  <p class="untertitel">Stunde 3 · absolute und relative Häufigkeit</p>
+</div></header>
+<main>
+  <div id="ziele"></div>
+  <h2>Aufgaben</h2>
+  <div id="niveaus"></div>
+  <div id="fortschritt"></div>
+  <div id="aufgaben"></div>
+  <h2>Wie sicher bist du jetzt?</h2>
+  <div id="ampel"></div>
+  <p><a href="./">← Zurück zur Lernlandkarte</a></p>
+</main>
+<script>
+window.SEITE = {
+  speicher: "mathe-k8-hs-wk", stunde: 3,
+  lernziele: ["absolute und relative Häufigkeit unterscheiden", "die relative Häufigkeit als Bruch, Dezimalzahl und Prozent angeben", "mit relativen Häufigkeiten gerecht vergleichen"],
+  ichKann: ["Ich kann absolute und relative Häufigkeit unterscheiden.", "Ich kann die relative Häufigkeit als Bruch, Dezimalzahl und Prozent angeben.", "Ich kann mit relativen Häufigkeiten gerecht vergleichen."],
+  aufgaben: [
+    { niveau: 1, typ: "zahl", frage: "Eine Münze wird 30-mal geworfen, 12-mal kommt Kopf. Wie groß ist die <strong>absolute</strong> Häufigkeit von Kopf?",
+      loesung: 12,
+      tipps: ["Die absolute Häufigkeit sagt: Wie oft ist es passiert?"],
+      erklaerung: "Absolute Häufigkeit = 12, denn Kopf kam 12-mal." },
+    { niveau: 1, typ: "zahl", einheit: "%", frage: "Gleiche Münze: 30 Würfe, 12-mal Kopf. Wie groß ist die <strong>relative</strong> Häufigkeit in Prozent?",
+      loesung: 40,
+      tipps: ["Relative Häufigkeit = absolute Häufigkeit geteilt durch Anzahl aller Würfe.", "12/30 kürzen: 12/30 = 4/10. Wie viel Prozent sind 4/10?"],
+      erklaerung: "12/30 = 4/10 = 0,4 = 40 %" },
+    { niveau: 1, typ: "zahl", frage: "Schreibe 40 % als Dezimalzahl.",
+      loesung: 0.4,
+      tipps: ["Prozent heißt „von Hundert“: 40 % = 40/100."],
+      erklaerung: "40 % = 40/100 = 0,4" },
+    { niveau: 2, typ: "auswahl", frage: "Elfmeter-Training: Ali trifft 8-mal bei 10 Schüssen, Jonas 15-mal bei 20 Schüssen. Wer trifft besser?",
+      optionen: ["Ali", "Jonas", "beide gleich gut"], loesung: 0,
+      tipps: ["Jonas hat öfter getroffen, aber auch öfter geschossen. Vergleiche die Anteile!", "Ali: 8/10 = ? %   Jonas: 15/20 = ? %"],
+      erklaerung: "Ali: 8/10 = 80 %, Jonas: 15/20 = 75 %. Ali trifft im Verhältnis besser." },
+    { niveau: 2, typ: "zahl", einheit: "%", frage: "Eine Streichholzschachtel wird 25-mal geworfen. 5-mal landet sie auf der Seite. Relative Häufigkeit in Prozent?",
+      loesung: 20,
+      tipps: ["5/25 kürzen.", "1/5 = ?/100"],
+      erklaerung: "5/25 = 1/5 = 20/100 = 20 %" },
+    { niveau: 2, typ: "zahl", einheit: "%", frage: "Bei 50 Würfen landet eine Heftzwecke 32-mal auf dem Kopf. Wie oft in Prozent landet sie auf der <strong>Seite</strong>?",
+      loesung: 36,
+      tipps: ["Wie oft lag sie auf der Seite? 50 − 32 = ?", "18/50 auf Hundertstel erweitern."],
+      erklaerung: "Seite: 50 − 32 = 18. 18/50 = 36/100 = 36 %. Kontrolle: 64 % + 36 % = 100 %." },
+    { niveau: 3, typ: "zahl", einheit: "€", frage: "Schulfest: 200 Personen spielen am Heftzwecken-Stand (Einsatz 0,50 €, bei Kopf 1 € Auszahlung). Die Heftzwecke landet in 45 % der Fälle auf dem Kopf. Wie viel Euro <strong>Gewinn</strong> macht die Klasse ungefähr?",
+      loesung: 10,
+      tipps: ["Einnahmen: 200 · 0,50 € = ?", "Auszahlungen: 45 % von 200 Spielen, je 1 €.", "Gewinn = Einnahmen − Auszahlungen"],
+      erklaerung: "Einnahmen 100 €. Auszahlungen: 45 % von 200 = 90-mal 1 € = 90 €. Gewinn: 100 € − 90 € = 10 €." },
+    { niveau: 3, typ: "auswahl", frage: "Klasse 8a: 120 Würfe, 54-mal Kopf. Klasse 8b: 80 Würfe, 38-mal Kopf. Welche Aussage stimmt?",
+      optionen: ["8a hatte öfter Kopf, weil 54 > 38.", "8b hatte im Verhältnis öfter Kopf.", "Beide hatten gleich oft Kopf."], loesung: 1,
+      tipps: ["Rechne beide Anteile aus: 54/120 und 38/80.", "54/120 = 0,45 und 38/80 = 0,475"],
+      erklaerung: "8a: 54/120 = 45 %, 8b: 38/80 = 47,5 %. Absolut hatte 8a mehr, im Verhältnis 8b." }
+  ]
+};
+</script>
+<script src="../../../../schueler.js"></script>
+</body>
+</html>

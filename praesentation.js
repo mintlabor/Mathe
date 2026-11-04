@@ -19,6 +19,12 @@
                                   Glücksrad          (Ereignis "gedreht", detail = Feld-Index)
     .karten .karte                Klick deckt Lösung auf; [data-alle-auf] / [data-alle-zu]
     <span class="eis" data-eis="EI"></span>   EIS-Kennzeichnung (Enaktiv · Ikonisch · Symbolisch)
+    <div data-tipps><div class="tipp">…</div></div>   gestufte Hilfen, einzeln aufklappbar
+    .lernziele / .tps / .vernetzen / .ampel  Lernziele, Think-Pair-Share, Vernetzungsimpuls, Selbsteinschätzung
+
+  Stundenmodell: Abrufen → Problem + Lernziel → eigene Lösung (allein – zu zweit – Klasse, mit Tipps)
+                 → Lösungsideen vergleichen → Sichern (E → I → S, Darstellungen verbinden)
+                 → Üben (Schülerseite) → Reflexion (Exit-Ticket, Ampel)
 
   Tasten: → Leertaste weiter · ← zurück · T Timer · N Hinweise · F Vollbild
 */
@@ -134,6 +140,31 @@
     const namen = { E: "enaktiv – handeln", I: "ikonisch – Bild", S: "symbolisch – Zeichen/Formel" };
     el.title = "EIS-Prinzip: " + [...an].map(b => namen[b]).filter(Boolean).join(", ");
     el.innerHTML = ["E", "I", "S"].map(b => `<span class="${an.includes(b) ? "an" : ""}">${b}</span>`).join("");
+  });
+
+  // ---------- Gestufte Hilfen: <div data-tipps><div class="tipp">…</div>…</div> ----------
+  document.querySelectorAll("[data-tipps]").forEach(box => {
+    box.classList.add("tipps");
+    const tipps = Array.from(box.querySelectorAll(".tipp"));
+    const leiste = document.createElement("div");
+    leiste.className = "knoepfe";
+    tipps.forEach((t, i) => {
+      t.dataset.nr = "Tipp " + (i + 1);
+      const b = document.createElement("button");
+      b.className = "knopf mittel";
+      b.textContent = "💡 Tipp " + (i + 1);
+      b.onclick = () => { t.classList.toggle("offen"); b.classList.toggle("gewaehlt"); };
+      leiste.appendChild(b);
+    });
+    box.prepend(leiste);
+  });
+
+  // ---------- Ampel: <div class="ampel"><div class="zeile"><span>Ich kann …</span></div></div> ----------
+  document.querySelectorAll(".ampel .zeile").forEach(z => {
+    const p = document.createElement("span");
+    p.className = "punkte";
+    p.innerHTML = '<i style="background:#2f9e44"></i><i style="background:#e8a400"></i><i style="background:#e03131"></i>';
+    z.appendChild(p);
   });
 
   // ---------- Würfel ----------

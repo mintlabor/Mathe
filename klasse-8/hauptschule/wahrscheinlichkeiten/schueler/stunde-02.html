@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Üben: Ergebnisse und Ereignisse – Stunde 2</title>
+<link rel="stylesheet" href="../../../../schueler.css">
+</head>
+<body>
+<header><div class="inner">
+  <div class="pfad"><a href="./">🗺️ Lernlandkarte</a> › Stunde 2</div>
+  <h1>Üben: Ergebnisse und Ereignisse</h1>
+  <p class="untertitel">Stunde 2 · Ereignisse als Menge, faire Spiele</p>
+</div></header>
+<main>
+  <div id="ziele"></div>
+  <h2>Aufgaben</h2>
+  <div id="niveaus"></div>
+  <div id="fortschritt"></div>
+  <div id="aufgaben"></div>
+  <h2>Wie sicher bist du jetzt?</h2>
+  <div id="ampel"></div>
+  <p><a href="./">← Zurück zur Lernlandkarte</a></p>
+</main>
+<script>
+window.SEITE = {
+  speicher: "mathe-k8-hs-wk", stunde: 2,
+  lernziele: ["mehrere Ergebnisse zu einem Ereignis zusammenfassen", "ein Ereignis als Menge aufschreiben", "mit Ereignissen begründen, ob ein Spiel fair ist"],
+  ichKann: ["Ich kann Ergebnis und Ereignis unterscheiden.", "Ich kann ein Ereignis als Menge aufschreiben.", "Ich kann mit Ereignissen begründen, ob ein Spiel fair ist."],
+  aufgaben: [
+    { niveau: 1, typ: "menge", frage: "Du würfelst. Schreibe das Ereignis „ungerade Zahl“ als Menge.",
+      loesung: ["1", "3", "5"],
+      tipps: ["Schreibe alle Augenzahlen 1 bis 6 auf und markiere die ungeraden."],
+      erklaerung: "„ungerade Zahl“ = { 1, 3, 5 }" },
+    { niveau: 1, typ: "menge", frage: "Du würfelst. Schreibe das Ereignis „Zahl größer als 3“ als Menge.",
+      loesung: ["4", "5", "6"],
+      tipps: ["Welche Augenzahlen sind größer als 3? Die 3 selbst gehört nicht dazu!"],
+      erklaerung: "„größer als 3“ = { 4, 5, 6 }. Die 3 ist nicht größer als 3." },
+    { niveau: 1, typ: "auswahl", frage: "Der Würfel zeigt eine 2. Ist das Ereignis „gerade Zahl“ eingetreten?",
+      optionen: ["Ja", "Nein"], loesung: 0,
+      tipps: ["Gehört die 2 zur Menge { 2, 4, 6 }?"],
+      erklaerung: "Ja. Ein Ereignis tritt ein, wenn eines seiner Ergebnisse fällt. Die 2 gehört zu { 2, 4, 6 }." },
+    { niveau: 2, typ: "auswahl", frage: "Beim Würfeln: „Zahl kleiner als 10“. Was für ein Ereignis ist das?",
+      optionen: ["ein sicheres Ereignis", "ein unmögliches Ereignis", "weder noch"], loesung: 0,
+      tipps: ["Welche Augenzahlen gehören dazu? Fehlt eine?"],
+      erklaerung: "Sicher: Alle Augenzahlen 1 bis 6 sind kleiner als 10. Die Menge enthält alle Ergebnisse." },
+    { niveau: 2, typ: "menge", frage: "Ein Glücksrad hat 8 Felder mit den Zahlen 1 bis 8. Schreibe das Ereignis „durch 4 teilbar“ als Menge.",
+      loesung: ["4", "8"],
+      tipps: ["Welche Zahlen von 1 bis 8 kann man ohne Rest durch 4 teilen?"],
+      erklaerung: "{ 4, 8 }: 4 : 4 = 1 und 8 : 4 = 2." },
+    { niveau: 2, typ: "menge", frage: "Glücksrad mit 1 bis 8: Schreibe das Ereignis „Zahl größer als 8“ als Menge.",
+      loesung: [],
+      tipps: ["Gibt es auf dem Rad eine Zahl größer als 8?", "Eine leere Menge schreibt man { }."],
+      erklaerung: "{ }: ein unmögliches Ereignis, denn es gibt keine Zahl größer als 8 auf dem Rad." },
+    { niveau: 3, typ: "auswahl", frage: "Lena bekommt einen Punkt bei 1 oder 2, Max bei 5 oder 6. Ist das Spiel fair?",
+      optionen: ["Ja, beide haben gleich viele passende Ergebnisse.", "Nein, Max hat höhere Zahlen.", "Nein, Lena hat bessere Chancen."], loesung: 0,
+      tipps: ["Schreibe beide Ereignisse als Menge und zähle die Elemente."],
+      erklaerung: "Fair: Lena { 1, 2 } und Max { 5, 6 } haben je 2 passende Ergebnisse. Ob die Zahlen groß oder klein sind, ist egal." },
+    { niveau: 3, typ: "auswahl", frage: "Anna bekommt einen Punkt bei einer geraden Zahl { 2, 4, 6 }. Welche Regel für Ben macht das Spiel fair?",
+      optionen: ["Ben: { 1, 3 }", "Ben: { 1, 3, 5 }", "Ben: { 3, 4, 5, 6 }"], loesung: 1,
+      tipps: ["Ben braucht genauso viele passende Zahlen wie Anna.", "Zähle die Elemente in jeder Menge."],
+      erklaerung: "{ 1, 3, 5 } hat 3 Ergebnisse wie Annas { 2, 4, 6 }, also fair. { 1, 3 } hat zu wenige, { 3, 4, 5, 6 } zu viele." }
+  ]
+};
+</script>
+<script src="../../../../schueler.js"></script>
+</body>
+</html>

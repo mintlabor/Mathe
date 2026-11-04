@@ -32,7 +32,7 @@
   .ld-ziel::before { background: var(--rot); }
 </style>
 </head>
-<body data-phasen='[["Problem",5],["Erarbeitung I",12],["Erarbeitung II",8],["Sicherung",8],["Übung",10],["Abschluss",2]]'>
+<body data-phasen='[["Abrufen",3],["Problem",6],["Erarbeitung I",11],["Ideen vergleichen",4],["Erarbeitung II",7],["Sicherung",5],["Übung",5],["Reflexion",4]]'>
 
 <div class="leiste">
   <div class="pfad"><a href="../../../../">Start</a> › <a href="../../../">Klasse 8</a> › <a href="../../">Hauptschule</a> › <a href="../">Wahrscheinlichkeiten</a> › Stunde 4</div>
@@ -40,9 +40,31 @@
 
 <div class="buehne">
 
-  <!-- 1 Problem -->
+  <!-- Abrufen -->
+  <section class="folie" data-phase="Abrufen">
+    <div class="kennung">Wahrscheinlichkeiten · Stunde 4 · Warm-up</div>
+    <h2>Was weißt du noch?</h2>
+    <p style="margin-top:0">Beantworte ohne ins Heft zu schauen.</p>
+    <div class="uebung">
+      <div class="zeile"><div class="n">1</div><div>
+        <div class="frage">Lea würfelt 20-mal und hat 5-mal eine Sechs. Wie groß ist die relative Häufigkeit in Prozent?</div>
+        <div class="antwort schritt"><span class="bruch"><span>5</span><span>20</span></span> = <span class="bruch"><span>1</span><span>4</span></span> = 25 %</div>
+      </div></div>
+      <div class="zeile"><div class="n">2</div><div>
+        <div class="frage">Warum vergleicht man relative und nicht absolute Häufigkeiten?</div>
+        <div class="antwort schritt">Weil unterschiedlich oft geworfen wurde. Der Anteil macht es vergleichbar.</div>
+      </div></div>
+      <div class="zeile"><div class="n">3</div><div>
+        <div class="frage">Exit-Ticket von letzter Stunde: Ali 8 von 10, Jonas 15 von 20. Wer trifft besser?</div>
+        <div class="antwort schritt">Ali 80 %, Jonas 75 %, also Ali.</div>
+      </div></div>
+    </div>
+    <div class="hinweis">3 Minuten ohne Heft. Danach Hausaufgabe (Münzwürfe) einsammeln: Jeder nennt seine Kopf-Anzahl, du notierst sie für Folie „Unsere Münzwürfe“.</div>
+  </section>
+
+  <!-- Problem -->
   <section class="folie" data-phase="Problem">
-    <div class="kennung">Wahrscheinlichkeiten · Stunde 4</div>
+    <div class="kennung">Problem</div>
     <h2>Betrug an der Losbude?</h2>
     <div class="problem">
       <div class="label">Problem</div><br>
@@ -52,10 +74,32 @@
     <div class="sprechblase schritt">„Das ist Betrug! Bei 8 Losen hätten <strong>2</strong> gewinnen müssen!“</div>
     <p class="schritt" style="margin-left: 1rem">– Tim</p>
     <p class="schritt"><strong>Hat Tim recht?</strong> Was meint ihr?</p>
+    <div class="lernziele schritt" style="margin-top:.5rem">
+      <div class="titel">🎯 Heute lernst du …</div>
+      <ul>
+        <li>warum Zufallsergebnisse bei <strong>wenigen</strong> Versuchen stark schwanken,</li>
+        <li>wie man mit <strong>vielen</strong> Versuchen eine Wahrscheinlichkeit schätzt.</li>
+      </ul>
+    </div>
     <div class="hinweis">Meinungen sammeln, an der Tafel festhalten, noch nicht auflösen. Tim rechnet richtig (8 : 4 = 2), erwartet aber zu viel Genauigkeit von nur 8 Losen. Am Ende der Stunde zurückkommen.</div>
   </section>
 
-  <!-- 2 Losbude nachspielen -->
+  <!-- Eigene Lösung -->
+  <section class="folie" data-phase="Problem" data-minuten="3">
+    <div class="kennung">Eigene Lösung</div>
+    <h2>Wie könnt ihr herausfinden, ob Tim recht hat?</h2>
+    <div class="tps">
+      <div class="stufe"><b>👥</b> 3 Min. zu zweit: Überlegt euch einen <strong>Plan</strong>. Was könntet ihr ausprobieren oder ausrechnen?</div><span class="pfeil">→</span>
+      <div class="stufe"><b>🏫</b> Klasse: Pläne sammeln</div>
+    </div>
+    <div data-tipps>
+      <div class="tipp">Könnt ihr die Losbude im Klassenraum <strong>nachspielen</strong>? Was bräuchtet ihr dafür?</div>
+      <div class="tipp">Was würde passieren, wenn <strong>viele</strong> Leute je 8 Lose kaufen? Hätten alle genau 2 Gewinne?</div>
+    </div>
+    <div class="hinweis">Pläne sammeln. Wenn die Idee „nachspielen“ kommt, direkt aufgreifen. Sonst mit Tipp 1 lenken. Ziel: Die Schüler planen das Experiment selbst (Selbstregulation: planen).</div>
+  </section>
+
+  <!-- Losbude nachspielen -->
   <section class="folie" data-phase="Erarbeitung I" data-minuten="5">
     <div class="kennung">Erarbeitung I · Partnerarbeit<span class="eis" data-eis="E"></span></div>
     <h2>Wir spielen die Losbude nach</h2>
@@ -78,6 +122,7 @@
       </div>
     </div>
     <p class="schritt">Nicht alle Paare hatten genau 2 Gewinne, obwohl jedes 4. Los gewinnt!</p>
+    <div class="vernetzen schritt">Was bedeutet ein <strong>Zettel</strong> mit Stern? Was bedeutet ein <strong>Strich</strong> in der Tafeltabelle? Wo siehst du Tims Ergebnis?</div>
     <div class="hinweis">Material: pro Paar 4 Zettel (einer mit Stern) und ein Becher. Ergebnisse per Handzeichen in die Tafeltabelle. Erwartbar: von 0 bis 4 Gewinnen ist alles dabei. Das ist schon die halbe Antwort auf Tims Problem.</div>
   </section>
 
@@ -99,7 +144,26 @@
     <div class="hinweis">Alle Anzahlen mit Komma eintragen und „Auswerten“ drücken. Beobachtung: Die einzelnen Schüler streuen stark (z. B. 30 %–65 %), die blaue Linie für alle Würfe zusammen nähert sich 50 %. Frage: Woran liegt das?</div>
   </section>
 
-  <!-- 3 Simulation -->
+  <!-- Ideen vergleichen -->
+  <section class="folie" data-phase="Ideen vergleichen">
+    <div class="kennung">Ideen vergleichen</div>
+    <h2>Was sagt uns das über Tim?</h2>
+    <div class="legende">
+      <span class="l-ja">stimmt</span>
+      <span class="l-nein">stimmt nicht</span>
+      <button class="knopf" data-alle-auf style="margin-left:auto">Alle aufdecken</button>
+      <button class="knopf" data-alle-zu>Alle zudecken</button>
+    </div>
+    <div class="karten">
+      <div class="karte nein">„8 : 4 = 2, also gewinnen bei 8 Losen <strong>immer genau</strong> 2.“<span class="loesung">Unser Experiment zeigt: Es schwankt zwischen 0 und 4.</span></div>
+      <div class="karte ja">„Bei nur 8 Losen kann man auch Pech haben.“<span class="loesung">Genau: wenige Versuche, große Schwankung.</span></div>
+      <div class="karte ja">„Um die Losbude zu prüfen, müsste man <strong>sehr viele</strong> Lose anschauen.“<span class="loesung">Richtig: Das probieren wir jetzt aus.</span></div>
+      <div class="karte nein">„Wer einmal Pech hatte, gewinnt beim nächsten Los bestimmt.“<span class="loesung">Die Lose „wissen“ nichts vom letzten Mal.</span></div>
+    </div>
+    <div class="hinweis">Schüleraussagen aus der Tafelauswertung aufgreifen und den Karten zuordnen. Die letzte Karte bereitet Übung b) vor (Spielerfehlschluss).</div>
+  </section>
+
+  <!-- Simulation -->
   <section class="folie" data-phase="Erarbeitung II">
     <div class="kennung">Erarbeitung II · Computersimulation<span class="eis" data-eis="I"></span></div>
     <h2>Was passiert bei sehr vielen Versuchen?</h2>
@@ -119,6 +183,7 @@
     </div>
     <svg class="diagramm" id="simDiagramm"></svg>
     <div class="anzeige" id="simAnzeige"></div>
+    <div class="vernetzen">Was bedeutet ein <strong>Punkt</strong> auf der blauen Linie? Wo siehst du <strong>Tims 8 Lose</strong>? Was bedeutet die <strong>rote Linie</strong>?</div>
     <div class="hinweis">Mit „Losbude“ starten: Erst „+8“ klicken (= Tims 8 Lose), mit „Neu“ mehrmals wiederholen. Mal 0, mal 1, mal 3 Gewinne. Dann +100, +1.000, +10.000. Vorher fragen: Wo wird sich die Linie einpendeln? Erst danach „Wert zeigen“ (Los: 1/4 = 25 %, Sechs: 1/6 ≈ 16,7 %, Kopf: 50 %).</div>
   </section>
 
@@ -161,15 +226,32 @@
         <div class="antwort schritt">Dem Klassenwert: Er beruht auf viel mehr Versuchen.</div>
       </div></div>
     </div>
-    <div class="hinweis">b) greift eine typische Fehlvorstellung auf („Spielerfehlschluss“). Ruhig ausführlich diskutieren.</div>
+    <p class="schritt" style="margin-top:.8rem">Weiter üben: <a class="schuelerlink" href="../schueler/stunde-04.html" target="_blank">📱 Schülerseite · Stunde 4</a></p>
+    <div class="hinweis">a) beantwortet das Problem der Stunde. b) greift eine typische Fehlvorstellung auf („Spielerfehlschluss“). c) und ★ ggf. auf der Schülerseite bzw. als Hausaufgabe.</div>
   </section>
 
-  <!-- 6 Abschluss -->
-  <section class="folie mitte" data-phase="Abschluss">
-    <div class="kennung">Abschluss</div>
-    <h2>Zufall lässt sich nicht vorhersagen …</h2>
-    <p>… aber bei <strong>vielen</strong> Versuchen zeigt sich eine <strong>Regelmäßigkeit</strong>.</p>
-    <p class="schritt klein">Nächste Stunde: Wie wahrscheinlich ist das? Wahrscheinlichkeiten als Zahl zwischen 0 und 1.</p>
+  <!-- Reflexion -->
+  <section class="folie" data-phase="Reflexion">
+    <div class="kennung">Reflexion</div>
+    <h2>Zufall lässt sich nicht vorhersagen, aber bei vielen Versuchen zeigt sich eine Regelmäßigkeit.</h2>
+    <div class="zweispaltig">
+      <div>
+        <div class="kasten">
+          <p style="margin:0 0 .3rem"><strong>🎫 Exit-Ticket:</strong></p>
+          <p style="margin:0">Ein Würfel wird 600-mal geworfen. Wie oft erwartest du ungefähr eine Sechs? Begründe.</p>
+        </div>
+        <p class="klein" style="margin-top:1rem">Nächste Stunde: Wie wahrscheinlich ist das? Wahrscheinlichkeiten als Zahl zwischen 0 und 1.</p>
+      </div>
+      <div>
+        <div class="ampel-legende"><span>🟢 sicher</span><span>🟡 fast</span><span>🔴 noch nicht</span></div>
+        <div class="ampel">
+          <div class="zeile"><span>Ich kann erklären, warum Ergebnisse bei wenigen Versuchen schwanken.</span></div>
+          <div class="zeile"><span>Ich kann das Gesetz der großen Zahlen mit eigenen Worten erklären.</span></div>
+          <div class="zeile"><span>Ich kann mit vielen Versuchen eine Wahrscheinlichkeit schätzen.</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="hinweis">Exit-Ticket: etwa 100-mal, weil die Sechs bei vielen Würfen in etwa 1/6 der Fälle kommt. Ampel per Handzeichen oder auf der Schülerseite.</div>
   </section>
 
 </div>

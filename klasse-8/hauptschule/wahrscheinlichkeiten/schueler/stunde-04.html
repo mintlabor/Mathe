@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Üben: Gesetz der großen Zahlen – Stunde 4</title>
+<link rel="stylesheet" href="../../../../schueler.css">
+</head>
+<body>
+<header><div class="inner">
+  <div class="pfad"><a href="./">🗺️ Lernlandkarte</a> › Stunde 4</div>
+  <h1>Üben: Je öfter, desto genauer</h1>
+  <p class="untertitel">Stunde 4 · Gesetz der großen Zahlen</p>
+</div></header>
+<main>
+  <div id="ziele"></div>
+  <h2>Aufgaben</h2>
+  <div id="niveaus"></div>
+  <div id="fortschritt"></div>
+  <div id="aufgaben"></div>
+  <h2>Wie sicher bist du jetzt?</h2>
+  <div id="ampel"></div>
+  <p><a href="./">← Zurück zur Lernlandkarte</a></p>
+</main>
+<script>
+window.SEITE = {
+  speicher: "mathe-k8-hs-wk", stunde: 4,
+  lernziele: ["erklären, warum Zufallsergebnisse bei wenigen Versuchen schwanken", "das Gesetz der großen Zahlen anwenden", "mit vielen Versuchen eine Wahrscheinlichkeit schätzen"],
+  ichKann: ["Ich kann erklären, warum Ergebnisse bei wenigen Versuchen schwanken.", "Ich kann das Gesetz der großen Zahlen mit eigenen Worten erklären.", "Ich kann mit vielen Versuchen eine Wahrscheinlichkeit schätzen."],
+  aufgaben: [
+    { niveau: 1, typ: "auswahl", frage: "Mia wirft eine Münze 10-mal und bekommt 7-mal Kopf. Sie sagt: „Meine Münze ist gezinkt!“ Was stimmt?",
+      optionen: ["Mia hat recht: 70 % ist viel zu viel.", "Das kann man nach nur 10 Würfen nicht sicher sagen.", "Die Münze zeigt jetzt immer Kopf."], loesung: 1,
+      tipps: ["Wie stark schwanken Ergebnisse bei wenigen Versuchen?"],
+      erklaerung: "Bei nur 10 Würfen kann das Ergebnis stark schwanken. Erst bei sehr vielen Würfen kann man die Münze beurteilen." },
+    { niveau: 1, typ: "auswahl", frage: "Welcher Schätzwert für „Kopf“ bei einer Heftzwecke ist zuverlässiger?",
+      optionen: ["Paul: 20 Würfe, 70 % Kopf", "Klasse: 2000 Würfe, 61 % Kopf"], loesung: 1,
+      tipps: ["Je mehr Versuche, desto …?"],
+      erklaerung: "Der Klassenwert: Er beruht auf viel mehr Versuchen. Die relative Häufigkeit schwankt dann weniger." },
+    { niveau: 2, typ: "zahl", frage: "Ein Würfel wird 600-mal geworfen. Wie oft erwartest du ungefähr eine Sechs?",
+      loesung: 100,
+      tipps: ["Die Sechs ist eine von 6 gleich wahrscheinlichen Zahlen.", "Ein Sechstel von 600 = 600 : 6"],
+      erklaerung: "Etwa 600 : 6 = 100-mal. Es können auch 95 oder 108 sein, aber ungefähr 100." },
+    { niveau: 2, typ: "zahl", frage: "An einer Losbude gewinnt „jedes 5. Los“. An einem Abend werden 250 Lose verkauft. Wie viele Gewinne erwartest du ungefähr?",
+      loesung: 50,
+      tipps: ["Jedes 5. Los heißt: 1 von 5.", "250 : 5 = ?"],
+      erklaerung: "250 : 5 = 50 Gewinne, ungefähr. Bei wenigen Losen kann es stark abweichen, bei vielen Losen kommt man nah an 50 heran." },
+    { niveau: 2, typ: "auswahl", frage: "Eine Münze zeigt 6-mal hintereinander „Zahl“. Was ist beim nächsten Wurf wahrscheinlicher?",
+      optionen: ["Kopf, weil jetzt endlich Kopf dran ist.", "Zahl, weil die Münze gerade „läuft“.", "Kopf und Zahl sind gleich wahrscheinlich."], loesung: 2,
+      tipps: ["Kann sich eine Münze an die letzten Würfe „erinnern“?"],
+      erklaerung: "Gleich wahrscheinlich! Jeder Wurf ist neu, die Münze hat kein Gedächtnis. Dieser Denkfehler heißt Spielerfehlschluss." },
+    { niveau: 3, typ: "zahl", einheit: "%", frage: "Eine Klasse wirft einen Kronkorken 800-mal. 344-mal landet er mit der Öffnung nach oben. Schätze die Wahrscheinlichkeit dafür in Prozent.",
+      loesung: 43,
+      tipps: ["Schätzwert = relative Häufigkeit bei vielen Versuchen.", "344 : 800 = ?"],
+      erklaerung: "344/800 = 0,43 = 43 %. Weil sehr oft geworfen wurde, ist das ein guter Schätzwert." },
+    { niveau: 3, typ: "zahl", frage: "Mit dem Schätzwert von 43 %: Wie oft erwartest du „Öffnung nach oben“ bei 200 Würfen?",
+      loesung: 86, toleranz: 1,
+      tipps: ["43 % von 200 = ?", "1 % von 200 ist 2."],
+      erklaerung: "43 % von 200 = 0,43 · 200 = 86, also etwa 86-mal." }
+  ]
+};
+</script>
+<script src="../../../../schueler.js"></script>
+</body>
+</html>

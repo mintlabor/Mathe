@@ -82,6 +82,57 @@ body {
   letter-spacing: .05em; text-transform: uppercase; padding: .15rem .6rem; border-radius: 6px; margin-bottom: .5rem;
 }
 
+/* Lernziele */
+.lernziele {
+  background: var(--card); border: 2px solid var(--gruen); border-radius: 14px; padding: .8rem 1.3rem;
+  margin-top: 1.1rem; max-width: 1000px;
+}
+.lernziele .titel { font-weight: 800; color: var(--gruen); font-size: 1.2rem; margin-bottom: .2rem; }
+.lernziele ul { margin: 0; padding-left: 1.3rem; }
+.lernziele li { font-size: 1.3rem !important; margin: .1rem 0; }
+
+/* Think – Pair – Share */
+.tps { display: flex; gap: .6rem; align-items: stretch; flex-wrap: wrap; margin: .5rem 0 1rem; }
+.tps .stufe {
+  background: var(--card); border: 2px solid var(--border); border-radius: 12px; padding: .5rem .9rem;
+  font-size: 1.15rem; display: block;
+}
+.tps .stufe b { font-size: 1.5rem; margin-right: .35rem; vertical-align: -3px; }
+.tps .pfeil { align-self: center; font-size: 1.5rem; color: var(--muted); }
+
+/* Gestufte Hilfen */
+.tipps { display: flex; flex-direction: column; gap: .5rem; margin-top: .75rem; }
+.tipps .knoepfe { display: flex; gap: .5rem; flex-wrap: wrap; }
+.tipp {
+  display: none; background: var(--gelb-hell); border: 2px solid var(--gelb); border-radius: 12px;
+  padding: .6rem 1rem; font-size: 1.25rem;
+}
+.tipp.offen { display: block; }
+.tipp::before { content: "💡 " attr(data-nr) ": "; font-weight: 700; }
+
+/* Darstellungen verbinden (Prediger: tiefgehende Darstellungsvernetzung) */
+.vernetzen {
+  background: var(--blau-hell); border-left: 6px solid var(--blau); border-radius: 10px;
+  padding: .6rem 1.1rem; font-size: 1.3rem; margin-top: .9rem;
+}
+.vernetzen::before { content: "🔗 Darstellungen verbinden: "; font-weight: 800; color: var(--blau); }
+
+/* Ampel-Selbsteinschätzung */
+.ampel { display: flex; flex-direction: column; gap: .5rem; }
+.ampel .zeile {
+  display: flex; align-items: center; gap: 1rem; background: var(--card); border: 1px solid var(--border);
+  border-radius: 12px; padding: .55rem 1rem; font-size: 1.35rem;
+}
+.ampel .zeile span:first-child { flex: 1; }
+.ampel .punkte { display: flex; gap: .4rem; }
+.ampel .punkte i { width: 1.5rem; height: 1.5rem; border-radius: 50%; display: inline-block; }
+.ampel-legende { display: flex; gap: 1.5rem; font-size: 1.15rem; color: var(--muted); margin-bottom: .5rem; flex-wrap: wrap; }
+
+.schuelerlink {
+  display: inline-block; background: var(--accent); color: #fff; text-decoration: none; font-weight: 700;
+  border-radius: 12px; padding: .5rem 1rem; font-size: 1.2rem;
+}
+
 /* Anteilsbalken (ikonische Darstellung von Anteilen) */
 .balken { height: 2rem; background: var(--border); border-radius: 8px; overflow: hidden; position: relative; min-width: 160px; }
 .balken > div { height: 100%; background: var(--accent); transition: width .6s ease; }
@@ -189,8 +240,8 @@ table.strich td.ergebnis { font-weight: 700; color: var(--accent); min-width: 7r
 .uebung .frage { font-size: 1.4rem; }
 .uebung .antwort { font-size: 1.25rem; margin-top: .3rem; }
 .uebung .stern .n { color: var(--gelb); }
-.ja { color: var(--gruen); font-weight: 700; }
-.nein { color: var(--rot); font-weight: 700; }
+span.ja, strong.ja { color: var(--gruen); font-weight: 700; }
+span.nein, strong.nein { color: var(--rot); font-weight: 700; }
 
 /* ---------- Fußleiste ---------- */
 .fuss {

@@ -25,7 +25,7 @@
   }
   .auge.drin { background: var(--accent); border-color: var(--accent); color: #fff; transform: translateY(-6px); }
   .ereignisse { display: flex; gap: .6rem; flex-wrap: wrap; justify-content: center; }
-  .menge { text-align: center; font-size: 2rem; font-weight: 700; margin-top: 1.25rem; min-height: 3rem; }
+  .menge { text-align: center; font-size: 2rem; font-weight: 700; margin-top: 1rem; min-height: 3rem; }
   .menge .art { display: block; font-size: 1.15rem; font-weight: 600; color: var(--muted); }
   .rad-aufgaben { display: grid; grid-template-columns: 320px 1fr; gap: 2.5rem; align-items: start; }
   .preise { display: flex; gap: 1.25rem; flex-wrap: wrap; font-size: 1.25rem; margin: 0 0 .9rem; }
@@ -35,7 +35,7 @@
   @media (max-width: 900px) { .rad-aufgaben { grid-template-columns: 1fr; } .auge { width: 60px; height: 60px; font-size: 1.8rem; } }
 </style>
 </head>
-<body data-phasen='[["Problem",5],["Erarbeitung I",10],["Erarbeitung II",7],["Sicherung",8],["Übung",12],["Abschluss",3]]'>
+<body data-phasen='[["Abrufen",3],["Problem",4],["Erarbeitung",9],["Ideen vergleichen",8],["Sicherung",7],["Übung",9],["Reflexion",5]]'>
 
 <div class="leiste">
   <div class="pfad"><a href="../../../../">Start</a> › <a href="../../../">Klasse 8</a> › <a href="../../">Hauptschule</a> › <a href="../">Wahrscheinlichkeiten</a> › Stunde 2</div>
@@ -43,24 +43,52 @@
 
 <div class="buehne">
 
-  <!-- 1 Problem -->
+  <!-- 1 Abrufen -->
+  <section class="folie" data-phase="Abrufen">
+    <div class="kennung">Wahrscheinlichkeiten · Stunde 2 · Warm-up</div>
+    <h2>Was weißt du noch?</h2>
+    <p style="margin-top:0">Beantworte im Kopf oder auf dem Block, ohne ins Heft zu schauen.</p>
+    <div class="uebung">
+      <div class="zeile"><div class="n">1</div><div>
+        <div class="frage">Woran erkennst du ein Zufallsexperiment?</div>
+        <div class="antwort schritt">Mehrere mögliche Ergebnisse, man weiß vorher nicht, welches kommt, und es ist wiederholbar.</div>
+      </div></div>
+      <div class="zeile"><div class="n">2</div><div>
+        <div class="frage">Schreibe alle möglichen Ergebnisse beim Münzwurf auf.</div>
+        <div class="antwort schritt">{ Kopf, Zahl }</div>
+      </div></div>
+      <div class="zeile"><div class="n">3</div><div>
+        <div class="frage">„Der Würfel zeigt eine 0.“ Sicher, möglich oder unmöglich?</div>
+        <div class="antwort schritt">unmöglich</div>
+      </div></div>
+    </div>
+    <div class="hinweis">3 Minuten, ohne Heft. Abrufen stärkt das Behalten. Kurz die Hausaufgabe würdigen: 1–2 Alltags-Zufallsexperimente vorlesen lassen.</div>
+  </section>
+
+  <!-- 2 Problem + Lernziele -->
   <section class="folie" data-phase="Problem">
-    <div class="kennung">Wahrscheinlichkeiten · Stunde 2</div>
+    <div class="kennung">Problem</div>
     <h2>Ist das Spiel unfair?</h2>
     <div class="problem">
       <div class="label">Problem</div><br>
       Anna und Ben spielen am Spieleabend ein Würfelspiel. Es wird reihum gewürfelt:<br>
       🟢 <strong>Anna</strong> bekommt einen Punkt bei einer <strong>geraden Zahl</strong>.<br>
-      🔵 <strong>Ben</strong> bekommt einen Punkt bei einer <strong>Zahl größer als 4</strong>.<br><br>
+      🔵 <strong>Ben</strong> bekommt einen Punkt bei einer <strong>Zahl größer als 4</strong>.<br>
       Nach einer Weile ruft Ben: <strong>„Das ist unfair! Anna gewinnt immer!“</strong>
     </div>
-    <p class="schritt"><strong>Hat Ben recht?</strong> Was meint ihr? Stimmt ab und begründet!</p>
-    <div class="hinweis">Kurz die Hausaufgabe aufgreifen (1–2 Zufallsexperimente nennen lassen). Dann Problem vorlesen, Abstimmung per Handzeichen an der Tafel festhalten. Noch nicht auflösen.</div>
+    <div class="lernziele schritt">
+      <div class="titel">🎯 Heute lernst du …</div>
+      <ul>
+        <li>mehrere Ergebnisse zu einem <strong>Ereignis</strong> zusammenzufassen,</li>
+        <li>mit Ereignissen zu begründen, ob ein Spiel <strong>fair</strong> ist.</li>
+      </ul>
+    </div>
+    <div class="hinweis">Erste Vermutung per Handzeichen: Hat Ben recht? Ergebnis an der Tafel festhalten.</div>
   </section>
 
-  <!-- 2 Partnerspiel -->
-  <section class="folie" data-phase="Erarbeitung I" data-minuten="7">
-    <div class="kennung">Erarbeitung I · Partnerarbeit<span class="eis" data-eis="E"></span></div>
+  <!-- 3 Partnerspiel -->
+  <section class="folie" data-phase="Erarbeitung" data-minuten="7">
+    <div class="kennung">Erarbeitung · Partnerarbeit<span class="eis" data-eis="E"></span></div>
     <h2>Spielt es selbst!</h2>
     <div class="zweispaltig">
       <div>
@@ -78,28 +106,60 @@
         </table>
       </div>
     </div>
-    <p class="schritt">Wer hat in eurem Spiel gewonnen? Gibt es Zahlen, bei denen <strong>beide</strong> oder <strong>keiner</strong> einen Punkt bekommt?</p>
-    <div class="hinweis">1 Würfel pro Paar. Timer: 7 Minuten. Danach per Handzeichen: Bei wie vielen Paaren hat Anna gewonnen, bei wie vielen Ben? Meist gewinnt Anna häufiger, aber nicht immer.</div>
+    <div class="hinweis">1 Würfel pro Paar. Timer: 7 Min. Danach per Handzeichen: Bei wie vielen Paaren hat Anna gewonnen, bei wie vielen Ben? Meist gewinnt Anna häufiger, aber nicht immer.</div>
   </section>
 
-  <!-- 3 Am Beamer weiterspielen -->
-  <section class="folie" data-phase="Erarbeitung I">
-    <div class="kennung">Erarbeitung I · gemeinsam<span class="eis" data-eis="EI"></span></div>
+  <!-- 4 Gemeinsam am Beamer (optional) -->
+  <section class="folie" data-phase="Erarbeitung">
+    <div class="kennung">Erarbeitung · optional<span class="eis" data-eis="EI"></span></div>
     <h2>Anna gegen Ben: die ganze Klasse</h2>
     <div class="spielstand">
       <div class="spieler" id="anna"><div class="name">Anna</div><div class="regel">gerade Zahl</div><div class="punkte">0</div></div>
       <div class="spieler" id="ben"><div class="name">Ben</div><div class="regel">Zahl größer als 4</div><div class="punkte">0</div></div>
     </div>
-    <div class="spielzeug" style="margin: 1rem 0 .25rem">
-      <div data-wuerfel id="spielwuerfel"></div>
-    </div>
+    <div class="spielzeug" style="margin: 1rem 0 .25rem"><div data-wuerfel id="spielwuerfel"></div></div>
     <div class="meldung" id="meldung"></div>
-    <div class="hinweis">Optional, falls die Ergebnisse der Paare uneindeutig sind. Bei 6 bekommen beide einen Punkt, bei 1 und 3 keiner. Frage: Woran liegt es, dass Anna öfter Punkte bekommt?</div>
+    <div class="hinweis">Nur nutzen, wenn die Ergebnisse der Paare uneindeutig waren. Sonst überspringen.</div>
   </section>
 
-  <!-- 4 Ereignisse am Würfel -->
-  <section class="folie" data-phase="Erarbeitung II">
-    <div class="kennung">Erarbeitung II<span class="eis" data-eis="I"></span></div>
+  <!-- 5 Eigene Begründung -->
+  <section class="folie" data-phase="Ideen vergleichen" data-minuten="4">
+    <div class="kennung">Eigene Lösung</div>
+    <h2>Hat Ben recht? Begründet!</h2>
+    <div class="tps">
+      <div class="stufe"><b>👤</b> 1 Min. allein nachdenken</div><span class="pfeil">→</span>
+      <div class="stufe"><b>👥</b> 3 Min. zu zweit: Schreibt eine <strong>Begründung</strong> auf, gern mit Bild oder Liste.</div>
+    </div>
+    <div data-tipps>
+      <div class="tipp">Schreibt alle Augenzahlen 1 bis 6 auf. Markiert, bei welchen Anna einen Punkt bekommt, und bei welchen Ben.</div>
+      <div class="tipp">Zählt: Wie viele Zahlen bringen Anna einen Punkt? Wie viele bringen Ben einen Punkt?</div>
+    </div>
+    <div class="hinweis">Tipps nur bei Bedarf aufdecken. Herumgehen und 2–3 unterschiedliche Begründungen für die nächste Folie auswählen, auch fehlerhafte.</div>
+  </section>
+
+  <!-- 6 Ideen vergleichen -->
+  <section class="folie" data-phase="Ideen vergleichen">
+    <div class="kennung">Ideen vergleichen</div>
+    <h2>Welche Begründung trägt?</h2>
+    <div class="legende">
+      <span class="l-ja">Begründung trägt</span>
+      <span class="l-nein">Begründung trägt nicht</span>
+      <button class="knopf" data-alle-auf style="margin-left:auto">Alle aufdecken</button>
+      <button class="knopf" data-alle-zu>Alle zudecken</button>
+    </div>
+    <div class="karten">
+      <div class="karte nein">„Bei uns hat Anna gewonnen, also ist das Spiel unfair.“<span class="loesung">Ein Spiel kann auch zufällig so ausgehen.</span></div>
+      <div class="karte nein">„Bei uns hat Ben gewonnen, also ist es fair.“<span class="loesung">Auch das kann Zufall sein.</span></div>
+      <div class="karte ja">„Anna hat 3 passende Zahlen (2, 4, 6), Ben nur 2 (5, 6).“<span class="loesung">Trägt: Man zählt die passenden Ergebnisse.</span></div>
+      <div class="karte nein">„Die 6 zählt für beide, also ist es egal.“<span class="loesung">Anna hat zusätzlich noch die 2 und die 4.</span></div>
+    </div>
+    <p class="schritt" style="margin-top:1rem">Statt auf <strong>ein</strong> Spielergebnis zu schauen, betrachten wir <strong>alle möglichen Ergebnisse</strong>.</p>
+    <div class="hinweis">Zuerst die gesammelten Schülerbegründungen vorstellen lassen, dann die Karten. Wichtig: Fehlerhafte Begründungen wertschätzen und klären, warum sie nicht tragen (Productive Failure).</div>
+  </section>
+
+  <!-- 7 Ereignisse am Würfel + Vernetzung -->
+  <section class="folie" data-phase="Sicherung">
+    <div class="kennung">Sicherung<span class="eis" data-eis="IS"></span></div>
     <h2>Bei welchen Zahlen gibt es einen Punkt?</h2>
     <div class="augen" id="augen">
       <div class="auge">1</div><div class="auge">2</div><div class="auge">3</div>
@@ -110,49 +170,46 @@
       <button class="knopf mittel" data-e="5,6">Ben: größer als 4</button>
       <button class="knopf mittel" data-e="1,3,5">ungerade Zahl</button>
       <button class="knopf mittel" data-e="1,2">höchstens 2</button>
-      <button class="knopf mittel" data-e="6">eine Sechs</button>
       <button class="knopf mittel" data-e="1,2,3,4,5,6">kleiner als 7</button>
       <button class="knopf mittel" data-e="">eine Null</button>
     </div>
     <div class="menge" id="menge"></div>
-    <p class="schritt" style="text-align:center">Anna hat <strong>3</strong> passende Zahlen, Ben nur <strong>2</strong>. Ben hat recht: Das Spiel ist unfair!</p>
-    <div class="hinweis">Erst fragen, dann klicken: „Bei welchen Zahlen bekommt Anna einen Punkt?“ Danach weitere Ereignisse. Bei „kleiner als 7“ und „eine Null“ an Stunde 1 anknüpfen: sicher bzw. unmöglich.</div>
+    <div class="vernetzen schritt">Zeige Annas Ereignis am <strong>echten Würfel</strong>, in den <strong>leuchtenden Feldern</strong> und in der <strong>Klammer</strong>. Warum steht die 6 in Annas <strong>und</strong> in Bens Menge?</div>
+    <div class="hinweis">Erst fragen, dann klicken. Beim Vernetzungsimpuls die Schüler selbst erklären lassen. „kleiner als 7“ und „eine Null“ knüpfen an Stunde 1 an (sicher, unmöglich).</div>
   </section>
 
-  <!-- 5 Merksatz -->
+  <!-- 8 Merksatz -->
   <section class="folie" data-phase="Sicherung">
     <div class="kennung">Sicherung<span class="eis" data-eis="S"></span></div>
     <h2>Ergebnis und Ereignis</h2>
     <div class="merk">
       <h3>Merke</h3>
       <ul>
-        <li class="schritt">Ein <strong>Ergebnis</strong> ist ein einzelner möglicher Ausgang eines Zufallsexperiments.<br><span class="klein">Würfel: 1, 2, 3, 4, 5 oder 6</span></li>
-        <li class="schritt">Ein <strong>Ereignis</strong> fasst ein oder mehrere Ergebnisse zusammen.<br><span class="klein">„gerade Zahl“ = { 2, 4, 6 }</span></li>
-        <li class="schritt">Ein Ereignis <strong>tritt ein</strong>, wenn eines seiner Ergebnisse fällt.<br><span class="klein">Fällt eine 4, ist „gerade Zahl“ eingetreten. Anna bekommt einen Punkt.</span></li>
-        <li class="schritt">Enthält ein Ereignis alle Ergebnisse, ist es ein <strong>sicheres Ereignis</strong>. Enthält es kein Ergebnis, ist es ein <strong>unmögliches Ereignis</strong>: { }</li>
+        <li class="schritt">Ein <strong>Ergebnis</strong> ist ein einzelner möglicher Ausgang: Würfel 1, 2, 3, 4, 5 oder 6.</li>
+        <li class="schritt">Ein <strong>Ereignis</strong> fasst ein oder mehrere Ergebnisse zusammen: „gerade Zahl“ = { 2, 4, 6 }</li>
+        <li class="schritt">Ein Ereignis <strong>tritt ein</strong>, wenn eines seiner Ergebnisse fällt.</li>
+        <li class="schritt"><strong>Sicheres Ereignis:</strong> enthält alle Ergebnisse. <strong>Unmögliches Ereignis:</strong> enthält keins: { }</li>
+        <li class="schritt">Ein Spiel ist nur <strong>fair</strong>, wenn alle Spieler <strong>gleich viele</strong> passende Ergebnisse haben (bei gleich wahrscheinlichen Ergebnissen).</li>
       </ul>
     </div>
-    <div class="hinweis">Merksatz ins Heft. Abgrenzung betonen: Das Ergebnis ist das, was tatsächlich fällt. Das Ereignis ist das, worauf man setzt.</div>
+    <div class="hinweis">Merksatz ins Heft. Abgrenzung: Das Ergebnis ist das, was fällt. Das Ereignis ist das, worauf man setzt.</div>
   </section>
 
-  <!-- 6 Übung 1: Glücksrad beim Schulfest -->
+  <!-- 9 Übung Glücksrad -->
   <section class="folie" data-phase="Übung">
-    <div class="kennung">Übung · Einzelarbeit<span class="eis" data-eis="IS"></span></div>
+    <div class="kennung">Übung<span class="eis" data-eis="IS"></span></div>
     <h2>Das Glücksrad beim Schulfest</h2>
     <div class="rad-aufgaben">
-      <div>
-        <div id="rad" data-gluecksrad='[["1","#e03131"],["2","#1c7ed6"],["3","#e8a400"],["4","#e03131"],["5","#1c7ed6"],["6","#e8a400"],["7","#e03131"],["8","#1c7ed6"]]'></div>
-      </div>
+      <div><div data-gluecksrad='[["1","#e03131"],["2","#1c7ed6"],["3","#e8a400"],["4","#e03131"],["5","#1c7ed6"],["6","#e8a400"],["7","#e03131"],["8","#1c7ed6"]]'></div></div>
       <div>
         <div class="preise">
           <span><i style="background:#e03131"></i>Rot: Lolli</span>
           <span><i style="background:#1c7ed6"></i>Blau: Gummibärchen</span>
           <span><i style="background:#e8a400"></i>Gelb: Kinogutschein</span>
         </div>
-        <p style="margin:0 0 .6rem">Schreibe die Ereignisse als Menge auf.</p>
         <div class="uebung">
           <div class="zeile"><div class="n">a</div><div>
-            <div class="frage">Man gewinnt einen <span class="farbe-rot">Lolli</span>.</div>
+            <div class="frage">Man gewinnt einen <span class="farbe-rot">Lolli</span>. Schreibe als Menge.</div>
             <div class="antwort schritt">{ 1, 4, 7 }</div>
           </div></div>
           <div class="zeile"><div class="n">b</div><div>
@@ -160,63 +217,41 @@
             <div class="antwort schritt">{ 3, 6 }</div>
           </div></div>
           <div class="zeile"><div class="n">c</div><div>
-            <div class="frage">Lisa wettet: „Es kommt eine gerade Zahl.“</div>
-            <div class="antwort schritt">{ 2, 4, 6, 8 }</div>
+            <div class="frage">Welcher Preis ist am schwersten zu gewinnen? Begründe mit den Mengen.</div>
+            <div class="antwort schritt">Kinogutschein: nur 2 Felder, Lolli und Gummibärchen haben je 3.</div>
           </div></div>
         </div>
+        <p class="schritt" style="margin-top:1rem">Weiter üben: <a class="schuelerlink" href="../schueler/stunde-02.html" target="_blank">📱 Schülerseite · Stunde 2</a></p>
       </div>
     </div>
-    <div class="hinweis">Zum Abschluss der Folie das Rad drehen lassen: Welches Ereignis ist eingetreten? Was hat man gewonnen?</div>
+    <div class="hinweis">Einzelarbeit, dann vergleichen. Zum Schluss Rad drehen: Welches Ereignis ist eingetreten? Danach Schülerseite (3 Niveaus) in der Stunde oder als Hausaufgabe.</div>
   </section>
 
-  <!-- 7 Übung 2 -->
-  <section class="folie" data-phase="Übung">
-    <div class="kennung">Übung · Einzelarbeit<span class="eis" data-eis="S"></span></div>
-    <h2>Das Glücksrad: weiter geht's</h2>
-    <div class="rad-aufgaben">
-      <div>
-        <div data-gluecksrad='[["1","#e03131"],["2","#1c7ed6"],["3","#e8a400"],["4","#e03131"],["5","#1c7ed6"],["6","#e8a400"],["7","#e03131"],["8","#1c7ed6"]]'></div>
-      </div>
-      <div>
-        <div class="uebung">
-          <div class="zeile"><div class="n">d</div><div>
-            <div class="frage">Man gewinnt <strong>irgendeinen</strong> Preis. Was für ein Ereignis ist das?</div>
-            <div class="antwort schritt">{ 1, 2, 3, 4, 5, 6, 7, 8 } – ein <strong>sicheres</strong> Ereignis</div>
-          </div></div>
-          <div class="zeile"><div class="n">e</div><div>
-            <div class="frage">Es kommt eine Zahl größer als 8.</div>
-            <div class="antwort schritt">{ } – ein <strong>unmögliches</strong> Ereignis</div>
-          </div></div>
-          <div class="zeile"><div class="n">f</div><div>
-            <div class="frage">Welcher Preis ist am leichtesten zu gewinnen? Begründe.</div>
-            <div class="antwort schritt"><span class="farbe-rot">Lolli</span> oder <span class="farbe-blau">Gummibärchen</span>: je 3 Felder. Der Kinogutschein hat nur 2.</div>
-          </div></div>
-          <div class="zeile stern"><div class="n">★</div><div>
-            <div class="frage">Male ein eigenes Glücksrad mit 8 Feldern, bei dem der Kinogutschein am seltensten kommt. Schreibe die Ereignisse auf.</div>
-            <div class="antwort schritt">z. B. Kinogutschein nur auf Feld 8: { 8 }</div>
-          </div></div>
-        </div>
-      </div>
-    </div>
-    <div class="hinweis">f) bereitet den Vergleich von Chancen in Abschnitt B vor. ★ für schnelle Schüler (zeichnerisch = ikonisch).</div>
-  </section>
-
-  <!-- 8 Abschluss -->
-  <section class="folie" data-phase="Abschluss">
-    <div class="kennung">Abschluss · zurück zum Problem</div>
+  <!-- 10 Reflexion -->
+  <section class="folie" data-phase="Reflexion">
+    <div class="kennung">Zurück zum Problem · Reflexion</div>
     <h2>Ben hat recht. Wie wird das Spiel fair?</h2>
     <div class="zweispaltig">
-      <div class="kasten">
-        <p style="margin:0"><strong>Anna:</strong> gerade Zahl = { 2, 4, 6 }</p>
-        <p style="margin:0"><strong>Ben:</strong> größer als 4 = { 5, 6 }</p>
+      <div>
+        <div class="kasten">
+          <p style="margin:0">Anna: { 2, 4, 6 } · Ben: { 5, 6 }</p>
+          <p class="schritt" style="margin:.3rem 0 0">Fair wäre z. B. Ben: <strong>größer als 3</strong> = { 4, 5, 6 }</p>
+        </div>
+        <div class="kasten" style="margin-top:1rem">
+          <p style="margin:0 0 .3rem"><strong>🎫 Exit-Ticket:</strong></p>
+          <p style="margin:0">Schreibe das Ereignis „Zahl kleiner als 3“ beim Würfeln als Menge.</p>
+        </div>
       </div>
-      <div class="kasten schritt">
-        <p style="margin:0">Fair wäre z. B.:</p>
-        <p style="margin:0"><strong>Ben:</strong> größer als <strong>3</strong> = { 4, 5, 6 }</p>
+      <div>
+        <div class="ampel-legende"><span>🟢 sicher</span><span>🟡 fast</span><span>🔴 noch nicht</span></div>
+        <div class="ampel">
+          <div class="zeile"><span>Ich kann Ergebnis und Ereignis unterscheiden.</span></div>
+          <div class="zeile"><span>Ich kann ein Ereignis als Menge aufschreiben.</span></div>
+          <div class="zeile"><span>Ich kann mit Ereignissen begründen, ob ein Spiel fair ist.</span></div>
+        </div>
       </div>
     </div>
-    <p class="schritt klein">Nächste Stunde: Wir zählen genauer nach und vergleichen Ergebnisse mit Zahlen.</p>
-    <div class="hinweis">Schüler eigene faire Regeln vorschlagen lassen und mit der Mengenschreibweise prüfen.</div>
+    <div class="hinweis">Schüler eigene faire Regeln vorschlagen lassen. Exit-Ticket (Lösung: { 1, 2 }) einsammeln. Ampel per Handzeichen oder auf der Schülerseite.</div>
   </section>
 
 </div>
@@ -237,7 +272,6 @@
       meldung.textContent = a && b ? "Beide bekommen einen Punkt!" : a ? "Punkt für Anna!" : b ? "Punkt für Ben!" : "Niemand bekommt einen Punkt.";
     });
   })();
-
   (function () {
     const augen = document.querySelectorAll("#augen .auge");
     const menge = document.getElementById("menge");

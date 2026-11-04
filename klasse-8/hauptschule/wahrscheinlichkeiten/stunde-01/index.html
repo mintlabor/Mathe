@@ -8,10 +8,10 @@
 <style>
   .ticket {
     display: inline-flex; align-items: center; gap: 1rem; background: linear-gradient(135deg, #ffe066, #ffa94d);
-    border-radius: 14px; padding: .8rem 1.4rem; font-size: 1.5rem; font-weight: 800; color: #5c3b00;
-    box-shadow: 0 6px 18px rgba(0,0,0,.12); transform: rotate(-3deg); margin: 1rem 0 1.25rem;
-    border: 2px dashed rgba(92,59,0,.4);
+    border-radius: 14px; padding: .6rem 1.2rem; font-size: 1.35rem; font-weight: 800; color: #5c3b00;
+    box-shadow: 0 6px 18px rgba(0,0,0,.12); transform: rotate(-3deg); border: 2px dashed rgba(92,59,0,.4);
   }
+  .kopf { display: flex; gap: 2rem; align-items: center; flex-wrap: wrap; }
   .lostopf { display: flex; flex-direction: column; align-items: center; gap: 1rem; }
   .lostopf textarea {
     width: 32rem; max-width: 100%; height: 5.5rem; font-size: 1.15rem; font-family: inherit;
@@ -20,7 +20,7 @@
   .gewinner { font-size: 2.6rem; font-weight: 800; color: var(--accent); min-height: 3.4rem; }
 </style>
 </head>
-<body data-phasen='[["Problem",8],["Erarbeitung I",8],["Erarbeitung II",10],["Sicherung",8],["Übung",8],["Abschluss",3]]'>
+<body data-phasen='[["Problem",10],["Ideen vergleichen",5],["Erarbeitung",12],["Sicherung",7],["Übung",6],["Reflexion",5]]'>
 
 <div class="leiste">
   <div class="pfad"><a href="../../../../">Start</a> › <a href="../../../">Klasse 8</a> › <a href="../../">Hauptschule</a> › <a href="../">Wahrscheinlichkeiten</a> › Stunde 1</div>
@@ -28,82 +28,79 @@
 
 <div class="buehne">
 
-  <!-- 1 Problem -->
+  <!-- 1 Problem + Lernziele -->
   <section class="folie" data-phase="Problem">
     <div class="kennung">Wahrscheinlichkeiten · Stunde 1</div>
-    <h2>Nur eine Freikarte!</h2>
-    <div class="problem">
+    <div class="kopf"><h2 style="margin:0">Nur eine Freikarte!</h2><span class="ticket">🎟️ FREIKARTE · 1 Person</span></div>
+    <div class="problem" style="margin-top:1rem">
       <div class="label">Problem</div><br>
       Eure Klasse hat bei einem Gewinnspiel eine <strong>Freikarte für den Freizeitpark</strong> gewonnen. Leider nur <strong>eine einzige</strong>, aber alle wollen sie haben.<br>
       <strong>Wie entscheiden wir gerecht, wer die Karte bekommt?</strong>
     </div>
-    <div><span class="ticket">🎟️ FREIKARTE · 1 Person</span></div>
-    <p class="schritt">Sammelt Vorschläge! Welcher Vorschlag ist <strong>gerecht</strong>, welcher nicht?</p>
-    <div class="hinweis">Vorschläge der Klasse an der Tafel sammeln (Murmelphase 2 Min.). Typisch: Würfeln, Los ziehen, Münze, Wettrennen, beste Note, Lehrer entscheidet. Noch nicht bewerten, auf der nächsten Folie wird sortiert.</div>
+    <div class="lernziele schritt">
+      <div class="titel">🎯 Heute lernst du …</div>
+      <ul>
+        <li>zu erkennen, wann etwas ein <strong>Zufallsexperiment</strong> ist,</li>
+        <li>alle <strong>möglichen Ergebnisse</strong> aufzuschreiben.</li>
+      </ul>
+    </div>
+    <div class="hinweis">Problem vorlesen, Lernziele aufdecken. Die Lernziele kommen in der Reflexion am Ende wieder (Ampel).</div>
   </section>
 
-  <!-- 2 Sortieren: Zufall oder nicht? -->
-  <section class="folie" data-phase="Problem">
-    <div class="kennung">Problem<span class="eis" data-eis="I"></span></div>
-    <h2>Entscheidet hier der Zufall?</h2>
+  <!-- 2 Eigene Lösung: Think-Pair-Share -->
+  <section class="folie" data-phase="Problem" data-minuten="5">
+    <div class="kennung">Eigene Lösung</div>
+    <h2>Euer Vorschlag?</h2>
+    <div class="tps">
+      <div class="stufe"><b>👤</b> 1 Min. allein: Schreib einen Vorschlag auf.</div><span class="pfeil">→</span>
+      <div class="stufe"><b>👥</b> 2 Min. zu zweit: Welcher Vorschlag ist am <strong>gerechtesten</strong>? Warum?</div><span class="pfeil">→</span>
+      <div class="stufe"><b>🏫</b> Klasse: Vorschläge sammeln</div>
+    </div>
+    <div data-tipps>
+      <div class="tipp">Hat bei eurem Vorschlag <strong>jeder die gleiche Chance</strong>?</div>
+      <div class="tipp">Kann jemand das Ergebnis <strong>beeinflussen</strong>, z. B. weil er schneller, schlauer oder beliebter ist?</div>
+    </div>
+    <div class="hinweis">Timer: 5 Min. Tipps nur aufdecken, wenn Paare nicht weiterkommen. Vorschläge an der Tafel sammeln, nicht bewerten. Typisch: Würfeln, Los ziehen, Münze, Wettrennen, beste Note, Lehrer entscheidet.</div>
+  </section>
+
+  <!-- 3 Ideen vergleichen -->
+  <section class="folie" data-phase="Ideen vergleichen">
+    <div class="kennung">Ideen vergleichen<span class="eis" data-eis="I"></span></div>
+    <h2>Welcher Vorschlag ist gerecht?</h2>
     <div class="legende">
-      <span class="l-ja">Zufall: keiner weiß vorher, wer gewinnt</span>
-      <span class="l-nein">kein Zufall</span>
+      <span class="l-ja">gerecht: Zufall entscheidet</span>
+      <span class="l-nein">nicht gerecht: kein Zufall</span>
       <button class="knopf" data-alle-auf style="margin-left:auto">Alle aufdecken</button>
       <button class="knopf" data-alle-zu>Alle zudecken</button>
     </div>
     <div class="karten">
-      <div class="karte ja">🎩 Alle Namen in einen Hut, einer wird blind gezogen.<span class="loesung">Zufall</span></div>
-      <div class="karte nein">🏃 Wer am schnellsten um den Schulhof rennt.<span class="loesung">kein Zufall – die Sportlichen sind im Vorteil</span></div>
-      <div class="karte nein">📝 Wer die beste Mathenote hat.<span class="loesung">kein Zufall – steht schon fest</span></div>
+      <div class="karte ja">🎩 Alle Namen in einen Hut, einer wird blind gezogen.<span class="loesung">Zufall: jeder hat die gleiche Chance</span></div>
+      <div class="karte nein">🏃 Wer am schnellsten um den Schulhof rennt.<span class="loesung">kein Zufall: die Sportlichen sind im Vorteil</span></div>
+      <div class="karte nein">📝 Wer die beste Mathenote hat.<span class="loesung">kein Zufall: steht schon vorher fest</span></div>
       <div class="karte ja">🎲 Jeder würfelt, die höchste Zahl gewinnt (bei Gleichstand nochmal).<span class="loesung">Zufall</span></div>
-      <div class="karte nein">👩‍🏫 Die Lehrkraft bestimmt.<span class="loesung">kein Zufall – jemand entscheidet</span></div>
+      <div class="karte nein">👩‍🏫 Die Lehrkraft bestimmt.<span class="loesung">kein Zufall: jemand entscheidet</span></div>
       <div class="karte ja">🪙 Immer zwei werfen eine Münze, der Gewinner kommt weiter.<span class="loesung">Zufall</span></div>
     </div>
     <p class="schritt" style="margin-top:1rem">Beim <strong>Zufall</strong> kann niemand das Ergebnis vorhersagen oder beeinflussen. Darum ist er <strong>gerecht</strong>.</p>
-    <div class="hinweis">Karten einzeln besprechen und abstimmen lassen, dann anklicken. Kernidee: Ein Zufallsverfahren ist gerecht, weil alle die gleiche Chance haben und niemand das Ergebnis kennt.</div>
+    <div class="hinweis">Zuerst die Vorschläge der Klasse den Karten zuordnen. Bei jeder Karte fragen: Warum gerecht, warum nicht? Fehlende Schülervorschläge ergänzen.</div>
   </section>
 
-  <!-- 3 Ausprobieren -->
-  <section class="folie" data-phase="Erarbeitung I">
-    <div class="kennung">Erarbeitung I<span class="eis" data-eis="EI"></span></div>
-    <h2>Wir probieren aus: Kann man es vorhersagen?</h2>
-    <p>Gebt vor jedem Wurf einen Tipp ab!</p>
+  <!-- 4 Ausprobieren -->
+  <section class="folie" data-phase="Erarbeitung">
+    <div class="kennung">Erarbeitung<span class="eis" data-eis="EI"></span></div>
+    <h2>Kann man das Ergebnis vorhersagen?</h2>
+    <p style="margin:0">Gebt vor jedem Wurf einen Tipp ab!</p>
     <div class="spielzeug">
       <div data-wuerfel></div>
       <div data-muenze></div>
     </div>
     <p class="schritt" style="text-align:center">Wir <strong>kennen alle möglichen Ergebnisse</strong>, aber wir <strong>wissen nicht</strong>, welches kommt.</p>
-    <div class="hinweis">Ein Schüler würfelt mit einem echten Würfel am Pult, parallel am Beamer. Tipps vorher abfragen, Trefferquote der Tipps beobachten.</div>
-  </section>
-
-  <!-- 4 Sicher, möglich, unmöglich -->
-  <section class="folie" data-phase="Erarbeitung I">
-    <div class="kennung">Erarbeitung I<span class="eis" data-eis="I"></span></div>
-    <h2>Sicher, möglich oder unmöglich?</h2>
-    <div class="legende">
-      <span class="l-sicher">sicher</span>
-      <span class="l-moeglich">möglich (Zufall)</span>
-      <span class="l-unmoeglich">unmöglich</span>
-      <button class="knopf" data-alle-auf style="margin-left:auto">Alle aufdecken</button>
-      <button class="knopf" data-alle-zu>Alle zudecken</button>
-    </div>
-    <div class="karten">
-      <div class="karte moeglich">Beim Würfeln fällt eine 6.<span class="loesung">möglich</span></div>
-      <div class="karte unmoeglich">Beim Würfeln fällt eine 7.<span class="loesung">unmöglich</span></div>
-      <div class="karte sicher">Nach Montag kommt Dienstag.<span class="loesung">sicher</span></div>
-      <div class="karte moeglich">Beim Elfmeter trifft der Schütze.<span class="loesung">möglich</span></div>
-      <div class="karte moeglich">Der Bus kommt heute pünktlich.<span class="loesung">möglich</span></div>
-      <div class="karte unmoeglich">Aus einer Tüte mit nur grünen Gummibärchen ziehe ich ein rotes.<span class="loesung">unmöglich</span></div>
-      <div class="karte sicher">Beim Würfeln fällt eine Zahl kleiner als 7.<span class="loesung">sicher</span></div>
-      <div class="karte moeglich">Morgen regnet es.<span class="loesung">möglich</span></div>
-    </div>
-    <div class="hinweis">Abstimmen (Daumen hoch / Mitte / runter), dann aufdecken. Elfmeter, Bus und Wetter: Hier spielen Können bzw. Umstände mit. Man kann das Ergebnis aber nicht sicher vorhersagen. Würfel und Münze sind „reiner“ Zufall.</div>
+    <div class="hinweis">Ein Schüler würfelt mit einem echten Würfel am Pult, parallel am Beamer. Tipps vorher abfragen: Wie oft lag die Klasse richtig?</div>
   </section>
 
   <!-- 5 Partnerexperiment -->
-  <section class="folie" data-phase="Erarbeitung II" data-minuten="8">
-    <div class="kennung">Erarbeitung II · Partnerarbeit<span class="eis" data-eis="EI"></span></div>
+  <section class="folie" data-phase="Erarbeitung" data-minuten="8">
+    <div class="kennung">Erarbeitung · Partnerarbeit<span class="eis" data-eis="EI"></span></div>
     <h2>Unser Würfelexperiment</h2>
     <div class="zweispaltig">
       <div>
@@ -133,10 +130,10 @@
         </table>
       </div>
     </div>
-    <div class="hinweis">Material: 1 Würfel pro Paar, Tabelle ins Heft übertragen lassen. Timer oben starten (8 Minuten). Anschließend 2–3 Paare ihre häufigste Zahl nennen lassen: Die Ergebnisse unterscheiden sich, und das ist Zufall.</div>
+    <div class="hinweis">1 Würfel pro Paar, Tabelle ins Heft. Timer: 8 Minuten. Danach 2–3 Paare ihre häufigste Zahl nennen lassen: Die Ergebnisse unterscheiden sich, und das ist Zufall.</div>
   </section>
 
-  <!-- 6 Merksatz -->
+  <!-- 6 Merksatz + Vernetzung -->
   <section class="folie" data-phase="Sicherung">
     <div class="kennung">Sicherung<span class="eis" data-eis="S"></span></div>
     <h2>Was ist ein Zufallsexperiment?</h2>
@@ -148,9 +145,10 @@
         <li class="schritt">man <strong>vorher nicht weiß</strong>, welches Ergebnis eintritt, und</li>
         <li class="schritt">man ihn unter gleichen Bedingungen <strong>beliebig oft wiederholen</strong> kann.</li>
       </ul>
-      <p class="schritt" style="margin:1rem 0 0">Alle möglichen Ergebnisse schreibt man in eine <strong>geschweifte Klammer { }</strong>.</p>
+      <p class="schritt" style="margin:1rem 0 0">Alle möglichen Ergebnisse schreibt man in eine <strong>geschweifte Klammer</strong>: Würfel { 1, 2, 3, 4, 5, 6 }</p>
     </div>
-    <div class="hinweis">Punkte einzeln aufdecken und vorher fragen: „Was haben Würfel, Münze und Los ziehen gemeinsam?“ Merksatz ins Heft übernehmen lassen.</div>
+    <div class="vernetzen schritt">Zeige die möglichen Ergebnisse am <strong>echten Würfel</strong>, in deiner <strong>Strichliste</strong> und in der <strong>Klammer { }</strong>. Was ist überall gleich?</div>
+    <div class="hinweis">Punkte einzeln aufdecken, vorher fragen: „Was haben Würfel, Münze und Los ziehen gemeinsam?“ Beim Vernetzungsimpuls einen Schüler am Würfel zeigen lassen: sechs Seiten = sechs Zeilen in der Strichliste = sechs Zahlen in der Klammer.</div>
   </section>
 
   <!-- 7 Beispiele Ergebnisse -->
@@ -160,61 +158,78 @@
     <div class="uebung">
       <div class="zeile"><div class="n">🪙</div><div>
         <div class="frage">Eine Münze werfen</div>
-        <div class="antwort schritt">Ergebnisse: { Kopf, Zahl }</div>
-      </div></div>
-      <div class="zeile"><div class="n">🎲</div><div>
-        <div class="frage">Einen Würfel werfen</div>
-        <div class="antwort schritt">Ergebnisse: { 1, 2, 3, 4, 5, 6 }</div>
+        <div class="antwort schritt">{ Kopf, Zahl }</div>
       </div></div>
       <div class="zeile"><div class="n">🎩</div><div>
         <div class="frage">Einen Namen aus dem Hut ziehen (Lea, Tom, Mia, Ben)</div>
-        <div class="antwort schritt">Ergebnisse: { Lea, Tom, Mia, Ben }</div>
+        <div class="antwort schritt">{ Lea, Tom, Mia, Ben }</div>
+      </div></div>
+      <div class="zeile"><div class="n">🃏</div><div>
+        <div class="frage">Bei UNO blind eine Karte ziehen. Welche Farbe hat sie?</div>
+        <div class="antwort schritt">{ Rot, Gelb, Grün, Blau } (Sonderkarten ohne Farbe weglassen)</div>
       </div></div>
     </div>
     <div class="hinweis">Erst die Klasse antworten lassen, dann aufdecken.</div>
   </section>
 
-  <!-- 8 Übung -->
+  <!-- 8 Übung: sicher / möglich / unmöglich -->
   <section class="folie" data-phase="Übung">
-    <div class="kennung">Übung<span class="eis" data-eis="S"></span></div>
-    <h2>Zufallsexperiment: ja oder nein?</h2>
-    <p style="margin-top:0">Entscheide und gib bei „ja“ alle möglichen Ergebnisse an.</p>
-    <div class="uebung">
-      <div class="zeile"><div class="n">a</div><div>
-        <div class="frage">Beim Kartenspiel UNO ziehst du blind eine Karte. Welche Farbe hat sie (Rot, Gelb, Grün oder Blau)?</div>
-        <div class="antwort schritt"><span class="ja">Ja.</span> { Rot, Gelb, Grün, Blau } (Sonderkarten ohne Farbe weglassen)</div>
-      </div></div>
-      <div class="zeile"><div class="n">b</div><div>
-        <div class="frage">Du rechnest an der Kasse 3 · 2 € aus.</div>
-        <div class="antwort schritt"><span class="nein">Nein.</span> Das Ergebnis ist immer 6 €, man weiß es vorher.</div>
-      </div></div>
-      <div class="zeile"><div class="n">c</div><div>
-        <div class="frage">Beim Fußball wird vor dem Spiel eine Münze geworfen, um die Seiten zu wählen.</div>
-        <div class="antwort schritt"><span class="ja">Ja.</span> { Kopf, Zahl }</div>
-      </div></div>
-      <div class="zeile"><div class="n">d</div><div>
-        <div class="frage">Du lässt deinen Schlüssel los. Fällt er nach unten?</div>
-        <div class="antwort schritt"><span class="nein">Nein.</span> Er fällt immer nach unten, das ist sicher.</div>
-      </div></div>
-      <div class="zeile stern"><div class="n">★</div><div>
-        <div class="frage">Eine Heftzwecke wird geworfen. Ist das ein Zufallsexperiment? Welche Ergebnisse gibt es?</div>
-        <div class="antwort schritt"><span class="ja">Ja.</span> { Kopf, Seite } (liegt auf dem Kopf oder auf der Seite)</div>
-      </div></div>
+    <div class="kennung">Übung<span class="eis" data-eis="I"></span></div>
+    <h2>Sicher, möglich oder unmöglich?</h2>
+    <div class="legende">
+      <span class="l-sicher">sicher</span>
+      <span class="l-moeglich">möglich (Zufall)</span>
+      <span class="l-unmoeglich">unmöglich</span>
+      <button class="knopf" data-alle-auf style="margin-left:auto">Alle aufdecken</button>
+      <button class="knopf" data-alle-zu>Alle zudecken</button>
     </div>
-    <div class="hinweis">Einzelarbeit im Heft (ca. 5 Min.), dann gemeinsam Aufgabe für Aufgabe aufdecken. Die ★-Aufgabe bereitet Stunde 3 vor.</div>
+    <div class="karten">
+      <div class="karte moeglich">Beim Würfeln fällt eine 6.<span class="loesung">möglich</span></div>
+      <div class="karte unmoeglich">Beim Würfeln fällt eine 7.<span class="loesung">unmöglich</span></div>
+      <div class="karte sicher">Nach Montag kommt Dienstag.<span class="loesung">sicher</span></div>
+      <div class="karte moeglich">Der Bus kommt heute pünktlich.<span class="loesung">möglich</span></div>
+      <div class="karte unmoeglich">Aus einer Tüte mit nur grünen Gummibärchen ziehe ich ein rotes.<span class="loesung">unmöglich</span></div>
+      <div class="karte sicher">Beim Würfeln fällt eine Zahl kleiner als 7.<span class="loesung">sicher</span></div>
+    </div>
+    <p class="schritt" style="margin-top:1rem">Weiter üben: <a class="schuelerlink" href="../schueler/stunde-01.html" target="_blank">📱 Schülerseite · Stunde 1</a></p>
+    <div class="hinweis">Abstimmen (Daumen hoch / Mitte / runter), dann aufdecken. Danach Einzelarbeit auf der Schülerseite (Tablet/Handy) oder als Hausaufgabe. Link über die Schulplattform teilen.</div>
   </section>
 
-  <!-- 9 Abschluss: Freikarte verlosen -->
-  <section class="folie" data-phase="Abschluss">
-    <div class="kennung">Abschluss · zurück zum Problem<span class="eis" data-eis="E"></span></div>
+  <!-- 9 Freikarte verlosen -->
+  <section class="folie" data-phase="Reflexion">
+    <div class="kennung">Zurück zum Problem<span class="eis" data-eis="E"></span></div>
     <h2>Wir verlosen die Freikarte!</h2>
     <div class="lostopf">
       <textarea id="namen" placeholder="Namen der Klasse eintragen, durch Komma getrennt: Lea, Tom, Mia, …"></textarea>
       <button class="knopf gross" id="ziehen">🎩 Los ziehen</button>
       <div class="gewinner" id="gewinner"></div>
     </div>
-    <p class="schritt klein" style="text-align:center">Das ist ein Zufallsexperiment: Ergebnisse = { alle Namen der Klasse }.<br><strong>Hausaufgabe:</strong> Finde drei Zufallsexperimente aus deinem Alltag und schreibe alle möglichen Ergebnisse in { } auf.</p>
-    <div class="hinweis">Optional mit echtem Lostopf (Zettel im Hut) durchführen. Wenn es keine echte Freikarte gibt: Es wird z. B. „wer die nächste Stunde den Würfel holen darf“ verlost.</div>
+    <p class="schritt klein" style="text-align:center">Das ist ein Zufallsexperiment. Die möglichen Ergebnisse: { alle Namen der Klasse }</p>
+    <div class="hinweis">Optional mit echtem Lostopf. Ohne echte Freikarte wird z. B. verlost, wer nächste Stunde die Würfel austeilt.</div>
+  </section>
+
+  <!-- 10 Reflexion -->
+  <section class="folie" data-phase="Reflexion">
+    <div class="kennung">Reflexion</div>
+    <h2>Was kannst du jetzt?</h2>
+    <div class="zweispaltig">
+      <div>
+        <div class="kasten">
+          <p style="margin:0 0 .3rem"><strong>🎫 Exit-Ticket</strong> (auf einen Zettel):</p>
+          <p style="margin:0">Ist <strong>Schere-Stein-Papier</strong> ein Zufallsexperiment? Begründe in einem Satz.</p>
+        </div>
+        <p class="klein" style="margin-top:1rem"><strong>Hausaufgabe:</strong> Finde drei Zufallsexperimente aus deinem Alltag und schreibe alle möglichen Ergebnisse in { } auf.</p>
+      </div>
+      <div>
+        <div class="ampel-legende"><span>🟢 sicher</span><span>🟡 fast</span><span>🔴 noch nicht</span></div>
+        <div class="ampel">
+          <div class="zeile"><span>Ich kann erklären, was ein Zufallsexperiment ist.</span></div>
+          <div class="zeile"><span>Ich kann alle möglichen Ergebnisse in { } aufschreiben.</span></div>
+          <div class="zeile"><span>Ich kann „sicher“, „möglich“ und „unmöglich“ unterscheiden.</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="hinweis">Ampel per Handzeichen oder Ampelkarten. Die Schüler können ihre Einschätzung auch auf der Schülerseite speichern. Exit-Ticket einsammeln: Es zeigt, wer in der nächsten Stunde Unterstützung braucht. Schere-Stein-Papier ist umstritten, denn Spieler versuchen Muster zu erkennen. Gute Begründungen zählen, nicht ja oder nein.</div>
   </section>
 
 </div>

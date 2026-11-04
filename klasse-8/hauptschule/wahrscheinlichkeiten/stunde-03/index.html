@@ -19,7 +19,7 @@
   @media (max-width: 900px) { .vergleich { grid-template-columns: 1fr; } }
 </style>
 </head>
-<body data-phasen='[["Problem",5],["Experiment",12],["Auswertung",10],["Sicherung",8],["Übung",7],["Abschluss",3]]'>
+<body data-phasen='[["Abrufen",3],["Problem",4],["Experiment",10],["Ideen vergleichen",10],["Sicherung",8],["Übung",5],["Reflexion",5]]'>
 
 <div class="leiste">
   <div class="pfad"><a href="../../../../">Start</a> › <a href="../../../">Klasse 8</a> › <a href="../../">Hauptschule</a> › <a href="../">Wahrscheinlichkeiten</a> › Stunde 3</div>
@@ -27,15 +27,44 @@
 
 <div class="buehne">
 
-  <!-- 1 Titel + Einstieg -->
+  <!-- Abrufen -->
+  <section class="folie" data-phase="Abrufen">
+    <div class="kennung">Wahrscheinlichkeiten · Stunde 3 · Warm-up</div>
+    <h2>Was weißt du noch?</h2>
+    <p style="margin-top:0">Beantworte ohne ins Heft zu schauen.</p>
+    <div class="uebung">
+      <div class="zeile"><div class="n">1</div><div>
+        <div class="frage">Schreibe das Ereignis „ungerade Zahl“ beim Würfeln als Menge.</div>
+        <div class="antwort schritt">{ 1, 3, 5 }</div>
+      </div></div>
+      <div class="zeile"><div class="n">2</div><div>
+        <div class="frage">Was ist der Unterschied zwischen einem Ergebnis und einem Ereignis?</div>
+        <div class="antwort schritt">Ergebnis: ein einzelner Ausgang. Ereignis: mehrere Ergebnisse zusammengefasst.</div>
+      </div></div>
+      <div class="zeile"><div class="n">3</div><div>
+        <div class="frage">Rechne um: <span class="bruch"><span>3</span><span>4</span></span> = ? %</div>
+        <div class="antwort schritt">75 %. Das brauchen wir heute!</div>
+      </div></div>
+    </div>
+    <div class="hinweis">3 Minuten ohne Heft. Frage 3 aktiviert Vorwissen (Bruch → Prozent), das heute gebraucht wird. Bei Unsicherheit kurz erweitern auf Hundertstel zeigen.</div>
+  </section>
+
+  <!-- Problem -->
   <section class="folie" data-phase="Problem">
-    <div class="kennung">Wahrscheinlichkeiten · Stunde 3</div>
+    <div class="kennung">Problem</div>
     <h2>Ein Spielstand für das Schulfest</h2>
     <div class="problem">
       <div class="label">Problem</div><br>
       Eure Klasse plant für das Schulfest einen <strong>Heftzwecken-Stand</strong>, um Geld für die Klassenkasse zu verdienen:<br>
       Ein Spiel kostet <strong>50 Cent</strong>. Man wirft eine Heftzwecke. Landet sie auf dem <strong>Kopf</strong>, bekommt man <strong>1 €</strong>.<br>
       <strong>Verdient die Klasse damit Geld, oder macht sie Verlust?</strong>
+    </div>
+    <div class="lernziele schritt">
+      <div class="titel">🎯 Heute lernst du …</div>
+      <ul>
+        <li>Ergebnisse eines Experiments zu <strong>zählen und zu vergleichen</strong>,</li>
+        <li>die <strong>relative Häufigkeit</strong> als Bruch, Dezimalzahl und Prozent anzugeben.</li>
+      </ul>
     </div>
     <div class="hinweis">Problem vorlesen und erste Vermutungen sammeln. Leitfrage herausarbeiten: Wir müssen wissen, wie oft die Heftzwecke auf dem Kopf landet. Landet sie in mehr als der Hälfte der Würfe auf dem Kopf, verliert die Klasse Geld.</div>
   </section>
@@ -100,36 +129,63 @@
     <div class="hinweis">Gruppen zu 3–4, je eine Heftzwecke (gleiche Sorte für alle Gruppen!). Rollen: Werfer, Schreiber, Kontrolleur. Gleiche Fallhöhe, damit alle unter gleichen Bedingungen werfen. Bewusst unterschiedliche Wurfzahlen zulassen, das braucht man für die Auswertung.</div>
   </section>
 
-  <!-- 3 Problem: Wer hatte öfter Kopf? -->
-  <section class="folie" data-phase="Auswertung">
-    <div class="kennung">Auswertung<span class="eis" data-eis="IS"></span></div>
+  <!-- Eigene Lösung -->
+  <section class="folie" data-phase="Ideen vergleichen" data-minuten="4">
+    <div class="kennung">Eigene Lösung</div>
     <h2>Wer hatte öfter „Kopf“?</h2>
     <div class="vergleich">
-      <div class="kasten">
-        <p><strong>Gruppe A</strong></p>
-        <p>50 Würfe, davon <span class="gross">30</span>-mal Kopf</p>
-      </div>
-      <div class="kasten">
-        <p><strong>Gruppe B</strong></p>
-        <p>40 Würfe, davon <span class="gross">26</span>-mal Kopf</p>
-      </div>
+      <div class="kasten"><p><strong>Gruppe A</strong></p><p>50 Würfe, davon <span class="gross">30</span>-mal Kopf</p></div>
+      <div class="kasten"><p><strong>Gruppe B</strong></p><p>40 Würfe, davon <span class="gross">26</span>-mal Kopf</p></div>
     </div>
-    <p class="schritt">Gruppe A hatte öfter Kopf, aber sie hat auch <strong>öfter geworfen</strong>. Ist das gerecht verglichen?</p>
-    <div class="schritt" style="display:grid; grid-template-columns: 9rem 1fr 5rem; gap:.6rem 1rem; align-items:center; font-size:1.3rem; max-width: 900px">
-      <span>Gruppe A</span><div class="balken"><div style="width:60%"></div><span class="marke" style="left:50%"></span></div><strong>?</strong>
-      <span>Gruppe B</span><div class="balken"><div style="width:65%"></div><span class="marke" style="left:50%"></span></div><strong>?</strong>
+    <div class="tps" style="margin-top:1rem">
+      <div class="stufe"><b>👤</b> 1 Min. allein: Was meinst du?</div><span class="pfeil">→</span>
+      <div class="stufe"><b>👥</b> 3 Min. zu zweit: Findet einen <strong>gerechten Vergleich</strong> und schreibt ihn auf.</div>
+    </div>
+    <div data-tipps>
+      <div class="tipp">Gruppe A hat öfter geworfen als Gruppe B. Ist es dann gerecht, nur 30 und 26 zu vergleichen?</div>
+      <div class="tipp">Überlegt: Wie viel ist 30 <strong>von</strong> 50? Wie viel ist 26 <strong>von</strong> 40? Ein Bruch kann helfen.</div>
+    </div>
+    <div class="hinweis">Herumgehen, verschiedene Lösungswege (auch fehlerhafte) für die nächste Folie auswählen. Typisch: nur 30 und 26 vergleichen; Kopf minus Seite rechnen; Anteil bilden.</div>
+  </section>
+
+  <!-- Ideen vergleichen -->
+  <section class="folie" data-phase="Ideen vergleichen">
+    <div class="kennung">Ideen vergleichen</div>
+    <h2>Welcher Vergleich ist gerecht?</h2>
+    <div class="legende">
+      <span class="l-ja">gerechter Vergleich</span>
+      <span class="l-nein">kein gerechter Vergleich</span>
+      <button class="knopf" data-alle-auf style="margin-left:auto">Alle aufdecken</button>
+      <button class="knopf" data-alle-zu>Alle zudecken</button>
+    </div>
+    <div class="karten">
+      <div class="karte nein">„30 ist mehr als 26, also hatte A öfter Kopf.“<span class="loesung">A hat aber auch 10-mal öfter geworfen.</span></div>
+      <div class="karte nein">„A: 30 Kopf, 20 Seite → 10 mehr. B: 26 Kopf, 14 Seite → 12 mehr. Also B.“<span class="loesung">Gute Idee, aber Unterschiede hängen auch von der Wurfzahl ab.</span></div>
+      <div class="karte ja">„A: 30 von 50. B: 26 von 40. Wir vergleichen die Anteile.“<span class="loesung">Gerecht: Wir schauen auf den Anteil an allen Würfen.</span></div>
+    </div>
+    <div class="hinweis">Erst die Schülerlösungen vorstellen lassen und den Karten zuordnen. Die mittlere Idee ausdrücklich würdigen: Sie ist schon auf dem Weg, liefert hier zufällig das richtige Ergebnis, ist aber nicht allgemein gerecht.</div>
+  </section>
+
+  <!-- Anteile als Balken und Bruch -->
+  <section class="folie" data-phase="Ideen vergleichen">
+    <div class="kennung">Ideen vergleichen<span class="eis" data-eis="IS"></span></div>
+    <h2>Anteile sichtbar machen</h2>
+    <div style="display:grid; grid-template-columns: 9rem 1fr 5rem; gap:.6rem 1rem; align-items:center; font-size:1.3rem; max-width: 900px">
+      <span>Gruppe A</span><div class="balken"><div style="width:60%"></div><span class="marke" style="left:50%"></span></div><strong class="schritt">60 %</strong>
+      <span>Gruppe B</span><div class="balken"><div style="width:65%"></div><span class="marke" style="left:50%"></span></div><strong class="schritt">65 %</strong>
       <span></span><span class="klein">Ganzer Balken = alle Würfe der Gruppe · Strich = Hälfte</span><span></span>
     </div>
-    <p class="schritt">Wir vergleichen den <strong>Anteil</strong>:
+    <div class="vernetzen">Wo steckt im Balken von Gruppe A die <strong>50</strong>? Wo die <strong>30</strong>? Warum sind beide Balken <strong>gleich lang</strong>, obwohl B weniger geworfen hat?</div>
+    <p class="schritt">Als Rechnung:
       &nbsp; A: <span class="bruch"><span>30</span><span>50</span></span> = 0,6 = <strong>60 %</strong>
       &nbsp;&nbsp; B: <span class="bruch"><span>26</span><span>40</span></span> = 0,65 = <strong>65 %</strong></p>
     <p class="schritt"><strong>Gruppe B</strong> hatte im Verhältnis öfter Kopf!</p>
-    <div class="hinweis">Problem erst offen diskutieren lassen. Viele Schüler vergleichen zunächst nur 30 und 26. Die Balken (ikonisch) machen sichtbar: Jeder Balken steht für alle Würfe einer Gruppe, gefüllt ist der Teil mit „Kopf“. Danach erst rechnen (symbolisch). Kernidee: Bei unterschiedlicher Gesamtzahl hilft nur der Anteil.</div>
+    <div class="hinweis">Den Vernetzungsimpuls von Schülern beantworten lassen: Der ganze Balken steht immer für alle Würfe (50 bzw. 40), deshalb sind beide gleich lang. Der gefüllte Teil steht für „Kopf“. Erst dann die Rechnung aufdecken: Der Bruch beschreibt dasselbe wie der Balken.</div>
   </section>
 
   <!-- 4 Klassentabelle -->
-  <section class="folie" data-phase="Auswertung">
-    <div class="kennung">Auswertung<span class="eis" data-eis="IS"></span></div>
+  <section class="folie" data-phase="Sicherung">
+    <div class="kennung">Unsere Ergebnisse<span class="eis" data-eis="IS"></span></div>
     <h2>Unsere Ergebnisse</h2>
     <table class="strich klasse" id="klassentabelle">
       <thead>
@@ -189,12 +245,13 @@
         <div class="antwort schritt">Zusammen immer 100 % (= 1), denn bei jedem Wurf tritt genau eine Lage ein.</div>
       </div></div>
     </div>
-    <div class="hinweis">Einzelarbeit, dann Vergleich. Wenn die Zeit knapp ist: c) als Hausaufgabe.</div>
+    <p class="schritt" style="margin-top:.8rem">Weiter üben: <a class="schuelerlink" href="../schueler/stunde-03.html" target="_blank">📱 Schülerseite · Stunde 3</a></p>
+    <div class="hinweis">Einzelarbeit, dann Vergleich. Wenn die Zeit knapp ist: c) und ★ auf die Schülerseite bzw. als Hausaufgabe.</div>
   </section>
 
   <!-- Abschluss: zurück zum Problem -->
-  <section class="folie" data-phase="Abschluss">
-    <div class="kennung">Abschluss · zurück zum Problem<span class="eis" data-eis="S"></span></div>
+  <section class="folie" data-phase="Reflexion">
+    <div class="kennung">Zurück zum Problem<span class="eis" data-eis="S"></span></div>
     <h2>Lohnt sich unser Schulfest-Stand?</h2>
     <p style="margin-top:0">Angenommen, <strong>100 Personen</strong> spielen. Unser Klassenergebnis: <strong id="abP">–</strong> Kopf.</p>
     <div class="uebung">
@@ -211,8 +268,31 @@
         <div class="antwort schritt" id="abErg">–</div>
       </div></div>
     </div>
-    <p class="schritt klein"><strong>Hausaufgabe:</strong> Wirf zu Hause eine Münze 20-mal und notiere, wie oft „Kopf“ kommt. Bring dein Ergebnis mit, wir brauchen es in Stunde 4.</p>
     <div class="hinweis">Die Zahlen werden automatisch aus der Klassentabelle übernommen. Ist noch nichts eingetragen, wird mit 60 % gerechnet. Ausblick: Wie sicher ist unser Ergebnis? Würden wir mit mehr Würfen etwas anderes herausbekommen? → Stunde 4.</div>
+  </section>
+
+  <!-- Reflexion -->
+  <section class="folie" data-phase="Reflexion">
+    <div class="kennung">Reflexion</div>
+    <h2>Was kannst du jetzt?</h2>
+    <div class="zweispaltig">
+      <div>
+        <div class="kasten">
+          <p style="margin:0 0 .3rem"><strong>🎫 Exit-Ticket:</strong></p>
+          <p style="margin:0">Ali trifft beim Elfmeter 8-mal bei 10 Schüssen, Jonas 15-mal bei 20. Wer trifft besser? Rechne.</p>
+        </div>
+        <p class="klein" style="margin-top:1rem"><strong>Hausaufgabe:</strong> Wirf zu Hause eine Münze 20-mal und notiere, wie oft „Kopf“ kommt. Bring dein Ergebnis mit, wir brauchen es in Stunde 4.</p>
+      </div>
+      <div>
+        <div class="ampel-legende"><span>🟢 sicher</span><span>🟡 fast</span><span>🔴 noch nicht</span></div>
+        <div class="ampel">
+          <div class="zeile"><span>Ich kann absolute und relative Häufigkeit unterscheiden.</span></div>
+          <div class="zeile"><span>Ich kann die relative Häufigkeit als Bruch, Dezimalzahl und Prozent angeben.</span></div>
+          <div class="zeile"><span>Ich kann mit relativen Häufigkeiten gerecht vergleichen.</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="hinweis">Exit-Ticket: Ali 80 %, Jonas 75 %, also trifft Ali besser. Einsammeln und für die Planung von Stunde 4 nutzen.</div>
   </section>
 
 </div>
