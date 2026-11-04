@@ -2,6 +2,12 @@
 
 Digitale Unterrichtseinheiten zum Durchspielen im Unterricht (Beamer / Browser).
 
+## 👉 [Zur fertigen Seite: mintlabor.github.io/Mathe](https://mintlabor.github.io/Mathe/)
+
+Direkt zu: [Klasse 8 Hauptschule – Wahrscheinlichkeiten](https://mintlabor.github.io/Mathe/klasse-8/hauptschule/wahrscheinlichkeiten/)
+
+> Hier auf github.com sieht man nur den Quellcode. Die fertige Seite mit Kacheln öffnet sich über den Link oben.
+
 ## Aufbau (wird nach unten immer kleiner)
 
 ```
