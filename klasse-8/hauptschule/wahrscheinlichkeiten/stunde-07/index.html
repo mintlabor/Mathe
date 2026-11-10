@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Stunde 7: Der geheime Beutel – Wahrscheinlichkeiten</title>
+<link rel="stylesheet" href="../../../../praesentation.css">
+<style>
+  .beutel-feld { display: grid; grid-template-columns: 300px 1fr; gap: 2rem; align-items: start; }
+  .beutel { position: relative; width: 280px; height: 300px; }
+  .beutel .sack { position: absolute; inset: 40px 10px 0 10px; background: #6b4f3a; border-radius: 40% 40% 30% 30% / 25% 25% 20% 20%; box-shadow: inset -12px -18px 0 rgba(0,0,0,.18); }
+  .beutel .hals { position: absolute; left: 95px; width: 90px; top: 22px; height: 40px; background: #5a412f; border-radius: 10px; }
+  .beutel .band { position: absolute; left: 85px; width: 110px; top: 48px; height: 10px; background: #e8a400; border-radius: 5px; }
+  .beutel .fragezeichen { position: absolute; inset: 120px 0 0 0; text-align: center; font-size: 5rem; color: rgba(255,255,255,.85); font-weight: 800; }
+  .beutel .inhalt { position: absolute; inset: 90px 30px 20px 30px; display: none; flex-wrap: wrap; gap: 8px; justify-content: center; align-content: center; }
+  .beutel.offen .inhalt { display: flex; }
+  .beutel.offen .fragezeichen { display: none; }
+  .kugel { width: 46px; height: 46px; border-radius: 50%; border: 3px solid rgba(0,0,0,.25); box-shadow: inset -6px -6px 0 rgba(0,0,0,.15); }
+  .k-rot { background: #e03131; } .k-blau { background: #1c7ed6; } .k-gelb { background: #fcc419; }
+  .gezogen { display: flex; align-items: center; gap: 1rem; font-size: 1.4rem; min-height: 64px; }
+  .gezogen .kugel { width: 60px; height: 60px; }
+  .steuerung { display: flex; gap: .5rem; flex-wrap: wrap; margin: .5rem 0 1rem; }
+  table.strich.sim td, table.strich.sim th { padding: .35rem .8rem; font-size: 1.3rem; }
+  .lehrer-einstellung { display: flex; gap: .8rem; align-items: center; flex-wrap: wrap; margin-top: .5rem; }
+  .lehrer-einstellung input { width: 4rem; font-size: 1.1rem; }
+</style>
+</head>
+<body data-phasen='[["Abrufen",4],["Problem",5],["Experiment",12],["Simulation",8],["Sicherung",6],["Übung",6],["Reflexion",4]]'>
+
+<div class="leiste">
+  <div class="pfad"><a href="../../../../">Start</a> › <a href="../../../">Klasse 8</a> › <a href="../../">Hauptschule</a> › <a href="../">Wahrscheinlichkeiten</a> › Stunde 7</div>
+</div>
+
+<div class="buehne">
+
+  <!-- Abrufen -->
+  <section class="folie" data-phase="Abrufen">
+    <div class="kennung">Wahrscheinlichkeiten · Stunde 7 · Warm-up</div>
+    <h2>Was weißt du noch?</h2>
+    <p style="margin-top:0">Beantworte ohne ins Heft zu schauen.</p>
+    <div class="uebung">
+      <div class="zeile"><div class="n">1</div><div>
+        <div class="frage">Exit-Ticket: Warum kann man P(Stirn) bei der Streichholzschachtel nicht ausrechnen?</div>
+        <div class="antwort schritt">Die Seiten sind verschieden groß. Die Lagen haben nicht die gleiche Chance (Nicht-Laplace).</div>
+      </div></div>
+      <div class="zeile"><div class="n">2</div><div>
+        <div class="frage">Wie bekommt man trotzdem einen guten Schätzwert?</div>
+        <div class="antwort schritt">Sehr oft werfen und die relative Häufigkeit berechnen.</div>
+      </div></div>
+      <div class="zeile"><div class="n">3</div><div>
+        <div class="frage">Wie viel sind 30 % von 10?</div>
+        <div class="antwort schritt">3</div>
+      </div></div>
+    </div>
+    <div class="hinweis">Aufgabe 3 ist die Rechnung, die heute am Ende gebraucht wird (Schätzwert · Gesamtzahl).</div>
+  </section>
+
+  <!-- Problem -->
+  <section class="folie" data-phase="Problem">
+    <div class="kennung">Problem</div>
+    <h2>Was ist im Beutel?</h2>
+    <div class="zweispaltig">
+      <div>
+        <div class="problem">
+          <div class="label">Problem</div><br>
+          In diesem Beutel sind <strong>10 Kugeln</strong>. Sie sind <strong>rot</strong>, <strong>blau</strong> oder <strong>gelb</strong>.<br>
+          Niemand darf hineinschauen und niemand darf alle Kugeln herausnehmen.<br>
+          <strong>Wie könnt ihr herausfinden, wie viele Kugeln von jeder Farbe im Beutel sind?</strong>
+        </div>
+        <div class="lernziele schritt">
+          <div class="titel">🎯 Heute lernst du …</div>
+          <ul>
+            <li>durch <strong>Ziehen mit Zurücklegen</strong> Wahrscheinlichkeiten zu schätzen,</li>
+            <li>mit dem Schätzwert auf die <strong>Anzahl</strong> der Kugeln zu schließen.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="beutel"><div class="sack"></div><div class="hals"></div><div class="band"></div><div class="fragezeichen">?</div></div>
+    </div>
+    <div class="hinweis">Mit echtem Beutel (Stoffbeutel, Socke) und 10 Steckwürfeln, Murmeln oder Legosteinen in drei Farben. Den Inhalt vorher festlegen und notieren, z. B. 5 rot, 3 blau, 2 gelb. So ein Beutel heißt in der Mathematik auch <strong>Urne</strong>.</div>
+  </section>
+
+  <!-- Eigene Lösung -->
+  <section class="folie" data-phase="Problem" data-minuten="3">
+    <div class="kennung">Eigene Lösung</div>
+    <h2>Euer Plan?</h2>
+    <div class="tps">
+      <div class="stufe"><b>👥</b> 2 Min. zu zweit: Überlegt einen Plan. Was dürft ihr tun? Was nicht?</div><span class="pfeil">→</span>
+      <div class="stufe"><b>🏫</b> Klasse: Pläne sammeln, eine Regel festlegen</div>
+    </div>
+    <div data-tipps>
+      <div class="tipp">Ihr dürft <strong>eine</strong> Kugel ziehen und anschauen. Was müsst ihr danach mit der Kugel machen, damit beim nächsten Zug wieder alle 10 drin sind?</div>
+      <div class="tipp">Denkt an die Heftzwecke und die Schachtel: Was hilft, um einen <strong>guten Schätzwert</strong> zu bekommen?</div>
+    </div>
+    <div class="hinweis">Ziel: Die Klasse findet selbst die Regel „eine Kugel ziehen, Farbe notieren, zurücklegen, schütteln, oft wiederholen“. An die Tafel schreiben. Fachbegriff: <strong>Ziehen mit Zurücklegen</strong>.</div>
+  </section>
+
+  <!-- Experiment -->
+  <section class="folie" data-phase="Experiment" data-minuten="10">
+    <div class="kennung">Experiment · Gruppenarbeit<span class="eis" data-eis="E"></span></div>
+    <h2>Wir ziehen mit Zurücklegen</h2>
+    <div class="zweispaltig">
+      <div>
+        <ol>
+          <li>Schüttelt den Beutel.</li>
+          <li>Zieht <strong>ohne Hinschauen</strong> eine Kugel. Nennt die Farbe.</li>
+          <li>Macht einen Strich und legt die Kugel <strong>zurück</strong>.</li>
+          <li>Das macht ihr <strong>40-mal</strong>. Wechselt euch beim Ziehen ab.</li>
+          <li>Schätzt: Wie viele Kugeln jeder Farbe sind im Beutel?</li>
+        </ol>
+      </div>
+      <div>
+        <table class="strich">
+          <tr><th>Farbe</th><th style="min-width:10rem">Striche</th><th>Anzahl</th><th>Anteil</th></tr>
+          <tr><td>🔴 rot</td><td></td><td></td><td></td></tr>
+          <tr><td>🔵 blau</td><td></td><td></td><td></td></tr>
+          <tr><td>🟡 gelb</td><td></td><td></td><td></td></tr>
+          <tr><th>Summe</th><td></td><td>40</td><td>100 %</td></tr>
+        </table>
+        <p class="klein" style="margin-top:.6rem">Unsere Schätzung: ___ rot · ___ blau · ___ gelb</p>
+      </div>
+    </div>
+    <div class="hinweis">Jede Gruppe bekommt einen Beutel mit demselben Inhalt (oder einen eigenen, dann pro Gruppe notieren). Rollen wie letzte Stunde: Zieher (wechselt), Ansager, Schreiber, Zeitwächter. Die Gruppen tragen ihre Schätzung an der Tafel ein. Noch nicht auflösen.</div>
+  </section>
+
+  <!-- Simulation -->
+  <section class="folie" data-phase="Simulation">
+    <div class="kennung">Simulation am Computer<span class="eis" data-eis="IS"></span></div>
+    <h2>Der digitale Beutel</h2>
+    <div class="beutel-feld">
+      <div>
+        <div class="beutel" id="dBeutel"><div class="sack"></div><div class="hals"></div><div class="band"></div><div class="fragezeichen">?</div><div class="inhalt" id="dInhalt"></div></div>
+      </div>
+      <div>
+        <div class="steuerung">
+          <button class="knopf mittel" data-ziehe="1">1 ziehen</button>
+          <button class="knopf mittel" data-ziehe="10">+10</button>
+          <button class="knopf mittel" data-ziehe="100">+100</button>
+          <button class="knopf mittel" data-ziehe="1000">+1.000</button>
+          <button class="knopf mittel" id="dNeu">Neu</button>
+          <button class="knopf mittel" id="dOeffnen">👀 Beutel öffnen</button>
+        </div>
+        <div class="gezogen" id="dGezogen">Noch nichts gezogen.</div>
+        <table class="strich sim">
+          <tr><th>Farbe</th><th>Anzahl</th><th>relative Häufigkeit</th><th>· 10 = geschätzte Kugeln</th></tr>
+          <tr><td>🔴 rot</td><td data-a="rot">0</td><td data-r="rot">–</td><td data-s="rot">–</td></tr>
+          <tr><td>🔵 blau</td><td data-a="blau">0</td><td data-r="blau">–</td><td data-s="blau">–</td></tr>
+          <tr><td>🟡 gelb</td><td data-a="gelb">0</td><td data-r="gelb">–</td><td data-s="gelb">–</td></tr>
+          <tr><th>Züge</th><td id="dZuege">0</td><td colspan="2"></td></tr>
+        </table>
+      </div>
+    </div>
+    <div class="vernetzen">Was bedeutet eine <strong>Zeile in der Tabelle</strong> für den <strong>Beutel</strong>? Warum rechnen wir „· 10“?</div>
+    <div class="hinweis">
+      Erst einzeln ziehen („1 ziehen“), die Klasse tippt vorher die Farbe. Dann +10: Schätzung oft noch daneben. Dann +100, +1.000. Erst zum Schluss öffnen. Danach die Gruppenschätzungen an der Tafel mit dem echten Beutel vergleichen.
+      <div class="lehrer-einstellung">Inhalt des digitalen Beutels (Lehrkraft):
+        rot <input type="number" id="eRot" min="0" max="10" value="5">
+        blau <input type="number" id="eBlau" min="0" max="10" value="3">
+        gelb <input type="number" id="eGelb" min="0" max="10" value="2">
+        <button class="knopf" id="eZufall">Zufälliger Inhalt</button>
+        <span id="eInfo"></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Ideen vergleichen -->
+  <section class="folie" data-phase="Simulation">
+    <div class="kennung">Ideen vergleichen</div>
+    <h2>Was stimmt?</h2>
+    <div class="legende">
+      <span class="l-ja">stimmt</span>
+      <span class="l-nein">stimmt nicht</span>
+      <button class="knopf" data-alle-auf style="margin-left:auto">Alle aufdecken</button>
+      <button class="knopf" data-alle-zu>Alle zudecken</button>
+    </div>
+    <div class="karten">
+      <div class="karte nein">„Nach 5 Zügen hatten wir 4-mal rot. Also sind 8 rote Kugeln drin.“<span class="loesung">5 Züge sind viel zu wenige. Die Schätzung schwankt stark.</span></div>
+      <div class="karte ja">„Wenn wir die Kugel nicht zurücklegen, ändert sich der Beutel bei jedem Zug.“<span class="loesung">Richtig: Darum legen wir zurück.</span></div>
+      <div class="karte nein">„Gelb kam bei uns nie. Also ist keine gelbe Kugel drin.“<span class="loesung">Nicht sicher! Vielleicht ist Gelb nur selten.</span></div>
+      <div class="karte ja">„Rot kam in etwa 50 % der Züge. 50 % von 10 Kugeln sind 5 rote.“<span class="loesung">Genau so schätzt man.</span></div>
+      <div class="karte nein">„Nach 1.000 Zügen wissen wir es ganz sicher.“<span class="loesung">Sehr wahrscheinlich nah dran, aber nicht 100 % sicher. Sicher ist man erst, wenn man hineinschaut.</span></div>
+    </div>
+    <div class="hinweis">Aussagen aus den Gruppen aufgreifen. Die letzte Karte ist anspruchsvoll: Schätzen ist gut, aber kein Beweis.</div>
+  </section>
+
+  <!-- Sicherung -->
+  <section class="folie" data-phase="Sicherung">
+    <div class="kennung">Sicherung<span class="eis" data-eis="S"></span></div>
+    <h2>Ziehen aus einer Urne</h2>
+    <div class="merk">
+      <h3>Merke</h3>
+      <ul>
+        <li class="schritt">Ein Beutel mit Kugeln heißt in der Mathematik <strong>Urne</strong>.</li>
+        <li class="schritt"><strong>Ziehen mit Zurücklegen:</strong> Kugel ziehen, Farbe notieren, Kugel zurücklegen, mischen. So bleibt der Inhalt immer gleich.</li>
+        <li class="schritt"><strong>Inhalt schätzen:</strong> geschätzte Anzahl ≈ relative Häufigkeit · Anzahl aller Kugeln<br>Beispiel: 0,3 · 10 = 3 Kugeln</li>
+        <li class="schritt"><strong>Kennt man den Inhalt</strong>, kann man die Wahrscheinlichkeit ausrechnen:<br>P(rot) = <span class="bruch"><span>Anzahl roter Kugeln</span><span>Anzahl aller Kugeln</span></span> = <span class="bruch"><span>5</span><span>10</span></span> = 0,5 = 50 %</li>
+      </ul>
+    </div>
+    <div class="hinweis">Die letzte Zeile zeigt die Gegenrichtung: Schätzen (aus Versuchen) und Ausrechnen (aus dem Inhalt). Beides passt bei vielen Zügen zusammen. Wenn der Beutel offen ist, vergleichen: Wie nah war unser Schätzwert?</div>
+  </section>
+
+  <!-- Übung -->
+  <section class="folie" data-phase="Übung">
+    <div class="kennung">Übung<span class="eis" data-eis="IS"></span></div>
+    <h2>Jetzt du!</h2>
+    <div class="uebung">
+      <div class="zeile"><div class="n">a</div><div>
+        <div class="frage">In einer Urne sind 20 Kugeln. Bei 200 Zügen mit Zurücklegen kam 50-mal blau. Wie viele blaue Kugeln sind wohl drin?</div>
+        <div class="antwort schritt"><span class="bruch"><span>50</span><span>200</span></span> = 0,25 · 20 = <strong>5</strong> blaue Kugeln</div>
+      </div></div>
+      <div class="zeile"><div class="n">b</div><div>
+        <div class="frage">In einem Beutel sind 4 rote und 6 grüne Gummibärchen. Wie groß ist P(rot)?</div>
+        <div class="antwort schritt"><span class="bruch"><span>4</span><span>10</span></span> = 0,4 = 40 %</div>
+      </div></div>
+      <div class="zeile stern"><div class="n">★</div><div>
+        <div class="frage">Lege einen Beutel mit 10 Kugeln so, dass P(gelb) = 0,3 und P(rot) = 0,5 ist. Welche Farbe haben die übrigen Kugeln, und wie viele sind es?</div>
+        <div class="antwort schritt">3 gelbe, 5 rote, also bleiben <strong>2</strong> Kugeln in einer anderen Farbe (z. B. blau).</div>
+      </div></div>
+    </div>
+    <p class="schritt" style="margin-top:.8rem">Weiter üben: <a class="schuelerlink" href="../schueler/stunde-07.html" target="_blank">📱 Schülerseite · Stunde 7</a></p>
+    <div class="hinweis">★ kann man mit echten Steckwürfeln legen lassen (enaktiv).</div>
+  </section>
+
+  <!-- Reflexion -->
+  <section class="folie" data-phase="Reflexion">
+    <div class="kennung">Reflexion</div>
+    <h2>Mit vielen Zügen kann man in den Beutel „hineinschauen“, ohne zu schauen.</h2>
+    <div class="zweispaltig">
+      <div>
+        <div class="kasten">
+          <p style="margin:0 0 .3rem"><strong>🎫 Exit-Ticket:</strong></p>
+          <p style="margin:0">In einer Urne sind 10 Kugeln. Bei 100 Zügen kam 70-mal schwarz. Wie viele schwarze Kugeln sind wohl drin? Schreibe die Rechnung auf.</p>
+        </div>
+        <p class="klein" style="margin-top:1rem">Nächste Stunde: Der Baustein-Würfel. Hat jede Seite <span class="bruch"><span>1</span><span>6</span></span>?</p>
+      </div>
+      <div>
+        <div class="ampel-legende"><span>🟢 sicher</span><span>🟡 fast</span><span>🔴 noch nicht</span></div>
+        <div class="ampel">
+          <div class="zeile"><span>Ich kann erklären, was „Ziehen mit Zurücklegen“ bedeutet.</span></div>
+          <div class="zeile"><span>Ich kann mit relativen Häufigkeiten den Inhalt einer Urne schätzen.</span></div>
+          <div class="zeile"><span>Ich kann P(Farbe) ausrechnen, wenn ich den Inhalt kenne.</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="hinweis">Exit-Ticket: 70 : 100 = 0,7 · 10 = 7 schwarze Kugeln. Zum Abschluss den echten Beutel öffnen, falls noch nicht geschehen.</div>
+  </section>
+
+</div>
+<script src="../../../../praesentation.js"></script>
+<script>
+  (function () {
+    const FARBEN = ["rot", "blau", "gelb"];
+    const NAME = { rot: "rot", blau: "blau", gelb: "gelb" };
+    let inhalt = [], zaehler = { rot: 0, blau: 0, gelb: 0 }, n = 0;
+    const beutel = document.getElementById("dBeutel");
+    const e = { rot: document.getElementById("eRot"), blau: document.getElementById("eBlau"), gelb: document.getElementById("eGelb") };
+
+    function inhaltSetzen() {
+      const a = FARBEN.map(f => Math.max(0, parseInt(e[f].value) || 0));
+      const summe = a[0] + a[1] + a[2];
+      document.getElementById("eInfo").textContent = summe === 10 ? "✓ 10 Kugeln" : `⚠️ Summe ist ${summe}, es müssen 10 sein.`;
+      if (summe !== 10) return;
+      inhalt = [];
+      FARBEN.forEach((f, i) => { for (let k = 0; k < a[i]; k++) inhalt.push(f); });
+      document.getElementById("dInhalt").innerHTML = inhalt.map(f => `<span class="kugel k-${f}"></span>`).join("");
+      neu();
+    }
+    function neu() {
+      zaehler = { rot: 0, blau: 0, gelb: 0 }; n = 0;
+      beutel.classList.remove("offen");
+      document.getElementById("dGezogen").textContent = "Noch nichts gezogen.";
+      anzeigen();
+    }
+    function ziehen(k) {
+      if (!inhalt.length) return;
+      let letzte;
+      for (let i = 0; i < k; i++) { letzte = inhalt[Math.floor(Math.random() * inhalt.length)]; zaehler[letzte]++; n++; }
+      document.getElementById("dGezogen").innerHTML = k === 1
+        ? `Gezogen: <span class="kugel k-${letzte}"></span> <strong>${NAME[letzte]}</strong> · zurückgelegt`
+        : `${k.toLocaleString("de-DE")} Kugeln gezogen und jeweils zurückgelegt.`;
+      anzeigen();
+    }
+    function anzeigen() {
+      FARBEN.forEach(f => {
+        document.querySelector(`[data-a="${f}"]`).textContent = zaehler[f].toLocaleString("de-DE");
+        document.querySelector(`[data-r="${f}"]`).textContent = n ? Praes.prozent(zaehler[f] / n) : "–";
+        document.querySelector(`[data-s="${f}"]`).innerHTML = n ? `${Praes.zahl(zaehler[f] / n * 10, 1)} → <strong>etwa ${Math.round(zaehler[f] / n * 10)}</strong>` : "–";
+      });
+      document.getElementById("dZuege").textContent = n.toLocaleString("de-DE");
+    }
+    document.querySelectorAll("[data-ziehe]").forEach(b => b.onclick = () => ziehen(Number(b.dataset.ziehe)));
+    document.getElementById("dNeu").onclick = neu;
+    document.getElementById("dOeffnen").onclick = () => beutel.classList.toggle("offen");
+    FARBEN.forEach(f => e[f].addEventListener("input", inhaltSetzen));
+    document.getElementById("eZufall").onclick = () => {
+      const r = 1 + Math.floor(Math.random() * 7);            // 1 bis 7 rote
+      const b = 1 + Math.floor(Math.random() * (9 - r));      // mindestens 1 gelbe bleibt
+      e.rot.value = r; e.blau.value = b; e.gelb.value = 10 - r - b;
+      inhaltSetzen();
+    };
+    inhaltSetzen();
+  })();
+</script>
+</body>
+</html>

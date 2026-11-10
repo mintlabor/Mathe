@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Üben: Die Streichholzschachtel – Stunde 6</title>
+<link rel="stylesheet" href="../../../../schueler.css">
+</head>
+<body>
+<header><div class="inner">
+  <div class="pfad"><a href="./">🗺️ Lernlandkarte</a> › Stunde 6</div>
+  <h1>Üben: Die Streichholzschachtel</h1>
+  <p class="untertitel">Stunde 6 · Wahrscheinlichkeiten durch Versuche schätzen</p>
+</div></header>
+<main>
+  <div class="box">
+    <strong>📘 Erinnerung</strong><br>
+    <strong>Laplace:</strong> Alle Ergebnisse haben die gleiche Chance (Würfel, Münze). Man kann rechnen.<br>
+    <strong>Nicht-Laplace:</strong> Die Ergebnisse haben nicht die gleiche Chance (Schachtel, Heftzwecke). Man schätzt:<br>
+    Schätzwert = relative Häufigkeit = Anzahl : Anzahl aller Würfe (bei <strong>vielen</strong> Würfen)
+  </div>
+  <div id="ziele"></div>
+  <h2>Aufgaben</h2>
+  <div id="niveaus"></div>
+  <div id="fortschritt"></div>
+  <div id="aufgaben"></div>
+  <h2>Wie sicher bist du jetzt?</h2>
+  <div id="ampel"></div>
+  <p><a href="./">← Zurück zur Lernlandkarte</a></p>
+</main>
+<script>
+window.SEITE = {
+  speicher: "mathe-k8-hs-wk", stunde: 6,
+  lernziele: ["erklären, was ein Nicht-Laplace-Experiment ist", "eine Wahrscheinlichkeit mit vielen Versuchen schätzen", "mit Schätzwerten gerechte Punkte begründen"],
+  ichKann: ["Ich kann erklären, was ein Nicht-Laplace-Experiment ist.", "Ich kann eine Wahrscheinlichkeit mit vielen Versuchen schätzen.", "Ich kann mit Schätzwerten gerechte Punkte begründen."],
+  aufgaben: [
+    { niveau: 1, typ: "auswahl", frage: "Ein Kronkorken wird geworfen. Er landet mit der Öffnung nach oben oder nach unten. Ist das ein Laplace-Experiment?",
+      optionen: ["Ja, es gibt zwei Ergebnisse, also je <sup>1</sup>/<sub>2</sub>.", "Nein, die beiden Seiten sind verschieden geformt."], loesung: 1,
+      tipps: ["Sieht ein Kronkorken oben und unten gleich aus?"],
+      erklaerung: "Nein. Oben und unten sind verschieden geformt. Die beiden Lagen haben nicht unbedingt die gleiche Chance. Man muss es durch viele Würfe schätzen." },
+    { niveau: 1, typ: "auswahl", frage: "Welches Experiment ist ein Laplace-Experiment?",
+      optionen: ["Streichholzschachtel werfen", "Einen normalen Würfel werfen", "Eine Heftzwecke werfen"], loesung: 1,
+      tipps: ["Bei welchem Gegenstand sind alle Seiten gleich groß?"],
+      erklaerung: "Beim normalen Würfel sind alle 6 Seiten gleich. Jede Zahl hat die gleiche Chance." },
+    { niveau: 1, typ: "zahl", einheit: "%", frage: "Eine Schachtel wurde 100-mal geworfen. 72-mal lag sie auf der Fläche. Schätze P(Fläche) in Prozent.",
+      loesung: 72,
+      tipps: ["72 von 100 = ? %"],
+      erklaerung: "<sup>72</sup>/<sub>100</sub> = 72 %." },
+    { niveau: 2, typ: "zahl", einheit: "%", frage: "Eine Schachtel wurde 200-mal geworfen. 50-mal lag sie auf der Seite. Schätze P(Seite) in Prozent.",
+      loesung: 25,
+      tipps: ["Rechne 50 : 200.", "50 : 200 = 0,25"],
+      erklaerung: "50 : 200 = 0,25 = 25 %." },
+    { niveau: 2, typ: "auswahl", frage: "Gruppe A hat 20-mal geworfen, die Klasse zusammen 400-mal. Welchem Schätzwert vertraust du mehr?",
+      optionen: ["Gruppe A", "der ganzen Klasse", "Beide sind gleich gut."], loesung: 1,
+      tipps: ["Denke an das Gesetz der großen Zahlen."],
+      erklaerung: "Der Klasse: Bei mehr Würfen schwankt die relative Häufigkeit weniger." },
+    { niveau: 2, typ: "zahl", frage: "P(Stirn) ist etwa 4 %. Wie oft erwartest du „Stirn“ bei 50 Würfen? (ungefähr)",
+      loesung: 2, toleranz: 0.5,
+      tipps: ["4 % von 50 = ?", "1 % von 50 ist 0,5."],
+      erklaerung: "4 % von 50 = 0,04 · 50 = 2. Also etwa 2-mal. Es kann auch 0-mal oder 5-mal sein." },
+    { niveau: 3, typ: "zahl", frage: "Fläche kommt mit 60 %, Seite mit 30 %. Fläche bringt 1 Punkt. Wie viele Punkte sind für „Seite“ gerecht?",
+      loesung: 2,
+      tipps: ["Wie viel seltener als die Fläche kommt die Seite?", "60 : 30 = ?"],
+      erklaerung: "60 : 30 = 2. Die Seite kommt halb so oft, also bekommt sie 2 Punkte." },
+    { niveau: 3, typ: "auswahl", frage: "Jonas: „Die Schachtel hat 6 Seiten. Also ist P(Fläche) = <sup>2</sup>/<sub>6</sub>, weil es zwei Flächen gibt.“ Was ist der Fehler?",
+      optionen: ["Es gibt nur eine Fläche.", "Die Seiten sind verschieden groß, also nicht gleich wahrscheinlich.", "Er hätte <sup>1</sup>/<sub>6</sub> nehmen müssen."], loesung: 1,
+      tipps: ["Durfte Jonas so rechnen wie beim Würfel?"],
+      erklaerung: "Jonas rechnet wie bei einem Laplace-Experiment. Die Seiten der Schachtel sind aber verschieden groß. Darum muss man durch Versuche schätzen." }
+  ]
+};
+</script>
+<script src="../../../../schueler.js"></script>
+</body>
+</html>

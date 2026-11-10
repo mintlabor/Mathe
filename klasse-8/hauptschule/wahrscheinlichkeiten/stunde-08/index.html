@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Stunde 8: Der Baustein-Würfel – Wahrscheinlichkeiten</title>
+<link rel="stylesheet" href="../../../../praesentation.css">
+<style>
+  .sprechblase {
+    position: relative; background: var(--card); border: 2px solid var(--text); border-radius: 18px;
+    padding: 1.1rem 1.5rem; font-size: 1.55rem; max-width: 900px; margin: .5rem 0 1.5rem;
+  }
+  .sprechblase::after { content: ""; position: absolute; left: 50px; bottom: -22px; border: 11px solid transparent; border-top: 11px solid var(--text); }
+  .lagen { display: flex; gap: 2.2rem; justify-content: center; margin: .5rem 0; flex-wrap: wrap; align-items: flex-end; }
+  .lagen figure { margin: 0; text-align: center; }
+  .lagen figcaption { font-size: 1.25rem; font-weight: 700; margin-top: .3rem; }
+  .rollen { display: grid; grid-template-columns: repeat(4, 1fr); gap: .7rem; }
+  .rollen .kasten { padding: .6rem .9rem; font-size: 1.1rem; }
+  .rollen .kasten b { display: block; font-size: 1.25rem; }
+  table.strich.klasse td, table.strich.klasse th { padding: .3rem .55rem; font-size: 1.15rem; }
+  table.strich.klasse input { width: 4.2rem; }
+  table.strich.klasse tr.summe td { background: var(--accent-hell); font-weight: 700; }
+  .stapel { display: flex; height: 1.5rem; border-radius: 6px; overflow: hidden; min-width: 12rem; background: var(--border); }
+  .stapel span { display: block; height: 100%; }
+  .farbe1 { background: #1098ad; } .farbe2 { background: #e8a400; } .farbe3 { background: #e03131; } .farbe4 { background: #7048e8; }
+  .tabellenknoepfe { display: flex; gap: .5rem; margin-top: .6rem; flex-wrap: wrap; align-items: center; }
+  .praes { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+  .praes .kasten { font-size: 1.2rem; }
+  .praes .kasten b { color: var(--accent); }
+  @media (max-width: 900px) { .rollen, .praes { grid-template-columns: 1fr 1fr; } }
+</style>
+</head>
+<body data-phasen='[["Abrufen",4],["Problem",5],["Experiment",14],["Präsentation",7],["Sicherung",6],["Übung",5],["Reflexion",4]]'>
+
+<div class="leiste">
+  <div class="pfad"><a href="../../../../">Start</a> › <a href="../../../">Klasse 8</a> › <a href="../../">Hauptschule</a> › <a href="../">Wahrscheinlichkeiten</a> › Stunde 8</div>
+</div>
+
+<div class="buehne">
+
+  <!-- Abrufen -->
+  <section class="folie" data-phase="Abrufen">
+    <div class="kennung">Wahrscheinlichkeiten · Stunde 8 · Warm-up</div>
+    <h2>Was weißt du noch?</h2>
+    <p style="margin-top:0">Beantworte ohne ins Heft zu schauen.</p>
+    <div class="uebung">
+      <div class="zeile"><div class="n">1</div><div>
+        <div class="frage">Exit-Ticket: 10 Kugeln, bei 100 Zügen 70-mal schwarz. Wie viele schwarze Kugeln sind wohl drin?</div>
+        <div class="antwort schritt">70 : 100 = 0,7 · 10 = <strong>7</strong></div>
+      </div></div>
+      <div class="zeile"><div class="n">2</div><div>
+        <div class="frage">Nenne ein Laplace- und ein Nicht-Laplace-Experiment.</div>
+        <div class="antwort schritt">z. B. Laplace: Würfel, Münze · Nicht-Laplace: Schachtel, Heftzwecke</div>
+      </div></div>
+      <div class="zeile"><div class="n">3</div><div>
+        <div class="frage">Schachtel: P(Fläche) = 70 %, P(Seite) = 26 %. Wie groß ist dann P(Stirn)?</div>
+        <div class="antwort schritt">100 % − 70 % − 26 % = <strong>4 %</strong></div>
+      </div></div>
+    </div>
+    <div class="hinweis">Aufgabe 3 bereitet die heutige Regel vor (alle Wahrscheinlichkeiten zusammen = 100 %). Erst offen lassen, falls niemand eine Idee hat.</div>
+  </section>
+
+  <!-- Problem -->
+  <section class="folie" data-phase="Problem">
+    <div class="kennung">Problem<span class="eis" data-eis="I"></span></div>
+    <h2>Hat jede Seite <span class="bruch"><span>1</span><span>6</span></span>?</h2>
+    <p style="margin-top:0">Jonas will einen Legostein (2 × 4 Noppen) als Würfel benutzen. Er sagt:</p>
+    <div class="sprechblase">„Ein Legostein hat 6 Seiten, genau wie ein Würfel. Also hat jede Seite die Wahrscheinlichkeit <span class="bruch"><span>1</span><span>6</span></span>.“</div>
+    <div class="lagen schritt">
+      <figure><svg width="170" height="80" viewBox="0 0 170 80"><rect x="5" y="30" width="160" height="45" rx="3" fill="#e03131" stroke="#1f2430" stroke-width="3"/><g fill="#e03131" stroke="#1f2430" stroke-width="2.5"><rect x="15" y="14" width="26" height="16" rx="3"/><rect x="55" y="14" width="26" height="16" rx="3"/><rect x="95" y="14" width="26" height="16" rx="3"/><rect x="133" y="14" width="26" height="16" rx="3"/></g></svg><figcaption>Noppen oben</figcaption></figure>
+      <figure><svg width="170" height="80" viewBox="0 0 170 80"><rect x="5" y="5" width="160" height="45" rx="3" fill="#e03131" stroke="#1f2430" stroke-width="3"/><g fill="#e03131" stroke="#1f2430" stroke-width="2.5"><rect x="15" y="50" width="26" height="16" rx="3"/><rect x="55" y="50" width="26" height="16" rx="3"/><rect x="95" y="50" width="26" height="16" rx="3"/><rect x="133" y="50" width="26" height="16" rx="3"/></g></svg><figcaption>Noppen unten</figcaption></figure>
+      <figure><svg width="180" height="90" viewBox="0 0 180 90"><rect x="10" y="20" width="160" height="65" rx="3" fill="#e03131" stroke="#1f2430" stroke-width="3"/><g fill="#f56565" stroke="#1f2430" stroke-width="2"><circle cx="35" cy="40" r="9"/><circle cx="72" cy="40" r="9"/><circle cx="109" cy="40" r="9"/><circle cx="146" cy="40" r="9"/><circle cx="35" cy="66" r="9"/><circle cx="72" cy="66" r="9"/><circle cx="109" cy="66" r="9"/><circle cx="146" cy="66" r="9"/></g></svg><figcaption>lange Seite<br><span class="klein">Noppen zeigen zur Seite</span></figcaption></figure>
+      <figure><svg width="90" height="170" viewBox="0 0 90 170"><rect x="10" y="5" width="70" height="160" rx="3" fill="#e03131" stroke="#1f2430" stroke-width="3"/><g fill="#f56565" stroke="#1f2430" stroke-width="2"><circle cx="31" cy="27" r="9"/><circle cx="59" cy="27" r="9"/><circle cx="31" cy="64" r="9"/><circle cx="59" cy="64" r="9"/><circle cx="31" cy="101" r="9"/><circle cx="59" cy="101" r="9"/><circle cx="31" cy="138" r="9"/><circle cx="59" cy="138" r="9"/></g></svg><figcaption>kurze Seite<br><span class="klein">Stein steht hochkant</span></figcaption></figure>
+    </div>
+    <div class="lernziele schritt">
+      <div class="titel">🎯 Heute lernst du …</div>
+      <ul>
+        <li>einen <strong>Fehler</strong> in einer Begründung zu finden und zu erklären,</li>
+        <li>dass alle Wahrscheinlichkeiten <strong>zusammen 1</strong> (also 100 %) ergeben.</li>
+      </ul>
+    </div>
+    <div class="hinweis">Kurz abstimmen: Wer glaubt Jonas? Ergebnis an die Tafel. Die Skizzen zeigen die vier Lagen. Die zwei langen Seiten werden zusammen gezählt, ebenso die zwei kurzen Seiten. Falls keine Legosteine vorhanden sind: andere Bausteine in Quaderform (z. B. Holzbausteine) nehmen.</div>
+  </section>
+
+  <!-- Eigene Lösung + Rollen -->
+  <section class="folie" data-phase="Experiment" data-minuten="3">
+    <div class="kennung">Eigene Lösung · Planen</div>
+    <h2>Wie könnt ihr Jonas überprüfen?</h2>
+    <div class="tps">
+      <div class="stufe"><b>👤</b> 1 Min. allein: Glaubst du Jonas? Warum?</div><span class="pfeil">→</span>
+      <div class="stufe"><b>👥</b> 2 Min. in der Gruppe: Plant einen Versuch. Wie oft werft ihr? Was schreibt ihr auf?</div>
+    </div>
+    <p style="margin:.8rem 0 .4rem"><strong>Eure Rollen</strong> (alle 20 Würfe tauschen):</p>
+    <div class="rollen">
+      <div class="kasten"><b>🤾 Werfer</b>wirft den Stein immer gleich</div>
+      <div class="kasten"><b>👀 Ansager</b>sagt die Lage laut an</div>
+      <div class="kasten"><b>✏️ Schreiber</b>führt die Strichliste</div>
+      <div class="kasten"><b>🎤 Sprecher</b>stellt das Ergebnis vor</div>
+    </div>
+    <div data-tipps>
+      <div class="tipp">Was hat beim Würfel geholfen, eine Wahrscheinlichkeit zu <strong>schätzen</strong>?</div>
+      <div class="tipp">Wie oft müsste „Noppen oben“ bei 60 Würfen ungefähr kommen, wenn Jonas recht hat? (60 : 6 = ?)</div>
+    </div>
+    <div class="hinweis">Die Gruppen sollen selbst eine Versuchsanzahl festlegen (mindestens 60). Tipp 2 gibt eine Prüfgröße: Wenn Jonas recht hätte, käme jede Seite etwa 10-mal. Die lange und die kurze Seite gibt es je zweimal, dann wären es je etwa 20-mal.</div>
+  </section>
+
+  <!-- Experiment -->
+  <section class="folie" data-phase="Experiment" data-minuten="9">
+    <div class="kennung">Experiment · Gruppenarbeit<span class="eis" data-eis="E"></span></div>
+    <h2>Wir werfen den Baustein</h2>
+    <div class="zweispaltig">
+      <div>
+        <ol>
+          <li>Werft den Stein <strong>mindestens 60-mal</strong>.</li>
+          <li>Führt eine Strichliste mit den 4 Lagen.</li>
+          <li>Berechnet für jede Lage die <strong>relative Häufigkeit</strong> in Prozent (Taschenrechner).</li>
+          <li>Addiert alle vier Prozentwerte. Was fällt euch auf?</li>
+          <li>Schreibt einen Satz an Jonas: Hat er recht? Warum (nicht)?</li>
+        </ol>
+      </div>
+      <div>
+        <table class="strich">
+          <tr><th>Lage</th><th style="min-width:8rem">Striche</th><th>Anzahl</th><th>%</th></tr>
+          <tr><td>Noppen oben</td><td></td><td></td><td></td></tr>
+          <tr><td>Noppen unten</td><td></td><td></td><td></td></tr>
+          <tr><td>lange Seite</td><td></td><td></td><td></td></tr>
+          <tr><td>kurze Seite</td><td></td><td></td><td></td></tr>
+          <tr><th>Summe</th><td></td><td></td><td></td></tr>
+        </table>
+      </div>
+    </div>
+    <div class="hinweis">Material: pro Gruppe ein 2×4-Legostein (oder ähnlicher Baustein), Taschenrechner. Unterstützung: Schwächere Gruppen bekommen die Rechnung „Anzahl : Würfe · 100“ als Kärtchen. Die Summe der Prozente ist durch Runden manchmal 99 % oder 101 %: Das ist ein guter Anlass zum Nachfragen.</div>
+  </section>
+
+  <!-- Präsentation + Klassentabelle -->
+  <section class="folie" data-phase="Präsentation">
+    <div class="kennung">Präsentation · Klassenergebnis<span class="eis" data-eis="IS"></span></div>
+    <h2>Was haben die Gruppen herausgefunden?</h2>
+    <div class="praes">
+      <div class="kasten">🎤 <b>1.</b> Unser Ergebnis (Zahlen)</div>
+      <div class="kasten">🎤 <b>2.</b> Hat Jonas recht?</div>
+      <div class="kasten">🎤 <b>3.</b> Unser Satz an Jonas</div>
+    </div>
+    <table class="strich klasse" id="tabelle" style="margin-top:.8rem">
+      <thead><tr><th>Gruppe</th><th>Würfe</th><th>Noppen oben</th><th>Noppen unten</th><th>lange Seite</th><th>kurze Seite</th><th>Anteile</th></tr></thead>
+      <tbody></tbody>
+      <tfoot><tr class="summe"><td>Klasse</td><td data-s="n">–</td><td data-s="0">–</td><td data-s="1">–</td><td data-s="2">–</td><td data-s="3">–</td><td data-s="bild"></td></tr></tfoot>
+    </table>
+    <div class="tabellenknoepfe">
+      <button class="knopf" id="zeileDazu">+ Gruppe</button>
+      <button class="knopf" id="leeren">Tabelle leeren</button>
+      <button class="knopf" id="jonas">Jonas’ Vorhersage zeigen</button>
+      <span class="klein" id="jonasText"></span>
+    </div>
+    <div class="hinweis">Jeder Sprecher stellt in höchstens einer Minute vor (3 Punkte oben). Danach trägst du die Zahlen ein. „Jonas’ Vorhersage“ zeigt, was bei 1/6 pro Seite zu erwarten wäre: Noppen oben 1/6, Noppen unten 1/6, lange Seite 2/6, kurze Seite 2/6. Die Daten werden in diesem Browser gespeichert.</div>
+  </section>
+
+  <!-- Fehler erklären -->
+  <section class="folie" data-phase="Präsentation">
+    <div class="kennung">Ideen vergleichen · Fehler erklären</div>
+    <h2>Wo steckt Jonas’ Fehler?</h2>
+    <div class="legende">
+      <span class="l-ja">gute Erklärung</span>
+      <span class="l-nein">keine gute Erklärung</span>
+      <button class="knopf" data-alle-auf style="margin-left:auto">Alle aufdecken</button>
+      <button class="knopf" data-alle-zu>Alle zudecken</button>
+    </div>
+    <div class="karten">
+      <div class="karte ja">„Jonas rechnet wie beim Würfel. Beim Würfel sind alle Seiten gleich. Beim Legostein sind sie verschieden.“<span class="loesung">Genau der Kern: Laplace nur bei gleichen Chancen.</span></div>
+      <div class="karte nein">„Jonas hat sich verrechnet. Es sind 4 Lagen, also <span class="bruch"><span>1</span><span>4</span></span>.“<span class="loesung">Derselbe Fehler noch einmal: Auch die 4 Lagen sind nicht gleich wahrscheinlich.</span></div>
+      <div class="karte ja">„Auf der großen Fläche liegt der Stein stabil, auf der kleinen kippt er leicht um.“<span class="loesung">Gute Begründung aus dem Versuch.</span></div>
+      <div class="karte nein">„Wir hatten Glück, beim nächsten Mal kommt bestimmt <span class="bruch"><span>1</span><span>6</span></span> heraus.“<span class="loesung">Die ganze Klasse zeigt dasselbe Muster. Das ist kein Zufallsglück.</span></div>
+    </div>
+    <div class="hinweis">Kommunizieren: Schüler sollen die Ursache des Fehlers erklären, nicht nur „falsch“ sagen. Satzanfang an die Tafel: „Jonas’ Fehler ist …, weil …“</div>
+  </section>
+
+  <!-- Sicherung -->
+  <section class="folie" data-phase="Sicherung">
+    <div class="kennung">Sicherung<span class="eis" data-eis="S"></span></div>
+    <h2>Alle zusammen ergeben 1</h2>
+    <div class="merk">
+      <h3>Merke</h3>
+      <ul>
+        <li class="schritt">Man darf nur dann „1 durch Anzahl der Seiten“ rechnen, wenn alle Ergebnisse die <strong>gleiche Chance</strong> haben (Laplace).</li>
+        <li class="schritt">Die Wahrscheinlichkeiten <strong>aller</strong> Ergebnisse ergeben zusammen immer <strong>1</strong> (also <strong>100 %</strong>).<br>
+          Würfel: <span class="bruch"><span>1</span><span>6</span></span> + <span class="bruch"><span>1</span><span>6</span></span> + <span class="bruch"><span>1</span><span>6</span></span> + <span class="bruch"><span>1</span><span>6</span></span> + <span class="bruch"><span>1</span><span>6</span></span> + <span class="bruch"><span>1</span><span>6</span></span> = <span class="bruch"><span>6</span><span>6</span></span> = 1</li>
+        <li class="schritt">So kann man eine fehlende Wahrscheinlichkeit berechnen: <strong>100 % minus alle anderen</strong>.</li>
+      </ul>
+    </div>
+    <p class="schritt" id="summeSatz" style="margin-top:.8rem"></p>
+    <div class="vernetzen schritt">Zeige am <strong>Streifen</strong> der Klasse: Warum ist er immer ganz gefüllt?</div>
+    <div class="hinweis">Der Streifen in der Klassentabelle ist immer voll: Ein Wurf landet immer in einer der Lagen. Das ist die anschauliche Begründung für „zusammen 100 %“.</div>
+  </section>
+
+  <!-- Übung -->
+  <section class="folie" data-phase="Übung">
+    <div class="kennung">Übung</div>
+    <h2>Jetzt du!</h2>
+    <div class="uebung">
+      <div class="zeile"><div class="n">a</div><div>
+        <div class="frage">Ein Kronkorken: P(Öffnung oben) = 0,35. Wie groß ist P(Öffnung unten)?</div>
+        <div class="antwort schritt">1 − 0,35 = <strong>0,65</strong> = 65 %</div>
+      </div></div>
+      <div class="zeile"><div class="n">b</div><div>
+        <div class="frage">Glücksrad: P(rot) = 50 %, P(blau) = 30 %. Es gibt nur noch Gelb. P(gelb) = ?</div>
+        <div class="antwort schritt">100 % − 50 % − 30 % = <strong>20 %</strong></div>
+      </div></div>
+      <div class="zeile"><div class="n">c</div><div>
+        <div class="frage">Lea schreibt für ihren Baustein: 40 %, 30 %, 20 %, 20 %. Was ist falsch?</div>
+        <div class="antwort schritt">Zusammen sind es 110 %. Das geht nicht, es müssen 100 % sein.</div>
+      </div></div>
+    </div>
+    <p class="schritt" style="margin-top:.8rem">Weiter üben: <a class="schuelerlink" href="../schueler/stunde-08.html" target="_blank">📱 Schülerseite · Stunde 8</a></p>
+    <div class="hinweis">c) ist eine Fehleranalyse wie bei Jonas. Den Fehler erklären lassen, nicht nur verbessern.</div>
+  </section>
+
+  <!-- Reflexion -->
+  <section class="folie" data-phase="Reflexion">
+    <div class="kennung">Zurück zum Problem · Reflexion</div>
+    <h2>Jonas hat nicht recht: Der Legostein ist kein fairer Würfel.</h2>
+    <div class="zweispaltig">
+      <div>
+        <div class="kasten">
+          <p style="margin:0 0 .3rem"><strong>🎫 Exit-Ticket:</strong></p>
+          <p style="margin:0">Vervollständige: „Jonas’ Fehler ist …, weil …“</p>
+        </div>
+        <p class="klein" style="margin-top:1rem">Nächste Stunde: Zweimal hintereinander. Ist das Doppel-Münz-Spiel fair?</p>
+      </div>
+      <div>
+        <div class="ampel-legende"><span>🟢 sicher</span><span>🟡 fast</span><span>🔴 noch nicht</span></div>
+        <div class="ampel">
+          <div class="zeile"><span>Ich kann erklären, wann man „1 durch Anzahl der Seiten“ rechnen darf.</span></div>
+          <div class="zeile"><span>Ich weiß, dass alle Wahrscheinlichkeiten zusammen 1 ergeben.</span></div>
+          <div class="zeile"><span>Ich kann eine fehlende Wahrscheinlichkeit berechnen.</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="hinweis">Rückmeldung zur Gruppenarbeit: Hat jede Rolle funktioniert? Kurze Runde, 1 Satz pro Gruppe.</div>
+  </section>
+
+</div>
+<script src="../../../../praesentation.js"></script>
+<script>
+  (function () {
+    const SPEICHER = "mathe-k8-hs-baustein";
+    const NAMEN = ["Noppen oben", "Noppen unten", "lange Seite", "kurze Seite"];
+    const JONAS = [1 / 6, 1 / 6, 2 / 6, 2 / 6];
+    const tbody = document.querySelector("#tabelle tbody");
+    const stapel = anteile => `<div class="stapel">${anteile.map((a, i) => `<span class="farbe${i + 1}" style="width:${a * 100}%" title="${NAMEN[i]}"></span>`).join("")}</div>`;
+
+    function zeile(werte = ["", "", "", ""]) {
+      const tr = document.createElement("tr");
+      tr.innerHTML = `<td>${tbody.children.length + 1}</td><td class="ergebnis" data-n>–</td>` +
+        werte.map(w => `<td><input type="number" min="0" value="${w}"><div class="klein" data-r></div></td>`).join("") + `<td data-bild></td>`;
+      tr.querySelectorAll("input").forEach(i => i.addEventListener("input", rechnen));
+      tbody.appendChild(tr);
+    }
+    function rechnen() {
+      const summe = [0, 0, 0, 0], daten = [];
+      tbody.querySelectorAll("tr").forEach(tr => {
+        const w = [...tr.querySelectorAll("input")].map(i => parseInt(i.value) || 0);
+        const n = w.reduce((a, b) => a + b, 0);
+        tr.querySelector("[data-n]").textContent = n || "–";
+        tr.querySelectorAll("[data-r]").forEach((el, i) => el.textContent = n ? Praes.prozent(w[i] / n, 0) : "");
+        tr.querySelector("[data-bild]").innerHTML = n ? stapel(w.map(x => x / n)) : "";
+        if (n) { w.forEach((x, i) => summe[i] += x); daten.push(w); }
+      });
+      const N = summe.reduce((a, b) => a + b, 0);
+      const f = s => document.querySelector(`#tabelle [data-s="${s}"]`);
+      f("n").textContent = N || "–";
+      summe.forEach((x, i) => f(i).innerHTML = N ? `${x}<div class="klein">${Praes.prozent(x / N)}</div>` : "–");
+      f("bild").innerHTML = N ? stapel(summe.map(x => x / N)) : "";
+      try { localStorage.setItem(SPEICHER, JSON.stringify(daten)); } catch (e) {}
+      const satz = document.getElementById("summeSatz");
+      satz.innerHTML = N ? `<strong>Unser Baustein (${N} Würfe):</strong> ` +
+        summe.map(x => Praes.prozent(x / N)).join(" + ") + " = <strong>100 %</strong>" : "";
+    }
+    let gespeichert = [];
+    try { gespeichert = JSON.parse(localStorage.getItem(SPEICHER) || "[]"); } catch (e) {}
+    gespeichert.forEach(w => zeile(w));
+    while (tbody.children.length < 6) zeile();
+    rechnen();
+    document.getElementById("zeileDazu").onclick = () => zeile();
+    document.getElementById("leeren").onclick = () => { tbody.innerHTML = ""; for (let i = 0; i < 6; i++) zeile(); rechnen(); };
+    const jt = document.getElementById("jonasText");
+    document.getElementById("jonas").onclick = () => {
+      jt.innerHTML = jt.innerHTML ? "" : "Wenn Jonas recht hätte: " + stapel(JONAS).replace('class="stapel"', 'class="stapel" style="display:inline-flex;vertical-align:middle;min-width:10rem"') +
+        " " + NAMEN.map((n, i) => `${n} ${Praes.prozent(JONAS[i], 0)}`).join(" · ");
+    };
+  })();
+</script>
+</body>
+</html>

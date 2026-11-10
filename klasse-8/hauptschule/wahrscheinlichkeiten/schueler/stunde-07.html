@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Üben: Der geheime Beutel – Stunde 7</title>
+<link rel="stylesheet" href="../../../../schueler.css">
+</head>
+<body>
+<header><div class="inner">
+  <div class="pfad"><a href="./">🗺️ Lernlandkarte</a> › Stunde 7</div>
+  <h1>Üben: Der geheime Beutel</h1>
+  <p class="untertitel">Stunde 7 · Ziehen aus einer Urne</p>
+</div></header>
+<main>
+  <div class="box">
+    <strong>📘 Erinnerung</strong><br>
+    <strong>Schätzen:</strong> geschätzte Anzahl ≈ relative Häufigkeit · Anzahl aller Kugeln<br>
+    <strong>Ausrechnen:</strong> P(rot) = Anzahl roter Kugeln : Anzahl aller Kugeln
+  </div>
+  <div id="ziele"></div>
+  <h2>Aufgaben</h2>
+  <div id="niveaus"></div>
+  <div id="fortschritt"></div>
+  <div id="aufgaben"></div>
+  <h2>Wie sicher bist du jetzt?</h2>
+  <div id="ampel"></div>
+  <p><a href="./">← Zurück zur Lernlandkarte</a></p>
+</main>
+<script>
+window.SEITE = {
+  speicher: "mathe-k8-hs-wk", stunde: 7,
+  lernziele: ["erklären, was „Ziehen mit Zurücklegen“ bedeutet", "mit relativen Häufigkeiten den Inhalt einer Urne schätzen", "P(Farbe) ausrechnen, wenn du den Inhalt kennst"],
+  ichKann: ["Ich kann erklären, was „Ziehen mit Zurücklegen“ bedeutet.", "Ich kann mit relativen Häufigkeiten den Inhalt einer Urne schätzen.", "Ich kann P(Farbe) ausrechnen, wenn ich den Inhalt kenne."],
+  aufgaben: [
+    { niveau: 1, typ: "auswahl", frage: "Warum legt man die Kugel nach dem Ziehen zurück?",
+      optionen: ["Damit der Beutel nicht leer wird und der Inhalt gleich bleibt.", "Damit man die Kugel noch einmal ansehen kann.", "Das ist egal."], loesung: 0,
+      tipps: ["Was passiert mit dem Beutel, wenn man nichts zurücklegt?"],
+      erklaerung: "Nur mit Zurücklegen sind bei jedem Zug wieder alle Kugeln im Beutel. Dann hat jeder Zug dieselben Chancen." },
+    { niveau: 1, typ: "zahl", einheit: "%", frage: "In einer Urne sind 10 Kugeln, davon 3 blau. Wie groß ist P(blau) in Prozent?",
+      loesung: 30,
+      tipps: ["P(blau) = 3 : 10", "0,3 · 100 = ?"],
+      erklaerung: "<sup>3</sup>/<sub>10</sub> = 0,3 = 30 %." },
+    { niveau: 1, typ: "zahl", frage: "In einer Urne sind 10 Kugeln. Bei 100 Zügen kam 60-mal rot. Wie viele rote Kugeln sind wohl drin?",
+      loesung: 6,
+      tipps: ["Relative Häufigkeit: 60 : 100 = 0,6", "0,6 · 10 = ?"],
+      erklaerung: "60 : 100 = 0,6 und 0,6 · 10 = 6. Also wohl 6 rote Kugeln." },
+    { niveau: 2, typ: "zahl", frage: "In einer Urne sind 20 Kugeln. Bei 400 Zügen kam 100-mal gelb. Wie viele gelbe Kugeln sind wohl drin?",
+      loesung: 5,
+      tipps: ["100 : 400 = ?", "0,25 · 20 = ?"],
+      erklaerung: "100 : 400 = 0,25 und 0,25 · 20 = 5 gelbe Kugeln." },
+    { niveau: 2, typ: "zahl", frage: "In einem Beutel sind 2 rote, 5 blaue und 3 grüne Kugeln. Wie groß ist P(grün) als Dezimalzahl?",
+      loesung: 0.3,
+      tipps: ["Wie viele Kugeln sind es insgesamt?", "3 : 10 = ?"],
+      erklaerung: "Insgesamt 10 Kugeln. P(grün) = 3 : 10 = 0,3." },
+    { niveau: 2, typ: "auswahl", frage: "Mia zieht 8-mal und bekommt nie Gelb. Was kann sie sagen?",
+      optionen: ["Im Beutel ist sicher keine gelbe Kugel.", "Gelbe Kugeln sind vielleicht selten. Sie sollte öfter ziehen.", "Gelb kommt beim nächsten Zug bestimmt."], loesung: 1,
+      tipps: ["Sind 8 Züge viele oder wenige?"],
+      erklaerung: "8 Züge sind wenige. Gelb kann selten sein. Erst bei vielen Zügen wird die Schätzung gut." },
+    { niveau: 3, typ: "zahl", frage: "In einem Beutel sind 25 Kugeln. Bei 200 Zügen kam 48-mal schwarz. Wie viele schwarze Kugeln sind wohl drin? (Runde.)",
+      loesung: 6,
+      tipps: ["48 : 200 = 0,24", "0,24 · 25 = 6"],
+      erklaerung: "48 : 200 = 0,24 und 0,24 · 25 = 6. Also wohl 6 schwarze Kugeln." },
+    { niveau: 3, typ: "zahl", frage: "Ein Beutel hat 12 Kugeln. Es soll gelten: P(rot) = <sup>1</sup>/<sub>4</sub>. Wie viele rote Kugeln musst du hineinlegen?",
+      loesung: 3,
+      tipps: ["Ein Viertel von 12 = ?", "12 : 4 = ?"],
+      erklaerung: "<sup>1</sup>/<sub>4</sub> von 12 = 12 : 4 = 3 rote Kugeln." }
+  ]
+};
+</script>
+<script src="../../../../schueler.js"></script>
+</body>
+</html>

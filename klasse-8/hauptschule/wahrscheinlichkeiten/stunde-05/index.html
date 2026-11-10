@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Stunde 5: Wie wahrscheinlich ist das? – Wahrscheinlichkeiten</title>
+<link rel="stylesheet" href="../../../../praesentation.css">
+<style>
+  .wetter { display: flex; gap: 1.5rem; flex-wrap: wrap; margin: 1rem 0; }
+  .wetter .tag { background: var(--card); border: 2px solid var(--border); border-radius: 16px; padding: 1rem 1.5rem; min-width: 13rem; text-align: center; }
+  .wetter .tag .name { font-weight: 800; font-size: 1.4rem; }
+  .wetter .tag .icon { font-size: 3rem; line-height: 1.2; }
+  .wetter .tag .wert { font-size: 2rem; font-weight: 800; color: var(--blau); }
+  .wetter .tag .quelle { font-size: 1.05rem; color: var(--muted); }
+  .skala { width: 100%; height: 300px; }
+  .skala text { font-family: system-ui, sans-serif; }
+  .ereignisse { display: flex; flex-wrap: wrap; gap: .5rem; margin-top: .5rem; }
+  .ereignisse .knopf.gewaehlt { background: var(--accent); color: #fff; }
+  .umrechner { display: grid; grid-template-columns: auto 1fr; gap: 1.5rem 2.5rem; align-items: center; }
+  .umrechner .eingabe { display: flex; flex-direction: column; align-items: center; gap: .3rem; font-size: 2.2rem; font-weight: 800; }
+  .umrechner .eingabe input { width: 6rem; font-size: 2rem; text-align: center; font-family: inherit; font-weight: 800; border: 2px solid var(--border); border-radius: 10px; padding: .2rem; }
+  .umrechner .eingabe hr { width: 7rem; border: 0; border-top: 4px solid var(--text); margin: 0; }
+  .ausgaben { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+  .ausgaben .kasten { text-align: center; padding: .8rem; }
+  .ausgaben .titel { font-size: 1.1rem; color: var(--muted); }
+  .ausgaben .wert { font-size: 2.2rem; font-weight: 800; color: var(--accent); }
+  .teile { display: flex; gap: 3px; height: 2.4rem; margin-top: 1rem; background: var(--border); border-radius: 8px; overflow: hidden; }
+  .teile i { flex: 1; background: #fff; border: 2px solid var(--accent); }
+  .teile i.voll { background: var(--accent); }
+  .teile .rest { flex: 1; background: var(--border); }
+  .leine { display: flex; justify-content: space-between; border-top: 4px solid var(--text); margin: 2rem 1rem 0; padding-top: .5rem; font-size: 1.3rem; font-weight: 700; }
+  .leine span { position: relative; }
+  .leine span::before { content: ""; position: absolute; top: -1.15rem; left: 50%; width: 4px; height: 1.2rem; background: var(--text); }
+</style>
+</head>
+<body data-phasen='[["Abrufen",4],["Problem",6],["Erarbeitung",12],["Ideen vergleichen",5],["Sicherung",8],["Übung",6],["Reflexion",4]]'>
+
+<div class="leiste">
+  <div class="pfad"><a href="../../../../">Start</a> › <a href="../../../">Klasse 8</a> › <a href="../../">Hauptschule</a> › <a href="../">Wahrscheinlichkeiten</a> › Stunde 5</div>
+</div>
+
+<div class="buehne">
+
+  <!-- Abrufen -->
+  <section class="folie" data-phase="Abrufen">
+    <div class="kennung">Wahrscheinlichkeiten · Stunde 5 · Warm-up</div>
+    <h2>Was weißt du noch?</h2>
+    <p style="margin-top:0">Beantworte ohne ins Heft zu schauen.</p>
+    <div class="uebung">
+      <div class="zeile"><div class="n">1</div><div>
+        <div class="frage">Exit-Ticket: Ein Würfel wird 600-mal geworfen. Wie oft erwartest du ungefähr eine Sechs?</div>
+        <div class="antwort schritt">Etwa 600 : 6 = <strong>100</strong>-mal, aber nicht genau.</div>
+      </div></div>
+      <div class="zeile"><div class="n">2</div><div>
+        <div class="frage">Schreibe <span class="bruch"><span>1</span><span>4</span></span> als Dezimalzahl und in Prozent.</div>
+        <div class="antwort schritt">1 : 4 = 0,25 = 25 %</div>
+      </div></div>
+      <div class="zeile"><div class="n">3</div><div>
+        <div class="frage">Sicher, möglich oder unmöglich: Beim Würfeln fällt eine 0.</div>
+        <div class="antwort schritt">unmöglich</div>
+      </div></div>
+    </div>
+    <div class="hinweis">4 Minuten ohne Heft (Abrufen stärkt das Behalten). Aufgabe 2 wird heute gebraucht. Wer hier unsicher ist, bekommt in der Erarbeitung die Umrechnungskarte (Folie „Umrechnen“).</div>
+  </section>
+
+  <!-- Problem -->
+  <section class="folie" data-phase="Problem">
+    <div class="kennung">Problem</div>
+    <h2>An welchem Tag machen wir Heu?</h2>
+    <div class="problem">
+      <div class="label">Problem</div><br>
+      Familie Meyer will Gras mähen und Heu machen. Danach muss es <strong>möglichst trocken</strong> bleiben.<br>
+      Jeder in der Familie hat eine andere Wettervorhersage gelesen:
+    </div>
+    <div class="wetter">
+      <div class="tag"><div class="name">Montag</div><div class="icon">🌦️</div><div class="wert">30 %</div><div class="quelle">Handy-App von Lena</div></div>
+      <div class="tag"><div class="name">Dienstag</div><div class="icon">⛅</div><div class="wert">0,1</div><div class="quelle">Internet von Papa</div></div>
+      <div class="tag"><div class="name">Mittwoch</div><div class="icon">🌤️</div><div class="wert"><span class="bruch"><span>1</span><span>4</span></span></div><div class="quelle">Radio von Oma</div></div>
+    </div>
+    <p class="schritt" style="margin:.3rem 0">Angegeben ist jeweils die <strong>Regenwahrscheinlichkeit</strong>. <strong>Welcher Tag ist am besten?</strong></p>
+    <div class="lernziele schritt">
+      <div class="titel">🎯 Heute lernst du …</div>
+      <ul>
+        <li>Wahrscheinlichkeiten als <strong>Zahl zwischen 0 und 1</strong> anzugeben,</li>
+        <li>sie als <strong>Bruch, Dezimalzahl und Prozent</strong> zu schreiben und zu vergleichen.</li>
+      </ul>
+    </div>
+    <div class="hinweis">Kurz klären: Heu muss nach dem Mähen ein paar Tage trocknen, Regen verdirbt es. Noch nicht auflösen. Die Schwierigkeit: Drei verschiedene Schreibweisen lassen sich nicht direkt vergleichen.</div>
+  </section>
+
+  <!-- Eigene Lösung -->
+  <section class="folie" data-phase="Problem" data-minuten="4">
+    <div class="kennung">Eigene Lösung</div>
+    <h2>Welchen Tag würdest du wählen?</h2>
+    <div class="tps">
+      <div class="stufe"><b>👤</b> 1 Min. allein: Entscheide dich und schreibe auf, <strong>warum</strong>.</div><span class="pfeil">→</span>
+      <div class="stufe"><b>👥</b> 2 Min. zu zweit: Vergleicht. Habt ihr denselben Tag?</div><span class="pfeil">→</span>
+      <div class="stufe"><b>🏫</b> Klasse: Abstimmen</div>
+    </div>
+    <div data-tipps>
+      <div class="tipp">Die drei Zahlen sind <strong>unterschiedlich geschrieben</strong>. Kannst du alle in <strong>dieselbe</strong> Schreibweise bringen?</div>
+      <div class="tipp">Prozent bedeutet „von Hundert“. 30 % = <span class="bruch"><span>30</span><span>100</span></span>. Wie viel von Hundert sind 0,1? Wie viel sind <span class="bruch"><span>1</span><span>4</span></span>?</div>
+    </div>
+    <div class="hinweis">Abstimmen per Handzeichen und an der Tafel festhalten. Häufige Fehlvorstellung: „0,1 ist eine kleine Zahl, aber 1/4 hat eine 4, also mehr als 30“ oder „30 % ist am meisten, weil 30 die größte Zahl ist“. Nicht korrigieren, in „Ideen vergleichen“ aufgreifen.</div>
+  </section>
+
+  <!-- Erarbeitung E: Wäscheleine -->
+  <section class="folie" data-phase="Erarbeitung" data-minuten="7">
+    <div class="kennung">Erarbeitung · Gruppen<span class="eis" data-eis="E"></span></div>
+    <h2>Die Wahrscheinlichkeits-Leine</h2>
+    <p style="margin-top:0">Jede Gruppe bekommt Karten. Hängt sie an die Leine: <strong>Wie wahrscheinlich ist das?</strong> Begründet eure Stelle.</p>
+    <div class="leine"><span>unmöglich</span><span>eher unwahrscheinlich</span><span>halbe-halbe</span><span>eher wahrscheinlich</span><span>sicher</span></div>
+    <div class="karten" style="margin-top:2rem">
+      <div class="karte">🎲 Beim Würfeln fällt eine 7.<span class="loesung">unmöglich · 0</span></div>
+      <div class="karte">🪙 Die Münze zeigt Kopf.<span class="loesung">halbe-halbe · <span class="bruch"><span>1</span><span>2</span></span></span></div>
+      <div class="karte">🎲 Beim Würfeln fällt eine 6.<span class="loesung">eher unwahrscheinlich · <span class="bruch"><span>1</span><span>6</span></span></span></div>
+      <div class="karte">🎟️ Losbude „Jedes 4. Los gewinnt“: Mein Los gewinnt.<span class="loesung">eher unwahrscheinlich · <span class="bruch"><span>1</span><span>4</span></span></span></div>
+      <div class="karte">📌 Die Heftzwecke landet auf dem Kopf (Stunde 3).<span class="loesung">eher wahrscheinlich · euer Schätzwert</span></div>
+      <div class="karte">🎲 Beim Würfeln fällt eine Zahl kleiner als 7.<span class="loesung">sicher · 1</span></div>
+      <div class="karte">🎲 Beim Würfeln fällt keine 6.<span class="loesung">eher wahrscheinlich · <span class="bruch"><span>5</span><span>6</span></span></span></div>
+    </div>
+    <div class="hinweis">Material: Wäscheleine quer durch den Raum, Wäscheklammern, die Ereignisse dieser Folie auf Karten (ggf. von Gruppen selbst schreiben lassen). Erst nur die Wörter an die Enden hängen, noch keine Zahlen. Jede Gruppe hängt ihre Karten und begründet in einem Satz. Die anderen dürfen widersprechen. Erst danach die Karten auf der Folie anklicken.</div>
+  </section>
+
+  <!-- Erarbeitung I: Skala -->
+  <section class="folie" data-phase="Erarbeitung" data-minuten="5">
+    <div class="kennung">Erarbeitung<span class="eis" data-eis="IS"></span></div>
+    <h2>Von Wörtern zu Zahlen</h2>
+    <p style="margin-top:0">Klicke ein Ereignis an. Wo liegt es auf der Skala?</p>
+    <svg class="skala" id="skala"></svg>
+    <div class="ereignisse" id="ereignisse"></div>
+    <p class="schritt">„Unmöglich“ bekommt die Zahl <strong>0</strong>, „sicher“ die Zahl <strong>1</strong>. Alles andere liegt <strong>dazwischen</strong>.</p>
+    <div class="vernetzen schritt">Vergleiche mit unserer <strong>Leine</strong>: Wo hängt die Karte „Münze zeigt Kopf“? Wo liegt <span class="bruch"><span>1</span><span>2</span></span> auf der Skala? Warum genau in der Mitte?</div>
+    <div class="hinweis">Ereignisse einzeln anklicken. Vorher immer fragen: Links oder rechts von der Mitte? Die Schüler vergleichen mit ihrer Leine und verschieben Karten, falls nötig. Klick auf den Knopf „Unsere Wetterdaten“ zeigt die drei Tage aus dem Problem.</div>
+  </section>
+
+  <!-- Ideen vergleichen -->
+  <section class="folie" data-phase="Ideen vergleichen">
+    <div class="kennung">Ideen vergleichen</div>
+    <h2>Wer hat recht?</h2>
+    <div class="legende">
+      <span class="l-ja">stimmt</span>
+      <span class="l-nein">stimmt nicht</span>
+      <button class="knopf" data-alle-auf style="margin-left:auto">Alle aufdecken</button>
+      <button class="knopf" data-alle-zu>Alle zudecken</button>
+    </div>
+    <div class="karten">
+      <div class="karte nein">Lena: „Montag ist am schlechtesten, denn 30 ist die größte Zahl.“<span class="loesung">Man darf nur gleiche Schreibweisen vergleichen. 30 % = 0,3.</span></div>
+      <div class="karte ja">Papa: „0,1 sind 10 von 100, also 10 %.“<span class="loesung">Genau: 0,1 = <span class="bruch"><span>10</span><span>100</span></span> = 10 %</span></div>
+      <div class="karte ja">Oma: „<span class="bruch"><span>1</span><span>4</span></span> ist ein Viertel, also 25 %.“<span class="loesung">Richtig: 1 : 4 = 0,25 = 25 %</span></div>
+      <div class="karte nein">Tim: „Bei 30 % Regen regnet es 30 % des Tages.“<span class="loesung">Nein: An etwa 3 von 10 solchen Tagen regnet es. Wann und wie lange, sagt die Zahl nicht.</span></div>
+      <div class="karte nein">Mia: „Bei 0,1 regnet es bestimmt nicht.“<span class="loesung">Nicht sicher! 0,1 ist klein, aber nicht 0. Regen ist möglich.</span></div>
+    </div>
+    <p class="schritt" style="margin-top:.8rem">Dienstag 10 % &lt; Mittwoch 25 % &lt; Montag 30 % → <strong>Dienstag</strong> ist am besten.</p>
+    <div class="hinweis">Zuerst die Tafelabstimmung vom Anfang ansehen. Welche Begründung steckt hinter den Stimmen? Tims Karte greift eine verbreitete Fehlvorstellung zur Regenwahrscheinlichkeit auf. Für die Klasse reicht die Deutung: „Bei vielen solchen Vorhersagen regnet es an etwa 3 von 10 Tagen.“</div>
+  </section>
+
+  <!-- Sicherung -->
+  <section class="folie" data-phase="Sicherung">
+    <div class="kennung">Sicherung<span class="eis" data-eis="S"></span></div>
+    <h2>Wahrscheinlichkeiten als Zahl</h2>
+    <div class="merk">
+      <h3>Merke</h3>
+      <ul>
+        <li class="schritt">Eine <strong>Wahrscheinlichkeit</strong> ist eine Zahl <strong>von 0 bis 1</strong>.<br>0 bedeutet <strong>unmöglich</strong>, 1 bedeutet <strong>sicher</strong>.</li>
+        <li class="schritt">Man kann sie auf drei Arten schreiben:
+          <span class="bruch"><span>1</span><span>4</span></span> (Bruch) = <strong>0,25</strong> (Dezimalzahl) = <strong>25 %</strong> (Prozent).</li>
+        <li class="schritt">Kurz schreibt man: <strong>P(Kopf) = <span class="bruch"><span>1</span><span>2</span></span></strong>. Lies: „Die Wahrscheinlichkeit für Kopf ist ein halb.“ P kommt vom englischen Wort <em>probability</em> (Wahrscheinlichkeit).</li>
+        <li class="schritt"><strong>Vergleichen:</strong> Schreibe zuerst alle Zahlen in <strong>dieselbe Form</strong>, am einfachsten in Prozent.</li>
+      </ul>
+    </div>
+    <div class="hinweis">Ins Heft übertragen lassen. Den Satz zum „P“ ruhig vorlesen lassen. Schwache Leser: nur die erste und letzte Zeile.</div>
+  </section>
+
+  <!-- Umrechnen -->
+  <section class="folie" data-phase="Sicherung">
+    <div class="kennung">Sicherung · Umrechnen<span class="eis" data-eis="IS"></span></div>
+    <h2>Bruch → Dezimalzahl → Prozent</h2>
+    <div class="umrechner">
+      <div class="eingabe">
+        <input id="uZ" type="number" min="0" value="1" aria-label="Zähler">
+        <hr>
+        <input id="uN" type="number" min="1" value="4" aria-label="Nenner">
+      </div>
+      <div>
+        <div class="ausgaben">
+          <div class="kasten"><div class="titel">Rechnung</div><div class="wert" id="uRech">1 : 4</div></div>
+          <div class="kasten"><div class="titel">Dezimalzahl</div><div class="wert" id="uDez">0,25</div></div>
+          <div class="kasten"><div class="titel">Prozent (· 100)</div><div class="wert" id="uProz">25 %</div></div>
+        </div>
+        <div class="teile" id="uTeile"></div>
+        <p class="klein" id="uText" style="margin:.4rem 0 0"></p>
+      </div>
+    </div>
+    <div class="vernetzen">Wo siehst du im <strong>Streifen</strong> den Bruch <span class="bruch"><span>1</span><span>4</span></span>? Wo die <strong>25 %</strong>? Was passiert, wenn der Zähler größer ist als der Nenner?</div>
+    <div class="hinweis">Nacheinander eingeben lassen: 1/2, 3/4, 1/5, 1/10, 1/6 (mit dem Taschenrechner nachrechnen: 1 : 6 = 0,1666… ≈ 16,7 %), dann 5/4. Bei 5/4 erscheint ein Hinweis: Eine Wahrscheinlichkeit kann nicht größer als 1 sein.</div>
+  </section>
+
+  <!-- Übung -->
+  <section class="folie" data-phase="Übung">
+    <div class="kennung">Übung<span class="eis" data-eis="S"></span></div>
+    <h2>Jetzt du!</h2>
+    <div class="uebung">
+      <div class="zeile"><div class="n">a</div><div>
+        <div class="frage">Schreibe als Dezimalzahl und in Prozent: <span class="bruch"><span>1</span><span>2</span></span> · <span class="bruch"><span>3</span><span>4</span></span> · <span class="bruch"><span>1</span><span>5</span></span></div>
+        <div class="antwort schritt">0,5 = 50 % · 0,75 = 75 % · 0,2 = 20 %</div>
+      </div></div>
+      <div class="zeile"><div class="n">b</div><div>
+        <div class="frage">Ordne von klein nach groß: 0,4 · <span class="bruch"><span>1</span><span>2</span></span> · 35 %</div>
+        <div class="antwort schritt">35 % &lt; 0,4 (40 %) &lt; <span class="bruch"><span>1</span><span>2</span></span> (50 %)</div>
+      </div></div>
+      <div class="zeile"><div class="n">c</div><div>
+        <div class="frage">Kann eine Wahrscheinlichkeit 1,5 oder 120 % sein? Begründe.</div>
+        <div class="antwort schritt"><span class="nein">Nein.</span> Mehr als „sicher“ (1 = 100 %) geht nicht.</div>
+      </div></div>
+      <div class="zeile stern"><div class="n">★</div><div>
+        <div class="frage">Fußball: Ein Spieler trifft beim Elfmeter mit 0,8. Eine Spielerin trifft mit <span class="bruch"><span>17</span><span>20</span></span>. Wer ist sicherer? Nutze den Taschenrechner.</div>
+        <div class="antwort schritt">17 : 20 = 0,85 = 85 % &gt; 80 % → die Spielerin</div>
+      </div></div>
+    </div>
+    <p class="schritt" style="margin-top:.8rem">Weiter üben: <a class="schuelerlink" href="../schueler/stunde-05.html" target="_blank">📱 Schülerseite · Stunde 5</a></p>
+    <div class="hinweis">a) bis c) im Heft. Wer fertig ist, macht ★ oder geht auf die Schülerseite. Rest als Hausaufgabe.</div>
+  </section>
+
+  <!-- Reflexion -->
+  <section class="folie" data-phase="Reflexion">
+    <div class="kennung">Zurück zum Problem · Reflexion</div>
+    <h2>Familie Meyer macht am Dienstag Heu.</h2>
+    <div class="zweispaltig">
+      <div>
+        <div class="kasten">
+          <p style="margin:0 0 .3rem"><strong>🎫 Exit-Ticket:</strong></p>
+          <p style="margin:0">Am Donnerstag ist die Regenwahrscheinlichkeit <span class="bruch"><span>1</span><span>5</span></span>. Ist der Donnerstag besser als der Dienstag (0,1)? Begründe mit Prozent.</p>
+        </div>
+        <p class="klein" style="margin-top:1rem">Nächste Stunde: Die Streichholzschachtel. Welche Lage ist wie wahrscheinlich?</p>
+      </div>
+      <div>
+        <div class="ampel-legende"><span>🟢 sicher</span><span>🟡 fast</span><span>🔴 noch nicht</span></div>
+        <div class="ampel">
+          <div class="zeile"><span>Ich kann eine Wahrscheinlichkeit auf der Skala von 0 bis 1 einordnen.</span></div>
+          <div class="zeile"><span>Ich kann eine Wahrscheinlichkeit als Bruch, Dezimalzahl und Prozent schreiben.</span></div>
+          <div class="zeile"><span>Ich kann Wahrscheinlichkeiten in verschiedenen Schreibweisen vergleichen.</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="hinweis">Exit-Ticket: 1/5 = 20 % &gt; 10 %, also ist Donnerstag schlechter als Dienstag. Exit-Tickets sortieren: Wer Prozent nicht umrechnen konnte, bekommt nächste Stunde die Umrechnungskarte (Folie „Umrechnen“ ausgedruckt).</div>
+  </section>
+
+</div>
+<script src="../../../../praesentation.js"></script>
+<script>
+  // ---------- Wahrscheinlichkeitsskala ----------
+  (function () {
+    const svg = document.getElementById("skala");
+    const EREIGNISSE = [
+      { text: "🎲 7 würfeln", p: 0, bruch: "0" },
+      { text: "🎲 6 würfeln", p: 1 / 6, bruch: "1/6" },
+      { text: "🎟️ Los gewinnt", p: 1 / 4, bruch: "1/4" },
+      { text: "🪙 Kopf", p: 1 / 2, bruch: "1/2" },
+      { text: "🎲 keine 6", p: 5 / 6, bruch: "5/6" },
+      { text: "🎲 kleiner als 7", p: 1, bruch: "1" }
+    ];
+    const WETTER = [
+      { text: "Mo 30 %", p: 0.3, bruch: "30 %" },
+      { text: "Di 0,1", p: 0.1, bruch: "0,1" },
+      { text: "Mi 1/4", p: 0.25, bruch: "1/4" }
+    ];
+    const an = new Set();
+    let wetter = false;
+
+    function zeichnen() {
+      const B = svg.clientWidth || 1000, H = svg.clientHeight || 300;
+      const l = 50, r = 50, y0 = 175;
+      const x = p => l + p * (B - l - r);
+      let s = `<defs><linearGradient id="verlauf"><stop offset="0" stop-color="#e03131"/><stop offset=".5" stop-color="#e8a400"/><stop offset="1" stop-color="#2f9e44"/></linearGradient></defs>`;
+      s += `<rect x="${l}" y="${y0 - 8}" width="${B - l - r}" height="16" rx="8" fill="url(#verlauf)"/>`;
+      [[0, "0"], [0.25, "0,25"], [0.5, "0,5"], [0.75, "0,75"], [1, "1"]].forEach(([p, t]) => {
+        s += `<line x1="${x(p)}" x2="${x(p)}" y1="${y0 - 18}" y2="${y0 + 18}" stroke="#1f2430" stroke-width="3"/>`;
+        s += `<text x="${x(p)}" y="${y0 + 42}" text-anchor="middle" font-size="22" font-weight="800" fill="#1f2430">${t}</text>`;
+        s += `<text x="${x(p)}" y="${y0 + 68}" text-anchor="middle" font-size="16" fill="#5b6475">${Math.round(p * 100)} %</text>`;
+      });
+      s += `<text x="${x(0)}" y="${H - 8}" text-anchor="start" font-size="18" font-weight="700" fill="#e03131">unmöglich</text>`;
+      s += `<text x="${x(0.5)}" y="${H - 8}" text-anchor="middle" font-size="18" font-weight="700" fill="#b07d00">halbe-halbe</text>`;
+      s += `<text x="${x(1)}" y="${H - 8}" text-anchor="end" font-size="18" font-weight="700" fill="#2f9e44">sicher</text>`;
+      const liste = EREIGNISSE.filter((e, i) => an.has(i)).concat(wetter ? WETTER : []);
+      // Beschriftungen in Reihen legen, damit sich nichts überlappt
+      const reihenEnde = [];
+      liste.sort((a, b) => a.p - b.p).forEach(e => {
+        const label = `${e.text} (${e.bruch})`;
+        const breite = label.length * 9.5 + 10;
+        const xm = x(e.p);
+        let anker = "middle", x0 = xm - breite / 2;
+        if (x0 < 4) { anker = "start"; x0 = xm - 10; }
+        if (x0 + breite > B - 4) { anker = "end"; x0 = xm - breite + 10; }
+        let reihe = reihenEnde.findIndex(ende => x0 > ende);
+        if (reihe === -1) { reihe = reihenEnde.length; reihenEnde.push(0); }
+        reihenEnde[reihe] = x0 + breite;
+        const yT = y0 - 30 - reihe * 26;
+        const wetterFarbe = WETTER.includes(e) ? "#1c7ed6" : "#1f2430";
+        s += `<line x1="${xm}" x2="${xm}" y1="${yT + 6}" y2="${y0 - 10}" stroke="${wetterFarbe}" stroke-width="2" stroke-dasharray="4 3"/>`;
+        s += `<circle cx="${xm}" cy="${y0}" r="9" fill="#fff" stroke="${wetterFarbe}" stroke-width="3"/>`;
+        s += `<text x="${anker === "start" ? xm - 10 : anker === "end" ? xm + 10 : xm}" y="${yT}" text-anchor="${anker}" font-size="16" font-weight="700" fill="${wetterFarbe}">${label}</text>`;
+      });
+      svg.innerHTML = s;
+    }
+
+    const box = document.getElementById("ereignisse");
+    EREIGNISSE.forEach((e, i) => {
+      const b = document.createElement("button");
+      b.className = "knopf mittel"; b.textContent = e.text;
+      b.onclick = () => { an.has(i) ? an.delete(i) : an.add(i); b.classList.toggle("gewaehlt"); zeichnen(); };
+      box.appendChild(b);
+    });
+    const bw = document.createElement("button");
+    bw.className = "knopf mittel"; bw.textContent = "☁️ Unsere Wetterdaten";
+    bw.onclick = () => { wetter = !wetter; bw.classList.toggle("gewaehlt"); zeichnen(); };
+    box.appendChild(bw);
+    svg.closest(".folie").addEventListener("folie-aktiv", () => requestAnimationFrame(zeichnen));
+    window.addEventListener("resize", zeichnen);
+  })();
+
+  // ---------- Umrechner ----------
+  (function () {
+    const z = document.getElementById("uZ"), n = document.getElementById("uN");
+    function rechnen() {
+      const a = Number(z.value), b = Number(n.value);
+      const rech = document.getElementById("uRech"), dez = document.getElementById("uDez"), proz = document.getElementById("uProz");
+      const text = document.getElementById("uText"), teile = document.getElementById("uTeile");
+      if (!(b > 0) || !(a >= 0)) { rech.textContent = dez.textContent = proz.textContent = "–"; teile.innerHTML = ""; text.textContent = ""; return; }
+      const p = a / b;
+      rech.textContent = a + " : " + b;
+      const genau = Math.abs(p * 1000 - Math.round(p * 1000)) < 1e-9;
+      dez.textContent = (genau ? "" : "≈ ") + Praes.zahl(p, 3);
+      proz.textContent = (genau ? "" : "≈ ") + Praes.prozent(p);
+      if (b <= 24 && Number.isInteger(a) && Number.isInteger(b)) {
+        teile.innerHTML = Array.from({ length: b }, (_, i) => `<i class="${i < a ? "voll" : ""}"></i>`).join("");
+      } else {
+        const w = Math.min(p, 1) * 100;
+        teile.innerHTML = `<i class="voll" style="flex:0 0 ${w}%"></i><span class="rest"></span>`;
+      }
+      text.innerHTML = p > 1 ? "⚠️ Größer als 1: Das kann <strong>keine Wahrscheinlichkeit</strong> sein!" :
+        p === 0 ? "0 = unmöglich" : p === 1 ? "1 = sicher" : (b <= 24 ? `Der Streifen hat ${b} gleiche Teile. ${a} davon sind gefärbt.` : "Der gefärbte Teil zeigt den Anteil.");
+    }
+    z.addEventListener("input", rechnen); n.addEventListener("input", rechnen);
+    rechnen();
+  })();
+</script>
+</body>
+</html>

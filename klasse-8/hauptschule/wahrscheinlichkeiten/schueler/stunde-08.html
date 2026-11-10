@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Üben: Der Baustein-Würfel – Stunde 8</title>
+<link rel="stylesheet" href="../../../../schueler.css">
+</head>
+<body>
+<header><div class="inner">
+  <div class="pfad"><a href="./">🗺️ Lernlandkarte</a> › Stunde 8</div>
+  <h1>Üben: Der Baustein-Würfel</h1>
+  <p class="untertitel">Stunde 8 · Alle Wahrscheinlichkeiten zusammen ergeben 1</p>
+</div></header>
+<main>
+  <div class="box">
+    <strong>📘 Erinnerung</strong><br>
+    Alle Wahrscheinlichkeiten zusammen = 1 = 100 %<br>
+    Fehlende Wahrscheinlichkeit = 100 % minus alle anderen<br>
+    „1 durch Anzahl der Seiten“ nur, wenn alle Seiten die <strong>gleiche Chance</strong> haben.
+  </div>
+  <div id="ziele"></div>
+  <h2>Aufgaben</h2>
+  <div id="niveaus"></div>
+  <div id="fortschritt"></div>
+  <div id="aufgaben"></div>
+  <h2>Wie sicher bist du jetzt?</h2>
+  <div id="ampel"></div>
+  <p><a href="./">← Zurück zur Lernlandkarte</a></p>
+</main>
+<script>
+window.SEITE = {
+  speicher: "mathe-k8-hs-wk", stunde: 8,
+  lernziele: ["erklären, wann man „1 durch Anzahl der Seiten“ rechnen darf", "wissen, dass alle Wahrscheinlichkeiten zusammen 1 ergeben", "eine fehlende Wahrscheinlichkeit berechnen"],
+  ichKann: ["Ich kann erklären, wann man „1 durch Anzahl der Seiten“ rechnen darf.", "Ich weiß, dass alle Wahrscheinlichkeiten zusammen 1 ergeben.", "Ich kann eine fehlende Wahrscheinlichkeit berechnen."],
+  aufgaben: [
+    { niveau: 1, typ: "zahl", einheit: "%", frage: "Eine Heftzwecke: P(Kopf) = 60 %. Wie groß ist P(Seite)?",
+      loesung: 40,
+      tipps: ["Es gibt nur zwei Lagen.", "100 % − 60 % = ?"],
+      erklaerung: "100 % − 60 % = 40 %." },
+    { niveau: 1, typ: "zahl", frage: "Ein Kronkorken: P(Öffnung oben) = 0,3. Wie groß ist P(Öffnung unten)? (als Dezimalzahl)",
+      loesung: 0.7,
+      tipps: ["Zusammen muss 1 herauskommen.", "1 − 0,3 = ?"],
+      erklaerung: "1 − 0,3 = 0,7." },
+    { niveau: 1, typ: "auswahl", frage: "Bei welchem Gegenstand darfst du „1 durch Anzahl der Seiten“ rechnen?",
+      optionen: ["Legostein", "normaler Spielwürfel", "Streichholzschachtel"], loesung: 1,
+      tipps: ["Bei welchem Gegenstand sind alle Seiten gleich?"],
+      erklaerung: "Beim normalen Würfel sind alle Seiten gleich. Nur dann hat jede Seite <sup>1</sup>/<sub>6</sub>." },
+    { niveau: 2, typ: "zahl", einheit: "%", frage: "Glücksrad: P(rot) = 45 %, P(grün) = 35 %. Die restlichen Felder sind blau. P(blau) = ?",
+      loesung: 20,
+      tipps: ["100 % − 45 % − 35 % = ?"],
+      erklaerung: "100 % − 45 % − 35 % = 20 %." },
+    { niveau: 2, typ: "auswahl", frage: "Tom notiert für seine Schachtel: Fläche 65 %, Seite 30 %, Stirn 15 %. Was stimmt?",
+      optionen: ["Das kann stimmen.", "Das kann nicht stimmen, zusammen sind es 110 %.", "Das kann nicht stimmen, Stirn muss 0 % sein."], loesung: 1,
+      tipps: ["Addiere die drei Werte."],
+      erklaerung: "65 % + 30 % + 15 % = 110 %. Alle zusammen müssen aber genau 100 % sein." },
+    { niveau: 2, typ: "zahl", frage: "Ein Baustein wurde 50-mal geworfen: Noppen oben 20, Noppen unten 12, lange Seite 15. Wie oft kam die kurze Seite?",
+      loesung: 3,
+      tipps: ["Alle vier Anzahlen zusammen sind 50.", "50 − 20 − 12 − 15 = ?"],
+      erklaerung: "50 − 20 − 12 − 15 = 3. Die kurze Seite kam 3-mal." },
+    { niveau: 3, typ: "zahl", einheit: "%", frage: "Baustein: P(Noppen oben) = 35 %, P(Noppen unten) = 25 %. Die lange und die kurze Seite zusammen? ",
+      loesung: 40,
+      tipps: ["100 % − 35 % − 25 % = ?"],
+      erklaerung: "100 % − 35 % − 25 % = 40 %. So viel bleibt für beide Seiten zusammen." },
+    { niveau: 3, typ: "auswahl", frage: "Mia: „Ein Kronkorken hat 2 Lagen, also ist P(oben) = <sup>1</sup>/<sub>2</sub>.“ Welche Erklärung zeigt ihren Fehler am besten?",
+      optionen: ["Sie hätte <sup>1</sup>/<sub>3</sub> rechnen müssen.", "Die zwei Lagen haben nicht unbedingt die gleiche Chance, weil der Kronkorken oben und unten verschieden ist.", "Ein Kronkorken ist kein Zufallsexperiment."], loesung: 1,
+      tipps: ["Wann darf man „1 durch Anzahl der Lagen“ rechnen?"],
+      erklaerung: "Mia rechnet wie bei einem Laplace-Experiment. Der Kronkorken ist aber oben und unten verschieden geformt. Man muss durch viele Würfe schätzen." }
+  ]
+};
+</script>
+<script src="../../../../schueler.js"></script>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Üben: Zweimal hintereinander – Stunde 9</title>
+<link rel="stylesheet" href="../../../../schueler.css">
+</head>
+<body>
+<header><div class="inner">
+  <div class="pfad"><a href="./">🗺️ Lernlandkarte</a> › Stunde 9</div>
+  <h1>Üben: Zweimal hintereinander</h1>
+  <p class="untertitel">Stunde 9 · Zweistufige Zufallsexperimente und Baumdiagramm</p>
+</div></header>
+<main>
+  <div class="box">
+    <strong>📘 Erinnerung</strong><br>
+    Zwei Münzen: 4 Pfade → KK, KZ, ZK, ZZ (K = Kopf, Z = Zahl)<br>
+    Wahrscheinlichkeit = Anzahl passender Pfade : Anzahl aller Pfade (wenn alle Pfade die gleiche Chance haben)
+  </div>
+  <div id="ziele"></div>
+  <h2>Aufgaben</h2>
+  <div id="niveaus"></div>
+  <div id="fortschritt"></div>
+  <div id="aufgaben"></div>
+  <h2>Wie sicher bist du jetzt?</h2>
+  <div id="ampel"></div>
+  <p><a href="./">← Zurück zur Lernlandkarte</a></p>
+</main>
+<script>
+window.SEITE = {
+  speicher: "mathe-k8-hs-wk", stunde: 9,
+  lernziele: ["alle Ergebnisse beim Werfen von zwei Münzen aufschreiben", "ein einfaches Baumdiagramm zeichnen und lesen", "mit Pfaden eine Wahrscheinlichkeit angeben"],
+  ichKann: ["Ich kann alle Ergebnisse beim Werfen von zwei Münzen aufschreiben.", "Ich kann ein einfaches Baumdiagramm zeichnen.", "Ich kann mit Pfaden eine Wahrscheinlichkeit angeben."],
+  aufgaben: [
+    { niveau: 1, typ: "menge", frage: "Du wirfst zwei Münzen nacheinander. Schreibe alle Ergebnisse auf. Nutze K für Kopf und Z für Zahl, z. B. KZ.",
+      loesung: ["kk", "kz", "zk", "zz"],
+      tipps: ["Die erste Münze zeigt K oder Z. Was kann die zweite dann zeigen?", "Es sind 4 Ergebnisse."],
+      erklaerung: "{ KK, KZ, ZK, ZZ }. KZ und ZK sind verschieden: Einmal zeigt die erste Münze Kopf, einmal die zweite." },
+    { niveau: 1, typ: "zahl", frage: "Wie viele Pfade hat das Baumdiagramm für zwei Münzen?",
+      loesung: 4,
+      tipps: ["Zeichne: Start → K oder Z. An jedes Ende wieder K oder Z.", "2 · 2 = ?"],
+      erklaerung: "2 · 2 = 4 Pfade." },
+    { niveau: 1, typ: "zahl", einheit: "%", frage: "Zwei Münzen: Wie groß ist P(zweimal Kopf) in Prozent?",
+      loesung: 25,
+      tipps: ["Wie viele der 4 Pfade passen?", "<sup>1</sup>/<sub>4</sub> = ? %"],
+      erklaerung: "Nur der Pfad KK passt: <sup>1</sup>/<sub>4</sub> = 25 %." },
+    { niveau: 2, typ: "zahl", einheit: "%", frage: "Zwei Münzen: Wie groß ist P(verschieden), also eine Münze Kopf und eine Zahl?",
+      loesung: 50,
+      tipps: ["Welche Pfade passen? Es sind zwei.", "<sup>2</sup>/<sub>4</sub> = ?"],
+      erklaerung: "KZ und ZK passen: <sup>2</sup>/<sub>4</sub> = <sup>1</sup>/<sub>2</sub> = 50 %." },
+    { niveau: 2, typ: "zahl", frage: "Zum Frühstück wählst du ein Brötchen (hell oder dunkel) und einen Belag (Käse, Wurst oder Marmelade). Wie viele Möglichkeiten gibt es?",
+      loesung: 6,
+      tipps: ["Erste Stufe: 2 Brötchen. Zweite Stufe: 3 Beläge.", "2 · 3 = ?"],
+      erklaerung: "2 · 3 = 6 Möglichkeiten: hell-Käse, hell-Wurst, hell-Marmelade, dunkel-Käse, dunkel-Wurst, dunkel-Marmelade." },
+    { niveau: 2, typ: "auswahl", frage: "Mia sagt: „Bei zwei Münzen gibt es 3 Ergebnisse: KK, ZZ, gemischt. Jedes hat <sup>1</sup>/<sub>3</sub>.“ Was ist ihr Fehler?",
+      optionen: ["Es gibt nur 2 Ergebnisse.", "„Gemischt“ kann auf zwei Arten passieren (KZ und ZK). Es kommt doppelt so oft.", "Es muss <sup>1</sup>/<sub>2</sub> heißen, weil eine Münze 2 Seiten hat."], loesung: 1,
+      tipps: ["Schau ins Baumdiagramm: Wie viele Pfade gehören zu „gemischt“?"],
+      erklaerung: "„Gemischt“ hat zwei Pfade (KZ und ZK). Darum ist P(gemischt) = <sup>2</sup>/<sub>4</sub> = 50 %, KK und ZZ haben je 25 %." },
+    { niveau: 3, typ: "zahl", frage: "Du wirfst <strong>drei</strong> Münzen. Wie viele Pfade hat das Baumdiagramm?",
+      loesung: 8,
+      tipps: ["Bei zwei Münzen sind es 4 Pfade. An jedes Ende kommen wieder K und Z.", "2 · 2 · 2 = ?"],
+      erklaerung: "2 · 2 · 2 = 8 Pfade: KKK, KKZ, KZK, KZZ, ZKK, ZKZ, ZZK, ZZZ." },
+    { niveau: 3, typ: "zahl", einheit: "%", frage: "Drei Münzen: Wie groß ist P(genau zweimal Kopf)? (Komma erlaubt)",
+      loesung: 37.5,
+      tipps: ["Welche der 8 Pfade haben genau zwei K? KKZ, …", "Es sind 3 Pfade. 3 : 8 = ?"],
+      erklaerung: "KKZ, KZK, ZKK passen: <sup>3</sup>/<sub>8</sub> = 0,375 = 37,5 %." }
+  ]
+};
+</script>
+<script src="../../../../schueler.js"></script>
+</body>
+</html>

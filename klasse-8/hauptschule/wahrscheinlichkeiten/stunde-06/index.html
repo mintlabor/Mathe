@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Stunde 6: Die Streichholzschachtel – Wahrscheinlichkeiten</title>
+<link rel="stylesheet" href="../../../../praesentation.css">
+<style>
+  .lagen { display: flex; gap: 3rem; justify-content: center; margin: 1rem 0; flex-wrap: wrap; align-items: flex-end; }
+  .lagen figure { margin: 0; text-align: center; }
+  .lagen figcaption { font-size: 1.35rem; font-weight: 700; margin-top: .4rem; }
+  .lagen figcaption small { display: block; font-weight: 400; color: var(--muted); font-size: 1.05rem; }
+  .rollen { display: grid; grid-template-columns: repeat(4, 1fr); gap: .8rem; margin-top: .8rem; }
+  .rollen .kasten { padding: .7rem 1rem; font-size: 1.15rem; }
+  .rollen .kasten b { display: block; font-size: 1.3rem; }
+  table.strich.klasse td, table.strich.klasse th { padding: .3rem .6rem; font-size: 1.2rem; }
+  table.strich.klasse input { width: 4.5rem; }
+  table.strich.klasse tr.summe td { background: var(--accent-hell); font-weight: 700; }
+  .stapel { display: flex; height: 1.6rem; border-radius: 6px; overflow: hidden; min-width: 14rem; background: var(--border); }
+  .stapel span { display: block; height: 100%; }
+  .farbe1 { background: #1098ad; } .farbe2 { background: #e8a400; } .farbe3 { background: #e03131; }
+  .tabellenknoepfe { display: flex; gap: .5rem; margin-top: .6rem; }
+  .punkte-tabelle td, .punkte-tabelle th { font-size: 1.35rem; }
+  @media (max-width: 900px) { .rollen { grid-template-columns: 1fr 1fr; } }
+</style>
+</head>
+<body data-phasen='[["Abrufen",4],["Problem",6],["Experiment",13],["Auswertung",8],["Sicherung",6],["Übung",5],["Reflexion",3]]'>
+
+<div class="leiste">
+  <div class="pfad"><a href="../../../../">Start</a> › <a href="../../../">Klasse 8</a> › <a href="../../">Hauptschule</a> › <a href="../">Wahrscheinlichkeiten</a> › Stunde 6</div>
+</div>
+
+<div class="buehne">
+
+  <!-- Abrufen -->
+  <section class="folie" data-phase="Abrufen">
+    <div class="kennung">Wahrscheinlichkeiten · Stunde 6 · Warm-up</div>
+    <h2>Was weißt du noch?</h2>
+    <p style="margin-top:0">Beantworte ohne ins Heft zu schauen.</p>
+    <div class="uebung">
+      <div class="zeile"><div class="n">1</div><div>
+        <div class="frage">Exit-Ticket: Ist <span class="bruch"><span>1</span><span>5</span></span> mehr oder weniger als 0,1?</div>
+        <div class="antwort schritt"><span class="bruch"><span>1</span><span>5</span></span> = 0,2 = 20 %, also <strong>mehr</strong> als 0,1 = 10 %.</div>
+      </div></div>
+      <div class="zeile"><div class="n">2</div><div>
+        <div class="frage">Welche Zahl gehört zu „sicher“, welche zu „unmöglich“?</div>
+        <div class="antwort schritt">sicher = 1 · unmöglich = 0</div>
+      </div></div>
+      <div class="zeile"><div class="n">3</div><div>
+        <div class="frage">Eine Heftzwecke wurde 500-mal geworfen, 300-mal lag sie auf dem Kopf. Schätze P(Kopf).</div>
+        <div class="antwort schritt"><span class="bruch"><span>300</span><span>500</span></span> = 0,6 = 60 %</div>
+      </div></div>
+    </div>
+    <div class="hinweis">Aufgabe 3 wiederholt Stunde 3 und 4: Bei vielen Versuchen ist die relative Häufigkeit ein guter Schätzwert. Das brauchen wir heute.</div>
+  </section>
+
+  <!-- Problem -->
+  <section class="folie" data-phase="Problem">
+    <div class="kennung">Problem<span class="eis" data-eis="I"></span></div>
+    <h2>Das Schachtel-Spiel</h2>
+    <div class="problem">
+      <div class="label">Problem</div><br>
+      Für den Spielenachmittag wollen wir ein Spiel mit einer <strong>Streichholzschachtel</strong>. Man wirft sie hoch und bekommt Punkte für die Lage, in der sie liegen bleibt.<br>
+      <strong>Wie viele Punkte soll es für jede Lage geben, damit das Spiel gerecht ist?</strong>
+    </div>
+    <div class="lagen">
+      <figure>
+        <svg width="210" height="90" viewBox="0 0 210 90"><rect x="5" y="40" width="200" height="45" rx="4" fill="#f4d58d" stroke="#1f2430" stroke-width="3"/><rect x="30" y="50" width="150" height="25" rx="3" fill="#fff" stroke="#1f2430" stroke-width="2"/><text x="105" y="68" text-anchor="middle" font-size="16" font-weight="700">Bild</text></svg>
+        <figcaption>Fläche<small>große Seite liegt unten</small></figcaption>
+      </figure>
+      <figure>
+        <svg width="210" height="90" viewBox="0 0 210 90"><rect x="5" y="58" width="200" height="27" rx="4" fill="#c98b4a" stroke="#1f2430" stroke-width="3"/><line x1="15" y1="71" x2="195" y2="71" stroke="#5c3b00" stroke-width="2" stroke-dasharray="3 3"/></svg>
+        <figcaption>Seite<small>lange, schmale Seite liegt unten</small></figcaption>
+      </figure>
+      <figure>
+        <svg width="80" height="140" viewBox="0 0 80 140"><rect x="10" y="10" width="60" height="125" rx="4" fill="#f4d58d" stroke="#1f2430" stroke-width="3"/></svg>
+        <figcaption>Stirn<small>steht auf der kleinen Seite</small></figcaption>
+      </figure>
+    </div>
+    <div class="lernziele schritt">
+      <div class="titel">🎯 Heute lernst du …</div>
+      <ul>
+        <li>Wahrscheinlichkeiten bei einem Experiment zu <strong>schätzen</strong>, bei dem man sie nicht ausrechnen kann,</li>
+        <li>mit den Schätzwerten <strong>gerechte Punkte</strong> zu verteilen.</li>
+      </ul>
+    </div>
+    <div class="hinweis">Eine echte Schachtel zeigen und die drei Lagen vormachen. Die Namen der Lagen an die Tafel schreiben (Wortspeicher). Noch nicht über Punkte diskutieren.</div>
+  </section>
+
+  <!-- Vermutung -->
+  <section class="folie" data-phase="Problem" data-minuten="3">
+    <div class="kennung">Eigene Lösung · Vermutung</div>
+    <h2>Was glaubst du?</h2>
+    <div class="tps">
+      <div class="stufe"><b>👤</b> 1 Min. allein: Schätze für jede Lage, wie oft sie bei <strong>100 Würfen</strong> kommt. Schreibe es auf.</div><span class="pfeil">→</span>
+      <div class="stufe"><b>👥</b> 1 Min. zu zweit: Vergleicht eure Schätzung.</div><span class="pfeil">→</span>
+      <div class="stufe"><b>🏫</b> Klasse: 3 Schätzungen an die Tafel</div>
+    </div>
+    <div data-tipps>
+      <div class="tipp">Welche Seite ist am <strong>größten</strong>? Auf welcher Seite liegt die Schachtel am <strong>stabilsten</strong>?</div>
+      <div class="tipp">Deine drei Zahlen müssen zusammen <strong>100</strong> ergeben.</div>
+    </div>
+    <div class="hinweis">Die Vermutungen an der Tafel lassen. Am Ende vergleichen wir mit den Versuchsergebnissen. Oft schätzen Schüler alle drei gleich (je ca. 33): Diese Vermutung später ausdrücklich aufgreifen.</div>
+  </section>
+
+  <!-- Experiment -->
+  <section class="folie" data-phase="Experiment" data-minuten="10">
+    <div class="kennung">Experiment · Gruppenarbeit<span class="eis" data-eis="E"></span></div>
+    <h2>Wir werfen die Schachtel</h2>
+    <div class="zweispaltig">
+      <div>
+        <ol>
+          <li>Werft die Schachtel <strong>50-mal</strong> aus etwa 30 cm Höhe auf den Tisch.</li>
+          <li>Macht nach jedem Wurf einen Strich.</li>
+          <li>Zählt am Ende die Striche zusammen. Probe: Zusammen 50?</li>
+        </ol>
+        <table class="strich">
+          <tr><th>Lage</th><th style="min-width:12rem">Striche</th><th>Anzahl</th></tr>
+          <tr><td>Fläche</td><td></td><td></td></tr>
+          <tr><td>Seite</td><td></td><td></td></tr>
+          <tr><td>Stirn</td><td></td><td></td></tr>
+          <tr><th>Summe</th><td></td><td>50</td></tr>
+        </table>
+      </div>
+      <div>
+        <p style="margin:0 0 .3rem"><strong>Eure Rollen</strong> (nach 25 Würfen tauschen):</p>
+        <div class="rollen" style="grid-template-columns: 1fr 1fr">
+          <div class="kasten"><b>🤾 Werfer</b>wirft immer gleich hoch</div>
+          <div class="kasten"><b>👀 Prüfer</b>sagt die Lage laut an</div>
+          <div class="kasten"><b>✏️ Schreiber</b>macht die Striche</div>
+          <div class="kasten"><b>⏱️ Zeitwächter</b>achtet auf die Zeit und zählt die Würfe</div>
+        </div>
+      </div>
+    </div>
+    <div class="hinweis">Material: pro Gruppe (4 Personen) eine leere Streichholzschachtel. Eine weiche Unterlage (Heft) dämpft den Lärm. Strichliste auf einen Zettel oder ins Heft. Unklare Würfe (Schachtel fällt vom Tisch, lehnt schräg) werden wiederholt. Wer früher fertig ist: weitere 50 Würfe.</div>
+  </section>
+
+  <!-- Klassentabelle -->
+  <section class="folie" data-phase="Auswertung">
+    <div class="kennung">Auswertung · Klassenergebnis<span class="eis" data-eis="IS"></span></div>
+    <h2>Unsere Ergebnisse</h2>
+    <table class="strich klasse" id="tabelle">
+      <thead><tr><th>Gruppe</th><th>Würfe</th><th>Fläche</th><th>Seite</th><th>Stirn</th><th>Anteile</th></tr></thead>
+      <tbody></tbody>
+      <tfoot><tr class="summe"><td>Klasse</td><td data-s="n">–</td><td data-s="0">–</td><td data-s="1">–</td><td data-s="2">–</td><td data-s="bild"></td></tr></tfoot>
+    </table>
+    <div class="tabellenknoepfe">
+      <button class="knopf" id="zeileDazu">+ Gruppe</button>
+      <button class="knopf" id="leeren">Tabelle leeren</button>
+      <span class="klein" style="align-self:center"><span class="farbe1" style="display:inline-block;width:1rem;height:1rem;border-radius:3px"></span> Fläche &nbsp; <span class="farbe2" style="display:inline-block;width:1rem;height:1rem;border-radius:3px"></span> Seite &nbsp; <span class="farbe3" style="display:inline-block;width:1rem;height:1rem;border-radius:3px"></span> Stirn</span>
+    </div>
+    <div class="vernetzen">Vergleicht die <strong>Streifen</strong> der Gruppen: Sind sie gleich? Welcher Streifen ist am <strong>zuverlässigsten</strong>? Vergleicht mit euren <strong>Vermutungen</strong> an der Tafel.</div>
+    <div class="hinweis">Gruppen nennen ihre Anzahlen, du trägst ein. Die Würfe-Spalte wird automatisch aus der Summe berechnet. In den Zellen stehen Anzahl und relative Häufigkeit in Prozent. Die Klassenzeile ist der beste Schätzwert (viele Würfe). Die Daten werden für die nächsten Stunden in diesem Browser gespeichert.</div>
+  </section>
+
+  <!-- Ideen vergleichen -->
+  <section class="folie" data-phase="Auswertung">
+    <div class="kennung">Ideen vergleichen</div>
+    <h2>Was stimmt?</h2>
+    <div class="legende">
+      <span class="l-ja">stimmt</span>
+      <span class="l-nein">stimmt nicht</span>
+      <button class="knopf" data-alle-auf style="margin-left:auto">Alle aufdecken</button>
+      <button class="knopf" data-alle-zu>Alle zudecken</button>
+    </div>
+    <div class="karten">
+      <div class="karte nein">„Es gibt 3 Lagen, also hat jede die Wahrscheinlichkeit <span class="bruch"><span>1</span><span>3</span></span>.“<span class="loesung">Unser Versuch zeigt: Die Lagen sind nicht gleich wahrscheinlich.</span></div>
+      <div class="karte ja">„Die Fläche kommt am häufigsten, weil die Schachtel darauf am stabilsten liegt.“<span class="loesung">Gute Begründung: große Seite = stabil.</span></div>
+      <div class="karte nein">„Bei unserer Gruppe kam Stirn nie. Also ist Stirn unmöglich.“<span class="loesung">Selten ist nicht unmöglich! Andere Gruppen hatten Stirn.</span></div>
+      <div class="karte ja">„Der Wert der ganzen Klasse ist besser als der Wert einer Gruppe.“<span class="loesung">Richtig: viel mehr Würfe, weniger Schwankung.</span></div>
+    </div>
+    <div class="hinweis">Die erste Karte ist die typische Fehlvorstellung („Gleichverteilung“). Ausdrücklich mit den Tafel-Vermutungen verbinden: Wer hat alle gleich geschätzt? Was zeigt der Versuch?</div>
+  </section>
+
+  <!-- Sicherung -->
+  <section class="folie" data-phase="Sicherung">
+    <div class="kennung">Sicherung<span class="eis" data-eis="S"></span></div>
+    <h2>Wahrscheinlichkeiten schätzen</h2>
+    <div class="merk">
+      <h3>Merke</h3>
+      <ul>
+        <li class="schritt">Bei <strong>Würfel</strong> und <strong>Münze</strong> haben alle Ergebnisse die <strong>gleiche Chance</strong>. Die Wahrscheinlichkeit kann man <strong>ausrechnen</strong>: P(6) = <span class="bruch"><span>1</span><span>6</span></span>.</li>
+        <li class="schritt">Bei <strong>Streichholzschachtel</strong>, <strong>Heftzwecke</strong> oder <strong>Baustein</strong> haben die Ergebnisse <strong>nicht</strong> die gleiche Chance. Man nennt sie <strong>Nicht-Laplace-Experimente</strong>.<br><span class="klein">(Laplace war ein französischer Mathematiker. Er beschrieb Experimente, bei denen alle Ergebnisse gleich wahrscheinlich sind.)</span></li>
+        <li class="schritt">Bei Nicht-Laplace-Experimenten <strong>schätzt</strong> man die Wahrscheinlichkeit: <strong>sehr oft</strong> werfen und die <strong>relative Häufigkeit</strong> berechnen.</li>
+      </ul>
+    </div>
+    <p class="schritt" id="schaetzSatz" style="margin-top:.8rem"></p>
+    <div class="hinweis">Den Fachbegriff „Nicht-Laplace-Experiment“ in den Wortspeicher. Für die Schüler reicht: „Nicht alle Ergebnisse haben die gleiche Chance.“ Der letzte Satz wird automatisch mit eurem Klassenergebnis gefüllt.</div>
+  </section>
+
+  <!-- Zurück zum Problem: Punkte -->
+  <section class="folie" data-phase="Sicherung">
+    <div class="kennung">Zurück zum Problem<span class="eis" data-eis="S"></span></div>
+    <h2>Gerechte Punkte für das Schachtel-Spiel</h2>
+    <p style="margin-top:0">Idee: Was <strong>selten</strong> kommt, bringt <strong>mehr</strong> Punkte. Kommt die Fläche z. B. 3-mal so oft wie die Seite, gibt es für die Seite 3-mal so viele Punkte.</p>
+    <table class="strich punkte-tabelle" id="punkte">
+      <tr><th>Lage</th><th>Schätzwert P</th><th>Wie viel seltener als Fläche?</th><th>Punkte</th></tr>
+      <tr><td>Fläche</td><td data-p="0">–</td><td data-v="0">–</td><td data-pk="0">1</td></tr>
+      <tr><td>Seite</td><td data-p="1">–</td><td data-v="1">–</td><td data-pk="1">–</td></tr>
+      <tr><td>Stirn</td><td data-p="2">–</td><td data-v="2">–</td><td data-pk="2">–</td></tr>
+    </table>
+    <p class="klein" id="punkteHinweis" style="margin-top:.5rem"></p>
+    <p class="schritt">So bekommt man bei vielen Würfen mit jeder Lage <strong>ungefähr gleich viele Punkte</strong>. Das Spiel ist gerecht.</p>
+    <div class="hinweis">Zuerst die Schüler selbst Vorschläge machen lassen. Die Spalte „Wie viel seltener?“ = P(Fläche) : P(Lage), gerundet. Wenn Stirn sehr selten ist (z. B. 2 %), wird die Punktzahl groß. Das ist richtig und darf diskutiert werden. Ohne Klassendaten erscheinen Beispielwerte.</div>
+  </section>
+
+  <!-- Übung -->
+  <section class="folie" data-phase="Übung">
+    <div class="kennung">Übung</div>
+    <h2>Jetzt du!</h2>
+    <div class="uebung">
+      <div class="zeile"><div class="n">a</div><div>
+        <div class="frage">Laplace oder Nicht-Laplace? Würfel · Kronkorken · Münze · Glücksrad mit gleich großen Feldern · Legostein</div>
+        <div class="antwort schritt">Laplace: Würfel, Münze, Glücksrad mit gleich großen Feldern · Nicht-Laplace: Kronkorken, Legostein</div>
+      </div></div>
+      <div class="zeile"><div class="n">b</div><div>
+        <div class="frage">Eine Schachtel wurde 200-mal geworfen: Fläche 130-mal, Seite 60-mal, Stirn 10-mal. Schätze P(Seite).</div>
+        <div class="antwort schritt"><span class="bruch"><span>60</span><span>200</span></span> = 0,3 = 30 %</div>
+      </div></div>
+      <div class="zeile stern"><div class="n">★</div><div>
+        <div class="frage">Wie viele Punkte sind bei b) für „Stirn“ gerecht, wenn „Fläche“ 1 Punkt gibt?</div>
+        <div class="antwort schritt">Fläche 130-mal, Stirn 10-mal → 13-mal so selten → <strong>13 Punkte</strong></div>
+      </div></div>
+    </div>
+    <p class="schritt" style="margin-top:.8rem">Weiter üben: <a class="schuelerlink" href="../schueler/stunde-06.html" target="_blank">📱 Schülerseite · Stunde 6</a></p>
+    <div class="hinweis">a) mündlich, b) im Heft, ★ für Schnelle. Danach Schülerseite oder Hausaufgabe.</div>
+  </section>
+
+  <!-- Reflexion -->
+  <section class="folie" data-phase="Reflexion">
+    <div class="kennung">Reflexion</div>
+    <h2>Manche Wahrscheinlichkeiten kann man nur durch Versuche schätzen.</h2>
+    <div class="zweispaltig">
+      <div>
+        <div class="kasten">
+          <p style="margin:0 0 .3rem"><strong>🎫 Exit-Ticket:</strong></p>
+          <p style="margin:0">Warum kann man die Wahrscheinlichkeit für „Stirn“ nicht einfach ausrechnen wie beim Würfel? Ein Satz.</p>
+        </div>
+        <p class="klein" style="margin-top:1rem"><strong>Hausaufgabe (freiwillig):</strong> Probiere das Schachtel-Spiel zu Hause mit unseren Punkten aus.<br>Nächste Stunde: Der geheime Beutel.</p>
+      </div>
+      <div>
+        <div class="ampel-legende"><span>🟢 sicher</span><span>🟡 fast</span><span>🔴 noch nicht</span></div>
+        <div class="ampel">
+          <div class="zeile"><span>Ich kann erklären, was ein Nicht-Laplace-Experiment ist.</span></div>
+          <div class="zeile"><span>Ich kann eine Wahrscheinlichkeit mit vielen Versuchen schätzen.</span></div>
+          <div class="zeile"><span>Ich kann mit Schätzwerten gerechte Punkte begründen.</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="hinweis">Exit-Ticket: Die Seiten sind unterschiedlich groß, darum haben die Lagen nicht die gleiche Chance.</div>
+  </section>
+
+</div>
+<script src="../../../../praesentation.js"></script>
+<script>
+  (function () {
+    const SPEICHER = "mathe-k8-hs-schachtel";
+    const NAMEN = ["Fläche", "Seite", "Stirn"];
+    const BEISPIEL = [0.7, 0.26, 0.04];
+    const tbody = document.querySelector("#tabelle tbody");
+    const stapel = anteile => `<div class="stapel">${anteile.map((a, i) => `<span class="farbe${i + 1}" style="width:${a * 100}%"></span>`).join("")}</div>`;
+
+    function zeile(werte = ["", "", ""]) {
+      const tr = document.createElement("tr");
+      tr.innerHTML = `<td>${tbody.children.length + 1}</td><td class="ergebnis" data-n>–</td>` +
+        werte.map(w => `<td><input type="number" min="0" value="${w}"><div class="klein" data-r></div></td>`).join("") +
+        `<td data-bild></td>`;
+      tr.querySelectorAll("input").forEach(i => i.addEventListener("input", rechnen));
+      tbody.appendChild(tr);
+    }
+
+    function rechnen() {
+      const summe = [0, 0, 0], daten = [];
+      tbody.querySelectorAll("tr").forEach(tr => {
+        const w = [...tr.querySelectorAll("input")].map(i => parseInt(i.value) || 0);
+        const n = w[0] + w[1] + w[2];
+        tr.querySelector("[data-n]").textContent = n || "–";
+        tr.querySelectorAll("[data-r]").forEach((el, i) => el.textContent = n ? Praes.prozent(w[i] / n, 0) : "");
+        tr.querySelector("[data-bild]").innerHTML = n ? stapel(w.map(x => x / n)) : "";
+        if (n) { w.forEach((x, i) => summe[i] += x); daten.push(w); }
+      });
+      const N = summe[0] + summe[1] + summe[2];
+      const f = s => document.querySelector(`#tabelle [data-s="${s}"]`);
+      f("n").textContent = N || "–";
+      summe.forEach((x, i) => f(i).innerHTML = N ? `${x}<div class="klein">${Praes.prozent(x / N)}</div>` : "–");
+      f("bild").innerHTML = N ? stapel(summe.map(x => x / N)) : "";
+      try { localStorage.setItem(SPEICHER, JSON.stringify(daten)); } catch (e) {}
+      abschluss(N ? summe.map(x => x / N) : null, N);
+    }
+
+    function abschluss(p, N) {
+      const beispiel = !p;
+      if (beispiel) p = BEISPIEL;
+      p.forEach((x, i) => {
+        document.querySelector(`[data-p="${i}"]`).textContent = Praes.prozent(x) + (beispiel ? "*" : "");
+        if (i === 0) { document.querySelector('[data-v="0"]').textContent = "–"; return; }
+        const v = x > 0 ? p[0] / x : null;
+        document.querySelector(`[data-v="${i}"]`).textContent = v ? "etwa " + Praes.zahl(v, 1) + "-mal" : "kam nie";
+        document.querySelector(`[data-pk="${i}"]`).innerHTML = v ? `<strong>${Math.max(1, Math.round(v))}</strong>` : "?";
+      });
+      document.getElementById("punkteHinweis").textContent = beispiel
+        ? "* Beispielwerte. Tragt eure Ergebnisse auf der Folie „Unsere Ergebnisse“ ein."
+        : `Grundlage: ${N} Würfe der ganzen Klasse.`;
+      const satz = document.getElementById("schaetzSatz");
+      satz.innerHTML = beispiel ? "" : `<strong>Unsere Schachtel (${N} Würfe):</strong> ` +
+        NAMEN.map((n, i) => `P(${n}) ≈ ${Praes.prozent(p[i], 0)}`).join(" · ");
+    }
+
+    let gespeichert = [];
+    try { gespeichert = JSON.parse(localStorage.getItem(SPEICHER) || "[]"); } catch (e) {}
+    gespeichert.forEach(w => zeile(w));
+    while (tbody.children.length < 7) zeile();
+    rechnen();
+    document.getElementById("zeileDazu").onclick = () => zeile();
+    document.getElementById("leeren").onclick = () => { tbody.innerHTML = ""; for (let i = 0; i < 7; i++) zeile(); rechnen(); };
+  })();
+</script>
+</body>
+</html>
