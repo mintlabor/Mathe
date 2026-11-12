@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Steckbriefe der Figuren – Umfang und Flächen</title>
+<link rel="stylesheet" href="../../../../schueler.css">
+<style>
+  .steuerung { display: flex; flex-wrap: wrap; gap: .5rem; align-items: center; margin: .5rem 0 1rem; }
+  .steuerung .an { outline: 3px solid #f59f00; }
+  .steckbrief { --farbe: #1098ad; --hell: #e3f6f9; background: #fff; border: 4px solid var(--farbe); border-radius: 22px; padding: 0 1rem 1rem; margin: 0 0 1.8rem; overflow: hidden;
+    background-image: radial-gradient(var(--hell) 2px, transparent 2.5px); background-size: 22px 22px; box-shadow: 0 6px 0 var(--hell); }
+  .kopfzeile { display: flex; align-items: center; gap: .8rem; background: var(--farbe); color: #fff; margin: 0 -1rem .6rem; padding: .55rem 1rem; }
+  .kopfzeile h2 { margin: 0; font-size: 1.9rem; letter-spacing: .02em; }
+  .kopfzeile .ueber { font-size: .85rem; opacity: .9; font-weight: 700; text-transform: uppercase; letter-spacing: .08em; }
+  .kopfzeile .icon { font-size: 2.3rem; background: #fff; color: var(--farbe); width: 3.4rem; height: 3.4rem; border-radius: 50%; display: grid; place-items: center; box-shadow: 0 3px 0 rgba(0,0,0,.15); }
+  .kopfzeile .sticker { margin-left: auto; background: #ffd43b; color: #1f2430; font-weight: 800; padding: .3rem .8rem; border-radius: 999px; transform: rotate(4deg); box-shadow: 0 3px 0 rgba(0,0,0,.15); }
+  .kurz { font-size: 1.1rem; font-weight: 600; color: var(--farbe); margin: .3rem 0 .6rem; }
+  .oben { display: grid; grid-template-columns: minmax(230px, 1fr) 2fr; gap: .8rem; align-items: start; }
+  .bild { background: #fff; border: 3px dashed var(--farbe); border-radius: 18px; padding: .3rem; position: relative; }
+  .skizze { width: 100%; height: auto; display: block; }
+  .wusstest { margin-top: .6rem; background: #fff9db; border: 2px solid #ffd43b; border-radius: 16px; padding: .5rem .7rem; font-size: .95rem; position: relative; }
+  .felder { width: 100%; border-collapse: separate; border-spacing: 0 4px; font-size: .97rem; }
+  .felder th { width: 11rem; white-space: nowrap; text-align: left; vertical-align: top; background: var(--hell); color: #1f2430; padding: .35rem .55rem; border-radius: 12px 0 0 12px; border: 2px solid var(--hell); }
+  .felder td { padding: .35rem .6rem; background: #fff; border: 2px solid var(--hell); border-left: none; border-radius: 0 12px 12px 0; vertical-align: top; }
+  .felder strong { color: var(--farbe); }
+  .fi { display: inline-block; width: 1.4rem; }
+  .felder.unten { margin-top: .6rem; }
+  .formeln { display: grid; grid-template-columns: 1fr 1.6fr; gap: .8rem; margin-top: .7rem; }
+  .formel { border-radius: 18px; padding: .5rem .9rem; box-shadow: 0 4px 0 rgba(0,0,0,.06); }
+  .formel h3 { margin: .1rem 0 .2rem; font-size: 1.05rem; }
+  .formel p { margin: .25rem 0; }
+  .formel .f { font-size: 1.5rem; font-weight: 800; color: var(--farbe); background: #fff; display: inline-block; padding: .1rem .7rem; border-radius: 10px; }
+  .umfang { background: #e7f5ff; border: 3px solid #74c0fc; }
+  .flaeche { background: #fff9db; border: 3px solid #ffd43b; }
+  .lueckenhinweis { display: none; }
+  /* Lückenversion: gleiche Fläche, Inhalt unsichtbar → Platz zum Ausfüllen; Skizze ohne Beschriftung */
+  body.luecke .inhalt { visibility: hidden; }
+  body.luecke .skizze .lab, body.luecke .skizze .hilfe { display: none; }
+  body.luecke .lueckenhinweis { display: block; text-align: center; font-weight: 700; color: var(--farbe); font-size: .9rem; padding-bottom: .2rem; }
+  body.luecke .felder td { background: #fff repeating-linear-gradient(to bottom, transparent 0, transparent 1.45rem, #dee2e6 1.45rem, #dee2e6 1.5rem); }
+  body.luecke .formel .f { min-width: 12rem; min-height: 2.2rem; }
+  body.luecke .formel p:not(.f) { min-height: 1.4rem; border-bottom: 2px dotted #adb5bd; }
+  @media (max-width: 700px) { .oben, .formeln { grid-template-columns: 1fr; } }
+  @media print {
+    header, .steuerung, footer { display: none; }
+    body { background: #fff; font-size: 11pt; }
+    main { max-width: none; padding: 0; }
+    .steckbrief { break-after: page; break-inside: avoid; margin: 0; box-shadow: none; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .oben { grid-template-columns: 6.5cm 1fr; }
+  }
+</style>
+</head>
+<body>
+<header><div class="inner">
+  <div class="pfad"><a href="./">🗺️ Lernlandkarte</a> › <a href="steckbrief.html">Steckbrief-Material</a> › Steckbriefe</div>
+  <h1>🗂️ Steckbriefe: Dreieck, Parallelogramm, Trapez, Raute, Drachen</h1>
+  <p class="untertitel">Ecken, Seiten, Winkel, Diagonalen, Symmetrie, Besonderheiten, Höhe, Umfang und Flächeninhalt</p>
+</div></header>
+<main>
+  <div class="steuerung">
+    <button class="btn" id="voll" type="button">📗 Ausgefüllt</button>
+    <button class="btn" id="leer" type="button">📝 Lückenversion</button>
+    <button class="btn" type="button" onclick="window.print()">🖨️ Drucken (1 Figur pro Seite)</button>
+    <span class="klein">Filter:</span>
+    <select id="nur"><option value="">alle Figuren</option><option value="1">Dreieck</option><option value="2">Parallelogramm</option><option value="3">Trapez</option><option value="4">Raute</option><option value="5">Drachen</option></select>
+  </div>
+  <div class="box klein"><strong>Einsatz:</strong> Die <strong>Lückenversion</strong> bekommen die Expertengruppen in Stunde 1 (Umfang und Flächeninhalt bleiben vorerst frei und werden in den Stunden 5–11 ergänzt). Die <strong>ausgefüllte Version</strong> dient als Kontrollblatt nach der Expertenphase, als Hilfe beim Erklären in der Stammgruppe (Stunde 2) und als Lernzettel für die Arbeit.</div>
+
+<section class="steckbrief" style="--farbe:#f76707;--hell:#fff0e0">
+  <div class="kopfzeile"><span class="icon">△</span><div><div class="ueber">Steckbrief 1 von 5</div><h2>Dreieck</h2></div><span class="sticker">🔍 Gesucht!</span></div>
+  <p class="kurz"><span class="inhalt">Die einfachste Figur mit geraden Seiten – jedes Vieleck lässt sich in Dreiecke zerlegen.</span></p>
+  <div class="oben">
+    <div class="links">
+      <div class="bild"><svg viewBox="0 0 300 210" class="skizze"><polygon points="20,175 270,175 175,35" fill="var(--hell)" stroke="var(--farbe)" stroke-width="4" stroke-linejoin="round"/><line class="hilfe" x1="175" y1="35" x2="175" y2="175" stroke="#e03131" stroke-width="2.5" stroke-dasharray="7 4"/><path class="hilfe" d="M186,175 v-11 h-11" fill="none" stroke="#e03131" stroke-width="2"/><text class="lab" x="10" y="195" font-size="17" font-weight="700" fill="#1f2430" text-anchor="middle" stroke="#fff" stroke-width="4" paint-order="stroke">A</text><text class="lab" x="282" y="195" font-size="17" font-weight="700" fill="#1f2430" text-anchor="middle" stroke="#fff" stroke-width="4" paint-order="stroke">B</text><text class="lab" x="175" y="25" font-size="17" font-weight="700" fill="#1f2430" text-anchor="middle" stroke="#fff" stroke-width="4" paint-order="stroke">C</text><text class="lab" x="145" y="195" font-size="17" font-weight="700" fill="#1f2430" text-anchor="middle" stroke="#fff" stroke-width="4" paint-order="stroke">c</text><text class="lab" x="235" y="100" font-size="17" font-weight="700" fill="#1f2430" text-anchor="middle" stroke="#fff" stroke-width="4" paint-order="stroke">a</text><text class="lab" x="85" y="95" font-size="17" font-weight="700" fill="#1f2430" text-anchor="middle" stroke="#fff" stroke-width="4" paint-order="stroke">b</text><text class="lab" x="188" y="120" font-size="17" font-weight="700" fill="#e03131" text-anchor="start" stroke="#fff" stroke-width="4" paint-order="stroke">h</text><text class="lab" x="48" y="168" font-size="15" font-weight="700" fill="#1f2430" text-anchor="middle" stroke="#fff" stroke-width="4" paint-order="stroke">α</text><text class="lab" x="245" y="168" font-size="15" font-weight="700" fill="#1f2430" text-anchor="middle" stroke="#fff" stroke-width="4" paint-order="stroke">β</text><text class="lab" x="175" y="62" font-size="15" font-weight="700" fill="#1f2430" text-anchor="middle" stroke="#fff" stroke-width="4" paint-order="stroke">γ</text></svg><span class="lueckenhinweis">✏️ Beschrifte: Ecken, Seiten, Höhe, Diagonalen</span></div>
+      <div class="wusstest"><b>💡 Wusstest du?</b><br>Ein Dreieck ist die stabilste Figur: Darum bestehen Brücken, Strommasten und Dachstühle aus vielen Dreiecken. Ein Dreieck kann man nicht schief drücken!</div>
+    </div>
+    <table class="felder"><tr><th><span class="fi">📍</span> Ecken</th><td><span class="inhalt">3 Ecken: A, B, C (gegen den Uhrzeigersinn)</span></td></tr><tr><th><span class="fi">📏</span> Seiten</th><td><span class="inhalt">3 Seiten: a, b, c. Die Seite liegt immer <strong>gegenüber</strong> der Ecke mit gleichem Buchstaben (a gegenüber A).</span></td></tr><tr><th><span class="fi">📐</span> Winkel</th><td><span class="inhalt">3 Winkel: α, β, γ. <strong>Winkelsumme: α + β + γ = 180°</strong></span></td></tr><tr><th><span class="fi">✖️</span> Diagonalen</th><td><span class="inhalt">keine</span></td></tr><tr><th><span class="fi">🪞</span> Symmetrie</th><td><span class="inhalt">allgemein keine · gleichschenklig: 1 Achse · gleichseitig: 3 Achsen</span></td></tr><tr><th><span class="fi">⭐</span> Besonderheiten</th><td><span class="inhalt">Arten nach Winkeln: spitz-, recht-, stumpfwinklig · nach Seiten: gleichschenklig (2 Seiten gleich, Basiswinkel gleich), gleichseitig (alle Seiten gleich, alle Winkel 60°) · im rechtwinkligen Dreieck: Katheten und Hypotenuse</span></td></tr><tr><th><span class="fi">⬆️</span> Höhe</th><td><span class="inhalt">3 Höhen – zu jeder Seite eine. Senkrecht von der Ecke auf die gegenüberliegende Seite. Beim stumpfwinkligen Dreieck liegen zwei Höhen außerhalb (Seite verlängern).</span></td></tr></table>
+  </div>
+  <div class="formeln">
+    <div class="formel umfang"><h3>🧶 Umfang – einmal rundherum</h3><p class="f"><span class="inhalt">u = a + b + c</span></p><p><span class="inhalt">Beispiel: a = 5 cm, b = 6 cm, c = 7 cm → u = 5 + 6 + 7 = 18 cm</span></p></div>
+    <div class="formel flaeche"><h3>🎨 Flächeninhalt – wie viel passt hinein?</h3><p class="f"><span class="inhalt">A = g · h : 2</span></p><p><span class="inhalt">✂️ Rechteck-Trick: Verdoppeln: Zwei gleiche Dreiecke ergeben ein Parallelogramm (g · h). Das Dreieck ist die Hälfte.</span></p><p><span class="inhalt">Beispiel: g = 8 cm, h = 5 cm → A = 8 · 5 : 2 = 20 cm²</span></p></div>
+  </div>
+  <table class="felder unten">
+    <tr><th><span class="fi">🏠</span> Im Alltag</th><td><span class="inhalt">Dachgiebel, Verkehrsschild „Achtung“, Fahrradrahmen, Kleiderbügel, Tortenstück</span></td></tr>
+    <tr><th><span class="fi">👪</span> Verwandt mit</th><td><span class="inhalt">halbes Parallelogramm · Trapez mit c = 0</span></td></tr>
+  </table>
+</section>
+<section class="steckbrief" style="--farbe:#1c7ed6;--hell:#e3f0fd">
+  <div class="kopfzeile"><span class="icon">▱</span><div><div class="ueber">Steckbrief 2 von 5</div><h2>Parallelogramm</h2></div><span class="sticker">🔍 Gesucht!</span></div>
+  <p class="kurz"><span class="inhalt">Ein „schief gedrücktes Rechteck“: Gegenüberliegende Seiten sind parallel.</span></p>
+  <div class="oben">
+    <div class="links">
+      <div class="bild"><svg viewBox="0 0 300 210" class="skizze"><polygon points="20,170 215,170 280,45 85,45" fill="var(--hell)" stroke="var(--farbe)" stroke-width="4" stroke-linejoin="round"/><line class="hilfe" x1="20" y1="170" x2="280" y2="45" stroke="#ae3ec9" stroke-width="2" stroke-dasharray="4 4"/><line class="hilfe" x1="215" y1="170" x2="85" y2="45" stroke="#ae3ec9" stroke-width="2" stroke-dasharray="4 4"/><line class="hilfe" x1="85" y1="45" x2="85" y2="170" stroke="#e03131" stroke-width="2.5" stroke-dasharray="7 4"/><path class="hilfe" d="M96,170 v-11 h-11" fill="none" stroke="#e03131" stroke-width="2"/><text class="lab" x="12" y="192" font-size="17" font-weight="700" fill="#1f2430" text-anchor="middle" stroke="#fff" stroke-width="4" paint-order="stroke">A</text><text class="lab" x="222" y="192" font-size="17" font-weight="700" fill="#1f2430" text-anchor="middle" stroke="#fff" stroke-width="4" paint-order="stroke">B</text><text class="lab" x="290" y="40" font-size="17" font-weight="700" fill="#1f2430" text-anchor="middle" stroke="#fff" stroke-width="4" paint-order="stroke">C</text><text class="lab" x="78" y="38" font-size="17" font-weight="700" fill="#1f2430" text-anchor="middle" stroke="#fff" stroke-width="4" paint-order="stroke">D</text><text class="lab" x="118" y="192" font-size="17" font-weight="700" fill="#1f2430" text-anchor="middle" stroke="#fff" stroke-width="4" paint-order="stroke">a</text><text class="lab" x="262" y="112" font-size="17" font-weight="700" fill="#1f2430" text-anchor="middle" stroke="#fff" stroke-width="4" paint-order="stroke">b</text><text class="lab" x="182" y="36" font-size="17" font-weight="700" fill="#1f2430" text-anchor="middle" stroke="#fff" stroke-width="4" paint-order="stroke">c</text><text class="lab" x="40" y="105" font-size="17" font-weight="700" fill="#1f2430" text-anchor="middle" stroke="#fff" stroke-width="4" paint-order="stroke">d</text><text class="lab" x="96" y="140" font-size="17" font-weight="700" fill="#e03131" text-anchor="start" stroke="#fff" stroke-width="4" paint-order="stroke">h</text><text class="lab" x="205" y="95" font-size="17" font-weight="700" fill="#ae3ec9" text-anchor="middle" stroke="#fff" stroke-width="4" paint-order="stroke">e</text><text class="lab" x="130" y="92" font-size="17" font-weight="700" fill="#ae3ec9" text-anchor="middle" stroke="#fff" stroke-width="4" paint-order="stroke">f</text></svg><span class="lueckenhinweis">✏️ Beschrifte: Ecken, Seiten, Höhe, Diagonalen</span></div>
+      <div class="wusstest"><b>💡 Wusstest du?</b><br>Drückst du ein Rechteck aus Pfeifenreinigern schief, entsteht ein Parallelogramm. Die Seiten bleiben gleich lang – aber die Fläche wird kleiner!</div>
+    </div>
+    <table class="felder"><tr><th><span class="fi">📍</span> Ecken</th><td><span class="inhalt">4 Ecken: A, B, C, D</span></td></tr><tr><th><span class="fi">📏</span> Seiten</th><td><span class="inhalt">4 Seiten. Gegenüberliegende Seiten sind <strong>parallel und gleich lang</strong>: a ∥ c, a = c und b ∥ d, b = d</span></td></tr><tr><th><span class="fi">📐</span> Winkel</th><td><span class="inhalt">Gegenüberliegende Winkel sind gleich groß (α = γ, β = δ). Benachbarte Winkel ergeben zusammen 180°. Winkelsumme 360°.</span></td></tr><tr><th><span class="fi">✖️</span> Diagonalen</th><td><span class="inhalt">e und f <strong>halbieren sich gegenseitig</strong>. Im Allgemeinen nicht gleich lang und nicht senkrecht.</span></td></tr><tr><th><span class="fi">🪞</span> Symmetrie</th><td><span class="inhalt"><strong>punktsymmetrisch</strong> (Drehung um 180° um den Diagonalen-Schnittpunkt) · im Allgemeinen keine Symmetrieachse</span></td></tr><tr><th><span class="fi">⭐</span> Besonderheiten</th><td><span class="inhalt">Beweglich: Ein Gelenk-Parallelogramm aus Pfeifenreinigern lässt sich schief drücken – die Seiten bleiben gleich, die Höhe und die Fläche werden kleiner. Sonderfälle: Rechteck, Raute, Quadrat.</span></td></tr><tr><th><span class="fi">⬆️</span> Höhe</th><td><span class="inhalt">Abstand der parallelen Seiten a und c (senkrecht). Die schräge Seite b ist <strong>nicht</strong> die Höhe – h ist immer kürzer als b.</span></td></tr></table>
+  </div>
+  <div class="formeln">
+    <div class="formel umfang"><h3>🧶 Umfang – einmal rundherum</h3><p class="f"><span class="inhalt">u = 2 · a + 2 · b</span></p><p><span class="inhalt">Beispiel: a = 6 cm, b = 4 cm → u = 12 + 8 = 20 cm</span></p></div>
+    <div class="formel flaeche"><h3>🎨 Flächeninhalt – wie viel passt hinein?</h3><p class="f"><span class="inhalt">A = g · h</span></p><p><span class="inhalt">✂️ Rechteck-Trick: Zerlegen und Verschieben: Dreieck an der Höhe abschneiden und auf der anderen Seite anlegen → Rechteck g × h.</span></p><p><span class="inhalt">Beispiel: g = 6 cm, h = 3 cm → A = 6 · 3 = 18 cm²</span></p></div>
+  </div>
+  <table class="felder unten">
+    <tr><th><span class="fi">🏠</span> Im Alltag</th><td><span class="inhalt">Scherengitter, Treppengeländer, schräge Parkplatz-Markierungen, Radiergummi von der Seite</span></td></tr>
+    <tr><th><span class="fi">👪</span> Verwandt mit</th><td><span class="inhalt">Sonderfall des Trapezes · Oberbegriff von Rechteck, Raute, Quadrat</span></td></tr>
+  </table>
+</section>
+<section class="steckbrief" style="--farbe:#2f9e44;--hell:#e4f6e8">
+  <div class="kopfzeile"><span class="icon">⏢</span><div><div class="ueber">Steckbrief 3 von 5</div><h2>Trapez</h2></div><span class="sticker">🔍 Gesucht!</span></div>
+  <p class="kurz"><span class="inhalt">Ein Viereck mit (mindestens) einem Paar paralleler Seiten.</span></p>
+  <div class="oben">
+    <div class="links">
+      <div class="bild"><svg viewBox="0 0 300 210" class="skizze"><polygon points="15,170 285,170 205,45 90,45" fill="var(--hell)" stroke="var(--farbe)" stroke-width="4" stroke-linejoin="round"/><line class="hilfe" x1="90" y1="45" x2="90" y2="170" stroke="#e03131" stroke-width="2.5" stroke-dasharray="7 4"/><path class="hilfe" d="M101,170 v-11 h-11" fill="none" stroke="#e03131" stroke-width="2"/><line class="hilfe" x1="52" y1="108" x2="245" y2="108" stroke="#5c940d" stroke-width="2" stroke-dasharray="3 4"/><text class="lab" x="8" y="192" font-size="17" font-weight="700" fill="#1f2430" text-anchor="middle" stroke="#fff" stroke-width="4" paint-order="stroke">A</text><text class="lab" x="292" y="192" font-size="17" font-weight="700" fill="#1f2430" text-anchor="middle" stroke="#fff" stroke-width="4" paint-order="stroke">B</text><text class="lab" x="214" y="38" font-size="17" font-weight="700" fill="#1f2430" text-anchor="middle" stroke="#fff" stroke-width="4" paint-order="stroke">C</text><text class="lab" x="82" y="38" font-size="17" font-weight="700" fill="#1f2430" text-anchor="middle" stroke="#fff" stroke-width="4" paint-order="stroke">D</text><text class="lab" x="150" y="192" font-size="17" font-weight="700" fill="#1f2430" text-anchor="middle" stroke="#fff" stroke-width="4" paint-order="stroke">a</text><text class="lab" x="262" y="102" font-size="17" font-weight="700" fill="#1f2430" text-anchor="middle" stroke="#fff" stroke-width="4" paint-order="stroke">b</text><text class="lab" x="148" y="36" font-size="17" font-weight="700" fill="#1f2430" text-anchor="middle" stroke="#fff" stroke-width="4" paint-order="stroke">c</text><text class="lab" x="38" y="100" font-size="17" font-weight="700" fill="#1f2430" text-anchor="middle" stroke="#fff" stroke-width="4" paint-order="stroke">d</text><text class="lab" x="101" y="142" font-size="17" font-weight="700" fill="#e03131" text-anchor="start" stroke="#fff" stroke-width="4" paint-order="stroke">h</text><text class="lab" x="150" y="125" font-size="13" font-weight="400" fill="#5c940d" text-anchor="middle" stroke="#fff" stroke-width="4" paint-order="stroke">Mittellinie m</text><text class="lab" x="150" y="60" font-size="14" font-weight="700" fill="#1098ad" text-anchor="middle" stroke="#fff" stroke-width="4" paint-order="stroke">a ∥ c</text></svg><span class="lueckenhinweis">✏️ Beschrifte: Ecken, Seiten, Höhe, Diagonalen</span></div>
+      <div class="wusstest"><b>💡 Wusstest du?</b><br>Ein Deich hat im Querschnitt die Form eines Trapezes: unten breit, damit er das Wasser aushält, oben schmaler.</div>
+    </div>
+    <table class="felder"><tr><th><span class="fi">📍</span> Ecken</th><td><span class="inhalt">4 Ecken: A, B, C, D</span></td></tr><tr><th><span class="fi">📏</span> Seiten</th><td><span class="inhalt">4 Seiten. <strong>a ∥ c</strong> (Grundseiten, meist verschieden lang). b und d heißen <strong>Schenkel</strong>.</span></td></tr><tr><th><span class="fi">📐</span> Winkel</th><td><span class="inhalt">An jedem Schenkel ergeben die beiden Winkel zusammen 180° (α + δ = 180°, β + γ = 180°). Winkelsumme 360°.</span></td></tr><tr><th><span class="fi">✖️</span> Diagonalen</th><td><span class="inhalt">im Allgemeinen ohne besondere Eigenschaften · gleichschenkliges Trapez: Diagonalen gleich lang</span></td></tr><tr><th><span class="fi">🪞</span> Symmetrie</th><td><span class="inhalt">im Allgemeinen keine · gleichschenkliges Trapez (b = d): 1 Symmetrieachse</span></td></tr><tr><th><span class="fi">⭐</span> Besonderheiten</th><td><span class="inhalt">Sonderfälle: gleichschenkliges Trapez (b = d, Basiswinkel gleich), rechtwinkliges Trapez, Parallelogramm (c = a). Die <strong>Mittellinie</strong> m = (a + c) : 2 liegt auf halber Höhe.</span></td></tr><tr><th><span class="fi">⬆️</span> Höhe</th><td><span class="inhalt">Abstand der parallelen Seiten a und c (senkrecht).</span></td></tr></table>
+  </div>
+  <div class="formeln">
+    <div class="formel umfang"><h3>🧶 Umfang – einmal rundherum</h3><p class="f"><span class="inhalt">u = a + b + c + d</span></p><p><span class="inhalt">Beispiel: a = 8 cm, b = 5 cm, c = 4 cm, d = 5 cm → u = 22 cm</span></p></div>
+    <div class="formel flaeche"><h3>🎨 Flächeninhalt – wie viel passt hinein?</h3><p class="f"><span class="inhalt">A = (a + c) : 2 · h</span></p><p><span class="inhalt">✂️ Rechteck-Trick: Verdoppeln: Zwei gleiche Trapeze (eins gedreht) ergeben ein Parallelogramm mit der Grundseite a + c. Das Trapez ist die Hälfte.</span></p><p><span class="inhalt">Beispiel: a = 8 cm, c = 4 cm, h = 4 cm → A = 12 : 2 · 4 = 24 cm²</span></p></div>
+  </div>
+  <table class="felder unten">
+    <tr><th><span class="fi">🏠</span> Im Alltag</th><td><span class="inhalt">Dachseite eines Walmdachs, Deich- oder Graben-Querschnitt, Eimer und Lampenschirm von der Seite, Dachgaube</span></td></tr>
+    <tr><th><span class="fi">👪</span> Verwandt mit</th><td><span class="inhalt">Oberbegriff von Parallelogramm, gleichschenkligem Trapez, Rechteck, Raute, Quadrat · mit c = 0 wird es ein Dreieck</span></td></tr>
+  </table>
+</section>
+<section class="steckbrief" style="--farbe:#d6336c;--hell:#fde7ef">
+  <div class="kopfzeile"><span class="icon">◇</span><div><div class="ueber">Steckbrief 4 von 5</div><h2>Raute</h2></div><span class="sticker">🔍 Gesucht!</span></div>
+  <p class="kurz"><span class="inhalt">Ein Viereck mit vier gleich langen Seiten – ein „schiefes Quadrat“.</span></p>
+  <div class="oben">
+    <div class="links">
+      <div class="bild"><svg viewBox="0 0 300 210" class="skizze"><polygon points="20,108 150,182 280,108 150,34" fill="var(--hell)" stroke="var(--farbe)" stroke-width="4" stroke-linejoin="round"/><line class="hilfe" x1="20" y1="108" x2="280" y2="108" stroke="#ae3ec9" stroke-width="2.5" stroke-dasharray="7 4"/><line class="hilfe" x1="150" y1="182" x2="150" y2="34" stroke="#ae3ec9" stroke-width="2.5" stroke-dasharray="7 4"/><path class="hilfe" d="M161,108 v-11 h-11" fill="none" stroke="#ae3ec9" stroke-width="2"/><text class="lab" x="10" y="112" font-size="17" font-weight="700" fill="#1f2430" text-anchor="end" stroke="#fff" stroke-width="4" paint-order="stroke">A</text><text class="lab" x="150" y="202" font-size="17" font-weight="700" fill="#1f2430" text-anchor="middle" stroke="#fff" stroke-width="4" paint-order="stroke">B</text><text class="lab" x="285" y="112" font-size="17" font-weight="700" fill="#1f2430" text-anchor="start" stroke="#fff" stroke-width="4" paint-order="stroke">C</text><text class="lab" x="150" y="25" font-size="17" font-weight="700" fill="#1f2430" text-anchor="middle" stroke="#fff" stroke-width="4" paint-order="stroke">D</text><text class="lab" x="75" y="160" font-size="17" font-weight="700" fill="#1f2430" text-anchor="middle" stroke="#fff" stroke-width="4" paint-order="stroke">a</text><text class="lab" x="225" y="160" font-size="17" font-weight="700" fill="#1f2430" text-anchor="middle" stroke="#fff" stroke-width="4" paint-order="stroke">a</text><text class="lab" x="225" y="66" font-size="17" font-weight="700" fill="#1f2430" text-anchor="middle" stroke="#fff" stroke-width="4" paint-order="stroke">a</text><text class="lab" x="75" y="66" font-size="17" font-weight="700" fill="#1f2430" text-anchor="middle" stroke="#fff" stroke-width="4" paint-order="stroke">a</text><text class="lab" x="95" y="100" font-size="17" font-weight="700" fill="#ae3ec9" text-anchor="middle" stroke="#fff" stroke-width="4" paint-order="stroke">e</text><text class="lab" x="162" y="80" font-size="17" font-weight="700" fill="#ae3ec9" text-anchor="start" stroke="#fff" stroke-width="4" paint-order="stroke">f</text></svg><span class="lueckenhinweis">✏️ Beschrifte: Ecken, Seiten, Höhe, Diagonalen</span></div>
+      <div class="wusstest"><b>💡 Wusstest du?</b><br>Das gelbe Schild „Vorfahrtstraße“ ist ein Quadrat auf der Spitze – und jedes Quadrat ist auch eine Raute!</div>
+    </div>
+    <table class="felder"><tr><th><span class="fi">📍</span> Ecken</th><td><span class="inhalt">4 Ecken: A, B, C, D</span></td></tr><tr><th><span class="fi">📏</span> Seiten</th><td><span class="inhalt"><strong>4 gleich lange Seiten</strong> (a). Gegenüberliegende Seiten sind parallel.</span></td></tr><tr><th><span class="fi">📐</span> Winkel</th><td><span class="inhalt">Gegenüberliegende Winkel sind gleich groß. Benachbarte Winkel ergeben zusammen 180°. Winkelsumme 360°.</span></td></tr><tr><th><span class="fi">✖️</span> Diagonalen</th><td><span class="inhalt">e und f stehen <strong>senkrecht</strong> aufeinander, <strong>halbieren sich</strong> gegenseitig und halbieren die Winkel.</span></td></tr><tr><th><span class="fi">🪞</span> Symmetrie</th><td><span class="inhalt"><strong>2 Symmetrieachsen</strong> (die Diagonalen) und punktsymmetrisch</span></td></tr><tr><th><span class="fi">⭐</span> Besonderheiten</th><td><span class="inhalt">Eine Raute ist gleichzeitig Parallelogramm und Drachen. Mit rechten Winkeln wird sie zum Quadrat. Das Schild „Vorfahrtstraße“ ist ein Quadrat – also auch eine Raute.</span></td></tr><tr><th><span class="fi">⬆️</span> Höhe</th><td><span class="inhalt">wie beim Parallelogramm: Abstand gegenüberliegender Seiten. Für die Fläche reichen aber meist die Diagonalen.</span></td></tr></table>
+  </div>
+  <div class="formeln">
+    <div class="formel umfang"><h3>🧶 Umfang – einmal rundherum</h3><p class="f"><span class="inhalt">u = 4 · a</span></p><p><span class="inhalt">Beispiel: a = 5 cm → u = 4 · 5 = 20 cm</span></p></div>
+    <div class="formel flaeche"><h3>🎨 Flächeninhalt – wie viel passt hinein?</h3><p class="f"><span class="inhalt">A = e · f : 2  (oder A = a · h)</span></p><p><span class="inhalt">✂️ Rechteck-Trick: Ergänzen: Rechteck e × f um die Raute legen. Die 4 Dreiecke außen sind genauso groß wie die 4 innen → Raute = Hälfte.</span></p><p><span class="inhalt">Beispiel: e = 8 cm, f = 6 cm → A = 8 · 6 : 2 = 24 cm²</span></p></div>
+  </div>
+  <table class="felder unten">
+    <tr><th><span class="fi">🏠</span> Im Alltag</th><td><span class="inhalt">Schild „Vorfahrtstraße“, Karo im Kartenspiel, Rautenmuster auf Pullovern, Fliesen, Zaungitter</span></td></tr>
+    <tr><th><span class="fi">👪</span> Verwandt mit</th><td><span class="inhalt">Sonderfall von Parallelogramm und Drachen · Oberbegriff des Quadrats</span></td></tr>
+  </table>
+</section>
+<section class="steckbrief" style="--farbe:#7048e8;--hell:#efeafd">
+  <div class="kopfzeile"><span class="icon">🪁</span><div><div class="ueber">Steckbrief 5 von 5</div><h2>Drachen</h2></div><span class="sticker">🔍 Gesucht!</span></div>
+  <p class="kurz"><span class="inhalt">Ein Viereck mit zwei Paaren benachbarter gleich langer Seiten – wie ein Flugdrachen.</span></p>
+  <div class="oben">
+    <div class="links">
+      <div class="bild"><svg viewBox="0 0 300 210" class="skizze"><polygon points="40,88 150,192 260,88 150,18" fill="var(--hell)" stroke="var(--farbe)" stroke-width="4" stroke-linejoin="round"/><line class="hilfe" x1="40" y1="88" x2="260" y2="88" stroke="#ae3ec9" stroke-width="2.5" stroke-dasharray="7 4"/><line class="hilfe" x1="150" y1="192" x2="150" y2="18" stroke="#ae3ec9" stroke-width="2.5" stroke-dasharray="7 4"/><path class="hilfe" d="M161,88 v-11 h-11" fill="none" stroke="#ae3ec9" stroke-width="2"/><text class="lab" x="30" y="92" font-size="17" font-weight="700" fill="#1f2430" text-anchor="end" stroke="#fff" stroke-width="4" paint-order="stroke">A</text><text class="lab" x="150" y="208" font-size="17" font-weight="700" fill="#1f2430" text-anchor="middle" stroke="#fff" stroke-width="4" paint-order="stroke">B</text><text class="lab" x="270" y="92" font-size="17" font-weight="700" fill="#1f2430" text-anchor="start" stroke="#fff" stroke-width="4" paint-order="stroke">C</text><text class="lab" x="150" y="14" font-size="17" font-weight="700" fill="#1f2430" text-anchor="middle" stroke="#fff" stroke-width="4" paint-order="stroke">D</text><text class="lab" x="85" y="45" font-size="17" font-weight="700" fill="#1f2430" text-anchor="middle" stroke="#fff" stroke-width="4" paint-order="stroke">a</text><text class="lab" x="215" y="45" font-size="17" font-weight="700" fill="#1f2430" text-anchor="middle" stroke="#fff" stroke-width="4" paint-order="stroke">a</text><text class="lab" x="82" y="150" font-size="17" font-weight="700" fill="#1f2430" text-anchor="middle" stroke="#fff" stroke-width="4" paint-order="stroke">b</text><text class="lab" x="218" y="150" font-size="17" font-weight="700" fill="#1f2430" text-anchor="middle" stroke="#fff" stroke-width="4" paint-order="stroke">b</text><text class="lab" x="100" y="80" font-size="17" font-weight="700" fill="#ae3ec9" text-anchor="middle" stroke="#fff" stroke-width="4" paint-order="stroke">e</text><text class="lab" x="162" y="140" font-size="17" font-weight="700" fill="#ae3ec9" text-anchor="start" stroke="#fff" stroke-width="4" paint-order="stroke">f</text><text class="lab" x="150" y="120" font-size="11" font-weight="400" fill="#868e96" text-anchor="middle" stroke="#fff" stroke-width="4" paint-order="stroke">Symmetrieachse</text></svg><span class="lueckenhinweis">✏️ Beschrifte: Ecken, Seiten, Höhe, Diagonalen</span></div>
+      <div class="wusstest"><b>💡 Wusstest du?</b><br>Die zwei Holzstäbe eines Flugdrachens sind genau seine Diagonalen. Mit ihnen berechnest du, wie viel Folie du brauchst.</div>
+    </div>
+    <table class="felder"><tr><th><span class="fi">📍</span> Ecken</th><td><span class="inhalt">4 Ecken: A, B, C, D</span></td></tr><tr><th><span class="fi">📏</span> Seiten</th><td><span class="inhalt">Je <strong>zwei benachbarte Seiten sind gleich lang</strong>: oben a und a, unten b und b. Im Allgemeinen keine parallelen Seiten.</span></td></tr><tr><th><span class="fi">📐</span> Winkel</th><td><span class="inhalt">Ein Paar gegenüberliegender Winkel ist gleich groß (bei A und C). Winkelsumme 360°.</span></td></tr><tr><th><span class="fi">✖️</span> Diagonalen</th><td><span class="inhalt">e und f stehen <strong>senkrecht</strong> aufeinander. Die Symmetrieachse f halbiert die Querdiagonale e – umgekehrt nicht.</span></td></tr><tr><th><span class="fi">🪞</span> Symmetrie</th><td><span class="inhalt"><strong>1 Symmetrieachse</strong> (die Längsdiagonale f)</span></td></tr><tr><th><span class="fi">⭐</span> Besonderheiten</th><td><span class="inhalt">Liegt der Kreuzungspunkt genau in der Mitte von f, wird der Drachen zur Raute. Die Stäbe eines Flugdrachens sind seine Diagonalen.</span></td></tr><tr><th><span class="fi">⬆️</span> Höhe</th><td><span class="inhalt">wird nicht gebraucht – die Fläche berechnet man mit den Diagonalen.</span></td></tr></table>
+  </div>
+  <div class="formeln">
+    <div class="formel umfang"><h3>🧶 Umfang – einmal rundherum</h3><p class="f"><span class="inhalt">u = 2 · a + 2 · b</span></p><p><span class="inhalt">Beispiel: a = 4 cm, b = 7 cm → u = 8 + 14 = 22 cm</span></p></div>
+    <div class="formel flaeche"><h3>🎨 Flächeninhalt – wie viel passt hinein?</h3><p class="f"><span class="inhalt">A = e · f : 2</span></p><p><span class="inhalt">✂️ Rechteck-Trick: Ergänzen: Rechteck e × f um den Drachen legen. Die 4 Dreiecke außen sind genauso groß wie die 4 innen → Drachen = Hälfte.</span></p><p><span class="inhalt">Beispiel: e = 6 cm, f = 9 cm → A = 6 · 9 : 2 = 27 cm²</span></p></div>
+  </div>
+  <table class="felder unten">
+    <tr><th><span class="fi">🏠</span> Im Alltag</th><td><span class="inhalt">Flugdrachen, Sonnensegel, manche Anhänger und Ohrringe, Pfeilspitzen in Logos</span></td></tr>
+    <tr><th><span class="fi">👪</span> Verwandt mit</th><td><span class="inhalt">Oberbegriff von Raute und Quadrat</span></td></tr>
+  </table>
+</section>
+</main>
+<script>
+  (function () {
+    const b = document.body, q = new URLSearchParams(location.search);
+    const setze = l => { b.classList.toggle("luecke", l); document.getElementById("leer").classList.toggle("an", l); document.getElementById("voll").classList.toggle("an", !l); };
+    document.getElementById("voll").onclick = () => setze(false);
+    document.getElementById("leer").onclick = () => setze(true);
+    const nur = document.getElementById("nur");
+    const filter = () => document.querySelectorAll(".steckbrief").forEach((s, i) => s.style.display = !nur.value || nur.value == i + 1 ? "" : "none");
+    nur.onchange = filter;
+    if (q.get("figur")) { nur.value = q.get("figur"); filter(); }
+    setze(q.has("luecke"));
+  })();
+</script>
+</body>
+</html>
