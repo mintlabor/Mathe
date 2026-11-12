@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Exit-Ticket: Das Parallelogramm – Stunde 7</title>
+<link rel="stylesheet" href="../../../../schueler.css">
+</head>
+<body>
+<header><div class="inner">
+  <div class="pfad"><a href="./">🗺️ Lernlandkarte</a> › <a href="stunde-07.html">Stunde 7</a> › Exit-Ticket</div>
+  <h1>🎫 Exit-Ticket</h1>
+  <p class="untertitel">Stunde 7 · Das Parallelogramm</p>
+</div></header>
+<main>
+  <div id="exit"></div>
+</main>
+<script type="application/json" id="exit-daten">
+{
+  "titel": "Das Parallelogramm",
+  "stunde": 7,
+  "lernziele": [
+    {
+      "text": "Ich kann ein Parallelogramm durch Zerlegen in ein Rechteck verwandeln.",
+      "foerdern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ● Basis",
+      "fordern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ●●● Profi"
+    },
+    {
+      "text": "Ich kann den Flächeninhalt mit A = g · h berechnen.",
+      "foerdern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ● Basis",
+      "fordern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ●●● Profi"
+    },
+    {
+      "text": "Ich kann erklären, warum man die Höhe und nicht die schräge Seite nimmt.",
+      "foerdern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ● Basis",
+      "fordern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ●●● Profi"
+    }
+  ],
+  "fehlertypen": {
+    "schraeg": "Schräge Seite statt Höhe genommen",
+    "plus": "Addiert statt multipliziert",
+    "halb": "Durch 2 geteilt (Dreiecksformel)",
+    "trick": "Rechteck-Trick nicht verstanden"
+  },
+  "fragen": [
+    {
+      "lz": 1,
+      "typ": "zahl",
+      "frage": "Parallelogramm: g = 8 cm, h = 5 cm. Wie groß ist A?",
+      "loesung": 40,
+      "erklaerung": "A = 8 · 5 = 40 cm²",
+      "einheit": "cm²",
+      "fehler": [
+        {
+          "wert": 13,
+          "id": "plus"
+        },
+        {
+          "wert": 20,
+          "id": "halb"
+        },
+        {
+          "wert": 26,
+          "id": "plus"
+        }
+      ]
+    },
+    {
+      "lz": 2,
+      "typ": "zahl",
+      "frage": "Parallelogramm: g = 10 cm, schräge Seite b = 6 cm, h = 4 cm. Wie groß ist A?",
+      "loesung": 40,
+      "erklaerung": "A = g · h = 10 · 4 = 40 cm²",
+      "einheit": "cm²",
+      "fehler": [
+        {
+          "wert": 60,
+          "id": "schraeg"
+        },
+        {
+          "wert": 240,
+          "id": "schraeg"
+        },
+        {
+          "wert": 20,
+          "id": "halb"
+        }
+      ]
+    },
+    {
+      "lz": 0,
+      "typ": "auswahl",
+      "frage": "Was passiert beim Rechteck-Trick mit dem Parallelogramm?",
+      "optionen": [
+        "Ein Dreieck wird abgeschnitten und auf der anderen Seite angelegt.",
+        "Die Figur wird verdoppelt.",
+        "Die Ecken werden abgeschnitten und weggeworfen."
+      ],
+      "loesung": 0,
+      "erklaerung": "So entsteht ein Rechteck mit g und h – gleicher Flächeninhalt.",
+      "fehler": {
+        "1": "trick",
+        "2": "trick"
+      }
+    },
+    {
+      "lz": 1,
+      "typ": "zahl",
+      "frage": "Parallelogramm: g = 7,5 cm, h = 4 cm. Wie groß ist A?",
+      "loesung": 30,
+      "erklaerung": "A = 7,5 · 4 = 30 cm²",
+      "einheit": "cm²",
+      "fehler": [
+        {
+          "wert": 11.5,
+          "id": "plus"
+        },
+        {
+          "wert": 15,
+          "id": "halb"
+        }
+      ]
+    }
+  ]
+}
+</script>
+<script src="../../../../qr.js"></script>
+<script src="../../../../exit-ticket.js"></script>
+</body>
+</html>

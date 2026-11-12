@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Exit-Ticket: Projekt: Unser neuer Pausenhof – Stunde 17</title>
+<link rel="stylesheet" href="../../../../schueler.css">
+</head>
+<body>
+<header><div class="inner">
+  <div class="pfad"><a href="./">🗺️ Lernlandkarte</a> › <a href="stunde-17.html">Stunde 17</a> › Exit-Ticket</div>
+  <h1>🎫 Exit-Ticket</h1>
+  <p class="untertitel">Stunde 17 · Projekt: Unser neuer Pausenhof</p>
+</div></header>
+<main>
+  <div id="exit"></div>
+</main>
+<script type="application/json" id="exit-daten">
+{
+  "titel": "Projekt: Unser neuer Pausenhof",
+  "stunde": 17,
+  "lernziele": [
+    {
+      "text": "Ich kann einen Plan mit verschiedenen Figuren maßstabsgerecht zeichnen.",
+      "foerdern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ● Basis",
+      "fordern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ●●● Profi"
+    },
+    {
+      "text": "Ich kann Flächeninhalte und Umfänge in einem Sachzusammenhang berechnen.",
+      "foerdern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ● Basis",
+      "fordern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ●●● Profi"
+    },
+    {
+      "text": "Ich kann mit Flächen und Längen Kosten berechnen.",
+      "foerdern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ● Basis",
+      "fordern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ●●● Profi"
+    }
+  ],
+  "fehlertypen": {
+    "massstab": "Maßstab falsch angewendet",
+    "flaeche": "Flächeninhalt falsch berechnet",
+    "kosten": "Kosten mit der falschen Größe (Umfang/Fläche) berechnet"
+  },
+  "fragen": [
+    {
+      "lz": 0,
+      "typ": "zahl",
+      "frage": "Maßstab 1 : 100: Auf dem Plan sind es 4,5 cm. Wie viele Meter sind das in Wirklichkeit?",
+      "loesung": 4.5,
+      "erklaerung": "1 cm ≙ 1 m → 4,5 m",
+      "einheit": "m",
+      "fehler": [
+        {
+          "wert": 450,
+          "id": "massstab"
+        },
+        {
+          "wert": 45,
+          "id": "massstab"
+        }
+      ]
+    },
+    {
+      "lz": 1,
+      "typ": "zahl",
+      "frage": "Drachen-Beet mit e = 4 m und f = 6 m. Wie viele m² Rasen braucht man?",
+      "loesung": 12,
+      "erklaerung": "4 · 6 : 2 = 12 m²",
+      "einheit": "m²",
+      "fehler": [
+        {
+          "wert": 24,
+          "id": "flaeche"
+        },
+        {
+          "wert": 20,
+          "id": "kosten"
+        }
+      ]
+    },
+    {
+      "lz": 2,
+      "typ": "zahl",
+      "frage": "Rollrasen kostet 8 € pro m². Was kostet der Rasen für 12 m²?",
+      "loesung": 96,
+      "erklaerung": "12 · 8 € = 96 €",
+      "einheit": "€",
+      "fehler": [
+        {
+          "wert": 192,
+          "id": "flaeche"
+        }
+      ]
+    },
+    {
+      "lz": 2,
+      "typ": "zahl",
+      "frage": "Rasenkante um ein Rauten-Beet mit a = 3 m kostet 4 € pro Meter. Wie teuer ist sie?",
+      "loesung": 48,
+      "erklaerung": "u = 4 · 3 m = 12 m → 12 · 4 € = 48 €",
+      "einheit": "€",
+      "fehler": [
+        {
+          "wert": 36,
+          "id": "kosten"
+        },
+        {
+          "wert": 12,
+          "id": "kosten"
+        },
+        {
+          "wert": 24,
+          "id": "kosten"
+        }
+      ]
+    }
+  ]
+}
+</script>
+<script src="../../../../qr.js"></script>
+<script src="../../../../exit-ticket.js"></script>
+</body>
+</html>

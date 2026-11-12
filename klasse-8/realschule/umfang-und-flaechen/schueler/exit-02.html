@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Exit-Ticket: Steckbriefe: Stammgruppen – Stunde 2</title>
+<link rel="stylesheet" href="../../../../schueler.css">
+</head>
+<body>
+<header><div class="inner">
+  <div class="pfad"><a href="./">🗺️ Lernlandkarte</a> › <a href="stunde-02.html">Stunde 2</a> › Exit-Ticket</div>
+  <h1>🎫 Exit-Ticket</h1>
+  <p class="untertitel">Stunde 2 · Steckbriefe: Stammgruppen</p>
+</div></header>
+<main>
+  <div id="exit"></div>
+</main>
+<script type="application/json" id="exit-daten">
+{
+  "titel": "Steckbriefe: Stammgruppen",
+  "stunde": 2,
+  "lernziele": [
+    {
+      "text": "Ich kann meine Expertenfigur mit Fachwörtern erklären.",
+      "foerdern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ● Basis",
+      "fordern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ●●● Profi"
+    },
+    {
+      "text": "Ich kann die fünf Figuren an ihren Eigenschaften unterscheiden.",
+      "foerdern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ● Basis",
+      "fordern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ●●● Profi"
+    },
+    {
+      "text": "Ich kann ein Figurenrätsel lösen und meine Lösung begründen.",
+      "foerdern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ● Basis",
+      "fordern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ●●● Profi"
+    }
+  ],
+  "fehlertypen": {
+    "raute_drachen": "Raute und Drachen verwechselt (Anzahl der Symmetrieachsen)",
+    "parallel": "Parallele Seiten nicht beachtet",
+    "winkel": "Winkelsumme im Dreieck verwechselt",
+    "symmetrie": "Symmetrieachsen falsch gezählt"
+  },
+  "fragen": [
+    {
+      "lz": 1,
+      "typ": "auswahl",
+      "frage": "Vier gleich lange Seiten, aber keine rechten Winkel. Welche Figur ist das?",
+      "optionen": [
+        "Raute",
+        "Quadrat",
+        "Drachen",
+        "Trapez"
+      ],
+      "loesung": 0,
+      "erklaerung": "Raute. Mit rechten Winkeln wäre es ein Quadrat.",
+      "fehler": {
+        "1": "raute_drachen",
+        "2": "raute_drachen",
+        "3": "parallel"
+      }
+    },
+    {
+      "lz": 1,
+      "typ": "auswahl",
+      "frage": "Nur zwei Seiten sind parallel, die anderen beiden nicht. Welche Figur ist das?",
+      "optionen": [
+        "Trapez",
+        "Parallelogramm",
+        "Raute"
+      ],
+      "loesung": 0,
+      "erklaerung": "Genau ein Paar paralleler Seiten: Trapez.",
+      "fehler": {
+        "1": "parallel",
+        "2": "parallel"
+      }
+    },
+    {
+      "lz": 2,
+      "typ": "auswahl",
+      "frage": "Rätsel: Meine Diagonalen stehen senkrecht. Ich habe genau eine Symmetrieachse. Wer bin ich?",
+      "optionen": [
+        "Raute",
+        "Drachen",
+        "Quadrat"
+      ],
+      "loesung": 1,
+      "erklaerung": "Drachen. Raute (2 Achsen) und Quadrat (4 Achsen) haben mehr Achsen.",
+      "fehler": {
+        "0": "raute_drachen",
+        "2": "symmetrie"
+      }
+    },
+    {
+      "lz": 0,
+      "typ": "zahl",
+      "frage": "Ein Dreieck hat zwei Winkel mit 50° und 60°. Wie groß ist der dritte Winkel?",
+      "loesung": 70,
+      "erklaerung": "180° − 50° − 60° = 70°",
+      "einheit": "°",
+      "fehler": [
+        {
+          "wert": 250,
+          "id": "winkel"
+        },
+        {
+          "wert": 110,
+          "id": "winkel"
+        }
+      ]
+    }
+  ]
+}
+</script>
+<script src="../../../../qr.js"></script>
+<script src="../../../../exit-ticket.js"></script>
+</body>
+</html>

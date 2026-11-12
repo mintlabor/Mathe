@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Üben: Eine Formel für alle? – Stunde 12</title>
+<link rel="stylesheet" href="../../../../schueler.css">
+</head>
+<body>
+<header><div class="inner">
+  <div class="pfad"><a href="./">🗺️ Lernlandkarte</a> › Stunde 12</div>
+  <h1>Üben: Eine Formel für alle?</h1>
+  <p class="untertitel">Stunde 12 · Die Flächenformeln hängen zusammen</p>
+</div></header>
+<main>
+  <div class="box">
+    <strong>📘 Erinnerung</strong><br>
+    Rechteck a · b · Parallelogramm g · h · Dreieck g · h : 2 · Trapez (a + c) : 2 · h · Raute/Drachen e · f : 2 · Einheiten angleichen!
+  </div>
+  <div class="box">
+    <strong>📚 Wörter für heute:</strong> Formel · Sonderfall · Trapezformel · Einheiten angleichen · überschlagen · sinnvoll<br>
+    <span class="klein">💬 So kannst du es aufschreiben: „Ich habe so gerechnet: …, weil …“</span>
+  </div>
+  <div id="ziele"></div>
+
+  <h2>📖 Aufgaben aus dem Buch</h2>
+  <div class="box buch">
+    <h3>Parallelo 8</h3>
+    <ul>
+      <li>● Basis: <span class="platzhalter">[BUCH: S. __ Nr. __]</span></li>
+      <li>●● Standard: <span class="platzhalter">[BUCH: S. __ Nr. __]</span></li>
+      <li>●●● Profi: <span class="platzhalter">[BUCH: S. __ Nr. __]</span></li>
+    </ul>
+    <p class="klein">Rechne im Heft. Unten findest du Aufgaben mit Tipps und Selbstkontrolle.</p>
+  </div>
+
+  <h2>Aufgaben</h2>
+  <div id="niveaus"></div>
+  <div id="fortschritt"></div>
+  <div id="aufgaben"></div>
+  <h2>🎨 Werde kreativ</h2>
+  <div class="box">
+    Gestalte ein Lernplakat „Formel-Landkarte“ mit Pfeilen und kleinen Herleitungsbildern.
+    <span class="klein">Profi-Idee: Baue absichtlich einen Fehler ein. Findet ihn dein Partner?</span>
+  </div>
+  <h2>Wie sicher bist du jetzt?</h2>
+  <div id="ampel"></div>
+  <p><a href="exit-12.html">🎫 Weiter zum Exit-Ticket →</a> · <a href="./">← Lernlandkarte</a></p>
+</main>
+<script>
+window.SEITE = {
+  "speicher": "mathe-k8-rs-uf",
+  "stunde": 12,
+  "lernziele": [
+    "erklären, wie die Flächenformeln zusammenhängen",
+    "für eine Figur die passende Formel auswählen",
+    "prüfen, ob ein Ergebnis sinnvoll ist"
+  ],
+  "ichKann": [
+    "Ich kann erklären, wie die Flächenformeln zusammenhängen.",
+    "Ich kann für eine Figur die passende Formel auswählen.",
+    "Ich kann prüfen, ob ein Ergebnis sinnvoll ist."
+  ],
+  "aufgaben": [
+    {
+      "niveau": 1,
+      "typ": "auswahl",
+      "frage": "Welche Formel passt zum Drachen?",
+      "loesung": 2,
+      "tipps": [
+        "Diagonalen."
+      ],
+      "erklaerung": "A = e · f : 2",
+      "optionen": [
+        "A = g · h",
+        "A = (a + c) : 2 · h",
+        "A = e · f : 2"
+      ]
+    },
+    {
+      "niveau": 1,
+      "typ": "zahl",
+      "frage": "Trapezformel mit a = 8 cm, c = 0 cm, h = 5 cm. A = ?",
+      "loesung": 20,
+      "tipps": [
+        "(8 + 0) : 2 = 4"
+      ],
+      "erklaerung": "A = 4 · 5 = 20 cm² – wie beim Dreieck 8 · 5 : 2",
+      "einheit": "cm²"
+    },
+    {
+      "niveau": 2,
+      "typ": "zahl",
+      "frage": "Dreieck: g = 3 m, h = 80 cm. Wie groß ist A in m²?",
+      "loesung": 1.2,
+      "tipps": [
+        "80 cm = 0,8 m"
+      ],
+      "erklaerung": "A = 3 · 0,8 : 2 = 1,2 m²",
+      "einheit": "m²"
+    },
+    {
+      "niveau": 2,
+      "typ": "auswahl",
+      "frage": "Ein Trapez mit c = a ist ein …",
+      "loesung": 0,
+      "tipps": [
+        "Zwei Paare paralleler, gleich langer Seiten."
+      ],
+      "erklaerung": "Parallelogramm.",
+      "optionen": [
+        "Parallelogramm",
+        "Dreieck",
+        "Drachen"
+      ]
+    },
+    {
+      "niveau": 3,
+      "typ": "zahl",
+      "frage": "Parallelogramm: g = 1,5 m, h = 60 cm. A in cm²?",
+      "loesung": 9000,
+      "tipps": [
+        "1,5 m = 150 cm"
+      ],
+      "erklaerung": "A = 150 · 60 = 9000 cm²",
+      "einheit": "cm²"
+    },
+    {
+      "niveau": 3,
+      "typ": "auswahl",
+      "frage": "Welches Ergebnis ist für ein dreieckiges Schulhof-Beet sinnvoll?",
+      "loesung": 1,
+      "tipps": [
+        "Ein Klassenraum hat etwa 60 m²."
+      ],
+      "erklaerung": "Etwa 6 m² ist realistisch.",
+      "optionen": [
+        "0,06 m²",
+        "6 m²",
+        "6000 m²"
+      ]
+    }
+  ]
+};
+</script>
+<script src="../../../../schueler.js"></script>
+</body>
+</html>

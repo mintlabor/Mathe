@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Exit-Ticket: Zusammengesetzte Figuren – Stunde 13</title>
+<link rel="stylesheet" href="../../../../schueler.css">
+</head>
+<body>
+<header><div class="inner">
+  <div class="pfad"><a href="./">🗺️ Lernlandkarte</a> › <a href="stunde-13.html">Stunde 13</a> › Exit-Ticket</div>
+  <h1>🎫 Exit-Ticket</h1>
+  <p class="untertitel">Stunde 13 · Zusammengesetzte Figuren</p>
+</div></header>
+<main>
+  <div id="exit"></div>
+</main>
+<script type="application/json" id="exit-daten">
+{
+  "titel": "Zusammengesetzte Figuren",
+  "stunde": 13,
+  "lernziele": [
+    {
+      "text": "Ich kann eine zusammengesetzte Figur in bekannte Teilfiguren zerlegen.",
+      "foerdern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ● Basis",
+      "fordern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ●●● Profi"
+    },
+    {
+      "text": "Ich kann Flächeninhalte durch Zerlegen oder Ergänzen berechnen.",
+      "foerdern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ● Basis",
+      "fordern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ●●● Profi"
+    },
+    {
+      "text": "Ich kann meinen Rechenweg übersichtlich aufschreiben.",
+      "foerdern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ● Basis",
+      "fordern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ●●● Profi"
+    }
+  ],
+  "fehlertypen": {
+    "aussen": "Umschließendes Rechteck ohne Abzug genommen",
+    "abziehen": "Beim Ergänzen falsch abgezogen",
+    "teil": "Teilfigur vergessen",
+    "weg": "Rechenweg nicht nachvollziehbar"
+  },
+  "fragen": [
+    {
+      "lz": 1,
+      "typ": "zahl",
+      "frage": "L-förmiger Raum: Rechteck 6 m × 4 m und angebautes Rechteck 3 m × 2 m. Wie groß ist A?",
+      "loesung": 30,
+      "erklaerung": "24 m² + 6 m² = 30 m²",
+      "einheit": "m²",
+      "fehler": [
+        {
+          "wert": 24,
+          "id": "teil"
+        },
+        {
+          "wert": 36,
+          "id": "aussen"
+        },
+        {
+          "wert": 18,
+          "id": "abziehen"
+        }
+      ]
+    },
+    {
+      "lz": 1,
+      "typ": "zahl",
+      "frage": "Rechteck 10 m × 6 m, aus einer Ecke ist ein rechtwinkliges Dreieck (Katheten 4 m und 3 m) abgetrennt. Wie groß ist die Restfläche?",
+      "loesung": 54,
+      "erklaerung": "60 − 4 · 3 : 2 = 60 − 6 = 54 m²",
+      "einheit": "m²",
+      "fehler": [
+        {
+          "wert": 48,
+          "id": "abziehen"
+        },
+        {
+          "wert": 60,
+          "id": "aussen"
+        },
+        {
+          "wert": 66,
+          "id": "abziehen"
+        }
+      ]
+    },
+    {
+      "lz": 0,
+      "typ": "auswahl",
+      "frage": "Ein Haus-Giebel besteht aus Rechteck und Dreieck. Was machst du zuerst?",
+      "optionen": [
+        "In Rechteck und Dreieck zerlegen und einzeln berechnen",
+        "Alle Seiten multiplizieren",
+        "Den Umfang berechnen"
+      ],
+      "loesung": 0,
+      "erklaerung": "Zerlegen in bekannte Teilfiguren.",
+      "fehler": {
+        "1": "aussen",
+        "2": "weg"
+      }
+    },
+    {
+      "lz": 2,
+      "typ": "auswahl",
+      "frage": "Welcher Rechenweg ist am besten nachvollziehbar?",
+      "optionen": [
+        "A₁ = 32 m², A₂ = 12 m², A = A₁ + A₂ = 44 m²",
+        "32 + 12 = 44",
+        "44 m²"
+      ],
+      "loesung": 0,
+      "erklaerung": "Bezeichnungen zeigen, woher jede Zahl kommt.",
+      "fehler": {
+        "1": "weg",
+        "2": "weg"
+      }
+    }
+  ]
+}
+</script>
+<script src="../../../../qr.js"></script>
+<script src="../../../../exit-ticket.js"></script>
+</body>
+</html>

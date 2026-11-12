@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Üben: Das Parallelogramm – Stunde 7</title>
+<link rel="stylesheet" href="../../../../schueler.css">
+</head>
+<body>
+<header><div class="inner">
+  <div class="pfad"><a href="./">🗺️ Lernlandkarte</a> › Stunde 7</div>
+  <h1>Üben: Das Parallelogramm</h1>
+  <p class="untertitel">Stunde 7 · Aus dem Parallelogramm wird ein Rechteck</p>
+</div></header>
+<main>
+  <div class="box">
+    <strong>📘 Erinnerung</strong><br>
+    Parallelogramm: A = g · h (nicht die schräge Seite!) · Rechteck-Trick: Dreieck abschneiden, verschieben · u = 2a + 2b
+  </div>
+  <div class="box">
+    <strong>📚 Wörter für heute:</strong> Parallelogramm · Grundseite g · Höhe h · Flächeninhalt · zerlegen · verschieben · flächengleich<br>
+    <span class="klein">💬 So kannst du es aufschreiben: „Ich habe so gerechnet: …, weil …“</span>
+  </div>
+  <div id="ziele"></div>
+
+  <h2>📖 Aufgaben aus dem Buch</h2>
+  <div class="box buch">
+    <h3>Parallelo 8</h3>
+    <ul>
+      <li>● Basis: <span class="platzhalter">[BUCH: S. __ Nr. __]</span></li>
+      <li>●● Standard: <span class="platzhalter">[BUCH: S. __ Nr. __]</span></li>
+      <li>●●● Profi: <span class="platzhalter">[BUCH: S. __ Nr. __]</span></li>
+    </ul>
+    <p class="klein">Rechne im Heft. Unten findest du Aufgaben mit Tipps und Selbstkontrolle.</p>
+  </div>
+
+  <h2>Aufgaben</h2>
+  <div id="niveaus"></div>
+  <div id="fortschritt"></div>
+  <div id="aufgaben"></div>
+  <h2>🎨 Werde kreativ</h2>
+  <div class="box">
+    Schneide aus einem Rechteck 8 cm × 4 cm drei verschiedene Parallelogramme (gleicher Flächeninhalt). Klebe sie ins Heft und beschrifte g und h.
+    <span class="klein">Profi-Idee: Baue absichtlich einen Fehler ein. Findet ihn dein Partner?</span>
+  </div>
+  <h2>Wie sicher bist du jetzt?</h2>
+  <div id="ampel"></div>
+  <p><a href="exit-07.html">🎫 Weiter zum Exit-Ticket →</a> · <a href="./">← Lernlandkarte</a></p>
+</main>
+<script>
+window.SEITE = {
+  "speicher": "mathe-k8-rs-uf",
+  "stunde": 7,
+  "lernziele": [
+    "ein Parallelogramm durch Zerlegen in ein Rechteck verwandeln",
+    "den Flächeninhalt mit A = g · h berechnen",
+    "erklären, warum man die Höhe und nicht die schräge Seite nimmt"
+  ],
+  "ichKann": [
+    "Ich kann ein Parallelogramm durch Zerlegen in ein Rechteck verwandeln.",
+    "Ich kann den Flächeninhalt mit A = g · h berechnen.",
+    "Ich kann erklären, warum man die Höhe und nicht die schräge Seite nimmt."
+  ],
+  "aufgaben": [
+    {
+      "niveau": 1,
+      "typ": "zahl",
+      "frage": "Parallelogramm: g = 8 cm, h = 5 cm. A = ?",
+      "loesung": 40,
+      "tipps": [
+        "A = g · h"
+      ],
+      "erklaerung": "A = 8 cm · 5 cm = 40 cm²",
+      "einheit": "cm²"
+    },
+    {
+      "niveau": 1,
+      "typ": "zahl",
+      "frage": "Parallelogramm: g = 7,5 cm, h = 4 cm. A = ?",
+      "loesung": 30,
+      "tipps": [
+        "7,5 · 4"
+      ],
+      "erklaerung": "A = 30 cm²",
+      "einheit": "cm²"
+    },
+    {
+      "niveau": 2,
+      "typ": "zahl",
+      "frage": "Parallelogramm: g = 10 cm, b = 6 cm, h = 4 cm. A = ?",
+      "loesung": 40,
+      "tipps": [
+        "Welche Strecke ist die Höhe?"
+      ],
+      "erklaerung": "A = 10 · 4 = 40 cm² (b wird nicht gebraucht)",
+      "einheit": "cm²"
+    },
+    {
+      "niveau": 2,
+      "typ": "auswahl",
+      "frage": "🔍 Fehler finden: g = 9 m, b = 5 m, h = 3 m. Lea: A = 9 · 5 = 45 m². Max: A = 9 · 3 = 27 m². Wer hat recht?",
+      "loesung": 1,
+      "tipps": [
+        "Rechteck-Trick: Welche Seiten hat das Rechteck?"
+      ],
+      "erklaerung": "Max. Lea nimmt die schräge Seite.",
+      "optionen": [
+        "Lea",
+        "Max",
+        "beide"
+      ]
+    },
+    {
+      "niveau": 3,
+      "typ": "zahl",
+      "frage": "Ein Parallelogramm hat g = 12 cm und h = 5 cm. Wie hoch ist die Höhe auf der Seite b = 10 cm?",
+      "loesung": 6,
+      "tipps": [
+        "A bleibt gleich: 60 cm² = 10 cm · h"
+      ],
+      "erklaerung": "A = 60 cm², h_b = 60 : 10 = 6 cm",
+      "einheit": "cm"
+    },
+    {
+      "niveau": 3,
+      "typ": "zahl",
+      "frage": "Ein Feld ist ein Parallelogramm mit g = 200 m und h = 150 m. Wie viel Hektar?",
+      "loesung": 3,
+      "tipps": [
+        "Erst m², dann : 10 000"
+      ],
+      "erklaerung": "200 · 150 = 30 000 m² = 3 ha",
+      "einheit": "ha"
+    }
+  ]
+};
+</script>
+<script src="../../../../schueler.js"></script>
+</body>
+</html>

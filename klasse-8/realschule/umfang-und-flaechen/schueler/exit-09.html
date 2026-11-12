@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Exit-Ticket: Jede Seite kann Grundseite sein – Stunde 9</title>
+<link rel="stylesheet" href="../../../../schueler.css">
+</head>
+<body>
+<header><div class="inner">
+  <div class="pfad"><a href="./">🗺️ Lernlandkarte</a> › <a href="stunde-09.html">Stunde 9</a> › Exit-Ticket</div>
+  <h1>🎫 Exit-Ticket</h1>
+  <p class="untertitel">Stunde 9 · Jede Seite kann Grundseite sein</p>
+</div></header>
+<main>
+  <div id="exit"></div>
+</main>
+<script type="application/json" id="exit-daten">
+{
+  "titel": "Jede Seite kann Grundseite sein",
+  "stunde": 9,
+  "lernziele": [
+    {
+      "text": "Ich kann zu jeder Seite die passende Höhe zeichnen und messen.",
+      "foerdern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ● Basis",
+      "fordern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ●●● Profi"
+    },
+    {
+      "text": "Ich kann den Flächeninhalt auch bei stumpfwinkligen Dreiecken berechnen.",
+      "foerdern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ● Basis",
+      "fordern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ●●● Profi"
+    },
+    {
+      "text": "Ich kann durch Messen in einer Zeichnung einen Flächeninhalt bestimmen.",
+      "foerdern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ● Basis",
+      "fordern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ●●● Profi"
+    }
+  ],
+  "fehlertypen": {
+    "paar": "Grundseite und Höhe passen nicht zusammen",
+    "halb": "Nicht durch 2 geteilt",
+    "aussen": "Höhe außerhalb nicht verwendet",
+    "mess": "Messungenauigkeit nicht beachtet"
+  },
+  "fragen": [
+    {
+      "lz": 0,
+      "typ": "auswahl",
+      "frage": "Die Grundseite ist g = 10 cm. Welche Höhe gehört dazu?",
+      "optionen": [
+        "Die senkrechte Strecke von der gegenüberliegenden Ecke auf g",
+        "Die längste andere Seite",
+        "Irgendeine Höhe des Dreiecks"
+      ],
+      "loesung": 0,
+      "erklaerung": "Die zugehörige Höhe steht senkrecht auf g.",
+      "fehler": {
+        "1": "paar",
+        "2": "paar"
+      }
+    },
+    {
+      "lz": 1,
+      "typ": "zahl",
+      "frage": "Stumpfwinkliges Dreieck: g = 5 cm, Höhe (außen) h = 4 cm. Wie groß ist A?",
+      "loesung": 10,
+      "erklaerung": "A = 5 · 4 : 2 = 10 cm²",
+      "einheit": "cm²",
+      "fehler": [
+        {
+          "wert": 20,
+          "id": "halb"
+        },
+        {
+          "wert": 9,
+          "id": "paar"
+        }
+      ]
+    },
+    {
+      "lz": 0,
+      "typ": "zahl",
+      "frage": "Dreieck: Seite 12 cm mit Höhe 5 cm. Wie lang ist die Höhe auf der Seite 10 cm?",
+      "loesung": 6,
+      "erklaerung": "A = 30 cm² → h = 2 · 30 : 10 = 6 cm",
+      "einheit": "cm",
+      "fehler": [
+        {
+          "wert": 5,
+          "id": "paar"
+        },
+        {
+          "wert": 3,
+          "id": "halb"
+        }
+      ]
+    },
+    {
+      "lz": 2,
+      "typ": "auswahl",
+      "frage": "Mia misst A = 24,3 cm², Tim 23,8 cm² am selben Dreieck. Was stimmt?",
+      "optionen": [
+        "Beide können richtig gemessen haben – Messungenauigkeit.",
+        "Einer muss falsch liegen.",
+        "Das Dreieck hat zwei Flächeninhalte."
+      ],
+      "loesung": 0,
+      "erklaerung": "Gemessene Längen sind gerundet, daher weichen Ergebnisse leicht ab.",
+      "fehler": {
+        "1": "mess",
+        "2": "mess"
+      }
+    }
+  ]
+}
+</script>
+<script src="../../../../qr.js"></script>
+<script src="../../../../exit-ticket.js"></script>
+</body>
+</html>

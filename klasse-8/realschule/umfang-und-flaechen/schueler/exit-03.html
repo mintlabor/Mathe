@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Exit-Ticket: Das Haus der Vierecke – Stunde 3</title>
+<link rel="stylesheet" href="../../../../schueler.css">
+</head>
+<body>
+<header><div class="inner">
+  <div class="pfad"><a href="./">🗺️ Lernlandkarte</a> › <a href="stunde-03.html">Stunde 3</a> › Exit-Ticket</div>
+  <h1>🎫 Exit-Ticket</h1>
+  <p class="untertitel">Stunde 3 · Das Haus der Vierecke</p>
+</div></header>
+<main>
+  <div id="exit"></div>
+</main>
+<script type="application/json" id="exit-daten">
+{
+  "titel": "Das Haus der Vierecke",
+  "stunde": 3,
+  "lernziele": [
+    {
+      "text": "Ich kann Vierecke im Haus der Vierecke anordnen.",
+      "foerdern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ● Basis",
+      "fordern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ●●● Profi"
+    },
+    {
+      "text": "Ich kann begründen, warum ein besonderes Viereck auch zu einer allgemeineren Art gehört.",
+      "foerdern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ● Basis",
+      "fordern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ●●● Profi"
+    },
+    {
+      "text": "Ich kann Vierecke an ihren Eigenschaften erkennen.",
+      "foerdern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ● Basis",
+      "fordern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ●●● Profi"
+    }
+  ],
+  "fehlertypen": {
+    "umkehr": "„Jedes A ist ein B“ mit „Jedes B ist ein A“ verwechselt",
+    "haus": "Sonderfälle im Haus der Vierecke nicht erkannt",
+    "eigenschaft": "Eigenschaft der Figur falsch zugeordnet"
+  },
+  "fragen": [
+    {
+      "lz": 1,
+      "typ": "auswahl",
+      "frage": "Welche Aussage stimmt?",
+      "optionen": [
+        "Jedes Quadrat ist ein Rechteck.",
+        "Jedes Rechteck ist ein Quadrat.",
+        "Jedes Trapez ist ein Parallelogramm."
+      ],
+      "loesung": 0,
+      "erklaerung": "Das Quadrat hat vier rechte Winkel – also ist es ein Rechteck. Umgekehrt nicht.",
+      "fehler": {
+        "1": "umkehr",
+        "2": "umkehr"
+      }
+    },
+    {
+      "lz": 0,
+      "typ": "auswahl",
+      "frage": "Welche Vierecke sind Sonderfälle des Parallelogramms?",
+      "optionen": [
+        "Rechteck, Raute, Quadrat",
+        "Trapez und Drachen",
+        "nur das Quadrat"
+      ],
+      "loesung": 0,
+      "erklaerung": "Rechteck, Raute und Quadrat haben zwei Paare paralleler Seiten.",
+      "fehler": {
+        "1": "haus",
+        "2": "haus"
+      }
+    },
+    {
+      "lz": 2,
+      "typ": "auswahl",
+      "frage": "Vier gleich lange Seiten, Diagonalen senkrecht, aber nicht gleich lang. Was ist es?",
+      "optionen": [
+        "Raute",
+        "Quadrat",
+        "Rechteck",
+        "Trapez"
+      ],
+      "loesung": 0,
+      "erklaerung": "Raute. Beim Quadrat wären die Diagonalen gleich lang.",
+      "fehler": {
+        "1": "eigenschaft",
+        "2": "eigenschaft",
+        "3": "eigenschaft"
+      }
+    },
+    {
+      "lz": 1,
+      "typ": "auswahl",
+      "frage": "Ist ein Quadrat ein Drachen?",
+      "optionen": [
+        "Ja, je zwei benachbarte Seiten sind gleich lang.",
+        "Nein, ein Drachen ist nie eckig.",
+        "Nein, ein Drachen hat keine rechten Winkel."
+      ],
+      "loesung": 0,
+      "erklaerung": "Ja – das Quadrat hat alle Drachen-Eigenschaften.",
+      "fehler": {
+        "1": "haus",
+        "2": "eigenschaft"
+      }
+    }
+  ]
+}
+</script>
+<script src="../../../../qr.js"></script>
+<script src="../../../../exit-ticket.js"></script>
+</body>
+</html>

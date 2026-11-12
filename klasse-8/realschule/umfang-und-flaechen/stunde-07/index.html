@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Stunde 7: Das Parallelogramm – Umfang und Flächen</title>
+<link rel="stylesheet" href="../../../../praesentation.css">
+<style>
+  .platzhalter { background: #fff3bf; border-radius: 4px; padding: 0 .3rem; font-family: ui-monospace, monospace; font-size: .9em; }
+  .exit-qr { display: flex; gap: 1.5rem; align-items: center; }
+  .exit-qr [data-qr] svg { width: 230px; height: 230px; display: block; border-radius: 8px; }
+  .skizze { width: min(100%, 560px); height: auto; max-height: 30vh; display: block; margin: .3rem auto; flex-shrink: 0; }
+</style>
+</head>
+<body data-phasen='[["Abrufen", 4], ["Problem", 7], ["Erarbeitung", 12], ["Ideen vergleichen", 5], ["Sicherung", 6], ["Übung", 7], ["Reflexion", 4]]'>
+
+<div class="leiste">
+  <div class="pfad"><a href="../../../../">Start</a> › <a href="../../../">Klasse 8</a> › <a href="../../">Realschule</a> › <a href="../">Umfang und Flächen</a> › Stunde 7</div>
+</div>
+
+<aside class="wortspeicher"
+  data-woerter='["Parallelogramm", "Grundseite g", "Höhe h", "Flächeninhalt", "zerlegen", "verschieben", "flächengleich"]'
+  data-saetze='["Ich vermute, dass …", "Ich habe so gerechnet: …", "Das sieht man daran, dass …", "Ich stimme zu / nicht zu, weil …"]'></aside>
+
+<div class="buehne">
+
+  <!-- 1 · ABRUFEN -->
+  <section class="folie" data-phase="Abrufen">
+    <div class="kennung">Umfang und Flächen · Stunde 7 · Warm-up</div>
+    <h2>Was weißt du noch?</h2>
+    <p style="margin-top:0">Exit-Ticket von letzter Stunde: 3 m² = ? dm²</p>
+    <div data-abstimmung='["30 dm²", "300 dm²", "3000 dm²", "0,03 dm²"]' data-loesung="1"></div>
+    <div class="hinweis">Alle halten gleichzeitig die ABCD-Karte hoch. Begründungen per 🎲 einholen, nicht per Melden.</div>
+  </section>
+
+  <!-- 2 · PROBLEM -->
+  <section class="folie" data-phase="Problem">
+    <div class="kennung">Problem<span class="leitmodell">Leitmodell: Rechteck-Trick</span></div>
+    <h2>Welches Beet ist größer?</h2>
+    <div class="problem"><div class="label">Problem</div><br>Im Schulgarten gibt es zwei Beete. Beet 1 ist ein Rechteck, Beet 2 ein Parallelogramm.</div>
+    <svg class="skizze" viewBox="0 0 520 170" xmlns="http://www.w3.org/2000/svg"><rect x="20" y="30" width="180" height="120" fill="#d3f9d8" stroke="#2f9e44" stroke-width="4"/><text x="90" y="168" font-size="18">6 m</text><text x="205" y="95" font-size="18">4 m</text><text x="70" y="22" font-size="20" font-weight="700">Beet 1</text><polygon points="270,150 450,150 500,30 320,30" fill="#d3f9d8" stroke="#2f9e44" stroke-width="4"/><text x="345" y="168" font-size="18">6 m</text><text x="482" y="100" font-size="18">5 m</text><line x1="320" y1="30" x2="320" y2="150" stroke="#e03131" stroke-width="3" stroke-dasharray="7 4"/><text x="326" y="100" font-size="18" fill="#e03131">4 m</text><text x="360" y="22" font-size="20" font-weight="700">Beet 2</text></svg>
+    <div class="spannung" data-art="Wette">Wette: Beet 2 ist größer – seine schräge Seite ist ja 5 m lang.</div>
+    <div data-abstimmung='["Beet 1 ist größer", "Beet 2 ist größer", "Beide gleich groß"]'></div>
+    <div class="lernziele schritt"><div class="titel">🎯 Heute lernst du …</div><ul><li>Ich kann ein Parallelogramm durch Zerlegen in ein Rechteck verwandeln.</li><li>Ich kann den Flächeninhalt mit A = g · h berechnen.</li><li>Ich kann erklären, warum man die Höhe und nicht die schräge Seite nimmt.</li></ul></div>
+    <p class="schritt"><span class="projekt">Steckbrief Parallelogramm: Formel A = g · h mit Skizze des Rechteck-Tricks eintragen.</span></p>
+    <div class="hinweis">Abstimmung festhalten (Foto/Tafel), am Ende der Stunde auflösen. Noch nicht verraten!</div>
+  </section>
+
+  <!-- 2c · EIGENE LÖSUNG -->
+  <section class="folie" data-phase="Problem" data-minuten="4">
+    <div class="kennung">Eigene Lösung</div>
+    <h2>Was meinst du?</h2>
+    <div data-denkzeit="60" data-text="Wie könntest du den Flächeninhalt von Beet 2 bestimmen? Schreibe oder skizziere deine Idee."></div>
+    <div data-methode="tps" data-minuten="1,2,2"></div>
+    <div data-tipps>
+      <div class="tipp">Kann man ein Stück abschneiden und woanders anlegen?</div>
+      <div class="tipp">Schneide entlang der roten Höhe.</div>
+    </div>
+    <p class="satzhilfe">Ich vermute, dass … · Ich würde zuerst …</p>
+    <div class="hinweis">Erwartet: 6 · 5 = 30 m². Nicht korrigieren – in der Erarbeitung durch Schneiden prüfen.</div>
+  </section>
+
+  <!-- 3 · ERARBEITUNG E -->
+  <section class="folie" data-phase="Erarbeitung" data-minuten="7">
+    <div class="kennung">Erarbeitung · Gruppen<span class="eis" data-eis="E"></span></div>
+    <h2>Der Rechteck-Trick</h2>
+    <p style="margin-top:0">Verwandelt ein Parallelogramm in ein Rechteck mit demselben Flächeninhalt. Wählt:</p>
+    <div class="wahlkarten">
+      <div class="wahlkarte"><div class=icon>✂️</div><b>Schneiden</b>Papier-Parallelogramm entlang der Höhe schneiden, Dreieck verschieben</div>
+      <div class="wahlkarte"><div class=icon>🔲</div><b>Kästchen zählen</b>Parallelogramm auf Karopapier: ganze und halbe Kästchen zählen</div>
+      <div class="wahlkarte"><div class=icon>📌</div><b>Geobrett</b>Parallelogramm spannen, dann ein Rechteck mit gleich vielen Kästchen</div>
+    </div>
+    <div data-methode="rollen"></div>
+    <div class="hinweis">Materialkiste: Parallelogramme auf Karopapier (verschiedene Verschiebungen), Scheren, Klebestifte, Geobretter. Leitmodell: Rechteck-Trick – heute „Zerlegen und Verschieben“.</div>
+  </section>
+
+  <!-- 3 · ERARBEITUNG I/S -->
+  <section class="folie" data-phase="Erarbeitung" data-minuten="5">
+    <div class="kennung">Erarbeitung · Was passiert, wenn …?<span class="eis" data-eis="IS"></span></div>
+    <h2>Parallelogramm: Was passiert, wenn …?</h2>
+    <div data-figur='{"typ": "parallelogramm", "g": 6, "h": 4, "v": 3, "regler": ["g", "h", "v"], "bereich": {"v": [0, 6]}, "zeige": ["hoehe", "trick", "flaeche", "umfang"], "an": ["hoehe"]}'></div>
+    <div class="vernetzen schritt">Vermute erst: Was passiert mit A, wenn du nur die Verschiebung änderst? Und mit u? Prüfe dann mit „Flächeninhalt“ und „Umfang“.</div>
+  </section>
+
+  <!-- 4 · IDEEN VERGLEICHEN -->
+  <section class="folie" data-phase="Ideen vergleichen">
+    <div class="kennung">Ideen vergleichen</div>
+    <h2>Wer hat recht?</h2>
+    <div class="fehlerkarte" data-wer="Jonas">
+      <div class="rechnung">Beet 2: g = 6 m, b = 5 m, h = 4 m → A = 6 · 5 = <span class='fehler'>30 m²</span></div>
+      <div class="erklaerung">Jonas nimmt die schräge Seite. Beim Rechteck-Trick entsteht aber ein Rechteck mit den Seiten g und h: A = 6 m · 4 m = 24 m².</div>
+    </div>
+    <div class="legende"><span class="l-ja">stimmt</span><span class="l-nein">stimmt nicht</span>
+      <button class="knopf" data-alle-auf style="margin-left:auto">Alle aufdecken</button><button class="knopf" data-alle-zu>Alle zudecken</button></div>
+    <div class="karten">
+      <div class="karte ja">Parallelogramme mit gleicher Grundseite und gleicher Höhe sind gleich groß.<span class="loesung">Ja: Beim Rechteck-Trick entsteht dasselbe Rechteck.</span></div>
+      <div class="karte nein">A = a · b gilt für jedes Parallelogramm.<span class="loesung">Nein, nur für das Rechteck (dort ist b = h).</span></div>
+      <div class="karte ja">Man kann auch b als Grundseite nehmen – dann braucht man die Höhe auf b.<span class="loesung">Ja, Grundseite und Höhe gehören zusammen.</span></div>
+      <div class="karte ja">Ein Gelenk-Parallelogramm wird beim Schiefdrücken kleiner.<span class="loesung">Ja: Die Seiten bleiben gleich, aber die Höhe wird kleiner.</span></div>
+    </div>
+    <p class="satzhilfe">Ich stimme zu / nicht zu, weil … · Der Fehler ist …</p>
+    <div class="hinweis">Erst Fehlerkarte: Denkzeit, dann 🎲. Karten einzeln: Daumen hoch/runter, dann aufdecken.</div>
+  </section>
+
+  <!-- 5 · SICHERUNG -->
+  <section class="folie" data-phase="Sicherung">
+    <div class="kennung">Sicherung<span class="eis" data-eis="EIS"></span></div>
+    <h2>Flächeninhalt des Parallelogramms</h2>
+    <div class="merk">
+      <h3>Merke</h3>
+      <ul>
+        <li class="schritt"><strong>A = g · h</strong> (Grundseite mal zugehörige Höhe)</li>
+        <li class="schritt">Begründung (Rechteck-Trick): Dreieck an der Höhe abschneiden und auf der anderen Seite anlegen → Rechteck mit den Seiten g und h.</li>
+        <li class="schritt">Beispiel: g = 6 m, h = 4 m → A = 6 m · 4 m = 24 m² · Umfang: u = 2 · a + 2 · b = 2 · 6 m + 2 · 5 m = 22 m</li>
+      </ul>
+    </div>
+    <div class="produkt schritt">Erkläre es deinem Nachbarn in <strong>eigenen Worten</strong> und mit einer <strong>Skizze</strong>. Er sagt, ob er es verstanden hat.</div>
+    <div class="hinweis">Ins Heft und in die Steckbrief-Mappe übertragen. Danach 1–2 Erklärungen per 🎲 vorstellen lassen.</div>
+  </section>
+
+  <!-- 6 · ÜBUNG -->
+  <section class="folie" data-phase="Übung">
+    <div class="kennung">Übung · Buch<span class="eis" data-eis="S"></span></div>
+    <h2>Jetzt du! Wähle dein Niveau</h2>
+    <div class="wahlkarten">
+      <div class="wahlkarte"><b>● Basis</b>📖 <span class="platzhalter">[BUCH: S. __ Nr. __]</span></div>
+      <div class="wahlkarte"><b>●● Standard</b>📖 <span class="platzhalter">[BUCH: S. __ Nr. __]</span></div>
+      <div class="wahlkarte"><b>●●● Profi</b>📖 <span class="platzhalter">[BUCH: S. __ Nr. __]</span></div>
+    </div>
+    <div data-methode="lerntempoduett" data-minuten="5,0,2,0"></div>
+    <div class="produkt">Fertig? <strong>Erfinde eine eigene Aufgabe</strong>: Zwei verschieden aussehende Parallelogramme mit gleichem Flächeninhalt. Dein Partner prüft.</div>
+    <p>Tipps und Selbstkontrolle: <a class="schuelerlink" href="../schueler/stunde-07.html" target="_blank">📱 Schülerseite · Stunde 7</a></p>
+    <div class="hinweis">Buchaufgaben im Heft. Wer fertig ist, wartet an der Haltestelle auf einen Partner. Rest als Hausaufgabe.</div>
+  </section>
+
+  <!-- 7 · REFLEXION -->
+  <section class="folie" data-phase="Reflexion">
+    <div class="kennung">Zurück zum Problem · Reflexion</div>
+    <h2>Beide gleich groß: 24 m²! Nur der Rand von Beet 2 ist länger (22 m statt 20 m).</h2>
+    <div class="exit-qr">
+      <div data-qr="../schueler/exit-07.html"></div>
+      <div>
+        <p style="margin-top:0;font-size:1.4rem"><strong>🎫 Exit-Ticket</strong></p>
+        <p>Scanne den Code oder öffne die Schülerseite. Gib dein <strong>Kürzel</strong> ein.<br>Am Ende zeigst du mir deinen QR-Code.</p>
+        <p><a class="schuelerlink" href="../schueler/exit-07.html" target="_blank">🎫 Zum Exit-Ticket</a></p>
+        <p class="klein">Nächste Stunde: Das Dreieck – Wie viel Farbe für den Giebel?</p>
+      </div>
+    </div>
+    <div class="hinweis">Tafelabstimmung vom Anfang zeigen: Wer lag richtig? QR-Codes der Schüler mit der Kamera-App scannen → Auswertung.</div>
+  </section>
+
+</div>
+<script src="../../../../praesentation.js"></script>
+<script src="../../../../qr.js"></script>
+<script src="../modelle.js"></script>
+</body>
+</html>

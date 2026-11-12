@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Üben: Das Haus der Vierecke – Stunde 3</title>
+<link rel="stylesheet" href="../../../../schueler.css">
+</head>
+<body>
+<header><div class="inner">
+  <div class="pfad"><a href="./">🗺️ Lernlandkarte</a> › Stunde 3</div>
+  <h1>Üben: Das Haus der Vierecke</h1>
+  <p class="untertitel">Stunde 3 · Welche Vierecke sind miteinander verwandt?</p>
+</div></header>
+<main>
+  <div class="box">
+    <strong>📘 Erinnerung</strong><br>
+    Pfeil = „ist ein Sonderfall von“ · Untere Figuren haben alle Eigenschaften der oberen · Quadrat = Rechteck + Raute
+  </div>
+  <div class="box">
+    <strong>📚 Wörter für heute:</strong> Haus der Vierecke · Sonderfall · Trapez · Parallelogramm · Rechteck · Raute · Drachen · Quadrat · Eigenschaft<br>
+    <span class="klein">💬 So kannst du es aufschreiben: „Ich habe so gerechnet: …, weil …“</span>
+  </div>
+  <div id="ziele"></div>
+
+  <h2>📖 Aufgaben aus dem Buch</h2>
+  <div class="box buch">
+    <h3>Parallelo 8</h3>
+    <ul>
+      <li>● Basis: <span class="platzhalter">[BUCH: S. __ Nr. __]</span></li>
+      <li>●● Standard: <span class="platzhalter">[BUCH: S. __ Nr. __]</span></li>
+      <li>●●● Profi: <span class="platzhalter">[BUCH: S. __ Nr. __]</span></li>
+    </ul>
+    <p class="klein">Rechne im Heft. Unten findest du Aufgaben mit Tipps und Selbstkontrolle.</p>
+  </div>
+
+  <h2>Aufgaben</h2>
+  <div id="niveaus"></div>
+  <div id="fortschritt"></div>
+  <div id="aufgaben"></div>
+  <h2>🎨 Werde kreativ</h2>
+  <div class="box">
+    Zeichne dein eigenes Haus der Vierecke als „Familien-Stammbaum“ mit einem Alltagsbeispiel zu jeder Figur.
+    <span class="klein">Profi-Idee: Baue absichtlich einen Fehler ein. Findet ihn dein Partner?</span>
+  </div>
+  <h2>Wie sicher bist du jetzt?</h2>
+  <div id="ampel"></div>
+  <p><a href="exit-03.html">🎫 Weiter zum Exit-Ticket →</a> · <a href="./">← Lernlandkarte</a></p>
+</main>
+<script>
+window.SEITE = {
+  "speicher": "mathe-k8-rs-uf",
+  "stunde": 3,
+  "lernziele": [
+    "Vierecke im Haus der Vierecke anordnen",
+    "begründen, warum ein besonderes Viereck auch zu einer allgemeineren Art gehört",
+    "Vierecke an ihren Eigenschaften erkennen"
+  ],
+  "ichKann": [
+    "Ich kann Vierecke im Haus der Vierecke anordnen.",
+    "Ich kann begründen, warum ein besonderes Viereck auch zu einer allgemeineren Art gehört.",
+    "Ich kann Vierecke an ihren Eigenschaften erkennen."
+  ],
+  "aufgaben": [
+    {
+      "niveau": 1,
+      "typ": "auswahl",
+      "frage": "Welche Aussage stimmt?",
+      "loesung": 0,
+      "tipps": [
+        "Was braucht ein Rechteck?"
+      ],
+      "erklaerung": "Ein Quadrat hat vier rechte Winkel, also ist es ein Rechteck.",
+      "optionen": [
+        "Jedes Quadrat ist ein Rechteck.",
+        "Jedes Rechteck ist ein Quadrat.",
+        "Ein Quadrat ist nie ein Rechteck."
+      ]
+    },
+    {
+      "niveau": 1,
+      "typ": "auswahl",
+      "frage": "Welches Viereck steht im Haus der Vierecke ganz oben?",
+      "loesung": 2,
+      "tipps": [
+        "Es hat die wenigsten Eigenschaften."
+      ],
+      "erklaerung": "Das allgemeine Viereck.",
+      "optionen": [
+        "Quadrat",
+        "Trapez",
+        "Viereck"
+      ]
+    },
+    {
+      "niveau": 2,
+      "typ": "auswahl",
+      "frage": "Welche Vierecke sind Sonderfälle des Parallelogramms?",
+      "loesung": 1,
+      "tipps": [
+        "Folge den Pfeilen nach unten."
+      ],
+      "erklaerung": "Rechteck, Raute und Quadrat.",
+      "optionen": [
+        "Trapez und Drachen",
+        "Rechteck, Raute und Quadrat",
+        "nur das Quadrat"
+      ]
+    },
+    {
+      "niveau": 2,
+      "typ": "auswahl",
+      "frage": "Ein Viereck hat senkrechte Diagonalen, die sich halbieren. Was ist es mindestens?",
+      "loesung": 0,
+      "tipps": [
+        "Senkrecht: Drachen-Familie. Halbieren: Parallelogramm-Familie."
+      ],
+      "erklaerung": "Eine Raute (oder ein Quadrat).",
+      "optionen": [
+        "Raute",
+        "Drachen",
+        "Rechteck"
+      ]
+    },
+    {
+      "niveau": 3,
+      "typ": "zahl",
+      "frage": "Zu wie vielen der Arten Trapez, gleichschenkliges Trapez, Parallelogramm, Rechteck, Raute, Drachen gehört ein Quadrat?",
+      "loesung": 6,
+      "tipps": [
+        "Prüfe jede einzeln."
+      ],
+      "erklaerung": "Zu allen sechs."
+    },
+    {
+      "niveau": 3,
+      "typ": "auswahl",
+      "frage": "Welche Eigenschaft haben Rechteck und gleichschenkliges Trapez gemeinsam, das Parallelogramm aber nicht?",
+      "loesung": 1,
+      "tipps": [
+        "Miss die Diagonalen."
+      ],
+      "erklaerung": "Gleich lange Diagonalen (und eine Symmetrieachse).",
+      "optionen": [
+        "Zwei Paare paralleler Seiten",
+        "Gleich lange Diagonalen",
+        "Vier gleich lange Seiten"
+      ]
+    }
+  ]
+};
+</script>
+<script src="../../../../schueler.js"></script>
+</body>
+</html>

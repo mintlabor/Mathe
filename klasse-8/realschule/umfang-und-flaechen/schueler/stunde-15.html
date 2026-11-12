@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Üben: Wie groß ist unser Acker? – Stunde 15</title>
+<link rel="stylesheet" href="../../../../schueler.css">
+</head>
+<body>
+<header><div class="inner">
+  <div class="pfad"><a href="./">🗺️ Lernlandkarte</a> › Stunde 15</div>
+  <h1>Üben: Wie groß ist unser Acker?</h1>
+  <p class="untertitel">Stunde 15 · Flächen aus Karten mit Maßstab</p>
+</div></header>
+<main>
+  <div class="box">
+    <strong>📘 Erinnerung</strong><br>
+    Maßstab gilt für Längen: erst umrechnen, dann rechnen · 1 : 1000 → 1 cm ≙ 10 m · 1 ha = 10 000 m²
+  </div>
+  <div class="box">
+    <strong>📚 Wörter für heute:</strong> Maßstab · Karte · wahre Länge · Hektar (ha) · Ar (a) · messen · umrechnen<br>
+    <span class="klein">💬 So kannst du es aufschreiben: „Ich habe so gerechnet: …, weil …“</span>
+  </div>
+  <div id="ziele"></div>
+
+  <h2>📖 Aufgaben aus dem Buch</h2>
+  <div class="box buch">
+    <h3>Parallelo 8</h3>
+    <ul>
+      <li>● Basis: <span class="platzhalter">[BUCH: S. __ Nr. __]</span></li>
+      <li>●● Standard: <span class="platzhalter">[BUCH: S. __ Nr. __]</span></li>
+      <li>●●● Profi: <span class="platzhalter">[BUCH: S. __ Nr. __]</span></li>
+    </ul>
+    <p class="klein">Rechne im Heft. Unten findest du Aufgaben mit Tipps und Selbstkontrolle.</p>
+  </div>
+
+  <h2>Aufgaben</h2>
+  <div id="niveaus"></div>
+  <div id="fortschritt"></div>
+  <div id="aufgaben"></div>
+  <h2>🎨 Werde kreativ</h2>
+  <div class="box">
+    Zeichne einen Plan deines Traum-Gartens im Maßstab 1 : 100 mit mindestens drei Figuren. Wie groß ist jede Fläche in Wirklichkeit?
+    <span class="klein">Profi-Idee: Baue absichtlich einen Fehler ein. Findet ihn dein Partner?</span>
+  </div>
+  <h2>Wie sicher bist du jetzt?</h2>
+  <div id="ampel"></div>
+  <p><a href="exit-15.html">🎫 Weiter zum Exit-Ticket →</a> · <a href="./">← Lernlandkarte</a></p>
+</main>
+<script>
+window.SEITE = {
+  "speicher": "mathe-k8-rs-uf",
+  "stunde": 15,
+  "lernziele": [
+    "mit einem Maßstab Längen aus einer Karte in wahre Längen umrechnen",
+    "den Flächeninhalt eines Grundstücks aus einer Karte bestimmen",
+    "große Flächen in m², a und ha angeben"
+  ],
+  "ichKann": [
+    "Ich kann mit einem Maßstab Längen aus einer Karte in wahre Längen umrechnen.",
+    "Ich kann den Flächeninhalt eines Grundstücks aus einer Karte bestimmen.",
+    "Ich kann große Flächen in m², a und ha angeben."
+  ],
+  "aufgaben": [
+    {
+      "niveau": 1,
+      "typ": "zahl",
+      "frage": "Maßstab 1 : 1000. Auf der Karte sind es 7 cm. Wie viele Meter sind das in Wirklichkeit?",
+      "loesung": 70,
+      "tipps": [
+        "7 cm · 1000 = 7000 cm"
+      ],
+      "erklaerung": "7000 cm = 70 m",
+      "einheit": "m"
+    },
+    {
+      "niveau": 1,
+      "typ": "zahl",
+      "frage": "35 000 m² = ? ha",
+      "loesung": 3.5,
+      "tipps": [
+        "1 ha = 10 000 m²"
+      ],
+      "erklaerung": "35 000 : 10 000 = 3,5 ha",
+      "einheit": "ha"
+    },
+    {
+      "niveau": 2,
+      "typ": "zahl",
+      "frage": "Maßstab 1 : 1000. Ein Rechteck ist auf der Karte 5 cm × 3 cm. Wie groß ist es in Wirklichkeit (m²)?",
+      "loesung": 1500,
+      "tipps": [
+        "5 cm ≙ 50 m, 3 cm ≙ 30 m"
+      ],
+      "erklaerung": "50 m · 30 m = 1500 m²",
+      "einheit": "m²"
+    },
+    {
+      "niveau": 2,
+      "typ": "zahl",
+      "frage": "Maßstab 1 : 100. Ein Dreieck auf dem Plan: g = 6 cm, h = 4 cm. Wahre Fläche in m²?",
+      "loesung": 12,
+      "tipps": [
+        "1 cm ≙ 1 m"
+      ],
+      "erklaerung": "6 m · 4 m : 2 = 12 m²",
+      "einheit": "m²"
+    },
+    {
+      "niveau": 3,
+      "typ": "zahl",
+      "frage": "Maßstab 1 : 2000. Ein Feld (Drachen) hat auf der Karte e = 5 cm und f = 8 cm. Wie viel ha?",
+      "loesung": 0.8,
+      "tipps": [
+        "e = 100 m, f = 160 m"
+      ],
+      "erklaerung": "100 · 160 : 2 = 8000 m² = 0,8 ha",
+      "einheit": "ha"
+    },
+    {
+      "niveau": 3,
+      "typ": "zahl",
+      "frage": "Pacht: 600 € pro ha und Jahr. Was kostet das Feld mit 2,4 ha?",
+      "loesung": 1440,
+      "tipps": [
+        "2,4 · 600"
+      ],
+      "erklaerung": "1440 € pro Jahr",
+      "einheit": "€"
+    }
+  ]
+};
+</script>
+<script src="../../../../schueler.js"></script>
+</body>
+</html>

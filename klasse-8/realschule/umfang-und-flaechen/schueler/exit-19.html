@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Exit-Ticket: Fit für die Arbeit – Stunde 19</title>
+<link rel="stylesheet" href="../../../../schueler.css">
+</head>
+<body>
+<header><div class="inner">
+  <div class="pfad"><a href="./">🗺️ Lernlandkarte</a> › <a href="stunde-19.html">Stunde 19</a> › Exit-Ticket</div>
+  <h1>🎫 Exit-Ticket</h1>
+  <p class="untertitel">Stunde 19 · Fit für die Arbeit</p>
+</div></header>
+<main>
+  <div id="exit"></div>
+</main>
+<script type="application/json" id="exit-daten">
+{
+  "titel": "Fit für die Arbeit",
+  "stunde": 19,
+  "lernziele": [
+    {
+      "text": "Ich kann Figuren an ihren Eigenschaften erkennen und Höhen einzeichnen.",
+      "foerdern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ● Basis",
+      "fordern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ●●● Profi"
+    },
+    {
+      "text": "Ich kann Umfang und Flächeninhalt von Dreieck, Parallelogramm, Trapez, Raute und Drachen berechnen.",
+      "foerdern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ● Basis",
+      "fordern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ●●● Profi"
+    },
+    {
+      "text": "Ich kann zusammengesetzte Figuren und Sachaufgaben lösen.",
+      "foerdern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ● Basis",
+      "fordern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ●●● Profi"
+    }
+  ],
+  "fehlertypen": {
+    "figur": "Figur nicht an Eigenschaften erkannt",
+    "halb": "Durch 2 geteilt bzw. vergessen",
+    "trapez": "Trapezformel falsch",
+    "zerlegen": "Teilfläche vergessen",
+    "rueck": "Umkehraufgabe falsch"
+  },
+  "fragen": [
+    {
+      "lz": 0,
+      "typ": "auswahl",
+      "frage": "Welche Figur hat genau eine Symmetrieachse und senkrechte Diagonalen?",
+      "optionen": [
+        "Drachen",
+        "Raute",
+        "Parallelogramm"
+      ],
+      "loesung": 0,
+      "erklaerung": "Drachen (die Raute hat zwei Achsen).",
+      "fehler": {
+        "1": "figur",
+        "2": "figur"
+      }
+    },
+    {
+      "lz": 1,
+      "typ": "zahl",
+      "frage": "Trapez: a = 14 cm, c = 6 cm, h = 4,5 cm. Wie groß ist A?",
+      "loesung": 45,
+      "erklaerung": "(14 + 6) : 2 · 4,5 = 45 cm²",
+      "einheit": "cm²",
+      "fehler": [
+        {
+          "wert": 90,
+          "id": "trapez"
+        },
+        {
+          "wert": 378,
+          "id": "trapez"
+        }
+      ]
+    },
+    {
+      "lz": 1,
+      "typ": "zahl",
+      "frage": "Raute: e = 7 cm, f = 10 cm. Wie groß ist A?",
+      "loesung": 35,
+      "erklaerung": "7 · 10 : 2 = 35 cm²",
+      "einheit": "cm²",
+      "fehler": [
+        {
+          "wert": 70,
+          "id": "halb"
+        }
+      ]
+    },
+    {
+      "lz": 2,
+      "typ": "zahl",
+      "frage": "Haus-Figur: Rechteck 6 m × 3 m mit Dreieck darauf (g = 6 m, h = 2 m). Wie groß ist A?",
+      "loesung": 24,
+      "erklaerung": "18 + 6 = 24 m²",
+      "einheit": "m²",
+      "fehler": [
+        {
+          "wert": 18,
+          "id": "zerlegen"
+        },
+        {
+          "wert": 30,
+          "id": "halb"
+        }
+      ]
+    },
+    {
+      "lz": 2,
+      "typ": "zahl",
+      "frage": "Dreieck: A = 35 m², g = 10 m. Wie groß ist h?",
+      "loesung": 7,
+      "erklaerung": "h = 2 · 35 : 10 = 7 m",
+      "einheit": "m",
+      "fehler": [
+        {
+          "wert": 3.5,
+          "id": "rueck"
+        },
+        {
+          "wert": 350,
+          "id": "rueck"
+        }
+      ]
+    }
+  ]
+}
+</script>
+<script src="../../../../qr.js"></script>
+<script src="../../../../exit-ticket.js"></script>
+</body>
+</html>

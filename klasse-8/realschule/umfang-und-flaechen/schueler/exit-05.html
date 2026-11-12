@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Exit-Ticket: Der Umfang – Stunde 5</title>
+<link rel="stylesheet" href="../../../../schueler.css">
+</head>
+<body>
+<header><div class="inner">
+  <div class="pfad"><a href="./">🗺️ Lernlandkarte</a> › <a href="stunde-05.html">Stunde 5</a> › Exit-Ticket</div>
+  <h1>🎫 Exit-Ticket</h1>
+  <p class="untertitel">Stunde 5 · Der Umfang</p>
+</div></header>
+<main>
+  <div id="exit"></div>
+</main>
+<script type="application/json" id="exit-daten">
+{
+  "titel": "Der Umfang",
+  "stunde": 5,
+  "lernziele": [
+    {
+      "text": "Ich kann den Umfang einer Figur als Summe aller Seitenlängen berechnen.",
+      "foerdern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ● Basis",
+      "fordern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ●●● Profi"
+    },
+    {
+      "text": "Ich kann Umfangsformeln für Raute, Parallelogramm und Drachen aufstellen.",
+      "foerdern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ● Basis",
+      "fordern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ●●● Profi"
+    },
+    {
+      "text": "Ich kann eine fehlende Seite aus dem Umfang berechnen.",
+      "foerdern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ● Basis",
+      "fordern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ●●● Profi"
+    }
+  ],
+  "fehlertypen": {
+    "nurzwei": "Nicht alle Seiten addiert",
+    "mal": "Seiten multipliziert statt addiert",
+    "rueck": "Beim Rückwärtsrechnen falsch umgekehrt"
+  },
+  "fragen": [
+    {
+      "lz": 0,
+      "typ": "zahl",
+      "frage": "Ein Dreieck hat die Seiten 5 cm, 7 cm und 8 cm. Wie groß ist der Umfang?",
+      "loesung": 20,
+      "erklaerung": "u = 5 + 7 + 8 = 20 cm",
+      "einheit": "cm",
+      "fehler": [
+        {
+          "wert": 13,
+          "id": "nurzwei"
+        },
+        {
+          "wert": 12,
+          "id": "nurzwei"
+        },
+        {
+          "wert": 15,
+          "id": "nurzwei"
+        },
+        {
+          "wert": 280,
+          "id": "mal"
+        }
+      ]
+    },
+    {
+      "lz": 1,
+      "typ": "zahl",
+      "frage": "Eine Raute hat die Seitenlänge a = 4,5 cm. Wie groß ist der Umfang?",
+      "loesung": 18,
+      "erklaerung": "u = 4 · 4,5 cm = 18 cm",
+      "einheit": "cm",
+      "fehler": [
+        {
+          "wert": 9,
+          "id": "nurzwei"
+        },
+        {
+          "wert": 20.25,
+          "id": "mal"
+        },
+        {
+          "wert": 4.5,
+          "id": "nurzwei"
+        }
+      ]
+    },
+    {
+      "lz": 1,
+      "typ": "zahl",
+      "frage": "Ein Parallelogramm hat a = 7 cm und b = 4 cm. Wie groß ist der Umfang?",
+      "loesung": 22,
+      "erklaerung": "u = 2 · 7 + 2 · 4 = 22 cm",
+      "einheit": "cm",
+      "fehler": [
+        {
+          "wert": 11,
+          "id": "nurzwei"
+        },
+        {
+          "wert": 28,
+          "id": "mal"
+        }
+      ]
+    },
+    {
+      "lz": 2,
+      "typ": "zahl",
+      "frage": "Eine Raute hat den Umfang 30 cm. Wie lang ist eine Seite?",
+      "loesung": 7.5,
+      "erklaerung": "a = 30 : 4 = 7,5 cm",
+      "einheit": "cm",
+      "fehler": [
+        {
+          "wert": 15,
+          "id": "rueck"
+        },
+        {
+          "wert": 120,
+          "id": "rueck"
+        },
+        {
+          "wert": 26,
+          "id": "rueck"
+        }
+      ]
+    }
+  ]
+}
+</script>
+<script src="../../../../qr.js"></script>
+<script src="../../../../exit-ticket.js"></script>
+</body>
+</html>

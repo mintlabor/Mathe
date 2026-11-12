@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Stunde 5: Der Umfang – Umfang und Flächen</title>
+<link rel="stylesheet" href="../../../../praesentation.css">
+<style>
+  .platzhalter { background: #fff3bf; border-radius: 4px; padding: 0 .3rem; font-family: ui-monospace, monospace; font-size: .9em; }
+  .exit-qr { display: flex; gap: 1.5rem; align-items: center; }
+  .exit-qr [data-qr] svg { width: 230px; height: 230px; display: block; border-radius: 8px; }
+  .skizze { width: min(100%, 560px); height: auto; max-height: 30vh; display: block; margin: .3rem auto; flex-shrink: 0; }
+</style>
+</head>
+<body data-phasen='[["Abrufen", 4], ["Problem", 7], ["Erarbeitung", 12], ["Ideen vergleichen", 5], ["Sicherung", 6], ["Übung", 7], ["Reflexion", 4]]'>
+
+<div class="leiste">
+  <div class="pfad"><a href="../../../../">Start</a> › <a href="../../../">Klasse 8</a> › <a href="../../">Realschule</a> › <a href="../">Umfang und Flächen</a> › Stunde 5</div>
+</div>
+
+<aside class="wortspeicher"
+  data-woerter='["Umfang", "Seitenlänge", "addieren", "Rand", "Formel", "u"]'
+  data-saetze='["Ich vermute, dass …", "Ich habe so gerechnet: …", "Das sieht man daran, dass …", "Ich stimme zu / nicht zu, weil …"]'></aside>
+
+<div class="buehne">
+
+  <!-- 1 · ABRUFEN -->
+  <section class="folie" data-phase="Abrufen">
+    <div class="kennung">Umfang und Flächen · Stunde 5 · Warm-up</div>
+    <h2>Was weißt du noch?</h2>
+    <p style="margin-top:0">Exit-Ticket von letzter Stunde: Wo liegt beim stumpfwinkligen Dreieck eine Höhe?</p>
+    <div data-abstimmung='["immer in der Mitte", "auf der längsten Seite", "außerhalb – Grundseite verlängern", "es gibt keine"]' data-loesung="2"></div>
+    <div class="hinweis">Alle halten gleichzeitig die ABCD-Karte hoch. Begründungen per 🎲 einholen, nicht per Melden.</div>
+  </section>
+
+  <!-- 2 · PROBLEM -->
+  <section class="folie" data-phase="Problem">
+    <div class="kennung">Problem<span class="leitmodell">Leitmodell: Rechteck-Trick</span></div>
+    <h2>Reicht die Rolle Rasenkante?</h2>
+    <div class="problem"><div class="label">Problem</div><br>Das neue Kräuterbeet hat die Form eines Trapezes (siehe Skizze). Im Baumarkt gibt es Rasenkante als Rolle mit 10 m.</div>
+    <svg class="skizze" viewBox="0 0 360 170" xmlns="http://www.w3.org/2000/svg"><polygon points="30,150 330,150 255,40 105,40" fill="#d3f9d8" stroke="#2f9e44" stroke-width="4"/><text x="160" y="168" font-size="18">4 m</text><text x="160" y="32" font-size="18">2 m</text><text x="28" y="95" font-size="18">2,5 m</text><text x="292" y="95" font-size="18">2,5 m</text><text x="140" y="105" font-size="26">🌿🌱🌿</text></svg>
+    <div class="spannung" data-art="Wette">Wette: Eine Rolle mit <strong>10 m</strong> reicht für die ganze Beeteinfassung.</div>
+    <div data-abstimmung='["Reicht", "Reicht nicht", "Genau passend"]'></div>
+    <div class="lernziele schritt"><div class="titel">🎯 Heute lernst du …</div><ul><li>Ich kann den Umfang einer Figur als Summe aller Seitenlängen berechnen.</li><li>Ich kann Umfangsformeln für Raute, Parallelogramm und Drachen aufstellen.</li><li>Ich kann eine fehlende Seite aus dem Umfang berechnen.</li></ul></div>
+    <p class="schritt"><span class="projekt">Steckbrief-Mappe: Zeile „Umfang u = …“ ergänzen. Pausenhof: Wir wissen jetzt, wie man Einfassungen und Zäune berechnet.</span></p>
+    <div class="hinweis">Abstimmung festhalten (Foto/Tafel), am Ende der Stunde auflösen. Noch nicht verraten!</div>
+  </section>
+
+  <!-- 2c · EIGENE LÖSUNG -->
+  <section class="folie" data-phase="Problem" data-minuten="4">
+    <div class="kennung">Eigene Lösung</div>
+    <h2>Was meinst du?</h2>
+    <div data-denkzeit="60" data-text="Wie viel Meter Rasenkante braucht man? Schreibe deine Rechnung auf."></div>
+    <div data-methode="tps" data-minuten="1,2,2"></div>
+    <div data-tipps>
+      <div class="tipp">Geh in Gedanken einmal um das Beet herum.</div>
+      <div class="tipp">Alle vier Seiten zählen: 4 m + 2,5 m + 2 m + 2,5 m</div>
+    </div>
+    <p class="satzhilfe">Ich vermute, dass … · Ich würde zuerst …</p>
+    <div class="hinweis">Erwartet: nur zwei Seiten addiert oder Seiten multipliziert. Im Vergleich aufgreifen.</div>
+  </section>
+
+  <!-- 3 · ERARBEITUNG E -->
+  <section class="folie" data-phase="Erarbeitung" data-minuten="7">
+    <div class="kennung">Erarbeitung · Gruppen<span class="eis" data-eis="E"></span></div>
+    <h2>Den Rand messen</h2>
+    <p style="margin-top:0">Bestimmt den Umfang eurer Figuren auf mindestens zwei Wegen und vergleicht. Wählt:</p>
+    <div class="wahlkarten">
+      <div class="wahlkarte"><div class=icon>🧶</div><b>Schnur legen</b>Schnur genau um die Papierfigur legen, abwickeln, messen</div>
+      <div class="wahlkarte"><div class=icon>📏</div><b>Messen und addieren</b>Jede Seite messen, alle addieren</div>
+      <div class="wahlkarte"><div class=icon>👣</div><b>Abschreiten</b>Figur mit Kreide auf dem Schulhof: Schritte zählen, Maßband</div>
+    </div>
+    <div data-methode="rollen"></div>
+    <div class="hinweis">Materialkiste: Papierfiguren aller fünf Arten mit ganzzahligen Seiten, Wollschnur, Lineale, Maßband, Straßenkreide.</div>
+  </section>
+
+  <!-- 3 · ERARBEITUNG I/S -->
+  <section class="folie" data-phase="Erarbeitung" data-minuten="5">
+    <div class="kennung">Erarbeitung · Was passiert, wenn …?<span class="eis" data-eis="IS"></span></div>
+    <h2>Umfang: Was passiert, wenn …?</h2>
+    <div data-figur='{"typ": "parallelogramm", "g": 6, "h": 4, "v": 3, "regler": ["g", "h", "v"], "typen": ["raute", "drachen", "trapez", "dreieck"], "zeige": ["umfang"], "an": []}'></div>
+    <div class="vernetzen schritt">Erst vermuten, dann „Umfang“ einschalten: Was passiert mit u, wenn g um 1 cm länger wird? Warum steigt u beim Parallelogramm um 2 cm? Welche Formel passt zur Raute?</div>
+  </section>
+
+  <!-- 4 · IDEEN VERGLEICHEN -->
+  <section class="folie" data-phase="Ideen vergleichen">
+    <div class="kennung">Ideen vergleichen</div>
+    <h2>Wer hat recht?</h2>
+    <div class="fehlerkarte" data-wer="Ole">
+      <div class="rechnung">Parallelogramm a = 6 cm, b = 4 cm: u = 6 + 4 = <span class='fehler'>10 cm</span></div>
+      <div class="erklaerung">Ole hat nur zwei Seiten addiert. Das Parallelogramm hat vier Seiten, je zwei sind gleich lang: u = 2 · 6 + 2 · 4 = 20 cm.</div>
+    </div>
+    <div class="legende"><span class="l-ja">stimmt</span><span class="l-nein">stimmt nicht</span>
+      <button class="knopf" data-alle-auf style="margin-left:auto">Alle aufdecken</button><button class="knopf" data-alle-zu>Alle zudecken</button></div>
+    <div class="karten">
+      <div class="karte ja">Bei der Raute gilt u = 4 · a.<span class="loesung">Ja, alle vier Seiten sind gleich lang.</span></div>
+      <div class="karte ja">Beim Drachen gilt u = 2 · a + 2 · b.<span class="loesung">Ja, je zwei Seiten sind gleich lang.</span></div>
+      <div class="karte nein">Der Umfang wird in cm² angegeben.<span class="loesung">Nein, der Umfang ist eine Länge: cm, m.</span></div>
+      <div class="karte nein">Um den Umfang zu berechnen, braucht man die Höhe.<span class="loesung">Nein, man braucht nur die Seitenlängen.</span></div>
+    </div>
+    <p class="satzhilfe">Ich stimme zu / nicht zu, weil … · Der Fehler ist …</p>
+    <div class="hinweis">Erst Fehlerkarte: Denkzeit, dann 🎲. Karten einzeln: Daumen hoch/runter, dann aufdecken.</div>
+  </section>
+
+  <!-- 5 · SICHERUNG -->
+  <section class="folie" data-phase="Sicherung">
+    <div class="kennung">Sicherung<span class="eis" data-eis="EIS"></span></div>
+    <h2>Der Umfang u</h2>
+    <div class="merk">
+      <h3>Merke</h3>
+      <ul>
+        <li class="schritt">Der <strong>Umfang u</strong> ist die Länge des Randes: die <strong>Summe aller Seitenlängen</strong>. Einheit: mm, cm, m, km.</li>
+        <li class="schritt">Dreieck: u = a + b + c · Trapez: u = a + b + c + d · Parallelogramm und Drachen: u = 2 · a + 2 · b · Raute: u = 4 · a</li>
+        <li class="schritt">Rückwärts: Raute mit u = 24 cm → a = 24 cm : 4 = 6 cm.</li>
+      </ul>
+    </div>
+    <div class="produkt schritt">Erkläre es deinem Nachbarn in <strong>eigenen Worten</strong> und mit einer <strong>Skizze</strong>. Er sagt, ob er es verstanden hat.</div>
+    <div class="hinweis">Ins Heft und in die Steckbrief-Mappe übertragen. Danach 1–2 Erklärungen per 🎲 vorstellen lassen.</div>
+  </section>
+
+  <!-- 6 · ÜBUNG -->
+  <section class="folie" data-phase="Übung">
+    <div class="kennung">Übung · Buch<span class="eis" data-eis="S"></span></div>
+    <h2>Jetzt du! Wähle dein Niveau</h2>
+    <div class="wahlkarten">
+      <div class="wahlkarte"><b>● Basis</b>📖 <span class="platzhalter">[BUCH: S. __ Nr. __]</span></div>
+      <div class="wahlkarte"><b>●● Standard</b>📖 <span class="platzhalter">[BUCH: S. __ Nr. __]</span></div>
+      <div class="wahlkarte"><b>●●● Profi</b>📖 <span class="platzhalter">[BUCH: S. __ Nr. __]</span></div>
+    </div>
+    <div data-methode="lerntempoduett" data-minuten="5,0,2,0"></div>
+    <div class="produkt">Fertig? <strong>Erfinde eine eigene Aufgabe</strong>: Ein Zaun, eine Bilderrahmen-Leiste oder ein Schnurrahmen – dein Partner berechnet den Umfang.</div>
+    <p>Tipps und Selbstkontrolle: <a class="schuelerlink" href="../schueler/stunde-05.html" target="_blank">📱 Schülerseite · Stunde 5</a></p>
+    <div class="hinweis">Buchaufgaben im Heft. Wer fertig ist, wartet an der Haltestelle auf einen Partner. Rest als Hausaufgabe.</div>
+  </section>
+
+  <!-- 7 · REFLEXION -->
+  <section class="folie" data-phase="Reflexion">
+    <div class="kennung">Zurück zum Problem · Reflexion</div>
+    <h2>Reicht nicht: Wir brauchen 4 + 2,5 + 2 + 2,5 = 11 m.</h2>
+    <div class="exit-qr">
+      <div data-qr="../schueler/exit-05.html"></div>
+      <div>
+        <p style="margin-top:0;font-size:1.4rem"><strong>🎫 Exit-Ticket</strong></p>
+        <p>Scanne den Code oder öffne die Schülerseite. Gib dein <strong>Kürzel</strong> ein.<br>Am Ende zeigst du mir deinen QR-Code.</p>
+        <p><a class="schuelerlink" href="../schueler/exit-05.html" target="_blank">🎫 Zum Exit-Ticket</a></p>
+        <p class="klein">Nächste Stunde: Gleicher Zaun – gleiche Weide?</p>
+      </div>
+    </div>
+    <div class="hinweis">Tafelabstimmung vom Anfang zeigen: Wer lag richtig? QR-Codes der Schüler mit der Kamera-App scannen → Auswertung.</div>
+  </section>
+
+</div>
+<script src="../../../../praesentation.js"></script>
+<script src="../../../../qr.js"></script>
+<script src="../modelle.js"></script>
+</body>
+</html>

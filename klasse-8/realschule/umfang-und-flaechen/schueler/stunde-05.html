@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Üben: Der Umfang – Stunde 5</title>
+<link rel="stylesheet" href="../../../../schueler.css">
+</head>
+<body>
+<header><div class="inner">
+  <div class="pfad"><a href="./">🗺️ Lernlandkarte</a> › Stunde 5</div>
+  <h1>Üben: Der Umfang</h1>
+  <p class="untertitel">Stunde 5 · Einmal um die Figur herum</p>
+</div></header>
+<main>
+  <div class="box">
+    <strong>📘 Erinnerung</strong><br>
+    Umfang = Summe aller Seitenlängen (Einheit cm, m) · Raute u = 4a · Parallelogramm, Drachen u = 2a + 2b · Dreieck u = a + b + c · Trapez u = a + b + c + d
+  </div>
+  <div class="box">
+    <strong>📚 Wörter für heute:</strong> Umfang · Seitenlänge · addieren · Rand · Formel · u<br>
+    <span class="klein">💬 So kannst du es aufschreiben: „Ich habe so gerechnet: …, weil …“</span>
+  </div>
+  <div id="ziele"></div>
+
+  <h2>📖 Aufgaben aus dem Buch</h2>
+  <div class="box buch">
+    <h3>Parallelo 8</h3>
+    <ul>
+      <li>● Basis: <span class="platzhalter">[BUCH: S. __ Nr. __]</span></li>
+      <li>●● Standard: <span class="platzhalter">[BUCH: S. __ Nr. __]</span></li>
+      <li>●●● Profi: <span class="platzhalter">[BUCH: S. __ Nr. __]</span></li>
+    </ul>
+    <p class="klein">Rechne im Heft. Unten findest du Aufgaben mit Tipps und Selbstkontrolle.</p>
+  </div>
+
+  <h2>Aufgaben</h2>
+  <div id="niveaus"></div>
+  <div id="fortschritt"></div>
+  <div id="aufgaben"></div>
+  <h2>🎨 Werde kreativ</h2>
+  <div class="box">
+    Miss den Umfang von drei Gegenständen zu Hause (Tischplatte, Buch, Bilderrahmen). Schätze vorher!
+    <span class="klein">Profi-Idee: Baue absichtlich einen Fehler ein. Findet ihn dein Partner?</span>
+  </div>
+  <h2>Wie sicher bist du jetzt?</h2>
+  <div id="ampel"></div>
+  <p><a href="exit-05.html">🎫 Weiter zum Exit-Ticket →</a> · <a href="./">← Lernlandkarte</a></p>
+</main>
+<script>
+window.SEITE = {
+  "speicher": "mathe-k8-rs-uf",
+  "stunde": 5,
+  "lernziele": [
+    "den Umfang einer Figur als Summe aller Seitenlängen berechnen",
+    "Umfangsformeln für Raute, Parallelogramm und Drachen aufstellen",
+    "eine fehlende Seite aus dem Umfang berechnen"
+  ],
+  "ichKann": [
+    "Ich kann den Umfang einer Figur als Summe aller Seitenlängen berechnen.",
+    "Ich kann Umfangsformeln für Raute, Parallelogramm und Drachen aufstellen.",
+    "Ich kann eine fehlende Seite aus dem Umfang berechnen."
+  ],
+  "aufgaben": [
+    {
+      "niveau": 1,
+      "typ": "zahl",
+      "frage": "Dreieck mit a = 5 cm, b = 7 cm, c = 8 cm. Wie groß ist u?",
+      "loesung": 20,
+      "tipps": [
+        "Alle drei addieren."
+      ],
+      "erklaerung": "u = 5 + 7 + 8 = 20 cm",
+      "einheit": "cm"
+    },
+    {
+      "niveau": 1,
+      "typ": "zahl",
+      "frage": "Raute mit a = 4,5 cm. Wie groß ist u?",
+      "loesung": 18,
+      "tipps": [
+        "u = 4 · a"
+      ],
+      "erklaerung": "u = 4 · 4,5 cm = 18 cm",
+      "einheit": "cm"
+    },
+    {
+      "niveau": 2,
+      "typ": "zahl",
+      "frage": "Drachen mit a = 3 cm und b = 5,5 cm. Wie groß ist u?",
+      "loesung": 17,
+      "tipps": [
+        "u = 2 · a + 2 · b"
+      ],
+      "erklaerung": "u = 6 + 11 = 17 cm",
+      "einheit": "cm"
+    },
+    {
+      "niveau": 2,
+      "typ": "auswahl",
+      "frage": "🔍 Fehler finden: Parallelogramm a = 7 cm, b = 4 cm. Jana: u = 7 · 4 = 28 cm. Tim: u = 2 · 7 + 2 · 4 = 22 cm. Wer hat recht?",
+      "loesung": 1,
+      "tipps": [
+        "Umfang heißt: Seiten addieren."
+      ],
+      "erklaerung": "Tim. Jana hat multipliziert.",
+      "optionen": [
+        "Jana",
+        "Tim",
+        "beide"
+      ]
+    },
+    {
+      "niveau": 3,
+      "typ": "zahl",
+      "frage": "Eine Raute hat den Umfang 30 cm. Wie lang ist eine Seite?",
+      "loesung": 7.5,
+      "tipps": [
+        "Rückwärts: u : 4"
+      ],
+      "erklaerung": "a = 30 cm : 4 = 7,5 cm",
+      "einheit": "cm"
+    },
+    {
+      "niveau": 3,
+      "typ": "zahl",
+      "frage": "Ein gleichschenkliges Trapez hat a = 9 m, c = 5 m und u = 20 m. Wie lang ist ein Schenkel?",
+      "loesung": 3,
+      "tipps": [
+        "20 − 9 − 5 = Rest für beide Schenkel"
+      ],
+      "erklaerung": "20 − 9 − 5 = 6 m für zwei Schenkel → 3 m",
+      "einheit": "m"
+    }
+  ]
+};
+</script>
+<script src="../../../../schueler.js"></script>
+</body>
+</html>

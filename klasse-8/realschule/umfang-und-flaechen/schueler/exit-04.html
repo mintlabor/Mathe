@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Exit-Ticket: Höhen einzeichnen – Stunde 4</title>
+<link rel="stylesheet" href="../../../../schueler.css">
+</head>
+<body>
+<header><div class="inner">
+  <div class="pfad"><a href="./">🗺️ Lernlandkarte</a> › <a href="stunde-04.html">Stunde 4</a> › Exit-Ticket</div>
+  <h1>🎫 Exit-Ticket</h1>
+  <p class="untertitel">Stunde 4 · Höhen einzeichnen</p>
+</div></header>
+<main>
+  <div id="exit"></div>
+</main>
+<script type="application/json" id="exit-daten">
+{
+  "titel": "Höhen einzeichnen",
+  "stunde": 4,
+  "lernziele": [
+    {
+      "text": "Ich kann erklären, was eine Höhe ist.",
+      "foerdern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ● Basis",
+      "fordern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ●●● Profi"
+    },
+    {
+      "text": "Ich kann Höhen in Dreieck, Parallelogramm und Trapez mit dem Geodreieck einzeichnen.",
+      "foerdern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ● Basis",
+      "fordern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ●●● Profi"
+    },
+    {
+      "text": "Ich kann Höhen auch außerhalb der Figur einzeichnen.",
+      "foerdern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ● Basis",
+      "fordern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ●●● Profi"
+    }
+  ],
+  "fehlertypen": {
+    "schraeg": "Schräge Seite statt senkrechtem Abstand genommen",
+    "aussen": "Höhe außerhalb der Figur nicht erkannt",
+    "geodreieck": "Geodreieck falsch angelegt"
+  },
+  "fragen": [
+    {
+      "lz": 0,
+      "typ": "auswahl",
+      "frage": "Was ist die Höhe eines Dreiecks?",
+      "optionen": [
+        "Der senkrechte Abstand einer Ecke zur gegenüberliegenden Seite",
+        "Die längste Seite",
+        "Eine schräge Seite"
+      ],
+      "loesung": 0,
+      "erklaerung": "Die Höhe steht senkrecht auf der Grundseite.",
+      "fehler": {
+        "1": "schraeg",
+        "2": "schraeg"
+      }
+    },
+    {
+      "lz": 1,
+      "typ": "auswahl",
+      "frage": "Wie legst du das Geodreieck an, um eine Höhe zu zeichnen?",
+      "optionen": [
+        "Mittellinie auf die Grundseite, bis zur Ecke schieben",
+        "Lange Kante an die schräge Seite",
+        "Kante zwischen zwei Ecken"
+      ],
+      "loesung": 0,
+      "erklaerung": "Die Mittellinie (90°-Linie) liegt auf der Grundseite.",
+      "fehler": {
+        "1": "geodreieck",
+        "2": "geodreieck"
+      }
+    },
+    {
+      "lz": 2,
+      "typ": "auswahl",
+      "frage": "Bei welchem Dreieck liegt eine Höhe außerhalb der Figur?",
+      "optionen": [
+        "stumpfwinklig",
+        "spitzwinklig",
+        "gleichseitig"
+      ],
+      "loesung": 0,
+      "erklaerung": "Beim stumpfwinkligen Dreieck – Grundseite verlängern.",
+      "fehler": {
+        "1": "aussen",
+        "2": "aussen"
+      }
+    },
+    {
+      "lz": 0,
+      "typ": "auswahl",
+      "frage": "Ein Parallelogramm (kein Rechteck) hat die schräge Seite b = 5 cm. Was gilt für die Höhe h?",
+      "optionen": [
+        "h ist kürzer als 5 cm",
+        "h = 5 cm",
+        "h ist länger als 5 cm"
+      ],
+      "loesung": 0,
+      "erklaerung": "Der senkrechte Weg ist der kürzeste.",
+      "fehler": {
+        "1": "schraeg",
+        "2": "schraeg"
+      }
+    }
+  ]
+}
+</script>
+<script src="../../../../qr.js"></script>
+<script src="../../../../exit-ticket.js"></script>
+</body>
+</html>

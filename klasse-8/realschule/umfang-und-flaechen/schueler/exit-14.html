@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Exit-Ticket: Rückwärts rechnen – Stunde 14</title>
+<link rel="stylesheet" href="../../../../schueler.css">
+</head>
+<body>
+<header><div class="inner">
+  <div class="pfad"><a href="./">🗺️ Lernlandkarte</a> › <a href="stunde-14.html">Stunde 14</a> › Exit-Ticket</div>
+  <h1>🎫 Exit-Ticket</h1>
+  <p class="untertitel">Stunde 14 · Rückwärts rechnen</p>
+</div></header>
+<main>
+  <div id="exit"></div>
+</main>
+<script type="application/json" id="exit-daten">
+{
+  "titel": "Rückwärts rechnen",
+  "stunde": 14,
+  "lernziele": [
+    {
+      "text": "Ich kann eine fehlende Länge aus Flächeninhalt und einer Länge berechnen.",
+      "foerdern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ● Basis",
+      "fordern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ●●● Profi"
+    },
+    {
+      "text": "Ich kann Umkehraufgaben mit einem Pfeilbild oder einer Gleichung lösen.",
+      "foerdern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ● Basis",
+      "fordern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ●●● Profi"
+    },
+    {
+      "text": "Ich kann mein Ergebnis mit einer Probe prüfen.",
+      "foerdern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ● Basis",
+      "fordern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ●●● Profi"
+    }
+  ],
+  "fehlertypen": {
+    "halb": "Beim Dreieck das · 2 vergessen",
+    "umkehr": "Falsche Umkehrrechnung (mal statt geteilt)",
+    "probe": "Probe nicht richtig durchgeführt",
+    "mitte": "Beim Trapez (a + c) : 2 nicht beachtet"
+  },
+  "fragen": [
+    {
+      "lz": 0,
+      "typ": "zahl",
+      "frage": "Parallelogramm: A = 42 cm², g = 7 cm. Wie groß ist h?",
+      "loesung": 6,
+      "erklaerung": "h = 42 : 7 = 6 cm",
+      "einheit": "cm",
+      "fehler": [
+        {
+          "wert": 294,
+          "id": "umkehr"
+        },
+        {
+          "wert": 35,
+          "id": "umkehr"
+        },
+        {
+          "wert": 12,
+          "id": "halb"
+        }
+      ]
+    },
+    {
+      "lz": 0,
+      "typ": "zahl",
+      "frage": "Dreieck: A = 20 cm², g = 8 cm. Wie groß ist h?",
+      "loesung": 5,
+      "erklaerung": "h = 2 · 20 : 8 = 5 cm",
+      "einheit": "cm",
+      "fehler": [
+        {
+          "wert": 2.5,
+          "id": "halb"
+        },
+        {
+          "wert": 160,
+          "id": "umkehr"
+        }
+      ]
+    },
+    {
+      "lz": 1,
+      "typ": "zahl",
+      "frage": "Trapez: A = 30 cm², a = 7 cm, c = 5 cm. Wie groß ist h?",
+      "loesung": 5,
+      "erklaerung": "(7 + 5) : 2 = 6 → h = 30 : 6 = 5 cm",
+      "einheit": "cm",
+      "fehler": [
+        {
+          "wert": 2.5,
+          "id": "mitte"
+        },
+        {
+          "wert": 180,
+          "id": "umkehr"
+        }
+      ]
+    },
+    {
+      "lz": 2,
+      "typ": "auswahl",
+      "frage": "Probe: Dreieck mit g = 10 cm und h = 3 cm. Stimmt A = 30 cm²?",
+      "optionen": [
+        "Nein, A = 10 · 3 : 2 = 15 cm²",
+        "Ja, 10 · 3 = 30",
+        "Kann man nicht prüfen"
+      ],
+      "loesung": 0,
+      "erklaerung": "Einsetzen in die Formel zeigt: 15 cm².",
+      "fehler": {
+        "1": "probe",
+        "2": "probe"
+      }
+    }
+  ]
+}
+</script>
+<script src="../../../../qr.js"></script>
+<script src="../../../../exit-ticket.js"></script>
+</body>
+</html>

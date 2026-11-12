@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Exit-Ticket: Raute und Drachen – Stunde 11</title>
+<link rel="stylesheet" href="../../../../schueler.css">
+</head>
+<body>
+<header><div class="inner">
+  <div class="pfad"><a href="./">🗺️ Lernlandkarte</a> › <a href="stunde-11.html">Stunde 11</a> › Exit-Ticket</div>
+  <h1>🎫 Exit-Ticket</h1>
+  <p class="untertitel">Stunde 11 · Raute und Drachen</p>
+</div></header>
+<main>
+  <div id="exit"></div>
+</main>
+<script type="application/json" id="exit-daten">
+{
+  "titel": "Raute und Drachen",
+  "stunde": 11,
+  "lernziele": [
+    {
+      "text": "Ich kann Raute und Drachen zu einem Rechteck aus den Diagonalen ergänzen.",
+      "foerdern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ● Basis",
+      "fordern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ●●● Profi"
+    },
+    {
+      "text": "Ich kann den Flächeninhalt mit A = e · f : 2 berechnen.",
+      "foerdern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ● Basis",
+      "fordern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ●●● Profi"
+    },
+    {
+      "text": "Ich kann bei der Raute zwei Wege nutzen: A = e · f : 2 und A = a · h.",
+      "foerdern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ● Basis",
+      "fordern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ●●● Profi"
+    }
+  ],
+  "fehlertypen": {
+    "halb": "Nicht durch 2 geteilt (ganzes Rechteck)",
+    "seiten": "Seiten statt Diagonalen verwendet",
+    "ergaenzen": "Herleitung (Ergänzen) nicht verstanden"
+  },
+  "fragen": [
+    {
+      "lz": 1,
+      "typ": "zahl",
+      "frage": "Raute: e = 8 cm, f = 6 cm. Wie groß ist A?",
+      "loesung": 24,
+      "erklaerung": "A = 8 · 6 : 2 = 24 cm²",
+      "einheit": "cm²",
+      "fehler": [
+        {
+          "wert": 48,
+          "id": "halb"
+        },
+        {
+          "wert": 14,
+          "id": "seiten"
+        },
+        {
+          "wert": 7,
+          "id": "seiten"
+        }
+      ]
+    },
+    {
+      "lz": 1,
+      "typ": "zahl",
+      "frage": "Drachen: e = 40 cm, f = 70 cm. Wie groß ist A?",
+      "loesung": 1400,
+      "erklaerung": "A = 40 · 70 : 2 = 1400 cm²",
+      "einheit": "cm²",
+      "fehler": [
+        {
+          "wert": 2800,
+          "id": "halb"
+        },
+        {
+          "wert": 110,
+          "id": "seiten"
+        }
+      ]
+    },
+    {
+      "lz": 0,
+      "typ": "auswahl",
+      "frage": "Warum teilt man bei Raute und Drachen durch 2?",
+      "optionen": [
+        "Das Rechteck aus den Diagonalen ist doppelt so groß.",
+        "Weil die Figur zwei Diagonalen hat.",
+        "Weil zwei Seiten gleich lang sind."
+      ],
+      "loesung": 0,
+      "erklaerung": "Die Dreiecke außen sind genauso groß wie die innen.",
+      "fehler": {
+        "1": "ergaenzen",
+        "2": "ergaenzen"
+      }
+    },
+    {
+      "lz": 2,
+      "typ": "zahl",
+      "frage": "Raute: a = 5 cm, Höhe h = 4,8 cm. Wie groß ist A?",
+      "loesung": 24,
+      "erklaerung": "A = a · h = 5 · 4,8 = 24 cm²",
+      "einheit": "cm²",
+      "fehler": [
+        {
+          "wert": 25,
+          "id": "seiten"
+        },
+        {
+          "wert": 12,
+          "id": "halb"
+        }
+      ]
+    }
+  ]
+}
+</script>
+<script src="../../../../qr.js"></script>
+<script src="../../../../exit-ticket.js"></script>
+</body>
+</html>

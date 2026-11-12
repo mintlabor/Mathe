@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Exit-Ticket: Das Dreieck – Stunde 8</title>
+<link rel="stylesheet" href="../../../../schueler.css">
+</head>
+<body>
+<header><div class="inner">
+  <div class="pfad"><a href="./">🗺️ Lernlandkarte</a> › <a href="stunde-08.html">Stunde 8</a> › Exit-Ticket</div>
+  <h1>🎫 Exit-Ticket</h1>
+  <p class="untertitel">Stunde 8 · Das Dreieck</p>
+</div></header>
+<main>
+  <div id="exit"></div>
+</main>
+<script type="application/json" id="exit-daten">
+{
+  "titel": "Das Dreieck",
+  "stunde": 8,
+  "lernziele": [
+    {
+      "text": "Ich kann ein Dreieck durch Verdoppeln zu einem Parallelogramm ergänzen.",
+      "foerdern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ● Basis",
+      "fordern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ●●● Profi"
+    },
+    {
+      "text": "Ich kann den Flächeninhalt mit A = g · h : 2 berechnen.",
+      "foerdern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ● Basis",
+      "fordern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ●●● Profi"
+    },
+    {
+      "text": "Ich kann zur gewählten Grundseite die passende Höhe finden.",
+      "foerdern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ● Basis",
+      "fordern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ●●● Profi"
+    }
+  ],
+  "fehlertypen": {
+    "halb": "Nicht durch 2 geteilt",
+    "seiten": "Falsche Strecken (Seite statt Höhe) genommen",
+    "trick": "Herleitung (Verdoppeln) nicht verstanden"
+  },
+  "fragen": [
+    {
+      "lz": 1,
+      "typ": "zahl",
+      "frage": "Dreieck: g = 6 cm, h = 5 cm. Wie groß ist A?",
+      "loesung": 15,
+      "erklaerung": "A = 6 · 5 : 2 = 15 cm²",
+      "einheit": "cm²",
+      "fehler": [
+        {
+          "wert": 30,
+          "id": "halb"
+        },
+        {
+          "wert": 11,
+          "id": "seiten"
+        },
+        {
+          "wert": 5.5,
+          "id": "seiten"
+        }
+      ]
+    },
+    {
+      "lz": 1,
+      "typ": "zahl",
+      "frage": "Dreieck: g = 9 cm, h = 4 cm. Wie groß ist A?",
+      "loesung": 18,
+      "erklaerung": "A = 9 · 4 : 2 = 18 cm²",
+      "einheit": "cm²",
+      "fehler": [
+        {
+          "wert": 36,
+          "id": "halb"
+        },
+        {
+          "wert": 13,
+          "id": "seiten"
+        }
+      ]
+    },
+    {
+      "lz": 0,
+      "typ": "auswahl",
+      "frage": "Warum teilt man beim Dreieck durch 2?",
+      "optionen": [
+        "Zwei gleiche Dreiecke ergeben ein Parallelogramm.",
+        "Weil ein Dreieck zwei schräge Seiten hat.",
+        "Das ist einfach eine Regel."
+      ],
+      "loesung": 0,
+      "erklaerung": "Das Dreieck ist die Hälfte des Parallelogramms mit gleicher g und h.",
+      "fehler": {
+        "1": "trick",
+        "2": "trick"
+      }
+    },
+    {
+      "lz": 2,
+      "typ": "auswahl",
+      "frage": "Rechtwinkliges Dreieck mit den Katheten 6 cm und 8 cm, Hypotenuse 10 cm. Welche Rechnung stimmt?",
+      "optionen": [
+        "6 · 8 : 2",
+        "6 · 10 : 2",
+        "8 · 10 : 2"
+      ],
+      "loesung": 0,
+      "erklaerung": "Die Katheten stehen senkrecht aufeinander: A = 24 cm².",
+      "fehler": {
+        "1": "seiten",
+        "2": "seiten"
+      }
+    }
+  ]
+}
+</script>
+<script src="../../../../qr.js"></script>
+<script src="../../../../exit-ticket.js"></script>
+</body>
+</html>
