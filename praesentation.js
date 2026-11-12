@@ -326,7 +326,7 @@
   const eigen = document.currentScript || document.querySelector('script[src$="praesentation.js"]');
   if (eigen && !window.BausteineGeladen) {
     const b = document.createElement("script");
-    b.src = new URL("bausteine.js", eigen.src).href;
+    b.src = new URL("bausteine.js", eigen.src).href + (new URL(eigen.src).search || "");
     document.body.appendChild(b);
   }
 })();
