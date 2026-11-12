@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Stunde 10: Stationen: Zufall – Wahrscheinlichkeiten</title>
+<link rel="stylesheet" href="../../../../praesentation.css">
+<style>
+  .platzhalter { background: #fff3bf; border-radius: 4px; padding: 0 .3rem; font-family: ui-monospace, monospace; font-size: .9em; }
+  .exit-qr { display: flex; gap: 1.5rem; align-items: center; }
+  .exit-qr [data-qr] svg { width: 230px; height: 230px; display: block; border-radius: 8px; }
+  .stationen { grid-template-columns: repeat(4, 1fr) !important; }
+  .stationen .karte { min-height: 0 !important; padding: .6rem .8rem; font-size: 1.05rem; }
+</style>
+</head>
+<body data-phasen='[["Abrufen", 4], ["Problem", 5], ["Stationen", 24], ["Ideen vergleichen", 4], ["Sicherung", 4], ["Reflexion", 4]]'>
+
+<div class="leiste">
+  <div class="pfad"><a href="../../../../">Start</a> › <a href="../../../">Klasse 8</a> › <a href="../../">Hauptschule</a> › <a href="../">Wahrscheinlichkeiten</a> › Stunde 10</div>
+</div>
+
+<aside class="wortspeicher"
+  data-woerter='["Zufallsexperiment", "relative Häufigkeit", "Wahrscheinlichkeit", "Nicht-Laplace", "Urne", "Baumdiagramm", "fair"]'
+  data-saetze='["Ich vermute, dass …", "Ich habe so gerechnet: …", "Das sieht man daran, dass …", "Ich stimme zu / nicht zu, weil …"]'></aside>
+
+<div class="buehne">
+
+  <!-- 1 · ABRUFEN -->
+  <section class="folie" data-phase="Abrufen">
+    <div class="kennung">Wahrscheinlichkeiten · Stunde 10 · Warm-up</div>
+    <h2>Was weißt du noch?</h2>
+    <p style="margin-top:0">Exit-Ticket von letzter Stunde: Zwei Münzen werden geworfen. Wie viele Ergebnisse gibt es?</p>
+    <div data-abstimmung='["2", "3", "4", "6"]' data-loesung="2"></div>
+    <div class="hinweis">Alle halten gleichzeitig die ABCD-Karte hoch. Begründungen per 🎲 einholen, nicht per Melden.</div>
+  </section>
+
+  <section class="folie" data-phase="Problem">
+    <div class="kennung">Problem<span class="leitmodell">Leitmodell: 0-bis-1-Streifen</span></div>
+    <h2>Welches Spiel kommt an unseren Stand?</h2>
+    <div class="spannung" data-art="Wette">Wette: Das <strong>Glücksrad</strong> (¼ der Felder gewinnt) bringt unserer Kasse mehr Geld als das Würfelspiel „<strong>Sechs gewinnt</strong>“ – bei gleichem Preis und Gewinn.</div>
+    <div data-abstimmung='["Glücksrad bringt mehr", "Würfelspiel bringt mehr", "beide gleich"]'></div>
+    <div class="lernziele schritt"><div class="titel">🎯 Heute lernst du …</div><ul><li>Ich kann eine Wahrscheinlichkeit über die relative Häufigkeit schätzen.</li><li>Ich kann Wahrscheinlichkeiten als Bruch, Dezimalzahl und Prozent vergleichen.</li><li>Ich kann begründen, ob ein Spiel fair ist.</li></ul></div>
+    <p class="schritt"><span class="projekt">Schulfest-Projekt: Wir entscheiden, welches Spiel an unseren Stand kommt.</span></p>
+    <div class="hinweis">Abstimmung festhalten (Foto/Tafel), am Ende der Stunde auflösen.</div>
+  </section>
+
+  <section class="folie" data-phase="Stationen">
+    <div class="kennung">Stationenarbeit · Plan<span class="eis" data-eis="E"></span></div>
+    <h2>Dein Weg durch die Stationen</h2>
+    <div class="karten stationen"><div class="karte ja" style="cursor:default"><b>🎲 Station 1 ●</b><br>Zufall oder nicht?<span class="loesung">Karten sortieren: Zufallsexperiment ja/nein, Ergebnismenge in { } aufschreiben, sicher – möglich – unmöglich</span></div><div class="karte ja" style="cursor:default"><b>📌 Station 2 ●</b><br>Heftzwecken-Labor<span class="loesung">20 Würfe, Strichliste, relative Häufigkeit als Bruch, Dezimalzahl und Prozent; mit den Klassendaten vergleichen</span></div><div class="karte ja" style="cursor:default"><b>🁢 Station 3 ●</b><br>Schreibweisen-Domino<span class="loesung">Bruch, Dezimalzahl und Prozent zuordnen und auf der 0-bis-1-Leine ordnen</span></div><div class="karte ja" style="cursor:default"><b>🧱 Station 4 ●</b><br>Nicht-Laplace<span class="loesung">Streichholzschachtel oder Legostein 30-mal werfen, Wahrscheinlichkeiten schätzen, Summe = 1 prüfen</span></div><div class="karte nein" style="cursor:default"><b>👜 Station 5 ★</b><br>Beutel-Detektiv<span class="loesung">Aus einem geheimen Beutel 30-mal mit Zurücklegen ziehen und den Inhalt schätzen</span></div><div class="karte nein" style="cursor:default"><b>🌳 Station 6 ★</b><br>Baumdiagramm<span class="loesung">Münze und Glücksrad zweimal: Baumdiagramm zeichnen, Pfade zählen</span></div><div class="karte nein" style="cursor:default"><b>🎪 Station 7 ★</b><br>Spielstand-Werkstatt<span class="loesung">Ein eigenes Spiel für den Schulfest-Stand erfinden und auf Fairness prüfen</span></div></div>
+    <div class="wahlkarten" style="margin-top:.6rem">
+      <div class="wahlkarte"><div class="icon">●</div><b>Pflicht</b>Stationen 1–4 (in beliebiger Reihenfolge)</div>
+      <div class="wahlkarte"><div class="icon">★</div><b>Wahl</b>mindestens eine von 5–7</div>
+      <div class="wahlkarte"><div class="icon">🚦</div><b>Laufzettel</b>nach jeder Station die Ampel setzen</div>
+    </div>
+    <div class="hinweis">Klick auf eine Station zeigt den Auftrag. Material je Station in einer Kiste, Auftragskarte mit Lösungskarte (umgedreht). Arbeit zu zweit (Lerntempo). Wer bei Station 2 oder 3 im letzten Exit-Ticket rot hatte, beginnt dort.</div>
+  </section>
+
+  <section class="folie" data-phase="Stationen" data-minuten="20">
+    <div class="kennung">Stationenarbeit</div>
+    <h2>Los geht's!</h2>
+    <div data-methode="lerntempoduett" data-schritte='[["👥 Station zu zweit bearbeiten",6],["✅ Mit der Lösungskarte prüfen, Ampel auf dem Laufzettel",1],["➡️ Nächste freie Station",0]]'></div>
+    <p class="satzhilfe">Wir haben herausgefunden, dass … · Die Wahrscheinlichkeit ist ungefähr …, weil …</p>
+    <p>Selbstkontrolle am Tablet: <a class="schuelerlink" href="../schueler/stunde-10.html" target="_blank">📱 Schülerseite · Stunde 10</a></p>
+    <div class="hinweis">Timer pro Station 6–7 Minuten. Lehrkraft geht zu den Paaren mit roter Ampel. Expertinnen und Experten (grüne Ampel) dürfen helfen.</div>
+  </section>
+
+  <!-- 4 · IDEEN VERGLEICHEN -->
+  <section class="folie" data-phase="Ideen vergleichen">
+    <div class="kennung">Ideen vergleichen</div>
+    <h2>Fehler finden</h2>
+    <div class="fehlerkarte" data-wer="Ole">
+      <div class="rechnung">Glücksrad mit 8 Feldern, 2 davon „Gewinn“ → P(Gewinn) = <span class='fehler'>2/6</span></div>
+      <div class="erklaerung">Ole teilt durch die Anzahl der Nieten statt durch alle Felder. Richtig: 2 von 8 Feldern → P(Gewinn) = 2/8 = ¼ = 25 %.</div>
+    </div>
+    <div class="legende"><span class="l-ja">stimmt</span><span class="l-nein">stimmt nicht</span>
+      <button class="knopf" data-alle-auf style="margin-left:auto">Alle aufdecken</button><button class="knopf" data-alle-zu>Alle zudecken</button></div>
+    <div class="karten">
+      <div class="karte ja">Je mehr Versuche, desto besser die Schätzung.<span class="loesung">Ja, Gesetz der großen Zahlen.</span></div>
+      <div class="karte nein">Bei der Streichholzschachtel hat jede Lage ⅓.<span class="loesung">Nein, die Lagen sind nicht gleich wahrscheinlich.</span></div>
+      <div class="karte ja">Alle Wahrscheinlichkeiten eines Experiments ergeben zusammen 1.<span class="loesung">Ja, 100 %.</span></div>
+    </div>
+    <p class="satzhilfe">Ich stimme zu / nicht zu, weil … · Der Fehler ist …</p>
+    <div class="hinweis">Erst Fehlerkarte: Denkzeit, dann 🎲. Karten einzeln: Daumen hoch/runter, dann aufdecken.</div>
+  </section>
+
+  <section class="folie" data-phase="Sicherung">
+    <div class="kennung">Sicherung · Projekt<span class="eis" data-eis="S"></span></div>
+    <h2>Unser Spielstand-Plan</h2>
+    <div data-methode="placemat" data-minuten="1,1,2" data-frage="Welches Spiel kommt an unseren Stand – und warum ist es fair für uns und die Besucher?"></div>
+    <div class="produkt">Haltet in der Mitte fest: <strong>Spiel · Regeln · Gewinnwahrscheinlichkeit (in %) · Preis und Gewinn</strong>. Das kommt in die Projektmappe.</div>
+    <div class="hinweis">Ergebnisse der Placemats kurz per 🎲 vorstellen lassen. Teil 1 des Schulfest-Projekts ist damit fertig.</div>
+  </section>
+
+  <!-- 7 · REFLEXION -->
+  <section class="folie" data-phase="Reflexion">
+    <div class="kennung">Zurück zum Problem · Reflexion</div>
+    <h2>Unser Spielstand steht – und wir können begründen, warum er fair ist.</h2>
+    <div class="exit-qr">
+      <div data-qr="../schueler/exit-10.html"></div>
+      <div>
+        <p style="margin-top:0;font-size:1.4rem"><strong>🎫 Exit-Ticket</strong></p>
+        <p>Scanne den Code oder öffne die Schülerseite. Gib dein <strong>Kürzel</strong> ein.<br>Am Ende zeigst du mir deinen QR-Code.</p>
+        <p><a class="schuelerlink" href="../schueler/exit-10.html" target="_blank">🎫 Zum Exit-Ticket</a></p>
+        <p class="klein">Nächste Stunde: Wir planen eine Umfrage fürs Schulfest.</p>
+      </div>
+    </div>
+    <div class="hinweis">Wette auflösen: Glücksrad mit ¼ Gewinnfeldern und Würfel „Sechs gewinnt“ (⅙) vergleichen: ¼ = 25 % > ⅙ ≈ 16,7 %. Beim Würfelspiel gewinnen seltener Spieler, bei gleichem Preis bleibt mehr in der Kasse. Tafelabstimmung vom Anfang zeigen: Wer lag richtig? QR-Codes der Schüler mit der Kamera-App scannen → Auswertung.</div>
+  </section>
+
+</div>
+<script src="../../../../praesentation.js"></script>
+<script src="../../../../qr.js"></script>
+</body>
+</html>

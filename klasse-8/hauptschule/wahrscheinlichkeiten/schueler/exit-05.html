@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Exit-Ticket: Wie wahrscheinlich ist das? – Stunde 5</title>
+<link rel="stylesheet" href="../../../../schueler.css">
+</head>
+<body>
+<header><div class="inner">
+  <div class="pfad"><a href="./">🗺️ Lernlandkarte</a> › <a href="stunde-05.html">Stunde 5</a> › Exit-Ticket</div>
+  <h1>🎫 Exit-Ticket</h1>
+  <p class="untertitel">Stunde 5 · Wie wahrscheinlich ist das?</p>
+</div></header>
+<main>
+  <div id="exit"></div>
+</main>
+<script type="application/json" id="exit-daten">
+{
+  "titel": "Wie wahrscheinlich ist das?",
+  "stunde": 5,
+  "lernziele": [
+    {
+      "text": "Ich kann eine Wahrscheinlichkeit auf der Skala von 0 bis 1 einordnen.",
+      "foerdern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ● Basis",
+      "fordern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ●●● Profi"
+    },
+    {
+      "text": "Ich kann eine Wahrscheinlichkeit als Bruch, Dezimalzahl und Prozent schreiben.",
+      "foerdern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ● Basis",
+      "fordern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ●●● Profi"
+    },
+    {
+      "text": "Ich kann Wahrscheinlichkeiten in verschiedenen Schreibweisen vergleichen.",
+      "foerdern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ● Basis",
+      "fordern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ●●● Profi"
+    }
+  ],
+  "fehlertypen": {
+    "skala": "0 und 1 (unmöglich / sicher) verwechselt",
+    "umrechnen": "Bruch, Dezimalzahl und Prozent falsch umgerechnet",
+    "vergleich": "Zahlen in verschiedenen Schreibweisen direkt verglichen",
+    "groesser1": "Eine Wahrscheinlichkeit größer als 1 zugelassen"
+  },
+  "fragen": [
+    {
+      "lz": 0,
+      "typ": "auswahl",
+      "frage": "Welche Wahrscheinlichkeit hat ein <strong>sicheres</strong> Ereignis?",
+      "optionen": [
+        "0",
+        "0,5",
+        "1"
+      ],
+      "loesung": 2,
+      "erklaerung": "Sicher = 1 (100 %).",
+      "fehler": {
+        "0": "skala"
+      }
+    },
+    {
+      "lz": 0,
+      "typ": "auswahl",
+      "frage": "Kann eine Wahrscheinlichkeit 1,2 sein?",
+      "optionen": [
+        "Ja",
+        "Nein, höchstens 1 (sicher)"
+      ],
+      "loesung": 1,
+      "erklaerung": "Mehr als sicher geht nicht.",
+      "fehler": {
+        "0": "groesser1"
+      }
+    },
+    {
+      "lz": 1,
+      "typ": "zahl",
+      "frage": "Schreibe ¼ in Prozent.",
+      "loesung": 25,
+      "erklaerung": "1 : 4 = 0,25 = 25 %",
+      "einheit": "%",
+      "fehler": [
+        {
+          "wert": 0.25,
+          "id": "umrechnen"
+        },
+        {
+          "wert": 4,
+          "id": "umrechnen"
+        },
+        {
+          "wert": 14,
+          "id": "umrechnen"
+        }
+      ]
+    },
+    {
+      "lz": 2,
+      "typ": "auswahl",
+      "frage": "Welche Regenwahrscheinlichkeit ist am kleinsten?",
+      "optionen": [
+        "30 %",
+        "0,1",
+        "¼"
+      ],
+      "loesung": 1,
+      "erklaerung": "30 % · 10 % · 25 %",
+      "fehler": {
+        "0": "vergleich",
+        "2": "vergleich"
+      }
+    },
+    {
+      "lz": 2,
+      "typ": "auswahl",
+      "frage": "Donnerstag: Regenwahrscheinlichkeit ⅕. Dienstag: 0,1. Welcher Tag ist besser zum Heumachen?",
+      "optionen": [
+        "Donnerstag",
+        "Dienstag"
+      ],
+      "loesung": 1,
+      "erklaerung": "⅕ = 20 % ist mehr als 0,1 = 10 %.",
+      "fehler": {
+        "0": "vergleich"
+      }
+    }
+  ]
+}
+</script>
+<script src="../../../../qr.js"></script>
+<script src="../../../../exit-ticket.js"></script>
+</body>
+</html>

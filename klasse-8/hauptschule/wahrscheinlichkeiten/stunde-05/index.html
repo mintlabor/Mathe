@@ -31,6 +31,9 @@
   .leine { display: flex; justify-content: space-between; border-top: 4px solid var(--text); margin: 2rem 1rem 0; padding-top: .5rem; font-size: 1.3rem; font-weight: 700; }
   .leine span { position: relative; }
   .leine span::before { content: ""; position: absolute; top: -1.15rem; left: 50%; width: 4px; height: 1.2rem; background: var(--text); }
+  .platzhalter { background: #fff3bf; border-radius: 4px; padding: 0 .3rem; font-family: ui-monospace, monospace; font-size: .9em; }
+  .exit-qr { display: flex; gap: 1.2rem; align-items: center; }
+  .exit-qr [data-qr] svg { width: 170px; height: 170px; display: block; border-radius: 8px; }
 </style>
 </head>
 <body data-phasen='[["Abrufen",4],["Problem",6],["Erarbeitung",12],["Ideen vergleichen",5],["Sicherung",8],["Übung",6],["Reflexion",4]]'>
@@ -39,7 +42,20 @@
   <div class="pfad"><a href="../../../../">Start</a> › <a href="../../../">Klasse 8</a> › <a href="../../">Hauptschule</a> › <a href="../">Wahrscheinlichkeiten</a> › Stunde 5</div>
 </div>
 
+<aside class="wortspeicher"
+  data-woerter='["Wahrscheinlichkeit", "P(…)", "unmöglich = 0", "sicher = 1", "Bruch", "Dezimalzahl", "Prozent"]'
+  data-saetze='["Ich vermute, dass …", "Ich habe so gerechnet: …", "Das sieht man daran, dass …", "Ich stimme zu / nicht zu, weil …"]'></aside>
+
 <div class="buehne">
+
+  <!-- Abrufen: alle antworten (ABCD) -->
+  <section class="folie" data-phase="Abrufen">
+    <div class="kennung">Wie wahrscheinlich ist das? · Stunde 5 · Alle antworten</div>
+    <h2>Was weißt du noch?</h2>
+    <p style="margin-top:0">Exit-Ticket von letzter Stunde: 10 Münzwürfe, 7-mal Kopf. Ist die Münze gezinkt?</p>
+    <div data-abstimmung='["Ja, ganz sicher", "Nicht unbedingt – bei wenigen Würfen schwankt es", "Ja, weil 7 mehr ist als 5", "Nein, eine Münze zeigt immer 5-mal Kopf"]' data-loesung="1"></div>
+    <div class="hinweis">Alle halten gleichzeitig die ABCD-Karte hoch. Begründungen per 🎲 einholen. Danach die weiteren Abruf-Aufgaben.</div>
+  </section>
 
   <!-- Abrufen -->
   <section class="folie" data-phase="Abrufen">
@@ -81,11 +97,22 @@
     <div class="lernziele schritt">
       <div class="titel">🎯 Heute lernst du …</div>
       <ul>
-        <li>Wahrscheinlichkeiten als <strong>Zahl zwischen 0 und 1</strong> anzugeben,</li>
-        <li>sie als <strong>Bruch, Dezimalzahl und Prozent</strong> zu schreiben und zu vergleichen.</li>
+        <li>Ich kann eine Wahrscheinlichkeit auf der Skala von 0 bis 1 einordnen.</li>
+        <li>Ich kann eine Wahrscheinlichkeit als Bruch, Dezimalzahl und Prozent schreiben.</li>
+        <li>Ich kann Wahrscheinlichkeiten in verschiedenen Schreibweisen vergleichen.</li>
       </ul>
     </div>
     <div class="hinweis">Kurz klären: Heu muss nach dem Mähen ein paar Tage trocknen, Regen verdirbt es. Noch nicht auflösen. Die Schwierigkeit: Drei verschiedene Schreibweisen lassen sich nicht direkt vergleichen.</div>
+  </section>
+
+  <!-- Spannungsmoment: Wette -->
+  <section class="folie" data-phase="Problem" data-minuten="2">
+    <div class="kennung">Problem · Was glaubst du?<span class="leitmodell">Leitmodell: 0-bis-1-Streifen</span></div>
+    <h2>Deine Wette</h2>
+    <div class="spannung" data-art="Wette">Wette: Der <strong>Montag</strong> ist der beste Tag zum Heumachen.</div>
+    <div data-abstimmung='["Montag", "Dienstag", "Mittwoch"]'></div>
+    <p class="schritt"><span class="projekt">Schulfest-Projekt: Gewinnchancen unserer Spiele in Prozent angeben</span></p>
+    <div class="hinweis">Jeder entscheidet sich still, dann 3-2-1 abstimmen. Ergebnis festhalten (Foto/Tafel) und erst in der Reflexion auflösen.</div>
   </section>
 
   <!-- Eigene Lösung -->
@@ -222,15 +249,33 @@
     <div class="hinweis">a) bis c) im Heft. Wer fertig ist, macht ★ oder geht auf die Schülerseite. Rest als Hausaufgabe.</div>
   </section>
 
+  <!-- Übung: Niveauwahl Buch -->
+  <section class="folie" data-phase="Übung">
+    <div class="kennung">Übung · Buch<span class="eis" data-eis="S"></span></div>
+    <h2>Weiter üben: Wähle dein Niveau</h2>
+    <div class="wahlkarten">
+      <div class="wahlkarte"><b>● Basis</b>📖 <span class="platzhalter">[BUCH: S. __ Nr. __]</span></div>
+      <div class="wahlkarte"><b>●● Standard</b>📖 <span class="platzhalter">[BUCH: S. __ Nr. __]</span></div>
+      <div class="wahlkarte"><b>●●● Profi</b>📖 <span class="platzhalter">[BUCH: S. __ Nr. __]</span></div>
+    </div>
+    <div data-methode="lerntempoduett" data-minuten="5,0,2,0"></div>
+    <div class="produkt">Fertig? <strong>Erfinde eine eigene Aufgabe</strong> mit drei Wettervorhersagen in drei verschiedenen Schreibweisen. Dein Partner löst sie.</div>
+    <p>Tipps und Selbstkontrolle: <a class="schuelerlink" href="../schueler/stunde-05.html" target="_blank">📱 Schülerseite · Stunde 5</a></p>
+    <div class="hinweis">Wer auf der Schülerseite fertig ist, wählt hier eine Buchaufgabe. Rest als Hausaufgabe.</div>
+  </section>
+
   <!-- Reflexion -->
   <section class="folie" data-phase="Reflexion">
     <div class="kennung">Zurück zum Problem · Reflexion</div>
     <h2>Familie Meyer macht am Dienstag Heu.</h2>
     <div class="zweispaltig">
       <div>
-        <div class="kasten">
-          <p style="margin:0 0 .3rem"><strong>🎫 Exit-Ticket:</strong></p>
-          <p style="margin:0">Am Donnerstag ist die Regenwahrscheinlichkeit <span class="bruch"><span>1</span><span>5</span></span>. Ist der Donnerstag besser als der Dienstag (0,1)? Begründe mit Prozent.</p>
+        <div class="exit-qr">
+          <div data-qr="../schueler/exit-05.html"></div>
+          <div>
+            <p style="margin:0 0 .3rem;font-size:1.3rem"><strong>🎫 Exit-Ticket</strong></p>
+            <p style="margin:0">Code scannen, <strong>Kürzel</strong> eingeben, am Ende QR-Code zeigen.<br><a class="schuelerlink" href="../schueler/exit-05.html" target="_blank">🎫 Zum Exit-Ticket</a></p>
+          </div>
         </div>
         <p class="klein" style="margin-top:1rem">Nächste Stunde: Die Streichholzschachtel. Welche Lage ist wie wahrscheinlich?</p>
       </div>
@@ -243,11 +288,12 @@
         </div>
       </div>
     </div>
-    <div class="hinweis">Exit-Ticket: 1/5 = 20 % &gt; 10 %, also ist Donnerstag schlechter als Dienstag. Exit-Tickets sortieren: Wer Prozent nicht umrechnen konnte, bekommt nächste Stunde die Umrechnungskarte (Folie „Umrechnen“ ausgedruckt).</div>
+    <div class="hinweis">Wette auflösen: Dienstag (10 %) ist am trockensten. Digitales Exit-Ticket (frühere Zettelfrage zum Besprechen: „Am Donnerstag ist die Regenwahrscheinlichkeit 15. Ist der Donnerstag besser als der Dienstag (0,1)? Begründe mit Prozent.“). QR-Codes der Schüler scannen → Auswertung. Exit-Ticket: 1/5 = 20 % &gt; 10 %, also ist Donnerstag schlechter als Dienstag. Exit-Tickets sortieren: Wer Prozent nicht umrechnen konnte, bekommt nächste Stunde die Umrechnungskarte (Folie „Umrechnen“ ausgedruckt).</div>
   </section>
 
 </div>
 <script src="../../../../praesentation.js"></script>
+<script src="../../../../qr.js"></script>
 <script>
   // ---------- Wahrscheinlichkeitsskala ----------
   (function () {

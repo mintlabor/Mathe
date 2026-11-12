@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Üben: Daten in Klassen einteilen – Stunde 13</title>
+<link rel="stylesheet" href="../../../../schueler.css">
+</head>
+<body>
+<header><div class="inner">
+  <div class="pfad"><a href="./">🗺️ Lernlandkarte</a> › Stunde 13</div>
+  <h1>Üben: Daten in Klassen einteilen</h1>
+  <p class="untertitel">Stunde 13 · Klassen bilden: von … bis unter …</p>
+</div></header>
+<main>
+  <div class="box">
+    <strong>📘 Erinnerung</strong><br>
+    Klassen: von … bis unter … · alle gleich breit · jeder Wert in genau eine Klasse · dann Strichliste und Säulen
+  </div>
+  <div class="box">
+    <strong>📚 Wörter für heute:</strong> Klasse · Klassenbreite · von … bis unter … · Strichliste · Säulendiagramm<br>
+    <span class="klein">💬 So kannst du es aufschreiben: „Ich habe so gerechnet: …, weil …“</span>
+  </div>
+  <div id="ziele"></div>
+
+  <h2>📖 Aufgaben aus dem Buch</h2>
+  <div class="box buch">
+    <h3>Parallelo 8</h3>
+    <ul>
+      <li>● Basis: <span class="platzhalter">[BUCH: S. __ Nr. __]</span></li>
+      <li>●● Standard: <span class="platzhalter">[BUCH: S. __ Nr. __]</span></li>
+      <li>●●● Profi: <span class="platzhalter">[BUCH: S. __ Nr. __]</span></li>
+    </ul>
+    <p class="klein">Rechne im Heft. Unten findest du Aufgaben mit Tipps und Selbstkontrolle.</p>
+  </div>
+
+  <h2>Aufgaben</h2>
+  <div id="niveaus"></div>
+  <div id="fortschritt"></div>
+  <div id="aufgaben"></div>
+  <h2>🎨 Werde kreativ</h2>
+  <div class="box">
+    Sammle 10 Zahlen aus deinem Alltag (Minuten Handyzeit, Seiten gelesen, Schritte). Teile sie in Klassen ein und lass deinen Partner zählen.
+    <span class="klein">Profi-Idee: Baue absichtlich einen Fehler ein. Findet ihn dein Partner?</span>
+  </div>
+  <h2>Wie sicher bist du jetzt?</h2>
+  <div id="ampel"></div>
+  <p><a href="exit-13.html">🎫 Weiter zum Exit-Ticket →</a> · <a href="./">← Lernlandkarte</a></p>
+</main>
+<script>
+window.SEITE = {
+  "speicher": "mathe-k8-hs-wk",
+  "stunde": 13,
+  "lernziele": [
+    "Daten in Klassen einteilen",
+    "Klassengrenzen ohne Überschneidung festlegen (von … bis unter …)",
+    "aus einer Klasseneinteilung Aussagen ablesen"
+  ],
+  "ichKann": [
+    "Ich kann Daten in Klassen einteilen.",
+    "Ich kann Klassengrenzen ohne Überschneidung festlegen (von … bis unter …).",
+    "Ich kann aus einer Klasseneinteilung Aussagen ablesen."
+  ],
+  "aufgaben": [
+    {
+      "niveau": 1,
+      "typ": "auswahl",
+      "frage": "Zu welcher Klasse gehört 9 min?",
+      "loesung": 1,
+      "tipps": [
+        "9 ist kleiner als 10."
+      ],
+      "erklaerung": "5 bis unter 10",
+      "optionen": [
+        "0 bis unter 5",
+        "5 bis unter 10",
+        "10 bis unter 15"
+      ]
+    },
+    {
+      "niveau": 1,
+      "typ": "zahl",
+      "frage": "Körpergrößen (cm): 152, 158, 160, 163, 165, 167, 171. Wie viele liegen in „160 bis unter 170 cm“?",
+      "loesung": 4,
+      "tipps": [
+        "160 gehört dazu, 170 nicht."
+      ],
+      "erklaerung": "160, 163, 165, 167 → 4"
+    },
+    {
+      "niveau": 2,
+      "typ": "auswahl",
+      "frage": "🔍 Fehler finden: Ben teilt ein: 0–10 · 10–20 · 20–30 min. Was ist falsch?",
+      "loesung": 0,
+      "tipps": [
+        "Wohin gehört ein Wert von genau 10?"
+      ],
+      "erklaerung": "Richtig: 0 bis unter 10 · 10 bis unter 20 · …",
+      "optionen": [
+        "10 und 20 gehören zu zwei Klassen.",
+        "Die Klassen sind zu breit.",
+        "Alles ist richtig."
+      ]
+    },
+    {
+      "niveau": 2,
+      "typ": "zahl",
+      "frage": "Wie viele Klassen braucht man für 0 bis unter 40 Minuten, wenn jede Klasse 5 Minuten breit ist?",
+      "loesung": 8,
+      "tipps": [
+        "40 : 5 = ?"
+      ],
+      "erklaerung": "40 : 5 = 8"
+    },
+    {
+      "niveau": 3,
+      "typ": "auswahl",
+      "frage": "Klassen: 0 bis unter 5 (3 Personen), 5 bis unter 20 (15 Personen), 20 bis unter 25 (4 Personen). Was ist das Problem?",
+      "loesung": 0,
+      "tipps": [
+        "Vergleiche die Breiten."
+      ],
+      "erklaerung": "Klassen müssen gleich breit sein.",
+      "optionen": [
+        "Die mittlere Klasse ist dreimal so breit, darum wirkt sie zu groß.",
+        "Es sind zu wenige Personen.",
+        "Kein Problem."
+      ]
+    },
+    {
+      "niveau": 3,
+      "typ": "zahl",
+      "frage": "0 bis unter 10 min: 6 · 10 bis unter 20: 9 · 20 bis unter 30: 3. Wie viel Prozent brauchen 20 Minuten oder mehr? (auf ganze % runden)",
+      "loesung": 17,
+      "tipps": [
+        "3 von wie vielen?",
+        "3 : 18 = ?"
+      ],
+      "erklaerung": "3 : 18 ≈ 0,167 ≈ 17 %",
+      "einheit": "%",
+      "toleranz": 0.5
+    }
+  ]
+};
+</script>
+<script src="../../../../schueler.js"></script>
+</body>
+</html>

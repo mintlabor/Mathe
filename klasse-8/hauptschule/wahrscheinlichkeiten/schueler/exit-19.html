@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Exit-Ticket: Das arithmetische Mittel – Stunde 19</title>
+<link rel="stylesheet" href="../../../../schueler.css">
+</head>
+<body>
+<header><div class="inner">
+  <div class="pfad"><a href="./">🗺️ Lernlandkarte</a> › <a href="stunde-19.html">Stunde 19</a> › Exit-Ticket</div>
+  <h1>🎫 Exit-Ticket</h1>
+  <p class="untertitel">Stunde 19 · Das arithmetische Mittel</p>
+</div></header>
+<main>
+  <div id="exit"></div>
+</main>
+<script type="application/json" id="exit-daten">
+{
+  "titel": "Das arithmetische Mittel",
+  "stunde": 19,
+  "lernziele": [
+    {
+      "text": "Ich kann das arithmetische Mittel (Durchschnitt) berechnen.",
+      "foerdern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ● Basis",
+      "fordern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ●●● Profi"
+    },
+    {
+      "text": "Ich kann das Mittel als „gerecht verteilen“ erklären.",
+      "foerdern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ● Basis",
+      "fordern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ●●● Profi"
+    },
+    {
+      "text": "Ich kann mit dem Mittelwert eine Aussage prüfen.",
+      "foerdern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ● Basis",
+      "fordern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ●●● Profi"
+    }
+  ],
+  "fehlertypen": {
+    "anzahl": "Durch die falsche Anzahl geteilt",
+    "summe": "Summe gebildet, aber nicht geteilt",
+    "median": "Median statt Mittelwert bestimmt",
+    "wert": "Einen Wert der Liste statt des Mittelwerts genommen"
+  },
+  "fragen": [
+    {
+      "lz": 0,
+      "typ": "zahl",
+      "frage": "Tore in 4 Spielen: 2, 0, 3, 3. Wie groß ist der Mittelwert?",
+      "loesung": 2,
+      "erklaerung": "8 : 4 = 2",
+      "fehler": [
+        {
+          "wert": 8,
+          "id": "summe"
+        },
+        {
+          "wert": 2.67,
+          "id": "anzahl"
+        },
+        {
+          "wert": 2.5,
+          "id": "median"
+        }
+      ]
+    },
+    {
+      "lz": 0,
+      "typ": "zahl",
+      "frage": "Körpergrößen: 150, 160, 170 cm. Wie groß ist der Mittelwert?",
+      "loesung": 160,
+      "erklaerung": "480 : 3 = 160",
+      "einheit": "cm",
+      "fehler": [
+        {
+          "wert": 480,
+          "id": "summe"
+        },
+        {
+          "wert": 240,
+          "id": "anzahl"
+        }
+      ]
+    },
+    {
+      "lz": 1,
+      "typ": "auswahl",
+      "frage": "Zwei Türme: 4 und 8 Würfel. Wie hoch sind sie nach dem gerechten Verteilen?",
+      "optionen": [
+        "je 6",
+        "je 12",
+        "je 4"
+      ],
+      "loesung": 0,
+      "erklaerung": "12 Würfel auf 2 Türme: je 6.",
+      "fehler": {
+        "1": "summe",
+        "2": "wert"
+      }
+    },
+    {
+      "lz": 2,
+      "typ": "auswahl",
+      "frage": "Kuh Berta gibt Mo 20 l, Di 24 l, Mi 22 l Milch. Der Bauer sagt: „Im Schnitt 24 Liter am Tag.“ Stimmt das?",
+      "optionen": [
+        "Ja",
+        "Nein, (20 + 24 + 22) : 3 = 22 Liter"
+      ],
+      "loesung": 1,
+      "erklaerung": "Er hat nur den Dienstag genommen.",
+      "fehler": {
+        "0": "wert"
+      }
+    }
+  ]
+}
+</script>
+<script src="../../../../qr.js"></script>
+<script src="../../../../exit-ticket.js"></script>
+</body>
+</html>

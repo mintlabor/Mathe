@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Exit-Ticket: Zufall oder nicht? – Stunde 1</title>
+<link rel="stylesheet" href="../../../../schueler.css">
+</head>
+<body>
+<header><div class="inner">
+  <div class="pfad"><a href="./">🗺️ Lernlandkarte</a> › <a href="stunde-01.html">Stunde 1</a> › Exit-Ticket</div>
+  <h1>🎫 Exit-Ticket</h1>
+  <p class="untertitel">Stunde 1 · Zufall oder nicht?</p>
+</div></header>
+<main>
+  <div id="exit"></div>
+</main>
+<script type="application/json" id="exit-daten">
+{
+  "titel": "Zufall oder nicht?",
+  "stunde": 1,
+  "lernziele": [
+    {
+      "text": "Ich kann erklären, was ein Zufallsexperiment ist.",
+      "foerdern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ● Basis",
+      "fordern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ●●● Profi"
+    },
+    {
+      "text": "Ich kann alle möglichen Ergebnisse in { } aufschreiben.",
+      "foerdern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ● Basis",
+      "fordern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ●●● Profi"
+    },
+    {
+      "text": "Ich kann „sicher“, „möglich“ und „unmöglich“ unterscheiden.",
+      "foerdern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ● Basis",
+      "fordern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ●●● Profi"
+    }
+  ],
+  "fehlertypen": {
+    "vorhersage": "Gedacht, man kann das Ergebnis vorhersagen (kein Zufall erkannt)",
+    "menge": "Nicht alle möglichen Ergebnisse aufgeschrieben",
+    "begriffe": "sicher / möglich / unmöglich verwechselt"
+  },
+  "fragen": [
+    {
+      "lz": 0,
+      "typ": "auswahl",
+      "frage": "Welches ist ein Zufallsexperiment?",
+      "optionen": [
+        "Einen Würfel werfen",
+        "Die Uhrzeit ablesen",
+        "2 + 3 ausrechnen"
+      ],
+      "loesung": 0,
+      "erklaerung": "Beim Würfeln weiß man vorher nicht, was kommt.",
+      "fehler": {
+        "1": "vorhersage",
+        "2": "vorhersage"
+      }
+    },
+    {
+      "lz": 1,
+      "typ": "auswahl",
+      "frage": "Wie heißt die Ergebnismenge beim Werfen einer Münze?",
+      "optionen": [
+        "{ Kopf }",
+        "{ Kopf, Zahl }",
+        "{ 1, 2, 3, 4, 5, 6 }"
+      ],
+      "loesung": 1,
+      "erklaerung": "Alle möglichen Ergebnisse: Kopf und Zahl.",
+      "fehler": {
+        "0": "menge"
+      }
+    },
+    {
+      "lz": 1,
+      "typ": "auswahl",
+      "frage": "Wie heißt die Ergebnismenge beim Würfeln?",
+      "optionen": [
+        "{ 1, 2, 3, 4, 5, 6 }",
+        "{ 6 }",
+        "{ 1, 6 }"
+      ],
+      "loesung": 0,
+      "erklaerung": "Jede Augenzahl von 1 bis 6 ist möglich.",
+      "fehler": {
+        "1": "menge",
+        "2": "menge"
+      }
+    },
+    {
+      "lz": 2,
+      "typ": "auswahl",
+      "frage": "Beim Würfeln fällt eine Zahl kleiner als 7. Das ist …",
+      "optionen": [
+        "möglich",
+        "sicher",
+        "unmöglich"
+      ],
+      "loesung": 1,
+      "erklaerung": "Jede Augenzahl ist kleiner als 7: sicher.",
+      "fehler": {
+        "0": "begriffe",
+        "2": "begriffe"
+      }
+    },
+    {
+      "lz": 2,
+      "typ": "auswahl",
+      "frage": "Beim Würfeln fällt eine 8. Das ist …",
+      "optionen": [
+        "möglich",
+        "sicher",
+        "unmöglich"
+      ],
+      "loesung": 2,
+      "erklaerung": "Es gibt keine 8 auf dem Würfel: unmöglich.",
+      "fehler": {
+        "0": "begriffe",
+        "1": "begriffe"
+      }
+    }
+  ]
+}
+</script>
+<script src="../../../../qr.js"></script>
+<script src="../../../../exit-ticket.js"></script>
+</body>
+</html>

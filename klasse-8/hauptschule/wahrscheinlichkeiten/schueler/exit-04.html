@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Exit-Ticket: Je öfter, desto genauer – Stunde 4</title>
+<link rel="stylesheet" href="../../../../schueler.css">
+</head>
+<body>
+<header><div class="inner">
+  <div class="pfad"><a href="./">🗺️ Lernlandkarte</a> › <a href="stunde-04.html">Stunde 4</a> › Exit-Ticket</div>
+  <h1>🎫 Exit-Ticket</h1>
+  <p class="untertitel">Stunde 4 · Je öfter, desto genauer</p>
+</div></header>
+<main>
+  <div id="exit"></div>
+</main>
+<script type="application/json" id="exit-daten">
+{
+  "titel": "Je öfter, desto genauer",
+  "stunde": 4,
+  "lernziele": [
+    {
+      "text": "Ich kann erklären, warum Ergebnisse bei wenigen Versuchen schwanken.",
+      "foerdern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ● Basis",
+      "fordern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ●●● Profi"
+    },
+    {
+      "text": "Ich kann das Gesetz der großen Zahlen mit eigenen Worten erklären.",
+      "foerdern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ● Basis",
+      "fordern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ●●● Profi"
+    },
+    {
+      "text": "Ich kann mit vielen Versuchen eine Wahrscheinlichkeit schätzen.",
+      "foerdern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ● Basis",
+      "fordern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ●●● Profi"
+    }
+  ],
+  "fehlertypen": {
+    "genau": "Erwartet, dass Zufall bei wenigen Versuchen genau den erwarteten Wert liefert",
+    "wenige": "Gedacht, wenige Versuche reichen zum Schätzen",
+    "rechnen": "Erwartete Anzahl falsch berechnet"
+  },
+  "fragen": [
+    {
+      "lz": 0,
+      "typ": "auswahl",
+      "frage": "Du wirfst eine Münze 10-mal. Wie oft kommt Kopf?",
+      "optionen": [
+        "genau 5-mal",
+        "ungefähr 5-mal, es können aber auch 3 oder 7 sein",
+        "nie mehr als 5-mal"
+      ],
+      "loesung": 1,
+      "erklaerung": "Bei wenigen Würfen schwankt das Ergebnis stark.",
+      "fehler": {
+        "0": "genau",
+        "2": "genau"
+      }
+    },
+    {
+      "lz": 1,
+      "typ": "auswahl",
+      "frage": "Was sagt das Gesetz der großen Zahlen?",
+      "optionen": [
+        "Bei vielen Versuchen kommt die relative Häufigkeit immer näher an die Wahrscheinlichkeit.",
+        "Bei vielen Versuchen kommt jedes Ergebnis genau gleich oft.",
+        "Nach fünfmal Zahl muss Kopf kommen."
+      ],
+      "loesung": 0,
+      "erklaerung": "Nicht genau, aber immer näher dran.",
+      "fehler": {
+        "1": "genau",
+        "2": "genau"
+      }
+    },
+    {
+      "lz": 2,
+      "typ": "zahl",
+      "frage": "Ein Würfel wird 600-mal geworfen. Wie oft erwartest du ungefähr eine Sechs?",
+      "loesung": 100,
+      "erklaerung": "600 : 6 = 100 (ungefähr)",
+      "fehler": [
+        {
+          "wert": 6,
+          "id": "rechnen"
+        },
+        {
+          "wert": 60,
+          "id": "rechnen"
+        }
+      ]
+    },
+    {
+      "lz": 2,
+      "typ": "auswahl",
+      "frage": "Womit schätzt du die Wahrscheinlichkeit für „Kopf“ bei einer Heftzwecke am besten?",
+      "optionen": [
+        "mit 10 Würfen",
+        "mit 500 Würfen der ganzen Klasse",
+        "mit einem einzigen Wurf"
+      ],
+      "loesung": 1,
+      "erklaerung": "Je mehr Versuche, desto genauer die Schätzung.",
+      "fehler": {
+        "0": "wenige",
+        "2": "wenige"
+      }
+    }
+  ]
+}
+</script>
+<script src="../../../../qr.js"></script>
+<script src="../../../../exit-ticket.js"></script>
+</body>
+</html>

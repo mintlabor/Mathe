@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Exit-Ticket: Diagramme vergleichen – Stunde 17</title>
+<link rel="stylesheet" href="../../../../schueler.css">
+</head>
+<body>
+<header><div class="inner">
+  <div class="pfad"><a href="./">🗺️ Lernlandkarte</a> › <a href="stunde-17.html">Stunde 17</a> › Exit-Ticket</div>
+  <h1>🎫 Exit-Ticket</h1>
+  <p class="untertitel">Stunde 17 · Diagramme vergleichen</p>
+</div></header>
+<main>
+  <div id="exit"></div>
+</main>
+<script type="application/json" id="exit-daten">
+{
+  "titel": "Diagramme vergleichen",
+  "stunde": 17,
+  "lernziele": [
+    {
+      "text": "Ich kann für Daten ein passendes Diagramm auswählen.",
+      "foerdern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ● Basis",
+      "fordern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ●●● Profi"
+    },
+    {
+      "text": "Ich kann erkennen, wenn ein Diagramm durch eine abgeschnittene Achse täuscht.",
+      "foerdern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ● Basis",
+      "fordern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ●●● Profi"
+    },
+    {
+      "text": "Ich kann begründen, ob eine Darstellung sachgerecht ist.",
+      "foerdern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ● Basis",
+      "fordern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ●●● Profi"
+    }
+  ],
+  "fehlertypen": {
+    "achse": "Abgeschnittene Achse nicht erkannt",
+    "passend": "Unpassende Diagrammart gewählt",
+    "summe": "Nicht erkannt, dass Anteile zusammen 100 % ergeben müssen"
+  },
+  "fragen": [
+    {
+      "lz": 1,
+      "typ": "auswahl",
+      "frage": "Säulen: A = 60, B = 55. Die Achse beginnt bei 50. Säule A sieht doppelt so hoch aus wie B. Was stimmt?",
+      "optionen": [
+        "A ist doppelt so groß wie B.",
+        "A ist nur etwas größer als B; die Achse täuscht.",
+        "Man kann nichts sagen."
+      ],
+      "loesung": 1,
+      "erklaerung": "60 ist nur 5 mehr als 55.",
+      "fehler": {
+        "0": "achse"
+      }
+    },
+    {
+      "lz": 0,
+      "typ": "auswahl",
+      "frage": "Du willst zeigen, welchen Anteil jede Antwort an allen Antworten hat. Welches Diagramm passt am besten?",
+      "optionen": [
+        "Kreisdiagramm",
+        "Streudiagramm",
+        "gar keins"
+      ],
+      "loesung": 0,
+      "erklaerung": "Anteile vom Ganzen: Kreis oder Streifen.",
+      "fehler": {
+        "1": "passend",
+        "2": "passend"
+      }
+    },
+    {
+      "lz": 0,
+      "typ": "auswahl",
+      "frage": "Du hast 25 Weitsprung-Weiten gemessen. Welches Diagramm passt?",
+      "optionen": [
+        "Kreisdiagramm",
+        "eindimensionales Streudiagramm",
+        "Streifendiagramm"
+      ],
+      "loesung": 1,
+      "erklaerung": "Messwerte → Streudiagramm.",
+      "fehler": {
+        "0": "passend",
+        "2": "passend"
+      }
+    },
+    {
+      "lz": 2,
+      "typ": "auswahl",
+      "frage": "Ein Kreisdiagramm zeigt 45 %, 35 % und 30 %. Ist das sachgerecht?",
+      "optionen": [
+        "Ja",
+        "Nein, zusammen sind das 110 %."
+      ],
+      "loesung": 1,
+      "erklaerung": "Ein ganzer Kreis sind genau 100 %.",
+      "fehler": {
+        "0": "summe"
+      }
+    }
+  ]
+}
+</script>
+<script src="../../../../qr.js"></script>
+<script src="../../../../exit-ticket.js"></script>
+</body>
+</html>

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Üben: Punkte auf der Linie – Stunde 16</title>
+<link rel="stylesheet" href="../../../../schueler.css">
+</head>
+<body>
+<header><div class="inner">
+  <div class="pfad"><a href="./">🗺️ Lernlandkarte</a> › Stunde 16</div>
+  <h1>Üben: Punkte auf der Linie</h1>
+  <p class="untertitel">Stunde 16 · Werte als Punkte auf der Zahlengeraden</p>
+</div></header>
+<main>
+  <div class="box">
+    <strong>📘 Erinnerung</strong><br>
+    Jeder Wert = ein Punkt · gleiche Werte stapeln · eng beieinander = ähnliche Werte · weit verstreut = große Unterschiede
+  </div>
+  <div class="box">
+    <strong>📚 Wörter für heute:</strong> Streudiagramm · Zahlengerade · Wert · kleinster Wert · größter Wert · eng / weit verstreut<br>
+    <span class="klein">💬 So kannst du es aufschreiben: „Ich habe so gerechnet: …, weil …“</span>
+  </div>
+  <div id="ziele"></div>
+
+  <h2>📖 Aufgaben aus dem Buch</h2>
+  <div class="box buch">
+    <h3>Parallelo 8</h3>
+    <ul>
+      <li>● Basis: <span class="platzhalter">[BUCH: S. __ Nr. __]</span></li>
+      <li>●● Standard: <span class="platzhalter">[BUCH: S. __ Nr. __]</span></li>
+      <li>●●● Profi: <span class="platzhalter">[BUCH: S. __ Nr. __]</span></li>
+    </ul>
+    <p class="klein">Rechne im Heft. Unten findest du Aufgaben mit Tipps und Selbstkontrolle.</p>
+  </div>
+
+  <h2>Aufgaben</h2>
+  <div id="niveaus"></div>
+  <div id="fortschritt"></div>
+  <div id="aufgaben"></div>
+  <h2>🎨 Werde kreativ</h2>
+  <div class="box">
+    Miss 5-mal, wie lange du für 10 Kniebeugen brauchst (in Sekunden). Zeichne das Streudiagramm. Bist du zuverlässig?
+    <span class="klein">Profi-Idee: Baue absichtlich einen Fehler ein. Findet ihn dein Partner?</span>
+  </div>
+  <h2>Wie sicher bist du jetzt?</h2>
+  <div id="ampel"></div>
+  <p><a href="exit-16.html">🎫 Weiter zum Exit-Ticket →</a> · <a href="./">← Lernlandkarte</a></p>
+</main>
+<script>
+window.SEITE = {
+  "speicher": "mathe-k8-hs-wk",
+  "stunde": 16,
+  "lernziele": [
+    "Daten in einem eindimensionalen Streudiagramm darstellen",
+    "ablesen, ob Werte eng beieinander oder weit verstreut liegen",
+    "den kleinsten und den größten Wert ablesen"
+  ],
+  "ichKann": [
+    "Ich kann Daten in einem eindimensionalen Streudiagramm darstellen.",
+    "Ich kann ablesen, ob Werte eng beieinander oder weit verstreut liegen.",
+    "Ich kann den kleinsten und den größten Wert ablesen."
+  ],
+  "aufgaben": [
+    {
+      "niveau": 1,
+      "typ": "auswahl",
+      "frage": "Wie zeichnet man den Wert 5 dreimal ins Streudiagramm?",
+      "loesung": 0,
+      "tipps": [
+        "Gleiche Werte …"
+      ],
+      "erklaerung": "Gleiche Werte stapelt man.",
+      "optionen": [
+        "drei Punkte übereinander über der 5",
+        "ein großer Punkt",
+        "drei Punkte bei 5, 6 und 7"
+      ]
+    },
+    {
+      "niveau": 1,
+      "typ": "zahl",
+      "frage": "Werte: 2, 4, 4, 7, 9. Kleinster Wert + größter Wert = ?",
+      "loesung": 11,
+      "tipps": [
+        "kleinster: 2, größter: ?"
+      ],
+      "erklaerung": "2 + 9 = 11"
+    },
+    {
+      "niveau": 2,
+      "typ": "auswahl",
+      "frage": "Welche Zahlengerade passt zu den Werten 31, 35, 38, 44?",
+      "loesung": 1,
+      "tipps": [
+        "Alle Werte müssen draufpassen, aber gut sichtbar."
+      ],
+      "erklaerung": "30 bis 45: alle passen und man sieht die Abstände.",
+      "optionen": [
+        "0 bis 100 in Zehnerschritten",
+        "30 bis 45 in Einerschritten",
+        "35 bis 40"
+      ]
+    },
+    {
+      "niveau": 2,
+      "typ": "auswahl",
+      "frage": "🔍 Fehler finden: Jonas zeichnet die Werte 2, 3, 3, 8 und setzt nur einen Punkt über die 3. Was ist falsch?",
+      "loesung": 0,
+      "tipps": [
+        "Wie oft kommt die 3 vor?"
+      ],
+      "erklaerung": "Gleiche Werte stapeln: zwei Punkte.",
+      "optionen": [
+        "Über die 3 gehören zwei Punkte.",
+        "Die 8 fehlt.",
+        "Alles ist richtig."
+      ]
+    },
+    {
+      "niveau": 3,
+      "typ": "auswahl",
+      "frage": "Gehaltene Elfmeter pro Spiel: Kim 3, 4, 3, 4, 3 · Ali 0, 7, 1, 6, 3. Wen nimmst du fürs Finale?",
+      "loesung": 0,
+      "tipps": [
+        "Zähle zusammen: Wer hält insgesamt mehr?"
+      ],
+      "erklaerung": "Beide halten 17. Kim ist zuverlässiger.",
+      "optionen": [
+        "Kim, sie hält zuverlässig",
+        "Ali, er hält einmal 7"
+      ]
+    },
+    {
+      "niveau": 3,
+      "typ": "zahl",
+      "frage": "Werte: 10, 12, 12, 15, 21. Wie viele Werte liegen unter 13?",
+      "loesung": 3,
+      "tipps": [
+        "10, 12, 12 …"
+      ],
+      "erklaerung": "10, 12, 12 → 3"
+    }
+  ]
+};
+</script>
+<script src="../../../../schueler.js"></script>
+</body>
+</html>

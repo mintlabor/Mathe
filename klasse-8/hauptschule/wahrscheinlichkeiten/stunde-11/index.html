@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Stunde 11: Wir planen eine Umfrage – Wahrscheinlichkeiten</title>
+<link rel="stylesheet" href="../../../../praesentation.css">
+<style>
+  .platzhalter { background: #fff3bf; border-radius: 4px; padding: 0 .3rem; font-family: ui-monospace, monospace; font-size: .9em; }
+  .exit-qr { display: flex; gap: 1.5rem; align-items: center; }
+  .exit-qr [data-qr] svg { width: 230px; height: 230px; display: block; border-radius: 8px; }
+</style>
+</head>
+<body data-phasen='[["Abrufen", 4], ["Problem", 7], ["Erarbeitung", 12], ["Ideen vergleichen", 5], ["Sicherung", 6], ["Übung", 7], ["Reflexion", 4]]'>
+
+<div class="leiste">
+  <div class="pfad"><a href="../../../../">Start</a> › <a href="../../../">Klasse 8</a> › <a href="../../">Hauptschule</a> › <a href="../">Wahrscheinlichkeiten</a> › Stunde 11</div>
+</div>
+
+<aside class="wortspeicher"
+  data-woerter='["Umfrage", "Fragebogen", "offene Frage", "geschlossene Frage", "Antwortmöglichkeiten", "neutral"]'
+  data-saetze='["Ich vermute, dass …", "Ich habe so gerechnet: …", "Das sieht man daran, dass …", "Ich stimme zu / nicht zu, weil …"]'></aside>
+
+<div class="buehne">
+
+  <!-- 1 · ABRUFEN -->
+  <section class="folie" data-phase="Abrufen">
+    <div class="kennung">Wahrscheinlichkeiten · Stunde 11 · Warm-up</div>
+    <h2>Was weißt du noch?</h2>
+    <p style="margin-top:0">Bei 200 Würfen landet die Heftzwecke 120-mal auf dem Kopf. Wie groß ist die relative Häufigkeit?</p>
+    <div data-abstimmung='["120", "0,6", "1,2", "0,12"]' data-loesung="1"></div>
+    <div class="hinweis">Alle halten gleichzeitig die ABCD-Karte hoch. Begründungen per 🎲 einholen, nicht per Melden.</div>
+  </section>
+
+  <!-- 2 · PROBLEM -->
+  <section class="folie" data-phase="Problem">
+    <div class="kennung">Problem<span class="leitmodell">Leitmodell: 0-bis-1-Streifen</span></div>
+    <h2>Was wünscht sich unsere Schule fürs Schulfest?</h2>
+    <div class="problem"><div class="label">Problem</div><br>Die SV will wissen, was beim Schulfest angeboten werden soll. Tim hat schon einen Fragebogen geschrieben:<br><em>1. Findest du nicht auch, dass ein Fußballturnier das Beste wäre?<br>2. Was isst du gern?<br>3. Wie alt bist du? ☐ 10–12 ☐ 12–14 ☐ 14–16</em></div>
+    <div class="spannung" data-art="Stimmt das?">Stimmt das? Mit Tims Fragebogen erfährt die SV, was die <strong>ganze Schule</strong> wirklich will.</div>
+    <div data-abstimmung='["Ja, der Fragebogen ist gut", "Nein, er ist unbrauchbar", "Teilweise"]'></div>
+    <div class="lernziele schritt">
+      <div class="titel">🎯 Heute lernst du …</div>
+      <ul>
+        <li>Ich kann gute und schlechte Umfragefragen unterscheiden.</li>
+        <li>Ich kann geschlossene Fragen mit passenden Antwortmöglichkeiten formulieren.</li>
+        <li>Ich kann planen, wen wir befragen.</li>
+      </ul>
+    </div>
+    <p class="schritt"><span class="projekt">Schulfest-Projekt: Wir schreiben den Fragebogen für unsere Schulfest-Umfrage.</span></p>
+    <div class="hinweis">Abstimmung festhalten (Foto/Tafel), am Ende der Stunde auflösen. Noch nicht verraten!</div>
+  </section>
+
+  <!-- 2c · EIGENE LÖSUNG -->
+  <section class="folie" data-phase="Problem" data-minuten="4">
+    <div class="kennung">Eigene Lösung</div>
+    <h2>Was meinst du?</h2>
+    <div data-denkzeit="60" data-text="Finde in Tims Fragebogen alle Probleme. Schreibe zu jeder Frage auf, was nicht passt."></div>
+    <div data-methode="tps" data-minuten="1,2,2"></div>
+    <div data-tipps>
+      <div class="tipp">Lies Frage 1 laut. Welche Antwort möchte Tim hören?</div>
+      <div class="tipp">Frage 2: Wie willst du 100 verschiedene Antworten zählen?</div>
+      <div class="tipp">Frage 3: In welches Kästchen kreuzt jemand, der 12 ist? Und jemand mit 16?</div>
+    </div>
+    <p class="satzhilfe">Ich vermute, dass … · Ich würde zuerst …</p>
+    <div class="hinweis">Erwartet: Frage 1 drängt zu einer Antwort, Frage 2 ist offen und schwer auszuwerten, Frage 3 hat überlappende und fehlende Felder. Nicht korrigieren, in „Ideen vergleichen“ aufgreifen.</div>
+  </section>
+
+  <!-- 3 · ERARBEITUNG E -->
+  <section class="folie" data-phase="Erarbeitung" data-minuten="7">
+    <div class="kennung">Erarbeitung · Gruppen<span class="eis" data-eis="E"></span></div>
+    <h2>Wir testen Fragen</h2>
+    <p style="margin-top:0">Jede Gruppe zieht 2 Fragekarten, testet sie an 5 Mitschülern und verbessert sie. Wählt, wie ihr verbessert:</p>
+    <div class="wahlkarten">
+      <div class="wahlkarte"><div class="icon">✂️</div><b>Sortieren</b>Fragekarten in „gut“ und „schlecht“ legen</div>
+      <div class="wahlkarte"><div class="icon">✏️</div><b>Umschreiben</b>schlechte Frage neu formulieren</div>
+      <div class="wahlkarte"><div class="icon">☑️</div><b>Ankreuzfelder</b>passende Antwortmöglichkeiten erfinden</div>
+    </div>
+    <div data-methode="rollen"></div>
+    <div class="hinweis">Materialkiste: Fragekarten mit guten und schlechten Fragen, Klebezettel, Plakat „Unsere Umfrage“. Gruppen 3–4, Rollen auslosen.</div>
+  </section>
+
+  <!-- 3 · ERARBEITUNG I/S -->
+  <section class="folie" data-phase="Erarbeitung" data-minuten="5">
+    <div class="kennung">Erarbeitung · Was passiert, wenn …?<span class="eis" data-eis="IS"></span></div>
+    <h2>Welche Frage kann man auswerten?</h2>
+    <p style='margin-top:0'>Geschlossene Frage: <strong>„Was wünschst du dir am meisten? ☐ Disco ☐ Turnier ☐ Spielstände ☐ Essen ☐ Sonstiges“</strong></p>
+    <div data-diagramm='{"daten": [["Disco", 7], ["Turnier", 5], ["Spielstände", 6], ["Essen", 3], ["Sonstiges", 2]], "ansichten": ["strichliste", "tabelle"], "start": "strichliste", "bearbeiten": true, "verdeckt": true}'></div>
+    <div class="vernetzen schritt">Was passiert, wenn wir „Sonstiges“ weglassen? Und was, wenn jemand zwei Kreuze machen darf?</div>
+    <div class="hinweis">Mit + die Antworten der Mini-Umfrage eintragen. Vergleich mit Frage 2 von Tim: Offene Antworten lassen sich nicht so einfach zählen.</div>
+  </section>
+
+  <!-- 4 · IDEEN VERGLEICHEN -->
+  <section class="folie" data-phase="Ideen vergleichen">
+    <div class="kennung">Ideen vergleichen</div>
+    <h2>Wer hat recht?</h2>
+    <div class="fehlerkarte" data-wer="Tim">
+      <div class="rechnung">Wie alt bist du? ☐ 10–<span class='fehler'>12</span> ☐ <span class='fehler'>12</span>–14 ☐ 14–16</div>
+      <div class="erklaerung">Mit 12 passt man in zwei Kästchen, mit 17 in keins. Besser: ☐ 10 oder 11 ☐ 12 oder 13 ☐ 14 oder 15 ☐ 16 und älter.</div>
+    </div>
+    <div class="legende"><span class="l-ja">stimmt</span><span class="l-nein">stimmt nicht</span>
+      <button class="knopf" data-alle-auf style="margin-left:auto">Alle aufdecken</button><button class="knopf" data-alle-zu>Alle zudecken</button></div>
+    <div class="karten">
+      <div class="karte nein">„Findest du nicht auch, dass …?“ ist eine gute Frage.<span class="loesung">Nein, sie drängt zu einer Antwort.</span></div>
+      <div class="karte ja">Geschlossene Fragen kann man schneller auszählen.<span class="loesung">Ja, jede Antwort passt in ein Kästchen → Strichliste.</span></div>
+      <div class="karte nein">Wenn wir nur unsere Freunde fragen, wissen wir, was die ganze Schule will.<span class="loesung">Nein, man muss Schüler aus verschiedenen Klassen fragen.</span></div>
+      <div class="karte ja">Jede Person muss genau ein passendes Kästchen finden.<span class="loesung">Ja: keine Überschneidung, nichts fehlt (notfalls „Sonstiges“).</span></div>
+    </div>
+    <p class="satzhilfe">Ich stimme zu / nicht zu, weil … · Der Fehler ist …</p>
+    <div class="hinweis">Erst Fehlerkarte: Denkzeit, dann 🎲. Karten einzeln: Daumen hoch/runter, dann aufdecken.</div>
+  </section>
+
+  <!-- 5 · SICHERUNG -->
+  <section class="folie" data-phase="Sicherung">
+    <div class="kennung">Sicherung<span class="eis" data-eis="EIS"></span></div>
+    <h2>Eine gute Umfrage planen</h2>
+    <div class="merk">
+      <h3>Merke</h3>
+      <ul>
+        <li class="schritt"><strong>Offene Frage:</strong> Jeder antwortet frei (schwer zu zählen). <strong>Geschlossene Frage:</strong> Antworten zum Ankreuzen (leicht zu zählen).</li>
+        <li class="schritt">Gute Fragen sind <strong>kurz</strong>, <strong>klar</strong> und <strong>neutral</strong> – sie drängen zu keiner Antwort.</li>
+        <li class="schritt">Antwortmöglichkeiten: <strong>ohne Überschneidung</strong> und <strong>vollständig</strong> (notfalls „Sonstiges“).</li>
+        <li class="schritt">Vorher planen: <strong>Wen</strong> fragen wir? <strong>Wie viele</strong>? <strong>Wie</strong> werten wir aus?</li>
+      </ul>
+    </div>
+    <div class="produkt schritt">Erkläre es deinem Nachbarn in <strong>eigenen Worten</strong> und mit einer <strong>Skizze</strong>. Er sagt, ob er es verstanden hat.</div>
+    <div class="hinweis">Ins Heft übertragen. Danach 1–2 Erklärungen per 🎲 vorstellen lassen.</div>
+  </section>
+
+  <!-- 6 · ÜBUNG -->
+  <section class="folie" data-phase="Übung">
+    <div class="kennung">Übung · Buch<span class="eis" data-eis="S"></span></div>
+    <h2>Jetzt du! Wähle dein Niveau</h2>
+    <div class="wahlkarten">
+      <div class="wahlkarte"><b>● Basis</b>📖 <span class="platzhalter">[BUCH: S. __ Nr. __]</span></div>
+      <div class="wahlkarte"><b>●● Standard</b>📖 <span class="platzhalter">[BUCH: S. __ Nr. __]</span></div>
+      <div class="wahlkarte"><b>●●● Profi</b>📖 <span class="platzhalter">[BUCH: S. __ Nr. __]</span></div>
+    </div>
+    <div data-methode="lerntempoduett" data-minuten="5,0,2,0"></div>
+    <div class="produkt">Fertig? <strong>Erfinde eine eigene Aufgabe</strong> für eure Schulfest-Umfrage: eine gute Frage mit Ankreuzfeldern. Dein Partner löst sie.</div>
+    <p>Tipps und Selbstkontrolle: <a class="schuelerlink" href="../schueler/stunde-11.html" target="_blank">📱 Schülerseite · Stunde 11</a></p>
+    <div class="hinweis">Buchaufgaben im Heft. Wer fertig ist, wartet an der Haltestelle auf einen Partner. Rest als Hausaufgabe.</div>
+  </section>
+
+  <!-- 7 · REFLEXION -->
+  <section class="folie" data-phase="Reflexion">
+    <div class="kennung">Zurück zum Problem · Reflexion</div>
+    <h2>Tims Fragebogen ist so nicht brauchbar – unserer schon!</h2>
+    <div class="exit-qr">
+      <div data-qr="../schueler/exit-11.html"></div>
+      <div>
+        <p style="margin-top:0;font-size:1.4rem"><strong>🎫 Exit-Ticket</strong></p>
+        <p>Scanne den Code oder öffne die Schülerseite. Gib dein <strong>Kürzel</strong> ein.<br>Am Ende zeigst du mir deinen QR-Code.</p>
+        <p><a class="schuelerlink" href="../schueler/exit-11.html" target="_blank">🎫 Zum Exit-Ticket</a></p>
+        <p class="klein">Nächste Stunde: Wir werten unsere Umfrage aus.</p>
+      </div>
+    </div>
+    <div class="hinweis">Jede Gruppe gibt ihren verbesserten Fragebogen ab (Projektmappe). Bis zur nächsten Stunde: Umfrage in 2–3 Klassen durchführen (mit den Klassenlehrkräften absprechen, anonym). Tafelabstimmung vom Anfang zeigen: Wer lag richtig? QR-Codes der Schüler mit der Kamera-App scannen → Auswertung.</div>
+  </section>
+
+</div>
+<script src="../../../../praesentation.js"></script>
+<script src="../../../../qr.js"></script>
+<script src="../modelle.js"></script>
+</body>
+</html>

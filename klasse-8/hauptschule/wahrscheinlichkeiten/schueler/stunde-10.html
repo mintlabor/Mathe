@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Üben: Stationen: Zufall – Stunde 10</title>
+<link rel="stylesheet" href="../../../../schueler.css">
+</head>
+<body>
+<header><div class="inner">
+  <div class="pfad"><a href="./">🗺️ Lernlandkarte</a> › Stunde 10</div>
+  <h1>Üben: Stationen: Zufall</h1>
+  <p class="untertitel">Stunde 10 · Gemischte Übungen zu Zufall und Wahrscheinlichkeit</p>
+</div></header>
+<main>
+  <div class="box">
+    <strong>📘 Erinnerung</strong><br>
+    relative Häufigkeit = Anzahl : Gesamtzahl · P zwischen 0 und 1 · vergleichen: alles in Prozent · Nicht-Laplace: durch viele Versuche schätzen · Baumdiagramm: Pfade zählen
+  </div>
+  <div class="box">
+    <strong>📚 Wörter für heute:</strong> Zufallsexperiment · relative Häufigkeit · Wahrscheinlichkeit · Nicht-Laplace · Urne · Baumdiagramm · fair<br>
+    <span class="klein">💬 So kannst du es aufschreiben: „Ich habe so gerechnet: …, weil …“</span>
+  </div>
+  <div id="ziele"></div>
+
+  <h2>📖 Aufgaben aus dem Buch</h2>
+  <div class="box buch">
+    <h3>Parallelo 8</h3>
+    <ul>
+      <li>● Basis: <span class="platzhalter">[BUCH: S. __ Nr. __]</span></li>
+      <li>●● Standard: <span class="platzhalter">[BUCH: S. __ Nr. __]</span></li>
+      <li>●●● Profi: <span class="platzhalter">[BUCH: S. __ Nr. __]</span></li>
+    </ul>
+    <p class="klein">Rechne im Heft. Unten findest du Aufgaben mit Tipps und Selbstkontrolle.</p>
+  </div>
+
+  <h2>Aufgaben</h2>
+  <div id="niveaus"></div>
+  <div id="fortschritt"></div>
+  <div id="aufgaben"></div>
+  <h2>🎨 Werde kreativ</h2>
+  <div class="box">
+    Erfinde ein <strong>faires Spiel</strong> für unseren Schulfest-Stand. Beschreibe die Regeln und begründe mit Wahrscheinlichkeiten, warum es fair ist.
+    <span class="klein">Profi-Idee: Baue absichtlich einen Fehler ein. Findet ihn dein Partner?</span>
+  </div>
+  <h2>Wie sicher bist du jetzt?</h2>
+  <div id="ampel"></div>
+  <p><a href="exit-10.html">🎫 Weiter zum Exit-Ticket →</a> · <a href="./">← Lernlandkarte</a></p>
+</main>
+<script>
+window.SEITE = {
+  "speicher": "mathe-k8-hs-wk",
+  "stunde": 10,
+  "lernziele": [
+    "eine Wahrscheinlichkeit über die relative Häufigkeit schätzen",
+    "Wahrscheinlichkeiten als Bruch, Dezimalzahl und Prozent vergleichen",
+    "begründen, ob ein Spiel fair ist"
+  ],
+  "ichKann": [
+    "Ich kann eine Wahrscheinlichkeit über die relative Häufigkeit schätzen.",
+    "Ich kann Wahrscheinlichkeiten als Bruch, Dezimalzahl und Prozent vergleichen.",
+    "Ich kann begründen, ob ein Spiel fair ist."
+  ],
+  "aufgaben": [
+    {
+      "niveau": 1,
+      "typ": "auswahl",
+      "frage": "Ist „Eine Karte aus einem gemischten Stapel ziehen“ ein Zufallsexperiment?",
+      "loesung": 0,
+      "tipps": [
+        "Weißt du vorher, welche Karte kommt?"
+      ],
+      "erklaerung": "Ja, das Ergebnis ist nicht vorhersehbar.",
+      "optionen": [
+        "Ja",
+        "Nein"
+      ]
+    },
+    {
+      "niveau": 1,
+      "typ": "zahl",
+      "frage": "Schreibe ⅖ in Prozent.",
+      "loesung": 40,
+      "tipps": [
+        "2 : 5 = ?"
+      ],
+      "erklaerung": "0,4 = 40 %",
+      "einheit": "%"
+    },
+    {
+      "niveau": 2,
+      "typ": "zahl",
+      "frage": "Eine Heftzwecke landet bei 80 Würfen 52-mal auf dem Kopf. Relative Häufigkeit in Prozent?",
+      "loesung": 65,
+      "tipps": [
+        "52 : 80 = ?"
+      ],
+      "erklaerung": "52 : 80 = 0,65 = 65 %",
+      "einheit": "%"
+    },
+    {
+      "niveau": 2,
+      "typ": "auswahl",
+      "frage": "🔍 Fehler finden: Ben sagt: „Ein Legostein hat 6 Seiten, also ist P(Noppen oben) = ⅙.“",
+      "loesung": 0,
+      "tipps": [
+        "Ist der Legostein ein Laplace-Würfel?"
+      ],
+      "erklaerung": "Bei ungleichen Seiten muss man durch Versuche schätzen.",
+      "optionen": [
+        "Die Seiten sind verschieden, die Lagen nicht gleich wahrscheinlich.",
+        "Ein Legostein hat 8 Seiten.",
+        "Ben hat recht."
+      ]
+    },
+    {
+      "niveau": 3,
+      "typ": "zahl",
+      "frage": "In einer Urne sind 20 Kugeln. Bei 200 Zügen mit Zurücklegen kam 50-mal Blau. Wie viele blaue Kugeln sind wohl drin?",
+      "loesung": 5,
+      "tipps": [
+        "50 : 200 = 0,25",
+        "0,25 · 20"
+      ],
+      "erklaerung": "0,25 · 20 = 5"
+    },
+    {
+      "niveau": 3,
+      "typ": "zahl",
+      "frage": "Eine Münze wird zweimal geworfen. Wie groß ist P(mindestens einmal Kopf)? (als Bruch: Zähler eingeben, Nenner ist 4)",
+      "loesung": 3,
+      "tipps": [
+        "Pfade: KK, KZ, ZK, ZZ",
+        "Bei welchen ist mindestens ein K?"
+      ],
+      "erklaerung": "KK, KZ, ZK → 3 von 4"
+    }
+  ]
+};
+</script>
+<script src="../../../../schueler.js"></script>
+</body>
+</html>

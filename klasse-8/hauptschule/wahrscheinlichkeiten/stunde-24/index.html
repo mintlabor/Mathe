@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Stunde 24: Fit für die Arbeit – Wahrscheinlichkeiten</title>
+<link rel="stylesheet" href="../../../../praesentation.css">
+<style>
+  .platzhalter { background: #fff3bf; border-radius: 4px; padding: 0 .3rem; font-family: ui-monospace, monospace; font-size: .9em; }
+  .exit-qr { display: flex; gap: 1.5rem; align-items: center; }
+  .exit-qr [data-qr] svg { width: 230px; height: 230px; display: block; border-radius: 8px; }
+</style>
+</head>
+<body data-phasen='[["Abrufen", 4], ["Problem", 4], ["Selbsttest", 12], ["Ideen vergleichen", 8], ["Übung", 13], ["Reflexion", 4]]'>
+
+<div class="leiste">
+  <div class="pfad"><a href="../../../../">Start</a> › <a href="../../../">Klasse 8</a> › <a href="../../">Hauptschule</a> › <a href="../">Wahrscheinlichkeiten</a> › Stunde 24</div>
+</div>
+
+<aside class="wortspeicher"
+  data-woerter='["relative Häufigkeit", "Wahrscheinlichkeit", "Streifen- und Kreisdiagramm", "Modus", "Median", "Mittelwert", "Spannweite"]'
+  data-saetze='["Ich vermute, dass …", "Ich habe so gerechnet: …", "Das sieht man daran, dass …", "Ich stimme zu / nicht zu, weil …"]'></aside>
+
+<div class="buehne">
+
+  <!-- 1 · ABRUFEN -->
+  <section class="folie" data-phase="Abrufen">
+    <div class="kennung">Wahrscheinlichkeiten · Stunde 24 · Warm-up</div>
+    <h2>Was weißt du noch?</h2>
+    <p style="margin-top:0">Bunte Mischung: Welche Zahl ist am größten?</p>
+    <div data-abstimmung='["⅖", "0,35", "38 %", "⅓"]' data-loesung="0"></div>
+    <div class="hinweis">Alle halten gleichzeitig die ABCD-Karte hoch. Begründungen per 🎲 einholen, nicht per Melden.</div>
+  </section>
+
+  <section class="folie" data-phase="Problem">
+    <div class="kennung">Problem<span class="leitmodell">Leitmodell: 0-bis-1-Streifen</span></div>
+    <h2>Bist du fit für die Arbeit?</h2>
+    <div class="spannung" data-art="Wette">Schätze dich ein: Wie viele der 10 Selbsttest-Aufgaben schaffst du?</div>
+    <div data-schaetzen='{"min": 0, "max": 10, "einheit": "Aufgaben", "loesung": 10}'></div>
+    <div class="lernziele schritt"><div class="titel">🎯 Heute lernst du …</div><ul><li>Ich kann Wahrscheinlichkeiten über relative Häufigkeiten bestimmen.</li><li>Ich kann Daten in Diagrammen darstellen.</li><li>Ich kann Modus, Median, Mittelwert und Spannweite bestimmen.</li></ul></div>
+    <div class="hinweis">Jeder schreibt seine Schätzung auf (Wette). Die Schätzleiste zeigt die Verteilung der Klasse; „Lösung“ steht für die Höchstpunktzahl.</div>
+  </section>
+
+  <section class="folie" data-phase="Selbsttest" data-minuten="12">
+    <div class="kennung">Selbsttest</div>
+    <h2>10 Aufgaben – mit Selbstkontrolle</h2>
+    <div class="exit-qr"><div data-qr="../schueler/stunde-24.html"></div>
+      <div><p style="margin-top:0">Öffne die Schülerseite und löse alle 10 Aufgaben <strong>allein</strong>. Erst rechnen, dann prüfen.</p>
+      <p><a class="schuelerlink" href="../schueler/stunde-24.html" target="_blank">📱 Selbsttest · Stunde 24</a></p>
+      <p class="satzhilfe">Hier war ich unsicher: … · Diese Aufgabe übe ich noch: …</p></div></div>
+    <div class="hinweis">Ohne Tablet: Aufgaben der Schülerseite ausgedruckt, Lösungen am Lehrerpult.</div>
+  </section>
+
+  <section class="folie" data-phase="Ideen vergleichen">
+    <div class="kennung">Ideen vergleichen</div>
+    <h2>Fehlerjagd</h2>
+    
+    <div class="fehlerkarte" data-wer="Mia">
+      <div class="rechnung">P(Kopf) bei einer Heftzwecke = <span class='fehler'>½</span>, denn es gibt zwei Lagen.</div>
+      <div class="erklaerung">Die Lagen sind nicht gleich wahrscheinlich (Nicht-Laplace). Man muss durch viele Versuche schätzen.</div>
+    </div>
+    <div class="fehlerkarte" data-wer="Jan">
+      <div class="rechnung">12 von 40 → Winkel = <span class='fehler'>12°</span></div>
+      <div class="erklaerung">Jan nimmt die Anzahl als Winkel. Richtig: 12 : 40 = 0,3 → 0,3 · 360° = 108°.</div>
+    </div>
+    <div class="fehlerkarte" data-wer="Emil">
+      <div class="rechnung">Mittelwert von 4, 6, 8, 10 = 28 : <span class='fehler'>3</span> ≈ 9,3</div>
+      <div class="erklaerung">Es sind 4 Werte. Richtig: 28 : 4 = 7.</div>
+    </div>
+    <p class="satzhilfe">Der Fehler ist … · Richtig wäre …, weil …</p>
+    <div class="hinweis">Erst Denkzeit, dann 🎲. Jede Fehlerkarte gehört zu einem Lernziel: Wer denselben Fehler gemacht hat, weiß jetzt, wo er üben muss.</div>
+  </section>
+
+  <section class="folie" data-phase="Übung">
+    <div class="kennung">Übung nach Ampel<span class="eis" data-eis="S"></span></div>
+    <h2>Üben, wo du es brauchst</h2>
+    <div class="wahlkarten">
+      <div class="wahlkarte"><div class="icon">🔴</div><b>Noch nicht</b>Lernlandkarte: Stunde zum Lernziel öffnen, ● Basis-Aufgaben</div>
+      <div class="wahlkarte"><div class="icon">🟡</div><b>Fast</b>📖 <span class="platzhalter">[BUCH: S. __ Nr. __]</span></div>
+      <div class="wahlkarte"><div class="icon">🟢</div><b>Sicher</b>📖 <span class="platzhalter">[BUCH: S. __ Nr. __]</span> · Expertin/Experte für andere sein</div>
+    </div>
+    <div data-methode="lerntempoduett" data-minuten="6,0,3,0"></div>
+    <div class="produkt">Schreibe deinen <strong>Spickzettel</strong> für die Arbeit (Merksätze + eigene Beispiele).</div>
+    <p><a class="schuelerlink" href="../schueler/" target="_blank">🗺️ Lernlandkarte</a></p>
+    <div class="hinweis">Experten mit grüner Ampel bekommen ein Namensschild und helfen. Der Spickzettel darf in der Arbeit nicht benutzt werden, hilft aber beim Lernen.</div>
+  </section>
+
+  <!-- 7 · REFLEXION -->
+  <section class="folie" data-phase="Reflexion">
+    <div class="kennung">Zurück zum Problem · Reflexion</div>
+    <h2>Du weißt jetzt, was du noch üben musst.</h2>
+    <div class="exit-qr">
+      <div data-qr="../schueler/exit-24.html"></div>
+      <div>
+        <p style="margin-top:0;font-size:1.4rem"><strong>🎫 Exit-Ticket</strong></p>
+        <p>Scanne den Code oder öffne die Schülerseite. Gib dein <strong>Kürzel</strong> ein.<br>Am Ende zeigst du mir deinen QR-Code.</p>
+        <p><a class="schuelerlink" href="../schueler/exit-24.html" target="_blank">🎫 Zum Exit-Ticket</a></p>
+        <p class="klein">Nächste Stunde: Lernkontrolle. Mitbringen: Geodreieck, Zirkel, Taschenrechner, Stifte.</p>
+      </div>
+    </div>
+    <div class="hinweis">Wette auflösen: Selbsteinschätzung vom Anfang mit dem Ergebnis des Selbsttests vergleichen. Ampel-Ergebnisse in der Auswertung ansehen: Wer braucht vor dem Test noch Unterstützung? Tafelabstimmung vom Anfang zeigen: Wer lag richtig? QR-Codes der Schüler mit der Kamera-App scannen → Auswertung.</div>
+  </section>
+
+</div>
+<script src="../../../../praesentation.js"></script>
+<script src="../../../../qr.js"></script>
+</body>
+</html>

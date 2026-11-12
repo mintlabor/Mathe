@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Exit-Ticket: Ergebnisse und Ereignisse – Stunde 2</title>
+<link rel="stylesheet" href="../../../../schueler.css">
+</head>
+<body>
+<header><div class="inner">
+  <div class="pfad"><a href="./">🗺️ Lernlandkarte</a> › <a href="stunde-02.html">Stunde 2</a> › Exit-Ticket</div>
+  <h1>🎫 Exit-Ticket</h1>
+  <p class="untertitel">Stunde 2 · Ergebnisse und Ereignisse</p>
+</div></header>
+<main>
+  <div id="exit"></div>
+</main>
+<script type="application/json" id="exit-daten">
+{
+  "titel": "Ergebnisse und Ereignisse",
+  "stunde": 2,
+  "lernziele": [
+    {
+      "text": "Ich kann Ergebnis und Ereignis unterscheiden.",
+      "foerdern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ● Basis",
+      "fordern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ●●● Profi"
+    },
+    {
+      "text": "Ich kann ein Ereignis als Menge aufschreiben.",
+      "foerdern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ● Basis",
+      "fordern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ●●● Profi"
+    },
+    {
+      "text": "Ich kann mit Ereignissen begründen, ob ein Spiel fair ist.",
+      "foerdern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ● Basis",
+      "fordern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ●●● Profi"
+    }
+  ],
+  "fehlertypen": {
+    "begriff": "Ergebnis und Ereignis verwechselt",
+    "menge": "Ereignis nicht vollständig als Menge aufgeschrieben",
+    "fair": "Fairness nicht mit der Anzahl der günstigen Ergebnisse begründet"
+  },
+  "fragen": [
+    {
+      "lz": 0,
+      "typ": "auswahl",
+      "frage": "Beim Würfeln: „Eine gerade Zahl fällt.“ Ist das ein Ergebnis oder ein Ereignis?",
+      "optionen": [
+        "ein Ergebnis",
+        "ein Ereignis (mehrere Ergebnisse zusammen)"
+      ],
+      "loesung": 1,
+      "erklaerung": "„Gerade Zahl“ fasst die Ergebnisse 2, 4 und 6 zusammen.",
+      "fehler": {
+        "0": "begriff"
+      }
+    },
+    {
+      "lz": 1,
+      "typ": "auswahl",
+      "frage": "Wie heißt das Ereignis „Zahl größer als 4“ beim Würfeln?",
+      "optionen": [
+        "{ 4, 5, 6 }",
+        "{ 5, 6 }",
+        "{ 5 }"
+      ],
+      "loesung": 1,
+      "erklaerung": "Größer als 4 sind nur 5 und 6.",
+      "fehler": {
+        "0": "menge",
+        "2": "menge"
+      }
+    },
+    {
+      "lz": 1,
+      "typ": "auswahl",
+      "frage": "Wie heißt das Ereignis „Primzahl“ beim Würfeln? (2, 3 und 5 sind Primzahlen)",
+      "optionen": [
+        "{ 2, 3, 5 }",
+        "{ 1, 2, 3, 5 }",
+        "{ 3, 5 }"
+      ],
+      "loesung": 0,
+      "erklaerung": "1 ist keine Primzahl. Also { 2, 3, 5 }.",
+      "fehler": {
+        "1": "menge",
+        "2": "menge"
+      }
+    },
+    {
+      "lz": 2,
+      "typ": "auswahl",
+      "frage": "Anna gewinnt bei { 1, 2 }, Ben bei { 3, 4, 5, 6 }. Ist das Spiel fair?",
+      "optionen": [
+        "Ja, beide können gewinnen.",
+        "Nein, Ben hat 4 günstige Ergebnisse, Anna nur 2."
+      ],
+      "loesung": 1,
+      "erklaerung": "Fair ist ein Spiel, wenn beide gleich viele günstige Ergebnisse haben.",
+      "fehler": {
+        "0": "fair"
+      }
+    }
+  ]
+}
+</script>
+<script src="../../../../qr.js"></script>
+<script src="../../../../exit-ticket.js"></script>
+</body>
+</html>

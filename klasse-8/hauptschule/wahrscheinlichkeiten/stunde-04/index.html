@@ -30,6 +30,9 @@
   .ld-punkt::before { background: #adb5bd; height: .7rem !important; width: .7rem !important; border-radius: 50% !important; }
   .ld-linie::before { background: var(--accent); }
   .ld-ziel::before { background: var(--rot); }
+  .platzhalter { background: #fff3bf; border-radius: 4px; padding: 0 .3rem; font-family: ui-monospace, monospace; font-size: .9em; }
+  .exit-qr { display: flex; gap: 1.2rem; align-items: center; }
+  .exit-qr [data-qr] svg { width: 170px; height: 170px; display: block; border-radius: 8px; }
 </style>
 </head>
 <body data-phasen='[["Abrufen",3],["Problem",6],["Erarbeitung I",11],["Ideen vergleichen",4],["Erarbeitung II",7],["Sicherung",5],["Übung",5],["Reflexion",4]]'>
@@ -38,7 +41,20 @@
   <div class="pfad"><a href="../../../../">Start</a> › <a href="../../../">Klasse 8</a> › <a href="../../">Hauptschule</a> › <a href="../">Wahrscheinlichkeiten</a> › Stunde 4</div>
 </div>
 
+<aside class="wortspeicher"
+  data-woerter='["Versuch", "schwanken", "relative Häufigkeit", "Gesetz der großen Zahlen", "schätzen"]'
+  data-saetze='["Ich vermute, dass …", "Ich habe so gerechnet: …", "Das sieht man daran, dass …", "Ich stimme zu / nicht zu, weil …"]'></aside>
+
 <div class="buehne">
+
+  <!-- Abrufen: alle antworten (ABCD) -->
+  <section class="folie" data-phase="Abrufen">
+    <div class="kennung">Je öfter, desto genauer · Stunde 4 · Alle antworten</div>
+    <h2>Was weißt du noch?</h2>
+    <p style="margin-top:0">Exit-Ticket von letzter Stunde: Was ist der größere Anteil?</p>
+    <div data-abstimmung='["15 von 20", "8 von 10", "beide gleich", "kann man nicht sagen"]' data-loesung="1"></div>
+    <div class="hinweis">Alle halten gleichzeitig die ABCD-Karte hoch. Begründungen per 🎲 einholen. Danach die weiteren Abruf-Aufgaben.</div>
+  </section>
 
   <!-- Abrufen -->
   <section class="folie" data-phase="Abrufen">
@@ -77,11 +93,22 @@
     <div class="lernziele schritt" style="margin-top:.5rem">
       <div class="titel">🎯 Heute lernst du …</div>
       <ul>
-        <li>warum Zufallsergebnisse bei <strong>wenigen</strong> Versuchen stark schwanken,</li>
-        <li>wie man mit <strong>vielen</strong> Versuchen eine Wahrscheinlichkeit schätzt.</li>
+        <li>Ich kann erklären, warum Ergebnisse bei wenigen Versuchen schwanken.</li>
+        <li>Ich kann das Gesetz der großen Zahlen mit eigenen Worten erklären.</li>
+        <li>Ich kann mit vielen Versuchen eine Wahrscheinlichkeit schätzen.</li>
       </ul>
     </div>
     <div class="hinweis">Meinungen sammeln, an der Tafel festhalten, noch nicht auflösen. Tim rechnet richtig (8 : 4 = 2), erwartet aber zu viel Genauigkeit von nur 8 Losen. Am Ende der Stunde zurückkommen.</div>
+  </section>
+
+  <!-- Spannungsmoment: Wette -->
+  <section class="folie" data-phase="Problem" data-minuten="2">
+    <div class="kennung">Problem · Was glaubst du?<span class="leitmodell">Leitmodell: 0-bis-1-Streifen</span></div>
+    <h2>Deine Wette</h2>
+    <div class="spannung" data-art="Wette">Wette: <strong>Tim hat recht</strong> – die Losbude betrügt.</div>
+    <div data-abstimmung='["Ja, Betrug", "Nein, kein Betrug", "Mit 8 Losen kann man das nicht sagen"]'></div>
+    <p class="schritt"><span class="projekt">Schulfest-Projekt: ein Testplan: Wie viele Versuche brauchen wir, um unser Spiel zu prüfen?</span></p>
+    <div class="hinweis">Jeder entscheidet sich still, dann 3-2-1 abstimmen. Ergebnis festhalten (Foto/Tafel) und erst in der Reflexion auflösen.</div>
   </section>
 
   <!-- Eigene Lösung -->
@@ -230,15 +257,33 @@
     <div class="hinweis">a) beantwortet das Problem der Stunde. b) greift eine typische Fehlvorstellung auf („Spielerfehlschluss“). c) und ★ ggf. auf der Schülerseite bzw. als Hausaufgabe.</div>
   </section>
 
+  <!-- Übung: Niveauwahl Buch -->
+  <section class="folie" data-phase="Übung">
+    <div class="kennung">Übung · Buch<span class="eis" data-eis="S"></span></div>
+    <h2>Weiter üben: Wähle dein Niveau</h2>
+    <div class="wahlkarten">
+      <div class="wahlkarte"><b>● Basis</b>📖 <span class="platzhalter">[BUCH: S. __ Nr. __]</span></div>
+      <div class="wahlkarte"><b>●● Standard</b>📖 <span class="platzhalter">[BUCH: S. __ Nr. __]</span></div>
+      <div class="wahlkarte"><b>●●● Profi</b>📖 <span class="platzhalter">[BUCH: S. __ Nr. __]</span></div>
+    </div>
+    <div data-methode="lerntempoduett" data-minuten="5,0,2,0"></div>
+    <div class="produkt">Fertig? <strong>Erfinde eine eigene Aufgabe</strong> zu einem Glücksspiel auf dem Schützenfest: Wie oft erwartest du bei 100 Spielen einen Gewinn?. Dein Partner löst sie.</div>
+    <p>Tipps und Selbstkontrolle: <a class="schuelerlink" href="../schueler/stunde-04.html" target="_blank">📱 Schülerseite · Stunde 4</a></p>
+    <div class="hinweis">Wer auf der Schülerseite fertig ist, wählt hier eine Buchaufgabe. Rest als Hausaufgabe.</div>
+  </section>
+
   <!-- Reflexion -->
   <section class="folie" data-phase="Reflexion">
     <div class="kennung">Reflexion</div>
     <h2>Zufall lässt sich nicht vorhersagen, aber bei vielen Versuchen zeigt sich eine Regelmäßigkeit.</h2>
     <div class="zweispaltig">
       <div>
-        <div class="kasten">
-          <p style="margin:0 0 .3rem"><strong>🎫 Exit-Ticket:</strong></p>
-          <p style="margin:0">Ein Würfel wird 600-mal geworfen. Wie oft erwartest du ungefähr eine Sechs? Begründe.</p>
+        <div class="exit-qr">
+          <div data-qr="../schueler/exit-04.html"></div>
+          <div>
+            <p style="margin:0 0 .3rem;font-size:1.3rem"><strong>🎫 Exit-Ticket</strong></p>
+            <p style="margin:0">Code scannen, <strong>Kürzel</strong> eingeben, am Ende QR-Code zeigen.<br><a class="schuelerlink" href="../schueler/exit-04.html" target="_blank">🎫 Zum Exit-Ticket</a></p>
+          </div>
         </div>
         <p class="klein" style="margin-top:1rem">Nächste Stunde: Wie wahrscheinlich ist das? Wahrscheinlichkeiten als Zahl zwischen 0 und 1.</p>
       </div>
@@ -251,11 +296,12 @@
         </div>
       </div>
     </div>
-    <div class="hinweis">Exit-Ticket: etwa 100-mal, weil die Sechs bei vielen Würfen in etwa 1/6 der Fälle kommt. Ampel per Handzeichen oder auf der Schülerseite.</div>
+    <div class="hinweis">Wette auflösen: Mit 8 Losen kann man keinen Betrug beweisen. Erst bei vielen Losen zeigt sich der Anteil von etwa 1/4. Digitales Exit-Ticket (frühere Zettelfrage zum Besprechen: „Ein Würfel wird 600-mal geworfen. Wie oft erwartest du ungefähr eine Sechs? Begründe.“). QR-Codes der Schüler scannen → Auswertung. Exit-Ticket: etwa 100-mal, weil die Sechs bei vielen Würfen in etwa 1/6 der Fälle kommt. Ampel per Handzeichen oder auf der Schülerseite.</div>
   </section>
 
 </div>
 <script src="../../../../praesentation.js"></script>
+<script src="../../../../qr.js"></script>
 <script>
   // ---------- Kleines Liniendiagramm in SVG ----------
   function diagramm(svg, { maxX, linien = [], punkte = [], ziel = null, xTitel = "Anzahl der Würfe" }) {

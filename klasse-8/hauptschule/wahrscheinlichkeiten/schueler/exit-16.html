@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Exit-Ticket: Punkte auf der Linie – Stunde 16</title>
+<link rel="stylesheet" href="../../../../schueler.css">
+</head>
+<body>
+<header><div class="inner">
+  <div class="pfad"><a href="./">🗺️ Lernlandkarte</a> › <a href="stunde-16.html">Stunde 16</a> › Exit-Ticket</div>
+  <h1>🎫 Exit-Ticket</h1>
+  <p class="untertitel">Stunde 16 · Punkte auf der Linie</p>
+</div></header>
+<main>
+  <div id="exit"></div>
+</main>
+<script type="application/json" id="exit-daten">
+{
+  "titel": "Punkte auf der Linie",
+  "stunde": 16,
+  "lernziele": [
+    {
+      "text": "Ich kann Daten in einem eindimensionalen Streudiagramm darstellen.",
+      "foerdern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ● Basis",
+      "fordern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ●●● Profi"
+    },
+    {
+      "text": "Ich kann ablesen, ob Werte eng beieinander oder weit verstreut liegen.",
+      "foerdern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ● Basis",
+      "fordern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ●●● Profi"
+    },
+    {
+      "text": "Ich kann den kleinsten und den größten Wert ablesen.",
+      "foerdern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ● Basis",
+      "fordern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ●●● Profi"
+    }
+  ],
+  "fehlertypen": {
+    "einzel": "Nur auf einen einzelnen Wert (den größten) geachtet",
+    "stapel": "Gleiche Werte nicht übereinander gestapelt / falsch gezählt",
+    "ablesen": "Kleinsten oder größten Wert falsch abgelesen"
+  },
+  "fragen": [
+    {
+      "lz": 0,
+      "typ": "zahl",
+      "frage": "Werte: 3, 5, 5, 5, 6, 8. Wie viele Punkte liegen über der 5?",
+      "loesung": 3,
+      "erklaerung": "Die 5 kommt dreimal vor: drei Punkte übereinander.",
+      "fehler": [
+        {
+          "wert": 1,
+          "id": "stapel"
+        }
+      ]
+    },
+    {
+      "lz": 2,
+      "typ": "zahl",
+      "frage": "Punkte liegen bei 4, 6, 6, 7, 9 und 13. Wie groß ist der Abstand zwischen kleinstem und größtem Wert?",
+      "loesung": 9,
+      "erklaerung": "13 − 4 = 9",
+      "fehler": [
+        {
+          "wert": 13,
+          "id": "ablesen"
+        },
+        {
+          "wert": 4,
+          "id": "ablesen"
+        }
+      ]
+    },
+    {
+      "lz": 1,
+      "typ": "auswahl",
+      "frage": "Anna: 7, 8, 8, 9, 8 Punkte. Ben: 2, 14, 5, 13, 6 Punkte. Was zeigt das Streudiagramm?",
+      "optionen": [
+        "Bens Werte liegen weit verstreut, Annas eng beieinander.",
+        "Ben ist besser, weil er einmal 14 hat.",
+        "Beide sind gleich, weil beide 5 Werte haben."
+      ],
+      "loesung": 0,
+      "erklaerung": "Annas Punkte liegen alle bei 7 bis 9.",
+      "fehler": {
+        "1": "einzel"
+      }
+    },
+    {
+      "lz": 1,
+      "typ": "auswahl",
+      "frage": "Wer von beiden ist zuverlässiger?",
+      "optionen": [
+        "Anna",
+        "Ben"
+      ],
+      "loesung": 0,
+      "erklaerung": "Anna schwankt kaum.",
+      "fehler": {
+        "1": "einzel"
+      }
+    }
+  ]
+}
+</script>
+<script src="../../../../qr.js"></script>
+<script src="../../../../exit-ticket.js"></script>
+</body>
+</html>

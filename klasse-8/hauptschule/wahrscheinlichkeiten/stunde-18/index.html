@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Stunde 18: Modus und Median – Wahrscheinlichkeiten</title>
+<link rel="stylesheet" href="../../../../praesentation.css">
+<style>
+  .platzhalter { background: #fff3bf; border-radius: 4px; padding: 0 .3rem; font-family: ui-monospace, monospace; font-size: .9em; }
+  .exit-qr { display: flex; gap: 1.5rem; align-items: center; }
+  .exit-qr [data-qr] svg { width: 230px; height: 230px; display: block; border-radius: 8px; }
+</style>
+</head>
+<body data-phasen='[["Abrufen", 4], ["Problem", 7], ["Erarbeitung", 12], ["Ideen vergleichen", 5], ["Sicherung", 6], ["Übung", 7], ["Reflexion", 4]]'>
+
+<div class="leiste">
+  <div class="pfad"><a href="../../../../">Start</a> › <a href="../../../">Klasse 8</a> › <a href="../../">Hauptschule</a> › <a href="../">Wahrscheinlichkeiten</a> › Stunde 18</div>
+</div>
+
+<aside class="wortspeicher"
+  data-woerter='["Modus", "Median (Zentralwert)", "Rangliste", "der Größe nach ordnen", "Mitte"]'
+  data-saetze='["Ich vermute, dass …", "Ich habe so gerechnet: …", "Das sieht man daran, dass …", "Ich stimme zu / nicht zu, weil …"]'></aside>
+
+<div class="buehne">
+
+  <!-- 1 · ABRUFEN -->
+  <section class="folie" data-phase="Abrufen">
+    <div class="kennung">Wahrscheinlichkeiten · Stunde 18 · Warm-up</div>
+    <h2>Was weißt du noch?</h2>
+    <p style="margin-top:0">Exit-Ticket von letzter Stunde: Säulen 30 und 25, die Achse beginnt bei 20. Wie viel größer ist der erste Wert wirklich?</p>
+    <div data-abstimmung='["doppelt so groß", "um 5 größer", "um 10 größer", "gleich groß"]' data-loesung="1"></div>
+    <div class="hinweis">Alle halten gleichzeitig die ABCD-Karte hoch. Begründungen per 🎲 einholen, nicht per Melden.</div>
+  </section>
+
+  <!-- 2 · PROBLEM -->
+  <section class="folie" data-phase="Problem">
+    <div class="kennung">Problem<span class="leitmodell">Leitmodell: 0-bis-1-Streifen</span></div>
+    <h2>„Alle kriegen mehr Taschengeld als ich!“</h2>
+    <div class="problem"><div class="label">Problem</div><br>Finn bekommt 20 € Taschengeld im Monat. Er beschwert sich: „<strong>Die meisten</strong> in meiner Gruppe kriegen mehr!“ Eine anonyme Umfrage (ausgedacht) in seiner Gruppe ergibt (in €):<br><strong>15, 30, 10, 150, 20, 15, 25, 40, 15, 30, 20</strong></div>
+    <div class="spannung" data-art="Stimmt das?">Stimmt das? Finn hat recht: Die meisten bekommen <strong>mehr als 20 €</strong>.</div>
+    <div data-abstimmung='["Finn hat recht", "Finn hat nicht recht", "Kann man nicht sagen"]'></div>
+    <div class="lernziele schritt">
+      <div class="titel">🎯 Heute lernst du …</div>
+      <ul>
+        <li>Ich kann den Modus (häufigsten Wert) bestimmen.</li>
+        <li>Ich kann den Median mit einer Rangliste bestimmen.</li>
+        <li>Ich kann mit Modus und Median eine Behauptung prüfen.</li>
+      </ul>
+    </div>
+    <p class="schritt"><span class="projekt">Schulfest-Projekt: Wir bestimmen typische Werte für Zahlen-Antworten unserer Umfrage.</span></p>
+    <div class="hinweis">Keine echten Taschengelder in der Klasse abfragen (Datenschutz, Vergleichsdruck). Abstimmung festhalten, am Ende auflösen.</div>
+  </section>
+
+  <!-- 2c · EIGENE LÖSUNG -->
+  <section class="folie" data-phase="Problem" data-minuten="4">
+    <div class="kennung">Eigene Lösung</div>
+    <h2>Was meinst du?</h2>
+    <div data-denkzeit="60" data-text="Hat Finn recht? Prüfe mit den 11 Beträgen."></div>
+    <div data-methode="tps" data-minuten="1,2,2"></div>
+    <div data-tipps>
+      <div class="tipp">Ordne die Beträge der Größe nach.</div>
+      <div class="tipp">Zähle: Wie viele bekommen mehr als 20 €, wie viele 20 € oder weniger?</div>
+    </div>
+    <p class="satzhilfe">Ich vermute, dass … · Ich würde zuerst …</p>
+  </section>
+
+  <!-- 3 · ERARBEITUNG E -->
+  <section class="folie" data-phase="Erarbeitung" data-minuten="7">
+    <div class="kennung">Erarbeitung · Gruppen<span class="eis" data-eis="E"></span></div>
+    <h2>Die menschliche Rangliste</h2>
+    <p style="margin-top:0">11 Schüler ziehen je eine Taschengeld-Karte und stellen sich der Größe nach in eine Reihe. Wer steht genau in der Mitte? Wählt eure Rolle:</p>
+    <div class="wahlkarten">
+      <div class="wahlkarte"><div class="icon">🧍</div><b>Aufstellen</b>Karte ziehen, in die Reihe stellen</div>
+      <div class="wahlkarte"><div class="icon">✏️</div><b>Protokollieren</b>Rangliste an die Tafel schreiben</div>
+      <div class="wahlkarte"><div class="icon">🔍</div><b>Beobachten</b>Was passiert, wenn aus 150 € 1000 € werden?</div>
+    </div>
+    <div data-denkzeit="30" data-text="Vermute zuerst: Welcher Betrag steht genau in der Mitte der Reihe?"></div>
+    <div class="hinweis">Materialkiste: 11 Karten mit den Beträgen, 1 Joker-Karte (35 €) für eine 12. Person. Danach kommt der Joker (35 €) als 12. Person dazu: Jetzt stehen zwei in der Mitte → Median = Mitte zwischen beiden (22,50 €).</div>
+  </section>
+
+  <!-- 3 · ERARBEITUNG I/S -->
+  <section class="folie" data-phase="Erarbeitung" data-minuten="5">
+    <div class="kennung">Erarbeitung · Was passiert, wenn …?<span class="eis" data-eis="IS"></span></div>
+    <h2>Modus und Median am Streudiagramm</h2>
+    <div data-streu='{"werte": [10, 15, 15, 15, 20, 20, 25, 30, 30, 40, 150], "min": 0, "max": 160, "schritt": 5, "teilung": 10, "einheit": "€", "bearbeiten": true, "zeige": ["rangliste", "modus", "median"], "hoehe": 260}'></div>
+    <div class="vernetzen schritt">Was passiert mit dem Median, wenn aus 150 € 1000 € werden? Und wenn jemand mit 35 € dazukommt?</div>
+    <div class="hinweis">Klick auf die 150, dann Klick bei 155–160: Der Median bleibt gleich. Klick bei 35 fügt den Joker hinzu.</div>
+  </section>
+
+  <!-- 4 · IDEEN VERGLEICHEN -->
+  <section class="folie" data-phase="Ideen vergleichen">
+    <div class="kennung">Ideen vergleichen</div>
+    <h2>Wer hat recht?</h2>
+    <div class="fehlerkarte" data-wer="Finn">
+      <div class="rechnung">Rangliste: 10, 15, 15, 15, 20, 20, 25, 30, 30, 40, 150 → Median = <span class='fehler'>(10 + 150) : 2 = 80 €</span></div>
+      <div class="erklaerung">Der Median ist nicht die Mitte zwischen kleinstem und größtem Wert, sondern der Wert in der Mitte der Rangliste: der 6. von 11 Werten = 20 €.</div>
+    </div>
+    <div class="legende"><span class="l-ja">stimmt</span><span class="l-nein">stimmt nicht</span>
+      <button class="knopf" data-alle-auf style="margin-left:auto">Alle aufdecken</button><button class="knopf" data-alle-zu>Alle zudecken</button></div>
+    <div class="karten">
+      <div class="karte ja">Der Modus ist der Wert, der am häufigsten vorkommt.<span class="loesung">Ja, hier 15 € (3-mal).</span></div>
+      <div class="karte nein">Für den Median muss man nicht sortieren.<span class="loesung">Doch, zuerst eine Rangliste.</span></div>
+      <div class="karte ja">Ein einzelner sehr großer Wert verändert den Median kaum.<span class="loesung">Ja, er bleibt in der Mitte.</span></div>
+      <div class="karte nein">Bei 12 Werten gibt es keinen Median.<span class="loesung">Doch: die Mitte zwischen dem 6. und dem 7. Wert.</span></div>
+    </div>
+    <p class="satzhilfe">Ich stimme zu / nicht zu, weil … · Der Fehler ist …</p>
+    <div class="hinweis">Erst Fehlerkarte: Denkzeit, dann 🎲. Karten einzeln: Daumen hoch/runter, dann aufdecken.</div>
+  </section>
+
+  <!-- 5 · SICHERUNG -->
+  <section class="folie" data-phase="Sicherung">
+    <div class="kennung">Sicherung<span class="eis" data-eis="EIS"></span></div>
+    <h2>Modus und Median</h2>
+    <div class="merk">
+      <h3>Merke</h3>
+      <ul>
+        <li class="schritt"><strong>Modus</strong> = der Wert, der <strong>am häufigsten</strong> vorkommt. Beispiel: 15 € (3-mal).</li>
+        <li class="schritt"><strong>Median (Zentralwert)</strong>: Werte der Größe nach ordnen (<strong>Rangliste</strong>), dann den Wert <strong>in der Mitte</strong> nehmen. Bei 11 Werten ist das der 6. Wert: 20 €.</li>
+        <li class="schritt">Bei einer geraden Anzahl: Mitte der beiden mittleren Werte, z. B. (20 + 25) : 2 = 22,50 €.</li>
+        <li class="schritt">Mindestens die Hälfte der Werte ist höchstens so groß wie der Median, mindestens die Hälfte mindestens so groß.</li>
+      </ul>
+    </div>
+    <div class="produkt schritt">Erkläre es deinem Nachbarn in <strong>eigenen Worten</strong> und mit einer <strong>Skizze</strong>. Er sagt, ob er es verstanden hat.</div>
+    <div class="hinweis">Ins Heft übertragen. Danach 1–2 Erklärungen per 🎲 vorstellen lassen.</div>
+  </section>
+
+  <!-- 6 · ÜBUNG -->
+  <section class="folie" data-phase="Übung">
+    <div class="kennung">Übung · Buch<span class="eis" data-eis="S"></span></div>
+    <h2>Jetzt du! Wähle dein Niveau</h2>
+    <div class="wahlkarten">
+      <div class="wahlkarte"><b>● Basis</b>📖 <span class="platzhalter">[BUCH: S. __ Nr. __]</span></div>
+      <div class="wahlkarte"><b>●● Standard</b>📖 <span class="platzhalter">[BUCH: S. __ Nr. __]</span></div>
+      <div class="wahlkarte"><b>●●● Profi</b>📖 <span class="platzhalter">[BUCH: S. __ Nr. __]</span></div>
+    </div>
+    <div data-methode="lerntempoduett" data-minuten="5,0,2,0"></div>
+    <div class="produkt">Fertig? <strong>Erfinde eine eigene Aufgabe</strong> zu den Schuhgrößen eurer Gruppe: Bestimmt Modus und Median. Dein Partner löst sie.</div>
+    <p>Tipps und Selbstkontrolle: <a class="schuelerlink" href="../schueler/stunde-18.html" target="_blank">📱 Schülerseite · Stunde 18</a></p>
+    <div class="hinweis">Buchaufgaben im Heft. Wer fertig ist, wartet an der Haltestelle auf einen Partner. Rest als Hausaufgabe.</div>
+  </section>
+
+  <!-- 7 · REFLEXION -->
+  <section class="folie" data-phase="Reflexion">
+    <div class="kennung">Zurück zum Problem · Reflexion</div>
+    <h2>Finn hat nicht recht: Der Median ist 20 € – genau sein Taschengeld.</h2>
+    <div class="exit-qr">
+      <div data-qr="../schueler/exit-18.html"></div>
+      <div>
+        <p style="margin-top:0;font-size:1.4rem"><strong>🎫 Exit-Ticket</strong></p>
+        <p>Scanne den Code oder öffne die Schülerseite. Gib dein <strong>Kürzel</strong> ein.<br>Am Ende zeigst du mir deinen QR-Code.</p>
+        <p><a class="schuelerlink" href="../schueler/exit-18.html" target="_blank">🎫 Zum Exit-Ticket</a></p>
+        <p class="klein">Nächste Stunde: Das arithmetische Mittel – Legen unsere Hühner genug Eier?</p>
+      </div>
+    </div>
+    <div class="hinweis"> Tafelabstimmung vom Anfang zeigen: Wer lag richtig? QR-Codes der Schüler mit der Kamera-App scannen → Auswertung.</div>
+  </section>
+
+</div>
+<script src="../../../../praesentation.js"></script>
+<script src="../../../../qr.js"></script>
+<script src="../modelle.js"></script>
+</body>
+</html>

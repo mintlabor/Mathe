@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Exit-Ticket: Wir planen eine Umfrage – Stunde 11</title>
+<link rel="stylesheet" href="../../../../schueler.css">
+</head>
+<body>
+<header><div class="inner">
+  <div class="pfad"><a href="./">🗺️ Lernlandkarte</a> › <a href="stunde-11.html">Stunde 11</a> › Exit-Ticket</div>
+  <h1>🎫 Exit-Ticket</h1>
+  <p class="untertitel">Stunde 11 · Wir planen eine Umfrage</p>
+</div></header>
+<main>
+  <div id="exit"></div>
+</main>
+<script type="application/json" id="exit-daten">
+{
+  "titel": "Wir planen eine Umfrage",
+  "stunde": 11,
+  "lernziele": [
+    {
+      "text": "Ich kann gute und schlechte Umfragefragen unterscheiden.",
+      "foerdern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ● Basis",
+      "fordern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ●●● Profi"
+    },
+    {
+      "text": "Ich kann geschlossene Fragen mit passenden Antwortmöglichkeiten formulieren.",
+      "foerdern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ● Basis",
+      "fordern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ●●● Profi"
+    },
+    {
+      "text": "Ich kann planen, wen wir befragen.",
+      "foerdern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ● Basis",
+      "fordern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ●●● Profi"
+    }
+  ],
+  "fehlertypen": {
+    "suggestiv": "Frage, die zu einer Antwort drängt, nicht erkannt",
+    "offen": "Offene und geschlossene Frage verwechselt",
+    "ueberschneidung": "Überschneidende oder fehlende Antwortmöglichkeiten nicht erkannt",
+    "wen": "Nicht die passenden Personen befragt (nicht alle Gruppen vertreten)"
+  },
+  "fragen": [
+    {
+      "lz": 0,
+      "typ": "auswahl",
+      "frage": "Welche Frage ist für eine Umfrage am besten geeignet?",
+      "optionen": [
+        "Du willst doch auch eine Disco, oder?",
+        "Welches Angebot wünschst du dir am meisten? ☐ Disco ☐ Turnier ☐ Spielstände ☐ Sonstiges",
+        "Was denkst du so über das Schulfest?"
+      ],
+      "loesung": 1,
+      "erklaerung": "Kurz, neutral und mit Ankreuzfeldern.",
+      "fehler": {
+        "0": "suggestiv",
+        "2": "offen"
+      }
+    },
+    {
+      "lz": 1,
+      "typ": "auswahl",
+      "frage": "Welche Frage ist eine geschlossene Frage?",
+      "optionen": [
+        "Was ist dein Lieblingsessen?",
+        "Wie kommst du zur Schule? ☐ Bus ☐ Fahrrad ☐ zu Fuß ☐ Auto ☐ Sonstiges",
+        "Warum magst du Sport?"
+      ],
+      "loesung": 1,
+      "erklaerung": "Geschlossen = Antworten zum Ankreuzen.",
+      "fehler": {
+        "0": "offen",
+        "2": "offen"
+      }
+    },
+    {
+      "lz": 1,
+      "typ": "auswahl",
+      "frage": "„Wie viele Minuten brauchst du zur Schule?“ Welche Ankreuzfelder passen?",
+      "optionen": [
+        "☐ 0–10 ☐ 10–20 ☐ 20–30",
+        "☐ unter 10 ☐ 10 bis unter 20 ☐ 20 bis unter 30 ☐ 30 und mehr",
+        "☐ 5 ☐ 10 ☐ 15 ☐ 20"
+      ],
+      "loesung": 1,
+      "erklaerung": "Jeder findet genau ein Feld.",
+      "fehler": {
+        "0": "ueberschneidung",
+        "2": "ueberschneidung"
+      }
+    },
+    {
+      "lz": 2,
+      "typ": "auswahl",
+      "frage": "Die SV will wissen, was die ganze Schule möchte. Wen sollte sie fragen?",
+      "optionen": [
+        "nur die eigene Klasse",
+        "Schülerinnen und Schüler aus allen Jahrgängen",
+        "nur die Lehrkräfte"
+      ],
+      "loesung": 1,
+      "erklaerung": "Alle Gruppen müssen vertreten sein.",
+      "fehler": {
+        "0": "wen",
+        "2": "wen"
+      }
+    }
+  ]
+}
+</script>
+<script src="../../../../qr.js"></script>
+<script src="../../../../exit-ticket.js"></script>
+</body>
+</html>

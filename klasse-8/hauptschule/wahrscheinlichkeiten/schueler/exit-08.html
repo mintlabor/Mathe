@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Exit-Ticket: Der Baustein-Würfel – Stunde 8</title>
+<link rel="stylesheet" href="../../../../schueler.css">
+</head>
+<body>
+<header><div class="inner">
+  <div class="pfad"><a href="./">🗺️ Lernlandkarte</a> › <a href="stunde-08.html">Stunde 8</a> › Exit-Ticket</div>
+  <h1>🎫 Exit-Ticket</h1>
+  <p class="untertitel">Stunde 8 · Der Baustein-Würfel</p>
+</div></header>
+<main>
+  <div id="exit"></div>
+</main>
+<script type="application/json" id="exit-daten">
+{
+  "titel": "Der Baustein-Würfel",
+  "stunde": 8,
+  "lernziele": [
+    {
+      "text": "Ich kann erklären, wann man „1 durch Anzahl der Seiten“ rechnen darf.",
+      "foerdern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ● Basis",
+      "fordern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ●●● Profi"
+    },
+    {
+      "text": "Ich weiß, dass alle Wahrscheinlichkeiten zusammen 1 ergeben.",
+      "foerdern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ● Basis",
+      "fordern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ●●● Profi"
+    },
+    {
+      "text": "Ich kann eine fehlende Wahrscheinlichkeit berechnen.",
+      "foerdern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ● Basis",
+      "fordern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ●●● Profi"
+    }
+  ],
+  "fehlertypen": {
+    "laplace": "„1 durch Anzahl der Seiten“ auch bei ungleichen Seiten gerechnet",
+    "summe": "Nicht beachtet, dass alle Wahrscheinlichkeiten zusammen 1 ergeben",
+    "rest": "Fehlende Wahrscheinlichkeit falsch berechnet"
+  },
+  "fragen": [
+    {
+      "lz": 0,
+      "typ": "auswahl",
+      "frage": "Bei welchem Gegenstand darf man für jede Seite P = ⅙ rechnen?",
+      "optionen": [
+        "normaler Spielwürfel",
+        "Legostein",
+        "Streichholzschachtel"
+      ],
+      "loesung": 0,
+      "erklaerung": "Nur wenn alle Seiten gleich sind (Laplace).",
+      "fehler": {
+        "1": "laplace",
+        "2": "laplace"
+      }
+    },
+    {
+      "lz": 1,
+      "typ": "auswahl",
+      "frage": "Glücksrad: P(rot) = 0,5, P(blau) = 0,3, P(grün) = 0,4. Kann das stimmen?",
+      "optionen": [
+        "Ja",
+        "Nein, zusammen 1,2 – mehr als 1"
+      ],
+      "loesung": 1,
+      "erklaerung": "Alle zusammen müssen genau 1 ergeben.",
+      "fehler": {
+        "0": "summe"
+      }
+    },
+    {
+      "lz": 2,
+      "typ": "zahl",
+      "frage": "Legostein: P(Noppen oben) = 0,6, P(Noppen unten) = 0,1, P(lange Seite) = 0,25. Wie groß ist P(kurze Seite)?",
+      "loesung": 0.05,
+      "erklaerung": "1 − 0,6 − 0,1 − 0,25 = 0,05",
+      "fehler": [
+        {
+          "wert": 0.95,
+          "id": "rest"
+        }
+      ]
+    },
+    {
+      "lz": 2,
+      "typ": "zahl",
+      "frage": "P(Treffer) = 70 %. Wie groß ist P(kein Treffer)?",
+      "loesung": 30,
+      "erklaerung": "100 % − 70 % = 30 %",
+      "einheit": "%",
+      "fehler": [
+        {
+          "wert": 70,
+          "id": "rest"
+        }
+      ]
+    }
+  ]
+}
+</script>
+<script src="../../../../qr.js"></script>
+<script src="../../../../exit-ticket.js"></script>
+</body>
+</html>
