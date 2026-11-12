@@ -54,6 +54,36 @@
     '<button class="knopf" data-t="reset" title="Zurücksetzen">↺</button>';
   leiste.appendChild(timerEl);
 
+  // Fortschritt der Stunde (geplante Minuten bis zum Ende der aktuellen Phase)
+  const fortschrittEl = document.createElement("div");
+  fortschrittEl.className = "stundenfortschritt";
+  fortschrittEl.innerHTML = "<i></i>";
+  leiste.appendChild(fortschrittEl);
+  const GESAMT = PHASEN.reduce((a, p) => a + p[1], 0) || 1;
+
+  // ---------- Folien zweispaltig: links Arbeitsauftrag, rechts Material ----------
+  // Opt-out: <section class="folie" data-layout="einspaltig">
+  const LINKS = ".problem, .spannung, .lernziele, [data-denkzeit], [data-methode], [data-tipps], .satzhilfe, .produkt, .vernetzen, .fehlerkarte, .ampel, .auftrag, p, ol, ul";
+  folien.forEach(f => {
+    if (f.classList.contains("mitte") || f.dataset.layout === "einspaltig") return;
+    const links = [], rechts = [], unten = [];
+    Array.from(f.children).forEach(k => {
+      if (k.matches(".kennung, h1, h2")) return;
+      if (k.matches(".hinweis")) unten.push(k);
+      else if (k.matches(LINKS)) links.push(k);
+      else rechts.push(k);
+    });
+    if (!links.length || !rechts.length) return;
+    const spalten = document.createElement("div");
+    spalten.className = "spalten";
+    const l = document.createElement("div"); l.className = "spalte-auftrag";
+    const r = document.createElement("div"); r.className = "spalte-material";
+    links.forEach(k => l.appendChild(k));
+    rechts.forEach(k => r.appendChild(k));
+    spalten.append(l, r);
+    f.insertBefore(spalten, unten[0] || null);
+  });
+
   // ---------- Fußleiste ergänzen ----------
   const fuss = document.createElement("div");
   fuss.className = "fuss";
@@ -101,7 +131,10 @@
     });
     const schluessel = f.dataset.minuten ? "folie" + aktuell : f.dataset.phase;
     if (schluessel !== timerSchluessel) { timerSchluessel = schluessel; timerSetzen(minutenFuer(f)); }
-    fuss.querySelector(".foliennr").textContent = (aktuell + 1) + " / " + folien.length;
+    fuss.querySelector(".foliennr").textContent = "Folie " + (aktuell + 1) + " / " + folien.length;
+    const bis = PHASEN.slice(0, pi + 1).reduce((a, p) => a + p[1], 0);
+    fortschrittEl.querySelector("i").style.width = (pi < 0 ? 0 : Math.min(100, bis / GESAMT * 100)) + "%";
+    fortschrittEl.title = pi < 0 ? "" : "Geplant bis Minute " + bis + " von " + GESAMT;
     f.dispatchEvent(new CustomEvent("folie-aktiv"));
   }
   function weiter() {

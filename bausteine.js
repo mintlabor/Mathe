@@ -7,7 +7,7 @@
         data-loesung weglassen bei Meinungsfragen (z. B. Wette am Stundenanfang).
     <div data-denkzeit="60" data-text="Schreibe zuerst allein auf: …"></div>
         Erst schreiben, dann sprechen: Countdown, danach „Jetzt austauschen“.
-    🎲 Zufallsauswahl: Knopf „Wer?“ unten oder Taste Z (Klassenlisten nur auf diesem Gerät).
+    🎲 Zufallsauswahl: großer Knopf „Wer ist dran?“ unten rechts oder Taste Z (Klassenlisten nur auf diesem Gerät).
 
   DENKAUFGABEN
     <div data-schaetzen='{"min":0,"max":10000,"einheit":"Liter","loesung":8500}'></div>
@@ -166,7 +166,13 @@
       delete d.listen[d.aktiv]; d.aktiv = Object.keys(d.listen)[0] || ""; schreib(SCHL, d); einstellungen();
     });
   }
-  fussKnopf("🎲 Wer?", "Zufallsauswahl (Taste Z)", zufall);
+  if (fuss) {
+    const b = document.createElement("button");
+    b.className = "zufall-knopf"; b.type = "button"; b.title = "Zufallsauswahl (Taste Z)";
+    b.innerHTML = '<span class="wuerfel-icon">🎲</span><span>Wer ist dran?</span>';
+    b.onclick = zufall;
+    fuss.appendChild(b);
+  }
 
   // ---------- Schätzleiste ----------
   document.querySelectorAll("[data-schaetzen]").forEach(el => {
