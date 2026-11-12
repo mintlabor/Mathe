@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VORLAGE · Stunde [NR]: [TITEL] – [EINHEIT]</title>
+<!-- Beim Kopieren nach klasse-N/schulform/einheit/stunde-NN/ wird aus "../../" → "../../../../" -->
+<link rel="stylesheet" href="../../praesentation.css">
+<style>
+  .platzhalter { background: #fff3bf; border-radius: 4px; padding: 0 .3rem; font-family: ui-monospace, monospace; font-size: .9em; }
+  .exit-qr { display: flex; gap: 1.5rem; align-items: center; }
+  .exit-qr [data-qr] svg { width: 230px; height: 230px; display: block; border-radius: 8px; }
+  .buchliste { list-style: none; padding: 0; margin: .5rem 0; font-size: 1.25rem; }
+  .buchliste li { padding: .35rem 0; }
+</style>
+</head>
+<!-- Phasen und Minuten: Summe = 45. Der Timer oben zeigt die geplante Zeit je Phase. -->
+<body data-phasen='[["Abrufen",4],["Problem",6],["Erarbeitung",12],["Ideen vergleichen",5],["Sicherung",8],["Übung",6],["Reflexion",4]]'>
+
+<div class="leiste">
+  <div class="pfad"><a href="../../">Start</a> › <a href="../">Vorlage</a> › Stunde [NR]</div>
+</div>
+
+<div class="buehne">
+
+  <!-- 1 · Abrufen: 3 Fragen ohne Heft (Vorwissen aktivieren, Exit-Ticket der letzten Stunde aufgreifen) -->
+  <section class="folie" data-phase="Abrufen">
+    <div class="kennung">[EINHEIT] · Stunde [NR] · Warm-up</div>
+    <h2>Was weißt du noch?</h2>
+    <div class="uebung">
+      <div class="zeile"><div class="n">1</div><div>
+        <div class="frage"><span class="platzhalter">[Frage zur letzten Stunde]</span></div>
+        <div class="antwort schritt"><span class="platzhalter">[Lösung]</span></div>
+      </div></div>
+      <div class="zeile"><div class="n">2</div><div>
+        <div class="frage"><span class="platzhalter">[Frage zu Vorwissen, das heute gebraucht wird]</span></div>
+        <div class="antwort schritt"><span class="platzhalter">[Lösung]</span></div>
+      </div></div>
+      <div class="zeile"><div class="n">3</div><div>
+        <div class="frage"><span class="platzhalter">[Frage zum häufigsten Fehler im letzten Exit-Ticket]</span></div>
+        <div class="antwort schritt"><span class="platzhalter">[Lösung]</span></div>
+      </div></div>
+    </div>
+    <div class="hinweis">Ohne Heft, 4 Minuten. Frage 3 aus der Auswertung des letzten Exit-Tickets (Reiter „Häufige Fehler“) wählen.</div>
+  </section>
+
+  <!-- 2 · Problem: alltagsnahe Situation, offene Frage, Lernziele -->
+  <section class="folie" data-phase="Problem">
+    <div class="kennung">Problem</div>
+    <h2><span class="platzhalter">[Überschrift als Frage]</span></h2>
+    <div class="problem">
+      <div class="label">Problem</div><br>
+      <span class="platzhalter">[Alltagssituation beschreiben, die ohne das neue Wissen nicht sicher lösbar ist]</span>
+    </div>
+    <p class="schritt"><strong><span class="platzhalter">[Die offene Frage]</span></strong></p>
+    <div class="lernziele schritt">
+      <div class="titel">🎯 Heute lernst du …</div>
+      <ul>
+        <li><span class="platzhalter">[Lernziel 1 – identisch mit dem Exit-Ticket]</span></li>
+        <li><span class="platzhalter">[Lernziel 2]</span></li>
+      </ul>
+    </div>
+    <div class="hinweis">Problem noch nicht auflösen. Vermutungen sammeln.</div>
+  </section>
+
+  <!-- 2b · Eigene Lösung: Think – Pair – Share mit gestuften Tipps -->
+  <section class="folie" data-phase="Problem" data-minuten="4">
+    <div class="kennung">Eigene Lösung</div>
+    <h2>Was meinst du?</h2>
+    <div class="tps">
+      <div class="stufe"><b>👤</b> 1 Min. allein: <span class="platzhalter">[Auftrag]</span></div><span class="pfeil">→</span>
+      <div class="stufe"><b>👥</b> 2 Min. zu zweit: Vergleicht eure Ideen.</div><span class="pfeil">→</span>
+      <div class="stufe"><b>🏫</b> Klasse: Ideen sammeln</div>
+    </div>
+    <div data-tipps>
+      <div class="tipp"><span class="platzhalter">[Tipp 1 – Denkanstoß]</span></div>
+      <div class="tipp"><span class="platzhalter">[Tipp 2 – konkreter Hinweis]</span></div>
+    </div>
+    <div class="hinweis"><span class="platzhalter">[Erwartete Fehlvorstellungen – nicht korrigieren, in „Ideen vergleichen“ aufgreifen]</span></div>
+  </section>
+
+  <!-- 3 · Erarbeitung E: enaktiv, mit Material -->
+  <section class="folie" data-phase="Erarbeitung" data-minuten="6">
+    <div class="kennung">Erarbeitung · Gruppen<span class="eis" data-eis="E"></span></div>
+    <h2><span class="platzhalter">[Handlungsauftrag]</span></h2>
+    <p><span class="platzhalter">[Was die Gruppen mit dem Material tun]</span></p>
+    <div class="hinweis">Material: <span class="platzhalter">[Liste]</span>. Gruppengröße: <span class="platzhalter">[2–4]</span>.</div>
+  </section>
+
+  <!-- 3 · Erarbeitung I/S: ikonisch → symbolisch -->
+  <section class="folie" data-phase="Erarbeitung" data-minuten="6">
+    <div class="kennung">Erarbeitung<span class="eis" data-eis="IS"></span></div>
+    <h2><span class="platzhalter">[Vom Bild zur Rechnung]</span></h2>
+    <p><span class="platzhalter">[Interaktive Darstellung / Skizze, dann Rechenweg]</span></p>
+    <div class="vernetzen schritt"><span class="platzhalter">[Impuls: Wo siehst du im Bild die Zahl … ?]</span></div>
+  </section>
+
+  <!-- 4 · Ideen vergleichen: Aussagen beurteilen -->
+  <section class="folie" data-phase="Ideen vergleichen">
+    <div class="kennung">Ideen vergleichen</div>
+    <h2>Wer hat recht?</h2>
+    <div class="legende">
+      <span class="l-ja">stimmt</span><span class="l-nein">stimmt nicht</span>
+      <button class="knopf" data-alle-auf style="margin-left:auto">Alle aufdecken</button>
+      <button class="knopf" data-alle-zu>Alle zudecken</button>
+    </div>
+    <div class="karten">
+      <div class="karte ja"><span class="platzhalter">[Richtige Aussage]</span><span class="loesung"><span class="platzhalter">[Begründung]</span></span></div>
+      <div class="karte nein"><span class="platzhalter">[Typische Fehlvorstellung]</span><span class="loesung"><span class="platzhalter">[Warum falsch]</span></span></div>
+    </div>
+  </section>
+
+  <!-- 5 · Sicherung: Merkkasten -->
+  <section class="folie" data-phase="Sicherung">
+    <div class="kennung">Sicherung<span class="eis" data-eis="S"></span></div>
+    <h2><span class="platzhalter">[Thema]</span></h2>
+    <div class="merk">
+      <h3>Merke</h3>
+      <ul>
+        <li class="schritt"><span class="platzhalter">[Merksatz 1]</span></li>
+        <li class="schritt"><span class="platzhalter">[Beispiel mit allen Darstellungen E · I · S]</span></li>
+      </ul>
+    </div>
+    <div class="hinweis">Ins Heft übertragen lassen.</div>
+  </section>
+
+  <!-- 6 · Übung: Buchaufgaben nach Niveau + Schülerseite -->
+  <section class="folie" data-phase="Übung">
+    <div class="kennung">Übung · Buch<span class="eis" data-eis="S"></span></div>
+    <h2>Jetzt du!</h2>
+    <p style="margin-top:0">📖 <strong><span class="platzhalter">[BUCH: Titel]</span></strong> – wähle dein Niveau:</p>
+    <ul class="buchliste">
+      <li>● Basis: <span class="platzhalter">[BUCH: S. __ Nr. __]</span></li>
+      <li>●● Standard: <span class="platzhalter">[BUCH: S. __ Nr. __]</span></li>
+      <li>●●● Profi: <span class="platzhalter">[BUCH: S. __ Nr. __]</span></li>
+    </ul>
+    <p class="schritt">Tipps und Lösungen zur Selbstkontrolle: <a class="schuelerlink" href="../schueler/stunde-xx.html" target="_blank">📱 Schülerseite · Stunde [NR]</a></p>
+    <div class="hinweis">Lösungen zu den Buchaufgaben stehen auf der Schülerseite hinter Tipps. Schnelle Schüler: Profi-Aufgabe.</div>
+  </section>
+
+  <!-- 7 · Reflexion: zurück zum Problem + Exit-Ticket -->
+  <section class="folie" data-phase="Reflexion">
+    <div class="kennung">Zurück zum Problem · Reflexion</div>
+    <h2><span class="platzhalter">[Antwort auf die Problemfrage]</span></h2>
+    <div class="exit-qr">
+      <div data-qr="../schueler/exit-vorlage.html"></div>
+      <div>
+        <p style="margin-top:0;font-size:1.4rem"><strong>🎫 Exit-Ticket</strong></p>
+        <p>Scanne den Code oder öffne die Schülerseite. Gib dein <strong>Kürzel</strong> ein.<br>Am Ende zeigst du mir deinen QR-Code.</p>
+        <p><a class="schuelerlink" href="../schueler/exit-vorlage.html" target="_blank">🎫 Zum Exit-Ticket</a></p>
+      </div>
+    </div>
+    <div class="hinweis">QR-Codes der Schüler mit der Kamera-App scannen → Ergebnis landet in der Auswertung (nur auf deinem Gerät).</div>
+  </section>
+
+</div>
+<script src="../../praesentation.js"></script>
+<script src="../../qr.js"></script>
+</body>
+</html>

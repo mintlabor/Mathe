@@ -40,6 +40,30 @@ Mathe/
 Jede Seite hat oben eine Pfad-Navigation (z. B. *Start › Klasse 7 › Realschule › Prozentrechnung › Stunde 2*),
 damit man jederzeit eine Ebene zurückspringen kann.
 
+## Neue Stunden bauen: Vorlage
+
+Im Ordner [`vorlage/`](vorlage/) liegt das Grundgerüst mit gelb markierten Platzhaltern:
+
+| Datei | Zweck | Ziel beim Kopieren |
+|---|---|---|
+| `vorlage/stunde-xx/index.html` | Präsentation (Beamer) mit allen Phasen | `klasse-N/schulform/einheit/stunde-NN/index.html` |
+| `vorlage/schueler/stunde-xx.html` | Schülerseite: Buchaufgaben nach Niveau, Tipps, Selbstkontrolle | `…/einheit/schueler/stunde-NN.html` |
+| `vorlage/schueler/exit-vorlage.html` | Exit-Ticket mit QR-Code | `…/einheit/schueler/exit-NN.html` |
+
+Beim Kopieren die Pfade `../../` zu `../../../../` ändern. Buchaufgaben werden nur mit Seite und Nummer genannt, nie abgeschrieben.
+
+## Exit-Ticket und Auswertung
+
+- **Exit-Ticket** (`exit-ticket.js`): Schüler geben nur ein Kürzel ein (z. B. S07), beantworten 3–5 Fragen und schätzen sich selbst ein.
+  Sie sehen sofort eine Ampel je Lernziel, ihre typischen Fehler und passende Buchaufgaben. Am Ende erscheint ein QR-Code.
+- **Auswertung** ([`auswertung/`](auswertung/)): Die Lehrkraft scannt die QR-Codes (Kamera-App oder eingebauter Scanner) oder fügt Textcodes ein.
+  Übersicht je Stunde (Fördergruppen, häufige Fehler), Verlauf je Schüler, Export als Excel-Liste, Sicherungsdatei.
+- **Datenschutz:** Ergebnisse und Namen werden **nur im Browser der Lehrkraft** gespeichert und sind per PIN geschützt.
+  Es gibt keinen Server und keine Daten im Repository. Regelmäßig unter „Sichern“ eine Sicherungsdatei herunterladen.
+- Die Kennung eines Exit-Tickets ergibt sich aus dem Dateipfad (`klasse-8/hauptschule/einheit/schueler/exit-05.html` → `k8/hs/einheit/05`).
+  Daraus liest die Auswertung die Texte der Lernziele und Fehlertypen. Exit-Tickets deshalb nicht umbenennen, wenn schon Ergebnisse vorliegen.
+- `qr.js` erzeugt QR-Codes ohne externe Dienste. In Präsentationen: `<div data-qr="../schueler/exit-05.html"></div>`.
+
 ## Hinweis
 
 Dieses Repository ist **öffentlich**. Alles hier ist über den Link für jeden abrufbar.

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Exit-Ticket: [TITEL] – Stunde [NR]</title>
+<!--
+  Dateiname im Repository: klasse-N/schulform/einheit/schueler/exit-NN.html  (z. B. exit-05.html)
+  Daraus entsteht automatisch die Kennung für die Auswertung. Pfade "../../" → "../../../../".
+-->
+<link rel="stylesheet" href="../../schueler.css">
+</head>
+<body>
+<header><div class="inner">
+  <div class="pfad"><a href="../">Vorlage</a> › Exit-Ticket</div>
+  <h1>🎫 Exit-Ticket</h1>
+  <p class="untertitel">Stunde [NR] · [TITEL]</p>
+</div></header>
+<main>
+  <div id="exit"></div>
+</main>
+
+<!--
+  Regeln:
+  - 2–3 Lernziele, wörtlich wie auf der Problem-Folie und der Schülerseite
+  - 3–5 Fragen, jede genau einem Lernziel zugeordnet ("lz": 0 = erstes Lernziel)
+  - Falsche Antworten bilden typische Fehler ab ("fehler": Option → Fehlertyp)
+  - "foerdern" wird bei 🔴/🟡 empfohlen, "fordern" bei 🟢 – am besten Buchaufgaben
+-->
+<script type="application/json" id="exit-daten">
+{
+  "titel": "[TITEL]",
+  "stunde": "[NR]",
+  "lernziele": [
+    { "text": "Ich kann [Lernziel 1].", "foerdern": "[BUCH: S. __ Nr. __] + Schülerseite ● Basis", "fordern": "[BUCH: S. __ Nr. __]" },
+    { "text": "Ich kann [Lernziel 2].", "foerdern": "[BUCH: S. __ Nr. __]", "fordern": "[BUCH: S. __ Nr. __]" }
+  ],
+  "fehlertypen": {
+    "fehler-a": "[Beschreibung typischer Fehler A]",
+    "fehler-b": "[Beschreibung typischer Fehler B]"
+  },
+  "fragen": [
+    { "lz": 0, "typ": "auswahl", "frage": "[Frage 1 zu Lernziel 1] (richtig: B)",
+      "optionen": ["[A – Fehler A]", "[B – richtig]", "[C – Fehler B]"], "loesung": 1,
+      "fehler": { "0": "fehler-a", "2": "fehler-b" }, "erklaerung": "[Kurze Erklärung]" },
+    { "lz": 0, "typ": "zahl", "frage": "[Frage 2 zu Lernziel 1] (richtig: 25, Fehler A: 4)", "einheit": "%",
+      "loesung": 25, "fehler": [ { "wert": 4, "id": "fehler-a" } ], "erklaerung": "[Kurze Erklärung]" },
+    { "lz": 1, "typ": "auswahl", "frage": "[Frage 3 zu Lernziel 2] (richtig: A)",
+      "optionen": ["[A – richtig]", "[B – Fehler B]", "[C]"], "loesung": 0,
+      "fehler": { "1": "fehler-b" }, "erklaerung": "[Kurze Erklärung]" },
+    { "lz": 1, "typ": "zahl", "frage": "[Frage 4 zu Lernziel 2] (richtig: 0,5)",
+      "loesung": 0.5, "erklaerung": "[Kurze Erklärung]" }
+  ]
+}
+</script>
+<script src="../../qr.js"></script>
+<script src="../../exit-ticket.js"></script>
+</body>
+</html>

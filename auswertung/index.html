@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex">
+<title>Auswertung Exit-Tickets (Lehrkraft)</title>
+<link rel="stylesheet" href="../schueler.css">
+<style>
+  main { max-width: 1100px; }
+  header .inner { max-width: 1100px; }
+  .sperre { max-width: 420px; margin: 3rem auto; text-align: center; }
+  .sperre input { font-size: 1.6rem; width: 10rem; text-align: center; letter-spacing: .3em; padding: .4rem; border: 1px solid #c5cbd6; border-radius: 10px; }
+  .reiter { display: flex; gap: .4rem; flex-wrap: wrap; border-bottom: 2px solid var(--border); margin: 1rem 0; }
+  .reiter button { border: 0; background: none; padding: .6rem 1rem; font-size: 1rem; cursor: pointer; border-bottom: 3px solid transparent; margin-bottom: -2px; font-family: inherit; color: var(--muted); }
+  .reiter button.an { border-color: var(--accent); color: var(--text); font-weight: 700; }
+  .leiste-oben { display: flex; gap: .5rem; flex-wrap: wrap; align-items: center; }
+  .leiste-oben .rechts { margin-left: auto; }
+  select, textarea, input.suche { font-family: inherit; font-size: 1rem; padding: .4rem .5rem; border: 1px solid #c5cbd6; border-radius: 10px; background: #fff; }
+  textarea { width: 100%; min-height: 7rem; }
+  table { width: 100%; border-collapse: collapse; background: var(--card); font-size: .95rem; }
+  th, td { padding: .45rem .55rem; border-bottom: 1px solid var(--border); text-align: left; vertical-align: top; }
+  th { background: var(--bg); position: sticky; top: 0; }
+  td.a { text-align: center; font-size: 1.1rem; white-space: nowrap; }
+  .tabelle { overflow-x: auto; border: 1px solid var(--border); border-radius: 12px; }
+  .stapel { display: flex; height: 1.6rem; border-radius: 8px; overflow: hidden; background: var(--border); margin: .3rem 0 .2rem; }
+  .stapel div { display: flex; align-items: center; justify-content: center; color: #fff; font-weight: 700; font-size: .85rem; }
+  .stapel .g { background: var(--gruen); } .stapel .y { background: var(--gelb); } .stapel .r { background: var(--rot); }
+  .lz-block { padding: .7rem 0; border-bottom: 1px solid var(--border); }
+  .lz-block:last-child { border-bottom: 0; }
+  .gruppe { display: inline-block; background: var(--rot-hell); border-radius: 8px; padding: .1rem .5rem; margin: .1rem; }
+  .gruppe.y { background: var(--gelb-hell); }
+  .kacheln-mini { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: .6rem; margin-bottom: 1rem; }
+  .kacheln-mini .box { margin: 0; text-align: center; }
+  .kacheln-mini .zahl { font-size: 1.8rem; font-weight: 800; color: var(--accent); }
+  .toast { position: fixed; left: 50%; bottom: 1.2rem; transform: translateX(-50%); background: var(--text); color: #fff; padding: .7rem 1.2rem; border-radius: 12px; z-index: 10; max-width: 90vw; }
+  .zuletzt { border: 2px solid var(--gruen); }
+  .warnung { background: var(--gelb-hell); border: 1px solid var(--gelb); }
+  .scanner video { width: 100%; max-width: 480px; border-radius: 12px; background: #000; }
+  .btn.klein-btn { font-size: .85rem; padding: .2rem .5rem; }
+  .btn.gefahr { color: var(--rot); }
+</style>
+</head>
+<body>
+<header><div class="inner">
+  <div class="pfad"><a href="../">Start</a> › Auswertung</div>
+  <h1>🔒 Auswertung Exit-Tickets</h1>
+  <p class="untertitel">Nur für die Lehrkraft · Alle Daten bleiben auf diesem Gerät</p>
+</div></header>
+<main><div id="scanner"></div><div id="app"></div></main>
+<script src="auswertung.js"></script>
+</body>
+</html>

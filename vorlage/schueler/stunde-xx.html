@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Üben: [TITEL] – Stunde [NR]</title>
+<!-- Beim Kopieren nach klasse-N/schulform/einheit/schueler/ wird aus "../../" → "../../../../" -->
+<link rel="stylesheet" href="../../schueler.css">
+</head>
+<body>
+<header><div class="inner">
+  <div class="pfad"><a href="../">Vorlage</a> › Stunde [NR]</div>
+  <h1>Üben: [TITEL]</h1>
+  <p class="untertitel">Stunde [NR] · [UNTERTITEL]</p>
+</div></header>
+<main>
+  <div class="box">
+    <strong>📘 Erinnerung</strong><br>
+    <span class="platzhalter">[Merkkasten der Stunde in Kurzform]</span>
+  </div>
+  <div id="ziele"></div>
+
+  <h2>📖 Aufgaben aus dem Buch</h2>
+  <div class="box buch">
+    <h3><span class="platzhalter">[BUCH: Titel]</span></h3>
+    <ul>
+      <li>● Basis: <span class="platzhalter">[BUCH: S. __ Nr. __]</span></li>
+      <li>●● Standard: <span class="platzhalter">[BUCH: S. __ Nr. __]</span></li>
+      <li>●●● Profi: <span class="platzhalter">[BUCH: S. __ Nr. __]</span></li>
+    </ul>
+    <p class="klein">Rechne im Heft. Unten findest du Tipps und kannst deine Ergebnisse prüfen.</p>
+  </div>
+
+  <h2>Aufgaben</h2>
+  <div id="niveaus"></div>
+  <div id="fortschritt"></div>
+  <div id="aufgaben"></div>
+  <h2>Wie sicher bist du jetzt?</h2>
+  <div id="ampel"></div>
+  <p><a href="exit-vorlage.html">🎫 Weiter zum Exit-Ticket →</a></p>
+</main>
+<script>
+// Buchaufgaben zur Selbstkontrolle: frage = "Buch S. __ Nr. __a" (Aufgabentext steht im Buch, nicht hier)
+window.SEITE = {
+  speicher: "mathe-vorlage", stunde: 0,
+  lernziele: ["[Lernziel 1]", "[Lernziel 2]"],
+  ichKann: ["Ich kann [Lernziel 1].", "Ich kann [Lernziel 2]."],
+  aufgaben: [
+    { niveau: 1, typ: "zahl", frage: "📖 <span class='platzhalter'>[BUCH: S. __ Nr. __a]</span> Trage dein Ergebnis ein.",
+      loesung: 0, tipps: ["[Tipp 1]", "[Tipp 2]"], erklaerung: "[Lösungsweg]" },
+    { niveau: 2, typ: "auswahl", frage: "<span class='platzhalter'>[Eigene Aufgabe]</span>",
+      optionen: ["[A]", "[B]", "[C]"], loesung: 0, tipps: ["[Tipp 1]"], erklaerung: "[Lösungsweg]" },
+    { niveau: 3, typ: "zahl", frage: "📖 <span class='platzhalter'>[BUCH: S. __ Nr. __]</span> Trage dein Ergebnis ein.",
+      loesung: 0, tipps: ["[Tipp 1]", "[Tipp 2]"], erklaerung: "[Lösungsweg]" }
+  ]
+};
+</script>
+<script src="../../schueler.js"></script>
+</body>
+</html>
