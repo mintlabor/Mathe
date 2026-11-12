@@ -277,12 +277,23 @@
     folie.querySelectorAll("[data-alle-zu]").forEach(b => b.onclick = () => karten.forEach(k => k.classList.remove("offen")));
   });
 
-  // Hilfsfunktionen für einzelne Stunden
+  // Hilfsfunktionen für einzelne Stunden und für bausteine.js
   window.Praes = {
+    // Haupt-Timer auf Minuten setzen und starten (z. B. aus einem Methoden-Schritt)
+    timer: min => { timerSetzen(min); start(); },
+    fuss,
     // Zahl deutsch formatieren: 0.625 -> "0,625"
     zahl: (x, stellen = 2) => x.toLocaleString("de-DE", { maximumFractionDigits: stellen }),
     prozent: (x, stellen = 1) => (x * 100).toLocaleString("de-DE", { maximumFractionDigits: stellen }) + " %"
   };
 
   zeige(0);
+
+  // Aktivierende Bausteine nachladen (Abstimmung, Zufall, Schätzen, Methoden, Wortspeicher …)
+  const eigen = document.currentScript || document.querySelector('script[src$="praesentation.js"]');
+  if (eigen && !window.BausteineGeladen) {
+    const b = document.createElement("script");
+    b.src = new URL("bausteine.js", eigen.src).href;
+    document.body.appendChild(b);
+  }
 })();

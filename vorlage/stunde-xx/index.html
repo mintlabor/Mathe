@@ -10,49 +10,49 @@
   .platzhalter { background: #fff3bf; border-radius: 4px; padding: 0 .3rem; font-family: ui-monospace, monospace; font-size: .9em; }
   .exit-qr { display: flex; gap: 1.5rem; align-items: center; }
   .exit-qr [data-qr] svg { width: 230px; height: 230px; display: block; border-radius: 8px; }
-  .buchliste { list-style: none; padding: 0; margin: .5rem 0; font-size: 1.25rem; }
-  .buchliste li { padding: .35rem 0; }
 </style>
 </head>
-<!-- Phasen und Minuten: Summe = 45. Der Timer oben zeigt die geplante Zeit je Phase. -->
-<body data-phasen='[["Abrufen",4],["Problem",6],["Erarbeitung",12],["Ideen vergleichen",5],["Sicherung",8],["Übung",6],["Reflexion",4]]'>
+<!--
+  AKTIVIERUNGS-CHECK – jede Stunde enthält:
+  ☐ 1 Spannungsmoment am Anfang (.spannung, Wette/Rätsel/„Stimmt das?“), am Ende aufgelöst
+  ☐ mind. 1 „Alle antworten“ (data-abstimmung oder data-denkzeit; Aufrufen per 🎲 statt Melden)
+  ☐ mind. 1 Denkaufgabe: Schätzen · Fehler finden · Umkehraufgabe · offene Aufgabe · „Was passiert, wenn …?“
+  ☐ 1 Wahlmöglichkeit (.wahlkarten: Niveau, Kontext oder Darstellung)
+  ☐ 1 kooperative Form mit Struktur (data-methode)
+  ☐ Sprachhilfen (aside.wortspeicher + .satzhilfe)
+  ☐ Leitmodell der Einheit (ikonischer Anker) und Projekt-Baustein, falls die Einheit ein Projekt hat
+  Phasen und Minuten: Summe = 45. Timer oben zeigt die geplante Zeit je Phase.
+-->
+<body data-phasen='[["Abrufen",4],["Problem",7],["Erarbeitung",12],["Ideen vergleichen",5],["Sicherung",6],["Übung",7],["Reflexion",4]]'>
 
 <div class="leiste">
   <div class="pfad"><a href="../../">Start</a> › <a href="../">Vorlage</a> › Stunde [NR]</div>
 </div>
 
+<!-- Wortspeicher: Fachwörter und Satzanfänge der Stunde (Knopf „📚 Wörter“ oder Taste W) -->
+<aside class="wortspeicher"
+  data-woerter='["[Fachwort 1]","[Fachwort 2]","[Fachwort 3]"]'
+  data-saetze='["Ich vermute, dass …","Ich habe so gerechnet: …","Das sieht man daran, dass …","Ich stimme zu / nicht zu, weil …"]'></aside>
+
 <div class="buehne">
 
-  <!-- 1 · Abrufen: 3 Fragen ohne Heft (Vorwissen aktivieren, Exit-Ticket der letzten Stunde aufgreifen) -->
+  <!-- 1 · ABRUFEN: alle antworten gleichzeitig (ABCD-Karten oder Mini-Whiteboards) -->
   <section class="folie" data-phase="Abrufen">
     <div class="kennung">[EINHEIT] · Stunde [NR] · Warm-up</div>
     <h2>Was weißt du noch?</h2>
-    <div class="uebung">
-      <div class="zeile"><div class="n">1</div><div>
-        <div class="frage"><span class="platzhalter">[Frage zur letzten Stunde]</span></div>
-        <div class="antwort schritt"><span class="platzhalter">[Lösung]</span></div>
-      </div></div>
-      <div class="zeile"><div class="n">2</div><div>
-        <div class="frage"><span class="platzhalter">[Frage zu Vorwissen, das heute gebraucht wird]</span></div>
-        <div class="antwort schritt"><span class="platzhalter">[Lösung]</span></div>
-      </div></div>
-      <div class="zeile"><div class="n">3</div><div>
-        <div class="frage"><span class="platzhalter">[Frage zum häufigsten Fehler im letzten Exit-Ticket]</span></div>
-        <div class="antwort schritt"><span class="platzhalter">[Lösung]</span></div>
-      </div></div>
-    </div>
-    <div class="hinweis">Ohne Heft, 4 Minuten. Frage 3 aus der Auswertung des letzten Exit-Tickets (Reiter „Häufige Fehler“) wählen.</div>
+    <p style="margin-top:0"><span class="platzhalter">[Frage zum häufigsten Fehler im letzten Exit-Ticket]</span></p>
+    <div data-abstimmung='["[Antwort A]","[Antwort B – richtig]","[Antwort C – typischer Fehler]","[Antwort D]"]' data-loesung="1"></div>
+    <div class="hinweis">Alle schreiben den Buchstaben auf ihr Whiteboard / halten die ABCD-Karte hoch. Stimmen per Klick auf die Zeilen zählen. Bei vielen Fehlern: Begründung per 🎲 einholen, nicht per Melden.</div>
   </section>
 
-  <!-- 2 · Problem: alltagsnahe Situation, offene Frage, Lernziele -->
+  <!-- 2 · PROBLEM: Spannungsmoment + Lernziele -->
   <section class="folie" data-phase="Problem">
-    <div class="kennung">Problem</div>
+    <div class="kennung">Problem<span class="leitmodell">[Leitmodell der Einheit]</span></div>
     <h2><span class="platzhalter">[Überschrift als Frage]</span></h2>
-    <div class="problem">
-      <div class="label">Problem</div><br>
-      <span class="platzhalter">[Alltagssituation beschreiben, die ohne das neue Wissen nicht sicher lösbar ist]</span>
+    <div class="spannung" data-art="Wette">
+      <span class="platzhalter">[Überraschende Behauptung, Rätsel oder Wette aus dem Alltag der Schüler]</span>
     </div>
-    <p class="schritt"><strong><span class="platzhalter">[Die offene Frage]</span></strong></p>
+    <div data-abstimmung='["Ja, das stimmt","Nein, das stimmt nicht","Kommt darauf an …"]'></div>
     <div class="lernziele schritt">
       <div class="titel">🎯 Heute lernst du …</div>
       <ul>
@@ -60,88 +60,102 @@
         <li><span class="platzhalter">[Lernziel 2]</span></li>
       </ul>
     </div>
-    <div class="hinweis">Problem noch nicht auflösen. Vermutungen sammeln.</div>
+    <p class="schritt"><span class="projekt"><span class="platzhalter">[Was die Stunde zum Einheitenprojekt beiträgt]</span></span></p>
+    <div class="hinweis">Abstimmung festhalten (Foto/Tafel), am Ende der Stunde auflösen. Noch nicht verraten!</div>
   </section>
 
-  <!-- 2b · Eigene Lösung: Think – Pair – Share mit gestuften Tipps -->
+  <!-- 2b · DENKAUFGABE: Schätzen vor Rechnen (optional, sonst löschen) -->
+  <section class="folie" data-phase="Problem" data-minuten="3">
+    <div class="kennung">Schätzen</div>
+    <h2><span class="platzhalter">[Wie viel / wie viele …?]</span></h2>
+    <div data-schaetzen='{"min":0,"max":1000,"einheit":"[Einheit]","loesung":500}'></div>
+    <p class="satzhilfe">Ich schätze …, weil …</p>
+    <div class="hinweis">Jeder schreibt zuerst seine Schätzung auf. Dann 5–8 Werte per 🎲 abfragen und eintragen. Auflösen erst nach der Rechnung.</div>
+  </section>
+
+  <!-- 2c · EIGENE LÖSUNG: erst schreiben, dann sprechen -->
   <section class="folie" data-phase="Problem" data-minuten="4">
     <div class="kennung">Eigene Lösung</div>
     <h2>Was meinst du?</h2>
-    <div class="tps">
-      <div class="stufe"><b>👤</b> 1 Min. allein: <span class="platzhalter">[Auftrag]</span></div><span class="pfeil">→</span>
-      <div class="stufe"><b>👥</b> 2 Min. zu zweit: Vergleicht eure Ideen.</div><span class="pfeil">→</span>
-      <div class="stufe"><b>🏫</b> Klasse: Ideen sammeln</div>
-    </div>
+    <div data-denkzeit="60" data-text="[Auftrag: Schreibe auf, wie du vorgehen würdest.]"></div>
+    <div data-methode="tps" data-minuten="1,2,2"></div>
     <div data-tipps>
       <div class="tipp"><span class="platzhalter">[Tipp 1 – Denkanstoß]</span></div>
       <div class="tipp"><span class="platzhalter">[Tipp 2 – konkreter Hinweis]</span></div>
     </div>
+    <p class="satzhilfe">Ich vermute, dass … · Ich würde zuerst …</p>
     <div class="hinweis"><span class="platzhalter">[Erwartete Fehlvorstellungen – nicht korrigieren, in „Ideen vergleichen“ aufgreifen]</span></div>
   </section>
 
-  <!-- 3 · Erarbeitung E: enaktiv, mit Material -->
-  <section class="folie" data-phase="Erarbeitung" data-minuten="6">
+  <!-- 3 · ERARBEITUNG E: enaktiv, Gruppen mit Rollen, Wahl des Zugangs -->
+  <section class="folie" data-phase="Erarbeitung" data-minuten="7">
     <div class="kennung">Erarbeitung · Gruppen<span class="eis" data-eis="E"></span></div>
     <h2><span class="platzhalter">[Handlungsauftrag]</span></h2>
-    <p><span class="platzhalter">[Was die Gruppen mit dem Material tun]</span></p>
-    <div class="hinweis">Material: <span class="platzhalter">[Liste]</span>. Gruppengröße: <span class="platzhalter">[2–4]</span>.</div>
+    <div class="wahlkarten">
+      <div class="wahlkarte"><div class="icon">🧱</div><b>Legen</b><span class="platzhalter">[mit Material]</span></div>
+      <div class="wahlkarte"><div class="icon">✏️</div><b>Zeichnen</b><span class="platzhalter">[Skizze / Modell]</span></div>
+      <div class="wahlkarte"><div class="icon">🔢</div><b>Rechnen</b><span class="platzhalter">[mit Zahlen probieren]</span></div>
+    </div>
+    <div data-methode="rollen"></div>
+    <div class="hinweis">Materialkiste: <span class="platzhalter">[Liste]</span>. Gruppen 3–4. Rollen auslosen oder durchwechseln.</div>
   </section>
 
-  <!-- 3 · Erarbeitung I/S: ikonisch → symbolisch -->
-  <section class="folie" data-phase="Erarbeitung" data-minuten="6">
+  <!-- 3 · ERARBEITUNG I/S: „Was passiert, wenn …?“ am Leitmodell, dann Rechnung -->
+  <section class="folie" data-phase="Erarbeitung" data-minuten="5">
     <div class="kennung">Erarbeitung<span class="eis" data-eis="IS"></span></div>
-    <h2><span class="platzhalter">[Vom Bild zur Rechnung]</span></h2>
-    <p><span class="platzhalter">[Interaktive Darstellung / Skizze, dann Rechenweg]</span></p>
-    <div class="vernetzen schritt"><span class="platzhalter">[Impuls: Wo siehst du im Bild die Zahl … ?]</span></div>
+    <h2>Was passiert, wenn …?</h2>
+    <p><span class="platzhalter">[Interaktive Darstellung am Leitmodell mit Schieberegler/Knöpfen – erst vermuten, dann prüfen]</span></p>
+    <div class="vernetzen schritt"><span class="platzhalter">[Impuls: Wo siehst du im Bild die Zahl … ? Was ändert sich, wenn …?]</span></div>
   </section>
 
-  <!-- 4 · Ideen vergleichen: Aussagen beurteilen -->
+  <!-- 4 · IDEEN VERGLEICHEN: Fehler finden + Aussagen beurteilen -->
   <section class="folie" data-phase="Ideen vergleichen">
     <div class="kennung">Ideen vergleichen</div>
     <h2>Wer hat recht?</h2>
-    <div class="legende">
-      <span class="l-ja">stimmt</span><span class="l-nein">stimmt nicht</span>
-      <button class="knopf" data-alle-auf style="margin-left:auto">Alle aufdecken</button>
-      <button class="knopf" data-alle-zu>Alle zudecken</button>
+    <div class="fehlerkarte" data-wer="[Name]">
+      <div class="rechnung"><span class="platzhalter">[Rechnung mit typischem Fehler:</span> … = <span class="fehler">[falsche Stelle]</span>]</div>
+      <div class="erklaerung"><span class="platzhalter">[Was falsch ist und wie es richtig geht]</span></div>
     </div>
     <div class="karten">
       <div class="karte ja"><span class="platzhalter">[Richtige Aussage]</span><span class="loesung"><span class="platzhalter">[Begründung]</span></span></div>
       <div class="karte nein"><span class="platzhalter">[Typische Fehlvorstellung]</span><span class="loesung"><span class="platzhalter">[Warum falsch]</span></span></div>
     </div>
+    <p class="satzhilfe">Ich stimme zu / nicht zu, weil … · Der Fehler ist …</p>
   </section>
 
-  <!-- 5 · Sicherung: Merkkasten -->
+  <!-- 5 · SICHERUNG: Merkkasten + in eigenen Worten -->
   <section class="folie" data-phase="Sicherung">
-    <div class="kennung">Sicherung<span class="eis" data-eis="S"></span></div>
+    <div class="kennung">Sicherung<span class="eis" data-eis="EIS"></span></div>
     <h2><span class="platzhalter">[Thema]</span></h2>
     <div class="merk">
       <h3>Merke</h3>
       <ul>
         <li class="schritt"><span class="platzhalter">[Merksatz 1]</span></li>
-        <li class="schritt"><span class="platzhalter">[Beispiel mit allen Darstellungen E · I · S]</span></li>
+        <li class="schritt"><span class="platzhalter">[Beispiel in allen Darstellungen: Material · Bild · Rechnung]</span></li>
       </ul>
     </div>
-    <div class="hinweis">Ins Heft übertragen lassen.</div>
+    <div class="produkt schritt">Erkläre es deinem Nachbarn in <strong>eigenen Worten</strong> und mit einer <strong>Skizze</strong>. Er sagt, ob er es verstanden hat.</div>
+    <div class="hinweis">Ins Heft übertragen. Danach 1–2 Erklärungen per 🎲 vorstellen lassen.</div>
   </section>
 
-  <!-- 6 · Übung: Buchaufgaben nach Niveau + Schülerseite -->
+  <!-- 6 · ÜBUNG: Wahl des Niveaus (Buch), Lerntempoduett, eigene Aufgabe erfinden -->
   <section class="folie" data-phase="Übung">
     <div class="kennung">Übung · Buch<span class="eis" data-eis="S"></span></div>
-    <h2>Jetzt du!</h2>
-    <p style="margin-top:0">📖 <strong><span class="platzhalter">[BUCH: Titel]</span></strong> – wähle dein Niveau:</p>
-    <ul class="buchliste">
-      <li>● Basis: <span class="platzhalter">[BUCH: S. __ Nr. __]</span></li>
-      <li>●● Standard: <span class="platzhalter">[BUCH: S. __ Nr. __]</span></li>
-      <li>●●● Profi: <span class="platzhalter">[BUCH: S. __ Nr. __]</span></li>
-    </ul>
-    <p class="schritt">Tipps und Lösungen zur Selbstkontrolle: <a class="schuelerlink" href="../schueler/stunde-xx.html" target="_blank">📱 Schülerseite · Stunde [NR]</a></p>
-    <div class="hinweis">Lösungen zu den Buchaufgaben stehen auf der Schülerseite hinter Tipps. Schnelle Schüler: Profi-Aufgabe.</div>
+    <h2>Jetzt du! Wähle dein Niveau</h2>
+    <div class="wahlkarten">
+      <div class="wahlkarte"><b>● Basis</b>📖 <span class="platzhalter">[BUCH: S. __ Nr. __]</span></div>
+      <div class="wahlkarte"><b>●● Standard</b>📖 <span class="platzhalter">[BUCH: S. __ Nr. __]</span></div>
+      <div class="wahlkarte"><b>●●● Profi</b>📖 <span class="platzhalter">[BUCH: S. __ Nr. __]</span></div>
+    </div>
+    <div data-methode="lerntempoduett" data-minuten="5,0,2,0"></div>
+    <div class="produkt">Fertig? <strong>Erfinde eine eigene Aufgabe</strong> zu <span class="platzhalter">[Kontext]</span>. Dein Partner löst sie.</div>
+    <p>Tipps und Lösungen: <a class="schuelerlink" href="../schueler/stunde-xx.html" target="_blank">📱 Schülerseite · Stunde [NR]</a></p>
   </section>
 
-  <!-- 7 · Reflexion: zurück zum Problem + Exit-Ticket -->
+  <!-- 7 · REFLEXION: Wette auflösen + Exit-Ticket -->
   <section class="folie" data-phase="Reflexion">
     <div class="kennung">Zurück zum Problem · Reflexion</div>
-    <h2><span class="platzhalter">[Antwort auf die Problemfrage]</span></h2>
+    <h2><span class="platzhalter">[Auflösung der Wette / Antwort auf die Problemfrage]</span></h2>
     <div class="exit-qr">
       <div data-qr="../schueler/exit-vorlage.html"></div>
       <div>
@@ -150,7 +164,7 @@
         <p><a class="schuelerlink" href="../schueler/exit-vorlage.html" target="_blank">🎫 Zum Exit-Ticket</a></p>
       </div>
     </div>
-    <div class="hinweis">QR-Codes der Schüler mit der Kamera-App scannen → Ergebnis landet in der Auswertung (nur auf deinem Gerät).</div>
+    <div class="hinweis">Tafelabstimmung vom Anfang zeigen: Wer lag richtig? QR-Codes der Schüler mit der Kamera-App scannen → Auswertung.</div>
   </section>
 
 </div>

@@ -52,6 +52,19 @@ Im Ordner [`vorlage/`](vorlage/) liegt das Grundgerüst mit gelb markierten Plat
 
 Beim Kopieren die Pfade `../../` zu `../../../../` ändern. Buchaufgaben werden nur mit Seite und Nummer genannt, nie abgeschrieben.
 
+## Aktivierende Bausteine (`bausteine.js`, lädt automatisch in jeder Präsentation)
+
+| Ziel | Baustein |
+|---|---|
+| Alle antworten | `data-abstimmung` (ABCD mit 3-2-1-Countdown) · `data-denkzeit` (erst schreiben, dann sprechen) · 🎲 Zufallsauswahl (Taste Z) |
+| Denkaufgaben | `data-schaetzen` (Schätzleiste) · `.fehlerkarte` (Fehler finden) · „Was passiert, wenn …?“ (eigenes Modell je Stunde) |
+| Interesse | `.spannung` (Wette/„Stimmt das?“) · `.wahlkarten` (Wahl von Niveau, Kontext, Darstellung) |
+| Kreativ | `.produkt` (eigene Aufgabe erfinden, erklären) · `.projekt` (Baustein fürs Einheitenprojekt) |
+| Kooperation | `data-methode="tps | placemat | lerntempoduett | gruppenpuzzle | galeriegang | rollen"` (Klick auf Schritt startet Timer) |
+| Sprache | `aside.wortspeicher` (Taste W) · `.satzhilfe` · `.leitmodell` |
+
+Genaue Schreibweise steht oben in `bausteine.js`, Beispiele für alle Bausteine in `vorlage/stunde-xx/`.
+
 ## Exit-Ticket und Auswertung
 
 - **Exit-Ticket** (`exit-ticket.js`): Schüler geben nur ein Kürzel ein (z. B. S07), beantworten 3–5 Fragen und schätzen sich selbst ein.

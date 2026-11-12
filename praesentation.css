@@ -269,3 +269,103 @@ body.notizen .hinweis { display: block; }
   .folie p, .folie li { font-size: 1.2rem; }
   .zweispaltig { grid-template-columns: 1fr; }
 }
+
+/* =========================================================
+   Aktivierende Bausteine (bausteine.js)
+   ========================================================= */
+.abstimmung .knoepfe, .schaetzen .knoepfe, .overlay-box .knoepfe { display: flex; gap: .6rem; align-items: center; flex-wrap: wrap; margin-top: .8rem; }
+.overlay-box .klein { font-size: 1rem; color: var(--muted); }
+
+/* ABCD-Abstimmung */
+.abstimmung .opt { display: grid; grid-template-columns: 3.2rem 1fr 30% 2.5rem; gap: .8rem; align-items: center;
+  background: var(--card); border: 2px solid var(--border); border-radius: 14px; padding: .55rem .8rem; margin-bottom: .5rem; cursor: pointer; font-size: 1.45rem; }
+.abstimmung .buchstabe { width: 2.8rem; height: 2.8rem; border-radius: 10px; color: #fff; font-weight: 800; font-size: 1.6rem; display: flex; align-items: center; justify-content: center; }
+.abstimmung .balken { height: 1.2rem; background: var(--bg); border-radius: 99px; overflow: hidden; }
+.abstimmung .balken i { display: block; height: 100%; width: 0; transition: width .3s; }
+.abstimmung .anzahl { font-weight: 800; text-align: right; }
+.abstimmung .opt.richtig { border-color: var(--gruen); background: var(--gruen-hell); }
+.abstimmung .opt.falsch { opacity: .45; }
+.abstimmung .countdown { font-size: 2rem; font-weight: 800; color: var(--accent); margin-left: .5rem; }
+
+/* Denkzeit */
+.denkzeit { display: flex; gap: 1rem; align-items: center; background: var(--blau-hell); border: 2px solid var(--blau); border-radius: 16px; padding: .9rem 1.2rem; margin: .6rem 0; }
+.denkzeit .symbol { font-size: 2.4rem; }
+.denkzeit .inhalt { flex: 1; }
+.denkzeit .auftrag { font-size: 1.45rem; font-weight: 600; }
+.denkzeit .rest { font-size: 1.25rem; color: var(--blau); font-weight: 700; min-height: 1.6rem; }
+.denkzeit.fertig { background: var(--gruen-hell); border-color: var(--gruen); }
+.denkzeit.fertig .rest { color: var(--gruen); }
+
+/* Overlay + Zufallsauswahl */
+.overlay { position: fixed; inset: 0; background: rgba(20, 24, 33, .55); display: flex; align-items: center; justify-content: center; z-index: 50; }
+.overlay-box { background: var(--card); border-radius: 20px; padding: 2rem 2.5rem; min-width: min(520px, 90vw); max-width: 90vw; position: relative; text-align: center; }
+.overlay-box .zu { position: absolute; top: .8rem; right: .8rem; }
+.overlay-box textarea, .overlay-box input, .overlay-box select { font: inherit; font-size: 1.1rem; padding: .4rem .6rem; border: 1px solid var(--border); border-radius: 10px; }
+.overlay-box textarea { width: 100%; }
+.overlay-box .knoepfe { justify-content: center; }
+.zufall-name { font-size: 5rem; font-weight: 800; margin: 1rem 0; color: var(--muted); }
+.zufall-name.fest { color: var(--accent); animation: plopp .35s; }
+@keyframes plopp { 0% { transform: scale(.7); } 70% { transform: scale(1.12); } 100% { transform: scale(1); } }
+
+/* Schätzleiste */
+.schaetzen { margin: 1rem 0; }
+.schaetzen .leiste-s { position: relative; height: 3.4rem; border-bottom: 5px solid var(--text); margin: 2.4rem 1rem 0; }
+.schaetzen .punkte i { position: absolute; bottom: -.75rem; width: 1.1rem; height: 1.1rem; border-radius: 50%; background: var(--blau); transform: translateX(-50%); opacity: .75; }
+.schaetzen .punkte i.best { background: var(--gruen); opacity: 1; width: 1.6rem; height: 1.6rem; bottom: -1rem; box-shadow: 0 0 0 4px var(--gruen-hell); }
+.schaetzen .loesung-marke { position: absolute; bottom: 0; transform: translateX(-50%); display: none; background: var(--rot); color: #fff; font-weight: 800; padding: .2rem .6rem; border-radius: 8px; font-size: 1.3rem; white-space: nowrap; }
+.schaetzen .loesung-marke::after { content: ""; position: absolute; left: 50%; top: 100%; width: 4px; height: 1.1rem; background: var(--rot); transform: translateX(-50%); }
+.schaetzen .loesung-marke.an { display: block; bottom: 1.3rem; }
+.schaetzen .skala-s { display: flex; justify-content: space-between; font-size: 1.1rem; color: var(--muted); margin: .6rem .2rem 0; }
+.schaetzen input { font: inherit; font-size: 1.3rem; width: 10rem; padding: .35rem .6rem; border: 2px solid var(--border); border-radius: 10px; }
+.schaetzen .info { font-size: 1.2rem; font-weight: 700; color: var(--accent); }
+
+/* Fehler finden */
+.fehlerkarte { background: #fffdf6; border: 2px dashed var(--gelb); border-radius: 16px; padding: 1rem 1.3rem; margin: .6rem 0; }
+.fehlerkarte .wer { font-weight: 700; color: var(--muted); font-size: 1.2rem; margin-bottom: .4rem; }
+.fehlerkarte .rechnung { font-size: 1.8rem; font-family: "Comic Sans MS", "Segoe Print", cursive; line-height: 1.6; }
+.fehlerkarte .erklaerung { display: none; margin-top: .6rem; font-size: 1.35rem; background: var(--gruen-hell); border-radius: 10px; padding: .5rem .8rem; }
+.fehlerkarte.offen .fehler { background: var(--rot-hell); outline: 3px solid var(--rot); border-radius: 6px; padding: 0 .2rem; }
+.fehlerkarte.offen .erklaerung { display: block; }
+.fehlerkarte > .knopf { margin-top: .6rem; }
+
+/* Kooperative Methoden */
+.methode { background: var(--card); border: 2px solid var(--accent); border-radius: 16px; padding: .9rem 1.2rem; margin: .6rem 0; }
+.methode .titel { font-weight: 800; font-size: 1.3rem; color: var(--accent); margin-bottom: .5rem; }
+.methode .schritte-m { display: flex; gap: .5rem; flex-wrap: wrap; }
+.methode .schritt-m { flex: 1 1 12rem; display: flex; gap: .6rem; align-items: center; text-align: left; font: inherit; font-size: 1.2rem;
+  background: var(--bg); border: 2px solid var(--border); border-radius: 12px; padding: .5rem .7rem; cursor: pointer; color: var(--text); }
+.methode .schritt-m .nr { background: var(--accent); color: #fff; border-radius: 50%; width: 1.8rem; height: 1.8rem; flex-shrink: 0; display: flex; align-items: center; justify-content: center; font-weight: 800; }
+.methode .schritt-m .min { margin-left: auto; font-weight: 700; color: var(--muted); }
+.methode .schritt-m.an { border-color: var(--accent); background: var(--accent-hell); }
+.placemat { display: grid; grid-template-columns: 1fr 1.4fr 1fr; grid-template-rows: 3.5rem 5rem 3.5rem; gap: 4px; max-width: 34rem; margin: .9rem auto 0; }
+.placemat .f { background: var(--bg); border: 2px solid var(--border); display: flex; align-items: center; justify-content: center; font-weight: 800; color: var(--muted); font-size: 1.2rem; }
+.placemat .f1 { grid-column: 1 / 4; grid-row: 1; } .placemat .f3 { grid-column: 1 / 4; grid-row: 3; }
+.placemat .f2 { grid-column: 3; grid-row: 2; } .placemat .f4 { grid-column: 1; grid-row: 2; }
+.placemat .mitte { grid-column: 2; grid-row: 2; background: var(--accent-hell); border: 3px solid var(--accent); display: flex; align-items: center; justify-content: center; text-align: center; font-weight: 700; padding: .3rem; font-size: 1.1rem; }
+
+/* Wortspeicher (seitliches Fenster) */
+aside.wortspeicher { position: fixed; top: 0; right: 0; bottom: 0; width: min(380px, 90vw); background: var(--card); border-left: 3px solid var(--accent);
+  box-shadow: -8px 0 24px rgba(0,0,0,.12); padding: 1.2rem 1.4rem; overflow-y: auto; transform: translateX(105%); transition: transform .25s; z-index: 40; }
+body.ws-offen aside.wortspeicher { transform: none; }
+aside.wortspeicher .zu { position: absolute; top: .8rem; right: .8rem; }
+aside.wortspeicher h3 { margin: .4rem 0 .5rem; font-size: 1.25rem; }
+aside.wortspeicher ul { list-style: none; padding: 0; margin: 0 0 1rem; }
+aside.wortspeicher .woerter li { display: inline-block; background: var(--accent-hell); border-radius: 8px; padding: .25rem .6rem; margin: .2rem; font-size: 1.2rem; font-weight: 600; }
+aside.wortspeicher .saetze li { font-size: 1.2rem; padding: .35rem 0; border-bottom: 1px solid var(--border); }
+.satzhilfe { font-size: 1.2rem; color: var(--muted); margin-top: .5rem; }
+.satzhilfe::before { content: "💬 "; }
+
+/* Spannung, Wahl, Produkte, Projekt, Leitmodell */
+.spannung { background: linear-gradient(135deg, #fff4e6, #fff); border: 3px solid #f08c00; border-radius: 18px; padding: 1rem 1.4rem; margin: .5rem 0 1rem; font-size: 1.6rem; }
+.spannung::before { content: "⚡ Stimmt das?"; display: block; font-size: 1rem; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; color: #e8590c; margin-bottom: .3rem; }
+.spannung[data-art]::before { content: "⚡ " attr(data-art); }
+.wahlkarten { display: grid; grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr)); gap: .8rem; margin: .6rem 0; }
+.wahlkarte { background: var(--card); border: 2px solid var(--border); border-radius: 16px; padding: .9rem 1.1rem; font-size: 1.3rem; }
+.wahlkarte b { display: block; font-size: 1.45rem; margin-bottom: .2rem; }
+.wahlkarte .icon { font-size: 2.2rem; }
+.produkt { background: #f3f0ff; border: 2px solid #7048e8; border-radius: 16px; padding: .9rem 1.2rem; margin: .6rem 0; font-size: 1.4rem; }
+.produkt::before { content: "🎨 Werde kreativ"; display: block; font-size: 1rem; font-weight: 800; color: #7048e8; text-transform: uppercase; letter-spacing: .06em; }
+.projekt { display: inline-flex; gap: .5rem; align-items: center; background: #ebfbee; border: 2px solid var(--gruen); color: #1e6b2e; border-radius: 999px; padding: .25rem .9rem; font-size: 1.05rem; font-weight: 700; }
+.projekt::before { content: "🧩 Unser Projekt:"; }
+.leitmodell { display: inline-block; background: var(--blau-hell); color: var(--blau); border-radius: 999px; padding: .15rem .7rem; font-size: .95rem; font-weight: 700; margin-left: .5rem; }
+.leitmodell::before { content: "🧭 "; }
