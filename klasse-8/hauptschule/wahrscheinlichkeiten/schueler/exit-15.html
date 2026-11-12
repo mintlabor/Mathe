@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Exit-Ticket: Das Kreisdiagramm – Stunde 15</title>
+<link rel="stylesheet" href="../../../../schueler.css">
+</head>
+<body>
+<header><div class="inner">
+  <div class="pfad"><a href="./">🗺️ Lernlandkarte</a> › <a href="stunde-15.html">Stunde 15</a> › Exit-Ticket</div>
+  <h1>🎫 Exit-Ticket</h1>
+  <p class="untertitel">Stunde 15 · Das Kreisdiagramm</p>
+</div></header>
+<main>
+  <div id="exit"></div>
+</main>
+<script type="application/json" id="exit-daten">
+{
+  "titel": "Das Kreisdiagramm",
+  "stunde": 15,
+  "lernziele": [
+    {
+      "text": "Ich kann aus einem Streifendiagramm ein Kreisdiagramm machen.",
+      "foerdern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ● Basis",
+      "fordern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ●●● Profi"
+    },
+    {
+      "text": "Ich kann Winkel mit relativer Häufigkeit · 360° berechnen.",
+      "foerdern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ● Basis",
+      "fordern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ●●● Profi"
+    },
+    {
+      "text": "Ich kann ein Kreisdiagramm mit dem Geodreieck zeichnen.",
+      "foerdern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ● Basis",
+      "fordern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ●●● Profi"
+    }
+  ],
+  "fehlertypen": {
+    "grad": "Prozentzahl direkt als Gradzahl genommen",
+    "hundert": "Mit 100° statt 360° für den ganzen Kreis gerechnet",
+    "summe": "Nicht beachtet, dass alle Winkel zusammen 360° ergeben",
+    "zeichnen": "Reihenfolge beim Zeichnen nicht klar"
+  },
+  "fragen": [
+    {
+      "lz": 1,
+      "typ": "zahl",
+      "frage": "25 % sollen im Kreisdiagramm dargestellt werden. Wie groß ist der Winkel?",
+      "loesung": 90,
+      "erklaerung": "0,25 · 360° = 90°",
+      "einheit": "°",
+      "fehler": [
+        {
+          "wert": 25,
+          "id": "grad"
+        }
+      ]
+    },
+    {
+      "lz": 1,
+      "typ": "zahl",
+      "frage": "12 von 40 Befragten wollen Spielstände. Wie groß ist der Winkel im Kreisdiagramm?",
+      "loesung": 108,
+      "erklaerung": "12 : 40 = 0,3 → 0,3 · 360° = 108°",
+      "einheit": "°",
+      "fehler": [
+        {
+          "wert": 12,
+          "id": "grad"
+        },
+        {
+          "wert": 30,
+          "id": "grad"
+        }
+      ]
+    },
+    {
+      "lz": 0,
+      "typ": "zahl",
+      "frage": "Drei Winkel eines Kreisdiagramms sind 180°, 90° und 54°. Wie groß ist der vierte?",
+      "loesung": 36,
+      "erklaerung": "360° − 180° − 90° − 54° = 36°",
+      "einheit": "°",
+      "fehler": [
+        {
+          "wert": 0,
+          "id": "summe"
+        }
+      ]
+    },
+    {
+      "lz": 2,
+      "typ": "auswahl",
+      "frage": "Wie beginnt man beim Zeichnen eines Kreisdiagramms?",
+      "optionen": [
+        "Kreis zeichnen, einen Radius ziehen, dann den ersten Winkel am Mittelpunkt antragen",
+        "Die Stücke nach Gefühl einteilen",
+        "Erst die Prozentzahlen in den Kreis schreiben, dann teilen"
+      ],
+      "loesung": 0,
+      "erklaerung": "Erst Kreis und Radius, dann Winkel für Winkel.",
+      "fehler": {
+        "1": "zeichnen",
+        "2": "zeichnen"
+      }
+    }
+  ]
+}
+</script>
+<script src="../../../../qr.js"></script>
+<script src="../../../../exit-ticket.js"></script>
+</body>
+</html>

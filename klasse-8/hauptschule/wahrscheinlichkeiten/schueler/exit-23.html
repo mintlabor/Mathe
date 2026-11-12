@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Exit-Ticket: Projekt: Poster vorstellen – Stunde 23</title>
+<link rel="stylesheet" href="../../../../schueler.css">
+</head>
+<body>
+<header><div class="inner">
+  <div class="pfad"><a href="./">🗺️ Lernlandkarte</a> › <a href="stunde-23.html">Stunde 23</a> › Exit-Ticket</div>
+  <h1>🎫 Exit-Ticket</h1>
+  <p class="untertitel">Stunde 23 · Projekt: Poster vorstellen</p>
+</div></header>
+<main>
+  <div id="exit"></div>
+</main>
+<script type="application/json" id="exit-daten">
+{
+  "titel": "Projekt: Poster vorstellen",
+  "stunde": 23,
+  "lernziele": [
+    {
+      "text": "Ich kann ein Statistik-Poster mit Kriterien beurteilen.",
+      "foerdern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ● Basis",
+      "fordern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ●●● Profi"
+    },
+    {
+      "text": "Ich kann einen Fehler in einer Darstellung erklären.",
+      "foerdern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ● Basis",
+      "fordern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ●●● Profi"
+    },
+    {
+      "text": "Ich kann ein Ergebnis in eigenen Worten genau beschreiben.",
+      "foerdern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ● Basis",
+      "fordern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ●●● Profi"
+    }
+  ],
+  "fehlertypen": {
+    "kriterien": "Wichtiges Kriterium für ein Statistik-Poster nicht erkannt",
+    "summe": "Nicht erkannt, dass ein Kreisdiagramm zusammen 100 % hat",
+    "achse": "Abgeschnittene Achse nicht erkannt",
+    "verallg": "Ergebnis ungenau oder übertrieben beschrieben"
+  },
+  "fragen": [
+    {
+      "lz": 0,
+      "typ": "auswahl",
+      "frage": "Was gehört NICHT unbedingt auf ein gutes Statistik-Poster?",
+      "optionen": [
+        "Frage und Anzahl der Befragten",
+        "ein beschriftetes Diagramm",
+        "möglichst viele Farben"
+      ],
+      "loesung": 2,
+      "erklaerung": "Farben helfen, aber Zahlen und Beschriftung sind Pflicht.",
+      "fehler": {
+        "0": "kriterien",
+        "1": "kriterien"
+      }
+    },
+    {
+      "lz": 1,
+      "typ": "auswahl",
+      "frage": "Ein Poster zeigt ein Kreisdiagramm mit 40 %, 35 % und 35 %. Was ist falsch?",
+      "optionen": [
+        "Zusammen sind das 110 %.",
+        "Der Kreis ist zu klein.",
+        "Nichts."
+      ],
+      "loesung": 0,
+      "erklaerung": "Ein Kreis hat genau 100 %.",
+      "fehler": {
+        "2": "summe"
+      }
+    },
+    {
+      "lz": 1,
+      "typ": "auswahl",
+      "frage": "Ein Poster: Säulen 25 und 20, die Achse beginnt bei 15. Text: „Disco doppelt so beliebt!“ Was ist falsch?",
+      "optionen": [
+        "Die Achse ist abgeschnitten – 25 ist nicht doppelt so viel wie 20.",
+        "Nichts."
+      ],
+      "loesung": 0,
+      "erklaerung": "25 ist nur ein Viertel mehr als 20.",
+      "fehler": {
+        "1": "achse"
+      }
+    },
+    {
+      "lz": 2,
+      "typ": "auswahl",
+      "frage": "Welcher Satz beschreibt ein Ergebnis genau?",
+      "optionen": [
+        "„Disco war am beliebtesten: 12 von 40 Befragten, das sind 30 %.“",
+        "„Disco halt.“",
+        "„Alle wollen Disco.“"
+      ],
+      "loesung": 0,
+      "erklaerung": "Mit Anzahl, Anteil und ohne Übertreibung.",
+      "fehler": {
+        "1": "verallg",
+        "2": "verallg"
+      }
+    }
+  ]
+}
+</script>
+<script src="../../../../qr.js"></script>
+<script src="../../../../exit-ticket.js"></script>
+</body>
+</html>

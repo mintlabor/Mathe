@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Exit-Ticket: Welcher Mittelwert passt? – Stunde 20</title>
+<link rel="stylesheet" href="../../../../schueler.css">
+</head>
+<body>
+<header><div class="inner">
+  <div class="pfad"><a href="./">🗺️ Lernlandkarte</a> › <a href="stunde-20.html">Stunde 20</a> › Exit-Ticket</div>
+  <h1>🎫 Exit-Ticket</h1>
+  <p class="untertitel">Stunde 20 · Welcher Mittelwert passt?</p>
+</div></header>
+<main>
+  <div id="exit"></div>
+</main>
+<script type="application/json" id="exit-daten">
+{
+  "titel": "Welcher Mittelwert passt?",
+  "stunde": 20,
+  "lernziele": [
+    {
+      "text": "Ich kann einen Ausreißer erkennen.",
+      "foerdern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ● Basis",
+      "fordern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ●●● Profi"
+    },
+    {
+      "text": "Ich kann begründen, ob Mittelwert oder Median besser passt.",
+      "foerdern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ● Basis",
+      "fordern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ●●● Profi"
+    },
+    {
+      "text": "Ich kann die Spannweite berechnen.",
+      "foerdern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ● Basis",
+      "fordern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ●●● Profi"
+    }
+  ],
+  "fehlertypen": {
+    "ausreisser": "Ausreißer nicht erkannt",
+    "mittel_median": "Nicht erkannt, dass der Median bei Ausreißern besser passt",
+    "spannweite": "Spannweite falsch berechnet (z. B. addiert)"
+  },
+  "fragen": [
+    {
+      "lz": 0,
+      "typ": "auswahl",
+      "frage": "Welcher Wert ist ein Ausreißer? 12, 14, 13, 15, 48, 14",
+      "optionen": [
+        "12",
+        "15",
+        "48"
+      ],
+      "loesung": 2,
+      "erklaerung": "48 liegt weit weg von den anderen.",
+      "fehler": {
+        "0": "ausreisser",
+        "1": "ausreisser"
+      }
+    },
+    {
+      "lz": 2,
+      "typ": "zahl",
+      "frage": "Wie groß ist die Spannweite von 12, 14, 13, 15, 48, 14?",
+      "loesung": 36,
+      "erklaerung": "48 − 12 = 36",
+      "fehler": [
+        {
+          "wert": 60,
+          "id": "spannweite"
+        },
+        {
+          "wert": 30,
+          "id": "spannweite"
+        }
+      ]
+    },
+    {
+      "lz": 1,
+      "typ": "auswahl",
+      "frage": "Gehälter in einer Firma: 2200, 2400, 2500, 2600 und 15000 € (Chef). Was beschreibt das typische Gehalt besser?",
+      "optionen": [
+        "Mittelwert: 4940 €",
+        "Median: 2500 €"
+      ],
+      "loesung": 1,
+      "erklaerung": "Der Chef-Lohn verzerrt den Mittelwert.",
+      "fehler": {
+        "0": "mittel_median"
+      }
+    },
+    {
+      "lz": 1,
+      "typ": "auswahl",
+      "frage": "Was passiert mit dem Mittelwert, wenn man die 15000 € weglässt?",
+      "optionen": [
+        "Er wird viel kleiner.",
+        "Er bleibt gleich.",
+        "Er wird größer."
+      ],
+      "loesung": 0,
+      "erklaerung": "Ohne Chef: 9700 : 4 = 2425 €.",
+      "fehler": {
+        "1": "mittel_median",
+        "2": "mittel_median"
+      }
+    }
+  ]
+}
+</script>
+<script src="../../../../qr.js"></script>
+<script src="../../../../exit-ticket.js"></script>
+</body>
+</html>

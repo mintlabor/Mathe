@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Exit-Ticket: Das Streifendiagramm – Stunde 14</title>
+<link rel="stylesheet" href="../../../../schueler.css">
+</head>
+<body>
+<header><div class="inner">
+  <div class="pfad"><a href="./">🗺️ Lernlandkarte</a> › <a href="stunde-14.html">Stunde 14</a> › Exit-Ticket</div>
+  <h1>🎫 Exit-Ticket</h1>
+  <p class="untertitel">Stunde 14 · Das Streifendiagramm</p>
+</div></header>
+<main>
+  <div id="exit"></div>
+</main>
+<script type="application/json" id="exit-daten">
+{
+  "titel": "Das Streifendiagramm",
+  "stunde": 14,
+  "lernziele": [
+    {
+      "text": "Ich kann relative Häufigkeiten als Streifendiagramm darstellen.",
+      "foerdern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ● Basis",
+      "fordern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ●●● Profi"
+    },
+    {
+      "text": "Ich kann die Länge eines Feldes aus dem Anteil berechnen.",
+      "foerdern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ● Basis",
+      "fordern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ●●● Profi"
+    },
+    {
+      "text": "Ich kann ein Streifendiagramm ablesen.",
+      "foerdern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ● Basis",
+      "fordern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ●●● Profi"
+    }
+  ],
+  "fehlertypen": {
+    "anzahl": "Anzahl direkt als Länge genommen (ohne Anteil)",
+    "gesamt": "Mit der falschen Gesamtlänge gerechnet",
+    "ablesen": "Anteil am Streifen falsch abgelesen"
+  },
+  "fragen": [
+    {
+      "lz": 1,
+      "typ": "zahl",
+      "frage": "Von 50 Befragten wählen 20 „Disco“. Wie lang wird das Disco-Feld in einem 10 cm langen Streifen?",
+      "loesung": 4,
+      "erklaerung": "20 : 50 = 0,4 → 0,4 · 10 cm = 4 cm",
+      "einheit": "cm",
+      "fehler": [
+        {
+          "wert": 20,
+          "id": "anzahl"
+        },
+        {
+          "wert": 40,
+          "id": "gesamt"
+        }
+      ]
+    },
+    {
+      "lz": 1,
+      "typ": "zahl",
+      "frage": "25 % sollen in einem 20 cm langen Streifen dargestellt werden. Wie lang wird das Feld?",
+      "loesung": 5,
+      "erklaerung": "0,25 · 20 cm = 5 cm",
+      "einheit": "cm",
+      "fehler": [
+        {
+          "wert": 2.5,
+          "id": "gesamt"
+        },
+        {
+          "wert": 25,
+          "id": "anzahl"
+        }
+      ]
+    },
+    {
+      "lz": 2,
+      "typ": "auswahl",
+      "frage": "Ein 10-cm-Streifen: Das Feld „Bus“ ist 3 cm lang. Was bedeutet das?",
+      "optionen": [
+        "3 Personen fahren Bus.",
+        "30 % fahren Bus.",
+        "3 % fahren Bus."
+      ],
+      "loesung": 1,
+      "erklaerung": "1 cm = 10 %, also 3 cm = 30 %.",
+      "fehler": {
+        "0": "anzahl",
+        "2": "ablesen"
+      }
+    },
+    {
+      "lz": 0,
+      "typ": "auswahl",
+      "frage": "Welcher Satz zu Streifendiagrammen stimmt?",
+      "optionen": [
+        "Alle Felder zusammen ergeben den ganzen Streifen.",
+        "Das größte Feld muss immer links sein.",
+        "Die Felder sind so viele cm lang wie die Anzahlen."
+      ],
+      "loesung": 0,
+      "erklaerung": "Der ganze Streifen = 100 %.",
+      "fehler": {
+        "2": "anzahl"
+      }
+    }
+  ]
+}
+</script>
+<script src="../../../../qr.js"></script>
+<script src="../../../../exit-ticket.js"></script>
+</body>
+</html>

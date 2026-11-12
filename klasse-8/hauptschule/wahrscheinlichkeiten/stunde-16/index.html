@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Stunde 16: Punkte auf der Linie – Wahrscheinlichkeiten</title>
+<link rel="stylesheet" href="../../../../praesentation.css">
+<style>
+  .platzhalter { background: #fff3bf; border-radius: 4px; padding: 0 .3rem; font-family: ui-monospace, monospace; font-size: .9em; }
+  .exit-qr { display: flex; gap: 1.5rem; align-items: center; }
+  .exit-qr [data-qr] svg { width: 230px; height: 230px; display: block; border-radius: 8px; }
+</style>
+</head>
+<body data-phasen='[["Abrufen", 4], ["Problem", 7], ["Erarbeitung", 12], ["Ideen vergleichen", 5], ["Sicherung", 6], ["Übung", 7], ["Reflexion", 4]]'>
+
+<div class="leiste">
+  <div class="pfad"><a href="../../../../">Start</a> › <a href="../../../">Klasse 8</a> › <a href="../../">Hauptschule</a> › <a href="../">Wahrscheinlichkeiten</a> › Stunde 16</div>
+</div>
+
+<aside class="wortspeicher"
+  data-woerter='["Streudiagramm", "Zahlengerade", "Wert", "kleinster Wert", "größter Wert", "eng / weit verstreut"]'
+  data-saetze='["Ich vermute, dass …", "Ich habe so gerechnet: …", "Das sieht man daran, dass …", "Ich stimme zu / nicht zu, weil …"]'></aside>
+
+<div class="buehne">
+
+  <!-- 1 · ABRUFEN -->
+  <section class="folie" data-phase="Abrufen">
+    <div class="kennung">Wahrscheinlichkeiten · Stunde 16 · Warm-up</div>
+    <h2>Was weißt du noch?</h2>
+    <p style="margin-top:0">Exit-Ticket von letzter Stunde: Wie groß ist der Winkel für 20 %?</p>
+    <div data-abstimmung='["20°", "72°", "36°", "200°"]' data-loesung="1"></div>
+    <div class="hinweis">Alle halten gleichzeitig die ABCD-Karte hoch. Begründungen per 🎲 einholen, nicht per Melden.</div>
+  </section>
+
+  <!-- 2 · PROBLEM -->
+  <section class="folie" data-phase="Problem">
+    <div class="kennung">Problem<span class="leitmodell">Leitmodell: 0-bis-1-Streifen</span></div>
+    <h2>Wer kommt ins Weitwurf-Team?</h2>
+    <div class="problem"><div class="label">Problem</div><br>Beim Schulfest gibt es ein Weitwurf-Duell der Klassen. Ein Platz ist noch frei. Probewürfe (in m):<br>👧 <strong>Lea:</strong> 18, 19, 20, 19, 21 &nbsp; 👦 <strong>Max:</strong> 12, 25, 14, 26, 13</div>
+    <div class="spannung" data-art="Wette">Wette: <strong>Max</strong> ist der bessere Werfer, denn er hat den weitesten Wurf.</div>
+    <div data-abstimmung='["Max", "Lea", "beide gleich gut"]'></div>
+    <div class="lernziele schritt">
+      <div class="titel">🎯 Heute lernst du …</div>
+      <ul>
+        <li>Ich kann Daten in einem eindimensionalen Streudiagramm darstellen.</li>
+        <li>Ich kann ablesen, ob Werte eng beieinander oder weit verstreut liegen.</li>
+        <li>Ich kann den kleinsten und den größten Wert ablesen.</li>
+      </ul>
+    </div>
+    <p class="schritt"><span class="projekt">Schulfest-Projekt: Wir stellen Zahlen-Antworten unserer Umfrage als Streudiagramm dar.</span></p>
+    <div class="hinweis">Abstimmung festhalten (Foto/Tafel), am Ende der Stunde auflösen. Noch nicht verraten!</div>
+  </section>
+
+  <!-- 2c · EIGENE LÖSUNG -->
+  <section class="folie" data-phase="Problem" data-minuten="4">
+    <div class="kennung">Eigene Lösung</div>
+    <h2>Was meinst du?</h2>
+    <div data-denkzeit="60" data-text="Wen würdest du ins Team nehmen, Lea oder Max? Begründe mit den Würfen."></div>
+    <div data-methode="tps" data-minuten="1,2,2"></div>
+    <div data-tipps>
+      <div class="tipp">Schau nicht nur auf den besten Wurf. Was passiert an einem schlechten Tag?</div>
+      <div class="tipp">Zeichne eine Zahlengerade von 10 bis 30 m und setze für jeden Wurf einen Punkt.</div>
+    </div>
+    <p class="satzhilfe">Ich vermute, dass … · Ich würde zuerst …</p>
+  </section>
+
+  <!-- 3 · ERARBEITUNG E -->
+  <section class="folie" data-phase="Erarbeitung" data-minuten="7">
+    <div class="kennung">Erarbeitung · Gruppen<span class="eis" data-eis="E"></span></div>
+    <h2>Wir werfen selbst</h2>
+    <p style="margin-top:0">Jeder wirft 3-mal. Messt die Weiten und klebt für jeden Wurf einen Klebepunkt über die Zahlengerade auf dem Plakat. Wählt:</p>
+    <div class="wahlkarten">
+      <div class="wahlkarte"><div class="icon">✈️</div><b>Papierflieger</b>im Flur, mit Maßband (auf 0,5 m genau)</div>
+      <div class="wahlkarte"><div class="icon">🎯</div><b>Zielwurf</b>Bohnensack: Abstand zur Mitte in cm</div>
+      <div class="wahlkarte"><div class="icon">📋</div><b>Sportdaten</b>Weitsprung-Werte aus dem Sportunterricht</div>
+    </div>
+    <div data-methode="rollen"></div>
+    <div class="hinweis">Materialkiste: Papier für Flieger, Maßband, Klebepunkte in 2 Farben, Plakat mit Zahlengerade. Gleiche Werte werden übereinander geklebt. Zwei Farben: je eine für zwei Gruppen, damit man vergleichen kann.</div>
+  </section>
+
+  <!-- 3 · ERARBEITUNG I/S -->
+  <section class="folie" data-phase="Erarbeitung" data-minuten="5">
+    <div class="kennung">Erarbeitung · Was passiert, wenn …?<span class="eis" data-eis="IS"></span></div>
+    <h2>Lea und Max auf der Zahlengeraden</h2>
+    <p style='margin:0'><strong>👧 Lea</strong></p><div data-streu='{"werte": [18, 19, 20, 19, 21], "min": 10, "max": 28, "schritt": 1, "teilung": 2, "einheit": "m", "bearbeiten": true, "zeige": [], "hoehe": 150}'></div><p style='margin:0'><strong>👦 Max</strong></p><div data-streu='{"werte": [12, 25, 14, 26, 13], "min": 10, "max": 28, "schritt": 1, "teilung": 2, "einheit": "m", "bearbeiten": true, "zeige": [], "hoehe": 150}'></div>
+    <div class="vernetzen schritt">Was passiert, wenn Max noch einen Wurf mit 27 m macht? Wird er dadurch zuverlässiger?</div>
+    <div class="hinweis">Klick auf die Achse setzt einen neuen Wurf, Klick auf einen Punkt entfernt ihn.</div>
+  </section>
+
+  <!-- 4 · IDEEN VERGLEICHEN -->
+  <section class="folie" data-phase="Ideen vergleichen">
+    <div class="kennung">Ideen vergleichen</div>
+    <h2>Wer hat recht?</h2>
+    <div class="fehlerkarte" data-wer="Tom">
+      <div class="rechnung">Max: 12, 25, 14, 26, 13 → <span class='fehler'>Max ist besser, denn 26 m ist der weiteste Wurf.</span></div>
+      <div class="erklaerung">Ein einzelner Wert sagt wenig. Im Streudiagramm sieht man: Max' Würfe liegen weit verstreut, Leas eng bei 18 bis 21 m. 3 von 5 Würfen von Max sind kürzer als Leas schlechtester. Lea ist zuverlässiger.</div>
+    </div>
+    <div class="legende"><span class="l-ja">stimmt</span><span class="l-nein">stimmt nicht</span>
+      <button class="knopf" data-alle-auf style="margin-left:auto">Alle aufdecken</button><button class="knopf" data-alle-zu>Alle zudecken</button></div>
+    <div class="karten">
+      <div class="karte ja">Im Streudiagramm ist jeder Wert ein Punkt über der Zahlengeraden.<span class="loesung">Ja; gleiche Werte stapelt man übereinander.</span></div>
+      <div class="karte nein">Für ein Streudiagramm braucht man Prozentzahlen.<span class="loesung">Nein, man trägt die Werte selbst ein.</span></div>
+      <div class="karte ja">Liegen die Punkte eng beieinander, sind die Werte ähnlich.<span class="loesung">Ja, wie bei Lea.</span></div>
+      <div class="karte nein">Der Punkt ganz rechts zeigt den besten Werfer.<span class="loesung">Er zeigt nur den besten einzelnen Wurf.</span></div>
+    </div>
+    <p class="satzhilfe">Ich stimme zu / nicht zu, weil … · Der Fehler ist …</p>
+    <div class="hinweis">Erst Fehlerkarte: Denkzeit, dann 🎲. Karten einzeln: Daumen hoch/runter, dann aufdecken.</div>
+  </section>
+
+  <!-- 5 · SICHERUNG -->
+  <section class="folie" data-phase="Sicherung">
+    <div class="kennung">Sicherung<span class="eis" data-eis="EIS"></span></div>
+    <h2>Das eindimensionale Streudiagramm</h2>
+    <div class="merk">
+      <h3>Merke</h3>
+      <ul>
+        <li class="schritt">Im <strong>Streudiagramm</strong> setzt man jeden Wert als <strong>Punkt</strong> über eine Zahlengerade. Gleiche Werte stapelt man.</li>
+        <li class="schritt">Man sieht sofort den <strong>kleinsten</strong> und <strong>größten Wert</strong>, wo die Werte <strong>dicht</strong> liegen und ob sie <strong>weit verstreut</strong> sind.</li>
+        <li class="schritt">Zahlengerade passend wählen: Anfang etwas unter dem kleinsten, Ende etwas über dem größten Wert, gleiche Abstände.</li>
+      </ul>
+    </div>
+    <div class="produkt schritt">Erkläre es deinem Nachbarn in <strong>eigenen Worten</strong> und mit einer <strong>Skizze</strong>. Er sagt, ob er es verstanden hat.</div>
+    <div class="hinweis">Ins Heft übertragen. Danach 1–2 Erklärungen per 🎲 vorstellen lassen.</div>
+  </section>
+
+  <!-- 6 · ÜBUNG -->
+  <section class="folie" data-phase="Übung">
+    <div class="kennung">Übung · Buch<span class="eis" data-eis="S"></span></div>
+    <h2>Jetzt du! Wähle dein Niveau</h2>
+    <div class="wahlkarten">
+      <div class="wahlkarte"><b>● Basis</b>📖 <span class="platzhalter">[BUCH: S. __ Nr. __]</span></div>
+      <div class="wahlkarte"><b>●● Standard</b>📖 <span class="platzhalter">[BUCH: S. __ Nr. __]</span></div>
+      <div class="wahlkarte"><b>●●● Profi</b>📖 <span class="platzhalter">[BUCH: S. __ Nr. __]</span></div>
+    </div>
+    <div data-methode="lerntempoduett" data-minuten="5,0,2,0"></div>
+    <div class="produkt">Fertig? <strong>Erfinde eine eigene Aufgabe</strong> mit zwei Personen und je 5 Werten: eine zuverlässig, eine mit großen Schwankungen. Dein Partner löst sie.</div>
+    <p>Tipps und Selbstkontrolle: <a class="schuelerlink" href="../schueler/stunde-16.html" target="_blank">📱 Schülerseite · Stunde 16</a></p>
+    <div class="hinweis">Buchaufgaben im Heft. Wer fertig ist, wartet an der Haltestelle auf einen Partner. Rest als Hausaufgabe.</div>
+  </section>
+
+  <!-- 7 · REFLEXION -->
+  <section class="folie" data-phase="Reflexion">
+    <div class="kennung">Zurück zum Problem · Reflexion</div>
+    <h2>Lea kommt ins Team: Ihre Würfe liegen eng beieinander.</h2>
+    <div class="exit-qr">
+      <div data-qr="../schueler/exit-16.html"></div>
+      <div>
+        <p style="margin-top:0;font-size:1.4rem"><strong>🎫 Exit-Ticket</strong></p>
+        <p>Scanne den Code oder öffne die Schülerseite. Gib dein <strong>Kürzel</strong> ein.<br>Am Ende zeigst du mir deinen QR-Code.</p>
+        <p><a class="schuelerlink" href="../schueler/exit-16.html" target="_blank">🎫 Zum Exit-Ticket</a></p>
+        <p class="klein">Nächste Stunde: Diagramme vergleichen – Wo wird getäuscht?</p>
+      </div>
+    </div>
+    <div class="hinweis"> Tafelabstimmung vom Anfang zeigen: Wer lag richtig? QR-Codes der Schüler mit der Kamera-App scannen → Auswertung.</div>
+  </section>
+
+</div>
+<script src="../../../../praesentation.js"></script>
+<script src="../../../../qr.js"></script>
+<script src="../modelle.js"></script>
+</body>
+</html>

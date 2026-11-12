@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Üben: Fit für die Arbeit – Stunde 24</title>
+<link rel="stylesheet" href="../../../../schueler.css">
+</head>
+<body>
+<header><div class="inner">
+  <div class="pfad"><a href="./">🗺️ Lernlandkarte</a> › Stunde 24</div>
+  <h1>Üben: Fit für die Arbeit</h1>
+  <p class="untertitel">Stunde 24 · Selbsttest zur ganzen Einheit</p>
+</div></header>
+<main>
+  <div class="box">
+    <strong>📘 Erinnerung</strong><br>
+    Relative Häufigkeit = Anzahl : Gesamtzahl · Feldlänge = Anteil · Gesamtlänge · Winkel = Anteil · 360° · Modus = häufigster Wert · Median = Mitte der Rangliste · Mittelwert = Summe : Anzahl · Spannweite = größter − kleinster Wert
+  </div>
+  <div class="box">
+    <strong>📚 Wörter für heute:</strong> relative Häufigkeit · Wahrscheinlichkeit · Streifen- und Kreisdiagramm · Modus · Median · Mittelwert · Spannweite<br>
+    <span class="klein">💬 So kannst du es aufschreiben: „Ich habe so gerechnet: …, weil …“</span>
+  </div>
+  <div id="ziele"></div>
+
+  <h2>📖 Aufgaben aus dem Buch</h2>
+  <div class="box buch">
+    <h3>Parallelo 8</h3>
+    <ul>
+      <li>● Basis: <span class="platzhalter">[BUCH: S. __ Nr. __]</span></li>
+      <li>●● Standard: <span class="platzhalter">[BUCH: S. __ Nr. __]</span></li>
+      <li>●●● Profi: <span class="platzhalter">[BUCH: S. __ Nr. __]</span></li>
+    </ul>
+    <p class="klein">Rechne im Heft. Unten findest du Aufgaben mit Tipps und Selbstkontrolle.</p>
+  </div>
+
+  <h2>Aufgaben</h2>
+  <div id="niveaus"></div>
+  <div id="fortschritt"></div>
+  <div id="aufgaben"></div>
+  <h2>🎨 Werde kreativ</h2>
+  <div class="box">
+    Schreibe dir einen <strong>Spickzettel</strong> (DIN A6) mit allen Merksätzen und je einem eigenen Beispiel. Erkläre ihn deinem Partner.
+    <span class="klein">Profi-Idee: Baue absichtlich einen Fehler ein. Findet ihn dein Partner?</span>
+  </div>
+  <h2>Wie sicher bist du jetzt?</h2>
+  <div id="ampel"></div>
+  <p><a href="exit-24.html">🎫 Weiter zum Exit-Ticket →</a> · <a href="./">← Lernlandkarte</a></p>
+</main>
+<script>
+window.SEITE = {
+  "speicher": "mathe-k8-hs-wk",
+  "stunde": 24,
+  "lernziele": [
+    "Wahrscheinlichkeiten über relative Häufigkeiten bestimmen",
+    "Daten in Diagrammen darstellen",
+    "Modus, Median, Mittelwert und Spannweite bestimmen"
+  ],
+  "ichKann": [
+    "Ich kann Wahrscheinlichkeiten über relative Häufigkeiten bestimmen.",
+    "Ich kann Daten in Diagrammen darstellen.",
+    "Ich kann Modus, Median, Mittelwert und Spannweite bestimmen."
+  ],
+  "aufgaben": [
+    {
+      "niveau": 1,
+      "typ": "zahl",
+      "frage": "Beim Würfeln: Wie groß ist P(Augenzahl größer als 4)? (als Dezimalzahl, auf 2 Stellen gerundet)",
+      "loesung": 0.33,
+      "tipps": [
+        "Günstig: 5 und 6",
+        "2 : 6 = ?"
+      ],
+      "erklaerung": "2 : 6 ≈ 0,33",
+      "toleranz": 0.01
+    },
+    {
+      "niveau": 1,
+      "typ": "zahl",
+      "frage": "Eine Heftzwecke landet bei 40 Würfen 26-mal auf dem Kopf. Relative Häufigkeit in Prozent?",
+      "loesung": 65,
+      "tipps": [
+        "26 : 40 = ?"
+      ],
+      "erklaerung": "0,65 = 65 %",
+      "einheit": "%"
+    },
+    {
+      "niveau": 1,
+      "typ": "zahl",
+      "frage": "Was ist der Modus von 4, 7, 7, 2, 7, 4?",
+      "loesung": 7,
+      "tipps": [
+        "Welcher Wert kommt am häufigsten vor?"
+      ],
+      "erklaerung": "7"
+    },
+    {
+      "niveau": 2,
+      "typ": "zahl",
+      "frage": "Zwei Münzen: Wie groß ist P(genau einmal Kopf)? (Dezimalzahl)",
+      "loesung": 0.5,
+      "tipps": [
+        "Baumdiagramm: KK, KZ, ZK, ZZ"
+      ],
+      "erklaerung": "KZ und ZK: 2 von 4 = 0,5"
+    },
+    {
+      "niveau": 2,
+      "typ": "zahl",
+      "frage": "Von 25 Befragten fahren 10 Bus. Wie groß ist der Winkel im Kreisdiagramm?",
+      "loesung": 144,
+      "tipps": [
+        "10 : 25 = 0,4"
+      ],
+      "erklaerung": "0,4 · 360° = 144°",
+      "einheit": "°"
+    },
+    {
+      "niveau": 2,
+      "typ": "auswahl",
+      "frage": "🔍 Fehler finden: Sara berechnet den Median von 5, 2, 9, 4: (5 + 2) : 2 = 3,5.",
+      "loesung": 0,
+      "tipps": [
+        "Erst die Rangliste!"
+      ],
+      "erklaerung": "Median = 4,5",
+      "optionen": [
+        "Sie hat nicht sortiert. Rangliste 2, 4, 5, 9 → (4 + 5) : 2 = 4,5.",
+        "Sie hätte durch 4 teilen müssen.",
+        "Alles ist richtig."
+      ]
+    },
+    {
+      "niveau": 2,
+      "typ": "zahl",
+      "frage": "Wie groß ist der Mittelwert von 12, 15, 9, 20, 14?",
+      "loesung": 14,
+      "tipps": [
+        "Summe: 70"
+      ],
+      "erklaerung": "70 : 5 = 14"
+    },
+    {
+      "niveau": 3,
+      "typ": "zahl",
+      "frage": "Wie groß ist die Spannweite von 12, 15, 9, 20, 14?",
+      "loesung": 11,
+      "tipps": [
+        "größter − kleinster"
+      ],
+      "erklaerung": "20 − 9 = 11"
+    },
+    {
+      "niveau": 3,
+      "typ": "zahl",
+      "frage": "Säulen: 120 und 100 Besucher, die Achse beginnt bei 80. Wievielmal so hoch wirkt die erste Säule?",
+      "loesung": 2,
+      "tipps": [
+        "Sichtbare Höhen: 40 und 20"
+      ],
+      "erklaerung": "Sie wirkt doppelt so hoch, ist aber nur 20 % größer."
+    },
+    {
+      "niveau": 3,
+      "typ": "zahl",
+      "frage": "Glücksrad: P(rot) = 0,45, P(blau) = 0,3. Der Rest ist gelb. Wie groß ist P(gelb) in Prozent?",
+      "loesung": 25,
+      "tipps": [
+        "Alles zusammen: 1 = 100 %"
+      ],
+      "erklaerung": "100 % − 45 % − 30 % = 25 %",
+      "einheit": "%"
+    }
+  ]
+};
+</script>
+<script src="../../../../schueler.js"></script>
+</body>
+</html>

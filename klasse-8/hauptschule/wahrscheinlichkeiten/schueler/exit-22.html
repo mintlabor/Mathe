@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Exit-Ticket: Projekt: Unsere Klassenstatistik – Stunde 22</title>
+<link rel="stylesheet" href="../../../../schueler.css">
+</head>
+<body>
+<header><div class="inner">
+  <div class="pfad"><a href="./">🗺️ Lernlandkarte</a> › <a href="stunde-22.html">Stunde 22</a> › Exit-Ticket</div>
+  <h1>🎫 Exit-Ticket</h1>
+  <p class="untertitel">Stunde 22 · Projekt: Unsere Klassenstatistik</p>
+</div></header>
+<main>
+  <div id="exit"></div>
+</main>
+<script type="application/json" id="exit-daten">
+{
+  "titel": "Projekt: Unsere Klassenstatistik",
+  "stunde": 22,
+  "lernziele": [
+    {
+      "text": "Ich kann für unsere Daten ein passendes Diagramm auswählen und begründen.",
+      "foerdern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ● Basis",
+      "fordern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ●●● Profi"
+    },
+    {
+      "text": "Ich kann für unsere Daten passende Kennwerte bestimmen.",
+      "foerdern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ● Basis",
+      "fordern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ●●● Profi"
+    },
+    {
+      "text": "Ich kann eine ehrliche Aussage zu unseren Daten formulieren.",
+      "foerdern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ● Basis",
+      "fordern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ●●● Profi"
+    }
+  ],
+  "fehlertypen": {
+    "passend": "Unpassende Diagrammart gewählt",
+    "kennwert": "Mittelwert oder Median bei Antworten ohne Zahlen gewählt (dort geht nur der Modus)",
+    "median": "Median statt Mittelwert bestimmt",
+    "verallg": "Ergebnis übertrieben verallgemeinert"
+  },
+  "fragen": [
+    {
+      "lz": 0,
+      "typ": "auswahl",
+      "frage": "Eure Frage: „Was wünschst du dir fürs Schulfest?“ (5 Antworten zum Ankreuzen). Welches Diagramm passt?",
+      "optionen": [
+        "Kreis- oder Säulendiagramm",
+        "eindimensionales Streudiagramm"
+      ],
+      "loesung": 0,
+      "erklaerung": "Antworten zum Ankreuzen → Anteile oder Anzahlen.",
+      "fehler": {
+        "1": "passend"
+      }
+    },
+    {
+      "lz": 1,
+      "typ": "auswahl",
+      "frage": "Bei Antworten wie Disco, Turnier, Essen: Welchen Kennwert kann man bestimmen?",
+      "optionen": [
+        "den Modus",
+        "den Mittelwert",
+        "den Median"
+      ],
+      "loesung": 0,
+      "erklaerung": "Ohne Zahlen kann man nur den häufigsten Wert angeben.",
+      "fehler": {
+        "1": "kennwert",
+        "2": "kennwert"
+      }
+    },
+    {
+      "lz": 1,
+      "typ": "zahl",
+      "frage": "Schulwege eurer Gruppe: 5, 10, 10, 20 min. Wie groß ist der Mittelwert?",
+      "loesung": 11.25,
+      "erklaerung": "45 : 4 = 11,25 min",
+      "einheit": "min",
+      "fehler": [
+        {
+          "wert": 10,
+          "id": "median"
+        }
+      ]
+    },
+    {
+      "lz": 2,
+      "typ": "auswahl",
+      "frage": "Eure Umfrage: 9 von 30 wollen Disco, 8 von 30 ein Turnier. Welche Aussage ist ehrlich?",
+      "optionen": [
+        "„Die ganze Schule will eine Disco!“",
+        "„In unserer Umfrage lag Disco knapp vorn: 30 % gegen 27 %.“"
+      ],
+      "loesung": 1,
+      "erklaerung": "Nur über die Befragten sprechen und genau bleiben.",
+      "fehler": {
+        "0": "verallg"
+      }
+    }
+  ]
+}
+</script>
+<script src="../../../../qr.js"></script>
+<script src="../../../../exit-ticket.js"></script>
+</body>
+</html>

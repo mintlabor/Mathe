@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Exit-Ticket: Wir werfen und zählen – Stunde 3</title>
+<link rel="stylesheet" href="../../../../schueler.css">
+</head>
+<body>
+<header><div class="inner">
+  <div class="pfad"><a href="./">🗺️ Lernlandkarte</a> › <a href="stunde-03.html">Stunde 3</a> › Exit-Ticket</div>
+  <h1>🎫 Exit-Ticket</h1>
+  <p class="untertitel">Stunde 3 · Wir werfen und zählen</p>
+</div></header>
+<main>
+  <div id="exit"></div>
+</main>
+<script type="application/json" id="exit-daten">
+{
+  "titel": "Wir werfen und zählen",
+  "stunde": 3,
+  "lernziele": [
+    {
+      "text": "Ich kann absolute und relative Häufigkeit unterscheiden.",
+      "foerdern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ● Basis",
+      "fordern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ●●● Profi"
+    },
+    {
+      "text": "Ich kann die relative Häufigkeit als Bruch, Dezimalzahl und Prozent angeben.",
+      "foerdern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ● Basis",
+      "fordern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ●●● Profi"
+    },
+    {
+      "text": "Ich kann mit relativen Häufigkeiten gerecht vergleichen.",
+      "foerdern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ● Basis",
+      "fordern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ●●● Profi"
+    }
+  ],
+  "fehlertypen": {
+    "begriffe": "Absolute und relative Häufigkeit verwechselt",
+    "absolut": "Mit absoluten statt relativen Häufigkeiten verglichen",
+    "vertauscht": "Gesamtzahl durch Anzahl geteilt (vertauscht)",
+    "prozent": "Dezimalzahl nicht in Prozent umgewandelt (· 100 vergessen)"
+  },
+  "fragen": [
+    {
+      "lz": 0,
+      "typ": "auswahl",
+      "frage": "Bei 50 Würfen landet die Heftzwecke 30-mal auf dem Kopf. Wie groß ist die <strong>absolute</strong> Häufigkeit für Kopf?",
+      "optionen": [
+        "30",
+        "0,6",
+        "60 %"
+      ],
+      "loesung": 0,
+      "erklaerung": "Absolute Häufigkeit = Anzahl = 30.",
+      "fehler": {
+        "1": "begriffe",
+        "2": "begriffe"
+      }
+    },
+    {
+      "lz": 1,
+      "typ": "zahl",
+      "frage": "30 von 50 Würfen landen auf dem Kopf. Gib die relative Häufigkeit in Prozent an.",
+      "loesung": 60,
+      "erklaerung": "30 : 50 = 0,6 = 60 %",
+      "einheit": "%",
+      "fehler": [
+        {
+          "wert": 30,
+          "id": "begriffe"
+        },
+        {
+          "wert": 0.6,
+          "id": "prozent"
+        }
+      ]
+    },
+    {
+      "lz": 1,
+      "typ": "zahl",
+      "frage": "Gib 30 von 50 als Dezimalzahl an.",
+      "loesung": 0.6,
+      "erklaerung": "30 : 50 = 0,6",
+      "toleranz": 0.001,
+      "fehler": [
+        {
+          "wert": 1.67,
+          "id": "vertauscht"
+        }
+      ]
+    },
+    {
+      "lz": 2,
+      "typ": "auswahl",
+      "frage": "Ali trifft 8 von 10 Würfen, Jonas 15 von 20. Wer trifft besser?",
+      "optionen": [
+        "Jonas, weil 15 mehr ist als 8",
+        "Ali, weil 80 % mehr sind als 75 %",
+        "Beide gleich gut"
+      ],
+      "loesung": 1,
+      "erklaerung": "8 : 10 = 80 %, 15 : 20 = 75 %.",
+      "fehler": {
+        "0": "absolut"
+      }
+    }
+  ]
+}
+</script>
+<script src="../../../../qr.js"></script>
+<script src="../../../../exit-ticket.js"></script>
+</body>
+</html>

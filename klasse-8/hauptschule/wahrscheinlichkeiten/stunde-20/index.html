@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Stunde 20: Welcher Mittelwert passt? – Wahrscheinlichkeiten</title>
+<link rel="stylesheet" href="../../../../praesentation.css">
+<style>
+  .platzhalter { background: #fff3bf; border-radius: 4px; padding: 0 .3rem; font-family: ui-monospace, monospace; font-size: .9em; }
+  .exit-qr { display: flex; gap: 1.5rem; align-items: center; }
+  .exit-qr [data-qr] svg { width: 230px; height: 230px; display: block; border-radius: 8px; }
+</style>
+</head>
+<body data-phasen='[["Abrufen", 4], ["Problem", 7], ["Erarbeitung", 12], ["Ideen vergleichen", 5], ["Sicherung", 6], ["Übung", 7], ["Reflexion", 4]]'>
+
+<div class="leiste">
+  <div class="pfad"><a href="../../../../">Start</a> › <a href="../../../">Klasse 8</a> › <a href="../../">Hauptschule</a> › <a href="../">Wahrscheinlichkeiten</a> › Stunde 20</div>
+</div>
+
+<aside class="wortspeicher"
+  data-woerter='["Ausreißer", "Mittelwert", "Median", "Spannweite", "typisch", "verzerren"]'
+  data-saetze='["Ich vermute, dass …", "Ich habe so gerechnet: …", "Das sieht man daran, dass …", "Ich stimme zu / nicht zu, weil …"]'></aside>
+
+<div class="buehne">
+
+  <!-- 1 · ABRUFEN -->
+  <section class="folie" data-phase="Abrufen">
+    <div class="kennung">Wahrscheinlichkeiten · Stunde 20 · Warm-up</div>
+    <h2>Was weißt du noch?</h2>
+    <p style="margin-top:0">Exit-Ticket von letzter Stunde: Wie groß ist der Mittelwert von 2, 4, 6, 8?</p>
+    <div data-abstimmung='["5", "20", "6,67", "4"]' data-loesung="0"></div>
+    <div class="hinweis">Alle halten gleichzeitig die ABCD-Karte hoch. Begründungen per 🎲 einholen, nicht per Melden.</div>
+  </section>
+
+  <!-- 2 · PROBLEM -->
+  <section class="folie" data-phase="Problem">
+    <div class="kennung">Problem<span class="leitmodell">Leitmodell: 0-bis-1-Streifen</span></div>
+    <h2>Der Handy-Check</h2>
+    <div class="problem"><div class="label">Problem</div><br>Für die Schülerzeitung haben 9 Schüler (ausgedachte Daten) ihre Handyzeit an einem Samstag notiert (in Stunden):<br><strong>2, 2, 3, 3, 3, 4, 4, 5, 18</strong><br>Schlagzeile: „Unsere Klasse hängt <strong>im Schnitt 5 Stunden</strong> am Handy!“</div>
+    <div class="spannung" data-art="Stimmt das?">Stimmt das? <strong>Typisch</strong> für diese Schüler sind etwa 5 Stunden.</div>
+    <div data-abstimmung='["Ja, das ist typisch", "Nein, typisch ist weniger", "Nein, typisch ist mehr"]'></div>
+    <div class="lernziele schritt">
+      <div class="titel">🎯 Heute lernst du …</div>
+      <ul>
+        <li>Ich kann einen Ausreißer erkennen.</li>
+        <li>Ich kann begründen, ob Mittelwert oder Median besser passt.</li>
+        <li>Ich kann die Spannweite berechnen.</li>
+      </ul>
+    </div>
+    <p class="schritt"><span class="projekt">Schulfest-Projekt: Wir entscheiden, welcher Kennwert unsere Daten ehrlich beschreibt.</span></p>
+    <div class="hinweis">Abstimmung festhalten (Foto/Tafel), am Ende der Stunde auflösen. Noch nicht verraten!</div>
+  </section>
+
+  <!-- 2c · EIGENE LÖSUNG -->
+  <section class="folie" data-phase="Problem" data-minuten="4">
+    <div class="kennung">Eigene Lösung</div>
+    <h2>Was meinst du?</h2>
+    <div data-denkzeit="60" data-text="Ist „im Schnitt 5 Stunden“ ehrlich? Was würdest du in die Schülerzeitung schreiben?"></div>
+    <div data-methode="tps" data-minuten="1,2,2"></div>
+    <div data-tipps>
+      <div class="tipp">Schau dir die 18 an. Passt sie zu den anderen Werten?</div>
+      <div class="tipp">Berechne Mittelwert und Median. Was ändert sich, wenn die 18 fehlt?</div>
+    </div>
+    <p class="satzhilfe">Ich vermute, dass … · Ich würde zuerst …</p>
+  </section>
+
+  <!-- 3 · ERARBEITUNG E -->
+  <section class="folie" data-phase="Erarbeitung" data-minuten="7">
+    <div class="kennung">Erarbeitung · Gruppen<span class="eis" data-eis="E"></span></div>
+    <h2>Der Ausreißer-Test</h2>
+    <p style="margin-top:0">Jede Gruppe bekommt eine Datenkarte. Bestimmt Mittelwert und Median – einmal mit und einmal ohne den auffälligen Wert. Wählt eine Karte:</p>
+    <div class="wahlkarten">
+      <div class="wahlkarte"><div class="icon">📱</div><b>Handyzeit</b>2, 2, 3, 3, 3, 4, 4, 5, 18 h</div>
+      <div class="wahlkarte"><div class="icon">🚌</div><b>Schulweg</b>8, 10, 10, 12, 15, 15, 75 min</div>
+      <div class="wahlkarte"><div class="icon">💶</div><b>Gehälter</b>2200, 2400, 2500, 2600, 15000 €</div>
+    </div>
+    <div data-methode="rollen"></div>
+    <div class="hinweis">Materialkiste: Datenkarten, Steckwürfel, Taschenrechner, Tabelle „mit / ohne Ausreißer“. Ergebnisse an der Tafel sammeln: Bei allen drei Karten ändert sich der Mittelwert stark, der Median kaum.</div>
+  </section>
+
+  <!-- 3 · ERARBEITUNG I/S -->
+  <section class="folie" data-phase="Erarbeitung" data-minuten="5">
+    <div class="kennung">Erarbeitung · Was passiert, wenn …?<span class="eis" data-eis="IS"></span></div>
+    <h2>Was passiert ohne den Ausreißer?</h2>
+    <div data-streu='{"werte": [2, 2, 3, 3, 3, 4, 4, 5, 18], "min": 0, "max": 20, "schritt": 1, "einheit": "h", "bearbeiten": true, "zeige": ["rangliste", "median", "mittel", "spannweite"]}'></div>
+    <div class="vernetzen schritt">Klicke auf die 18, um sie zu entfernen. Was passiert mit Mittelwert, Median und Spannweite? Welcher Wert ändert sich am stärksten?</div>
+    <div class="hinweis">Mit 18: Mittelwert ≈ 4,9 h, Median 3 h, Spannweite 16 h. Ohne 18: Mittelwert 3,25 h, Median 3 h, Spannweite 3 h.</div>
+  </section>
+
+  <!-- 4 · IDEEN VERGLEICHEN -->
+  <section class="folie" data-phase="Ideen vergleichen">
+    <div class="kennung">Ideen vergleichen</div>
+    <h2>Wer hat recht?</h2>
+    <div class="fehlerkarte" data-wer="Schülerzeitung">
+      <div class="rechnung">Mittelwert ≈ 4,9 h → „<span class='fehler'>Typisch für unsere Klasse sind 5 Stunden.</span>“</div>
+      <div class="erklaerung">Nur eine Person liegt über 5 Stunden. Der Ausreißer 18 zieht den Mittelwert hoch. Der Median (3 h) beschreibt die Gruppe besser. Ehrlich: beides nennen und den Ausreißer erwähnen.</div>
+    </div>
+    <div class="legende"><span class="l-ja">stimmt</span><span class="l-nein">stimmt nicht</span>
+      <button class="knopf" data-alle-auf style="margin-left:auto">Alle aufdecken</button><button class="knopf" data-alle-zu>Alle zudecken</button></div>
+    <div class="karten">
+      <div class="karte ja">Ein Ausreißer ist ein Wert, der weit weg von den anderen liegt.<span class="loesung">Ja, hier die 18 h.</span></div>
+      <div class="karte ja">Der Median ändert sich durch einen Ausreißer kaum.<span class="loesung">Ja: mit und ohne 18 ist er 3 h.</span></div>
+      <div class="karte nein">Ausreißer darf man immer einfach löschen.<span class="loesung">Nein. Nur bei einem Messfehler. Sonst nennen und erklären.</span></div>
+      <div class="karte nein">Spannweite ist der Mittelwert aus größtem und kleinstem Wert.<span class="loesung">Nein: Spannweite = größter − kleinster Wert.</span></div>
+    </div>
+    <p class="satzhilfe">Ich stimme zu / nicht zu, weil … · Der Fehler ist …</p>
+    <div class="hinweis">Erst Fehlerkarte: Denkzeit, dann 🎲. Karten einzeln: Daumen hoch/runter, dann aufdecken.</div>
+  </section>
+
+  <!-- 5 · SICHERUNG -->
+  <section class="folie" data-phase="Sicherung">
+    <div class="kennung">Sicherung<span class="eis" data-eis="EIS"></span></div>
+    <h2>Welcher Mittelwert passt?</h2>
+    <div class="merk">
+      <h3>Merke</h3>
+      <ul>
+        <li class="schritt">Ein <strong>Ausreißer</strong> ist ein Wert, der weit von den anderen entfernt liegt.</li>
+        <li class="schritt">Der <strong>Mittelwert</strong> wird durch Ausreißer stark verändert, der <strong>Median</strong> kaum. Bei Ausreißern beschreibt oft der Median besser, was „typisch“ ist.</li>
+        <li class="schritt"><strong>Spannweite = größter Wert − kleinster Wert</strong>. Beispiel: 18 − 2 = 16 h. Sie zeigt, wie weit die Werte verstreut sind.</li>
+        <li class="schritt">Ehrlich berichten: Kennwert nennen und sagen, welcher es ist.</li>
+      </ul>
+    </div>
+    <div class="produkt schritt">Erkläre es deinem Nachbarn in <strong>eigenen Worten</strong> und mit einer <strong>Skizze</strong>. Er sagt, ob er es verstanden hat.</div>
+    <div class="hinweis">Ins Heft übertragen. Danach 1–2 Erklärungen per 🎲 vorstellen lassen.</div>
+  </section>
+
+  <!-- 6 · ÜBUNG -->
+  <section class="folie" data-phase="Übung">
+    <div class="kennung">Übung · Buch<span class="eis" data-eis="S"></span></div>
+    <h2>Jetzt du! Wähle dein Niveau</h2>
+    <div class="wahlkarten">
+      <div class="wahlkarte"><b>● Basis</b>📖 <span class="platzhalter">[BUCH: S. __ Nr. __]</span></div>
+      <div class="wahlkarte"><b>●● Standard</b>📖 <span class="platzhalter">[BUCH: S. __ Nr. __]</span></div>
+      <div class="wahlkarte"><b>●●● Profi</b>📖 <span class="platzhalter">[BUCH: S. __ Nr. __]</span></div>
+    </div>
+    <div data-methode="lerntempoduett" data-minuten="5,0,2,0"></div>
+    <div class="produkt">Fertig? <strong>Erfinde eine eigene Aufgabe</strong> mit einem Ausreißer: Der Mittelwert soll täuschen, der Median nicht. Dein Partner löst sie.</div>
+    <p>Tipps und Selbstkontrolle: <a class="schuelerlink" href="../schueler/stunde-20.html" target="_blank">📱 Schülerseite · Stunde 20</a></p>
+    <div class="hinweis">Buchaufgaben im Heft. Wer fertig ist, wartet an der Haltestelle auf einen Partner. Rest als Hausaufgabe.</div>
+  </section>
+
+  <!-- 7 · REFLEXION -->
+  <section class="folie" data-phase="Reflexion">
+    <div class="kennung">Zurück zum Problem · Reflexion</div>
+    <h2>Nicht ehrlich: Typisch sind eher 3 Stunden (Median). Der Ausreißer 18 h verzerrt den Mittelwert.</h2>
+    <div class="exit-qr">
+      <div data-qr="../schueler/exit-20.html"></div>
+      <div>
+        <p style="margin-top:0;font-size:1.4rem"><strong>🎫 Exit-Ticket</strong></p>
+        <p>Scanne den Code oder öffne die Schülerseite. Gib dein <strong>Kürzel</strong> ein.<br>Am Ende zeigst du mir deinen QR-Code.</p>
+        <p><a class="schuelerlink" href="../schueler/exit-20.html" target="_blank">🎫 Zum Exit-Ticket</a></p>
+        <p class="klein">Nächste Stunde: Daten aus Zeitung und Internet – Faktencheck!</p>
+      </div>
+    </div>
+    <div class="hinweis"> Tafelabstimmung vom Anfang zeigen: Wer lag richtig? QR-Codes der Schüler mit der Kamera-App scannen → Auswertung.</div>
+  </section>
+
+</div>
+<script src="../../../../praesentation.js"></script>
+<script src="../../../../qr.js"></script>
+<script src="../modelle.js"></script>
+</body>
+</html>

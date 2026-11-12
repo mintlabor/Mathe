@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Stunde 12: Unsere Umfrage auswerten – Wahrscheinlichkeiten</title>
+<link rel="stylesheet" href="../../../../praesentation.css">
+<style>
+  .platzhalter { background: #fff3bf; border-radius: 4px; padding: 0 .3rem; font-family: ui-monospace, monospace; font-size: .9em; }
+  .exit-qr { display: flex; gap: 1.5rem; align-items: center; }
+  .exit-qr [data-qr] svg { width: 230px; height: 230px; display: block; border-radius: 8px; }
+</style>
+</head>
+<body data-phasen='[["Abrufen", 4], ["Problem", 7], ["Erarbeitung", 12], ["Ideen vergleichen", 5], ["Sicherung", 6], ["Übung", 7], ["Reflexion", 4]]'>
+
+<div class="leiste">
+  <div class="pfad"><a href="../../../../">Start</a> › <a href="../../../">Klasse 8</a> › <a href="../../">Hauptschule</a> › <a href="../">Wahrscheinlichkeiten</a> › Stunde 12</div>
+</div>
+
+<aside class="wortspeicher"
+  data-woerter='["Strichliste", "absolute Häufigkeit", "relative Häufigkeit", "Häufigkeitstabelle", "Anteil"]'
+  data-saetze='["Ich vermute, dass …", "Ich habe so gerechnet: …", "Das sieht man daran, dass …", "Ich stimme zu / nicht zu, weil …"]'></aside>
+
+<div class="buehne">
+
+  <!-- 1 · ABRUFEN -->
+  <section class="folie" data-phase="Abrufen">
+    <div class="kennung">Wahrscheinlichkeiten · Stunde 12 · Warm-up</div>
+    <h2>Was weißt du noch?</h2>
+    <p style="margin-top:0">Exit-Ticket von letzter Stunde: Welche Ankreuzfelder passen zu „Wie alt bist du?“</p>
+    <div data-abstimmung='["☐ 10–12 ☐ 12–14", "☐ 10 oder 11 ☐ 12 oder 13 ☐ 14 oder 15 ☐ 16 und älter", "☐ jung ☐ alt", "☐ 10 ☐ 14"]' data-loesung="1"></div>
+    <div class="hinweis">Alle halten gleichzeitig die ABCD-Karte hoch. Begründungen per 🎲 einholen, nicht per Melden.</div>
+  </section>
+
+  <!-- 2 · PROBLEM -->
+  <section class="folie" data-phase="Problem">
+    <div class="kennung">Problem<span class="leitmodell">Leitmodell: 0-bis-1-Streifen</span></div>
+    <h2>8a oder 8b – wer will lieber eine Disco?</h2>
+    <div class="problem"><div class="label">Problem</div><br>Die ersten Fragebögen sind zurück. In der <strong>8a</strong> (24 Schüler) wollen <strong>12</strong> eine Disco. In der <strong>8b</strong> (30 Schüler) wollen <strong>15</strong> eine Disco.</div>
+    <div class="spannung" data-art="Wette">Wette: In der <strong>8b</strong> ist der Wunsch nach einer Disco größer.</div>
+    <div data-abstimmung='["8a", "8b", "beide gleich"]'></div>
+    <div class="lernziele schritt">
+      <div class="titel">🎯 Heute lernst du …</div>
+      <ul>
+        <li>Ich kann Antworten mit einer Strichliste zählen.</li>
+        <li>Ich kann absolute und relative Häufigkeiten in einer Tabelle angeben.</li>
+        <li>Ich kann Gruppen unterschiedlicher Größe mit relativen Häufigkeiten vergleichen.</li>
+      </ul>
+    </div>
+    <p class="schritt"><span class="projekt">Schulfest-Projekt: Wir zählen unsere Fragebögen aus und erstellen eine Häufigkeitstabelle.</span></p>
+    <div class="hinweis">Abstimmung festhalten (Foto/Tafel), am Ende der Stunde auflösen. Noch nicht verraten!</div>
+  </section>
+
+  <!-- 2c · EIGENE LÖSUNG -->
+  <section class="folie" data-phase="Problem" data-minuten="4">
+    <div class="kennung">Eigene Lösung</div>
+    <h2>Was meinst du?</h2>
+    <div data-denkzeit="60" data-text="Wer ist begeisterter von der Disco, 8a oder 8b? Schreibe deine Begründung mit Zahlen auf."></div>
+    <div data-methode="tps" data-minuten="1,2,2"></div>
+    <div data-tipps>
+      <div class="tipp">Die Klassen sind verschieden groß. Ist „mehr“ dann auch „begeisterter“?</div>
+      <div class="tipp">Rechne für beide Klassen: Anzahl Disco : Anzahl Schüler.</div>
+      <div class="tipp">12 : 24 = ? und 15 : 30 = ?</div>
+    </div>
+    <p class="satzhilfe">Ich vermute, dass … · Ich würde zuerst …</p>
+    <div class="hinweis">Viele vergleichen 15 > 12 (absolute Häufigkeit). In „Ideen vergleichen“ aufgreifen.</div>
+  </section>
+
+  <!-- 3 · ERARBEITUNG E -->
+  <section class="folie" data-phase="Erarbeitung" data-minuten="7">
+    <div class="kennung">Erarbeitung · Gruppen<span class="eis" data-eis="E"></span></div>
+    <h2>Wir zählen unsere Fragebögen aus</h2>
+    <p style="margin-top:0">Jede Gruppe bekommt einen Stapel ausgefüllter Fragebögen (eure Umfrage oder Beispielbögen). Zählt die Antworten zu einer Frage. Wählt euren Weg:</p>
+    <div class="wahlkarten">
+      <div class="wahlkarte"><div class="icon">🗂️</div><b>Legen</b>Bögen auf Stapel sortieren und zählen</div>
+      <div class="wahlkarte"><div class="icon">✏️</div><b>Strichliste</b>Strichliste führen, je 5 Striche als Bündel</div>
+      <div class="wahlkarte"><div class="icon">💻</div><b>Tabelle</b>Tabelle im Heft oder am Tablet</div>
+    </div>
+    <div data-methode="rollen"></div>
+    <div class="hinweis">Materialkiste: ausgefüllte Fragebögen (20–30 je Gruppe), Strichlisten-Vorlage, Taschenrechner. Gruppen 3–4, Rollen auslosen.</div>
+  </section>
+
+  <!-- 3 · ERARBEITUNG I/S -->
+  <section class="folie" data-phase="Erarbeitung" data-minuten="5">
+    <div class="kennung">Erarbeitung · Was passiert, wenn …?<span class="eis" data-eis="IS"></span></div>
+    <h2>Von der Strichliste zur Tabelle</h2>
+    <div data-diagramm='{"daten": [["Disco", 9], ["Turnier", 7], ["Spielstände", 5], ["Essen", 3]], "ansichten": ["strichliste", "tabelle", "streifen"], "start": "strichliste", "bearbeiten": true, "verdeckt": true}'></div>
+    <div class="vernetzen schritt">Was passiert mit den relativen Häufigkeiten, wenn noch 6 Fragebögen mit „Disco“ dazukommen? Warum ergeben sie zusammen immer 1 = 100 %? Zeige es am 0-bis-1-Streifen.</div>
+    <div class="hinweis">Erst Strichliste, dann Tabelle; „Anteile zeigen“ erst nach einer Vermutung. Der Streifen zeigt das Leitmodell.</div>
+  </section>
+
+  <!-- 4 · IDEEN VERGLEICHEN -->
+  <section class="folie" data-phase="Ideen vergleichen">
+    <div class="kennung">Ideen vergleichen</div>
+    <h2>Wer hat recht?</h2>
+    <div class="fehlerkarte" data-wer="Jan">
+      <div class="rechnung">8a: 12 Disco · 8b: 15 Disco → <span class='fehler'>Die 8b ist begeisterter, denn 15 &gt; 12.</span></div>
+      <div class="erklaerung">Jan vergleicht absolute Häufigkeiten. Die Klassen sind verschieden groß. Relativ: 12 : 24 = 0,5 und 15 : 30 = 0,5 → beide 50 %.</div>
+    </div>
+    <div class="legende"><span class="l-ja">stimmt</span><span class="l-nein">stimmt nicht</span>
+      <button class="knopf" data-alle-auf style="margin-left:auto">Alle aufdecken</button><button class="knopf" data-alle-zu>Alle zudecken</button></div>
+    <div class="karten">
+      <div class="karte ja">Relative Häufigkeit = Anzahl : Gesamtzahl.<span class="loesung">Ja, z. B. 9 : 24 = 0,375 = 37,5 %.</span></div>
+      <div class="karte nein">Alle relativen Häufigkeiten zusammen ergeben die Anzahl der Befragten.<span class="loesung">Nein, zusammen 1 = 100 %. Die absoluten ergeben die Anzahl.</span></div>
+      <div class="karte ja">In der Strichliste bündelt man je 5 Striche.<span class="loesung">Ja, vier Striche und ein Querstrich – so zählt man schneller.</span></div>
+      <div class="karte nein">Relative Häufigkeiten braucht man nur bei großen Zahlen.<span class="loesung">Nein, immer dann, wenn Gruppen verschieden groß sind.</span></div>
+    </div>
+    <p class="satzhilfe">Ich stimme zu / nicht zu, weil … · Der Fehler ist …</p>
+    <div class="hinweis">Erst Fehlerkarte: Denkzeit, dann 🎲. Karten einzeln: Daumen hoch/runter, dann aufdecken.</div>
+  </section>
+
+  <!-- 5 · SICHERUNG -->
+  <section class="folie" data-phase="Sicherung">
+    <div class="kennung">Sicherung<span class="eis" data-eis="EIS"></span></div>
+    <h2>Umfragen auswerten</h2>
+    <div class="merk">
+      <h3>Merke</h3>
+      <ul>
+        <li class="schritt">Zählen mit der <strong>Strichliste</strong>: <span style='font-family:monospace'><s>||||</s> ||</span> = 7</li>
+        <li class="schritt"><strong>Absolute Häufigkeit</strong> = Anzahl, z. B. 9 von 24 wollen Disco.</li>
+        <li class="schritt"><strong>Relative Häufigkeit</strong> = Anzahl : Gesamtzahl = <span class="bruch"><span>9</span><span>24</span></span> = 0,375 = 37,5 %. Auf dem 0-bis-1-Streifen ist das gut ein Drittel.</li>
+        <li class="schritt">Alle relativen Häufigkeiten zusammen ergeben <strong>1 = 100 %</strong>.</li>
+        <li class="schritt">Verschieden große Gruppen vergleicht man mit der <strong>relativen Häufigkeit</strong>.</li>
+      </ul>
+    </div>
+    <div class="produkt schritt">Erkläre es deinem Nachbarn in <strong>eigenen Worten</strong> und mit einer <strong>Skizze</strong>. Er sagt, ob er es verstanden hat.</div>
+    <div class="hinweis">Ins Heft übertragen. Danach 1–2 Erklärungen per 🎲 vorstellen lassen.</div>
+  </section>
+
+  <!-- 6 · ÜBUNG -->
+  <section class="folie" data-phase="Übung">
+    <div class="kennung">Übung · Buch<span class="eis" data-eis="S"></span></div>
+    <h2>Jetzt du! Wähle dein Niveau</h2>
+    <div class="wahlkarten">
+      <div class="wahlkarte"><b>● Basis</b>📖 <span class="platzhalter">[BUCH: S. __ Nr. __]</span></div>
+      <div class="wahlkarte"><b>●● Standard</b>📖 <span class="platzhalter">[BUCH: S. __ Nr. __]</span></div>
+      <div class="wahlkarte"><b>●●● Profi</b>📖 <span class="platzhalter">[BUCH: S. __ Nr. __]</span></div>
+    </div>
+    <div data-methode="lerntempoduett" data-minuten="5,0,2,0"></div>
+    <div class="produkt">Fertig? <strong>Erfinde eine eigene Aufgabe</strong> mit zwei Klassen unterschiedlicher Größe, die man nur mit relativen Häufigkeiten fair vergleichen kann. Dein Partner löst sie.</div>
+    <p>Tipps und Selbstkontrolle: <a class="schuelerlink" href="../schueler/stunde-12.html" target="_blank">📱 Schülerseite · Stunde 12</a></p>
+    <div class="hinweis">Buchaufgaben im Heft. Wer fertig ist, wartet an der Haltestelle auf einen Partner. Rest als Hausaufgabe.</div>
+  </section>
+
+  <!-- 7 · REFLEXION -->
+  <section class="folie" data-phase="Reflexion">
+    <div class="kennung">Zurück zum Problem · Reflexion</div>
+    <h2>Unentschieden: In beiden Klassen wollen 50 % eine Disco.</h2>
+    <div class="exit-qr">
+      <div data-qr="../schueler/exit-12.html"></div>
+      <div>
+        <p style="margin-top:0;font-size:1.4rem"><strong>🎫 Exit-Ticket</strong></p>
+        <p>Scanne den Code oder öffne die Schülerseite. Gib dein <strong>Kürzel</strong> ein.<br>Am Ende zeigst du mir deinen QR-Code.</p>
+        <p><a class="schuelerlink" href="../schueler/exit-12.html" target="_blank">🎫 Zum Exit-Ticket</a></p>
+        <p class="klein">Nächste Stunde: Daten in Klassen einteilen – Wie lang sind unsere Schulwege?</p>
+      </div>
+    </div>
+    <div class="hinweis">Projekt: Jede Gruppe legt die Häufigkeitstabelle ihrer Frage in die Projektmappe. Tafelabstimmung vom Anfang zeigen: Wer lag richtig? QR-Codes der Schüler mit der Kamera-App scannen → Auswertung.</div>
+  </section>
+
+</div>
+<script src="../../../../praesentation.js"></script>
+<script src="../../../../qr.js"></script>
+<script src="../modelle.js"></script>
+</body>
+</html>

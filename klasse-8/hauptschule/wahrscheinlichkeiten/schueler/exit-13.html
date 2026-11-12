@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Exit-Ticket: Daten in Klassen einteilen – Stunde 13</title>
+<link rel="stylesheet" href="../../../../schueler.css">
+</head>
+<body>
+<header><div class="inner">
+  <div class="pfad"><a href="./">🗺️ Lernlandkarte</a> › <a href="stunde-13.html">Stunde 13</a> › Exit-Ticket</div>
+  <h1>🎫 Exit-Ticket</h1>
+  <p class="untertitel">Stunde 13 · Daten in Klassen einteilen</p>
+</div></header>
+<main>
+  <div id="exit"></div>
+</main>
+<script type="application/json" id="exit-daten">
+{
+  "titel": "Daten in Klassen einteilen",
+  "stunde": 13,
+  "lernziele": [
+    {
+      "text": "Ich kann Daten in Klassen einteilen.",
+      "foerdern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ● Basis",
+      "fordern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ●●● Profi"
+    },
+    {
+      "text": "Ich kann Klassengrenzen ohne Überschneidung festlegen (von … bis unter …).",
+      "foerdern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ● Basis",
+      "fordern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ●●● Profi"
+    },
+    {
+      "text": "Ich kann aus einer Klasseneinteilung Aussagen ablesen.",
+      "foerdern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ● Basis",
+      "fordern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ●●● Profi"
+    }
+  ],
+  "fehlertypen": {
+    "grenze": "Wert an der Klassengrenze falsch zugeordnet",
+    "breite": "Ungleich breite Klassen gewählt",
+    "ablesen": "Anzahlen aus den Klassen falsch zusammengezählt",
+    "zaehlen": "Werte in einer Klasse falsch gezählt"
+  },
+  "fragen": [
+    {
+      "lz": 1,
+      "typ": "auswahl",
+      "frage": "In welche Klasse gehört ein Schulweg von 15 Minuten?",
+      "optionen": [
+        "10 bis unter 15 min",
+        "15 bis unter 20 min",
+        "in beide"
+      ],
+      "loesung": 1,
+      "erklaerung": "„bis unter 15“ endet bei 14.",
+      "fehler": {
+        "0": "grenze",
+        "2": "grenze"
+      }
+    },
+    {
+      "lz": 1,
+      "typ": "auswahl",
+      "frage": "Welche Klasseneinteilung ist richtig?",
+      "optionen": [
+        "0–5 · 5–10 · 10–15",
+        "0 bis unter 5 · 5 bis unter 10 · 10 bis unter 15",
+        "0 bis unter 5 · 5 bis unter 15 · 15 bis unter 40"
+      ],
+      "loesung": 1,
+      "erklaerung": "Ohne Überschneidung und gleich breit.",
+      "fehler": {
+        "0": "grenze",
+        "2": "breite"
+      }
+    },
+    {
+      "lz": 0,
+      "typ": "zahl",
+      "frage": "Werte: 4, 7, 9, 12, 13, 14, 18 (Minuten). Wie viele gehören in die Klasse „10 bis unter 15 min“?",
+      "loesung": 3,
+      "erklaerung": "12, 13 und 14",
+      "fehler": [
+        {
+          "wert": 4,
+          "id": "grenze"
+        },
+        {
+          "wert": 2,
+          "id": "zaehlen"
+        }
+      ]
+    },
+    {
+      "lz": 2,
+      "typ": "zahl",
+      "frage": "0 bis unter 10 min: 8 · 10 bis unter 20 min: 11 · 20 bis unter 30 min: 5 · 30 und mehr: 2. Wie viele brauchen weniger als 20 Minuten?",
+      "loesung": 19,
+      "erklaerung": "8 + 11 = 19",
+      "fehler": [
+        {
+          "wert": 11,
+          "id": "ablesen"
+        },
+        {
+          "wert": 8,
+          "id": "ablesen"
+        }
+      ]
+    }
+  ]
+}
+</script>
+<script src="../../../../qr.js"></script>
+<script src="../../../../exit-ticket.js"></script>
+</body>
+</html>

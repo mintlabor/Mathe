@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Üben: Das Streifendiagramm – Stunde 14</title>
+<link rel="stylesheet" href="../../../../schueler.css">
+</head>
+<body>
+<header><div class="inner">
+  <div class="pfad"><a href="./">🗺️ Lernlandkarte</a> › Stunde 14</div>
+  <h1>Üben: Das Streifendiagramm</h1>
+  <p class="untertitel">Stunde 14 · Anteile als Streifen darstellen</p>
+</div></header>
+<main>
+  <div class="box">
+    <strong>📘 Erinnerung</strong><br>
+    Ganzer Streifen = 100 % · Feldlänge = relative Häufigkeit · Gesamtlänge · Beispiel: 0,35 · 10 cm = 3,5 cm
+  </div>
+  <div class="box">
+    <strong>📚 Wörter für heute:</strong> Streifendiagramm · Anteil · relative Häufigkeit · Gesamtlänge · Feld<br>
+    <span class="klein">💬 So kannst du es aufschreiben: „Ich habe so gerechnet: …, weil …“</span>
+  </div>
+  <div id="ziele"></div>
+
+  <h2>📖 Aufgaben aus dem Buch</h2>
+  <div class="box buch">
+    <h3>Parallelo 8</h3>
+    <ul>
+      <li>● Basis: <span class="platzhalter">[BUCH: S. __ Nr. __]</span></li>
+      <li>●● Standard: <span class="platzhalter">[BUCH: S. __ Nr. __]</span></li>
+      <li>●●● Profi: <span class="platzhalter">[BUCH: S. __ Nr. __]</span></li>
+    </ul>
+    <p class="klein">Rechne im Heft. Unten findest du Aufgaben mit Tipps und Selbstkontrolle.</p>
+  </div>
+
+  <h2>Aufgaben</h2>
+  <div id="niveaus"></div>
+  <div id="fortschritt"></div>
+  <div id="aufgaben"></div>
+  <h2>🎨 Werde kreativ</h2>
+  <div class="box">
+    Zeichne ein Streifendiagramm zu einer Mini-Umfrage in deiner Familie (z. B. Lieblingsessen). Dein Partner liest die Prozente ab.
+    <span class="klein">Profi-Idee: Baue absichtlich einen Fehler ein. Findet ihn dein Partner?</span>
+  </div>
+  <h2>Wie sicher bist du jetzt?</h2>
+  <div id="ampel"></div>
+  <p><a href="exit-14.html">🎫 Weiter zum Exit-Ticket →</a> · <a href="./">← Lernlandkarte</a></p>
+</main>
+<script>
+window.SEITE = {
+  "speicher": "mathe-k8-hs-wk",
+  "stunde": 14,
+  "lernziele": [
+    "relative Häufigkeiten als Streifendiagramm darstellen",
+    "die Länge eines Feldes aus dem Anteil berechnen",
+    "ein Streifendiagramm ablesen"
+  ],
+  "ichKann": [
+    "Ich kann relative Häufigkeiten als Streifendiagramm darstellen.",
+    "Ich kann die Länge eines Feldes aus dem Anteil berechnen.",
+    "Ich kann ein Streifendiagramm ablesen."
+  ],
+  "aufgaben": [
+    {
+      "niveau": 1,
+      "typ": "zahl",
+      "frage": "Ein 10-cm-Streifen. Wie lang ist das Feld für 50 %?",
+      "loesung": 5,
+      "tipps": [
+        "50 % ist die Hälfte."
+      ],
+      "erklaerung": "Die Hälfte von 10 cm = 5 cm",
+      "einheit": "cm"
+    },
+    {
+      "niveau": 1,
+      "typ": "zahl",
+      "frage": "Wie viel Prozent sind 2 cm in einem 10-cm-Streifen?",
+      "loesung": 20,
+      "tipps": [
+        "1 cm = 10 %"
+      ],
+      "erklaerung": "2 cm = 20 %",
+      "einheit": "%"
+    },
+    {
+      "niveau": 2,
+      "typ": "zahl",
+      "frage": "12 von 30 wählen „Spielstände“. Wie lang ist das Feld in einem 10-cm-Streifen?",
+      "loesung": 4,
+      "tipps": [
+        "12 : 30 = 0,4",
+        "0,4 · 10 cm = ?"
+      ],
+      "erklaerung": "0,4 · 10 cm = 4 cm",
+      "einheit": "cm"
+    },
+    {
+      "niveau": 2,
+      "typ": "auswahl",
+      "frage": "🔍 Fehler finden: Pia zeichnet für 6 von 20 ein 6 cm langes Feld in einen 10-cm-Streifen. Was ist falsch?",
+      "loesung": 0,
+      "tipps": [
+        "Wie viel Prozent sind 6 von 20?"
+      ],
+      "erklaerung": "6 : 20 = 0,3 = 30 % → 3 cm",
+      "optionen": [
+        "Sie nimmt die Anzahl als Länge. Richtig: 6 : 20 = 0,3 → 3 cm.",
+        "Sie hätte 60 cm zeichnen müssen.",
+        "Alles ist richtig."
+      ]
+    },
+    {
+      "niveau": 3,
+      "typ": "zahl",
+      "frage": "Ein 15 cm langer Streifen, Anteil 40 %. Wie lang ist das Feld?",
+      "loesung": 6,
+      "tipps": [
+        "0,4 · 15 cm"
+      ],
+      "erklaerung": "0,4 · 15 cm = 6 cm",
+      "einheit": "cm"
+    },
+    {
+      "niveau": 3,
+      "typ": "zahl",
+      "frage": "Ein Feld ist 4,5 cm lang, der Streifen 15 cm. Wie viel Prozent sind das?",
+      "loesung": 30,
+      "tipps": [
+        "4,5 : 15 = ?"
+      ],
+      "erklaerung": "4,5 : 15 = 0,3 = 30 %",
+      "einheit": "%"
+    }
+  ]
+};
+</script>
+<script src="../../../../schueler.js"></script>
+</body>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Exit-Ticket: Stationen: Zufall – Stunde 10</title>
+<link rel="stylesheet" href="../../../../schueler.css">
+</head>
+<body>
+<header><div class="inner">
+  <div class="pfad"><a href="./">🗺️ Lernlandkarte</a> › <a href="stunde-10.html">Stunde 10</a> › Exit-Ticket</div>
+  <h1>🎫 Exit-Ticket</h1>
+  <p class="untertitel">Stunde 10 · Stationen: Zufall</p>
+</div></header>
+<main>
+  <div id="exit"></div>
+</main>
+<script type="application/json" id="exit-daten">
+{
+  "titel": "Stationen: Zufall",
+  "stunde": 10,
+  "lernziele": [
+    {
+      "text": "Ich kann eine Wahrscheinlichkeit über die relative Häufigkeit schätzen.",
+      "foerdern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ● Basis",
+      "fordern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ●●● Profi"
+    },
+    {
+      "text": "Ich kann Wahrscheinlichkeiten als Bruch, Dezimalzahl und Prozent vergleichen.",
+      "foerdern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ● Basis",
+      "fordern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ●●● Profi"
+    },
+    {
+      "text": "Ich kann begründen, ob ein Spiel fair ist.",
+      "foerdern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ● Basis",
+      "fordern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ●●● Profi"
+    }
+  ],
+  "fehlertypen": {
+    "absolut": "Absolute Häufigkeit statt relativer genommen",
+    "vertauscht": "Gesamtzahl durch Anzahl geteilt",
+    "schreibweise": "Verschiedene Schreibweisen nicht vergleichbar gemacht",
+    "fair": "Fairness nicht mit Wahrscheinlichkeiten begründet",
+    "baum": "Ergebnisse eines zweistufigen Experiments falsch gezählt"
+  },
+  "fragen": [
+    {
+      "lz": 0,
+      "typ": "zahl",
+      "frage": "Ein Legostein landet bei 200 Würfen 50-mal auf der Seite. Schätze P(Seite) in Prozent.",
+      "loesung": 25,
+      "erklaerung": "50 : 200 = 0,25 = 25 %",
+      "einheit": "%",
+      "fehler": [
+        {
+          "wert": 50,
+          "id": "absolut"
+        },
+        {
+          "wert": 400,
+          "id": "vertauscht"
+        }
+      ]
+    },
+    {
+      "lz": 1,
+      "typ": "auswahl",
+      "frage": "Was ist am wahrscheinlichsten?",
+      "optionen": [
+        "0,3",
+        "¼",
+        "28 %"
+      ],
+      "loesung": 0,
+      "erklaerung": "30 % > 28 % > 25 %",
+      "fehler": {
+        "1": "schreibweise",
+        "2": "schreibweise"
+      }
+    },
+    {
+      "lz": 2,
+      "typ": "auswahl",
+      "frage": "Anna gewinnt beim Würfeln bei 1 oder 2, Ben bei 3, 4, 5 oder 6. Ist das Spiel fair?",
+      "optionen": [
+        "Ja, jeder kann gewinnen.",
+        "Nein, Ben hat 4/6, Anna nur 2/6."
+      ],
+      "loesung": 1,
+      "erklaerung": "Fair heißt: gleiche Gewinnwahrscheinlichkeit.",
+      "fehler": {
+        "0": "fair"
+      }
+    },
+    {
+      "lz": 2,
+      "typ": "auswahl",
+      "frage": "Zwei Münzen: „Zweimal Kopf“ gewinnt. Wie groß ist die Gewinnwahrscheinlichkeit?",
+      "optionen": [
+        "½",
+        "⅓",
+        "¼"
+      ],
+      "loesung": 2,
+      "erklaerung": "1 von 4 Pfaden: KK.",
+      "fehler": {
+        "0": "baum",
+        "1": "baum"
+      }
+    }
+  ]
+}
+</script>
+<script src="../../../../qr.js"></script>
+<script src="../../../../exit-ticket.js"></script>
+</body>
+</html>

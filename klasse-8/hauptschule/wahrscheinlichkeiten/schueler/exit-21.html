@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Exit-Ticket: Daten aus Zeitung und Internet – Stunde 21</title>
+<link rel="stylesheet" href="../../../../schueler.css">
+</head>
+<body>
+<header><div class="inner">
+  <div class="pfad"><a href="./">🗺️ Lernlandkarte</a> › <a href="stunde-21.html">Stunde 21</a> › Exit-Ticket</div>
+  <h1>🎫 Exit-Ticket</h1>
+  <p class="untertitel">Stunde 21 · Daten aus Zeitung und Internet</p>
+</div></header>
+<main>
+  <div id="exit"></div>
+</main>
+<script type="application/json" id="exit-daten">
+{
+  "titel": "Daten aus Zeitung und Internet",
+  "stunde": 21,
+  "lernziele": [
+    {
+      "text": "Ich kann Informationen aus einer Grafik mit Text entnehmen.",
+      "foerdern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ● Basis",
+      "fordern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ●●● Profi"
+    },
+    {
+      "text": "Ich kann eine Datenquelle mit Prüffragen beurteilen.",
+      "foerdern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ● Basis",
+      "fordern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ●●● Profi"
+    },
+    {
+      "text": "Ich kann eine Schlagzeile mit den Daten vergleichen.",
+      "foerdern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ● Basis",
+      "fordern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ●●● Profi"
+    }
+  ],
+  "fehlertypen": {
+    "verallg": "Von wenigen Befragten auf alle geschlossen",
+    "quelle": "Quelle oder Datum nicht geprüft",
+    "ablesen": "Information aus der Grafik falsch entnommen"
+  },
+  "fragen": [
+    {
+      "lz": 0,
+      "typ": "zahl",
+      "frage": "Eine Grafik zeigt: 5 von 20 Befragten lesen täglich ein Buch. Wie viel Prozent sind das?",
+      "loesung": 25,
+      "erklaerung": "5 : 20 = 0,25 = 25 %",
+      "einheit": "%",
+      "fehler": [
+        {
+          "wert": 5,
+          "id": "ablesen"
+        },
+        {
+          "wert": 75,
+          "id": "ablesen"
+        }
+      ]
+    },
+    {
+      "lz": 1,
+      "typ": "auswahl",
+      "frage": "Welche Frage gehört NICHT zum Faktencheck?",
+      "optionen": [
+        "Wie viele wurden befragt?",
+        "Wann wurden die Daten erhoben?",
+        "Welche Farbe hat das Diagramm?"
+      ],
+      "loesung": 2,
+      "erklaerung": "Die Farbe sagt nichts über die Daten.",
+      "fehler": {
+        "0": "quelle",
+        "1": "quelle"
+      }
+    },
+    {
+      "lz": 2,
+      "typ": "auswahl",
+      "frage": "In einem Fußballverein sagen 27 von 30 Kindern: „Ich will mehr Sport.“ Schlagzeile: „90 % aller Kinder wollen mehr Sport!“ Was stimmt?",
+      "optionen": [
+        "Die Schlagzeile stimmt, 27 von 30 sind 90 %.",
+        "Die Prozentzahl stimmt, aber nur für diese Kinder im Verein – nicht für alle Kinder."
+      ],
+      "loesung": 1,
+      "erklaerung": "Im Sportverein sind vor allem Kinder, die gern Sport machen.",
+      "fehler": {
+        "0": "verallg"
+      }
+    },
+    {
+      "lz": 1,
+      "typ": "auswahl",
+      "frage": "Eine Internetseite zeigt eine Grafik ohne Quelle und ohne Datum. Was tust du?",
+      "optionen": [
+        "Ich übernehme sie, sie sieht gut aus.",
+        "Ich suche Zahlen mit Quelle und Datum, z. B. beim Statistischen Bundesamt."
+      ],
+      "loesung": 1,
+      "erklaerung": "Ohne Quelle kann man nichts prüfen.",
+      "fehler": {
+        "0": "quelle"
+      }
+    }
+  ]
+}
+</script>
+<script src="../../../../qr.js"></script>
+<script src="../../../../exit-ticket.js"></script>
+</body>
+</html>

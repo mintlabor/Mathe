@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Stunde 19: Das arithmetische Mittel – Wahrscheinlichkeiten</title>
+<link rel="stylesheet" href="../../../../praesentation.css">
+<style>
+  .platzhalter { background: #fff3bf; border-radius: 4px; padding: 0 .3rem; font-family: ui-monospace, monospace; font-size: .9em; }
+  .exit-qr { display: flex; gap: 1.5rem; align-items: center; }
+  .exit-qr [data-qr] svg { width: 230px; height: 230px; display: block; border-radius: 8px; }
+</style>
+</head>
+<body data-phasen='[["Abrufen", 4], ["Problem", 8], ["Erarbeitung", 12], ["Ideen vergleichen", 5], ["Sicherung", 6], ["Übung", 6], ["Reflexion", 4]]'>
+
+<div class="leiste">
+  <div class="pfad"><a href="../../../../">Start</a> › <a href="../../../">Klasse 8</a> › <a href="../../">Hauptschule</a> › <a href="../">Wahrscheinlichkeiten</a> › Stunde 19</div>
+</div>
+
+<aside class="wortspeicher"
+  data-woerter='["arithmetisches Mittel", "Durchschnitt", "Mittelwert", "Summe", "gerecht verteilen"]'
+  data-saetze='["Ich vermute, dass …", "Ich habe so gerechnet: …", "Das sieht man daran, dass …", "Ich stimme zu / nicht zu, weil …"]'></aside>
+
+<div class="buehne">
+
+  <!-- 1 · ABRUFEN -->
+  <section class="folie" data-phase="Abrufen">
+    <div class="kennung">Wahrscheinlichkeiten · Stunde 19 · Warm-up</div>
+    <h2>Was weißt du noch?</h2>
+    <p style="margin-top:0">Exit-Ticket von letzter Stunde: Was ist der Median von 8, 2, 6?</p>
+    <div data-abstimmung='["2", "6", "5", "8"]' data-loesung="1"></div>
+    <div class="hinweis">Alle halten gleichzeitig die ABCD-Karte hoch. Begründungen per 🎲 einholen, nicht per Melden.</div>
+  </section>
+
+  <!-- 2 · PROBLEM -->
+  <section class="folie" data-phase="Problem">
+    <div class="kennung">Problem<span class="leitmodell">Leitmodell: 0-bis-1-Streifen</span></div>
+    <h2>Legen unsere Hühner genug Eier?</h2>
+    <div class="problem"><div class="label">Problem</div><br>Familie Meyer backt für das Schulfest Waffeln und braucht dafür eigene Eier. Oma sagt: „Unsere Hühner legen <strong>im Durchschnitt 7 Eier am Tag</strong>.“ Lena hat eine Woche lang gezählt:<br>🥚 Mo 5 · Di 8 · Mi 3 · Do 6 · Fr 4 · Sa 10 · So 6</div>
+    <div class="spannung" data-art="Stimmt das?">Stimmt das? Oma hat recht: <strong>7 Eier</strong> am Tag im Durchschnitt.</div>
+    <div data-abstimmung='["Oma hat recht", "Es sind weniger", "Es sind mehr"]'></div>
+    <div class="lernziele schritt">
+      <div class="titel">🎯 Heute lernst du …</div>
+      <ul>
+        <li>Ich kann das arithmetische Mittel (Durchschnitt) berechnen.</li>
+        <li>Ich kann das Mittel als „gerecht verteilen“ erklären.</li>
+        <li>Ich kann mit dem Mittelwert eine Aussage prüfen.</li>
+      </ul>
+    </div>
+    <p class="schritt"><span class="projekt">Schulfest-Projekt: Wir berechnen Durchschnitte für Zahlen-Antworten unserer Umfrage.</span></p>
+    <div class="hinweis">Abstimmung festhalten (Foto/Tafel), am Ende der Stunde auflösen. Noch nicht verraten!</div>
+  </section>
+
+  <!-- 2b · SCHÄTZEN -->
+  <section class="folie" data-phase="Problem" data-minuten="2">
+    <div class="kennung">Schätzen</div>
+    <h2>Wie viele Eier sind es im Durchschnitt pro Tag?</h2>
+    <div data-schaetzen='{"min": 0, "max": 12, "einheit": "Eier", "loesung": 6}'></div>
+    <p class="satzhilfe">Ich schätze …, weil …</p>
+    <div class="hinweis">Jeder schreibt zuerst seine Schätzung auf. 5–8 Werte per 🎲 eintragen. Auflösen erst nach der Rechnung.</div>
+  </section>
+
+  <!-- 2c · EIGENE LÖSUNG -->
+  <section class="folie" data-phase="Problem" data-minuten="4">
+    <div class="kennung">Eigene Lösung</div>
+    <h2>Was meinst du?</h2>
+    <div data-denkzeit="60" data-text="Prüfe Omas Behauptung mit Lenas Zahlen. Schreibe deinen Weg auf."></div>
+    <div data-methode="tps" data-minuten="1,2,2"></div>
+    <div data-tipps>
+      <div class="tipp">Stell dir vor, du verteilst alle Eier der Woche gerecht auf die 7 Tage.</div>
+      <div class="tipp">Alle Eier zusammen: 5 + 8 + 3 + 6 + 4 + 10 + 6 = ?</div>
+      <div class="tipp">42 Eier : 7 Tage = ?</div>
+    </div>
+    <p class="satzhilfe">Ich vermute, dass … · Ich würde zuerst …</p>
+  </section>
+
+  <!-- 3 · ERARBEITUNG E -->
+  <section class="folie" data-phase="Erarbeitung" data-minuten="7">
+    <div class="kennung">Erarbeitung · Gruppen<span class="eis" data-eis="E"></span></div>
+    <h2>Türme ausgleichen</h2>
+    <p style="margin-top:0">Baut für jeden Tag einen Turm aus Steckwürfeln (1 Würfel = 1 Ei). Verteilt die Würfel dann um, bis alle Türme gleich hoch sind. Wählt:</p>
+    <div class="wahlkarten">
+      <div class="wahlkarte"><div class="icon">🧱</div><b>Steckwürfel</b>7 Türme bauen und ausgleichen</div>
+      <div class="wahlkarte"><div class="icon">🥚</div><b>Eierkartons</b>Plastikeier auf 7 Kartons gerecht verteilen</div>
+      <div class="wahlkarte"><div class="icon">🔢</div><b>Rechnen</b>alles zusammenzählen, dann teilen</div>
+    </div>
+    <div data-methode="rollen"></div>
+    <div class="hinweis">Materialkiste: Steckwürfel (42 je Gruppe), optional Eierkartons mit Kunststoffeiern, Taschenrechner. Gruppen 3–4, Rollen auslosen.</div>
+  </section>
+
+  <!-- 3 · ERARBEITUNG I/S -->
+  <section class="folie" data-phase="Erarbeitung" data-minuten="5">
+    <div class="kennung">Erarbeitung · Was passiert, wenn …?<span class="eis" data-eis="IS"></span></div>
+    <h2>Gerecht verteilen = Mittelwert</h2>
+    <div data-ausgleich='{"werte": [5, 8, 3, 6, 4, 10, 6], "namen": ["Mo", "Di", "Mi", "Do", "Fr", "Sa", "So"], "einheit": "Eier"}'></div>
+    <div class="vernetzen schritt">Was passiert, wenn ein 8. Tag mit 14 Eiern dazukommt? Vermute zuerst, dann mit „Turm dazu“ prüfen.</div>
+    <div class="hinweis">Mit 14 Eiern am 8. Tag: 56 : 8 = 7 – dann hätte Oma recht. Der Mittelwert reagiert auf jeden neuen Wert.</div>
+  </section>
+
+  <!-- 4 · IDEEN VERGLEICHEN -->
+  <section class="folie" data-phase="Ideen vergleichen">
+    <div class="kennung">Ideen vergleichen</div>
+    <h2>Wer hat recht?</h2>
+    <div class="fehlerkarte" data-wer="Oma">
+      <div class="rechnung">5 + 8 + 3 + 6 + 4 + 10 + 6 = 42 → 42 : <span class='fehler'>6</span> = 7 Eier</div>
+      <div class="erklaerung">Oma hat durch 6 geteilt, aber es sind 7 Tage. Richtig: 42 : 7 = 6 Eier pro Tag.</div>
+    </div>
+    <div class="legende"><span class="l-ja">stimmt</span><span class="l-nein">stimmt nicht</span>
+      <button class="knopf" data-alle-auf style="margin-left:auto">Alle aufdecken</button><button class="knopf" data-alle-zu>Alle zudecken</button></div>
+    <div class="karten">
+      <div class="karte ja">Mittelwert = Summe aller Werte : Anzahl der Werte.<span class="loesung">Ja: 42 : 7 = 6.</span></div>
+      <div class="karte nein">Der Mittelwert muss einer der Werte sein.<span class="loesung">Nein, z. B. bei 5 und 6 ist er 5,5.</span></div>
+      <div class="karte ja">Wenn alle Türme gleich hoch sind, zeigt die Höhe den Mittelwert.<span class="loesung">Ja, das ist „gerecht verteilen“.</span></div>
+      <div class="karte nein">Jeden Tag wurden 6 Eier gelegt.<span class="loesung">Nein, das ist nur der Durchschnitt; es waren 3 bis 10 Eier.</span></div>
+    </div>
+    <p class="satzhilfe">Ich stimme zu / nicht zu, weil … · Der Fehler ist …</p>
+    <div class="hinweis">Erst Fehlerkarte: Denkzeit, dann 🎲. Karten einzeln: Daumen hoch/runter, dann aufdecken.</div>
+  </section>
+
+  <!-- 5 · SICHERUNG -->
+  <section class="folie" data-phase="Sicherung">
+    <div class="kennung">Sicherung<span class="eis" data-eis="EIS"></span></div>
+    <h2>Das arithmetische Mittel</h2>
+    <div class="merk">
+      <h3>Merke</h3>
+      <ul>
+        <li class="schritt">Das <strong>arithmetische Mittel</strong> (Durchschnitt, Mittelwert) bedeutet: alles <strong>gerecht verteilen</strong>.</li>
+        <li class="schritt"><strong>Mittelwert = Summe aller Werte : Anzahl der Werte</strong>.<br>Beispiel: (5 + 8 + 3 + 6 + 4 + 10 + 6) : 7 = 42 : 7 = 6 Eier.</li>
+        <li class="schritt">Der Mittelwert liegt immer zwischen dem kleinsten und dem größten Wert. Er muss kein Wert der Liste sein.</li>
+      </ul>
+    </div>
+    <div class="produkt schritt">Erkläre es deinem Nachbarn in <strong>eigenen Worten</strong> und mit einer <strong>Skizze</strong>. Er sagt, ob er es verstanden hat.</div>
+    <div class="hinweis">Ins Heft übertragen. Danach 1–2 Erklärungen per 🎲 vorstellen lassen.</div>
+  </section>
+
+  <!-- 6 · ÜBUNG -->
+  <section class="folie" data-phase="Übung">
+    <div class="kennung">Übung · Buch<span class="eis" data-eis="S"></span></div>
+    <h2>Jetzt du! Wähle dein Niveau</h2>
+    <div class="wahlkarten">
+      <div class="wahlkarte"><b>● Basis</b>📖 <span class="platzhalter">[BUCH: S. __ Nr. __]</span></div>
+      <div class="wahlkarte"><b>●● Standard</b>📖 <span class="platzhalter">[BUCH: S. __ Nr. __]</span></div>
+      <div class="wahlkarte"><b>●●● Profi</b>📖 <span class="platzhalter">[BUCH: S. __ Nr. __]</span></div>
+    </div>
+    <div data-methode="lerntempoduett" data-minuten="5,0,2,0"></div>
+    <div class="produkt">Fertig? <strong>Erfinde eine eigene Aufgabe</strong> mit Toren aus Fußballspielen, bei der der Mittelwert eine Kommazahl ist. Dein Partner löst sie.</div>
+    <p>Tipps und Selbstkontrolle: <a class="schuelerlink" href="../schueler/stunde-19.html" target="_blank">📱 Schülerseite · Stunde 19</a></p>
+    <div class="hinweis">Buchaufgaben im Heft. Wer fertig ist, wartet an der Haltestelle auf einen Partner. Rest als Hausaufgabe.</div>
+  </section>
+
+  <!-- 7 · REFLEXION -->
+  <section class="folie" data-phase="Reflexion">
+    <div class="kennung">Zurück zum Problem · Reflexion</div>
+    <h2>Oma hat nicht ganz recht: Im Durchschnitt sind es 6 Eier am Tag.</h2>
+    <div class="exit-qr">
+      <div data-qr="../schueler/exit-19.html"></div>
+      <div>
+        <p style="margin-top:0;font-size:1.4rem"><strong>🎫 Exit-Ticket</strong></p>
+        <p>Scanne den Code oder öffne die Schülerseite. Gib dein <strong>Kürzel</strong> ein.<br>Am Ende zeigst du mir deinen QR-Code.</p>
+        <p><a class="schuelerlink" href="../schueler/exit-19.html" target="_blank">🎫 Zum Exit-Ticket</a></p>
+        <p class="klein">Nächste Stunde: Welcher Mittelwert passt? – Der Handy-Check.</p>
+      </div>
+    </div>
+    <div class="hinweis"> Tafelabstimmung vom Anfang zeigen: Wer lag richtig? QR-Codes der Schüler mit der Kamera-App scannen → Auswertung.</div>
+  </section>
+
+</div>
+<script src="../../../../praesentation.js"></script>
+<script src="../../../../qr.js"></script>
+<script src="../modelle.js"></script>
+</body>
+</html>

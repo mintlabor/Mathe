@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Exit-Ticket: Modus und Median – Stunde 18</title>
+<link rel="stylesheet" href="../../../../schueler.css">
+</head>
+<body>
+<header><div class="inner">
+  <div class="pfad"><a href="./">🗺️ Lernlandkarte</a> › <a href="stunde-18.html">Stunde 18</a> › Exit-Ticket</div>
+  <h1>🎫 Exit-Ticket</h1>
+  <p class="untertitel">Stunde 18 · Modus und Median</p>
+</div></header>
+<main>
+  <div id="exit"></div>
+</main>
+<script type="application/json" id="exit-daten">
+{
+  "titel": "Modus und Median",
+  "stunde": 18,
+  "lernziele": [
+    {
+      "text": "Ich kann den Modus (häufigsten Wert) bestimmen.",
+      "foerdern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ● Basis",
+      "fordern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ●●● Profi"
+    },
+    {
+      "text": "Ich kann den Median mit einer Rangliste bestimmen.",
+      "foerdern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ● Basis",
+      "fordern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ●●● Profi"
+    },
+    {
+      "text": "Ich kann mit Modus und Median eine Behauptung prüfen.",
+      "foerdern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ● Basis",
+      "fordern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ●●● Profi"
+    }
+  ],
+  "fehlertypen": {
+    "sortieren": "Werte nicht der Größe nach sortiert",
+    "minmax": "Median als Mitte zwischen kleinstem und größtem Wert gerechnet",
+    "modus": "Modus mit Median oder größtem Wert verwechselt",
+    "gerade": "Bei gerader Anzahl nicht die Mitte der beiden mittleren Werte genommen",
+    "ausreisser": "Von einem einzelnen sehr großen Wert täuschen lassen"
+  },
+  "fragen": [
+    {
+      "lz": 0,
+      "typ": "zahl",
+      "frage": "Schuhgrößen: 38, 41, 39, 41, 42, 41, 37, 36, 38. Was ist der Modus?",
+      "loesung": 41,
+      "erklaerung": "41 kommt dreimal vor.",
+      "fehler": [
+        {
+          "wert": 39,
+          "id": "modus"
+        },
+        {
+          "wert": 42,
+          "id": "modus"
+        }
+      ]
+    },
+    {
+      "lz": 1,
+      "typ": "zahl",
+      "frage": "Punkte im Test: 12, 7, 15, 9, 10. Was ist der Median?",
+      "loesung": 10,
+      "erklaerung": "Rangliste 7, 9, 10, 12, 15 → 10",
+      "fehler": [
+        {
+          "wert": 15,
+          "id": "sortieren"
+        },
+        {
+          "wert": 11,
+          "id": "minmax"
+        }
+      ]
+    },
+    {
+      "lz": 1,
+      "typ": "zahl",
+      "frage": "Minuten: 4, 6, 10, 20. Was ist der Median?",
+      "loesung": 8,
+      "erklaerung": "(6 + 10) : 2 = 8",
+      "fehler": [
+        {
+          "wert": 12,
+          "id": "minmax"
+        },
+        {
+          "wert": 6,
+          "id": "gerade"
+        },
+        {
+          "wert": 10,
+          "id": "gerade"
+        }
+      ]
+    },
+    {
+      "lz": 2,
+      "typ": "auswahl",
+      "frage": "Taschengeld: 5, 10, 10, 15, 100 €. Lisa bekommt 10 € und sagt: „Ich bekomme weniger als die meisten.“ Stimmt das?",
+      "optionen": [
+        "Ja, weil 100 € viel mehr ist.",
+        "Nein, der Median ist 10 € – die Hälfte bekommt höchstens 10 €."
+      ],
+      "loesung": 1,
+      "erklaerung": "Nur zwei von fünf bekommen mehr als Lisa.",
+      "fehler": {
+        "0": "ausreisser"
+      }
+    }
+  ]
+}
+</script>
+<script src="../../../../qr.js"></script>
+<script src="../../../../exit-ticket.js"></script>
+</body>
+</html>

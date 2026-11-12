@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Üben: Modus und Median – Stunde 18</title>
+<link rel="stylesheet" href="../../../../schueler.css">
+</head>
+<body>
+<header><div class="inner">
+  <div class="pfad"><a href="./">🗺️ Lernlandkarte</a> › Stunde 18</div>
+  <h1>Üben: Modus und Median</h1>
+  <p class="untertitel">Stunde 18 · Der häufigste und der mittlere Wert</p>
+</div></header>
+<main>
+  <div class="box">
+    <strong>📘 Erinnerung</strong><br>
+    Modus = häufigster Wert · Median: erst Rangliste, dann die Mitte · bei gerader Anzahl: Mitte der beiden mittleren Werte
+  </div>
+  <div class="box">
+    <strong>📚 Wörter für heute:</strong> Modus · Median (Zentralwert) · Rangliste · der Größe nach ordnen · Mitte<br>
+    <span class="klein">💬 So kannst du es aufschreiben: „Ich habe so gerechnet: …, weil …“</span>
+  </div>
+  <div id="ziele"></div>
+
+  <h2>📖 Aufgaben aus dem Buch</h2>
+  <div class="box buch">
+    <h3>Parallelo 8</h3>
+    <ul>
+      <li>● Basis: <span class="platzhalter">[BUCH: S. __ Nr. __]</span></li>
+      <li>●● Standard: <span class="platzhalter">[BUCH: S. __ Nr. __]</span></li>
+      <li>●●● Profi: <span class="platzhalter">[BUCH: S. __ Nr. __]</span></li>
+    </ul>
+    <p class="klein">Rechne im Heft. Unten findest du Aufgaben mit Tipps und Selbstkontrolle.</p>
+  </div>
+
+  <h2>Aufgaben</h2>
+  <div id="niveaus"></div>
+  <div id="fortschritt"></div>
+  <div id="aufgaben"></div>
+  <h2>🎨 Werde kreativ</h2>
+  <div class="box">
+    Frage 7 Leute nach ihrer Lieblingszahl von 1 bis 10. Bestimme Modus und Median. Erfinde dann eine Liste, bei der Modus und Median gleich sind.
+    <span class="klein">Profi-Idee: Baue absichtlich einen Fehler ein. Findet ihn dein Partner?</span>
+  </div>
+  <h2>Wie sicher bist du jetzt?</h2>
+  <div id="ampel"></div>
+  <p><a href="exit-18.html">🎫 Weiter zum Exit-Ticket →</a> · <a href="./">← Lernlandkarte</a></p>
+</main>
+<script>
+window.SEITE = {
+  "speicher": "mathe-k8-hs-wk",
+  "stunde": 18,
+  "lernziele": [
+    "den Modus (häufigsten Wert) bestimmen",
+    "den Median mit einer Rangliste bestimmen",
+    "mit Modus und Median eine Behauptung prüfen"
+  ],
+  "ichKann": [
+    "Ich kann den Modus (häufigsten Wert) bestimmen.",
+    "Ich kann den Median mit einer Rangliste bestimmen.",
+    "Ich kann mit Modus und Median eine Behauptung prüfen."
+  ],
+  "aufgaben": [
+    {
+      "niveau": 1,
+      "typ": "zahl",
+      "frage": "Was ist der Modus von 3, 5, 5, 6, 5, 2?",
+      "loesung": 5,
+      "tipps": [
+        "Welcher Wert kommt am häufigsten vor?"
+      ],
+      "erklaerung": "5 kommt dreimal vor."
+    },
+    {
+      "niveau": 1,
+      "typ": "zahl",
+      "frage": "Was ist der Median von 2, 4, 6, 8, 10?",
+      "loesung": 6,
+      "tipps": [
+        "Die Werte sind schon sortiert.",
+        "Welcher steht in der Mitte?"
+      ],
+      "erklaerung": "6"
+    },
+    {
+      "niveau": 2,
+      "typ": "zahl",
+      "frage": "Was ist der Median von 9, 3, 7, 1, 5? (erst ordnen!)",
+      "loesung": 5,
+      "tipps": [
+        "Rangliste: 1, 3, …"
+      ],
+      "erklaerung": "1, 3, 5, 7, 9 → 5"
+    },
+    {
+      "niveau": 2,
+      "typ": "auswahl",
+      "frage": "🔍 Fehler finden: Ella bestimmt den Median von 3, 9, 4, 8, 5: „Der mittlere Wert ist 4.“ Was ist falsch?",
+      "loesung": 0,
+      "tipps": [
+        "Hat Ella zuerst sortiert?"
+      ],
+      "erklaerung": "Erst ordnen, dann die Mitte.",
+      "optionen": [
+        "Sie hat nicht sortiert. Rangliste 3, 4, 5, 8, 9 → Median 5.",
+        "Der Median ist 9.",
+        "Alles ist richtig."
+      ]
+    },
+    {
+      "niveau": 3,
+      "typ": "zahl",
+      "frage": "Was ist der Median von 12, 15, 18, 20, 25, 30 €?",
+      "loesung": 19,
+      "tipps": [
+        "Gerade Anzahl: zwei Werte stehen in der Mitte.",
+        "(18 + 20) : 2"
+      ],
+      "erklaerung": "(18 + 20) : 2 = 19 €",
+      "einheit": "€"
+    },
+    {
+      "niveau": 3,
+      "typ": "auswahl",
+      "frage": "Welcher Satz stimmt für 2, 3, 3, 4, 4, 5?",
+      "loesung": 0,
+      "tipps": [
+        "Zähle, wie oft jede Zahl vorkommt."
+      ],
+      "erklaerung": "3 und 4 kommen je zweimal vor.",
+      "optionen": [
+        "Es gibt zwei Modi: 3 und 4.",
+        "Es gibt keinen Modus.",
+        "Der Modus ist 5."
+      ]
+    }
+  ]
+};
+</script>
+<script src="../../../../schueler.js"></script>
+</body>
+</html>

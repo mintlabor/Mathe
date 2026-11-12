@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Exit-Ticket: Zweimal hintereinander – Stunde 9</title>
+<link rel="stylesheet" href="../../../../schueler.css">
+</head>
+<body>
+<header><div class="inner">
+  <div class="pfad"><a href="./">🗺️ Lernlandkarte</a> › <a href="stunde-09.html">Stunde 9</a> › Exit-Ticket</div>
+  <h1>🎫 Exit-Ticket</h1>
+  <p class="untertitel">Stunde 9 · Zweimal hintereinander</p>
+</div></header>
+<main>
+  <div id="exit"></div>
+</main>
+<script type="application/json" id="exit-daten">
+{
+  "titel": "Zweimal hintereinander",
+  "stunde": 9,
+  "lernziele": [
+    {
+      "text": "Ich kann alle Ergebnisse beim Werfen von zwei Münzen aufschreiben.",
+      "foerdern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ● Basis",
+      "fordern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ●●● Profi"
+    },
+    {
+      "text": "Ich kann ein einfaches Baumdiagramm zeichnen.",
+      "foerdern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ● Basis",
+      "fordern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ●●● Profi"
+    },
+    {
+      "text": "Ich kann mit Pfaden eine Wahrscheinlichkeit angeben.",
+      "foerdern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ● Basis",
+      "fordern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ●●● Profi"
+    }
+  ],
+  "fehlertypen": {
+    "gemischt": "„gemischt“ nur einmal gezählt (KZ und ZK sind verschiedene Ergebnisse)",
+    "baum": "Baumdiagramm unvollständig (zweite Stufe fehlt)",
+    "pfad": "Pfade falsch gezählt"
+  },
+  "fragen": [
+    {
+      "lz": 0,
+      "typ": "zahl",
+      "frage": "Wie viele Ergebnisse gibt es beim Werfen von zwei Münzen?",
+      "loesung": 4,
+      "erklaerung": "KK, KZ, ZK, ZZ",
+      "fehler": [
+        {
+          "wert": 3,
+          "id": "gemischt"
+        },
+        {
+          "wert": 2,
+          "id": "baum"
+        }
+      ]
+    },
+    {
+      "lz": 0,
+      "typ": "auswahl",
+      "frage": "Welche Liste ist vollständig?",
+      "optionen": [
+        "KK, ZZ, KZ",
+        "KK, KZ, ZK, ZZ",
+        "KK, ZZ"
+      ],
+      "loesung": 1,
+      "erklaerung": "KZ und ZK sind zwei Ergebnisse.",
+      "fehler": {
+        "0": "gemischt",
+        "2": "gemischt"
+      }
+    },
+    {
+      "lz": 1,
+      "typ": "auswahl",
+      "frage": "Wie viele Enden hat das Baumdiagramm für zwei Münzen?",
+      "optionen": [
+        "2",
+        "3",
+        "4"
+      ],
+      "loesung": 2,
+      "erklaerung": "2 Äste, an jedem wieder 2: 4 Enden.",
+      "fehler": {
+        "0": "baum",
+        "1": "gemischt"
+      }
+    },
+    {
+      "lz": 2,
+      "typ": "auswahl",
+      "frage": "Wie groß ist P(beide Münzen zeigen dasselbe)?",
+      "optionen": [
+        "½ (2 von 4 Pfaden)",
+        "⅔",
+        "¼"
+      ],
+      "loesung": 0,
+      "erklaerung": "KK und ZZ: 2 von 4 Pfaden.",
+      "fehler": {
+        "1": "gemischt",
+        "2": "pfad"
+      }
+    }
+  ]
+}
+</script>
+<script src="../../../../qr.js"></script>
+<script src="../../../../exit-ticket.js"></script>
+</body>
+</html>

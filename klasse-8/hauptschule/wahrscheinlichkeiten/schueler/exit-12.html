@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Exit-Ticket: Unsere Umfrage auswerten – Stunde 12</title>
+<link rel="stylesheet" href="../../../../schueler.css">
+</head>
+<body>
+<header><div class="inner">
+  <div class="pfad"><a href="./">🗺️ Lernlandkarte</a> › <a href="stunde-12.html">Stunde 12</a> › Exit-Ticket</div>
+  <h1>🎫 Exit-Ticket</h1>
+  <p class="untertitel">Stunde 12 · Unsere Umfrage auswerten</p>
+</div></header>
+<main>
+  <div id="exit"></div>
+</main>
+<script type="application/json" id="exit-daten">
+{
+  "titel": "Unsere Umfrage auswerten",
+  "stunde": 12,
+  "lernziele": [
+    {
+      "text": "Ich kann Antworten mit einer Strichliste zählen.",
+      "foerdern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ● Basis",
+      "fordern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ●●● Profi"
+    },
+    {
+      "text": "Ich kann absolute und relative Häufigkeiten in einer Tabelle angeben.",
+      "foerdern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ● Basis",
+      "fordern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ●●● Profi"
+    },
+    {
+      "text": "Ich kann Gruppen unterschiedlicher Größe mit relativen Häufigkeiten vergleichen.",
+      "foerdern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ● Basis",
+      "fordern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ●●● Profi"
+    }
+  ],
+  "fehlertypen": {
+    "absolut": "Absolute statt relative Häufigkeit verglichen",
+    "vertauscht": "Gesamtzahl durch Anzahl geteilt (vertauscht)",
+    "strich": "Strichliste falsch gezählt (Bündel nicht als 5 gezählt)",
+    "prozent": "Dezimalzahl nicht in Prozent umgewandelt",
+    "summe": "Nicht beachtet, dass alle relativen Häufigkeiten zusammen 1 ergeben"
+  },
+  "fragen": [
+    {
+      "lz": 0,
+      "typ": "zahl",
+      "frage": "Wie viele Striche sind das? <s>||||</s> <s>||||</s> |||",
+      "loesung": 13,
+      "erklaerung": "Zwei Bündel zu 5 und 3 Striche: 13",
+      "fehler": [
+        {
+          "wert": 11,
+          "id": "strich"
+        }
+      ]
+    },
+    {
+      "lz": 1,
+      "typ": "zahl",
+      "frage": "Von 25 Befragten wünschen sich 10 Spielstände. Gib die relative Häufigkeit in Prozent an.",
+      "loesung": 40,
+      "erklaerung": "10 : 25 = 0,4 = 40 %",
+      "einheit": "%",
+      "fehler": [
+        {
+          "wert": 10,
+          "id": "absolut"
+        },
+        {
+          "wert": 250,
+          "id": "vertauscht"
+        },
+        {
+          "wert": 0.4,
+          "id": "prozent"
+        }
+      ]
+    },
+    {
+      "lz": 1,
+      "typ": "auswahl",
+      "frage": "In einer Tabelle stehen die relativen Häufigkeiten 0,5 · 0,3 · 0,1. Es gibt noch eine vierte Antwort. Was steht dort?",
+      "optionen": [
+        "0,1 – zusammen muss 1 herauskommen",
+        "Das kann man nicht wissen.",
+        "0,9"
+      ],
+      "loesung": 0,
+      "erklaerung": "1 − 0,5 − 0,3 − 0,1 = 0,1",
+      "fehler": {
+        "1": "summe",
+        "2": "summe"
+      }
+    },
+    {
+      "lz": 2,
+      "typ": "auswahl",
+      "frage": "8a: 6 von 20 kommen mit dem Bus. 8b: 9 von 36. Wo ist der Anteil größer?",
+      "optionen": [
+        "8b, weil 9 mehr ist als 6",
+        "8a, weil 6 : 20 = 30 % und 9 : 36 = 25 %",
+        "beide gleich"
+      ],
+      "loesung": 1,
+      "erklaerung": "Relative Häufigkeiten vergleichen.",
+      "fehler": {
+        "0": "absolut"
+      }
+    }
+  ]
+}
+</script>
+<script src="../../../../qr.js"></script>
+<script src="../../../../exit-ticket.js"></script>
+</body>
+</html>

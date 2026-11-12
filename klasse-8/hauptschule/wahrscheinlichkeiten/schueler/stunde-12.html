@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Üben: Unsere Umfrage auswerten – Stunde 12</title>
+<link rel="stylesheet" href="../../../../schueler.css">
+</head>
+<body>
+<header><div class="inner">
+  <div class="pfad"><a href="./">🗺️ Lernlandkarte</a> › Stunde 12</div>
+  <h1>Üben: Unsere Umfrage auswerten</h1>
+  <p class="untertitel">Stunde 12 · Strichliste, absolute und relative Häufigkeit</p>
+</div></header>
+<main>
+  <div class="box">
+    <strong>📘 Erinnerung</strong><br>
+    Strichliste: je 5 bündeln · absolute Häufigkeit = Anzahl · relative Häufigkeit = Anzahl : Gesamtzahl · alle relativen zusammen = 1 = 100 %
+  </div>
+  <div class="box">
+    <strong>📚 Wörter für heute:</strong> Strichliste · absolute Häufigkeit · relative Häufigkeit · Häufigkeitstabelle · Anteil<br>
+    <span class="klein">💬 So kannst du es aufschreiben: „Ich habe so gerechnet: …, weil …“</span>
+  </div>
+  <div id="ziele"></div>
+
+  <h2>📖 Aufgaben aus dem Buch</h2>
+  <div class="box buch">
+    <h3>Parallelo 8</h3>
+    <ul>
+      <li>● Basis: <span class="platzhalter">[BUCH: S. __ Nr. __]</span></li>
+      <li>●● Standard: <span class="platzhalter">[BUCH: S. __ Nr. __]</span></li>
+      <li>●●● Profi: <span class="platzhalter">[BUCH: S. __ Nr. __]</span></li>
+    </ul>
+    <p class="klein">Rechne im Heft. Unten findest du Aufgaben mit Tipps und Selbstkontrolle.</p>
+  </div>
+
+  <h2>Aufgaben</h2>
+  <div id="niveaus"></div>
+  <div id="fortschritt"></div>
+  <div id="aufgaben"></div>
+  <h2>🎨 Werde kreativ</h2>
+  <div class="box">
+    Erfinde eine <strong>Umfrage-Tabelle</strong> mit 4 Antworten und 20 Befragten. Lass deinen Partner die relativen Häufigkeiten in Prozent ausrechnen.
+    <span class="klein">Profi-Idee: Baue absichtlich einen Fehler ein. Findet ihn dein Partner?</span>
+  </div>
+  <h2>Wie sicher bist du jetzt?</h2>
+  <div id="ampel"></div>
+  <p><a href="exit-12.html">🎫 Weiter zum Exit-Ticket →</a> · <a href="./">← Lernlandkarte</a></p>
+</main>
+<script>
+window.SEITE = {
+  "speicher": "mathe-k8-hs-wk",
+  "stunde": 12,
+  "lernziele": [
+    "Antworten mit einer Strichliste zählen",
+    "absolute und relative Häufigkeiten in einer Tabelle angeben",
+    "Gruppen unterschiedlicher Größe mit relativen Häufigkeiten vergleichen"
+  ],
+  "ichKann": [
+    "Ich kann Antworten mit einer Strichliste zählen.",
+    "Ich kann absolute und relative Häufigkeiten in einer Tabelle angeben.",
+    "Ich kann Gruppen unterschiedlicher Größe mit relativen Häufigkeiten vergleichen."
+  ],
+  "aufgaben": [
+    {
+      "niveau": 1,
+      "typ": "zahl",
+      "frage": "Zähle die Striche: <s>||||</s> <s>||||</s> <s>||||</s> |",
+      "loesung": 16,
+      "tipps": [
+        "Jedes Bündel mit Querstrich sind 5."
+      ],
+      "erklaerung": "3 · 5 + 1 = 16"
+    },
+    {
+      "niveau": 1,
+      "typ": "zahl",
+      "frage": "12 von 48 Befragten wollen ein Fußballturnier. Gib die relative Häufigkeit als Dezimalzahl an.",
+      "loesung": 0.25,
+      "tipps": [
+        "12 : 48 = ?"
+      ],
+      "erklaerung": "12 : 48 = 0,25"
+    },
+    {
+      "niveau": 2,
+      "typ": "zahl",
+      "frage": "In der 8c wollen 7 von 28 Schülern Essensstände. Wie viel Prozent sind das?",
+      "loesung": 25,
+      "tipps": [
+        "7 : 28 = 0,25",
+        "0,25 · 100 = ?"
+      ],
+      "erklaerung": "7 : 28 = 0,25 = 25 %",
+      "einheit": "%"
+    },
+    {
+      "niveau": 2,
+      "typ": "auswahl",
+      "frage": "🔍 Fehler finden: Mia rechnet für 9 von 30: 30 : 9 ≈ 3,33 = 333 %. Was ist falsch?",
+      "loesung": 0,
+      "tipps": [
+        "Kann ein Anteil mehr als 100 % sein?"
+      ],
+      "erklaerung": "Anzahl : Gesamtzahl, nicht umgekehrt.",
+      "optionen": [
+        "Sie hat Gesamtzahl und Anzahl vertauscht. Richtig: 9 : 30 = 0,3 = 30 %.",
+        "Sie hätte mal 10 rechnen müssen.",
+        "Alles ist richtig."
+      ]
+    },
+    {
+      "niveau": 3,
+      "typ": "auswahl",
+      "frage": "Jahrgang 5: 40 von 80 wollen Spielstände. Jahrgang 9: 30 von 50. Wo ist der Wunsch stärker?",
+      "loesung": 1,
+      "tipps": [
+        "Rechne beide in Prozent."
+      ],
+      "erklaerung": "50 % gegen 60 % → Jahrgang 9.",
+      "optionen": [
+        "Jahrgang 5",
+        "Jahrgang 9",
+        "gleich"
+      ]
+    },
+    {
+      "niveau": 3,
+      "typ": "zahl",
+      "frage": "Eine Umfrage hat 4 Antworten. Drei relative Häufigkeiten sind 35 %, 20 % und 15 %. Wie viel Prozent hat die vierte?",
+      "loesung": 30,
+      "tipps": [
+        "Zusammen müssen es 100 % sein."
+      ],
+      "erklaerung": "100 % − 35 % − 20 % − 15 % = 30 %",
+      "einheit": "%"
+    }
+  ]
+};
+</script>
+<script src="../../../../schueler.js"></script>
+</body>
+</html>

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Üben: Das Kreisdiagramm – Stunde 15</title>
+<link rel="stylesheet" href="../../../../schueler.css">
+</head>
+<body>
+<header><div class="inner">
+  <div class="pfad"><a href="./">🗺️ Lernlandkarte</a> › Stunde 15</div>
+  <h1>Üben: Das Kreisdiagramm</h1>
+  <p class="untertitel">Stunde 15 · Anteile als Kreisausschnitte</p>
+</div></header>
+<main>
+  <div class="box">
+    <strong>📘 Erinnerung</strong><br>
+    Ganzer Kreis = 100 % = 360° · Winkel = relative Häufigkeit · 360° · Probe: alle Winkel zusammen 360°
+  </div>
+  <div class="box">
+    <strong>📚 Wörter für heute:</strong> Kreisdiagramm · Kreisausschnitt · Mittelpunkt · Winkel · 360° · Geodreieck<br>
+    <span class="klein">💬 So kannst du es aufschreiben: „Ich habe so gerechnet: …, weil …“</span>
+  </div>
+  <div id="ziele"></div>
+
+  <h2>📖 Aufgaben aus dem Buch</h2>
+  <div class="box buch">
+    <h3>Parallelo 8</h3>
+    <ul>
+      <li>● Basis: <span class="platzhalter">[BUCH: S. __ Nr. __]</span></li>
+      <li>●● Standard: <span class="platzhalter">[BUCH: S. __ Nr. __]</span></li>
+      <li>●●● Profi: <span class="platzhalter">[BUCH: S. __ Nr. __]</span></li>
+    </ul>
+    <p class="klein">Rechne im Heft. Unten findest du Aufgaben mit Tipps und Selbstkontrolle.</p>
+  </div>
+
+  <h2>Aufgaben</h2>
+  <div id="niveaus"></div>
+  <div id="fortschritt"></div>
+  <div id="aufgaben"></div>
+  <h2>🎨 Werde kreativ</h2>
+  <div class="box">
+    Zeichne ein Kreisdiagramm zu deinem Tag (Schlafen, Schule, Freizeit, Essen …): 24 Stunden = 360°. Wie viel Grad ist 1 Stunde?
+    <span class="klein">Profi-Idee: Baue absichtlich einen Fehler ein. Findet ihn dein Partner?</span>
+  </div>
+  <h2>Wie sicher bist du jetzt?</h2>
+  <div id="ampel"></div>
+  <p><a href="exit-15.html">🎫 Weiter zum Exit-Ticket →</a> · <a href="./">← Lernlandkarte</a></p>
+</main>
+<script>
+window.SEITE = {
+  "speicher": "mathe-k8-hs-wk",
+  "stunde": 15,
+  "lernziele": [
+    "aus einem Streifendiagramm ein Kreisdiagramm machen",
+    "Winkel mit relativer Häufigkeit · 360° berechnen",
+    "ein Kreisdiagramm mit dem Geodreieck zeichnen"
+  ],
+  "ichKann": [
+    "Ich kann aus einem Streifendiagramm ein Kreisdiagramm machen.",
+    "Ich kann Winkel mit relativer Häufigkeit · 360° berechnen.",
+    "Ich kann ein Kreisdiagramm mit dem Geodreieck zeichnen."
+  ],
+  "aufgaben": [
+    {
+      "niveau": 1,
+      "typ": "zahl",
+      "frage": "Wie groß ist der Winkel für 50 %?",
+      "loesung": 180,
+      "tipps": [
+        "Die Hälfte des Kreises."
+      ],
+      "erklaerung": "0,5 · 360° = 180°",
+      "einheit": "°"
+    },
+    {
+      "niveau": 1,
+      "typ": "zahl",
+      "frage": "Wie groß ist der Winkel für 10 %?",
+      "loesung": 36,
+      "tipps": [
+        "0,1 · 360°"
+      ],
+      "erklaerung": "0,1 · 360° = 36°",
+      "einheit": "°"
+    },
+    {
+      "niveau": 2,
+      "typ": "zahl",
+      "frage": "9 von 36 Befragten: Wie groß ist der Winkel?",
+      "loesung": 90,
+      "tipps": [
+        "9 : 36 = 0,25"
+      ],
+      "erklaerung": "0,25 · 360° = 90°",
+      "einheit": "°"
+    },
+    {
+      "niveau": 2,
+      "typ": "auswahl",
+      "frage": "🔍 Fehler finden: Kai rechnet für 20 %: 0,2 · 360° = 72°. Ole sagt: 20 % = 20°. Wer hat recht?",
+      "loesung": 0,
+      "tipps": [
+        "Wie viel Grad hat der ganze Kreis?"
+      ],
+      "erklaerung": "100 % = 360°, also 20 % = 72°.",
+      "optionen": [
+        "Kai. Ole nimmt die Prozentzahl als Grad.",
+        "Ole",
+        "beide"
+      ]
+    },
+    {
+      "niveau": 3,
+      "typ": "zahl",
+      "frage": "Ein Winkel ist 54°. Wie viel Prozent sind das?",
+      "loesung": 15,
+      "tipps": [
+        "54 : 360 = ?"
+      ],
+      "erklaerung": "54 : 360 = 0,15 = 15 %",
+      "einheit": "%"
+    },
+    {
+      "niveau": 3,
+      "typ": "zahl",
+      "frage": "Von 30 Befragten haben 7 „Sonstiges“ gewählt. Wie groß ist der Winkel?",
+      "loesung": 84,
+      "tipps": [
+        "7 : 30 · 360°",
+        "Oder: 360° : 30 = 12° pro Person"
+      ],
+      "erklaerung": "12° · 7 = 84°",
+      "einheit": "°"
+    }
+  ]
+};
+</script>
+<script src="../../../../schueler.js"></script>
+</body>
+</html>

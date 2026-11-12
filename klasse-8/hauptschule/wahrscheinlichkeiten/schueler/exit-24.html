@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Exit-Ticket: Fit für die Arbeit – Stunde 24</title>
+<link rel="stylesheet" href="../../../../schueler.css">
+</head>
+<body>
+<header><div class="inner">
+  <div class="pfad"><a href="./">🗺️ Lernlandkarte</a> › <a href="stunde-24.html">Stunde 24</a> › Exit-Ticket</div>
+  <h1>🎫 Exit-Ticket</h1>
+  <p class="untertitel">Stunde 24 · Fit für die Arbeit</p>
+</div></header>
+<main>
+  <div id="exit"></div>
+</main>
+<script type="application/json" id="exit-daten">
+{
+  "titel": "Fit für die Arbeit",
+  "stunde": 24,
+  "lernziele": [
+    {
+      "text": "Ich kann Wahrscheinlichkeiten über relative Häufigkeiten bestimmen.",
+      "foerdern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ● Basis",
+      "fordern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ●●● Profi"
+    },
+    {
+      "text": "Ich kann Daten in Diagrammen darstellen.",
+      "foerdern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ● Basis",
+      "fordern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ●●● Profi"
+    },
+    {
+      "text": "Ich kann Modus, Median, Mittelwert und Spannweite bestimmen.",
+      "foerdern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ● Basis",
+      "fordern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ●●● Profi"
+    }
+  ],
+  "fehlertypen": {
+    "absolut": "Absolute statt relative Häufigkeit verwendet",
+    "grad": "Prozentzahl direkt als Gradzahl genommen",
+    "anzahl": "Anzahl direkt als Länge genommen",
+    "sortieren": "Für den Median nicht sortiert",
+    "teilen": "Beim Mittelwert durch die falsche Anzahl geteilt",
+    "spannweite": "Spannweite falsch berechnet"
+  },
+  "fragen": [
+    {
+      "lz": 0,
+      "typ": "zahl",
+      "frage": "Ein Kronkorken landet bei 250 Würfen 100-mal mit der offenen Seite nach oben. Schätze die Wahrscheinlichkeit in Prozent.",
+      "loesung": 40,
+      "erklaerung": "100 : 250 = 0,4 = 40 %",
+      "einheit": "%",
+      "fehler": [
+        {
+          "wert": 100,
+          "id": "absolut"
+        }
+      ]
+    },
+    {
+      "lz": 1,
+      "typ": "zahl",
+      "frage": "15 von 60 Befragten wählen „Turnier“. Wie groß ist der Winkel im Kreisdiagramm?",
+      "loesung": 90,
+      "erklaerung": "15 : 60 = 0,25 → 90°",
+      "einheit": "°",
+      "fehler": [
+        {
+          "wert": 15,
+          "id": "grad"
+        },
+        {
+          "wert": 25,
+          "id": "grad"
+        }
+      ]
+    },
+    {
+      "lz": 1,
+      "typ": "zahl",
+      "frage": "15 von 60 Befragten wählen „Turnier“. Wie lang wird das Feld im 20-cm-Streifen?",
+      "loesung": 5,
+      "erklaerung": "0,25 · 20 cm = 5 cm",
+      "einheit": "cm",
+      "fehler": [
+        {
+          "wert": 15,
+          "id": "anzahl"
+        }
+      ]
+    },
+    {
+      "lz": 2,
+      "typ": "zahl",
+      "frage": "Werte: 8, 3, 6, 1, 7. Wie groß ist der Median?",
+      "loesung": 6,
+      "erklaerung": "Rangliste 1, 3, 6, 7, 8 → 6",
+      "fehler": [
+        {
+          "wert": 6.5,
+          "id": "sortieren"
+        }
+      ]
+    },
+    {
+      "lz": 2,
+      "typ": "zahl",
+      "frage": "Werte: 8, 3, 6, 1, 7. Wie groß ist der Mittelwert?",
+      "loesung": 5,
+      "erklaerung": "25 : 5 = 5",
+      "fehler": [
+        {
+          "wert": 6.25,
+          "id": "teilen"
+        },
+        {
+          "wert": 25,
+          "id": "teilen"
+        }
+      ]
+    }
+  ]
+}
+</script>
+<script src="../../../../qr.js"></script>
+<script src="../../../../exit-ticket.js"></script>
+</body>
+</html>

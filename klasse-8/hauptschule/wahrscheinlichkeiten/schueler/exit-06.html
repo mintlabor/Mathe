@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Exit-Ticket: Die Streichholzschachtel – Stunde 6</title>
+<link rel="stylesheet" href="../../../../schueler.css">
+</head>
+<body>
+<header><div class="inner">
+  <div class="pfad"><a href="./">🗺️ Lernlandkarte</a> › <a href="stunde-06.html">Stunde 6</a> › Exit-Ticket</div>
+  <h1>🎫 Exit-Ticket</h1>
+  <p class="untertitel">Stunde 6 · Die Streichholzschachtel</p>
+</div></header>
+<main>
+  <div id="exit"></div>
+</main>
+<script type="application/json" id="exit-daten">
+{
+  "titel": "Die Streichholzschachtel",
+  "stunde": 6,
+  "lernziele": [
+    {
+      "text": "Ich kann erklären, was ein Nicht-Laplace-Experiment ist.",
+      "foerdern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ● Basis",
+      "fordern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ●●● Profi"
+    },
+    {
+      "text": "Ich kann eine Wahrscheinlichkeit mit vielen Versuchen schätzen.",
+      "foerdern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ● Basis",
+      "fordern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ●●● Profi"
+    },
+    {
+      "text": "Ich kann mit Schätzwerten gerechte Punkte begründen.",
+      "foerdern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ● Basis",
+      "fordern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ●●● Profi"
+    }
+  ],
+  "fehlertypen": {
+    "laplace": "Gedacht, alle Lagen sind gleich wahrscheinlich",
+    "wenige": "Mit zu wenigen Versuchen geschätzt",
+    "punkte": "Mehr Punkte für die häufige Lage vergeben (verkehrt herum)",
+    "rechnen": "Relative Häufigkeit falsch berechnet"
+  },
+  "fragen": [
+    {
+      "lz": 0,
+      "typ": "auswahl",
+      "frage": "Warum kann man P(Stirn) bei der Streichholzschachtel nicht einfach ausrechnen?",
+      "optionen": [
+        "Die Seiten sind verschieden groß, die Lagen sind nicht gleich wahrscheinlich.",
+        "Eine Schachtel hat 6 Seiten, also immer ⅙.",
+        "Schachteln fallen nicht zufällig."
+      ],
+      "loesung": 0,
+      "erklaerung": "Nicht-Laplace-Experiment: Man muss schätzen.",
+      "fehler": {
+        "1": "laplace"
+      }
+    },
+    {
+      "lz": 1,
+      "typ": "zahl",
+      "frage": "Bei 200 Würfen lag die Schachtel 140-mal auf der Fläche. Schätze P(Fläche) als Dezimalzahl.",
+      "loesung": 0.7,
+      "erklaerung": "140 : 200 = 0,7",
+      "fehler": [
+        {
+          "wert": 140,
+          "id": "rechnen"
+        },
+        {
+          "wert": 70,
+          "id": "rechnen"
+        }
+      ]
+    },
+    {
+      "lz": 1,
+      "typ": "auswahl",
+      "frage": "Welche Schätzung ist am verlässlichsten?",
+      "optionen": [
+        "nach 10 Würfen",
+        "nach 50 Würfen",
+        "nach 500 Würfen"
+      ],
+      "loesung": 2,
+      "erklaerung": "Mehr Würfe → genauere Schätzung.",
+      "fehler": {
+        "0": "wenige",
+        "1": "wenige"
+      }
+    },
+    {
+      "lz": 2,
+      "typ": "auswahl",
+      "frage": "„Stirn“ kommt selten, „Fläche“ oft. Wofür sollte es mehr Punkte geben?",
+      "optionen": [
+        "für Fläche",
+        "für Stirn",
+        "für beide gleich viele"
+      ],
+      "loesung": 1,
+      "erklaerung": "Seltenes Ergebnis = mehr Punkte.",
+      "fehler": {
+        "0": "punkte",
+        "2": "laplace"
+      }
+    }
+  ]
+}
+</script>
+<script src="../../../../qr.js"></script>
+<script src="../../../../exit-ticket.js"></script>
+</body>
+</html>

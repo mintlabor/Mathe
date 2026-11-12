@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Üben: Welcher Mittelwert passt? – Stunde 20</title>
+<link rel="stylesheet" href="../../../../schueler.css">
+</head>
+<body>
+<header><div class="inner">
+  <div class="pfad"><a href="./">🗺️ Lernlandkarte</a> › Stunde 20</div>
+  <h1>Üben: Welcher Mittelwert passt?</h1>
+  <p class="untertitel">Stunde 20 · Ausreißer, Median oder Mittelwert, Spannweite</p>
+</div></header>
+<main>
+  <div class="box">
+    <strong>📘 Erinnerung</strong><br>
+    Ausreißer = Wert weit weg von den anderen · Mittelwert reagiert stark, Median kaum · Spannweite = größter − kleinster Wert
+  </div>
+  <div class="box">
+    <strong>📚 Wörter für heute:</strong> Ausreißer · Mittelwert · Median · Spannweite · typisch · verzerren<br>
+    <span class="klein">💬 So kannst du es aufschreiben: „Ich habe so gerechnet: …, weil …“</span>
+  </div>
+  <div id="ziele"></div>
+
+  <h2>📖 Aufgaben aus dem Buch</h2>
+  <div class="box buch">
+    <h3>Parallelo 8</h3>
+    <ul>
+      <li>● Basis: <span class="platzhalter">[BUCH: S. __ Nr. __]</span></li>
+      <li>●● Standard: <span class="platzhalter">[BUCH: S. __ Nr. __]</span></li>
+      <li>●●● Profi: <span class="platzhalter">[BUCH: S. __ Nr. __]</span></li>
+    </ul>
+    <p class="klein">Rechne im Heft. Unten findest du Aufgaben mit Tipps und Selbstkontrolle.</p>
+  </div>
+
+  <h2>Aufgaben</h2>
+  <div id="niveaus"></div>
+  <div id="fortschritt"></div>
+  <div id="aufgaben"></div>
+  <h2>🎨 Werde kreativ</h2>
+  <div class="box">
+    Erfinde eine Zeitungsmeldung, die mit dem Mittelwert übertreibt. Schreibe darunter eine ehrliche Meldung mit dem Median.
+    <span class="klein">Profi-Idee: Baue absichtlich einen Fehler ein. Findet ihn dein Partner?</span>
+  </div>
+  <h2>Wie sicher bist du jetzt?</h2>
+  <div id="ampel"></div>
+  <p><a href="exit-20.html">🎫 Weiter zum Exit-Ticket →</a> · <a href="./">← Lernlandkarte</a></p>
+</main>
+<script>
+window.SEITE = {
+  "speicher": "mathe-k8-hs-wk",
+  "stunde": 20,
+  "lernziele": [
+    "einen Ausreißer erkennen",
+    "begründen, ob Mittelwert oder Median besser passt",
+    "die Spannweite berechnen"
+  ],
+  "ichKann": [
+    "Ich kann einen Ausreißer erkennen.",
+    "Ich kann begründen, ob Mittelwert oder Median besser passt.",
+    "Ich kann die Spannweite berechnen."
+  ],
+  "aufgaben": [
+    {
+      "niveau": 1,
+      "typ": "zahl",
+      "frage": "Wie groß ist die Spannweite von 3, 7, 9, 12?",
+      "loesung": 9,
+      "tipps": [
+        "größter − kleinster Wert"
+      ],
+      "erklaerung": "12 − 3 = 9"
+    },
+    {
+      "niveau": 1,
+      "typ": "auswahl",
+      "frage": "Welcher Wert ist ein Ausreißer? 5, 6, 5, 7, 30, 6",
+      "loesung": 1,
+      "tipps": [
+        "Welcher Wert passt nicht zu den anderen?"
+      ],
+      "erklaerung": "30",
+      "optionen": [
+        "5",
+        "30",
+        "7"
+      ]
+    },
+    {
+      "niveau": 2,
+      "typ": "zahl",
+      "frage": "Wie groß ist der Mittelwert von 5, 6, 5, 7, 30, 6? (auf eine Stelle nach dem Komma runden)",
+      "loesung": 9.8,
+      "tipps": [
+        "Summe: 59",
+        "59 : 6"
+      ],
+      "erklaerung": "59 : 6 ≈ 9,8",
+      "toleranz": 0.05
+    },
+    {
+      "niveau": 2,
+      "typ": "zahl",
+      "frage": "Wie groß ist der Median von 5, 6, 5, 7, 30, 6?",
+      "loesung": 6,
+      "tipps": [
+        "Rangliste: 5, 5, 6, 6, 7, 30",
+        "(6 + 6) : 2"
+      ],
+      "erklaerung": "6"
+    },
+    {
+      "niveau": 2,
+      "typ": "auswahl",
+      "frage": "🔍 Fehler finden: Nele berechnet die Spannweite von 4, 9, 2, 7 so: (9 + 2) : 2 = 5,5. Was ist falsch?",
+      "loesung": 0,
+      "tipps": [
+        "Spannweite ist ein Abstand."
+      ],
+      "erklaerung": "9 − 2 = 7",
+      "optionen": [
+        "Spannweite = größter − kleinster Wert: 9 − 2 = 7.",
+        "Sie hätte 4 und 7 nehmen müssen.",
+        "Alles ist richtig."
+      ]
+    },
+    {
+      "niveau": 3,
+      "typ": "auswahl",
+      "frage": "Wartezeiten am Waffelstand (min): 2, 3, 3, 4, 25 (Waffeleisen kaputt). Was schreibst du ins Projekt?",
+      "loesung": 1,
+      "tipps": [
+        "Welcher Satz beschreibt die typische Wartezeit ehrlich?"
+      ],
+      "erklaerung": "Median nennen und den Ausreißer erklären.",
+      "optionen": [
+        "„Im Schnitt 7,4 min Wartezeit.“",
+        "„Meist 3 min (Median), einmal 25 min wegen eines kaputten Waffeleisens.“"
+      ]
+    }
+  ]
+};
+</script>
+<script src="../../../../schueler.js"></script>
+</body>
+</html>
