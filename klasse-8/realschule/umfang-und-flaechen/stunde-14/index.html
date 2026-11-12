@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Stunde 14: Rückwärts rechnen – Umfang und Flächen</title>
+<link rel="stylesheet" href="../../../../praesentation.css">
+<style>
+  .platzhalter { background: #fff3bf; border-radius: 4px; padding: 0 .3rem; font-family: ui-monospace, monospace; font-size: .9em; }
+  .exit-qr { display: flex; gap: 1.5rem; align-items: center; }
+  .exit-qr [data-qr] svg { width: 230px; height: 230px; display: block; border-radius: 8px; }
+  .skizze { width: min(100%, 560px); height: auto; max-height: 30vh; display: block; margin: .3rem auto; flex-shrink: 0; }
+</style>
+</head>
+<body data-phasen='[["Abrufen", 4], ["Problem", 7], ["Erarbeitung", 12], ["Ideen vergleichen", 5], ["Sicherung", 6], ["Übung", 7], ["Reflexion", 4]]'>
+
+<div class="leiste">
+  <div class="pfad"><a href="../../../../">Start</a> › <a href="../../../">Klasse 8</a> › <a href="../../">Realschule</a> › <a href="../">Umfang und Flächen</a> › Stunde 14</div>
+</div>
+
+<aside class="wortspeicher"
+  data-woerter='["Umkehraufgabe", "rückwärts rechnen", "Gleichung", "Probe", "Pfeilbild", "gesucht", "gegeben"]'
+  data-saetze='["Ich vermute, dass …", "Ich habe so gerechnet: …", "Das sieht man daran, dass …", "Ich stimme zu / nicht zu, weil …"]'></aside>
+
+<div class="buehne">
+
+  <!-- 1 · ABRUFEN -->
+  <section class="folie" data-phase="Abrufen">
+    <div class="kennung">Umfang und Flächen · Stunde 14 · Warm-up</div>
+    <h2>Was weißt du noch?</h2>
+    <p style="margin-top:0">Exit-Ticket von letzter Stunde: Rechteck 10 m × 6 m, Dreieck (4 m und 3 m) abgetrennt. Restfläche?</p>
+    <div data-abstimmung='["48 m²", "54 m²", "60 m²", "66 m²"]' data-loesung="1"></div>
+    <div class="hinweis">Alle halten gleichzeitig die ABCD-Karte hoch. Begründungen per 🎲 einholen, nicht per Melden.</div>
+  </section>
+
+  <!-- 2 · PROBLEM -->
+  <section class="folie" data-phase="Problem">
+    <div class="kennung">Problem<span class="leitmodell">Leitmodell: Rechteck-Trick</span></div>
+    <h2>Wie hoch muss das Beet werden?</h2>
+    <div class="problem"><div class="label">Problem</div><br>Für ein dreieckiges Blumenbeet gibt es 24 m² Rollrasen-Ersatz (Blühwiese). Die Grundseite entlang der Mauer ist 8 m lang.</div>
+    <div class="spannung" data-art="Wette">Wette: Mila rechnet 24 : 8 = 3. Das Beet wird <strong>3 m</strong> hoch.</div>
+    <div data-abstimmung='["3 m", "6 m", "16 m"]'></div>
+    <div class="lernziele schritt"><div class="titel">🎯 Heute lernst du …</div><ul><li>Ich kann eine fehlende Länge aus Flächeninhalt und einer Länge berechnen.</li><li>Ich kann Umkehraufgaben mit einem Pfeilbild oder einer Gleichung lösen.</li><li>Ich kann mein Ergebnis mit einer Probe prüfen.</li></ul></div>
+    <p class="schritt"><span class="projekt">Projekt „Unser Pausenhof“: Damit können wir Beete planen, die genau zu unserem Material passen.</span></p>
+    <div class="hinweis">Abstimmung festhalten (Foto/Tafel), am Ende der Stunde auflösen. Noch nicht verraten!</div>
+  </section>
+
+  <!-- 2c · EIGENE LÖSUNG -->
+  <section class="folie" data-phase="Problem" data-minuten="4">
+    <div class="kennung">Eigene Lösung</div>
+    <h2>Was meinst du?</h2>
+    <div data-denkzeit="60" data-text="Wie hoch muss das Dreieck werden? Rechne und mache eine Probe."></div>
+    <div data-methode="tps" data-minuten="1,2,2"></div>
+    <div data-tipps>
+      <div class="tipp">Probe mit h = 3: 8 · 3 : 2 = ?</div>
+      <div class="tipp">Rückwärts: Erst · 2, dann : 8.</div>
+    </div>
+    <p class="satzhilfe">Ich vermute, dass … · Ich würde zuerst …</p>
+    <div class="hinweis">Erwartet: 24 : 8 = 3 (Mila). Probe deckt den Fehler auf.</div>
+  </section>
+
+  <!-- 3 · ERARBEITUNG E -->
+  <section class="folie" data-phase="Erarbeitung" data-minuten="7">
+    <div class="kennung">Erarbeitung · Gruppen<span class="eis" data-eis="E"></span></div>
+    <h2>Finde die fehlende Länge</h2>
+    <p style="margin-top:0">Gesucht sind Figuren mit vorgegebenem Flächeninhalt. Wählt:</p>
+    <div class="wahlkarten">
+      <div class="wahlkarte"><div class=icon>📌</div><b>Geobrett</b>Spanne alle Dreiecke mit g = 6 und A = 12 Kästchen. Wie hoch sind sie?</div>
+      <div class="wahlkarte"><div class=icon>➡️</div><b>Pfeilbild</b>h → · g → : 2 → A, dann rückwärts mit Umkehrpfeilen</div>
+      <div class="wahlkarte"><div class=icon>⚖️</div><b>Gleichung</b>24 = 8 · h : 2 – mit Waage oder Umformen lösen</div>
+    </div>
+    <div data-methode="rollen"></div>
+    <div class="hinweis">Materialkiste: Geobretter, Pfeilbild-Vorlage, Kärtchen mit Umkehraufgaben (Parallelogramm, Dreieck, Trapez, Drachen).</div>
+  </section>
+
+  <!-- 3 · ERARBEITUNG I/S -->
+  <section class="folie" data-phase="Erarbeitung" data-minuten="5">
+    <div class="kennung">Erarbeitung · Was passiert, wenn …?<span class="eis" data-eis="IS"></span></div>
+    <h2>Was passiert, wenn …?</h2>
+    <div data-figur='{"typ": "dreieck", "g": 8, "h": 2, "v": 3, "regler": ["h", "v"], "bereich": {"h": [1, 9]}, "zeige": ["hoehe", "flaeche"], "an": ["hoehe", "flaeche"]}'></div>
+    <div class="vernetzen schritt">Stelle h so ein, dass A = 24 m² (cm²) wird. Was passiert mit A, wenn h doppelt so groß wird? Was folgt daraus fürs Rückwärtsrechnen?</div>
+  </section>
+
+  <!-- 4 · IDEEN VERGLEICHEN -->
+  <section class="folie" data-phase="Ideen vergleichen">
+    <div class="kennung">Ideen vergleichen</div>
+    <h2>Wer hat recht?</h2>
+    <div class="fehlerkarte" data-wer="Mila">
+      <div class="rechnung">A = 24 m², g = 8 m → h = 24 : 8 = <span class='fehler'>3 m</span></div>
+      <div class="erklaerung">Mila hat das „: 2“ der Dreiecksformel vergessen. Probe: 8 · 3 : 2 = 12 m² – zu wenig. Richtig: 24 · 2 = 48, 48 : 8 = 6 m. Probe: 8 · 6 : 2 = 24 m² ✓</div>
+    </div>
+    <div class="legende"><span class="l-ja">stimmt</span><span class="l-nein">stimmt nicht</span>
+      <button class="knopf" data-alle-auf style="margin-left:auto">Alle aufdecken</button><button class="knopf" data-alle-zu>Alle zudecken</button></div>
+    <div class="karten">
+      <div class="karte ja">Beim Parallelogramm gilt h = A : g.<span class="loesung">Ja, aus A = g · h.</span></div>
+      <div class="karte nein">Beim Dreieck gilt h = A : g.<span class="loesung">Nein: h = 2 · A : g.</span></div>
+      <div class="karte ja">Mit einer Probe kann man das Ergebnis prüfen.<span class="loesung">Ja: Ergebnis in die Formel einsetzen.</span></div>
+      <div class="karte ja">Beim Trapez gilt (a + c) : 2 = A : h.<span class="loesung">Ja, so findet man z. B. die fehlende Seite c.</span></div>
+    </div>
+    <p class="satzhilfe">Ich stimme zu / nicht zu, weil … · Der Fehler ist …</p>
+    <div class="hinweis">Erst Fehlerkarte: Denkzeit, dann 🎲. Karten einzeln: Daumen hoch/runter, dann aufdecken.</div>
+  </section>
+
+  <!-- 5 · SICHERUNG -->
+  <section class="folie" data-phase="Sicherung">
+    <div class="kennung">Sicherung<span class="eis" data-eis="EIS"></span></div>
+    <h2>Umkehraufgaben</h2>
+    <div class="merk">
+      <h3>Merke</h3>
+      <ul>
+        <li class="schritt">Pfeilbild: h → <strong>· g</strong> → <strong>: 2</strong> → A · rückwärts: A → <strong>· 2</strong> → <strong>: g</strong> → h</li>
+        <li class="schritt">Gleichung: 24 = 8 · h : 2 → 48 = 8 · h → h = 6 m</li>
+        <li class="schritt">Immer mit <strong>Probe</strong>: 8 · 6 : 2 = 24 ✓</li>
+      </ul>
+    </div>
+    <div class="produkt schritt">Erkläre es deinem Nachbarn in <strong>eigenen Worten</strong> und mit einer <strong>Skizze</strong>. Er sagt, ob er es verstanden hat.</div>
+    <div class="hinweis">Ins Heft und in die Steckbrief-Mappe übertragen. Danach 1–2 Erklärungen per 🎲 vorstellen lassen.</div>
+  </section>
+
+  <!-- 6 · ÜBUNG -->
+  <section class="folie" data-phase="Übung">
+    <div class="kennung">Übung · Buch<span class="eis" data-eis="S"></span></div>
+    <h2>Jetzt du! Wähle dein Niveau</h2>
+    <div class="wahlkarten">
+      <div class="wahlkarte"><b>● Basis</b>📖 <span class="platzhalter">[BUCH: S. __ Nr. __]</span></div>
+      <div class="wahlkarte"><b>●● Standard</b>📖 <span class="platzhalter">[BUCH: S. __ Nr. __]</span></div>
+      <div class="wahlkarte"><b>●●● Profi</b>📖 <span class="platzhalter">[BUCH: S. __ Nr. __]</span></div>
+    </div>
+    <div data-methode="lerntempoduett" data-minuten="5,0,2,0"></div>
+    <div class="produkt">Fertig? <strong>Erfinde eine eigene Aufgabe</strong>: „Ein Beet soll … m² groß werden …“ – dein Partner berechnet die fehlende Länge und macht die Probe.</div>
+    <p>Tipps und Selbstkontrolle: <a class="schuelerlink" href="../schueler/stunde-14.html" target="_blank">📱 Schülerseite · Stunde 14</a></p>
+    <div class="hinweis">Buchaufgaben im Heft. Wer fertig ist, wartet an der Haltestelle auf einen Partner. Rest als Hausaufgabe.</div>
+  </section>
+
+  <!-- 7 · REFLEXION -->
+  <section class="folie" data-phase="Reflexion">
+    <div class="kennung">Zurück zum Problem · Reflexion</div>
+    <h2>6 m, nicht 3 m – beim Dreieck zuerst · 2! Probe: 8 · 6 : 2 = 24 ✓</h2>
+    <div class="exit-qr">
+      <div data-qr="../schueler/exit-14.html"></div>
+      <div>
+        <p style="margin-top:0;font-size:1.4rem"><strong>🎫 Exit-Ticket</strong></p>
+        <p>Scanne den Code oder öffne die Schülerseite. Gib dein <strong>Kürzel</strong> ein.<br>Am Ende zeigst du mir deinen QR-Code.</p>
+        <p><a class="schuelerlink" href="../schueler/exit-14.html" target="_blank">🎫 Zum Exit-Ticket</a></p>
+        <p class="klein">Nächste Stunde: Wie groß ist unser Acker? – Flächen aus Karten bestimmen</p>
+      </div>
+    </div>
+    <div class="hinweis">Tafelabstimmung vom Anfang zeigen: Wer lag richtig? QR-Codes der Schüler mit der Kamera-App scannen → Auswertung.</div>
+  </section>
+
+</div>
+<script src="../../../../praesentation.js"></script>
+<script src="../../../../qr.js"></script>
+<script src="../modelle.js"></script>
+</body>
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Exit-Ticket: Stationen: Umfang und Flächen – Stunde 16</title>
+<link rel="stylesheet" href="../../../../schueler.css">
+</head>
+<body>
+<header><div class="inner">
+  <div class="pfad"><a href="./">🗺️ Lernlandkarte</a> › <a href="stunde-16.html">Stunde 16</a> › Exit-Ticket</div>
+  <h1>🎫 Exit-Ticket</h1>
+  <p class="untertitel">Stunde 16 · Stationen: Umfang und Flächen</p>
+</div></header>
+<main>
+  <div id="exit"></div>
+</main>
+<script type="application/json" id="exit-daten">
+{
+  "titel": "Stationen: Umfang und Flächen",
+  "stunde": 16,
+  "lernziele": [
+    {
+      "text": "Ich kann Umfang und Flächeninhalt aller fünf Figuren berechnen.",
+      "foerdern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ● Basis",
+      "fordern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ●●● Profi"
+    },
+    {
+      "text": "Ich kann für eine Aufgabe den passenden Lösungsweg auswählen.",
+      "foerdern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ● Basis",
+      "fordern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ●●● Profi"
+    },
+    {
+      "text": "Ich kann meinen Lernstand mit der Ampel einschätzen.",
+      "foerdern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ● Basis",
+      "fordern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ●●● Profi"
+    }
+  ],
+  "fehlertypen": {
+    "halb": "Durch 2 geteilt bzw. nicht geteilt (Formel verwechselt)",
+    "trapez": "Trapezformel falsch angewendet",
+    "umfang": "Umfang und Fläche verwechselt",
+    "rueck": "Rückwärtsrechnen falsch"
+  },
+  "fragen": [
+    {
+      "lz": 0,
+      "typ": "zahl",
+      "frage": "Dreieck: g = 7 cm, h = 6 cm. Wie groß ist A?",
+      "loesung": 21,
+      "erklaerung": "7 · 6 : 2 = 21 cm²",
+      "einheit": "cm²",
+      "fehler": [
+        {
+          "wert": 42,
+          "id": "halb"
+        },
+        {
+          "wert": 13,
+          "id": "umfang"
+        }
+      ]
+    },
+    {
+      "lz": 0,
+      "typ": "zahl",
+      "frage": "Trapez: a = 11 cm, c = 7 cm, h = 5 cm. Wie groß ist A?",
+      "loesung": 45,
+      "erklaerung": "(11 + 7) : 2 · 5 = 45 cm²",
+      "einheit": "cm²",
+      "fehler": [
+        {
+          "wert": 90,
+          "id": "trapez"
+        },
+        {
+          "wert": 385,
+          "id": "trapez"
+        }
+      ]
+    },
+    {
+      "lz": 0,
+      "typ": "zahl",
+      "frage": "Drachen: e = 9 cm, f = 12 cm. Wie groß ist A?",
+      "loesung": 54,
+      "erklaerung": "9 · 12 : 2 = 54 cm²",
+      "einheit": "cm²",
+      "fehler": [
+        {
+          "wert": 108,
+          "id": "halb"
+        },
+        {
+          "wert": 21,
+          "id": "umfang"
+        }
+      ]
+    },
+    {
+      "lz": 1,
+      "typ": "zahl",
+      "frage": "Dreieck mit A = 27 cm² und g = 9 cm. Wie groß ist h?",
+      "loesung": 6,
+      "erklaerung": "h = 2 · 27 : 9 = 6 cm",
+      "einheit": "cm",
+      "fehler": [
+        {
+          "wert": 3,
+          "id": "rueck"
+        },
+        {
+          "wert": 243,
+          "id": "rueck"
+        }
+      ]
+    }
+  ]
+}
+</script>
+<script src="../../../../qr.js"></script>
+<script src="../../../../exit-ticket.js"></script>
+</body>
+</html>

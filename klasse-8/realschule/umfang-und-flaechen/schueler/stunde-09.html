@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Üben: Jede Seite kann Grundseite sein – Stunde 9</title>
+<link rel="stylesheet" href="../../../../schueler.css">
+</head>
+<body>
+<header><div class="inner">
+  <div class="pfad"><a href="./">🗺️ Lernlandkarte</a> › Stunde 9</div>
+  <h1>Üben: Jede Seite kann Grundseite sein</h1>
+  <p class="untertitel">Stunde 9 · Dreiecke messen und berechnen</p>
+</div></header>
+<main>
+  <div class="box">
+    <strong>📘 Erinnerung</strong><br>
+    Jede Seite kann Grundseite sein · Grundseite und Höhe gehören zusammen · stumpfwinklig: verlängern · Messwerte sind gerundet
+  </div>
+  <div class="box">
+    <strong>📚 Wörter für heute:</strong> Grundseite · zugehörige Höhe · stumpfwinklig · verlängern · messen · Messungenauigkeit<br>
+    <span class="klein">💬 So kannst du es aufschreiben: „Ich habe so gerechnet: …, weil …“</span>
+  </div>
+  <div id="ziele"></div>
+
+  <h2>📖 Aufgaben aus dem Buch</h2>
+  <div class="box buch">
+    <h3>Parallelo 8</h3>
+    <ul>
+      <li>● Basis: <span class="platzhalter">[BUCH: S. __ Nr. __]</span></li>
+      <li>●● Standard: <span class="platzhalter">[BUCH: S. __ Nr. __]</span></li>
+      <li>●●● Profi: <span class="platzhalter">[BUCH: S. __ Nr. __]</span></li>
+    </ul>
+    <p class="klein">Rechne im Heft. Unten findest du Aufgaben mit Tipps und Selbstkontrolle.</p>
+  </div>
+
+  <h2>Aufgaben</h2>
+  <div id="niveaus"></div>
+  <div id="fortschritt"></div>
+  <div id="aufgaben"></div>
+  <h2>🎨 Werde kreativ</h2>
+  <div class="box">
+    Zeichne ein Dreieck mit A = 12 cm² auf drei verschiedene Arten (spitz, recht, stumpf).
+    <span class="klein">Profi-Idee: Baue absichtlich einen Fehler ein. Findet ihn dein Partner?</span>
+  </div>
+  <h2>Wie sicher bist du jetzt?</h2>
+  <div id="ampel"></div>
+  <p><a href="exit-09.html">🎫 Weiter zum Exit-Ticket →</a> · <a href="./">← Lernlandkarte</a></p>
+</main>
+<script>
+window.SEITE = {
+  "speicher": "mathe-k8-rs-uf",
+  "stunde": 9,
+  "lernziele": [
+    "zu jeder Seite die passende Höhe zeichnen und messen",
+    "den Flächeninhalt auch bei stumpfwinkligen Dreiecken berechnen",
+    "durch Messen in einer Zeichnung einen Flächeninhalt bestimmen"
+  ],
+  "ichKann": [
+    "Ich kann zu jeder Seite die passende Höhe zeichnen und messen.",
+    "Ich kann den Flächeninhalt auch bei stumpfwinkligen Dreiecken berechnen.",
+    "Ich kann durch Messen in einer Zeichnung einen Flächeninhalt bestimmen."
+  ],
+  "aufgaben": [
+    {
+      "niveau": 1,
+      "typ": "zahl",
+      "frage": "Stumpfwinkliges Dreieck: g = 5 cm, die Höhe liegt außen und ist 4 cm lang. A = ?",
+      "loesung": 10,
+      "tipps": [
+        "Die Formel gilt auch hier."
+      ],
+      "erklaerung": "A = 5 · 4 : 2 = 10 cm²",
+      "einheit": "cm²"
+    },
+    {
+      "niveau": 1,
+      "typ": "auswahl",
+      "frage": "Zur längsten Seite eines Dreiecks gehört …",
+      "loesung": 0,
+      "tipps": [
+        "A bleibt gleich: Wenn g groß ist, muss h …"
+      ],
+      "erklaerung": "… die kürzeste Höhe.",
+      "optionen": [
+        "die kürzeste Höhe",
+        "die längste Höhe",
+        "keine Höhe"
+      ]
+    },
+    {
+      "niveau": 2,
+      "typ": "zahl",
+      "frage": "Dreieck: Seite 12 cm mit Höhe 5 cm. Wie lang ist die Höhe auf der Seite 10 cm?",
+      "loesung": 6,
+      "tipps": [
+        "Erst A ausrechnen."
+      ],
+      "erklaerung": "A = 12 · 5 : 2 = 30 cm². 30 = 10 · h : 2 → h = 6 cm",
+      "einheit": "cm"
+    },
+    {
+      "niveau": 2,
+      "typ": "zahl",
+      "frage": "Rechtwinkliges Dreieck 6–8–10 cm. Wie lang ist die Höhe auf der 10-cm-Seite?",
+      "loesung": 4.8,
+      "tipps": [
+        "A = 24 cm²"
+      ],
+      "erklaerung": "24 = 10 · h : 2 → h = 48 : 10 = 4,8 cm",
+      "einheit": "cm"
+    },
+    {
+      "niveau": 3,
+      "typ": "auswahl",
+      "frage": "Mia misst am selben Dreieck A = 24,3 cm², Tim 23,8 cm². Was stimmt?",
+      "loesung": 2,
+      "tipps": [
+        "Kann man mit dem Geodreieck auf 0,1 mm genau messen?"
+      ],
+      "erklaerung": "Beide können sorgfältig gemessen haben – Messungenauigkeit.",
+      "optionen": [
+        "Mia hat falsch gemessen.",
+        "Tim hat falsch gemessen.",
+        "Beide können richtig gemessen haben."
+      ]
+    },
+    {
+      "niveau": 3,
+      "typ": "zahl",
+      "frage": "Ein Dreieck hat A = 18 cm². Zur Seite a = 9 cm gehört welche Höhe?",
+      "loesung": 4,
+      "tipps": [
+        "18 = 9 · h : 2"
+      ],
+      "erklaerung": "h = 36 : 9 = 4 cm",
+      "einheit": "cm"
+    }
+  ]
+};
+</script>
+<script src="../../../../schueler.js"></script>
+</body>
+</html>

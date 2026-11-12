@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Üben: Projekt: Galeriegang – Stunde 18</title>
+<link rel="stylesheet" href="../../../../schueler.css">
+</head>
+<body>
+<header><div class="inner">
+  <div class="pfad"><a href="./">🗺️ Lernlandkarte</a> › Stunde 18</div>
+  <h1>Üben: Projekt: Galeriegang</h1>
+  <p class="untertitel">Stunde 18 · Pläne vorstellen und prüfen</p>
+</div></header>
+<main>
+  <div class="box">
+    <strong>📘 Erinnerung</strong><br>
+    Kriterien: 4 Figuren · Maßstab · richtige Formeln · Kosten ≤ 6000 € · Begründung · Fehler freundlich und genau benennen
+  </div>
+  <div class="box">
+    <strong>📚 Wörter für heute:</strong> Kriterium · Feedback · nachrechnen · Fehler erklären · begründen · Budget<br>
+    <span class="klein">💬 So kannst du es aufschreiben: „Ich habe so gerechnet: …, weil …“</span>
+  </div>
+  <div id="ziele"></div>
+
+  <h2>📖 Aufgaben aus dem Buch</h2>
+  <div class="box buch">
+    <h3>Parallelo 8</h3>
+    <ul>
+      <li>● Basis: <span class="platzhalter">[BUCH: S. __ Nr. __]</span></li>
+      <li>●● Standard: <span class="platzhalter">[BUCH: S. __ Nr. __]</span></li>
+      <li>●●● Profi: <span class="platzhalter">[BUCH: S. __ Nr. __]</span></li>
+    </ul>
+    <p class="klein">Rechne im Heft. Unten findest du Aufgaben mit Tipps und Selbstkontrolle.</p>
+  </div>
+
+  <h2>Aufgaben</h2>
+  <div id="niveaus"></div>
+  <div id="fortschritt"></div>
+  <div id="aufgaben"></div>
+  <h2>🎨 Werde kreativ</h2>
+  <div class="box">
+    Schreibe einen kurzen Brief an die Schulleitung: Warum soll genau euer Plan gebaut werden? Nutze mindestens drei Fachwörter.
+    <span class="klein">Profi-Idee: Baue absichtlich einen Fehler ein. Findet ihn dein Partner?</span>
+  </div>
+  <h2>Wie sicher bist du jetzt?</h2>
+  <div id="ampel"></div>
+  <p><a href="exit-18.html">🎫 Weiter zum Exit-Ticket →</a> · <a href="./">← Lernlandkarte</a></p>
+</main>
+<script>
+window.SEITE = {
+  "speicher": "mathe-k8-rs-uf",
+  "stunde": 18,
+  "lernziele": [
+    "einen Flächenplan mit Kriterien beurteilen",
+    "eine Flächenberechnung einer anderen Gruppe nachrechnen und einen Fehler erklären",
+    "unseren Plan in eigenen Worten mit Fachwörtern vorstellen"
+  ],
+  "ichKann": [
+    "Ich kann einen Flächenplan mit Kriterien beurteilen.",
+    "Ich kann eine Flächenberechnung einer anderen Gruppe nachrechnen und einen Fehler erklären.",
+    "Ich kann unseren Plan in eigenen Worten mit Fachwörtern vorstellen."
+  ],
+  "aufgaben": [
+    {
+      "niveau": 1,
+      "typ": "auswahl",
+      "frage": "🔍 Fehler finden: Gruppe A rechnet für ein Dreiecksbeet g = 6 m, h = 4 m: A = 24 m². Was stimmt?",
+      "loesung": 1,
+      "tipps": [
+        "Dreiecksformel"
+      ],
+      "erklaerung": "Richtig wäre 6 · 4 : 2 = 12 m².",
+      "optionen": [
+        "Alles richtig",
+        "Sie haben das : 2 vergessen",
+        "Sie hätten addieren müssen"
+      ]
+    },
+    {
+      "niveau": 1,
+      "typ": "auswahl",
+      "frage": "Welches Feedback ist hilfreich?",
+      "loesung": 0,
+      "tipps": [
+        "Konkret und freundlich."
+      ],
+      "erklaerung": "Konkret: Wo ist der Fehler, wie geht es richtig?",
+      "optionen": [
+        "„Bei der Raute fehlt das : 2 – dann wären es 10 m².“",
+        "„Sieht doof aus.“",
+        "„Alles falsch.“"
+      ]
+    },
+    {
+      "niveau": 2,
+      "typ": "zahl",
+      "frage": "Gruppe B: Rasenkante um ein Trapez a = 6 m, c = 4 m, b = d = 3 m. 4 € pro m. Kosten?",
+      "loesung": 64,
+      "tipps": [
+        "u = 16 m"
+      ],
+      "erklaerung": "16 · 4 = 64 €",
+      "einheit": "€"
+    },
+    {
+      "niveau": 2,
+      "typ": "zahl",
+      "frage": "Gruppe C: Pflaster für ein Parallelogramm g = 5 m, h = 3 m bei 35 € pro m². Kosten?",
+      "loesung": 525,
+      "tipps": [
+        "A = 15 m²"
+      ],
+      "erklaerung": "15 · 35 = 525 €",
+      "einheit": "€"
+    },
+    {
+      "niveau": 3,
+      "typ": "auswahl",
+      "frage": "🔍 Gruppe D: Drachen-Beet e = 4 m, f = 5 m, Rasenkante: „u = 4 · 5 = 20 m“. Was ist falsch?",
+      "loesung": 2,
+      "tipps": [
+        "Für den Umfang braucht man die Seiten, nicht die Diagonalen."
+      ],
+      "erklaerung": "Für den Umfang braucht man die Seitenlängen a und b (messen), nicht die Diagonalen.",
+      "optionen": [
+        "Nichts",
+        "Es müsste 4 · 5 : 2 heißen",
+        "Für den Umfang braucht man die Seiten, nicht die Diagonalen"
+      ]
+    },
+    {
+      "niveau": 3,
+      "typ": "zahl",
+      "frage": "Gruppe E hat 6 120 € ausgegeben. Um wie viel Euro liegt sie über dem Budget von 6 000 €?",
+      "loesung": 120,
+      "tipps": [
+        "Differenz"
+      ],
+      "erklaerung": "120 € zu viel",
+      "einheit": "€"
+    }
+  ]
+};
+</script>
+<script src="../../../../schueler.js"></script>
+</body>
+</html>

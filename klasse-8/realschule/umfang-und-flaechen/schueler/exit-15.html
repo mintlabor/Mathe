@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Exit-Ticket: Wie groß ist unser Acker? – Stunde 15</title>
+<link rel="stylesheet" href="../../../../schueler.css">
+</head>
+<body>
+<header><div class="inner">
+  <div class="pfad"><a href="./">🗺️ Lernlandkarte</a> › <a href="stunde-15.html">Stunde 15</a> › Exit-Ticket</div>
+  <h1>🎫 Exit-Ticket</h1>
+  <p class="untertitel">Stunde 15 · Wie groß ist unser Acker?</p>
+</div></header>
+<main>
+  <div id="exit"></div>
+</main>
+<script type="application/json" id="exit-daten">
+{
+  "titel": "Wie groß ist unser Acker?",
+  "stunde": 15,
+  "lernziele": [
+    {
+      "text": "Ich kann mit einem Maßstab Längen aus einer Karte in wahre Längen umrechnen.",
+      "foerdern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ● Basis",
+      "fordern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ●●● Profi"
+    },
+    {
+      "text": "Ich kann den Flächeninhalt eines Grundstücks aus einer Karte bestimmen.",
+      "foerdern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ● Basis",
+      "fordern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ●●● Profi"
+    },
+    {
+      "text": "Ich kann große Flächen in m², a und ha angeben.",
+      "foerdern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ● Basis",
+      "fordern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ●●● Profi"
+    }
+  ],
+  "fehlertypen": {
+    "cm": "Ergebnis in cm statt in m angegeben",
+    "flaeche": "Fläche statt Längen mit dem Maßstab umgerechnet",
+    "ha": "Hektar falsch umgerechnet",
+    "vorgehen": "Vorgehen bei Karten nicht klar"
+  },
+  "fragen": [
+    {
+      "lz": 0,
+      "typ": "zahl",
+      "frage": "Maßstab 1 : 1000. Auf der Karte sind es 7 cm. Wie viele Meter sind das in Wirklichkeit?",
+      "loesung": 70,
+      "erklaerung": "7 cm · 1000 = 7000 cm = 70 m",
+      "einheit": "m",
+      "fehler": [
+        {
+          "wert": 7000,
+          "id": "cm"
+        },
+        {
+          "wert": 7,
+          "id": "cm"
+        },
+        {
+          "wert": 700,
+          "id": "cm"
+        }
+      ]
+    },
+    {
+      "lz": 1,
+      "typ": "zahl",
+      "frage": "Maßstab 1 : 1000. Ein Rechteck ist auf der Karte 5 cm × 3 cm. Wie groß ist es in Wirklichkeit?",
+      "loesung": 1500,
+      "erklaerung": "50 m · 30 m = 1500 m²",
+      "einheit": "m²",
+      "fehler": [
+        {
+          "wert": 15000,
+          "id": "flaeche"
+        },
+        {
+          "wert": 15,
+          "id": "flaeche"
+        },
+        {
+          "wert": 150,
+          "id": "flaeche"
+        }
+      ]
+    },
+    {
+      "lz": 2,
+      "typ": "zahl",
+      "frage": "35 000 m² = ? ha",
+      "loesung": 3.5,
+      "erklaerung": "35 000 : 10 000 = 3,5 ha",
+      "einheit": "ha",
+      "fehler": [
+        {
+          "wert": 350,
+          "id": "ha"
+        },
+        {
+          "wert": 35,
+          "id": "ha"
+        }
+      ]
+    },
+    {
+      "lz": 1,
+      "typ": "auswahl",
+      "frage": "Wie gehst du am sichersten vor?",
+      "optionen": [
+        "Erst Längen mit dem Maßstab umrechnen, dann die Fläche berechnen",
+        "Kartenfläche mit dem Maßstab malnehmen",
+        "Kartenfläche durch den Maßstab teilen"
+      ],
+      "loesung": 0,
+      "erklaerung": "Der Maßstab gilt für Längen.",
+      "fehler": {
+        "1": "flaeche",
+        "2": "vorgehen"
+      }
+    }
+  ]
+}
+</script>
+<script src="../../../../qr.js"></script>
+<script src="../../../../exit-ticket.js"></script>
+</body>
+</html>

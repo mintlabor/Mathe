@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Üben: Das Trapez – Stunde 10</title>
+<link rel="stylesheet" href="../../../../schueler.css">
+</head>
+<body>
+<header><div class="inner">
+  <div class="pfad"><a href="./">🗺️ Lernlandkarte</a> › Stunde 10</div>
+  <h1>Üben: Das Trapez</h1>
+  <p class="untertitel">Stunde 10 · Verdoppeln, Zerlegen oder Mittellinie</p>
+</div></header>
+<main>
+  <div class="box">
+    <strong>📘 Erinnerung</strong><br>
+    Trapez: A = (a + c) : 2 · h · a ∥ c · Zwei Trapeze = Parallelogramm mit Grundseite a + c
+  </div>
+  <div class="box">
+    <strong>📚 Wörter für heute:</strong> Trapez · parallele Seiten a und c · Schenkel · Höhe h · Mittellinie · verdoppeln · zerlegen<br>
+    <span class="klein">💬 So kannst du es aufschreiben: „Ich habe so gerechnet: …, weil …“</span>
+  </div>
+  <div id="ziele"></div>
+
+  <h2>📖 Aufgaben aus dem Buch</h2>
+  <div class="box buch">
+    <h3>Parallelo 8</h3>
+    <ul>
+      <li>● Basis: <span class="platzhalter">[BUCH: S. __ Nr. __]</span></li>
+      <li>●● Standard: <span class="platzhalter">[BUCH: S. __ Nr. __]</span></li>
+      <li>●●● Profi: <span class="platzhalter">[BUCH: S. __ Nr. __]</span></li>
+    </ul>
+    <p class="klein">Rechne im Heft. Unten findest du Aufgaben mit Tipps und Selbstkontrolle.</p>
+  </div>
+
+  <h2>Aufgaben</h2>
+  <div id="niveaus"></div>
+  <div id="fortschritt"></div>
+  <div id="aufgaben"></div>
+  <h2>🎨 Werde kreativ</h2>
+  <div class="box">
+    Ein Gartenbeet soll Trapezform und genau 20 m² bekommen. Finde zwei verschiedene Möglichkeiten für a, c und h.
+    <span class="klein">Profi-Idee: Baue absichtlich einen Fehler ein. Findet ihn dein Partner?</span>
+  </div>
+  <h2>Wie sicher bist du jetzt?</h2>
+  <div id="ampel"></div>
+  <p><a href="exit-10.html">🎫 Weiter zum Exit-Ticket →</a> · <a href="./">← Lernlandkarte</a></p>
+</main>
+<script>
+window.SEITE = {
+  "speicher": "mathe-k8-rs-uf",
+  "stunde": 10,
+  "lernziele": [
+    "die Flächenformel des Trapezes durch Verdoppeln oder Zerlegen begründen",
+    "den Flächeninhalt mit A = (a + c) : 2 · h berechnen",
+    "im Trapez die parallelen Seiten a und c und die Höhe h erkennen"
+  ],
+  "ichKann": [
+    "Ich kann die Flächenformel des Trapezes durch Verdoppeln oder Zerlegen begründen.",
+    "Ich kann den Flächeninhalt mit A = (a + c) : 2 · h berechnen.",
+    "Ich kann im Trapez die parallelen Seiten a und c und die Höhe h erkennen."
+  ],
+  "aufgaben": [
+    {
+      "niveau": 1,
+      "typ": "zahl",
+      "frage": "Trapez: a = 9 cm, c = 5 cm, h = 4 cm. A = ?",
+      "loesung": 28,
+      "tipps": [
+        "(9 + 5) : 2 = 7"
+      ],
+      "erklaerung": "A = 7 · 4 = 28 cm²",
+      "einheit": "cm²"
+    },
+    {
+      "niveau": 1,
+      "typ": "zahl",
+      "frage": "Trapez: a = 12 cm, c = 8 cm, h = 3,5 cm. A = ?",
+      "loesung": 35,
+      "tipps": [
+        "(12 + 8) : 2 = 10"
+      ],
+      "erklaerung": "A = 10 · 3,5 = 35 cm²",
+      "einheit": "cm²"
+    },
+    {
+      "niveau": 2,
+      "typ": "auswahl",
+      "frage": "Welche Strecken braucht man für den Flächeninhalt eines Trapezes?",
+      "loesung": 0,
+      "tipps": [
+        "Die Schenkel braucht man nur für den Umfang."
+      ],
+      "erklaerung": "a, c und h.",
+      "optionen": [
+        "a, c und h",
+        "a, b, c und d",
+        "nur a und c"
+      ]
+    },
+    {
+      "niveau": 2,
+      "typ": "zahl",
+      "frage": "Querschnitt eines Grabens: oben 3 m, unten 1 m breit, 1,5 m tief. Wie groß ist die Querschnittsfläche?",
+      "loesung": 3,
+      "tipps": [
+        "Trapez mit a = 3, c = 1, h = 1,5"
+      ],
+      "erklaerung": "A = (3 + 1) : 2 · 1,5 = 3 m²",
+      "einheit": "m²"
+    },
+    {
+      "niveau": 3,
+      "typ": "zahl",
+      "frage": "Dach: a = 10 m, c = 6 m, h = 4 m. 12 Ziegel pro m². Wie viele Ziegel?",
+      "loesung": 384,
+      "tipps": [
+        "Erst A, dann · 12."
+      ],
+      "erklaerung": "A = 32 m² → 32 · 12 = 384 Ziegel",
+      "einheit": "Ziegel"
+    },
+    {
+      "niveau": 3,
+      "typ": "zahl",
+      "frage": "Trapez mit a = 8 cm, c = 4 cm, Schenkel b = 5 cm, d = 5 cm. Wie groß ist u?",
+      "loesung": 22,
+      "tipps": [
+        "Alle vier Seiten addieren."
+      ],
+      "erklaerung": "u = 8 + 5 + 4 + 5 = 22 cm",
+      "einheit": "cm"
+    }
+  ]
+};
+</script>
+<script src="../../../../schueler.js"></script>
+</body>
+</html>

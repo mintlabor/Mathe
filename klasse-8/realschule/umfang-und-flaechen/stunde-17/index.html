@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Stunde 17: Projekt: Unser neuer Pausenhof – Umfang und Flächen</title>
+<link rel="stylesheet" href="../../../../praesentation.css">
+<style>
+  .platzhalter { background: #fff3bf; border-radius: 4px; padding: 0 .3rem; font-family: ui-monospace, monospace; font-size: .9em; }
+  .exit-qr { display: flex; gap: 1.5rem; align-items: center; }
+  .exit-qr [data-qr] svg { width: 230px; height: 230px; display: block; border-radius: 8px; }
+  .skizze { width: min(100%, 560px); height: auto; max-height: 30vh; display: block; margin: .3rem auto; flex-shrink: 0; }
+</style>
+</head>
+<body data-phasen='[["Abrufen", 3], ["Auftrag", 5], ["Projektarbeit", 30], ["Zwischenstand", 3], ["Reflexion", 4]]'>
+
+<div class="leiste">
+  <div class="pfad"><a href="../../../../">Start</a> › <a href="../../../">Klasse 8</a> › <a href="../../">Realschule</a> › <a href="../">Umfang und Flächen</a> › Stunde 17</div>
+</div>
+
+<aside class="wortspeicher"
+  data-woerter='["Maßstab 1 : 100", "Flächeninhalt", "Umfang", "Kosten", "Budget", "Pflaster", "Rasenkante"]'
+  data-saetze='["Unser Beet ist ein …, weil …", "Die Fläche beträgt …", "Für die Einfassung brauchen wir …", "Wir bleiben im Budget, weil …"]'></aside>
+
+<div class="buehne">
+
+  <!-- 1 · ABRUFEN -->
+  <section class="folie" data-phase="Abrufen">
+    <div class="kennung">Umfang und Flächen · Stunde 17 · Warm-up</div>
+    <h2>Was weißt du noch?</h2>
+    <p style="margin-top:0">Exit-Ticket von letzter Stunde: Trapez a = 11 cm, c = 7 cm, h = 5 cm. Wie groß ist A?</p>
+    <div data-abstimmung='["90 cm²", "45 cm²", "385 cm²", "23 cm²"]' data-loesung="1"></div>
+    <div class="hinweis">Alle halten gleichzeitig die ABCD-Karte hoch. Begründungen per 🎲 einholen, nicht per Melden.</div>
+  </section>
+
+  <section class="folie" data-phase="Auftrag">
+    <div class="kennung">Projektauftrag<span class="leitmodell">Leitmodell: Rechteck-Trick</span></div>
+    <h2>Unser neuer Pausenhof</h2>
+    <div class="spannung" data-art="Ziel">Die Schulleitung hat <strong>6000 €</strong> für eine Ecke des Pausenhofs (20 m × 15 m). Welche Gruppe macht den besten Plan – schön, sinnvoll und richtig gerechnet?</div>
+    <div class="lernziele"><div class="titel">🎯 Heute lernst du …</div><ul><li>Ich kann einen Plan mit verschiedenen Figuren maßstabsgerecht zeichnen.</li><li>Ich kann Flächeninhalte und Umfänge in einem Sachzusammenhang berechnen.</li><li>Ich kann mit Flächen und Längen Kosten berechnen.</li></ul></div>
+    <div class="wahlkarten">
+      <div class="wahlkarte"><div class=icon>🏫</div><b>Pausenhof</b>Sitzecke, Beete, Spielfeld</div>
+      <div class="wahlkarte"><div class=icon>🌻</div><b>Bauerngarten</b>Gemüse- und Blumenbeete, Wege</div>
+      <div class="wahlkarte"><div class=icon>🛝</div><b>Spielplatz</b>Sandfläche, Rasen, Weg</div>
+    </div>
+    <div class="kasten"><strong>💶 Preisliste</strong> · Pflaster 35 € pro m² · Rollrasen 8 € pro m² · Blühwiese 3 € pro m² · Rindenmulch 6 € pro m² · Rasenkante 4 € pro m (Umfang!) · Bank 250 €</div>
+    <div class="hinweis">Gruppen à 4. Vorgaben: mindestens 4 verschiedene Figuren aus der Einheit (Dreieck, Parallelogramm, Trapez, Raute oder Drachen), Maßstab 1 : 100, Budget einhalten. Der Rest der Fläche bleibt Asphalt (kostet nichts).</div>
+  </section>
+
+  <section class="folie" data-phase="Auftrag" data-minuten="2">
+    <div class="kennung">Rollen und Checkliste</div>
+    <h2>Wer macht was?</h2>
+    <div class="zweispaltig">
+      <div><div data-methode="rollen"></div></div>
+      <div class="kasten"><strong>✅ Plan-Checkliste</strong>
+        <ul style="margin:.3rem 0 0">
+          <li>Plan 20 cm × 15 cm auf Karopapier (1 cm ≙ 1 m)</li>
+          <li>mind. 4 verschiedene Figuren, alle Maße eingetragen</li>
+          <li>Tabelle: Figur · Formel · Fläche · Umfang · Material · Kosten</li>
+          <li>Gesamtkosten ≤ 6000 €</li>
+          <li>kurze Begründung: Warum ist unser Plan gut?</li>
+        </ul></div>
+    </div>
+    <div class="hinweis">Rollen auslosen (🎲). Checkliste ausgedruckt je Gruppe.</div>
+  </section>
+
+  <section class="folie" data-phase="Projektarbeit">
+    <div class="kennung">Projektarbeit<span class="eis" data-eis="EIS"></span></div>
+    <h2>Wir planen und rechnen</h2>
+    <div data-methode="Projektplan" data-schritte='[["✏️ Entwurf skizzieren (mind. 4 Figuren)", 6], ["📐 Maßstäblich zeichnen, Maße eintragen", 10], ["🔢 Flächen und Umfänge berechnen (Tabelle)", 9], ["💶 Kosten berechnen, Budget prüfen", 5]]'></div>
+    <div class="wahlkarten">
+      <div class="wahlkarte"><div class=icon>🆘</div><b>Hilfekarten</b>Merkkästen der Stunden 5–15 liegen aus</div>
+      <div class="wahlkarte"><div class=icon>💻</div><b>Modell prüfen</b>Figuren-Modell zum Nachrechnen (nächste Folie)</div>
+      <div class="wahlkarte"><div class=icon>🎓</div><b>Experten</b>Erst eine andere Gruppe fragen, dann die Lehrkraft</div>
+    </div>
+    <p class="satzhilfe">Unser Beet ist ein …, weil … · Die Fläche beträgt … · Für die Einfassung brauchen wir …</p>
+    <p><a class="schuelerlink" href="../schueler/stunde-17.html" target="_blank">📱 Übungen zu Kosten und Maßstab · Stunde 17</a></p>
+    <div class="hinweis">Material: Karopapier A3, Lineal, Geodreieck, Buntstifte, Taschenrechner, Preisliste, Checkliste. Klick auf einen Schritt startet den Timer. Erst Bleistift, dann Farbe. Unfertiges wird in Stunde 18 in den ersten 10 Minuten fertig.</div>
+  </section>
+
+  <section class="folie" data-phase="Projektarbeit">
+    <div class="kennung">Projektarbeit · Rechenhilfe</div>
+    <h2>Figuren-Modell zum Nachrechnen</h2>
+    <div data-figur='{"typ": "trapez", "a": 8, "c": 4, "h": 5, "v": 2, "regler": ["a", "c", "h", "v"], "typen": ["dreieck", "parallelogramm", "raute", "drachen"], "zeige": ["hoehe", "flaeche", "umfang"], "an": ["hoehe", "flaeche", "umfang"]}'></div>
+    <div class="hinweis">Gruppen stellen ihre Maße ein und vergleichen mit ihrer Rechnung (1 Kästchen ≙ 1 m). Der Timer der Projektarbeit läuft weiter.</div>
+  </section>
+
+  <section class="folie" data-phase="Zwischenstand">
+    <div class="kennung">Zwischenstand</div>
+    <h2>Blitzlicht</h2>
+    <div data-denkzeit="30" data-text="Jede Gruppe: Was ist fertig? Was fehlt noch? Wo braucht ihr Hilfe?"></div>
+    <div data-abstimmung='["🟢 Wir sind fast fertig", "🟡 Mehr als die Hälfte", "🔴 Wir brauchen Hilfe"]'></div>
+    <div class="hinweis">Sprecher jeder Gruppe nennt einen Satz. Gruppen mit 🔴 bekommen eine Expertengruppe zugeteilt.</div>
+  </section>
+
+  <!-- 7 · REFLEXION -->
+  <section class="folie" data-phase="Reflexion">
+    <div class="kennung">Reflexion</div>
+    <h2>Unser Plan wächst – nächste Stunde stellen wir vor.</h2>
+    <div class="exit-qr">
+      <div data-qr="../schueler/exit-17.html"></div>
+      <div>
+        <p style="margin-top:0;font-size:1.4rem"><strong>🎫 Exit-Ticket</strong></p>
+        <p>Scanne den Code oder öffne die Schülerseite. Gib dein <strong>Kürzel</strong> ein.<br>Am Ende zeigst du mir deinen QR-Code.</p>
+        <p><a class="schuelerlink" href="../schueler/exit-17.html" target="_blank">🎫 Zum Exit-Ticket</a></p>
+        <p class="klein">Nächste Stunde: Galeriegang – Welcher Plan überzeugt?</p>
+      </div>
+    </div>
+    <div class="hinweis">Pläne im Raum lassen. Fehlende Teile als Hausaufgabe verteilen (Zeitwächter notiert). QR-Codes der Schüler mit der Kamera-App scannen → Auswertung.</div>
+  </section>
+
+</div>
+<script src="../../../../praesentation.js"></script>
+<script src="../../../../qr.js"></script>
+<script src="../modelle.js"></script>
+</body>
+</html>

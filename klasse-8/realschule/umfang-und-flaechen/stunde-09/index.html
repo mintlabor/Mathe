@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Stunde 9: Jede Seite kann Grundseite sein – Umfang und Flächen</title>
+<link rel="stylesheet" href="../../../../praesentation.css">
+<style>
+  .platzhalter { background: #fff3bf; border-radius: 4px; padding: 0 .3rem; font-family: ui-monospace, monospace; font-size: .9em; }
+  .exit-qr { display: flex; gap: 1.5rem; align-items: center; }
+  .exit-qr [data-qr] svg { width: 230px; height: 230px; display: block; border-radius: 8px; }
+  .skizze { width: min(100%, 560px); height: auto; max-height: 30vh; display: block; margin: .3rem auto; flex-shrink: 0; }
+</style>
+</head>
+<body data-phasen='[["Abrufen", 4], ["Problem", 7], ["Erarbeitung", 12], ["Ideen vergleichen", 5], ["Sicherung", 6], ["Übung", 7], ["Reflexion", 4]]'>
+
+<div class="leiste">
+  <div class="pfad"><a href="../../../../">Start</a> › <a href="../../../">Klasse 8</a> › <a href="../../">Realschule</a> › <a href="../">Umfang und Flächen</a> › Stunde 9</div>
+</div>
+
+<aside class="wortspeicher"
+  data-woerter='["Grundseite", "zugehörige Höhe", "stumpfwinklig", "verlängern", "messen", "Messungenauigkeit"]'
+  data-saetze='["Ich vermute, dass …", "Ich habe so gerechnet: …", "Das sieht man daran, dass …", "Ich stimme zu / nicht zu, weil …"]'></aside>
+
+<div class="buehne">
+
+  <!-- 1 · ABRUFEN -->
+  <section class="folie" data-phase="Abrufen">
+    <div class="kennung">Umfang und Flächen · Stunde 9 · Warm-up</div>
+    <h2>Was weißt du noch?</h2>
+    <p style="margin-top:0">Exit-Ticket von letzter Stunde: Dreieck g = 9 cm, h = 4 cm. Wie groß ist A?</p>
+    <div data-abstimmung='["36 cm²", "18 cm²", "13 cm²", "26 cm²"]' data-loesung="1"></div>
+    <div class="hinweis">Alle halten gleichzeitig die ABCD-Karte hoch. Begründungen per 🎲 einholen, nicht per Melden.</div>
+  </section>
+
+  <!-- 2 · PROBLEM -->
+  <section class="folie" data-phase="Problem">
+    <div class="kennung">Problem<span class="leitmodell">Leitmodell: Rechteck-Trick</span></div>
+    <h2>Drei Rechnungen, drei Ergebnisse?</h2>
+    <div class="problem"><div class="label">Problem</div><br>Ali, Bea und Cem berechnen dasselbe Dreieck mit den Seiten 6 cm, 8 cm und 10 cm. Ali nimmt g = 10 cm, Bea g = 8 cm, Cem g = 6 cm. Jeder misst die passende Höhe.</div>
+    <div class="spannung" data-art="Wette">Wette: Alle drei bekommen <strong>denselben</strong> Flächeninhalt.</div>
+    <div data-abstimmung='["Ja, gleich", "Nein, verschieden", "Nur zwei sind gleich"]'></div>
+    <div class="lernziele schritt"><div class="titel">🎯 Heute lernst du …</div><ul><li>Ich kann zu jeder Seite die passende Höhe zeichnen und messen.</li><li>Ich kann den Flächeninhalt auch bei stumpfwinkligen Dreiecken berechnen.</li><li>Ich kann durch Messen in einer Zeichnung einen Flächeninhalt bestimmen.</li></ul></div>
+    <p class="schritt"><span class="projekt">Steckbrief Dreieck: drei Höhen einzeichnen, Hinweis „stumpfwinklig: verlängern“.</span></p>
+    <div class="hinweis">Abstimmung festhalten (Foto/Tafel), am Ende der Stunde auflösen. Noch nicht verraten!</div>
+  </section>
+
+  <!-- 2c · EIGENE LÖSUNG -->
+  <section class="folie" data-phase="Problem" data-minuten="4">
+    <div class="kennung">Eigene Lösung</div>
+    <h2>Was meinst du?</h2>
+    <div data-denkzeit="60" data-text="Welche Höhe gehört zu welcher Grundseite? Skizziere das Dreieck und überlege."></div>
+    <div data-methode="tps" data-minuten="1,2,2"></div>
+    <div data-tipps>
+      <div class="tipp">6² + 8² = 10² – das Dreieck ist rechtwinklig.</div>
+      <div class="tipp">Zur 8-cm-Seite ist die 6-cm-Seite die Höhe.</div>
+    </div>
+    <p class="satzhilfe">Ich vermute, dass … · Ich würde zuerst …</p>
+  </section>
+
+  <!-- 3 · ERARBEITUNG E -->
+  <section class="folie" data-phase="Erarbeitung" data-minuten="7">
+    <div class="kennung">Erarbeitung · Gruppen<span class="eis" data-eis="E"></span></div>
+    <h2>Drei Grundseiten – ein Dreieck</h2>
+    <p style="margin-top:0">Jede Person der Gruppe wählt eine andere Seite als Grundseite, zeichnet die Höhe, misst und rechnet. Dann vergleichen. Wählt euer Dreieck:</p>
+    <div class="wahlkarten">
+      <div class="wahlkarte"><div class=icon>●</div><b>rechtwinklig</b>6 cm · 8 cm · 10 cm</div>
+      <div class="wahlkarte"><div class=icon>●●</div><b>spitzwinklig</b>7 cm · 8 cm · 9 cm</div>
+      <div class="wahlkarte"><div class=icon>●●●</div><b>stumpfwinklig</b>4 cm · 5 cm · 8 cm – Höhen außerhalb!</div>
+    </div>
+    <div data-methode="rollen"></div>
+    <div class="hinweis">Materialkiste: Vorgedruckte Dreiecke (mit Zirkel nachkonstruiert), Geodreiecke, spitze Bleistifte, Taschenrechner, Tabelle g · h · A. Erwartung: Ergebnisse weichen durch Messungenauigkeit leicht ab.</div>
+  </section>
+
+  <!-- 3 · ERARBEITUNG I/S -->
+  <section class="folie" data-phase="Erarbeitung" data-minuten="5">
+    <div class="kennung">Erarbeitung · Was passiert, wenn …?<span class="eis" data-eis="IS"></span></div>
+    <h2>Stumpfwinklig: Was passiert, wenn …?</h2>
+    <div data-figur='{"typ": "dreieck", "g": 5, "h": 3, "v": 8, "regler": ["g", "h", "v"], "bereich": {"v": [-5, 12]}, "zeige": ["hoehe", "trick", "flaeche"], "an": ["hoehe"]}'></div>
+    <div class="vernetzen schritt">Die Spitze liegt weit rechts: Die Höhe liegt außerhalb. Gilt A = g · h : 2 trotzdem? Prüfe mit dem Rechteck-Trick.</div>
+  </section>
+
+  <!-- 4 · IDEEN VERGLEICHEN -->
+  <section class="folie" data-phase="Ideen vergleichen">
+    <div class="kennung">Ideen vergleichen</div>
+    <h2>Wer hat recht?</h2>
+    <div class="fehlerkarte" data-wer="Lea">
+      <div class="rechnung">g = <span class='fehler'>10 cm</span>, h = 6 cm → A = 10 · 6 : 2 = 30 cm²</div>
+      <div class="erklaerung">Lea hat die längste Seite genommen, aber die Höhe zur 8-cm-Seite gemessen. Grundseite und Höhe gehören zusammen: g = 8 cm, h = 6 cm → 24 cm² oder g = 10 cm, h = 4,8 cm → 24 cm².</div>
+    </div>
+    <div class="legende"><span class="l-ja">stimmt</span><span class="l-nein">stimmt nicht</span>
+      <button class="knopf" data-alle-auf style="margin-left:auto">Alle aufdecken</button><button class="knopf" data-alle-zu>Alle zudecken</button></div>
+    <div class="karten">
+      <div class="karte ja">Ein Dreieck hat drei Paare aus Grundseite und Höhe.<span class="loesung">Ja, und alle liefern denselben Flächeninhalt.</span></div>
+      <div class="karte nein">Zur längsten Seite gehört die längste Höhe.<span class="loesung">Nein, zur längsten Seite gehört die kürzeste Höhe.</span></div>
+      <div class="karte ja">Beim stumpfwinkligen Dreieck muss man manchmal die Grundseite verlängern.<span class="loesung">Ja, damit die Höhe einen Fußpunkt hat.</span></div>
+      <div class="karte nein">Gemessene Werte führen immer zu genau demselben Ergebnis.<span class="loesung">Nein, Messungen sind ungenau: 23,8 cm² und 24,3 cm² können beide gut gemessen sein.</span></div>
+    </div>
+    <p class="satzhilfe">Ich stimme zu / nicht zu, weil … · Der Fehler ist …</p>
+    <div class="hinweis">Erst Fehlerkarte: Denkzeit, dann 🎲. Karten einzeln: Daumen hoch/runter, dann aufdecken.</div>
+  </section>
+
+  <!-- 5 · SICHERUNG -->
+  <section class="folie" data-phase="Sicherung">
+    <div class="kennung">Sicherung<span class="eis" data-eis="EIS"></span></div>
+    <h2>Grundseite und Höhe gehören zusammen</h2>
+    <div class="merk">
+      <h3>Merke</h3>
+      <ul>
+        <li class="schritt">Jede Seite kann Grundseite sein. Die <strong>zugehörige Höhe</strong> geht senkrecht zur gegenüberliegenden Ecke.</li>
+        <li class="schritt">Alle drei Rechnungen ergeben denselben Flächeninhalt (bis auf Messungenauigkeit).</li>
+        <li class="schritt">Stumpfwinkliges Dreieck: Grundseite gestrichelt verlängern, Höhe außen einzeichnen. A = g · h : 2 gilt weiter.</li>
+      </ul>
+    </div>
+    <div class="produkt schritt">Erkläre es deinem Nachbarn in <strong>eigenen Worten</strong> und mit einer <strong>Skizze</strong>. Er sagt, ob er es verstanden hat.</div>
+    <div class="hinweis">Ins Heft und in die Steckbrief-Mappe übertragen. Danach 1–2 Erklärungen per 🎲 vorstellen lassen.</div>
+  </section>
+
+  <!-- 6 · ÜBUNG -->
+  <section class="folie" data-phase="Übung">
+    <div class="kennung">Übung · Buch<span class="eis" data-eis="S"></span></div>
+    <h2>Jetzt du! Wähle dein Niveau</h2>
+    <div class="wahlkarten">
+      <div class="wahlkarte"><b>● Basis</b>📖 <span class="platzhalter">[BUCH: S. __ Nr. __]</span></div>
+      <div class="wahlkarte"><b>●● Standard</b>📖 <span class="platzhalter">[BUCH: S. __ Nr. __]</span></div>
+      <div class="wahlkarte"><b>●●● Profi</b>📖 <span class="platzhalter">[BUCH: S. __ Nr. __]</span></div>
+    </div>
+    <div data-methode="lerntempoduett" data-minuten="5,0,2,0"></div>
+    <div class="produkt">Fertig? <strong>Erfinde eine eigene Aufgabe</strong>: Zeichne ein Dreieck, miss zwei verschiedene Grundseiten mit Höhen. Lass deinen Partner prüfen, ob beide Rechnungen passen.</div>
+    <p>Tipps und Selbstkontrolle: <a class="schuelerlink" href="../schueler/stunde-09.html" target="_blank">📱 Schülerseite · Stunde 9</a></p>
+    <div class="hinweis">Buchaufgaben im Heft. Wer fertig ist, wartet an der Haltestelle auf einen Partner. Rest als Hausaufgabe.</div>
+  </section>
+
+  <!-- 7 · REFLEXION -->
+  <section class="folie" data-phase="Reflexion">
+    <div class="kennung">Zurück zum Problem · Reflexion</div>
+    <h2>Ja, alle drei haben recht: 10 · 4,8 : 2 = 8 · 6 : 2 = 6 · 8 : 2 = 24 cm².</h2>
+    <div class="exit-qr">
+      <div data-qr="../schueler/exit-09.html"></div>
+      <div>
+        <p style="margin-top:0;font-size:1.4rem"><strong>🎫 Exit-Ticket</strong></p>
+        <p>Scanne den Code oder öffne die Schülerseite. Gib dein <strong>Kürzel</strong> ein.<br>Am Ende zeigst du mir deinen QR-Code.</p>
+        <p><a class="schuelerlink" href="../schueler/exit-09.html" target="_blank">🎫 Zum Exit-Ticket</a></p>
+        <p class="klein">Nächste Stunde: Das Trapez – Wie groß ist die Dachfläche?</p>
+      </div>
+    </div>
+    <div class="hinweis">Tafelabstimmung vom Anfang zeigen: Wer lag richtig? QR-Codes der Schüler mit der Kamera-App scannen → Auswertung.</div>
+  </section>
+
+</div>
+<script src="../../../../praesentation.js"></script>
+<script src="../../../../qr.js"></script>
+<script src="../modelle.js"></script>
+</body>
+</html>

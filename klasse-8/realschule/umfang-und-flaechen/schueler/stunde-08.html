@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Üben: Das Dreieck – Stunde 8</title>
+<link rel="stylesheet" href="../../../../schueler.css">
+</head>
+<body>
+<header><div class="inner">
+  <div class="pfad"><a href="./">🗺️ Lernlandkarte</a> › Stunde 8</div>
+  <h1>Üben: Das Dreieck</h1>
+  <p class="untertitel">Stunde 8 · Zwei Dreiecke ergeben ein Parallelogramm</p>
+</div></header>
+<main>
+  <div class="box">
+    <strong>📘 Erinnerung</strong><br>
+    Dreieck: A = g · h : 2 · Zwei gleiche Dreiecke = Parallelogramm · Höhe gehört zur Grundseite
+  </div>
+  <div class="box">
+    <strong>📚 Wörter für heute:</strong> Dreieck · Grundseite g · Höhe h · verdoppeln · Hälfte · Parallelogramm · kongruent (deckungsgleich)<br>
+    <span class="klein">💬 So kannst du es aufschreiben: „Ich habe so gerechnet: …, weil …“</span>
+  </div>
+  <div id="ziele"></div>
+
+  <h2>📖 Aufgaben aus dem Buch</h2>
+  <div class="box buch">
+    <h3>Parallelo 8</h3>
+    <ul>
+      <li>● Basis: <span class="platzhalter">[BUCH: S. __ Nr. __]</span></li>
+      <li>●● Standard: <span class="platzhalter">[BUCH: S. __ Nr. __]</span></li>
+      <li>●●● Profi: <span class="platzhalter">[BUCH: S. __ Nr. __]</span></li>
+    </ul>
+    <p class="klein">Rechne im Heft. Unten findest du Aufgaben mit Tipps und Selbstkontrolle.</p>
+  </div>
+
+  <h2>Aufgaben</h2>
+  <div id="niveaus"></div>
+  <div id="fortschritt"></div>
+  <div id="aufgaben"></div>
+  <h2>🎨 Werde kreativ</h2>
+  <div class="box">
+    Entwirf einen Wimpel für eure Klasse (Dreieck). Wie viel Stoff braucht ihr für 20 Wimpel?
+    <span class="klein">Profi-Idee: Baue absichtlich einen Fehler ein. Findet ihn dein Partner?</span>
+  </div>
+  <h2>Wie sicher bist du jetzt?</h2>
+  <div id="ampel"></div>
+  <p><a href="exit-08.html">🎫 Weiter zum Exit-Ticket →</a> · <a href="./">← Lernlandkarte</a></p>
+</main>
+<script>
+window.SEITE = {
+  "speicher": "mathe-k8-rs-uf",
+  "stunde": 8,
+  "lernziele": [
+    "ein Dreieck durch Verdoppeln zu einem Parallelogramm ergänzen",
+    "den Flächeninhalt mit A = g · h : 2 berechnen",
+    "zur gewählten Grundseite die passende Höhe finden"
+  ],
+  "ichKann": [
+    "Ich kann ein Dreieck durch Verdoppeln zu einem Parallelogramm ergänzen.",
+    "Ich kann den Flächeninhalt mit A = g · h : 2 berechnen.",
+    "Ich kann zur gewählten Grundseite die passende Höhe finden."
+  ],
+  "aufgaben": [
+    {
+      "niveau": 1,
+      "typ": "zahl",
+      "frage": "Dreieck: g = 6 cm, h = 5 cm. A = ?",
+      "loesung": 15,
+      "tipps": [
+        "g · h : 2"
+      ],
+      "erklaerung": "A = 6 · 5 : 2 = 15 cm²",
+      "einheit": "cm²"
+    },
+    {
+      "niveau": 1,
+      "typ": "zahl",
+      "frage": "Dreieck: g = 9 cm, h = 4 cm. A = ?",
+      "loesung": 18,
+      "tipps": [
+        "9 · 4 = 36, dann : 2"
+      ],
+      "erklaerung": "A = 18 cm²",
+      "einheit": "cm²"
+    },
+    {
+      "niveau": 2,
+      "typ": "zahl",
+      "frage": "Rechtwinkliges Dreieck mit den Katheten 6 cm und 8 cm (Hypotenuse 10 cm). A = ?",
+      "loesung": 24,
+      "tipps": [
+        "Die Katheten stehen senkrecht – eine ist die Höhe zur anderen."
+      ],
+      "erklaerung": "A = 6 · 8 : 2 = 24 cm²",
+      "einheit": "cm²"
+    },
+    {
+      "niveau": 2,
+      "typ": "auswahl",
+      "frage": "🔍 Fehler finden: g = 10 cm, h = 7 cm. Nils: A = 10 · 7 = 70 cm². Ada: A = 10 · 7 : 2 = 35 cm². Wer hat recht?",
+      "loesung": 1,
+      "tipps": [
+        "Wie viele Dreiecke ergeben ein Parallelogramm?"
+      ],
+      "erklaerung": "Ada. Nils hat das Parallelogramm berechnet.",
+      "optionen": [
+        "Nils",
+        "Ada",
+        "beide"
+      ]
+    },
+    {
+      "niveau": 3,
+      "typ": "zahl",
+      "frage": "Ein dreieckiges Segel ist 4,5 m breit und 6 m hoch. Wie viel m² Stoff braucht man (ohne Saum)?",
+      "loesung": 13.5,
+      "tipps": [
+        "4,5 · 6 : 2"
+      ],
+      "erklaerung": "A = 13,5 m²",
+      "einheit": "m²"
+    },
+    {
+      "niveau": 3,
+      "typ": "zahl",
+      "frage": "Ein Giebel: g = 9 m, h = 4 m. Farbe reicht für 8 m² pro Eimer. Wie viele Eimer muss man kaufen?",
+      "loesung": 3,
+      "tipps": [
+        "A = 18 m². 18 : 8 = 2,25 – reicht das?"
+      ],
+      "erklaerung": "18 m² : 8 m² = 2,25 → 3 Eimer kaufen",
+      "einheit": "Eimer"
+    }
+  ]
+};
+</script>
+<script src="../../../../schueler.js"></script>
+</body>
+</html>

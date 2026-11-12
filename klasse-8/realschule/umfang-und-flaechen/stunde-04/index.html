@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Stunde 4: Höhen einzeichnen – Umfang und Flächen</title>
+<link rel="stylesheet" href="../../../../praesentation.css">
+<style>
+  .platzhalter { background: #fff3bf; border-radius: 4px; padding: 0 .3rem; font-family: ui-monospace, monospace; font-size: .9em; }
+  .exit-qr { display: flex; gap: 1.5rem; align-items: center; }
+  .exit-qr [data-qr] svg { width: 230px; height: 230px; display: block; border-radius: 8px; }
+  .skizze { width: min(100%, 560px); height: auto; max-height: 30vh; display: block; margin: .3rem auto; flex-shrink: 0; }
+</style>
+</head>
+<body data-phasen='[["Abrufen", 4], ["Problem", 7], ["Erarbeitung", 12], ["Ideen vergleichen", 5], ["Sicherung", 6], ["Übung", 7], ["Reflexion", 4]]'>
+
+<div class="leiste">
+  <div class="pfad"><a href="../../../../">Start</a> › <a href="../../../">Klasse 8</a> › <a href="../../">Realschule</a> › <a href="../">Umfang und Flächen</a> › Stunde 4</div>
+</div>
+
+<aside class="wortspeicher"
+  data-woerter='["Höhe", "Grundseite", "senkrecht", "Abstand", "Lot", "rechter Winkel", "stumpfwinklig", "verlängern"]'
+  data-saetze='["Ich vermute, dass …", "Ich habe so gerechnet: …", "Das sieht man daran, dass …", "Ich stimme zu / nicht zu, weil …"]'></aside>
+
+<div class="buehne">
+
+  <!-- 1 · ABRUFEN -->
+  <section class="folie" data-phase="Abrufen">
+    <div class="kennung">Umfang und Flächen · Stunde 4 · Warm-up</div>
+    <h2>Was weißt du noch?</h2>
+    <p style="margin-top:0">Exit-Ticket von letzter Stunde: Welche Aussage stimmt?</p>
+    <div data-abstimmung='["Jedes Rechteck ist ein Quadrat.", "Jedes Rechteck ist ein Parallelogramm.", "Jedes Trapez ist ein Parallelogramm.", "Jeder Drachen ist eine Raute."]' data-loesung="1"></div>
+    <div class="hinweis">Alle halten gleichzeitig die ABCD-Karte hoch. Begründungen per 🎲 einholen, nicht per Melden.</div>
+  </section>
+
+  <!-- 2 · PROBLEM -->
+  <section class="folie" data-phase="Problem">
+    <div class="kennung">Problem<span class="leitmodell">Leitmodell: Rechteck-Trick</span></div>
+    <h2>Wie hoch ist das Zelt?</h2>
+    <div class="problem"><div class="label">Problem</div><br>Ein Zelt ist von vorne ein gleichschenkliges Dreieck: unten 1,80 m breit, die schrägen Seiten sind 1,60 m lang. Lisa ist 1,50 m groß.</div>
+    <svg class="skizze" viewBox="0 0 360 215" xmlns="http://www.w3.org/2000/svg"><polygon points="60,195 300,195 180,19" fill="#ffe8a3" stroke="#e8a400" stroke-width="4"/><line x1="180" y1="19" x2="180" y2="195" stroke="#e03131" stroke-width="3" stroke-dasharray="8 5"/><text x="62" y="105" font-size="20" font-weight="700" fill="#1f2430">1,60 m</text><text x="150" y="213" font-size="18" fill="#1f2430">1,80 m</text><text x="188" y="125" font-size="22" font-weight="800" fill="#e03131">?</text></svg>
+    <div class="spannung" data-art="Wette">Wette: Lisa kann im Zelt aufrecht stehen – das Zelt ist ja 1,60 m hoch.</div>
+    <div data-abstimmung='["Stimmt", "Stimmt nicht"]'></div>
+    <div class="lernziele schritt"><div class="titel">🎯 Heute lernst du …</div><ul><li>Ich kann erklären, was eine Höhe ist.</li><li>Ich kann Höhen in Dreieck, Parallelogramm und Trapez mit dem Geodreieck einzeichnen.</li><li>Ich kann Höhen auch außerhalb der Figur einzeichnen.</li></ul></div>
+    <p class="schritt"><span class="projekt">Steckbrief-Mappe: Wir zeichnen in jede Figur ihre Höhe ein.</span></p>
+    <div class="hinweis">Abstimmung festhalten (Foto/Tafel), am Ende der Stunde auflösen. Noch nicht verraten!</div>
+  </section>
+
+  <!-- 2b · SCHÄTZEN -->
+  <section class="folie" data-phase="Problem" data-minuten="3">
+    <div class="kennung">Schätzen</div>
+    <h2>Wie hoch ist das Zelt in der Mitte?</h2>
+    <div data-schaetzen='{"min": 0, "max": 200, "einheit": "cm", "loesung": 132}'></div>
+    <p class="satzhilfe">Ich schätze …, weil …</p>
+    <div class="hinweis">Jeder schreibt zuerst seine Schätzung auf. Dann 5–8 Werte per 🎲 abfragen und eintragen. Auflösen erst nach der Rechnung.</div>
+  </section>
+
+  <!-- 2c · EIGENE LÖSUNG -->
+  <section class="folie" data-phase="Problem" data-minuten="4">
+    <div class="kennung">Eigene Lösung</div>
+    <h2>Was meinst du?</h2>
+    <div data-denkzeit="60" data-text="Wie könnte man die Höhe des Zelts bestimmen, ohne hineinzukriechen? Schreibe deine Idee auf."></div>
+    <div data-methode="tps" data-minuten="1,2,2"></div>
+    <div data-tipps>
+      <div class="tipp">Höhe heißt: senkrecht von der Spitze nach unten.</div>
+      <div class="tipp">Zeichne das Zelt verkleinert: 1 cm ≙ 20 cm. Dann messen.</div>
+    </div>
+    <p class="satzhilfe">Ich vermute, dass … · Ich würde zuerst …</p>
+    <div class="hinweis">Erwartet: Die schräge Seite wird als Höhe genommen. Später an der Fehlerkarte aufgreifen.</div>
+  </section>
+
+  <!-- 3 · ERARBEITUNG E -->
+  <section class="folie" data-phase="Erarbeitung" data-minuten="7">
+    <div class="kennung">Erarbeitung · Gruppen<span class="eis" data-eis="E"></span></div>
+    <h2>Wir finden die Höhe</h2>
+    <p style="margin-top:0">Die Höhe ist der kürzeste, also senkrechte Weg von der Spitze zur gegenüberliegenden Seite. Wählt:</p>
+    <div class="wahlkarten">
+      <div class="wahlkarte"><div class=icon>🪢</div><b>Lot fällen</b>Schnur mit Gewicht (Senkblei) an der Spitze eines Pappdreiecks: Die Schnur zeigt die Höhe.</div>
+      <div class="wahlkarte"><div class=icon>📄</div><b>Falten</b>Papierdreieck so falten, dass die Grundseite auf sich selbst fällt und die Falte durch die Spitze geht.</div>
+      <div class="wahlkarte"><div class=icon>📐</div><b>Zeichnen und messen</b>Zelt im Maßstab 1 : 20 zeichnen (9 cm und 8 cm), Höhe mit dem Geodreieck einzeichnen und messen.</div>
+    </div>
+    <div data-methode="rollen"></div>
+    <div class="hinweis">Materialkiste: Pappdreiecke (spitz-, recht-, stumpfwinklig), Schnur, Muttern als Gewicht, Papierdreiecke zum Falten, Geodreiecke, Zirkel, Karopapier. Zum Zelt: 1,32 m ≈ 6,6 cm in der Zeichnung.</div>
+  </section>
+
+  <!-- 3 · ERARBEITUNG I/S -->
+  <section class="folie" data-phase="Erarbeitung" data-minuten="5">
+    <div class="kennung">Erarbeitung · Was passiert, wenn …?<span class="eis" data-eis="IS"></span></div>
+    <h2>Höhe im Dreieck: Was passiert, wenn …?</h2>
+    <div data-figur='{"typ": "dreieck", "g": 6, "h": 4, "v": 3, "regler": ["v", "h"], "bereich": {"v": [-4, 10]}, "typen": ["parallelogramm", "trapez"], "zeige": ["hoehe"], "an": ["hoehe"]}'></div>
+    <div class="vernetzen schritt">Schiebe die Spitze nach rechts über die Grundseite hinaus. Wo liegt die Höhe jetzt? Ändert sich h? Schalte um auf Parallelogramm und Trapez: Wo ist dort die Höhe?</div>
+  </section>
+
+  <!-- 4 · IDEEN VERGLEICHEN -->
+  <section class="folie" data-phase="Ideen vergleichen">
+    <div class="kennung">Ideen vergleichen</div>
+    <h2>Wer hat recht?</h2>
+    <div class="fehlerkarte" data-wer="Lisa">
+      <div class="rechnung">Zelt: Höhe = schräge Seite = <span class='fehler'>1,60 m</span></div>
+      <div class="erklaerung">Die schräge Seite steht nicht senkrecht auf dem Boden. Die Höhe ist der senkrechte Abstand von der Spitze zum Boden – sie ist kürzer: etwa 1,32 m. Lisa kann nicht aufrecht stehen.</div>
+    </div>
+    <div class="legende"><span class="l-ja">stimmt</span><span class="l-nein">stimmt nicht</span>
+      <button class="knopf" data-alle-auf style="margin-left:auto">Alle aufdecken</button><button class="knopf" data-alle-zu>Alle zudecken</button></div>
+    <div class="karten">
+      <div class="karte ja">Die Höhe steht immer senkrecht auf der Grundseite.<span class="loesung">Ja, sie bildet einen rechten Winkel.</span></div>
+      <div class="karte nein">Die Höhe liegt immer innerhalb der Figur.<span class="loesung">Nein, bei stumpfwinkligen Dreiecken kann sie außerhalb liegen – dann Grundseite verlängern.</span></div>
+      <div class="karte ja">Ein Dreieck hat drei Höhen.<span class="loesung">Ja, zu jeder Seite eine.</span></div>
+      <div class="karte nein">Im Parallelogramm ist die schräge Seite b die Höhe.<span class="loesung">Nein, nur beim Rechteck. Sonst ist h kürzer als b.</span></div>
+    </div>
+    <p class="satzhilfe">Ich stimme zu / nicht zu, weil … · Der Fehler ist …</p>
+    <div class="hinweis">Erst Fehlerkarte: Denkzeit, dann 🎲. Karten einzeln: Daumen hoch/runter, dann aufdecken.</div>
+  </section>
+
+  <!-- 5 · SICHERUNG -->
+  <section class="folie" data-phase="Sicherung">
+    <div class="kennung">Sicherung<span class="eis" data-eis="EIS"></span></div>
+    <h2>Die Höhe</h2>
+    <div class="merk">
+      <h3>Merke</h3>
+      <ul>
+        <li class="schritt">Die <strong>Höhe h</strong> ist der <strong>senkrechte Abstand</strong> einer Ecke von der gegenüberliegenden Seite (Grundseite g). Bei Parallelogramm und Trapez: der Abstand der parallelen Seiten.</li>
+        <li class="schritt">Zeichnen: Geodreieck mit der Mittellinie auf die Grundseite legen, bis zur Ecke schieben, Strecke zeichnen, rechten Winkel markieren.</li>
+        <li class="schritt">Liegt der Fußpunkt außerhalb (stumpfwinkliges Dreieck), wird die Grundseite gestrichelt <strong>verlängert</strong>.</li>
+      </ul>
+    </div>
+    <div class="produkt schritt">Erkläre es deinem Nachbarn in <strong>eigenen Worten</strong> und mit einer <strong>Skizze</strong>. Er sagt, ob er es verstanden hat.</div>
+    <div class="hinweis">Ins Heft und in die Steckbrief-Mappe übertragen. Danach 1–2 Erklärungen per 🎲 vorstellen lassen.</div>
+  </section>
+
+  <!-- 6 · ÜBUNG -->
+  <section class="folie" data-phase="Übung">
+    <div class="kennung">Übung · Buch<span class="eis" data-eis="S"></span></div>
+    <h2>Jetzt du! Wähle dein Niveau</h2>
+    <div class="wahlkarten">
+      <div class="wahlkarte"><b>● Basis</b>📖 <span class="platzhalter">[BUCH: S. __ Nr. __]</span></div>
+      <div class="wahlkarte"><b>●● Standard</b>📖 <span class="platzhalter">[BUCH: S. __ Nr. __]</span></div>
+      <div class="wahlkarte"><b>●●● Profi</b>📖 <span class="platzhalter">[BUCH: S. __ Nr. __]</span></div>
+    </div>
+    <div data-methode="lerntempoduett" data-minuten="5,0,2,0"></div>
+    <div class="produkt">Fertig? <strong>Erfinde eine eigene Aufgabe</strong>: Zeichne ein stumpfwinkliges Dreieck. Dein Partner zeichnet alle drei Höhen ein.</div>
+    <p>Tipps und Selbstkontrolle: <a class="schuelerlink" href="../schueler/stunde-04.html" target="_blank">📱 Schülerseite · Stunde 4</a></p>
+    <div class="hinweis">Buchaufgaben im Heft. Wer fertig ist, wartet an der Haltestelle auf einen Partner. Rest als Hausaufgabe.</div>
+  </section>
+
+  <!-- 7 · REFLEXION -->
+  <section class="folie" data-phase="Reflexion">
+    <div class="kennung">Zurück zum Problem · Reflexion</div>
+    <h2>Nein! Das Zelt ist nur etwa 1,32 m hoch – die Höhe ist kürzer als die schräge Seite.</h2>
+    <div class="exit-qr">
+      <div data-qr="../schueler/exit-04.html"></div>
+      <div>
+        <p style="margin-top:0;font-size:1.4rem"><strong>🎫 Exit-Ticket</strong></p>
+        <p>Scanne den Code oder öffne die Schülerseite. Gib dein <strong>Kürzel</strong> ein.<br>Am Ende zeigst du mir deinen QR-Code.</p>
+        <p><a class="schuelerlink" href="../schueler/exit-04.html" target="_blank">🎫 Zum Exit-Ticket</a></p>
+        <p class="klein">Nächste Stunde: Der Umfang – Reicht die Rolle Rasenkante?</p>
+      </div>
+    </div>
+    <div class="hinweis">Steckbriefe: Höhe einzeichnen (Raute/Drachen: Höhe wie beim Parallelogramm bzw. später Diagonalen). Tafelabstimmung vom Anfang zeigen: Wer lag richtig? QR-Codes der Schüler mit der Kamera-App scannen → Auswertung.</div>
+  </section>
+
+</div>
+<script src="../../../../praesentation.js"></script>
+<script src="../../../../qr.js"></script>
+<script src="../modelle.js"></script>
+</body>
+</html>

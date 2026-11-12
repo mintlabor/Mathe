@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Exit-Ticket: Das Trapez – Stunde 10</title>
+<link rel="stylesheet" href="../../../../schueler.css">
+</head>
+<body>
+<header><div class="inner">
+  <div class="pfad"><a href="./">🗺️ Lernlandkarte</a> › <a href="stunde-10.html">Stunde 10</a> › Exit-Ticket</div>
+  <h1>🎫 Exit-Ticket</h1>
+  <p class="untertitel">Stunde 10 · Das Trapez</p>
+</div></header>
+<main>
+  <div id="exit"></div>
+</main>
+<script type="application/json" id="exit-daten">
+{
+  "titel": "Das Trapez",
+  "stunde": 10,
+  "lernziele": [
+    {
+      "text": "Ich kann die Flächenformel des Trapezes durch Verdoppeln oder Zerlegen begründen.",
+      "foerdern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ● Basis",
+      "fordern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ●●● Profi"
+    },
+    {
+      "text": "Ich kann den Flächeninhalt mit A = (a + c) : 2 · h berechnen.",
+      "foerdern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ● Basis",
+      "fordern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ●●● Profi"
+    },
+    {
+      "text": "Ich kann im Trapez die parallelen Seiten a und c und die Höhe h erkennen.",
+      "foerdern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ● Basis",
+      "fordern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ●●● Profi"
+    }
+  ],
+  "fehlertypen": {
+    "halb": "Nicht durch 2 geteilt",
+    "mal": "a und c multipliziert statt addiert",
+    "schenkel": "Schenkel statt Höhe verwendet",
+    "verdoppeln": "Herleitung (Verdoppeln) nicht verstanden"
+  },
+  "fragen": [
+    {
+      "lz": 1,
+      "typ": "zahl",
+      "frage": "Trapez: a = 9 cm, c = 5 cm, h = 4 cm. Wie groß ist A?",
+      "loesung": 28,
+      "erklaerung": "A = (9 + 5) : 2 · 4 = 28 cm²",
+      "einheit": "cm²",
+      "fehler": [
+        {
+          "wert": 56,
+          "id": "halb"
+        },
+        {
+          "wert": 180,
+          "id": "mal"
+        },
+        {
+          "wert": 90,
+          "id": "mal"
+        }
+      ]
+    },
+    {
+      "lz": 1,
+      "typ": "zahl",
+      "frage": "Trapez: a = 12 cm, c = 8 cm, h = 3,5 cm. Wie groß ist A?",
+      "loesung": 35,
+      "erklaerung": "A = (12 + 8) : 2 · 3,5 = 35 cm²",
+      "einheit": "cm²",
+      "fehler": [
+        {
+          "wert": 70,
+          "id": "halb"
+        },
+        {
+          "wert": 336,
+          "id": "mal"
+        },
+        {
+          "wert": 168,
+          "id": "mal"
+        }
+      ]
+    },
+    {
+      "lz": 0,
+      "typ": "auswahl",
+      "frage": "Zwei gleiche Trapeze, eins davon gedreht, ergeben zusammen …",
+      "optionen": [
+        "ein Parallelogramm mit der Grundseite a + c",
+        "ein Rechteck mit den Seiten a und c",
+        "ein Quadrat"
+      ],
+      "loesung": 0,
+      "erklaerung": "Deshalb: A = (a + c) · h : 2.",
+      "fehler": {
+        "1": "verdoppeln",
+        "2": "verdoppeln"
+      }
+    },
+    {
+      "lz": 2,
+      "typ": "auswahl",
+      "frage": "Welche Strecken braucht man für den Flächeninhalt eines Trapezes?",
+      "optionen": [
+        "a, c und h",
+        "a, b, c und d",
+        "nur a und c"
+      ],
+      "loesung": 0,
+      "erklaerung": "Die parallelen Seiten und ihren Abstand h.",
+      "fehler": {
+        "1": "schenkel",
+        "2": "schenkel"
+      }
+    }
+  ]
+}
+</script>
+<script src="../../../../qr.js"></script>
+<script src="../../../../exit-ticket.js"></script>
+</body>
+</html>

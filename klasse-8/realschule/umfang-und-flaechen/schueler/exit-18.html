@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Exit-Ticket: Projekt: Galeriegang – Stunde 18</title>
+<link rel="stylesheet" href="../../../../schueler.css">
+</head>
+<body>
+<header><div class="inner">
+  <div class="pfad"><a href="./">🗺️ Lernlandkarte</a> › <a href="stunde-18.html">Stunde 18</a> › Exit-Ticket</div>
+  <h1>🎫 Exit-Ticket</h1>
+  <p class="untertitel">Stunde 18 · Projekt: Galeriegang</p>
+</div></header>
+<main>
+  <div id="exit"></div>
+</main>
+<script type="application/json" id="exit-daten">
+{
+  "titel": "Projekt: Galeriegang",
+  "stunde": 18,
+  "lernziele": [
+    {
+      "text": "Ich kann einen Flächenplan mit Kriterien beurteilen.",
+      "foerdern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ● Basis",
+      "fordern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ●●● Profi"
+    },
+    {
+      "text": "Ich kann eine Flächenberechnung einer anderen Gruppe nachrechnen und einen Fehler erklären.",
+      "foerdern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ● Basis",
+      "fordern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ●●● Profi"
+    },
+    {
+      "text": "Ich kann unseren Plan in eigenen Worten mit Fachwörtern vorstellen.",
+      "foerdern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ● Basis",
+      "fordern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ●●● Profi"
+    }
+  ],
+  "fehlertypen": {
+    "formel": "Fehler in der Flächenformel nicht erkannt",
+    "umfang": "Umfang und Fläche (bzw. Diagonalen und Seiten) verwechselt",
+    "feedback": "Feedback nicht konkret"
+  },
+  "fragen": [
+    {
+      "lz": 1,
+      "typ": "auswahl",
+      "frage": "Eine Gruppe rechnet für ein Dreiecksbeet g = 6 m, h = 4 m: A = 24 m². Was stimmt?",
+      "optionen": [
+        "Das : 2 fehlt, richtig sind 12 m².",
+        "Alles richtig.",
+        "Man muss 6 + 4 rechnen."
+      ],
+      "loesung": 0,
+      "erklaerung": "Dreieck: g · h : 2 = 12 m².",
+      "fehler": {
+        "1": "formel",
+        "2": "formel"
+      }
+    },
+    {
+      "lz": 1,
+      "typ": "zahl",
+      "frage": "Rasenkante um ein Trapez mit a = 6 m, c = 4 m, b = d = 3 m. Wie viele Meter braucht man?",
+      "loesung": 16,
+      "erklaerung": "u = 6 + 3 + 4 + 3 = 16 m",
+      "einheit": "m",
+      "fehler": [
+        {
+          "wert": 10,
+          "id": "umfang"
+        },
+        {
+          "wert": 13,
+          "id": "umfang"
+        },
+        {
+          "wert": 15,
+          "id": "umfang"
+        }
+      ]
+    },
+    {
+      "lz": 0,
+      "typ": "auswahl",
+      "frage": "Welches Feedback hilft der Gruppe am meisten?",
+      "optionen": [
+        "„Bei der Raute fehlt das : 2 – dann wären es 10 m².“",
+        "„Sieht gut aus.“",
+        "„Da stimmt was nicht.“"
+      ],
+      "loesung": 0,
+      "erklaerung": "Konkret: Wo ist der Fehler und wie geht es richtig?",
+      "fehler": {
+        "1": "feedback",
+        "2": "feedback"
+      }
+    },
+    {
+      "lz": 2,
+      "typ": "auswahl",
+      "frage": "Für die Rasenkante um ein Drachen-Beet braucht man …",
+      "optionen": [
+        "die vier Seitenlängen",
+        "die Diagonalen e und f",
+        "den Flächeninhalt"
+      ],
+      "loesung": 0,
+      "erklaerung": "Die Rasenkante läuft am Rand entlang: Umfang = Summe der Seiten.",
+      "fehler": {
+        "1": "umfang",
+        "2": "umfang"
+      }
+    }
+  ]
+}
+</script>
+<script src="../../../../qr.js"></script>
+<script src="../../../../exit-ticket.js"></script>
+</body>
+</html>

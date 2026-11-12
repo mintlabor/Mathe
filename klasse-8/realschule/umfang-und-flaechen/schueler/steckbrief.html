@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Steckbrief-Bogen und Expertenkarten – Umfang und Flächen</title>
+<link rel="stylesheet" href="../../../../schueler.css">
+<style>
+  .bogen { width: 100%; border-collapse: collapse; background: #fff; }
+  .bogen th { width: 34%; text-align: left; vertical-align: top; padding: .45rem .6rem; border: 2px solid #ced4da; font-size: 1rem; }
+  .bogen td { border: 2px solid #ced4da; height: 3.3rem; }
+  .bogen tr:first-child td { height: 9rem; }
+  .ekarten { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: .8rem; }
+  .ekarte { background: #fff; border: 2px dashed #1098ad; border-radius: 12px; padding: .6rem .9rem; }
+  .ekarte h3 { margin: .2rem 0 .4rem; }
+  .ekarte ol { margin: 0; padding-left: 1.2rem; }
+  .fkarten { display: grid; grid-template-columns: repeat(4, 1fr); gap: .5rem; }
+  .fkarte { background: #fff; border: 2px solid #ced4da; border-radius: 10px; display: flex; align-items: center; justify-content: center; position: relative; padding: .3rem; }
+  .fkarte .nr { position: absolute; top: .2rem; left: .4rem; font-weight: 800; color: #868e96; }
+  .knopfzeile { margin: .5rem 0 1rem; }
+  @media print {
+    header .pfad, .knopfzeile, .nichtdrucken { display: none; }
+    .seite { break-after: page; }
+    body { background: #fff; }
+  }
+</style>
+</head>
+<body>
+<header><div class="inner">
+  <div class="pfad"><a href="./">🗺️ Lernlandkarte</a> › Steckbrief</div>
+  <h1>🗂️ Steckbrief-Bogen und Expertenkarten</h1>
+  <p class="untertitel">Umfang und Flächen · Gruppenpuzzle in Stunde 1 und 2 · Steckbrief-Mappe für die ganze Einheit</p>
+</div></header>
+<main>
+  <p class="knopfzeile"><button class="btn" onclick="window.print()">🖨️ Drucken</button> <span class="klein">Teil 1 je Schüler 5× (eine Seite pro Figur), Teil 2 einmal je Expertengruppe, Teil 3 einmal je Stammgruppe (ausschneiden).</span></p>
+
+  <section class="seite">
+    <h2>Teil 1 · Steckbrief</h2>
+    <p><strong>Figur:</strong> ______________________ &nbsp; <strong>Name:</strong> ______________________</p>
+    <table class="bogen"><tr><th>1 · Name und Skizze<br><span class="klein">Ecken A, B, C (D) · Seiten a, b, c (d) beschriften</span></th><td></td></tr><tr><th>2 · Seiten<br><span class="klein">Welche sind gleich lang? Welche sind parallel (∥)?</span></th><td></td></tr><tr><th>3 · Winkel<br><span class="klein">Welche sind gleich groß? Rechte Winkel? Winkelsumme?</span></th><td></td></tr><tr><th>4 · Diagonalen<br><span class="klein">gleich lang? senkrecht? halbieren sie sich? (Dreieck: entfällt)</span></th><td></td></tr><tr><th>5 · Symmetrie<br><span class="klein">Wie viele Symmetrieachsen? Punktsymmetrisch?</span></th><td></td></tr><tr><th>6 · Im Alltag<br><span class="klein">zwei Beispiele (Foto oder Zeichnung)</span></th><td></td></tr><tr><th>7 · Verwandt mit …<br><span class="klein">Stunde 3: Haus der Vierecke</span></th><td></td></tr><tr><th>8 · Höhe<br><span class="klein">Stunde 4: Höhe einzeichnen</span></th><td></td></tr><tr><th>9 · Umfang<br><span class="klein">Stunde 5: u = …</span></th><td></td></tr><tr><th>10 · Flächeninhalt<br><span class="klein">Stunden 7–11: A = … und Skizze zum Rechteck-Trick</span></th><td></td></tr></table>
+    <p class="klein">💬 Satzanfänge: Meine Figur hat … · Die Seiten … sind parallel / gleich lang. · Beim Falten sieht man, dass … · Das erkennt man daran, dass …</p>
+  </section>
+
+  <section class="seite">
+    <h2>Teil 2 · Expertenkarten</h2>
+    <p>Untersucht eure Figur mit <strong>Falten</strong>, <strong>Messen</strong> und <strong>Legen</strong>. Prüft immer mindestens zwei verschiedene Exemplare. Haltet alles im Steckbrief fest.</p>
+    <div class="ekarten"><div class="ekarte"><h3>△ Dreieck</h3><ol><li>Schneidet verschiedene Dreiecke aus: spitz-, recht-, stumpfwinklig, gleichschenklig, gleichseitig.</li><li>Messt in jedem Dreieck die drei Winkel und addiert sie. Reißt die Ecken ab und legt sie aneinander: Was entsteht?</li><li>Faltprobe: Welche Dreiecke haben Symmetrieachsen? Wie viele?</li><li>Wie nennt man die Seiten im rechtwinkligen und im gleichschenkligen Dreieck?</li></ol><p class="klein">Material: Papierfiguren, Schere, Geodreieck, Trinkhalme, Pfeifenreiniger, Geobrett</p></div><div class="ekarte"><h3>▱ Parallelogramm</h3><ol><li>Legt aus zwei Paar gleich langen Trinkhalmen ein bewegliches Viereck. Drückt es schief: Was bleibt immer gleich?</li><li>Messt gegenüberliegende Seiten und gegenüberliegende Winkel.</li><li>Zeichnet beide Diagonalen ein und messt die Teilstücke. Was passiert am Schnittpunkt?</li><li>Steckt eine Nadel in den Schnittpunkt und dreht um 180°. Passt die Figur auf sich? Gibt es eine Symmetrieachse?</li></ol><p class="klein">Material: Papierfiguren, Schere, Geodreieck, Trinkhalme, Pfeifenreiniger, Geobrett</p></div><div class="ekarte"><h3>⏢ Trapez</h3><ol><li>Schneidet von einem Papierdreieck die Spitze parallel zur Grundseite ab: Welche Figur entsteht?</li><li>Welche Seiten sind parallel? Wie heißen die anderen beiden Seiten (Schenkel)?</li><li>Untersucht das gleichschenklige Trapez: Faltprobe, Winkel, Diagonalen messen.</li><li>Gibt es Trapeze mit rechten Winkeln? Wann wird ein Trapez zum Parallelogramm?</li></ol><p class="klein">Material: Papierfiguren, Schere, Geodreieck, Trinkhalme, Pfeifenreiniger, Geobrett</p></div><div class="ekarte"><h3>◇ Raute</h3><ol><li>Verbindet vier gleich lange Trinkhalme und verformt die Figur. Was bleibt gleich?</li><li>Faltschnitt: Papier zweimal falten, eine schräge Linie schneiden, auffalten.</li><li>Diagonalen: Wie stehen sie zueinander? Werden sie halbiert? Wie viele Symmetrieachsen?</li><li>Wann wird eine Raute zum Quadrat? Ist das Verkehrsschild „Vorfahrtstraße“ eine Raute?</li></ol><p class="klein">Material: Papierfiguren, Schere, Geodreieck, Trinkhalme, Pfeifenreiniger, Geobrett</p></div><div class="ekarte"><h3>🪁 Drachen</h3><ol><li>Papier einmal falten, von der Faltkante aus zwei verschieden lange Linien schneiden, auffalten.</li><li>Welche Seiten sind gleich lang? Welche Winkel sind gleich groß?</li><li>Diagonalen: senkrecht? Welche halbiert welche? Wie viele Symmetrieachsen?</li><li>Wann wird ein Drachen zur Raute? Messt einen echten Flugdrachen (Stäbe = Diagonalen).</li></ol><p class="klein">Material: Papierfiguren, Schere, Geodreieck, Trinkhalme, Pfeifenreiniger, Geobrett</p></div></div>
+  </section>
+
+  <section class="seite">
+    <h2>Teil 3 · Figurenkarten zum Sortieren</h2>
+    <p>Ordnet jede Karte allen Figuren zu, zu denen sie passt. Achtung: Manche Karten passen zu mehreren Figuren!</p>
+    <div class="fkarten"><div class="fkarte"><span class="nr">1</span><svg viewBox="0 0 100 100" width="110" height="110"><polygon points="5.0,80.0 95.0,80.0 35.0,20.0" fill="#c5eef3" stroke="#1098ad" stroke-width="2.5" stroke-linejoin="round"/></svg></div><div class="fkarte"><span class="nr">2</span><svg viewBox="0 0 100 100" width="110" height="110"><polygon points="32.6,61.4 95.0,38.6 5.0,41.1" fill="#c5eef3" stroke="#1098ad" stroke-width="2.5" stroke-linejoin="round"/></svg></div><div class="fkarte"><span class="nr">3</span><svg viewBox="0 0 100 100" width="110" height="110"><polygon points="5.0,86.0 95.0,86.0 5.0,14.0" fill="#c5eef3" stroke="#1098ad" stroke-width="2.5" stroke-linejoin="round"/></svg></div><div class="fkarte"><span class="nr">4</span><svg viewBox="0 0 100 100" width="110" height="110"><polygon points="5.0,89.0 95.0,89.0 50.0,11.0" fill="#c5eef3" stroke="#1098ad" stroke-width="2.5" stroke-linejoin="round"/></svg></div><div class="fkarte"><span class="nr">5</span><svg viewBox="0 0 100 100" width="110" height="110"><polygon points="5.0,66.9 72.5,66.9 95.0,33.1 27.5,33.1" fill="#c5eef3" stroke="#1098ad" stroke-width="2.5" stroke-linejoin="round"/></svg></div><div class="fkarte"><span class="nr">6</span><svg viewBox="0 0 100 100" width="110" height="110"><polygon points="5.0,81.7 45.9,92.7 95.0,18.3 54.1,7.3" fill="#c5eef3" stroke="#1098ad" stroke-width="2.5" stroke-linejoin="round"/></svg></div><div class="fkarte"><span class="nr">7</span><svg viewBox="0 0 100 100" width="110" height="110"><polygon points="5.0,66.9 95.0,66.9 72.5,33.1 16.2,33.1" fill="#c5eef3" stroke="#1098ad" stroke-width="2.5" stroke-linejoin="round"/></svg></div><div class="fkarte"><span class="nr">8</span><svg viewBox="0 0 100 100" width="110" height="110"><polygon points="30.7,75.7 69.3,75.7 95.0,24.3 5.0,24.3" fill="#c5eef3" stroke="#1098ad" stroke-width="2.5" stroke-linejoin="round"/></svg></div><div class="fkarte"><span class="nr">9</span><svg viewBox="0 0 100 100" width="110" height="110"><polygon points="5.0,75.7 95.0,75.7 56.4,24.3 5.0,24.3" fill="#c5eef3" stroke="#1098ad" stroke-width="2.5" stroke-linejoin="round"/></svg></div><div class="fkarte"><span class="nr">10</span><svg viewBox="0 0 100 100" width="110" height="110"><polygon points="5.0,72.5 61.2,72.5 95.0,27.5 38.8,27.5" fill="#c5eef3" stroke="#1098ad" stroke-width="2.5" stroke-linejoin="round"/></svg></div><div class="fkarte"><span class="nr">11</span><svg viewBox="0 0 100 100" width="110" height="110"><polygon points="5.0,50.0 50.0,72.5 95.0,50.0 50.0,27.5" fill="#c5eef3" stroke="#1098ad" stroke-width="2.5" stroke-linejoin="round"/></svg></div><div class="fkarte"><span class="nr">12</span><svg viewBox="0 0 100 100" width="110" height="110"><polygon points="5.0,35.0 50.0,95.0 95.0,35.0 50.0,5.0" fill="#c5eef3" stroke="#1098ad" stroke-width="2.5" stroke-linejoin="round"/></svg></div><div class="fkarte"><span class="nr">13</span><svg viewBox="0 0 100 100" width="110" height="110"><polygon points="14.9,95.0 91.2,71.8 47.6,5.0 8.8,41.8" fill="#c5eef3" stroke="#1098ad" stroke-width="2.5" stroke-linejoin="round"/></svg></div><div class="fkarte"><span class="nr">14</span><svg viewBox="0 0 100 100" width="110" height="110"><polygon points="5.0,50.0 50.0,95.0 95.0,50.0 50.0,5.0" fill="#c5eef3" stroke="#1098ad" stroke-width="2.5" stroke-linejoin="round"/></svg></div><div class="fkarte"><span class="nr">15</span><svg viewBox="0 0 100 100" width="110" height="110"><polygon points="5.0,69.3 95.0,69.3 95.0,30.7 5.0,30.7" fill="#c5eef3" stroke="#1098ad" stroke-width="2.5" stroke-linejoin="round"/></svg></div><div class="fkarte"><span class="nr">16</span><svg viewBox="0 0 100 100" width="110" height="110"><polygon points="5.0,87.5 95.0,72.5 80.0,12.5 20.0,42.5" fill="#c5eef3" stroke="#1098ad" stroke-width="2.5" stroke-linejoin="round"/></svg></div></div>
+    <details class="nichtdrucken" style="margin-top:.8rem"><summary>Lösung für die Lehrkraft</summary><p class="klein">1 Dreieck (spitzwinklig) · 2 Dreieck (stumpfwinklig) · 3 Dreieck (rechtwinklig) · 4 Dreieck (gleichseitig) · 5 Parallelogramm · 6 Parallelogramm · 7 Trapez · 8 gleichschenkliges Trapez · 9 Trapez (rechtwinklig) · 10 Raute · 11 Raute · 12 Drachen · 13 Drachen · 14 Quadrat (= Raute, Rechteck …) · 15 Rechteck (= Parallelogramm, gl. Trapez) · 16 allgemeines Viereck</p></details>
+  </section>
+</main>
+</body>
+</html>

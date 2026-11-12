@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Exit-Ticket: Gleicher Zaun – gleiche Weide? – Stunde 6</title>
+<link rel="stylesheet" href="../../../../schueler.css">
+</head>
+<body>
+<header><div class="inner">
+  <div class="pfad"><a href="./">🗺️ Lernlandkarte</a> › <a href="stunde-06.html">Stunde 6</a> › Exit-Ticket</div>
+  <h1>🎫 Exit-Ticket</h1>
+  <p class="untertitel">Stunde 6 · Gleicher Zaun – gleiche Weide?</p>
+</div></header>
+<main>
+  <div id="exit"></div>
+</main>
+<script type="application/json" id="exit-daten">
+{
+  "titel": "Gleicher Zaun – gleiche Weide?",
+  "stunde": 6,
+  "lernziele": [
+    {
+      "text": "Ich kann Umfang und Flächeninhalt unterscheiden.",
+      "foerdern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ● Basis",
+      "fordern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ●●● Profi"
+    },
+    {
+      "text": "Ich kann den Flächeninhalt von Rechtecken mit Einheitsquadraten bestimmen und berechnen.",
+      "foerdern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ● Basis",
+      "fordern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ●●● Profi"
+    },
+    {
+      "text": "Ich kann Flächeneinheiten umrechnen.",
+      "foerdern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ● Basis",
+      "fordern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ●●● Profi"
+    }
+  ],
+  "fehlertypen": {
+    "verwechselt": "Umfang und Flächeninhalt verwechselt",
+    "einheit": "Falsche Einheit (m statt m²)",
+    "umrechnen": "Mit 10 statt 100 umgerechnet"
+  },
+  "fragen": [
+    {
+      "lz": 1,
+      "typ": "zahl",
+      "frage": "Ein Rechteck ist 8 m lang und 3 m breit. Wie groß ist der Flächeninhalt?",
+      "loesung": 24,
+      "erklaerung": "A = 8 m · 3 m = 24 m²",
+      "einheit": "m²",
+      "fehler": [
+        {
+          "wert": 22,
+          "id": "verwechselt"
+        },
+        {
+          "wert": 11,
+          "id": "verwechselt"
+        }
+      ]
+    },
+    {
+      "lz": 0,
+      "typ": "auswahl",
+      "frage": "Welche Einheit passt zum Flächeninhalt eines Gartens?",
+      "optionen": [
+        "m²",
+        "m",
+        "kg"
+      ],
+      "loesung": 0,
+      "erklaerung": "Flächen misst man in Quadrateinheiten, z. B. m².",
+      "fehler": {
+        "1": "einheit",
+        "2": "einheit"
+      }
+    },
+    {
+      "lz": 2,
+      "typ": "zahl",
+      "frage": "3 m² = ? dm²",
+      "loesung": 300,
+      "erklaerung": "Umrechnungszahl 100: 3 · 100 = 300 dm²",
+      "einheit": "dm²",
+      "fehler": [
+        {
+          "wert": 30,
+          "id": "umrechnen"
+        },
+        {
+          "wert": 3000,
+          "id": "umrechnen"
+        }
+      ]
+    },
+    {
+      "lz": 2,
+      "typ": "zahl",
+      "frage": "2 ha = ? m²",
+      "loesung": 20000,
+      "erklaerung": "1 ha = 100 a = 10 000 m²",
+      "einheit": "m²",
+      "fehler": [
+        {
+          "wert": 200,
+          "id": "umrechnen"
+        },
+        {
+          "wert": 2000,
+          "id": "umrechnen"
+        }
+      ]
+    },
+    {
+      "lz": 0,
+      "typ": "auswahl",
+      "frage": "Zwei Rechtecke haben beide den Umfang 20 cm. Haben sie denselben Flächeninhalt?",
+      "optionen": [
+        "Nicht unbedingt",
+        "Ja, immer",
+        "Nein, nie"
+      ],
+      "loesung": 0,
+      "erklaerung": "z. B. 9 × 1 = 9 cm², aber 5 × 5 = 25 cm².",
+      "fehler": {
+        "1": "verwechselt",
+        "2": "verwechselt"
+      }
+    }
+  ]
+}
+</script>
+<script src="../../../../qr.js"></script>
+<script src="../../../../exit-ticket.js"></script>
+</body>
+</html>

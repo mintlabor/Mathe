@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Exit-Ticket: Eine Formel für alle? – Stunde 12</title>
+<link rel="stylesheet" href="../../../../schueler.css">
+</head>
+<body>
+<header><div class="inner">
+  <div class="pfad"><a href="./">🗺️ Lernlandkarte</a> › <a href="stunde-12.html">Stunde 12</a> › Exit-Ticket</div>
+  <h1>🎫 Exit-Ticket</h1>
+  <p class="untertitel">Stunde 12 · Eine Formel für alle?</p>
+</div></header>
+<main>
+  <div id="exit"></div>
+</main>
+<script type="application/json" id="exit-daten">
+{
+  "titel": "Eine Formel für alle?",
+  "stunde": 12,
+  "lernziele": [
+    {
+      "text": "Ich kann erklären, wie die Flächenformeln zusammenhängen.",
+      "foerdern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ● Basis",
+      "fordern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ●●● Profi"
+    },
+    {
+      "text": "Ich kann für eine Figur die passende Formel auswählen.",
+      "foerdern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ● Basis",
+      "fordern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ●●● Profi"
+    },
+    {
+      "text": "Ich kann prüfen, ob ein Ergebnis sinnvoll ist.",
+      "foerdern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ● Basis",
+      "fordern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ●●● Profi"
+    }
+  ],
+  "fehlertypen": {
+    "formel": "Falsche Formel gewählt",
+    "einheit": "Einheiten nicht angeglichen",
+    "sonderfall": "Sonderfall der Trapezformel nicht erkannt"
+  },
+  "fragen": [
+    {
+      "lz": 1,
+      "typ": "auswahl",
+      "frage": "Welche Formel passt zum Drachen?",
+      "optionen": [
+        "A = e · f : 2",
+        "A = g · h",
+        "A = (a + c) : 2 · h",
+        "A = a · b"
+      ],
+      "loesung": 0,
+      "erklaerung": "Drachen und Raute: A = e · f : 2.",
+      "fehler": {
+        "1": "formel",
+        "2": "formel",
+        "3": "formel"
+      }
+    },
+    {
+      "lz": 0,
+      "typ": "zahl",
+      "frage": "Trapezformel mit a = 8 cm, c = 0 cm, h = 5 cm. Wie groß ist A?",
+      "loesung": 20,
+      "erklaerung": "(8 + 0) : 2 · 5 = 20 cm² – die Dreiecksformel",
+      "einheit": "cm²",
+      "fehler": [
+        {
+          "wert": 40,
+          "id": "sonderfall"
+        },
+        {
+          "wert": 0,
+          "id": "sonderfall"
+        }
+      ]
+    },
+    {
+      "lz": 2,
+      "typ": "zahl",
+      "frage": "Dreieck: g = 3 m, h = 80 cm. Wie groß ist A in m²?",
+      "loesung": 1.2,
+      "erklaerung": "80 cm = 0,8 m → A = 3 · 0,8 : 2 = 1,2 m²",
+      "einheit": "m²",
+      "fehler": [
+        {
+          "wert": 120,
+          "id": "einheit"
+        },
+        {
+          "wert": 2.4,
+          "id": "formel"
+        },
+        {
+          "wert": 240,
+          "id": "einheit"
+        }
+      ]
+    },
+    {
+      "lz": 0,
+      "typ": "auswahl",
+      "frage": "Ein Trapez mit c = a ist ein …",
+      "optionen": [
+        "Parallelogramm",
+        "Dreieck",
+        "Drachen"
+      ],
+      "loesung": 0,
+      "erklaerung": "Dann sind beide Seitenpaare parallel.",
+      "fehler": {
+        "1": "sonderfall",
+        "2": "sonderfall"
+      }
+    }
+  ]
+}
+</script>
+<script src="../../../../qr.js"></script>
+<script src="../../../../exit-ticket.js"></script>
+</body>
+</html>

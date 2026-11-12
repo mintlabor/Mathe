@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Stunde 13: Zusammengesetzte Figuren – Umfang und Flächen</title>
+<link rel="stylesheet" href="../../../../praesentation.css">
+<style>
+  .platzhalter { background: #fff3bf; border-radius: 4px; padding: 0 .3rem; font-family: ui-monospace, monospace; font-size: .9em; }
+  .exit-qr { display: flex; gap: 1.5rem; align-items: center; }
+  .exit-qr [data-qr] svg { width: 230px; height: 230px; display: block; border-radius: 8px; }
+  .skizze { width: min(100%, 560px); height: auto; max-height: 30vh; display: block; margin: .3rem auto; flex-shrink: 0; }
+</style>
+</head>
+<body data-phasen='[["Abrufen", 4], ["Problem", 7], ["Erarbeitung", 12], ["Ideen vergleichen", 5], ["Sicherung", 6], ["Übung", 7], ["Reflexion", 4]]'>
+
+<div class="leiste">
+  <div class="pfad"><a href="../../../../">Start</a> › <a href="../../../">Klasse 8</a> › <a href="../../">Realschule</a> › <a href="../">Umfang und Flächen</a> › Stunde 13</div>
+</div>
+
+<aside class="wortspeicher"
+  data-woerter='["zusammengesetzte Figur", "Teilfigur", "zerlegen", "ergänzen", "abziehen", "Skizze", "Rechenweg"]'
+  data-saetze='["Ich vermute, dass …", "Ich habe so gerechnet: …", "Das sieht man daran, dass …", "Ich stimme zu / nicht zu, weil …"]'></aside>
+
+<div class="buehne">
+
+  <!-- 1 · ABRUFEN -->
+  <section class="folie" data-phase="Abrufen">
+    <div class="kennung">Umfang und Flächen · Stunde 13 · Warm-up</div>
+    <h2>Was weißt du noch?</h2>
+    <p style="margin-top:0">Exit-Ticket von letzter Stunde: Dreieck g = 3 m, h = 80 cm. Wie groß ist A?</p>
+    <div data-abstimmung='["120 m²", "1,2 m²", "2,4 m²", "12 m²"]' data-loesung="1"></div>
+    <div class="hinweis">Alle halten gleichzeitig die ABCD-Karte hoch. Begründungen per 🎲 einholen, nicht per Melden.</div>
+  </section>
+
+  <!-- 2 · PROBLEM -->
+  <section class="folie" data-phase="Problem">
+    <div class="kennung">Problem<span class="leitmodell">Leitmodell: Rechteck-Trick</span></div>
+    <h2>Wie groß ist die Scheunenwand?</h2>
+    <div class="problem"><div class="label">Problem</div><br>Die Giebelwand der Scheune soll neu verkleidet werden. Unten ist sie rechteckig (8 m breit, 4 m hoch), oben ein Dreieck (3 m hoch).</div>
+    <svg class="skizze" viewBox="0 0 320 250" xmlns="http://www.w3.org/2000/svg"><polygon points="30,220 270,220 270,100 150,10 30,100" fill="#ffd8a8" stroke="#d9480f" stroke-width="4"/><text x="150" y="242" font-size="17" text-anchor="middle">8 m</text><text x="276" y="165" font-size="17">4 m</text><text x="276" y="60" font-size="17">3 m</text></svg>
+    <div class="spannung" data-art="Wette">Wette: Ben rechnet 8 m · 7 m = 56 m². So viel Holz brauchen wir.</div>
+    <div data-abstimmung='["Stimmt", "Zu viel", "Zu wenig"]'></div>
+    <div class="lernziele schritt"><div class="titel">🎯 Heute lernst du …</div><ul><li>Ich kann eine zusammengesetzte Figur in bekannte Teilfiguren zerlegen.</li><li>Ich kann Flächeninhalte durch Zerlegen oder Ergänzen berechnen.</li><li>Ich kann meinen Rechenweg übersichtlich aufschreiben.</li></ul></div>
+    <p class="schritt"><span class="projekt">Projekt „Unser Pausenhof“: Die Gesamtfläche des Hofs ist eine zusammengesetzte Figur – heute lernen wir, wie man sie berechnet.</span></p>
+    <div class="hinweis">Abstimmung festhalten (Foto/Tafel), am Ende der Stunde auflösen. Noch nicht verraten!</div>
+  </section>
+
+  <!-- 2c · EIGENE LÖSUNG -->
+  <section class="folie" data-phase="Problem" data-minuten="4">
+    <div class="kennung">Eigene Lösung</div>
+    <h2>Was meinst du?</h2>
+    <div data-denkzeit="60" data-text="Wie würdest du die Fläche der Wand berechnen? Skizziere deinen Weg."></div>
+    <div data-methode="tps" data-minuten="1,2,2"></div>
+    <div data-tipps>
+      <div class="tipp">Welche bekannten Figuren stecken in der Wand?</div>
+      <div class="tipp">Rechteck unten + Dreieck oben.</div>
+    </div>
+    <p class="satzhilfe">Ich vermute, dass … · Ich würde zuerst …</p>
+    <div class="hinweis">Erwartet: 8 · 7 (Ben) oder 8 · 4 + 8 · 3. Beides in „Ideen vergleichen“ aufgreifen.</div>
+  </section>
+
+  <!-- 3 · ERARBEITUNG E -->
+  <section class="folie" data-phase="Erarbeitung" data-minuten="7">
+    <div class="kennung">Erarbeitung · Gruppen<span class="eis" data-eis="E"></span></div>
+    <h2>Zerlegen oder Ergänzen?</h2>
+    <p style="margin-top:0">Jede Gruppe bekommt Grundriss-Karten (Hofeinfahrt, L-Zimmer, Stall mit Anbau, Pfeil, Haus). Berechnet jede Figur auf zwei Wegen. Wählt:</p>
+    <div class="wahlkarten">
+      <div class="wahlkarte"><div class=icon>✂️</div><b>Zerlegen</b>Figur in Teilfiguren schneiden, einzeln berechnen, addieren</div>
+      <div class="wahlkarte"><div class=icon>🔲</div><b>Ergänzen</b>Rechteck drumherum zeichnen, Reste berechnen und abziehen</div>
+      <div class="wahlkarte"><div class=icon>🔢</div><b>Kästchen zählen</b>Zum Prüfen: Karopapier, ganze und halbe Kästchen</div>
+    </div>
+    <div data-methode="placemat" data-frage="Welcher Weg ist bei welcher Figur geschickter?"></div>
+    <div class="hinweis">Materialkiste: Grundriss-Karten auf Karopapier (5 Figuren), Scheren, Buntstifte, Placemat-Bögen, Taschenrechner.</div>
+  </section>
+
+  <!-- 3 · ERARBEITUNG I/S -->
+  <section class="folie" data-phase="Erarbeitung" data-minuten="5">
+    <div class="kennung">Erarbeitung · Was passiert, wenn …?<span class="eis" data-eis="IS"></span></div>
+    <h2>Zwei Wege – ein Ergebnis</h2>
+    <div class="zweispaltig">
+      <div class="kasten schritt"><strong>Weg 1: Zerlegen</strong><svg class="skizze" viewBox="0 0 320 250" xmlns="http://www.w3.org/2000/svg"><polygon points="30,220 270,220 270,100 150,10 30,100" fill="#ffd8a8" stroke="#d9480f" stroke-width="4"/><line x1="30" y1="100" x2="270" y2="100" stroke="#1f2430" stroke-width="3" stroke-dasharray="7 4"/><text x="150" y="70" font-size="22" font-weight="800" text-anchor="middle">②</text><text x="150" y="170" font-size="22" font-weight="800" text-anchor="middle">①</text><text x="150" y="242" font-size="17" text-anchor="middle">8 m</text><text x="276" y="165" font-size="17">4 m</text><text x="276" y="60" font-size="17">3 m</text></svg>A₁ = 8 · 4 = 32 m²<br>A₂ = 8 · 3 : 2 = 12 m²<br><strong>A = 32 + 12 = 44 m²</strong></div>
+      <div class="kasten schritt"><strong>Weg 2: Ergänzen</strong><svg class="skizze" viewBox="0 0 320 250" xmlns="http://www.w3.org/2000/svg"><rect x="30" y="10" width="240" height="210" fill="#fff6dd" stroke="#e8a400" stroke-width="3" stroke-dasharray="8 5"/><polygon points="30,220 270,220 270,100 150,10 30,100" fill="#ffd8a8" stroke="#d9480f" stroke-width="4"/><text x="150" y="242" font-size="17" text-anchor="middle">8 m</text><text x="276" y="165" font-size="17">4 m</text><text x="276" y="60" font-size="17">3 m</text></svg>Rechteck: 8 · 7 = 56 m²<br>2 Eckdreiecke: 2 · (4 · 3 : 2) = 12 m²<br><strong>A = 56 − 12 = 44 m²</strong></div>
+    </div>
+    <div class="vernetzen schritt">Was passiert, wenn das Scheunentor (3 m × 2,5 m) frei bleibt? Wie viel Holz braucht man dann?</div>
+  </section>
+
+  <!-- 4 · IDEEN VERGLEICHEN -->
+  <section class="folie" data-phase="Ideen vergleichen">
+    <div class="kennung">Ideen vergleichen</div>
+    <h2>Wer hat recht?</h2>
+    <div class="fehlerkarte" data-wer="Ben">
+      <div class="rechnung">A = 8 m · <span class='fehler'>7 m</span> = 56 m²</div>
+      <div class="erklaerung">Ben rechnet die Wand wie ein Rechteck 8 × 7. Oben fehlen aber zwei Dreiecke. Richtig: 32 m² + 12 m² = 44 m² (oder 56 m² − 12 m²).</div>
+    </div>
+    <div class="legende"><span class="l-ja">stimmt</span><span class="l-nein">stimmt nicht</span>
+      <button class="knopf" data-alle-auf style="margin-left:auto">Alle aufdecken</button><button class="knopf" data-alle-zu>Alle zudecken</button></div>
+    <div class="karten">
+      <div class="karte ja">Es gibt oft mehrere richtige Zerlegungen.<span class="loesung">Ja, das Ergebnis ist trotzdem gleich.</span></div>
+      <div class="karte ja">Beim Ergänzen zieht man die zu viel gezählten Flächen ab.<span class="loesung">Ja: A = A(groß) − A(Rest).</span></div>
+      <div class="karte nein">Beim Zerlegen kann sich der Flächeninhalt ändern.<span class="loesung">Nein, die Teile ergeben zusammen dieselbe Fläche.</span></div>
+      <div class="karte nein">Den Umfang einer zusammengesetzten Figur erhält man, indem man die Umfänge der Teile addiert.<span class="loesung">Nein, innere Schnittlinien gehören nicht zum Rand.</span></div>
+    </div>
+    <p class="satzhilfe">Ich stimme zu / nicht zu, weil … · Der Fehler ist …</p>
+    <div class="hinweis">Erst Fehlerkarte: Denkzeit, dann 🎲. Karten einzeln: Daumen hoch/runter, dann aufdecken.</div>
+  </section>
+
+  <!-- 5 · SICHERUNG -->
+  <section class="folie" data-phase="Sicherung">
+    <div class="kennung">Sicherung<span class="eis" data-eis="EIS"></span></div>
+    <h2>Zusammengesetzte Figuren</h2>
+    <div class="merk">
+      <h3>Merke</h3>
+      <ul>
+        <li class="schritt"><strong>Zerlegen:</strong> A = A₁ + A₂ + … · <strong>Ergänzen:</strong> A = A(groß) − A(Rest)</li>
+        <li class="schritt">So schreibst du es auf: 1. Skizze mit Maßen, Teilfiguren nummerieren · 2. A₁ = …, A₂ = … · 3. Gesamtfläche · 4. Antwortsatz</li>
+        <li class="schritt">Beispiel Scheunenwand: A₁ = 8 · 4 = 32 m², A₂ = 8 · 3 : 2 = 12 m², A = 44 m²</li>
+      </ul>
+    </div>
+    <div class="produkt schritt">Erkläre es deinem Nachbarn in <strong>eigenen Worten</strong> und mit einer <strong>Skizze</strong>. Er sagt, ob er es verstanden hat.</div>
+    <div class="hinweis">Ins Heft und in die Steckbrief-Mappe übertragen. Danach 1–2 Erklärungen per 🎲 vorstellen lassen.</div>
+  </section>
+
+  <!-- 6 · ÜBUNG -->
+  <section class="folie" data-phase="Übung">
+    <div class="kennung">Übung · Buch<span class="eis" data-eis="S"></span></div>
+    <h2>Jetzt du! Wähle dein Niveau</h2>
+    <div class="wahlkarten">
+      <div class="wahlkarte"><b>● Basis</b>📖 <span class="platzhalter">[BUCH: S. __ Nr. __]</span></div>
+      <div class="wahlkarte"><b>●● Standard</b>📖 <span class="platzhalter">[BUCH: S. __ Nr. __]</span></div>
+      <div class="wahlkarte"><b>●●● Profi</b>📖 <span class="platzhalter">[BUCH: S. __ Nr. __]</span></div>
+    </div>
+    <div data-methode="lerntempoduett" data-minuten="5,0,2,0"></div>
+    <div class="produkt">Fertig? <strong>Erfinde eine eigene Aufgabe</strong>: Zeichne den Grundriss deines Zimmers oder eurer Wohnung (vereinfacht) und berechne die Fläche.</div>
+    <p>Tipps und Selbstkontrolle: <a class="schuelerlink" href="../schueler/stunde-13.html" target="_blank">📱 Schülerseite · Stunde 13</a></p>
+    <div class="hinweis">Buchaufgaben im Heft. Wer fertig ist, wartet an der Haltestelle auf einen Partner. Rest als Hausaufgabe.</div>
+  </section>
+
+  <!-- 7 · REFLEXION -->
+  <section class="folie" data-phase="Reflexion">
+    <div class="kennung">Zurück zum Problem · Reflexion</div>
+    <h2>Zu viel! Die Wand hat 44 m², nicht 56 m² (mit Tor-Öffnung: 44 − 7,5 = 36,5 m²).</h2>
+    <div class="exit-qr">
+      <div data-qr="../schueler/exit-13.html"></div>
+      <div>
+        <p style="margin-top:0;font-size:1.4rem"><strong>🎫 Exit-Ticket</strong></p>
+        <p>Scanne den Code oder öffne die Schülerseite. Gib dein <strong>Kürzel</strong> ein.<br>Am Ende zeigst du mir deinen QR-Code.</p>
+        <p><a class="schuelerlink" href="../schueler/exit-13.html" target="_blank">🎫 Zum Exit-Ticket</a></p>
+        <p class="klein">Nächste Stunde: Rückwärts rechnen – Wie hoch muss das Beet werden?</p>
+      </div>
+    </div>
+    <div class="hinweis">Projekt: Lehrkraft gibt den vereinfachten Grundriss des Pausenhofs aus (Maße für die Projektstunden 17–18). Tafelabstimmung vom Anfang zeigen: Wer lag richtig? QR-Codes der Schüler mit der Kamera-App scannen → Auswertung.</div>
+  </section>
+
+</div>
+<script src="../../../../praesentation.js"></script>
+<script src="../../../../qr.js"></script>
+<script src="../modelle.js"></script>
+</body>
+</html>
