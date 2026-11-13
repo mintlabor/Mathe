@@ -415,3 +415,55 @@ aside.wortspeicher .saetze li { font-size: 1.2rem; padding: .35rem 0; border-bot
 .projekt::before { content: "🧩 Unser Projekt:"; }
 .leitmodell { display: inline-block; background: var(--blau-hell); color: var(--blau); border-radius: 999px; padding: .15rem .7rem; font-size: .95rem; font-weight: 700; margin-left: .5rem; }
 .leitmodell::before { content: "🧭 "; }
+
+/* =========================================================
+   Alles auf eine Folie (kein Scrollen im Vollbild)
+   - Kompaktere Größen für Beamer-Höhen bis 900 px
+   - praesentation.js verkleinert eine Folie notfalls leicht (bis 80 %)
+     und markiert sie für die Lehrkraft mit „⚠ zu voll“ (nur im Hinweis-Modus)
+   ========================================================= */
+.folie { overflow: hidden; }
+.folie .passform { transform-origin: top left; }
+.zu-voll-hinweis { display: none; position: absolute; top: .4rem; right: .6rem; background: var(--rot); color: #fff; font-weight: 800;
+  font-size: .85rem; padding: .2rem .6rem; border-radius: 99px; z-index: 5; }
+body.notizen .folie.zu-voll .zu-voll-hinweis { display: block; }
+@media (max-height: 900px) {
+  .leiste { min-height: 3.9rem; padding: .35rem 1rem .5rem; }
+  .timer .zeit { font-size: 2.2rem; }
+  .fuss { padding-top: .35rem; padding-bottom: .35rem; }
+  .zufall-knopf { font-size: 1.2rem; padding: .3rem 1.1rem .3rem .7rem; }
+  .zufall-knopf .wuerfel-icon { font-size: 1.6rem; }
+  .folie { padding: 1rem 2.5rem .8rem; }
+  .folie h2 { font-size: 1.9rem; margin: 0 0 .6rem; }
+  .folie p, .folie li { font-size: 1.3rem; line-height: 1.38; }
+  .kennung { margin-bottom: .3rem; }
+  .spalten { gap: 1.2rem; }
+  .spalte-auftrag { padding: .6rem 1rem .7rem; }
+  .spalte-auftrag::before { margin-bottom: .2rem; font-size: .85rem; }
+  .spalte-auftrag p, .spalte-auftrag li { font-size: 1.2rem; }
+  .problem { font-size: 1.3rem; padding: .8rem 1.1rem; }
+  .spalte-auftrag .problem { font-size: 1.2rem; padding: .6rem .9rem; }
+  .lernziele { margin-top: .6rem; padding: .5rem 1rem; }
+  .lernziele li { font-size: 1.15rem !important; }
+  .spannung { padding: .6rem 1rem; }
+  .methode { padding: .6rem .9rem; margin: .4rem 0; }
+  .methode .titel { font-size: 1.15rem; margin-bottom: .35rem; }
+  .methode .schritt-m { font-size: 1.05rem; padding: .35rem .55rem; flex-basis: 10rem; }
+  .denkzeit { padding: .6rem .9rem; margin: .4rem 0; }
+  .denkzeit .auftrag { font-size: 1.25rem; }
+  .wahlkarten { gap: .6rem; margin: .4rem 0; }
+  .wahlkarte { padding: .6rem .8rem; font-size: 1.15rem; }
+  .wahlkarte b { font-size: 1.25rem; }
+  .wahlkarte .icon { font-size: 1.7rem; }
+  .merk { padding: .9rem 1.4rem; }
+  .merk h3 { font-size: 1.4rem; margin-bottom: .4rem; }
+  .fehlerkarte { padding: .7rem 1rem; margin: .4rem 0; }
+  .fehlerkarte .rechnung { font-size: 1.5rem; line-height: 1.45; }
+  .karten { gap: .6rem; }
+  .karte { padding: .7rem .9rem; }
+  .kasten { padding: .8rem 1.2rem; }
+  .vernetzen { padding: .6rem .9rem; }
+  .produkt { padding: .6rem .9rem; }
+  .abstimmung .opt { padding-top: .35rem; padding-bottom: .35rem; }
+  .abstimmung .buchstabe { width: 2.3rem; height: 2.3rem; font-size: 1.35rem; }
+}
