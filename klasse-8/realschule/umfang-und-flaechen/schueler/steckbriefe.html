@@ -47,7 +47,26 @@
     body { background: #fff; font-size: 11pt; }
     main { max-width: none; padding: 0; }
     .steckbrief { break-after: page; break-inside: avoid; margin: 0; box-shadow: none; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
-    .oben { grid-template-columns: 6.5cm 1fr; }
+    .oben { grid-template-columns: 6.3cm 1fr; gap: 3mm; }
+    main > .box { display: none; }
+    body { font-size: 11pt; }
+    .steckbrief { padding: 0 4mm 3mm; border-width: 3px; }
+    .kopfzeile { margin: 0 -4mm 2mm; padding: 2mm 4mm; }
+    .kopfzeile h2 { font-size: 18pt; }
+    .kopfzeile .icon { width: 12mm; height: 12mm; font-size: 18pt; }
+    .kurz { font-size: 11.5pt; margin: 1.5mm 0 3mm; }
+    .felder { font-size: 9.8pt; border-spacing: 0 2px; }
+    .felder th { width: 3.4cm; padding: 1.3mm 2mm; }
+    .felder td { padding: 1.3mm 2mm; }
+    body.luecke .felder td { height: 9.5mm; }
+    body.luecke .formel p:not(.f) { min-height: 7mm; }
+    .wusstest { font-size: 9.5pt; padding: 2.5mm; margin-top: 3mm; }
+    .formeln { gap: 3mm; margin-top: 3mm; }
+    .formel { padding: 1.5mm 3mm; }
+    .formel h3 { font-size: 11.5pt; }
+    .formel p { margin: 1mm 0; font-size: 9.8pt; }
+    .formel .f { font-size: 16pt; }
+    .felder.unten { margin-top: 3mm; }
   }
 </style>
 </head>
