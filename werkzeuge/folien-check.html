@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Folien-Check – passt jede Folie auf den Bildschirm?</title>
+<link rel="stylesheet" href="../style.css">
+<style>
+  main { max-width: 1000px; }
+  .zeile { display: flex; flex-wrap: wrap; gap: .6rem; align-items: center; margin: .8rem 0; }
+  input[type=text] { flex: 1; min-width: 320px; font: inherit; padding: .5rem .7rem; border: 2px solid var(--border, #ccd); border-radius: 10px; }
+  select, button { font: inherit; padding: .5rem .9rem; border-radius: 10px; border: 2px solid var(--border, #ccd); background: #fff; cursor: pointer; }
+  button.los { background: #1098ad; color: #fff; border-color: #1098ad; font-weight: 700; }
+  table { width: 100%; border-collapse: collapse; margin-top: 1rem; background: #fff; }
+  th, td { text-align: left; padding: .4rem .6rem; border-bottom: 1px solid #e2e6ef; }
+  .ok { color: #2f9e44; font-weight: 700; }
+  .voll { color: #e03131; font-weight: 700; }
+  .leicht { color: #e8a400; font-weight: 700; }
+  #status { color: #5b6475; }
+  #rahmen { position: absolute; left: -100000px; top: 0; }
+</style>
+</head>
+<body>
+<header><div class="inner">
+  <div class="pfad"><a href="../">Start</a> › Werkzeuge › Folien-Check</div>
+  <h1>🔍 Folien-Check</h1>
+  <p class="untertitel">Prüft, ob jede Folie einer Einheit im Vollbild ohne Scrollen auf den Bildschirm passt.</p>
+</div></header>
+<main>
+  <div class="zeile">
+    <input type="text" id="pfad" value="klasse-8/realschule/umfang-und-flaechen" aria-label="Pfad der Einheit">
+    <select id="aufl">
+      <option value="1366x768" selected>1366 × 768 (Beamer, Prüfmaß)</option>
+      <option value="1280x720">1280 × 720 (kleiner Beamer)</option>
+      <option value="1280x800">1280 × 800</option>
+      <option value="1920x1080">1920 × 1080 (Full HD)</option>
+    </select>
+    <button class="los" id="los" type="button">Prüfen</button>
+  </div>
+  <p id="status">Pfad der Einheit eingeben (ab dem Hauptordner), Auflösung wählen, „Prüfen“ klicken.</p>
+  <table id="tabelle" hidden><thead><tr><th>Stunde</th><th>Folie</th><th>Überschrift</th><th>Ergebnis</th></tr></thead><tbody></tbody></table>
+  <p class="klein">Regel aus dem Bauplan: Zu volle Folien werden <strong>geteilt</strong> (zwei Folien derselben Phase ohne <code>data-minuten</code> teilen sich den Timer).
+  Bis etwa 25 % zu viel verkleinert die Präsentation eine Folie im Unterricht automatisch; „zu voll“ bedeutet: so nicht nutzbar.</p>
+</main>
+<div id="rahmen"></div>
+<script>
+(function () {
+  const tbody = document.querySelector("#tabelle tbody");
+  const status = document.getElementById("status");
+  const warte = ms => new Promise(r => setTimeout(r, ms));
+
+  function lade(url, w, h) {
+    return new Promise(res => {
+      const f = document.createElement("iframe");
+      f.width = w; f.height = h; f.style.border = "0";
+      f.onload = () => res(f);
+      f.src = url;
+      document.getElementById("rahmen").replaceChildren(f);
+    });
+  }
+
+  document.getElementById("los").onclick = async () => {
+    const pfad = document.getElementById("pfad").value.trim().replace(/^\/+|\/+$/g, "");
+    const [w, h] = document.getElementById("aufl").value.split("x").map(Number);
+    tbody.innerHTML = ""; document.getElementById("tabelle").hidden = false;
+    let fehlend = 0, gesamt = 0, probleme = 0;
+    for (let n = 1; n <= 40 && fehlend < 2; n++) {
+      const nn = String(n).padStart(2, "0");
+      status.textContent = `Prüfe Stunde ${n} …`;
+      const fr = await lade(`../${pfad}/stunde-${nn}/`, w, h);
+      await warte(500);
+      const doc = fr.contentDocument;
+      const folien = doc ? Array.from(doc.querySelectorAll(".folie")) : [];
+      if (!folien.length) { fehlend++; continue; }
+      fehlend = 0;
+      folien.forEach((f, i) => {
+        folien.forEach(x => x.classList.toggle("aktiv", x === f));
+        f.querySelectorAll(".schritt").forEach(s => s.classList.add("sichtbar"));
+        f.style.zoom = "";
+        const zuviel = f.scrollHeight - f.clientHeight;
+        gesamt++;
+        if (zuviel > 2) {
+          probleme++;
+          const anteil = zuviel / f.clientHeight;
+          const tr = document.createElement("tr");
+          const titel = (f.querySelector("h2") || {}).textContent || "";
+          tr.innerHTML = `<td><a href="../${pfad}/stunde-${nn}/" target="_blank">Stunde ${n}</a></td><td>${i + 1}</td><td></td>` +
+            `<td class="${anteil > 0.25 ? "voll" : "leicht"}">${anteil > 0.25 ? "❌ zu voll – teilen" : "⚠ wird automatisch verkleinert"} (${zuviel} px zu viel)</td>`;
+          tr.children[2].textContent = titel;
+          tbody.appendChild(tr);
+        }
+      });
+    }
+    document.getElementById("rahmen").replaceChildren();
+    if (!probleme) tbody.innerHTML = `<tr><td colspan="4" class="ok">✓ Alle Folien passen.</td></tr>`;
+    status.textContent = gesamt ? `Fertig: ${gesamt} Folien geprüft, ${probleme} passen nicht ganz (${w} × ${h}).` : "Keine Stunden gefunden – stimmt der Pfad?";
+  };
+})();
+</script>
+</body>
+</html>

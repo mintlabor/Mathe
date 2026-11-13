@@ -22,6 +22,15 @@
   ☐ Sprachhilfen (aside.wortspeicher + .satzhilfe)
   ☐ Leitmodell der Einheit (ikonischer Anker) und Projekt-Baustein, falls die Einheit ein Projekt hat
   Phasen und Minuten: Summe = 45. Timer oben zeigt die geplante Zeit je Phase.
+
+  ALLES AUF EINE FOLIE – im Vollbild darf nie gescrollt werden (Prüfmaß: 1366 × 768):
+  ☐ pro Folie EIN Auftrag: höchstens ein großer Baustein (Abstimmung ODER Modell ODER Wahlkarten ODER Karten) + kurzer Auftragstext
+  ☐ Problem und Lernziele auf zwei Folien (wie unten); Übung auf zwei Folien (Niveau wählen / So übt ihr)
+  ☐ wird es zu voll: Folie teilen, nicht kleiner schreiben. Folien derselben Phase OHNE data-minuten teilen sich den Timer
+  ☐ Links steht automatisch der Arbeitsauftrag (p, .problem, .spannung, .lernziele, data-methode, data-denkzeit, …),
+    rechts das Material. Ausnahme pro Folie: data-layout="einspaltig"
+  ☐ Prüfen: werkzeuge/folien-check.html → zeigt alle zu vollen Folien einer Einheit.
+    Im Unterricht verkleinert sich eine leicht zu volle Folie automatisch (bis 80 %); im Modus „Hinweise“ erscheint „⚠ Folie zu voll“.
 -->
 <body data-phasen='[["Abrufen",4],["Problem",7],["Erarbeitung",12],["Ideen vergleichen",5],["Sicherung",6],["Übung",7],["Reflexion",4]]'>
 
@@ -53,7 +62,14 @@
       <span class="platzhalter">[Überraschende Behauptung, Rätsel oder Wette aus dem Alltag der Schüler]</span>
     </div>
     <div data-abstimmung='["Ja, das stimmt","Nein, das stimmt nicht","Kommt darauf an …"]'></div>
-    <div class="lernziele schritt">
+    <div class="hinweis">Abstimmung festhalten (Foto/Tafel), am Ende der Stunde auflösen. Noch nicht verraten!</div>
+  </section>
+
+  <!-- 2a · LERNZIELE (eigene Folie, damit alles ohne Scrollen passt) -->
+  <section class="folie" data-phase="Problem">
+    <div class="kennung">Problem · Ziele<span class="leitmodell">[Leitmodell der Einheit]</span></div>
+    <h2>Heute lernst du …</h2>
+    <div class="lernziele">
       <div class="titel">🎯 Heute lernst du …</div>
       <ul>
         <li><span class="platzhalter">[Lernziel 1 – identisch mit dem Exit-Ticket]</span></li>
@@ -61,7 +77,7 @@
       </ul>
     </div>
     <p class="schritt"><span class="projekt"><span class="platzhalter">[Was die Stunde zum Einheitenprojekt beiträgt]</span></span></p>
-    <div class="hinweis">Abstimmung festhalten (Foto/Tafel), am Ende der Stunde auflösen. Noch nicht verraten!</div>
+    <div class="hinweis">Lernziele kurz vorlesen lassen (🎲).</div>
   </section>
 
   <!-- 2b · DENKAUFGABE: Schätzen vor Rechnen (optional, sonst löschen) -->
@@ -142,14 +158,21 @@
   <section class="folie" data-phase="Übung">
     <div class="kennung">Übung · Buch<span class="eis" data-eis="S"></span></div>
     <h2>Jetzt du! Wähle dein Niveau</h2>
+    <p class="auftrag">Wähle ein Niveau und rechne die Buchaufgaben im Heft. Du darfst wechseln!</p>
     <div class="wahlkarten">
       <div class="wahlkarte"><b>● Basis</b>📖 <span class="platzhalter">[BUCH: S. __ Nr. __]</span></div>
       <div class="wahlkarte"><b>●● Standard</b>📖 <span class="platzhalter">[BUCH: S. __ Nr. __]</span></div>
       <div class="wahlkarte"><b>●●● Profi</b>📖 <span class="platzhalter">[BUCH: S. __ Nr. __]</span></div>
     </div>
+    <p>Tipps und Lösungen: <a class="schuelerlink" href="../schueler/stunde-xx.html" target="_blank">📱 Schülerseite · Stunde [NR]</a></p>
+  </section>
+
+  <!-- 6b · ÜBUNG: So übt ihr (eigene Folie) -->
+  <section class="folie" data-phase="Übung">
+    <div class="kennung">Übung · So übt ihr<span class="eis" data-eis="S"></span></div>
+    <h2>Lerntempoduett</h2>
     <div data-methode="lerntempoduett" data-minuten="5,0,2,0"></div>
     <div class="produkt">Fertig? <strong>Erfinde eine eigene Aufgabe</strong> zu <span class="platzhalter">[Kontext]</span>. Dein Partner löst sie.</div>
-    <p>Tipps und Lösungen: <a class="schuelerlink" href="../schueler/stunde-xx.html" target="_blank">📱 Schülerseite · Stunde [NR]</a></p>
   </section>
 
   <!-- 7 · REFLEXION: Wette auflösen + Exit-Ticket -->

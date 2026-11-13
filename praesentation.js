@@ -61,6 +61,25 @@
   leiste.appendChild(fortschrittEl);
   const GESAMT = PHASEN.reduce((a, p) => a + p[1], 0) || 1;
 
+  // ---------- Alles auf eine Folie: notfalls leicht verkleinern (bis 80 %), sonst Warnung ----------
+  // Ziel beim Bauen: Jede Folie passt im Vollbild ohne Scrollen (1366 × 768). Zu volle Folien werden geteilt.
+  function passend(f) {
+    if (!f) return;
+    f.style.zoom = "";
+    let z = 1;
+    while (f.scrollHeight - f.clientHeight > 2 && z > 0.8) {
+      z = Math.round((z - 0.04) * 100) / 100;
+      f.style.zoom = z;
+    }
+    const voll = f.scrollHeight - f.clientHeight > 2;
+    if (f.classList.contains("zu-voll") !== voll) f.classList.toggle("zu-voll", voll);
+  }
+  window.PRAES_PASSEND = () => passend(folien.find(f => f.classList.contains("aktiv")));
+  window.addEventListener("resize", () => window.PRAES_PASSEND());
+  new MutationObserver(() => requestAnimationFrame(() => window.PRAES_PASSEND()))
+    .observe(document.querySelector(".buehne") || document.body, { subtree: true, attributes: true, attributeFilter: ["class"], childList: true });
+  folien.forEach(f => { const w = document.createElement("div"); w.className = "zu-voll-hinweis"; w.textContent = "⚠ Folie zu voll – bitte teilen"; f.appendChild(w); });
+
   // ---------- Folien zweispaltig: links Arbeitsauftrag, rechts Material ----------
   // Opt-out: <section class="folie" data-layout="einspaltig">
   const LINKS = ".problem, .spannung, .lernziele, [data-denkzeit], [data-methode], [data-tipps], .satzhilfe, .produkt, .vernetzen, .fehlerkarte, .ampel, .auftrag, p, ol, ul";
@@ -68,7 +87,7 @@
     if (f.classList.contains("mitte") || f.dataset.layout === "einspaltig") return;
     const links = [], rechts = [], unten = [];
     Array.from(f.children).forEach(k => {
-      if (k.matches(".kennung, h1, h2")) return;
+      if (k.matches(".kennung, h1, h2, .zu-voll-hinweis")) return;
       if (k.matches(".hinweis")) unten.push(k);
       else if (k.matches(LINKS)) links.push(k);
       else rechts.push(k);
@@ -131,6 +150,7 @@
     });
     const schluessel = f.dataset.minuten ? "folie" + aktuell : f.dataset.phase;
     if (schluessel !== timerSchluessel) { timerSchluessel = schluessel; timerSetzen(minutenFuer(f)); }
+    passend(f);
     fuss.querySelector(".foliennr").textContent = "Folie " + (aktuell + 1) + " / " + folien.length;
     const bis = PHASEN.slice(0, pi + 1).reduce((a, p) => a + p[1], 0);
     fortschrittEl.querySelector("i").style.width = (pi < 0 ? 0 : Math.min(100, bis / GESAMT * 100)) + "%";
