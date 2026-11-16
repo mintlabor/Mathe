@@ -120,7 +120,22 @@
 
   // ---------- Zufallsauswahl ----------
   const SCHL = "praes-klassenlisten";
+  const SCHL_TON = "praes-zufall-ton";
   let gezogen = [];
+  // Name vorlesen (Sprachausgabe des Browsers, funktioniert offline, nichts wird übertragen)
+  const tonAn = () => lies(SCHL_TON, true) && "speechSynthesis" in window;
+  function sprich(text) {
+    if (!tonAn()) return;
+    // Kürzel wie "S07" verständlich vorlesen: "S 7"
+    const t = /^[A-Z]+\d+$/i.test(text) ? text.replace(/^([A-Z]+)0*(\d+)$/i, "$1 $2") : text;
+    speechSynthesis.cancel();
+    const u = new SpeechSynthesisUtterance(t);
+    u.lang = "de-DE"; u.rate = 0.95;
+    const stimme = speechSynthesis.getVoices().find(v => v.lang && v.lang.startsWith("de"));
+    if (stimme) u.voice = stimme;
+    speechSynthesis.speak(u);
+  }
+  if ("speechSynthesis" in window) speechSynthesis.getVoices(); // Stimmen vorladen
   function zufall() {
     const d = lies(SCHL, { aktiv: "", listen: {} });
     const liste = d.listen[d.aktiv] || [];
@@ -129,7 +144,8 @@
     const frei = liste.filter(n => !gezogen.includes(n));
     const o = overlay(`<div class="klein">${esc(d.aktiv)} · noch ${frei.length - 1} von ${liste.length}</div>
       <div class="zufall-name">…</div>
-      <div class="knoepfe"><button class="knopf gross" data-a="neu">🎲 Nächster</button><button class="knopf" data-a="einst">⚙️ Klassenliste</button></div>`);
+      <div class="knoepfe"><button class="knopf gross" data-a="neu" title="Taste Z">🎲 Nächster (Z)</button><button class="knopf" data-a="einst">⚙️ Klassenliste</button>
+        ${"speechSynthesis" in window ? `<button class="knopf" data-a="ton" title="Namen über Lautsprecher vorlesen">${lies(SCHL_TON, true) ? "🔊 Vorlesen an" : "🔇 Vorlesen aus"}</button>` : ""}</div>`);
     const feld = o.querySelector(".zufall-name");
     let n = 0;
     const iv = setInterval(() => {
@@ -138,9 +154,16 @@
         clearInterval(iv);
         const wahl = frei[Math.floor(Math.random() * frei.length)];
         gezogen.push(wahl); feld.textContent = wahl; feld.classList.add("fest");
+        sprich(wahl);
       }
     }, 70);
     o.querySelector('[data-a="neu"]').onclick = zufall;
+    const ton = o.querySelector('[data-a="ton"]');
+    if (ton) ton.onclick = () => {
+      schreib(SCHL_TON, !lies(SCHL_TON, true));
+      ton.textContent = lies(SCHL_TON, true) ? "🔊 Vorlesen an" : "🔇 Vorlesen aus";
+      if (!lies(SCHL_TON, true)) speechSynthesis.cancel();
+    };
     o.querySelector('[data-a="einst"]').onclick = einstellungen;
   }
   function einstellungen() {
@@ -169,7 +192,7 @@
   if (fuss) {
     const b = document.createElement("button");
     b.className = "zufall-knopf"; b.type = "button"; b.title = "Zufallsauswahl (Taste Z)";
-    b.innerHTML = '<span class="wuerfel-icon">🎲</span><span>Wer ist dran?</span>';
+    b.innerHTML = '<span class="wuerfel-icon">🎲</span><span>Wer ist dran?</span><span class="taste">Z</span>';
     b.onclick = zufall;
     fuss.appendChild(b);
   }
@@ -261,7 +284,7 @@
     });
   }
   document.addEventListener("keydown", e => {
-    if (["INPUT", "TEXTAREA", "SELECT"].includes(e.target.tagName)) return;
-    if (e.key === "z" || e.key === "Z") zufall();
+    if (["INPUT", "TEXTAREA", "SELECT"].includes(e.target.tagName) || e.ctrlKey || e.metaKey || e.altKey) return;
+    if (e.key === "z" || e.key === "Z") { e.preventDefault(); zufall(); }
   });
 })();
