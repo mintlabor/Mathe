@@ -332,6 +332,7 @@ body.notizen .hinweis { display: block; }
 .abstimmung .anzahl { font-weight: 800; text-align: right; }
 .abstimmung .opt.richtig { border-color: var(--gruen); background: var(--gruen-hell); }
 .abstimmung .opt.falsch { opacity: .45; }
+.abstimmung .finger-hinweis { margin-left: auto; font-size: 1rem; color: var(--muted); font-weight: 600; white-space: nowrap; }
 .abstimmung .countdown { font-size: 2rem; font-weight: 800; color: var(--accent); margin-left: .5rem; }
 
 /* Denkzeit */

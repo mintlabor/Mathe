@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ABCD-Antwortkarten zum Drucken</title>
+<style>
+  :root { --a: #e03131; --b: #1c7ed6; --c: #2f9e44; --d: #e8a400; --text: #1f2430; --muted: #5b6475; --border: #e2e6ef; }
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: Inter, system-ui, -apple-system, "Segoe UI", sans-serif; color: var(--text); background: #f6f7fb;
+    -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+
+  /* ---------- Bildschirm: Einstellungen ---------- */
+  .steuerung { max-width: 900px; margin: 0 auto; padding: 1.5rem 1.2rem .5rem; }
+  .steuerung h1 { margin: .2rem 0 .3rem; font-size: 1.7rem; }
+  .steuerung .pfad { font-size: .9rem; } .steuerung .pfad a { color: #2f6fde; text-decoration: none; }
+  .steuerung p { color: var(--muted); margin: .3rem 0 1rem; }
+  .optionen { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: .8rem; margin-bottom: 1rem; }
+  .option { background: #fff; border: 2px solid var(--border); border-radius: 14px; padding: .8rem 1rem; cursor: pointer; }
+  .option:has(input:checked) { border-color: #2f6fde; background: #eef4ff; }
+  .option b { display: block; font-size: 1.05rem; margin-bottom: .2rem; }
+  .option span { font-size: .9rem; color: var(--muted); }
+  .option input { margin-right: .4rem; }
+  .zeile { display: flex; gap: 1rem; align-items: center; flex-wrap: wrap; margin-bottom: 1rem; }
+  .zeile label { font-weight: 600; }
+  .zeile input[type=number] { width: 5rem; font: inherit; padding: .3rem .5rem; border: 1px solid #c5cbd6; border-radius: 8px; }
+  .drucken { font: inherit; font-size: 1.1rem; font-weight: 700; padding: .6rem 1.4rem; border-radius: 12px; border: 0; background: #2f6fde; color: #fff; cursor: pointer; }
+  .tipps { background: #fff; border: 1px solid var(--border); border-radius: 14px; padding: .8rem 1.1rem; margin: 1rem 0 1.5rem; font-size: .95rem; }
+  .tipps li { margin: .25rem 0; }
+  .vorschau-titel { max-width: 900px; margin: 0 auto; padding: 0 1.2rem; font-weight: 700; color: var(--muted); }
+
+  /* ---------- Druckseiten (A4) ---------- */
+  .seiten { display: flex; flex-direction: column; align-items: center; gap: 1.2rem; padding: 1rem 0 3rem; }
+  .seite { width: 210mm; height: 297mm; background: #fff; box-shadow: 0 4px 18px rgba(0,0,0,.12); padding: 8mm;
+    display: grid; gap: 0; position: relative; overflow: hidden; }
+  .seite.einzeln { grid-template-columns: repeat(2, 1fr); grid-template-rows: repeat(4, 1fr); }
+  .seite.falt { grid-template-columns: 1fr; grid-template-rows: repeat(4, 1fr); }
+  .seite.klammer { grid-template-columns: repeat(2, 1fr); grid-template-rows: repeat(2, 1fr); }
+
+  .karte { border: .3mm dashed #adb5bd; display: flex; align-items: center; justify-content: center; position: relative; padding: 3mm; }
+  .feld { width: 100%; height: 100%; border-radius: 5mm; display: flex; align-items: center; justify-content: center; position: relative; color: #fff; }
+  .feld .gross { font-size: 46mm; font-weight: 900; line-height: 1; }
+  .feld .finger { position: absolute; right: 3mm; bottom: 2mm; font-size: 3.6mm; font-weight: 700; opacity: .9; }
+  .feld .name { position: absolute; left: 4mm; top: 2.5mm; font-size: 3.2mm; opacity: .9; }
+  .A { background: var(--a); } .B { background: var(--b); } .C { background: var(--c); } .D { background: var(--d); }
+
+  /* Faltkarte: links Vorderseite, rechts Rückseite (gespiegelt lesbar nach dem Falten) */
+  .falt .karte { padding: 3mm 0; }
+  .falt .paar { display: grid; grid-template-columns: 1fr 1fr; width: 100%; height: 100%; }
+  .falt .paar .feld { border-radius: 0; }
+  .falt .paar .feld:first-child { border-radius: 5mm 0 0 5mm; margin-left: 3mm; }
+  .falt .paar .feld:last-child { border-radius: 0 5mm 5mm 0; margin-right: 3mm; }
+  .falt .knick { position: absolute; left: 50%; top: 1mm; bottom: 1mm; border-left: .4mm dotted #fff; z-index: 2; }
+  .falt .knick::before { content: "nach hinten falten"; white-space: nowrap; position: absolute; top: -.2mm; left: 0; transform: translateX(-50%); font-size: 2.6mm; color: var(--muted); background: #fff; padding: 0 1mm; }
+  .falt .feld .gross { font-size: 52mm; }
+
+  /* Klammerkarte: eine Karte mit vier Feldern, Wäscheklammer an die gewählte Farbe */
+  .klammer .karte { padding: 4mm; }
+  .viertel { display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 1fr; gap: 1.5mm; width: 100%; height: 100%; }
+  .viertel .feld { border-radius: 3mm; }
+  .viertel .feld .gross { font-size: 30mm; }
+  .viertel .mitte { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); background: #fff; color: var(--text); border-radius: 3mm;
+    font-size: 3mm; font-weight: 700; padding: 1mm 2mm; text-align: center; line-height: 1.25; }
+
+  @page { size: A4; margin: 0; }
+  @media print {
+    body { background: #fff; }
+    .steuerung, .vorschau-titel { display: none; }
+    .seiten { padding: 0; gap: 0; }
+    .seite { box-shadow: none; break-after: page; }
+    .seite:last-child { break-after: auto; }
+  }
+</style>
+</head>
+<body>
+<div class="steuerung">
+  <div class="pfad"><a href="../">Start</a> › <a href="../vorlage/">Vorlage</a> › ABCD-Karten</div>
+  <h1>🖨️ ABCD-Antwortkarten</h1>
+  <p>Farben wie in der Präsentation: <strong style="color:var(--a)">A rot</strong> · <strong style="color:var(--b)">B blau</strong> · <strong style="color:var(--c)">C grün</strong> · <strong style="color:#c48a00">D gelb</strong>. Auf jeder Karte steht die Fingerzahl – so passt sie zur Finger-Variante ohne Material.</p>
+
+  <div class="optionen">
+    <label class="option"><input type="radio" name="art" value="einzeln" checked><b>Einzelkarten</b><span>4 Karten pro Schüler (A, B, C, D), 2 Schüler pro A4-Seite. Für Klarsichthülle oder Umschlag im Hefter.</span></label>
+    <label class="option"><input type="radio" name="art" value="falt"><b>Faltkarten (beidseitig)</b><span>Buchstabe vorne und hinten – du und der Schüler seht ihn. 1 Schüler pro A4-Seite, stabiler.</span></label>
+    <label class="option"><input type="radio" name="art" value="klammer"><b>Klammerkarte</b><span>Eine Karte mit vier Feldern, Wäscheklammer an die Antwort. 4 Schüler pro A4-Seite, am sparsamsten.</span></label>
+  </div>
+  <div class="zeile">
+    <label>Anzahl Schüler <input type="number" id="anzahl" min="1" max="40" value="26"></label>
+    <label><input type="checkbox" id="kuerzel" checked> Kürzel aufdrucken (S01, S02 …)</label>
+    <button class="drucken" onclick="window.print()">🖨️ Drucken</button>
+  </div>
+  <ul class="tipps">
+    <li><strong>Drucken:</strong> Farbe, Format A4, Skalierung „100 %“ bzw. „Tatsächliche Größe“, Ränder „Keine“. Gestrichelt = Schnittlinie.</li>
+    <li><strong>Haltbarer:</strong> auf dickeres Papier (160 g) drucken oder laminieren.</li>
+    <li><strong>Aufbewahren:</strong> Einzelkarten in eine Klarsichthülle oder einen eingeklebten Umschlag hinten im Mathe-Hefter. Klammerkarte vorne in den Hefter kleben, Wäscheklammer ins Mäppchen.</li>
+    <li><strong>Kürzel</strong> passen zur Zufallsauswahl und zum Exit-Ticket. Wer die Karte vergessen hat, antwortet mit Fingern.</li>
+  </ul>
+</div>
+<div class="vorschau-titel" id="info"></div>
+<div class="seiten" id="seiten"></div>
+
+<script>
+  const BUCHST = ["A", "B", "C", "D"];
+  const FINGER = { A: "☝ 1 Finger", B: "✌ 2 Finger", C: "3 Finger", D: "4 Finger" };
+  const seiten = document.getElementById("seiten");
+  const kz = i => "S" + String(i + 1).padStart(2, "0");
+
+  function feld(b, name, klein) {
+    return `<div class="feld ${b}"><span class="gross">${b}</span>` +
+      (klein ? "" : `<span class="finger">${FINGER[b]}</span>`) +
+      (name ? `<span class="name">${name}</span>` : "") + `</div>`;
+  }
+
+  function zeichnen() {
+    const art = document.querySelector("input[name=art]:checked").value;
+    const n = Math.max(1, Math.min(40, Number(document.getElementById("anzahl").value) || 1));
+    const mitKz = document.getElementById("kuerzel").checked;
+    const karten = [];
+    for (let s = 0; s < n; s++) {
+      const name = mitKz ? kz(s) : "";
+      if (art === "einzeln") BUCHST.forEach(b => karten.push(`<div class="karte">${feld(b, name)}</div>`));
+      if (art === "falt") BUCHST.forEach(b => karten.push(
+        `<div class="karte"><div class="paar">${feld(b, name)}${feld(b, "")}</div><div class="knick"></div></div>`));
+      if (art === "klammer") karten.push(`<div class="karte"><div class="viertel" style="position:relative">` +
+        BUCHST.map(b => feld(b, "", true)).join("") +
+        `<div class="mitte">${name ? name + "<br>" : ""}Klammer an<br>deine Antwort</div></div></div>`);
+    }
+    const proSeite = art === "einzeln" ? 8 : art === "falt" ? 4 : 4;
+    let html = "";
+    for (let i = 0; i < karten.length; i += proSeite)
+      html += `<div class="seite ${art}">${karten.slice(i, i + proSeite).join("")}</div>`;
+    seiten.innerHTML = html;
+    const anzahlSeiten = Math.ceil(karten.length / proSeite);
+    document.getElementById("info").textContent = `Vorschau: ${anzahlSeiten} Seite${anzahlSeiten === 1 ? "" : "n"} A4 für ${n} Schüler`;
+  }
+  document.querySelectorAll("input").forEach(i => i.addEventListener("input", zeichnen));
+  zeichnen();
+</script>
+</body>
+</html>
