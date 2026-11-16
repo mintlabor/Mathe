@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>VORLAGE · Stunde [NR]: [TITEL] – [EINHEIT]</title>
 <!-- Beim Kopieren nach klasse-N/schulform/einheit/stunde-NN/ wird aus "../../" → "../../../../" -->
-<link rel="stylesheet" href="../../praesentation.css?v=5">
+<link rel="stylesheet" href="../../praesentation.css?v=6">
 <style>
   .platzhalter { background: #fff3bf; border-radius: 4px; padding: 0 .3rem; font-family: ui-monospace, monospace; font-size: .9em; }
   .exit-qr { display: flex; gap: 1.5rem; align-items: center; }
@@ -19,6 +19,7 @@
   ☐ mind. 1 Denkaufgabe: Schätzen · Fehler finden · Umkehraufgabe · offene Aufgabe · „Was passiert, wenn …?“
   ☐ 1 Wahlmöglichkeit (.wahlkarten: Niveau, Kontext oder Darstellung)
   ☐ 1 kooperative Form mit Struktur (data-methode)
+  ☐ Jede Arbeitsfolie: Sozialform und iPad-Regel (data-sozialform="EA|PA|GA" data-ipad="gruen|gelb|rot")
   ☐ Sprachhilfen (aside.wortspeicher + .satzhilfe)
   ☐ Leitmodell der Einheit (ikonischer Anker) und Projekt-Baustein, falls die Einheit ein Projekt hat
   Phasen und Minuten: Summe = 45. Timer oben zeigt die geplante Zeit je Phase.
@@ -46,7 +47,7 @@
 <div class="buehne">
 
   <!-- 1 · ABRUFEN: alle antworten gleichzeitig (ABCD-Karten oder Mini-Whiteboards) -->
-  <section class="folie" data-phase="Abrufen">
+  <section class="folie" data-sozialform="EA" data-ipad="rot" data-phase="Abrufen">
     <div class="kennung">[EINHEIT] · Stunde [NR] · Warm-up</div>
     <h2>Was weißt du noch?</h2>
     <p style="margin-top:0"><span class="platzhalter">[Frage zum häufigsten Fehler im letzten Exit-Ticket]</span></p>
@@ -55,7 +56,7 @@
   </section>
 
   <!-- 2 · PROBLEM: Spannungsmoment + Lernziele -->
-  <section class="folie" data-phase="Problem">
+  <section class="folie" data-ipad="rot" data-phase="Problem">
     <div class="kennung">Problem<span class="leitmodell">[Leitmodell der Einheit]</span></div>
     <h2><span class="platzhalter">[Überschrift als Frage]</span></h2>
     <div class="spannung" data-art="Wette">
@@ -81,7 +82,7 @@
   </section>
 
   <!-- 2b · DENKAUFGABE: Schätzen vor Rechnen (optional, sonst löschen) -->
-  <section class="folie" data-phase="Problem" data-minuten="3">
+  <section class="folie" data-sozialform="EA" data-ipad="rot" data-phase="Problem" data-minuten="3">
     <div class="kennung">Schätzen</div>
     <h2><span class="platzhalter">[Wie viel / wie viele …?]</span></h2>
     <div data-schaetzen='{"min":0,"max":1000,"einheit":"[Einheit]","loesung":500}'></div>
@@ -90,7 +91,7 @@
   </section>
 
   <!-- 2c · EIGENE LÖSUNG: erst schreiben, dann sprechen -->
-  <section class="folie" data-phase="Problem" data-minuten="4">
+  <section class="folie" data-sozialform="PA" data-ipad="rot" data-phase="Problem" data-minuten="4">
     <div class="kennung">Eigene Lösung</div>
     <h2>Was meinst du?</h2>
     <div data-denkzeit="60" data-text="[Auftrag: Schreibe auf, wie du vorgehen würdest.]"></div>
@@ -104,7 +105,7 @@
   </section>
 
   <!-- 3 · ERARBEITUNG E: enaktiv, Gruppen mit Rollen, Wahl des Zugangs -->
-  <section class="folie" data-phase="Erarbeitung" data-minuten="7">
+  <section class="folie" data-sozialform="GA" data-ipad="gelb" data-phase="Erarbeitung" data-minuten="7">
     <div class="kennung">Erarbeitung · Gruppen<span class="eis" data-eis="E"></span></div>
     <h2><span class="platzhalter">[Handlungsauftrag]</span></h2>
     <div class="wahlkarten">
@@ -117,7 +118,7 @@
   </section>
 
   <!-- 3 · ERARBEITUNG I/S: „Was passiert, wenn …?“ am Leitmodell, dann Rechnung -->
-  <section class="folie" data-phase="Erarbeitung" data-minuten="5">
+  <section class="folie" data-sozialform="PA" data-ipad="gruen" data-phase="Erarbeitung" data-minuten="5">
     <div class="kennung">Erarbeitung<span class="eis" data-eis="IS"></span></div>
     <h2>Was passiert, wenn …?</h2>
     <p><span class="platzhalter">[Interaktive Darstellung am Leitmodell mit Schieberegler/Knöpfen – erst vermuten, dann prüfen]</span></p>
@@ -125,7 +126,7 @@
   </section>
 
   <!-- 4 · IDEEN VERGLEICHEN: Fehler finden + Aussagen beurteilen -->
-  <section class="folie" data-phase="Ideen vergleichen">
+  <section class="folie" data-sozialform="PA" data-ipad="rot" data-phase="Ideen vergleichen">
     <div class="kennung">Ideen vergleichen</div>
     <h2>Wer hat recht?</h2>
     <div class="fehlerkarte" data-wer="[Name]">
@@ -140,7 +141,7 @@
   </section>
 
   <!-- 5 · SICHERUNG: Merkkasten + in eigenen Worten -->
-  <section class="folie" data-phase="Sicherung">
+  <section class="folie" data-sozialform="EA" data-ipad="rot" data-phase="Sicherung">
     <div class="kennung">Sicherung<span class="eis" data-eis="EIS"></span></div>
     <h2><span class="platzhalter">[Thema]</span></h2>
     <div class="merk">
@@ -155,7 +156,7 @@
   </section>
 
   <!-- 6 · ÜBUNG: Wahl des Niveaus (Buch), Lerntempoduett, eigene Aufgabe erfinden -->
-  <section class="folie" data-phase="Übung">
+  <section class="folie" data-sozialform="EA" data-ipad="gruen" data-phase="Übung">
     <div class="kennung">Übung · Buch<span class="eis" data-eis="S"></span></div>
     <h2>Jetzt du! Wähle dein Niveau</h2>
     <p class="auftrag">Wähle ein Niveau und rechne die Buchaufgaben im Heft. Du darfst wechseln!</p>
@@ -176,7 +177,7 @@
   </section>
 
   <!-- 7 · REFLEXION: Wette auflösen + Exit-Ticket -->
-  <section class="folie" data-phase="Reflexion">
+  <section class="folie" data-sozialform="EA" data-ipad="gruen" data-phase="Reflexion">
     <div class="kennung">Zurück zum Problem · Reflexion</div>
     <h2><span class="platzhalter">[Auflösung der Wette / Antwort auf die Problemfrage]</span></h2>
     <div class="exit-qr">
@@ -191,7 +192,7 @@
   </section>
 
 </div>
-<script src="../../praesentation.js?v=5"></script>
+<script src="../../praesentation.js?v=6"></script>
 <script src="../../qr.js"></script>
 </body>
 </html>

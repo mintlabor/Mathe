@@ -468,3 +468,27 @@ body.notizen .folie.zu-voll .zu-voll-hinweis { display: block; }
   .abstimmung .opt { padding-top: .35rem; padding-bottom: .35rem; }
   .abstimmung .buchstabe { width: 2.3rem; height: 2.3rem; font-size: 1.35rem; }
 }
+
+
+/* ---------- Sozialform und iPad-Regel (Fußleiste) ---------- */
+.signale { display: flex; gap: .6rem; align-items: center; margin-right: auto; margin-left: 1rem; }
+.signal { display: inline-flex; align-items: center; gap: .45rem; font-family: inherit; font-size: 1.15rem; font-weight: 800; cursor: pointer;
+  padding: .4rem 1rem .4rem .7rem; border-radius: 999px; border: 3px dashed var(--border); background: var(--card); color: var(--muted); white-space: nowrap; }
+.signal .i { font-size: 1.5rem; line-height: 1; }
+.signal.an { border-style: solid; color: #1f2430; }
+.signal.s-EA, .signal-blitz.s-EA { background: #e7f5ff; border-color: #1c7ed6; }
+.signal.s-PA, .signal-blitz.s-PA { background: #f3f0ff; border-color: #7048e8; }
+.signal.s-GA, .signal-blitz.s-GA { background: #fff4e6; border-color: #f76707; }
+.signal.i-gruen, .signal-blitz.i-gruen { background: #2f9e44; border-color: #2b8a3e; color: #fff; }
+.signal.i-gelb, .signal-blitz.i-gelb { background: #ffd43b; border-color: #f59f00; color: #1f2430; }
+.signal.i-rot, .signal-blitz.i-rot { background: #e03131; border-color: #c92a2a; color: #fff; }
+.signal-blitz { position: fixed; left: 50%; top: 45%; transform: translate(-50%, -50%); z-index: 60; display: flex; align-items: center; gap: 1.2rem;
+  font-size: 3.4rem; font-weight: 800; padding: 1.4rem 3rem; border-radius: 28px; border: 6px solid; box-shadow: 0 20px 60px rgba(0,0,0,.25);
+  animation: blitz 1.8s ease forwards; pointer-events: none; white-space: nowrap; }
+.signal-blitz .i { font-size: 4.5rem; line-height: 1; }
+@keyframes blitz { 0% { opacity: 0; transform: translate(-50%, -50%) scale(.7); } 12% { opacity: 1; transform: translate(-50%, -50%) scale(1.05); }
+  20% { transform: translate(-50%, -50%) scale(1); } 80% { opacity: 1; } 100% { opacity: 0; } }
+@media (max-width: 1500px) {
+  .signal { font-size: .95rem; padding: .3rem .8rem .3rem .55rem; }
+  .signal .i { font-size: 1.2rem; }
+}
