@@ -579,3 +579,22 @@ body.notizen .folie.zu-voll .zu-voll-hinweis { display: block; }
 .spalte-material .wahlkarte b { font-size: 1.2rem; }
 .spalte-material .wahlkarten { grid-template-columns: 1fr 1fr; gap: .5rem; }
 .lueckenbeispiel { border: 3px dashed var(--accent); border-radius: 14px; padding: .7rem 1rem; font-size: 1.3rem; background: #fff; margin-top: .6rem; }
+
+/* ---------- Großer Countdown der Abstimmung ---------- */
+.countdown-gross { position: fixed; inset: 0; z-index: 80; display: flex; align-items: center; justify-content: center;
+  background: rgba(20, 24, 33, .55); cursor: pointer; transition: opacity .4s; }
+.countdown-gross.weg { opacity: 0; }
+.cg-inhalt { background: #fff; border-radius: 40px; box-shadow: 0 24px 80px rgba(0,0,0,.35); text-align: center;
+  display: flex; flex-direction: column; align-items: center; justify-content: center; animation: cg-plopp .45s ease; }
+.cg-inhalt.zahl { width: 22rem; height: 22rem; border-radius: 50%; font-size: 15rem; font-weight: 900; color: var(--accent); line-height: 1; }
+.cg-inhalt.hoch { padding: 2rem 4rem 2.5rem; }
+.cg-hand { font-size: 7rem; line-height: 1.1; }
+.cg-text { font-size: 5rem; font-weight: 900; color: var(--text); margin: .2rem 0 1.2rem; }
+.cg-karten { display: flex; gap: 1rem; }
+.cg-karten span { width: 5rem; height: 5rem; border-radius: 16px; color: #fff; font-size: 3rem; font-weight: 900;
+  display: flex; align-items: center; justify-content: center; }
+@keyframes cg-plopp { 0% { transform: scale(.5); opacity: 0; } 60% { transform: scale(1.08); opacity: 1; } 100% { transform: scale(1); } }
+@media (max-height: 800px) {
+  .cg-inhalt.zahl { width: 17rem; height: 17rem; font-size: 11rem; }
+  .cg-hand { font-size: 5rem; } .cg-text { font-size: 3.8rem; }
+}
