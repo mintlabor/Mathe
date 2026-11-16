@@ -61,6 +61,7 @@ Beim Kopieren die Pfade `../../` zu `../../../../` ändern. Buchaufgaben werden 
 | Interesse | `.spannung` (Wette/„Stimmt das?“) · `.wahlkarten` (Wahl von Niveau, Kontext, Darstellung) |
 | Kreativ | `.produkt` (eigene Aufgabe erfinden, erklären) · `.projekt` (Baustein fürs Einheitenprojekt) |
 | Kooperation | `data-methode="tps | placemat | lerntempoduett | gruppenpuzzle | galeriegang | rollen"` (Klick auf Schritt startet Timer) |
+| Schülerlösungen | `data-loesungswand="4"`: 3–4 Felder, Lehrkraft fotografiert mit dem iPad (auch per 📷 in der Fußleiste von jeder Folie aus), Fotos erst nach „Freischalten“ sichtbar, nichts wird gespeichert |
 | Sozialform & iPad | Alle Möglichkeiten immer sichtbar in der Fußleiste, gewählte leuchtet (Klick oder Tasten S und I), je Folie automatisch per `data-sozialform="EA|PA|GA"` und `data-ipad="gruen|gelb|rot"` |
 | Sprache | `aside.wortspeicher` (Taste W) · `.satzhilfe` · `.leitmodell` |
 
