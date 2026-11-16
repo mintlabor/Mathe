@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>VORLAGE · Stunde [NR]: [TITEL] – [EINHEIT]</title>
 <!-- Beim Kopieren nach klasse-N/schulform/einheit/stunde-NN/ wird aus "../../" → "../../../../" -->
-<link rel="stylesheet" href="../../praesentation.css?v=9">
+<link rel="stylesheet" href="../../praesentation.css?v=10">
 <style>
   .platzhalter { background: #fff3bf; border-radius: 4px; padding: 0 .3rem; font-family: ui-monospace, monospace; font-size: .9em; }
   .exit-qr { display: flex; gap: 1.5rem; align-items: center; }
@@ -13,25 +13,24 @@
 </style>
 </head>
 <!--
-  AKTIVIERUNGS-CHECK – jede Stunde enthält:
-  ☐ 1 Spannungsmoment am Anfang (.spannung, Wette/Rätsel/„Stimmt das?“), am Ende aufgelöst
-  ☐ mind. 1 „Alle antworten“ (data-abstimmung oder data-denkzeit; Aufrufen per 🎲 statt Melden)
-  ☐ mind. 1 Denkaufgabe: Schätzen · Fehler finden · Umkehraufgabe · offene Aufgabe · „Was passiert, wenn …?“
-  ☐ 1 Wahlmöglichkeit (.wahlkarten: Niveau, Kontext oder Darstellung)
-  ☐ 1 kooperative Form mit Struktur (data-methode)
-  ☐ Jede Arbeitsfolie: Sozialform und iPad-Regel (data-sozialform="EA|PA|GA" data-ipad="gruen|gelb|rot")
-  ☐ Sprachhilfen (aside.wortspeicher + .satzhilfe)
-  ☐ Leitmodell der Einheit (ikonischer Anker) und Projekt-Baustein, falls die Einheit ein Projekt hat
-  Phasen und Minuten: Summe = 45. Timer oben zeigt die geplante Zeit je Phase.
+  SCHLANKE STUNDE: FESTER KERN (jede Stunde gleich, höchstens 10 Folien)
+  1–2  Abrufen        ABCD zum häufigsten Fehler im letzten Exit-Ticket + ABCD-Mixfrage aus einem ÄLTEREN Thema (verteiltes Üben)
+  3    Problem        Alltagsproblem + Lernziele
+  4    Eigene Lösung  Denkzeit → Think-Pair-Share (Standardmethode, immer gleich)
+  5–6  Erarbeitung    E: Handeln mit Material · I/S: „Was passiert, wenn …?“ am Leitmodell → Rechnung; dabei Lösungen fotografieren (📷)
+  7    Ideen vergl.   Lösungswand (echte Schülerlösungen) – ODER Fehlerkarte aus dem Baukasten, nicht beides
+  8    Sicherung      Merkkasten mit Musterbeispiel + Lückenbeispiel
+  9    Übung          Mix-Aufgabe (älteres Thema) + Niveauwahl Buch
+  10   Reflexion      Problem auflösen + Exit-Ticket
 
-  ALLES AUF EINE FOLIE – im Vollbild darf nie gescrollt werden (Prüfmaß: 1366 × 768):
-  ☐ pro Folie EIN Auftrag: höchstens ein großer Baustein (Abstimmung ODER Modell ODER Wahlkarten ODER Karten) + kurzer Auftragstext
-  ☐ Problem und Lernziele auf zwei Folien (wie unten); Übung auf zwei Folien (Niveau wählen / So übt ihr)
-  ☐ wird es zu voll: Folie teilen, nicht kleiner schreiben. Folien derselben Phase OHNE data-minuten teilen sich den Timer
-  ☐ Links steht automatisch der Arbeitsauftrag (p, .problem, .spannung, .lernziele, data-methode, data-denkzeit, …),
-    rechts das Material. Ausnahme pro Folie: data-layout="einspaltig"
-  ☐ Prüfen: werkzeuge/folien-check.html → zeigt alle zu vollen Folien einer Einheit.
-    Im Unterricht verkleinert sich eine leicht zu volle Folie automatisch (bis 80 %); im Modus „Hinweise“ erscheint „⚠ Folie zu voll“.
+  WAHLBAUSTEINE aus vorlage/baukasten/ – pro Stunde höchstens 1–2, über die Einheit verteilen:
+  Wette/„Stimmt das?“ · Schätzen · Placemat · Gruppenpuzzle · Galeriegang · Rollenkarten · Lerntempoduett ·
+  Fehlerkarte + Aussagekarten · kreatives Produkt · Projekt-Baustein. Ein Wahlbaustein ERSETZT eine Kernfolie, er kommt nicht dazu.
+
+  GRENZEN: höchstens 10 Folien · höchstens 3 Wechsel der Sozialform · Think-Pair-Share als Standard ·
+  Sozialform und iPad-Regel per data-sozialform="EA|PA|GA" / data-ipad="gruen|gelb|rot" (Folien ohne Angabe behalten den Zustand) ·
+  Summe der Minuten = 45 · alles passt ohne Scrollen bei 1366 × 768 (Prüfen: werkzeuge/folien-check.html)
+  LAYOUT: links (größer) Auftrag und Fragen, rechts (kleiner) Antworten und Material.
 -->
 <body data-phasen='[["Abrufen",3],["Problem",7],["Erarbeitung",11],["Ideen vergleichen",5],["Sicherung",6],["Übung",7],["Reflexion",6]]'>
 
@@ -39,171 +38,136 @@
   <div class="pfad"><a href="../../">Start</a> › <a href="../">Vorlage</a> › Stunde [NR]</div>
 </div>
 
-<!-- Wortspeicher: Fachwörter und Satzanfänge der Stunde (Knopf „📚 Wörter“ oder Taste W) -->
+<!-- Wortspeicher: Fachwörter und Satzanfänge der Stunde (Knopf 📚 oder Taste W) -->
 <aside class="wortspeicher"
   data-woerter='["[Fachwort 1]","[Fachwort 2]","[Fachwort 3]"]'
   data-saetze='["Ich vermute, dass …","Ich habe so gerechnet: …","Das sieht man daran, dass …","Ich stimme zu / nicht zu, weil …"]'></aside>
 
 <div class="buehne">
 
-  <!-- 1 · ABRUFEN: alle antworten gleichzeitig (ABCD-Karten oder Mini-Whiteboards) -->
+  <!-- 1 · ABRUFEN: Fehler aus dem letzten Exit-Ticket -->
   <section class="folie" data-sozialform="EA" data-ipad="rot" data-phase="Abrufen">
     <div class="kennung">[EINHEIT] · Stunde [NR] · Warm-up</div>
     <h2>Was weißt du noch?</h2>
-    <p style="margin-top:0"><span class="platzhalter">[Frage zum häufigsten Fehler im letzten Exit-Ticket]</span></p>
+    <p class="auftrag"><span class="platzhalter">[Frage zum häufigsten Fehler im letzten Exit-Ticket]</span></p>
     <div data-abstimmung='["[Antwort A]","[Antwort B – richtig]","[Antwort C – typischer Fehler]","[Antwort D]"]' data-loesung="1"></div>
-    <div class="hinweis">Alle schreiben den Buchstaben auf ihr Whiteboard / halten die ABCD-Karte hoch. Stimmen per Klick auf die Zeilen zählen. Bei vielen Fehlern: Begründung per 🎲 einholen, nicht per Melden.</div>
+    <div class="hinweis">Karten hoch (oder Finger). Bei vielen Fehlern: Begründung per 🎲 einholen.</div>
   </section>
 
-  <!-- 2 · PROBLEM: Spannungsmoment + Lernziele -->
-  <section class="folie" data-ipad="rot" data-phase="Problem">
+  <!-- 2 · ABRUFEN: Mixfrage aus einem älteren Thema (verteiltes Üben) -->
+  <section class="folie" data-phase="Abrufen">
+    <div class="kennung">Warm-up · Mix</div>
+    <h2>Weißt du das noch?</h2>
+    <p class="auftrag"><span class="platzhalter">[Frage aus einem ÄLTEREN Thema / einer früheren Einheit]</span></p>
+    <div data-abstimmung='["[Antwort A]","[Antwort B]","[Antwort C – richtig]","[Antwort D]"]' data-loesung="2"></div>
+    <div class="hinweis">Verteiltes Üben: Themen von vor 1–4 Wochen wählen, nicht von gestern.</div>
+  </section>
+
+  <!-- 3 · PROBLEM + LERNZIELE (Wette/Spannung als Wahlbaustein aus dem Baukasten möglich) -->
+  <section class="folie" data-phase="Problem" data-minuten="3">
     <div class="kennung">Problem<span class="leitmodell">[Leitmodell der Einheit]</span></div>
     <h2><span class="platzhalter">[Überschrift als Frage]</span></h2>
-    <div class="spannung" data-art="Wette">
-      <span class="platzhalter">[Überraschende Behauptung, Rätsel oder Wette aus dem Alltag der Schüler]</span>
+    <div class="problem">
+      <div class="label">Problem</div><br>
+      <span class="platzhalter">[Alltagssituation, die ohne das neue Wissen nicht sicher lösbar ist]</span>
     </div>
-    <div data-abstimmung='["Ja, das stimmt","Nein, das stimmt nicht","Kommt darauf an …"]'></div>
-    <div class="hinweis">Abstimmung festhalten (Foto/Tafel), am Ende der Stunde auflösen. Noch nicht verraten!</div>
-  </section>
-
-  <!-- 2a · LERNZIELE (eigene Folie, damit alles ohne Scrollen passt) -->
-  <section class="folie" data-phase="Problem">
-    <div class="kennung">Problem · Ziele<span class="leitmodell">[Leitmodell der Einheit]</span></div>
-    <h2>Heute lernst du …</h2>
-    <div class="lernziele">
+    <div class="lernziele schritt">
       <div class="titel">🎯 Heute lernst du …</div>
       <ul>
         <li><span class="platzhalter">[Lernziel 1 – identisch mit dem Exit-Ticket]</span></li>
         <li><span class="platzhalter">[Lernziel 2]</span></li>
       </ul>
     </div>
-    <p class="schritt"><span class="projekt"><span class="platzhalter">[Was die Stunde zum Einheitenprojekt beiträgt]</span></span></p>
-    <div class="hinweis">Lernziele kurz vorlesen lassen (🎲).</div>
+    <div class="hinweis">Problem noch nicht auflösen. Vermutungen sammeln.</div>
   </section>
 
-  <!-- 2b · DENKAUFGABE: Schätzen vor Rechnen (optional, sonst löschen) -->
-  <section class="folie" data-sozialform="EA" data-ipad="rot" data-phase="Problem" data-minuten="3">
-    <div class="kennung">Schätzen</div>
-    <h2><span class="platzhalter">[Wie viel / wie viele …?]</span></h2>
-    <div data-schaetzen='{"min":0,"max":1000,"einheit":"[Einheit]","loesung":500}'></div>
-    <p class="satzhilfe">Ich schätze …, weil …</p>
-    <div class="hinweis">Jeder schreibt zuerst seine Schätzung auf. Dann 5–8 Werte per 🎲 abfragen und eintragen. Auflösen erst nach der Rechnung.</div>
-  </section>
-
-  <!-- 2c · EIGENE LÖSUNG: erst schreiben, dann sprechen -->
-  <section class="folie" data-sozialform="PA" data-ipad="rot" data-phase="Problem" data-minuten="4">
+  <!-- 4 · EIGENE LÖSUNG: erst schreiben, dann sprechen (Think-Pair-Share als feste Routine) -->
+  <section class="folie" data-sozialform="PA" data-phase="Problem" data-minuten="4">
     <div class="kennung">Eigene Lösung</div>
     <h2>Was meinst du?</h2>
     <div data-denkzeit="60" data-text="[Auftrag: Schreibe auf, wie du vorgehen würdest.]"></div>
-    <div data-methode="tps" data-minuten="1,2,2"></div>
+    <div data-methode="tps" data-minuten="1,2,1"></div>
     <div data-tipps>
       <div class="tipp"><span class="platzhalter">[Tipp 1 – Denkanstoß]</span></div>
       <div class="tipp"><span class="platzhalter">[Tipp 2 – konkreter Hinweis]</span></div>
     </div>
-    <p class="satzhilfe">Ich vermute, dass … · Ich würde zuerst …</p>
-    <div class="hinweis"><span class="platzhalter">[Erwartete Fehlvorstellungen – nicht korrigieren, in „Ideen vergleichen“ aufgreifen]</span></div>
+    <div class="hinweis"><span class="platzhalter">[Erwartete Fehlvorstellungen – nicht korrigieren, beim Vergleichen aufgreifen]</span></div>
   </section>
 
-  <!-- 3 · ERARBEITUNG E: enaktiv, Gruppen mit Rollen, Wahl des Zugangs -->
-  <section class="folie" data-sozialform="GA" data-ipad="gelb" data-phase="Erarbeitung" data-minuten="6">
+  <!-- 5 · ERARBEITUNG E: Handeln mit Material (Gruppen) -->
+  <section class="folie" data-sozialform="GA" data-phase="Erarbeitung" data-minuten="6">
     <div class="kennung">Erarbeitung · Gruppen<span class="eis" data-eis="E"></span></div>
     <h2><span class="platzhalter">[Handlungsauftrag]</span></h2>
-    <div class="wahlkarten">
-      <div class="wahlkarte"><div class="icon">🧱</div><b>Legen</b><span class="platzhalter">[mit Material]</span></div>
-      <div class="wahlkarte"><div class="icon">✏️</div><b>Zeichnen</b><span class="platzhalter">[Skizze / Modell]</span></div>
-      <div class="wahlkarte"><div class="icon">🔢</div><b>Rechnen</b><span class="platzhalter">[mit Zahlen probieren]</span></div>
-    </div>
-    <div data-methode="rollen"></div>
-    <div class="hinweis">Materialkiste: <span class="platzhalter">[Liste]</span>. Gruppen 3–4. Rollen auslosen oder durchwechseln.</div>
+    <p class="auftrag"><span class="platzhalter">[Was die Gruppe mit dem Material tut und was am Ende auf dem Blatt stehen soll]</span></p>
+    <div class="hinweis">Materialkiste: <span class="platzhalter">[Liste]</span>. Gemischte Gruppen (3–4) bringen mehr verschiedene Lösungswege. Herumgehen und 2–4 unterschiedliche Lösungen mit 📷 fotografieren.</div>
   </section>
 
-  <!-- 3 · ERARBEITUNG I/S: „Was passiert, wenn …?“ am Leitmodell, dann Rechnung -->
-  <section class="folie" data-sozialform="PA" data-ipad="gruen" data-phase="Erarbeitung" data-minuten="5">
+  <!-- 6 · ERARBEITUNG I/S: am Leitmodell, dann Rechnung -->
+  <section class="folie" data-phase="Erarbeitung" data-minuten="5">
     <div class="kennung">Erarbeitung<span class="eis" data-eis="IS"></span></div>
     <h2>Was passiert, wenn …?</h2>
-    <p><span class="platzhalter">[Interaktive Darstellung am Leitmodell mit Schieberegler/Knöpfen – erst vermuten, dann prüfen]</span></p>
-    <div class="vernetzen schritt"><span class="platzhalter">[Impuls: Wo siehst du im Bild die Zahl … ? Was ändert sich, wenn …?]</span></div>
+    <p class="auftrag"><span class="platzhalter">[Erst vermuten, dann am Modell prüfen, dann die Rechnung dazu aufschreiben]</span></p>
+    <div class="kasten"><span class="platzhalter">[Interaktive Darstellung am Leitmodell (modelle.js)]</span></div>
+    <div class="vernetzen schritt"><span class="platzhalter">[Impuls: Wo siehst du im Bild die Zahl … ?]</span></div>
   </section>
 
-  <!-- 4a · IDEEN VERGLEICHEN: echte Schülerlösungen (Lösungswand). Fotos während der Erarbeitung aufnehmen,
-           hier erst mit „Freischalten“ zeigen. Gezielt wählen: typischer Fehler · umständlicher Weg · geschickter Weg -->
-  <section class="folie" data-sozialform="PA" data-ipad="rot" data-phase="Ideen vergleichen" data-layout="einspaltig">
+  <!-- 7 · IDEEN VERGLEICHEN: echte Schülerlösungen (alternativ: Fehlerkarte aus dem Baukasten) -->
+  <section class="folie" data-phase="Ideen vergleichen" data-layout="einspaltig">
     <div class="kennung">Ideen vergleichen · Eure Lösungen</div>
     <h2>Was ist gleich, was ist anders?</h2>
-    <p class="auftrag">Vergleicht die Lösungen A–D: Welcher Weg ist richtig? Welcher ist am geschicktesten? Haltet eure Karte hoch.</p>
+    <p class="auftrag">Welcher Weg ist richtig? Welcher ist am geschicktesten? Haltet eure Karte hoch.</p>
     <div data-loesungswand="4"></div>
     <p class="satzhilfe">Lösung … ist geschickt, weil … · Bei Lösung … ist der Fehler …</p>
-    <div class="hinweis">Beim Herumgehen in der Erarbeitung 2–4 Lösungen fotografieren: Knopf 📷 unten in der Fußleiste (geht auf jeder Folie) oder hier ein Feld antippen. Auf dem Beamer steht nur „Foto A bereit“, bis du freischaltest. Danach per 🎲 begründen lassen und den richtigen Weg herausarbeiten. Fotos werden nicht gespeichert.</div>
+    <div class="hinweis">„Freischalten“ erst hier. Gezielt zeigen: typischer Fehler · umständlicher Weg · geschickter Weg. Per 🎲 begründen lassen, dann den richtigen Weg festhalten. Fotos werden nicht gespeichert.</div>
   </section>
 
-  <!-- 4b · IDEEN VERGLEICHEN: Fehler finden + Aussagen beurteilen -->
-  <section class="folie" data-sozialform="PA" data-ipad="rot" data-phase="Ideen vergleichen">
-    <div class="kennung">Ideen vergleichen</div>
-    <h2>Wer hat recht?</h2>
-    <div class="fehlerkarte" data-wer="[Name]">
-      <div class="rechnung"><span class="platzhalter">[Rechnung mit typischem Fehler:</span> … = <span class="fehler">[falsche Stelle]</span>]</div>
-      <div class="erklaerung"><span class="platzhalter">[Was falsch ist und wie es richtig geht]</span></div>
-    </div>
-    <div class="karten">
-      <div class="karte ja"><span class="platzhalter">[Richtige Aussage]</span><span class="loesung"><span class="platzhalter">[Begründung]</span></span></div>
-      <div class="karte nein"><span class="platzhalter">[Typische Fehlvorstellung]</span><span class="loesung"><span class="platzhalter">[Warum falsch]</span></span></div>
-    </div>
-    <p class="satzhilfe">Ich stimme zu / nicht zu, weil … · Der Fehler ist …</p>
-  </section>
-
-  <!-- 5 · SICHERUNG: Merkkasten + in eigenen Worten -->
-  <section class="folie" data-sozialform="EA" data-ipad="rot" data-phase="Sicherung">
+  <!-- 8 · SICHERUNG: Merkkasten mit Musterbeispiel + Lückenbeispiel -->
+  <section class="folie" data-sozialform="EA" data-phase="Sicherung">
     <div class="kennung">Sicherung<span class="eis" data-eis="EIS"></span></div>
     <h2><span class="platzhalter">[Thema]</span></h2>
+    <p class="auftrag">Schreibe den Merkkasten ab. Löse dann das Lückenbeispiel.</p>
     <div class="merk">
       <h3>Merke</h3>
       <ul>
-        <li class="schritt"><span class="platzhalter">[Merksatz 1]</span></li>
-        <li class="schritt"><span class="platzhalter">[Beispiel in allen Darstellungen: Material · Bild · Rechnung]</span></li>
+        <li><span class="platzhalter">[Merksatz]</span></li>
+        <li class="schritt"><strong>Musterbeispiel:</strong> <span class="platzhalter">[vollständig gelöst, mit Bild und Rechnung]</span></li>
       </ul>
     </div>
-    <div class="produkt schritt">Erkläre es deinem Nachbarn in <strong>eigenen Worten</strong> und mit einer <strong>Skizze</strong>. Er sagt, ob er es verstanden hat.</div>
-    <div class="hinweis">Ins Heft übertragen. Danach 1–2 Erklärungen per 🎲 vorstellen lassen.</div>
+    <div class="lueckenbeispiel schritt"><strong>Jetzt du:</strong> <span class="platzhalter">[gleiches Beispiel mit anderen Zahlen, Schritte teilweise vorgegeben: … = ___]</span></div>
+    <div class="hinweis">Lückenbeispiel per 🎲 kontrollieren. Wer es kann, startet mit der Übung.</div>
   </section>
 
-  <!-- 6 · ÜBUNG: Wahl des Niveaus (Buch), Lerntempoduett, eigene Aufgabe erfinden -->
-  <section class="folie" data-sozialform="EA" data-ipad="gruen" data-phase="Übung">
+  <!-- 9 · ÜBUNG: zuerst Mix-Aufgabe, dann Niveauwahl -->
+  <section class="folie" data-ipad="gruen" data-phase="Übung">
     <div class="kennung">Übung · Buch<span class="eis" data-eis="S"></span></div>
-    <h2>Jetzt du! Wähle dein Niveau</h2>
-    <p class="auftrag">Wähle ein Niveau und rechne die Buchaufgaben im Heft. Du darfst wechseln!</p>
+    <h2>Jetzt du!</h2>
+    <p class="auftrag">Zuerst die Mix-Aufgabe, dann dein Niveau. Fertig? Vergleiche mit einem Partner, der auch fertig ist.</p>
+    <p>Tipps und Lösungen: <a class="schuelerlink" href="../schueler/stunde-xx.html" target="_blank">📱 Schülerseite</a></p>
     <div class="wahlkarten">
+      <div class="wahlkarte"><b>🔀 Mix (für alle)</b>📖 <span class="platzhalter">[BUCH: älteres Kapitel S. __ Nr. __]</span></div>
       <div class="wahlkarte"><b>● Basis</b>📖 <span class="platzhalter">[BUCH: S. __ Nr. __]</span></div>
       <div class="wahlkarte"><b>●● Standard</b>📖 <span class="platzhalter">[BUCH: S. __ Nr. __]</span></div>
       <div class="wahlkarte"><b>●●● Profi</b>📖 <span class="platzhalter">[BUCH: S. __ Nr. __]</span></div>
     </div>
-    <p>Tipps und Lösungen: <a class="schuelerlink" href="../schueler/stunde-xx.html" target="_blank">📱 Schülerseite · Stunde [NR]</a></p>
   </section>
 
-  <!-- 6b · ÜBUNG: So übt ihr (eigene Folie) -->
-  <section class="folie" data-phase="Übung">
-    <div class="kennung">Übung · So übt ihr<span class="eis" data-eis="S"></span></div>
-    <h2>Lerntempoduett</h2>
-    <div data-methode="lerntempoduett" data-minuten="5,0,2,0"></div>
-    <div class="produkt">Fertig? <strong>Erfinde eine eigene Aufgabe</strong> zu <span class="platzhalter">[Kontext]</span>. Dein Partner löst sie.</div>
-  </section>
-
-  <!-- 7 · REFLEXION: Wette auflösen + Exit-Ticket -->
-  <section class="folie" data-sozialform="EA" data-ipad="gruen" data-phase="Reflexion">
+  <!-- 10 · REFLEXION: Problem auflösen + Exit-Ticket -->
+  <section class="folie" data-phase="Reflexion">
     <div class="kennung">Zurück zum Problem · Reflexion</div>
-    <h2><span class="platzhalter">[Auflösung der Wette / Antwort auf die Problemfrage]</span></h2>
+    <h2><span class="platzhalter">[Antwort auf die Problemfrage]</span></h2>
     <div class="exit-qr">
       <div data-qr="../schueler/exit-vorlage.html"></div>
       <div>
         <p style="margin-top:0;font-size:1.4rem"><strong>🎫 Exit-Ticket</strong></p>
-        <p>Scanne den Code oder öffne die Schülerseite. Gib dein <strong>Kürzel</strong> ein.<br>Am Ende zeigst du mir deinen QR-Code.</p>
+        <p>Scanne den Code. Gib dein <strong>Kürzel</strong> ein.<br>Zeig mir am Ende deinen QR-Code.</p>
         <p><a class="schuelerlink" href="../schueler/exit-vorlage.html" target="_blank">🎫 Zum Exit-Ticket</a></p>
       </div>
     </div>
-    <div class="hinweis">Tafelabstimmung vom Anfang zeigen: Wer lag richtig? Dann 4 Min. Exit-Ticket. „Ticket an der Tür“: Beim Rausgehen zeigt jeder seinen QR-Code, du scannst mit der Handy-Kamera → Auswertung. Ohne iPad: mit dem Nachbarn nacheinander, jeder mit eigenem Kürzel.</div>
+    <div class="hinweis">Problem kurz auflösen, dann 4 Min. Exit-Ticket. „Ticket an der Tür“: Beim Rausgehen QR-Code mit der Handy-Kamera scannen → Auswertung.</div>
   </section>
 
 </div>
-<script src="../../praesentation.js?v=9"></script>
+<script src="../../praesentation.js?v=10"></script>
 <script src="../../qr.js"></script>
 </body>
 </html>
