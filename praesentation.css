@@ -327,7 +327,7 @@ body.notizen .hinweis { display: block; }
 .abstimmung .opt { display: grid; grid-template-columns: 3.2rem 1fr 30% 2.5rem; gap: .8rem; align-items: center;
   background: var(--card); border: 2px solid var(--border); border-radius: 14px; padding: .55rem .8rem; margin-bottom: .5rem; cursor: pointer; font-size: 1.45rem; }
 .abstimmung .buchstabe { width: 2.8rem; height: 2.8rem; border-radius: 10px; color: #fff; font-weight: 800; font-size: 1.6rem; display: flex; align-items: center; justify-content: center; }
-.abstimmung .balken { height: 1.2rem; background: var(--bg); border-radius: 99px; overflow: hidden; }
+.abstimmung .balken { height: 1.2rem; background: var(--bg); border-radius: 99px; overflow: hidden; min-width: 0; }
 .abstimmung .balken i { display: block; height: 100%; width: 0; transition: width .3s; }
 .abstimmung .anzahl { font-weight: 800; text-align: right; }
 .abstimmung .opt.richtig { border-color: var(--gruen); background: var(--gruen-hell); }
@@ -560,3 +560,22 @@ body.notizen .folie.zu-voll .zu-voll-hinweis { display: block; }
   .zufall-knopf { font-size: 1.05rem; padding: .25rem .9rem .25rem .6rem; margin-left: .4rem; }
   .zufall-knopf .wuerfel-icon { font-size: 1.4rem; }
 }
+
+/* ---------- Gewichtung: links Auftrag/Fragen größer, rechts Antworten/Material kompakter ---------- */
+.spalten { grid-template-columns: minmax(300px, 2fr) 3fr; }
+/* Rechts nur Antworten (Abstimmung, Wahlkarten): links bekommt den größeren Teil */
+.spalten:has(> .spalte-material > .abstimmung:only-child),
+.spalten:has(> .spalte-material > .wahlkarten:only-child) { grid-template-columns: 3fr minmax(280px, 2fr); }
+.spalten:has(> .spalte-material > .abstimmung:only-child) .spalte-auftrag p,
+.spalten:has(> .spalte-material > .wahlkarten:only-child) .spalte-auftrag p { font-size: 1.6rem; }
+.spalte-material .abstimmung .opt { grid-template-columns: 2.3rem minmax(0, 1fr) 18% 1.6rem; box-sizing: border-box; width: 100%; gap: .55rem; padding: .35rem .6rem; font-size: 1.2rem; margin-bottom: .35rem; border-radius: 12px; }
+.spalte-material .abstimmung .buchstabe { width: 2.2rem; height: 2.2rem; font-size: 1.25rem; border-radius: 8px; }
+.spalte-material .abstimmung .balken { height: .8rem; }
+.spalte-material .abstimmung .knoepfe { gap: .4rem; margin-top: .5rem; }
+.spalte-material .abstimmung .knoepfe .knopf { font-size: .95rem; padding: .3rem .7rem; }
+.spalte-material .abstimmung .countdown { font-size: 1.6rem; }
+.spalte-material .abstimmung .finger-hinweis { font-size: .85rem; margin-left: 0; width: 100%; white-space: normal; }
+.spalte-material .wahlkarte { font-size: 1.1rem; padding: .6rem .8rem; }
+.spalte-material .wahlkarte b { font-size: 1.2rem; }
+.spalte-material .wahlkarten { grid-template-columns: 1fr 1fr; gap: .5rem; }
+.lueckenbeispiel { border: 3px dashed var(--accent); border-radius: 14px; padding: .7rem 1rem; font-size: 1.3rem; background: #fff; margin-top: .6rem; }

@@ -46,7 +46,7 @@ Im Ordner [`vorlage/`](vorlage/) liegt das Grundgerüst mit gelb markierten Plat
 
 | Datei | Zweck | Ziel beim Kopieren |
 |---|---|---|
-| `vorlage/stunde-xx/index.html` | Präsentation (Beamer) mit allen Phasen | `klasse-N/schulform/einheit/stunde-NN/index.html` |
+| `vorlage/stunde-xx/index.html` | Präsentation (Beamer): schlanker fester Kern, höchstens 10 Folien (Wahlbausteine aus `vorlage/baukasten/`) | `klasse-N/schulform/einheit/stunde-NN/index.html` |
 | `vorlage/schueler/stunde-xx.html` | Schülerseite: Buchaufgaben nach Niveau, Tipps, Selbstkontrolle | `…/einheit/schueler/stunde-NN.html` |
 | `vorlage/schueler/exit-vorlage.html` | Exit-Ticket mit QR-Code | `…/einheit/schueler/exit-NN.html` |
 
