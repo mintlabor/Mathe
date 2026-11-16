@@ -100,8 +100,26 @@
     el.querySelectorAll(".opt").forEach(r => r.onclick = () => { stimmen[r.dataset.i]++; zeichne(); });
     const cd = el.querySelector(".countdown");
     el.querySelector('[data-a="los"]').onclick = () => {
-      let n = 3; cd.textContent = n;
-      const iv = setInterval(() => { n--; cd.textContent = n > 0 ? n : "🖐️ Hoch!"; if (n <= 0) clearInterval(iv); }, 800);
+      // Großer Countdown in der Bildschirmmitte: 3 · 2 · 1 · „Karten hoch!“
+      document.querySelector(".countdown-gross")?.remove();
+      const g = document.createElement("div");
+      g.className = "countdown-gross";
+      g.title = "Klicken zum Schließen";
+      document.body.appendChild(g);
+      const zeige = (html, klasse) => { g.innerHTML = `<div class="cg-inhalt ${klasse}">${html}</div>`; };
+      let n = 3; zeige(n, "zahl");
+      cd.textContent = "";
+      const iv = setInterval(() => {
+        n--;
+        if (n > 0) { zeige(n, "zahl"); return; }
+        clearInterval(iv);
+        zeige(`<div class="cg-hand">🖐️</div><div class="cg-text">Karten hoch!</div>
+          <div class="cg-karten">${opt.slice(0, 4).map((_, i) => `<span style="background:${FARBEN[i]}">${String.fromCharCode(65 + i)}</span>`).join("")}</div>`, "hoch");
+        cd.textContent = "🖐️ Hoch!";
+        setTimeout(() => g.classList.add("weg"), 2200);
+        setTimeout(() => g.remove(), 2600);
+      }, 900);
+      g.onclick = () => { clearInterval(iv); g.remove(); };
     };
     el.querySelector('[data-a="aufloesen"]')?.addEventListener("click", () =>
       el.querySelectorAll(".opt").forEach((r, i) => r.classList.add(i === loesung ? "richtig" : "falsch")));
