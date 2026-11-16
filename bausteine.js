@@ -31,6 +31,12 @@
     Automatisch je Folie: <section class="folie" data-sozialform="EA|PA|GA" data-ipad="gruen|gelb|rot">
     Folien ohne Angabe übernehmen den bisherigen Zustand. Ein Wechsel wird kurz groß eingeblendet.
 
+  SCHÜLERLÖSUNGEN VERGLEICHEN
+    <div data-loesungswand="4"></div>   (3 oder 4 Felder, Standard 4)
+        Lehrkraft tippt auf ein Feld → Foto aufnehmen oder aus der Mediathek wählen (iPad).
+        Fotos bleiben verdeckt („Foto A bereit“), bis „👁 Freischalten“ gedrückt wird. Freigeschaltetes Foto
+        antippen = groß anzeigen. Fotos liegen nur im Arbeitsspeicher, nichts wird gespeichert oder hochgeladen.
+
   SPRACHE
     <aside class="wortspeicher" data-woerter='["Grundwert","Prozentwert"]'
            data-saetze='["Ich vermute, dass …","Das sieht man daran, dass …"]'></aside>
@@ -280,6 +286,93 @@
     if (e.key === "s" || e.key === "S") signalWeiter("sozial");
     else if (e.key === "i" || e.key === "I") signalWeiter("ipad");
   });
+
+  // ---------- Lösungswand: Schülerlösungen fotografieren, erst nach Freischalten zeigen ----------
+  document.querySelectorAll("[data-loesungswand]").forEach(el => {
+    const n = Math.min(4, Math.max(2, Number(el.dataset.loesungswand) || 4));
+    const FARB = ["#e03131", "#1c7ed6", "#2f9e44", "#e8a400"];
+    const bilder = new Array(n).fill(null);
+    let offen = false;
+    el.classList.add("loesungswand", "lw-" + n);
+    el.innerHTML = `<div class="lw-felder">${bilder.map((_, i) => `
+        <div class="lw-feld" data-i="${i}">
+          <span class="lw-buchstabe" style="background:${FARB[i]}">${String.fromCharCode(65 + i)}</span>
+          <div class="lw-inhalt"></div>
+          <input type="file" accept="image/*" hidden>
+          <button class="lw-weg" title="Foto entfernen" type="button">✕</button>
+        </div>`).join("")}</div>
+      <div class="lw-leiste">
+        <button class="knopf mittel lw-frei" type="button">👁 Freischalten</button>
+        <span class="lw-info"></span>
+        <button class="knopf lw-alle-weg" type="button" title="Alle Fotos entfernen">🗑 Alle löschen</button>
+      </div>`;
+    const felder = [...el.querySelectorAll(".lw-feld")];
+    const info = el.querySelector(".lw-info"), frei = el.querySelector(".lw-frei");
+    function zeichne() {
+      felder.forEach((f, i) => {
+        const b = bilder[i], inhalt = f.querySelector(".lw-inhalt");
+        f.classList.toggle("hat-bild", !!b);
+        f.classList.toggle("sichtbar", !!b && offen);
+        if (!b) inhalt.innerHTML = `<div class="lw-leer">📷<br>Foto aufnehmen</div>`;
+        else if (!offen) inhalt.innerHTML = `<div class="lw-bereit">✓<br>Foto ${String.fromCharCode(65 + i)} bereit</div>`;
+        else inhalt.innerHTML = `<img src="${b}" alt="Schülerlösung ${String.fromCharCode(65 + i)}">`;
+      });
+      const anzahl = bilder.filter(Boolean).length;
+      info.textContent = anzahl ? `${anzahl} von ${n} Fotos ${offen ? "sichtbar" : "bereit, noch verdeckt"}` : "Tippe auf ein Feld, um eine Schülerlösung zu fotografieren.";
+      frei.textContent = offen ? "🙈 Verbergen" : "👁 Freischalten";
+      frei.disabled = !anzahl;
+    }
+    felder.forEach((f, i) => {
+      const inp = f.querySelector("input");
+      f.addEventListener("click", e => {
+        if (e.target.closest(".lw-weg")) return;
+        if (bilder[i] && offen) { gross(i); return; }
+        inp.click();
+      });
+      inp.addEventListener("change", () => {
+        const datei = inp.files[0];
+        if (!datei) return;
+        if (bilder[i]) URL.revokeObjectURL(bilder[i]);
+        bilder[i] = URL.createObjectURL(datei);
+        inp.value = "";
+        zeichne();
+      });
+      f.querySelector(".lw-weg").addEventListener("click", e => {
+        e.stopPropagation();
+        if (bilder[i]) URL.revokeObjectURL(bilder[i]);
+        bilder[i] = null; zeichne();
+      });
+    });
+    frei.onclick = () => { offen = !offen; zeichne(); };
+    el.querySelector(".lw-alle-weg").onclick = () => {
+      bilder.forEach((b, i) => { if (b) URL.revokeObjectURL(b); bilder[i] = null; });
+      offen = false; zeichne();
+    };
+    function gross(i) {
+      const o = overlay(`<div class="lw-gross"><span class="lw-buchstabe" style="background:${FARB[i]}">${String.fromCharCode(65 + i)}</span><img src="${bilder[i]}" alt=""></div>`);
+      o.classList.add("lw-overlay");
+      o.querySelector("img").onclick = () => o.remove();
+    }
+    zeichne();
+    // Von jeder Folie aus fotografieren: nächstes freies Feld (bzw. Feld A, wenn alle voll sind)
+    el.fotoAufnehmen = () => {
+      const i = bilder.findIndex(b => !b);
+      const inp = felder[i < 0 ? 0 : i].querySelector("input");
+      inp.addEventListener("change", () => {
+        const k = i < 0 ? 0 : i;
+        if (bilder[k]) zeigeHinweis(`📷 Foto ${String.fromCharCode(65 + k)} gespeichert – verdeckt bis „Freischalten“`);
+      }, { once: true });
+      inp.click();
+    };
+  });
+  function zeigeHinweis(text) {
+    const t = document.createElement("div");
+    t.className = "lw-toast"; t.textContent = text;
+    document.body.appendChild(t);
+    setTimeout(() => t.remove(), 2500);
+  }
+  const ersteWand = document.querySelector("[data-loesungswand]");
+  if (ersteWand) fussKnopf("📷", "Schülerlösung fotografieren (landet verdeckt auf der Lösungswand)", () => ersteWand.fotoAufnehmen());
 
   // ---------- Schätzleiste ----------
   document.querySelectorAll("[data-schaetzen]").forEach(el => {
