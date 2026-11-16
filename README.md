@@ -56,7 +56,7 @@ Beim Kopieren die Pfade `../../` zu `../../../../` ändern. Buchaufgaben werden 
 
 | Ziel | Baustein |
 |---|---|
-| Alle antworten | `data-abstimmung` (ABCD mit 3-2-1-Countdown) · `data-denkzeit` (erst schreiben, dann sprechen) · 🎲 Zufallsauswahl (Taste Z) |
+| Alle antworten | `data-abstimmung` (ABCD mit 3-2-1-Countdown und Finger-Hinweis; Karten zum Drucken: `werkzeuge/abcd-karten.html`) · `data-denkzeit` (erst schreiben, dann sprechen) · 🎲 Zufallsauswahl (Taste Z) |
 | Denkaufgaben | `data-schaetzen` (Schätzleiste) · `.fehlerkarte` (Fehler finden) · „Was passiert, wenn …?“ (eigenes Modell je Stunde) |
 | Interesse | `.spannung` (Wette/„Stimmt das?“) · `.wahlkarten` (Wahl von Niveau, Kontext, Darstellung) |
 | Kreativ | `.produkt` (eigene Aufgabe erfinden, erklären) · `.projekt` (Baustein fürs Einheitenprojekt) |

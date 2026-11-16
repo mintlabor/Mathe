@@ -81,7 +81,8 @@
         <span class="text">${o}</span><span class="balken"><i></i></span><span class="anzahl"></span></div>`).join("") +
       `<div class="knoepfe"><button class="knopf mittel" data-a="los">⏱ 3 · 2 · 1 – Karten hoch!</button>
         ${loesung !== null ? '<button class="knopf mittel" data-a="aufloesen">Auflösen</button>' : ""}
-        <button class="knopf" data-a="reset">↺</button><span class="countdown"></span></div>`;
+        <button class="knopf" data-a="reset">↺</button><span class="countdown"></span>
+        ${opt.length <= 4 ? `<span class="finger-hinweis" title="Ohne Karte: Finger zeigen">✋ ohne Karte: ${opt.map((_, i) => `${String.fromCharCode(65 + i)} = ${i + 1}`).join(" · ")} Finger</span>` : ""}</div>`;
     const zeichne = () => {
       const max = Math.max(1, ...stimmen);
       el.querySelectorAll(".opt").forEach((r, i) => {
