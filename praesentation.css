@@ -266,6 +266,7 @@ span.nein, strong.nein { color: var(--rot); font-weight: 700; }
   border-radius: 999px; padding: .45rem 1.4rem .45rem .9rem; box-shadow: 0 4px 0 #e8590c; transition: transform .1s;
 }
 .zufall-knopf .wuerfel-icon { font-size: 2rem; line-height: 1; display: inline-block; }
+.zufall-knopf .taste { font-size: .8rem; font-weight: 800; background: rgba(255,255,255,.7); border: 2px solid #f59f00; border-radius: 6px; padding: 0 .35rem; margin-left: .2rem; }
 .zufall-knopf:hover { transform: translateY(-2px) rotate(-1deg); }
 .zufall-knopf:hover .wuerfel-icon { animation: wackeln .5s; }
 .zufall-knopf:active { transform: translateY(2px); box-shadow: 0 2px 0 #e8590c; }
