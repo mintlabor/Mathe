@@ -107,10 +107,10 @@
   const fuss = document.createElement("div");
   fuss.className = "fuss";
   fuss.innerHTML = '<div class="foliennr"></div><div class="nav">' +
-    '<button class="knopf" data-n="zurueck">← Zurück</button>' +
-    '<button class="knopf" data-n="weiter">Weiter →</button>' +
-    '<button class="knopf" data-n="notizen" title="Taste N">Hinweise</button>' +
-    '<button class="knopf" data-n="vollbild" title="Taste F">Vollbild</button></div>';
+    '<button class="knopf" data-n="zurueck" title="Zurück (Pfeil links)">◀</button>' +
+    '<button class="knopf" data-n="weiter" title="Weiter (Pfeil rechts / Leertaste)">▶</button>' +
+    '<button class="knopf" data-n="notizen" title="Hinweise für die Lehrkraft (Taste N)">📝</button>' +
+    '<button class="knopf" data-n="vollbild" title="Vollbild (Taste F)">⛶</button></div>';
   body.appendChild(fuss);
 
   // ---------- Timer ----------

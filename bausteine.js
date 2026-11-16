@@ -24,9 +24,10 @@
         Anpassen: data-minuten="2,3,4"  oder  data-schritte='[["Text",3],["Text",2]]'
         data-frage="…" schreibt bei der Placemat die Frage in die Mitte.
 
-  SOZIALFORM UND TABLET (Fußleiste unten links, für alle gut sichtbar)
-    Knopf Sozialform: 👤 Einzelarbeit → 👥 Partnerarbeit → 👨‍👩‍👧 Gruppenarbeit → aus   (Taste S)
-    Knopf iPad:       🟢 iPad erlaubt → 🟡 iPad zu auf dem Tisch → 🔴 iPad weg → aus  (Taste I)
+  SOZIALFORM UND TABLET (in der Fußleiste, alle Möglichkeiten immer sichtbar)
+    Sozialform: 👤 Einzelarbeit · 👥 Partnerarbeit · 👨‍👩‍👧 Gruppenarbeit   (Klick wählt, Taste S wechselt weiter)
+    iPad:       🟢 iPad erlaubt · 🟡 iPad zu auf dem Tisch · 🔴 iPad weg (Klick wählt, Taste I wechselt weiter)
+    Gewählte Möglichkeit leuchtet, die anderen bleiben blass sichtbar. Klick auf die gewählte hebt sie auf.
     Automatisch je Folie: <section class="folie" data-sozialform="EA|PA|GA" data-ipad="gruen|gelb|rot">
     Folien ohne Angabe übernehmen den bisherigen Zustand. Ein Wechsel wird kurz groß eingeblendet.
 
@@ -203,35 +204,33 @@
     fuss.appendChild(b);
   }
 
-  // ---------- Sozialform und iPad-Regel ----------
+  // ---------- Sozialform und iPad-Regel (alle Möglichkeiten immer sichtbar) ----------
   const SOZIAL = [
-    { k: "EA", icon: "👤", text: "Einzelarbeit" },
-    { k: "PA", icon: "👥", text: "Partnerarbeit" },
-    { k: "GA", icon: "👨‍👩‍👧", text: "Gruppenarbeit" }
+    { k: "EA", icon: "👤", text: "Einzelarbeit", kurz: "Einzel" },
+    { k: "PA", icon: "👥", text: "Partnerarbeit", kurz: "Partner" },
+    { k: "GA", icon: "👨‍👩‍👧", text: "Gruppenarbeit", kurz: "Gruppe" }
   ];
   const IPAD = [
-    { k: "gruen", icon: "🟢", text: "iPad erlaubt" },
-    { k: "gelb", icon: "🟡", text: "iPad zu auf dem Tisch" },
-    { k: "rot", icon: "🔴", text: "iPad weg" }
+    { k: "gruen", icon: "📱", text: "iPad erlaubt", kurz: "erlaubt" },
+    { k: "gelb", icon: "📱", text: "iPad zu auf dem Tisch", kurz: "zu auf dem Tisch" },
+    { k: "rot", icon: "📱", text: "iPad weg", kurz: "weg" }
   ];
   const signal = { sozial: null, ipad: null };
   let signalLeiste = null;
   function signalZeichnen() {
     if (!signalLeiste) return;
-    const s = SOZIAL.find(x => x.k === signal.sozial), i = IPAD.find(x => x.k === signal.ipad);
-    const bs = signalLeiste.querySelector('[data-sig="sozial"]'), bi = signalLeiste.querySelector('[data-sig="ipad"]');
-    bs.className = "signal sozial" + (s ? " an s-" + s.k : "");
-    bs.innerHTML = s ? `<span class="i">${s.icon}</span>${s.text}` : `<span class="i">👥</span>Sozialform`;
-    bi.className = "signal ipad" + (i ? " an i-" + i.k : "");
-    bi.innerHTML = i ? `<span class="i">📱</span>${i.text}` : `<span class="i">📱</span>iPad`;
+    signalLeiste.querySelectorAll("[data-sig]").forEach(b =>
+      b.classList.toggle("an", signal[b.dataset.sig] === b.dataset.k));
+    ["sozial", "ipad"].forEach(art =>
+      signalLeiste.querySelector(`.signal-gruppe[data-art="${art}"]`).classList.toggle("gewaehlt", !!signal[art]));
   }
   function signalEinblenden(art) {
-    const d = art === "sozial" ? SOZIAL.find(x => x.k === signal.sozial) : IPAD.find(x => x.k === signal.ipad);
+    const d = (art === "sozial" ? SOZIAL : IPAD).find(x => x.k === signal[art]);
     if (!d) return;
     document.querySelector(".signal-blitz")?.remove();
     const b = document.createElement("div");
     b.className = "signal-blitz " + (art === "sozial" ? "s-" : "i-") + d.k;
-    b.innerHTML = `<span class="i">${art === "sozial" ? d.icon : "📱"}</span>${d.text}`;
+    b.innerHTML = `<span class="i">${d.icon}</span>${d.text}`;
     document.body.appendChild(b);
     setTimeout(() => b.remove(), 1800);
   }
@@ -244,17 +243,28 @@
   function signalWeiter(art) {
     const liste = art === "sozial" ? SOZIAL : IPAD;
     const i = liste.findIndex(x => x.k === signal[art]);
-    signalSetzen(art, i < 0 ? liste[0].k : (liste[i + 1] ? liste[i + 1].k : null), true);
+    signalSetzen(art, liste[(i + 1) % liste.length].k, true);
   }
   if (window.Praes && Praes.fuss) {
     signalLeiste = document.createElement("div");
     signalLeiste.className = "signale";
-    signalLeiste.innerHTML = '<button class="signal sozial" data-sig="sozial" type="button" title="Sozialform wechseln (Taste S)"></button>' +
-      '<button class="signal ipad" data-sig="ipad" type="button" title="iPad-Regel wechseln (Taste I)"></button>';
-    signalLeiste.querySelectorAll("[data-sig]").forEach(b => b.onclick = () => signalWeiter(b.dataset.sig));
+    const knoepfe = (art, liste, vorsilbe, mitIcon) => liste.map(d =>
+      `<button type="button" class="signal ${vorsilbe}${d.k}" data-sig="${art}" data-k="${d.k}" title="${d.text}">` +
+      (mitIcon ? `<span class="i">${d.icon}</span>` : "") + `<span class="t">${d.kurz}</span><span class="t-lang">${d.text.replace(/^iPad /, "")}</span></button>`).join("");
+    signalLeiste.innerHTML =
+      `<div class="signal-gruppe" data-art="sozial" title="Sozialform (Taste S)">${knoepfe("sozial", SOZIAL, "s-", true)}</div>` +
+      `<div class="signal-gruppe" data-art="ipad" title="iPad-Regel (Taste I)"><span class="signal-titel">📱 iPad</span>${knoepfe("ipad", IPAD, "i-", false)}</div>`;
+    // Klick wählt; Klick auf die schon gewählte Möglichkeit hebt die Auswahl auf
+    signalLeiste.querySelectorAll("[data-sig]").forEach(b => b.onclick = () => {
+      const art = b.dataset.sig;
+      signalSetzen(art, signal[art] === b.dataset.k ? null : b.dataset.k, signal[art] !== b.dataset.k);
+    });
+    // in der Fußleiste zwischen Foliennummer und Navigation (kostet keine Folienhöhe)
     const nr = Praes.fuss.querySelector(".foliennr");
     nr ? nr.after(signalLeiste) : Praes.fuss.prepend(signalLeiste);
+    Praes.fuss.classList.add("mit-signalen");
     signalZeichnen();
+    window.PRAES_PASSEND?.();
   }
   const folieSignale = (f, einblenden) => {
     const s = (f.dataset.sozialform || "").toUpperCase(), i = (f.dataset.ipad || "").toLowerCase().replace("ü", "ue");
@@ -350,7 +360,7 @@
       (s.length ? `<h3>💬 So kannst du es sagen</h3><ul class="saetze">${s.map(x => `<li>${x}</li>`).join("")}</ul>` : "");
     const umschalten = () => document.body.classList.toggle("ws-offen");
     ws.querySelector(".zu").onclick = umschalten;
-    fussKnopf("📚 Wörter", "Wortspeicher (Taste W)", umschalten);
+    fussKnopf("📚", "Wortspeicher (Taste W)", umschalten);
     document.addEventListener("keydown", e => {
       if (["INPUT", "TEXTAREA", "SELECT"].includes(e.target.tagName)) return;
       if (e.key === "w" || e.key === "W") umschalten();

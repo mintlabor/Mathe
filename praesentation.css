@@ -470,15 +470,22 @@ body.notizen .folie.zu-voll .zu-voll-hinweis { display: block; }
 }
 
 
-/* ---------- Sozialform und iPad-Regel (Fußleiste) ---------- */
-.signale { display: flex; gap: .6rem; align-items: center; margin-right: auto; margin-left: 1rem; }
-.signal { display: inline-flex; align-items: center; gap: .45rem; font-family: inherit; font-size: 1.15rem; font-weight: 800; cursor: pointer;
-  padding: .4rem 1rem .4rem .7rem; border-radius: 999px; border: 3px dashed var(--border); background: var(--card); color: var(--muted); white-space: nowrap; }
-.signal .i { font-size: 1.5rem; line-height: 1; }
-.signal.an { border-style: solid; color: #1f2430; }
-.signal.s-EA, .signal-blitz.s-EA { background: #e7f5ff; border-color: #1c7ed6; }
-.signal.s-PA, .signal-blitz.s-PA { background: #f3f0ff; border-color: #7048e8; }
-.signal.s-GA, .signal-blitz.s-GA { background: #fff4e6; border-color: #f76707; }
+/* ---------- Sozialform und iPad-Regel: eigene Leiste, alle Möglichkeiten immer sichtbar ---------- */
+.signale { display: flex; justify-content: center; gap: 1rem; flex: 1 0 auto; }
+.signal-titel { display: inline-flex; align-items: center; font-weight: 800; font-size: 1.15rem; color: var(--text); padding: 0 .4rem 0 .6rem; white-space: nowrap; }
+.fuss.mit-signalen { gap: .8rem; }
+.fuss .nav .knopf { min-width: 2.6rem; }
+.signal-gruppe { display: flex; gap: .35rem; padding: .25rem; border-radius: 999px; background: var(--bg); border: 1px solid var(--border); }
+.signal { display: inline-flex; align-items: center; gap: .4rem; font-family: inherit; font-size: 1.15rem; font-weight: 800; cursor: pointer;
+  padding: .35rem 1rem .35rem .7rem; border-radius: 999px; border: 3px solid transparent; white-space: nowrap;
+  opacity: .55; filter: saturate(.7); transition: opacity .15s, transform .15s, box-shadow .15s; }
+.signal .i { font-size: 1.4rem; line-height: 1; }
+.signal:hover { opacity: .7; }
+.signal.an { opacity: 1; filter: none; transform: scale(1.06); box-shadow: 0 3px 10px rgba(0,0,0,.18); }
+.signal.an::after { content: "✓"; margin-left: .2rem; }
+.signal.s-EA, .signal-blitz.s-EA { background: #e7f5ff; border-color: #1c7ed6; color: #1864ab; }
+.signal.s-PA, .signal-blitz.s-PA { background: #f3f0ff; border-color: #7048e8; color: #5f3dc4; }
+.signal.s-GA, .signal-blitz.s-GA { background: #fff4e6; border-color: #f76707; color: #d9480f; }
 .signal.i-gruen, .signal-blitz.i-gruen { background: #2f9e44; border-color: #2b8a3e; color: #fff; }
 .signal.i-gelb, .signal-blitz.i-gelb { background: #ffd43b; border-color: #f59f00; color: #1f2430; }
 .signal.i-rot, .signal-blitz.i-rot { background: #e03131; border-color: #c92a2a; color: #fff; }
@@ -489,6 +496,26 @@ body.notizen .folie.zu-voll .zu-voll-hinweis { display: block; }
 @keyframes blitz { 0% { opacity: 0; transform: translate(-50%, -50%) scale(.7); } 12% { opacity: 1; transform: translate(-50%, -50%) scale(1.05); }
   20% { transform: translate(-50%, -50%) scale(1); } 80% { opacity: 1; } 100% { opacity: 0; } }
 @media (max-width: 1500px) {
-  .signal { font-size: .95rem; padding: .3rem .8rem .3rem .55rem; }
-  .signal .i { font-size: 1.2rem; }
+  .signale { gap: .5rem; }
+  .signal-gruppe { gap: .2rem; padding: .15rem; }
+  .signal { font-size: .9rem; padding: .2rem .6rem .2rem .45rem; gap: .3rem; }
+  .signal-titel { font-size: .9rem; padding: 0 .2rem 0 .4rem; }
+  .signal .i { font-size: 1.15rem; }
+}
+@media (max-width: 1320px) {
+  .fuss .foliennr { white-space: nowrap; font-size: .85rem; }
+  .fuss.mit-signalen { gap: .5rem; padding-left: .7rem; padding-right: .7rem; }
+  .signale { gap: .35rem; }
+  .signal { font-size: .82rem; padding: .18rem .5rem .18rem .4rem; }
+  .signal .i { font-size: 1rem; }
+  .signal-titel { font-size: .82rem; }
+  .fuss .nav { gap: .3rem; }
+  .fuss .nav .knopf { min-width: 2.2rem; padding-left: .4rem; padding-right: .4rem; }
+  .zufall-knopf { font-size: 1rem; padding: .25rem .8rem .25rem .55rem; margin-left: .4rem; white-space: nowrap; }
+  .zufall-knopf .wuerfel-icon { font-size: 1.35rem; }
+}
+.signal .t-lang { display: none; }
+@media (min-width: 1700px) {
+  .signal .t { display: none; }
+  .signal .t-lang { display: inline; }
 }
