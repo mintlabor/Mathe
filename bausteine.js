@@ -24,6 +24,12 @@
         Anpassen: data-minuten="2,3,4"  oder  data-schritte='[["Text",3],["Text",2]]'
         data-frage="…" schreibt bei der Placemat die Frage in die Mitte.
 
+  SOZIALFORM UND TABLET (Fußleiste unten links, für alle gut sichtbar)
+    Knopf Sozialform: 👤 Einzelarbeit → 👥 Partnerarbeit → 👨‍👩‍👧 Gruppenarbeit → aus   (Taste S)
+    Knopf iPad:       🟢 iPad erlaubt → 🟡 iPad zu auf dem Tisch → 🔴 iPad weg → aus  (Taste I)
+    Automatisch je Folie: <section class="folie" data-sozialform="EA|PA|GA" data-ipad="gruen|gelb|rot">
+    Folien ohne Angabe übernehmen den bisherigen Zustand. Ein Wechsel wird kurz groß eingeblendet.
+
   SPRACHE
     <aside class="wortspeicher" data-woerter='["Grundwert","Prozentwert"]'
            data-saetze='["Ich vermute, dass …","Das sieht man daran, dass …"]'></aside>
@@ -196,6 +202,73 @@
     b.onclick = zufall;
     fuss.appendChild(b);
   }
+
+  // ---------- Sozialform und iPad-Regel ----------
+  const SOZIAL = [
+    { k: "EA", icon: "👤", text: "Einzelarbeit" },
+    { k: "PA", icon: "👥", text: "Partnerarbeit" },
+    { k: "GA", icon: "👨‍👩‍👧", text: "Gruppenarbeit" }
+  ];
+  const IPAD = [
+    { k: "gruen", icon: "🟢", text: "iPad erlaubt" },
+    { k: "gelb", icon: "🟡", text: "iPad zu auf dem Tisch" },
+    { k: "rot", icon: "🔴", text: "iPad weg" }
+  ];
+  const signal = { sozial: null, ipad: null };
+  let signalLeiste = null;
+  function signalZeichnen() {
+    if (!signalLeiste) return;
+    const s = SOZIAL.find(x => x.k === signal.sozial), i = IPAD.find(x => x.k === signal.ipad);
+    const bs = signalLeiste.querySelector('[data-sig="sozial"]'), bi = signalLeiste.querySelector('[data-sig="ipad"]');
+    bs.className = "signal sozial" + (s ? " an s-" + s.k : "");
+    bs.innerHTML = s ? `<span class="i">${s.icon}</span>${s.text}` : `<span class="i">👥</span>Sozialform`;
+    bi.className = "signal ipad" + (i ? " an i-" + i.k : "");
+    bi.innerHTML = i ? `<span class="i">📱</span>${i.text}` : `<span class="i">📱</span>iPad`;
+  }
+  function signalEinblenden(art) {
+    const d = art === "sozial" ? SOZIAL.find(x => x.k === signal.sozial) : IPAD.find(x => x.k === signal.ipad);
+    if (!d) return;
+    document.querySelector(".signal-blitz")?.remove();
+    const b = document.createElement("div");
+    b.className = "signal-blitz " + (art === "sozial" ? "s-" : "i-") + d.k;
+    b.innerHTML = `<span class="i">${art === "sozial" ? d.icon : "📱"}</span>${d.text}`;
+    document.body.appendChild(b);
+    setTimeout(() => b.remove(), 1800);
+  }
+  function signalSetzen(art, wert, einblenden) {
+    if (signal[art] === wert) return;
+    signal[art] = wert;
+    signalZeichnen();
+    if (einblenden) signalEinblenden(art);
+  }
+  function signalWeiter(art) {
+    const liste = art === "sozial" ? SOZIAL : IPAD;
+    const i = liste.findIndex(x => x.k === signal[art]);
+    signalSetzen(art, i < 0 ? liste[0].k : (liste[i + 1] ? liste[i + 1].k : null), true);
+  }
+  if (window.Praes && Praes.fuss) {
+    signalLeiste = document.createElement("div");
+    signalLeiste.className = "signale";
+    signalLeiste.innerHTML = '<button class="signal sozial" data-sig="sozial" type="button" title="Sozialform wechseln (Taste S)"></button>' +
+      '<button class="signal ipad" data-sig="ipad" type="button" title="iPad-Regel wechseln (Taste I)"></button>';
+    signalLeiste.querySelectorAll("[data-sig]").forEach(b => b.onclick = () => signalWeiter(b.dataset.sig));
+    const nr = Praes.fuss.querySelector(".foliennr");
+    nr ? nr.after(signalLeiste) : Praes.fuss.prepend(signalLeiste);
+    signalZeichnen();
+  }
+  const folieSignale = (f, einblenden) => {
+    const s = (f.dataset.sozialform || "").toUpperCase(), i = (f.dataset.ipad || "").toLowerCase().replace("ü", "ue");
+    if (SOZIAL.some(x => x.k === s)) signalSetzen("sozial", s, einblenden);
+    if (IPAD.some(x => x.k === i)) signalSetzen("ipad", i, einblenden);
+  };
+  document.querySelectorAll(".folie").forEach(f => f.addEventListener("folie-aktiv", () => folieSignale(f, true)));
+  const aktiveFolie = document.querySelector(".folie.aktiv");
+  if (aktiveFolie) folieSignale(aktiveFolie, false);
+  document.addEventListener("keydown", e => {
+    if (["INPUT", "TEXTAREA", "SELECT"].includes(e.target.tagName) || e.ctrlKey || e.metaKey || e.altKey) return;
+    if (e.key === "s" || e.key === "S") signalWeiter("sozial");
+    else if (e.key === "i" || e.key === "I") signalWeiter("ipad");
+  });
 
   // ---------- Schätzleiste ----------
   document.querySelectorAll("[data-schaetzen]").forEach(el => {

@@ -61,6 +61,7 @@ Beim Kopieren die Pfade `../../` zu `../../../../` ändern. Buchaufgaben werden 
 | Interesse | `.spannung` (Wette/„Stimmt das?“) · `.wahlkarten` (Wahl von Niveau, Kontext, Darstellung) |
 | Kreativ | `.produkt` (eigene Aufgabe erfinden, erklären) · `.projekt` (Baustein fürs Einheitenprojekt) |
 | Kooperation | `data-methode="tps | placemat | lerntempoduett | gruppenpuzzle | galeriegang | rollen"` (Klick auf Schritt startet Timer) |
+| Sozialform & iPad | Knöpfe unten links (Tasten S und I), je Folie automatisch per `data-sozialform="EA|PA|GA"` und `data-ipad="gruen|gelb|rot"` |
 | Sprache | `aside.wortspeicher` (Taste W) · `.satzhilfe` · `.leitmodell` |
 
 Genaue Schreibweise steht oben in `bausteine.js`, Beispiele für alle Bausteine in `vorlage/stunde-xx/`.
