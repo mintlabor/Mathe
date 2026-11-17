@@ -644,3 +644,33 @@ ol.aufgaben > li.offen .loesung-text { display: block; }
 .spalten:has(> .spalte-auftrag > ol.aufgaben) { grid-template-columns: 3fr minmax(300px, 2fr); }
 .formel { display: block; }
 .spalte-auftrag .klein { font-size: 1.05rem; }
+
+/* ---------- Sozialform/iPad größer (Platz kommt von schmaleren Nebenknöpfen, Fußleiste bleibt gleich hoch) ---------- */
+.signal { font-size: 1.35rem; padding: .3rem 1rem .3rem .7rem; }
+.signal .i { font-size: 1.7rem; }
+.signal-titel { font-size: 1.35rem; }
+.signal-gruppe { padding: .2rem; gap: .3rem; }
+@media (max-width: 1500px) {
+  .fuss .foliennr { font-size: .8rem; }
+  .fuss.mit-signalen { gap: .35rem; padding-left: .5rem; padding-right: .5rem; }
+  .signale { gap: .4rem; }
+  .signal-gruppe { gap: .15rem; padding: .12rem; }
+  .signal { font-size: 1.08rem; padding: .22rem .62rem .22rem .45rem; gap: .28rem; border-width: 3px; }
+  .signal .i { font-size: 1.3rem; }
+  .signal-titel { font-size: 1.08rem; padding: 0 .2rem 0 .35rem; }
+  .fuss .nav { gap: .2rem; }
+  .fuss .nav .knopf { min-width: 2rem; padding-left: .3rem; padding-right: .3rem; }
+  /* Würfelknopf: nur 🎲 + Z, damit die Anzeigen Platz haben */
+  .zufall-knopf > span:not(.wuerfel-icon):not(.taste) { display: none; }
+  .zufall-knopf { padding: .2rem .6rem .2rem .5rem; margin-left: .3rem; }
+}
+@media (max-width: 1320px) {
+  .signal { font-size: 1rem; padding: .2rem .5rem .2rem .4rem; }
+  .signal .i { font-size: 1.15rem; }
+  .signal-titel { font-size: 1rem; }
+}
+/* lange Bezeichnungen (Einzelarbeit …) erst auf sehr breiten Bildschirmen, sonst kurz und dafür groß */
+@media (min-width: 1501px) and (max-width: 2099px) {
+  .signal .t { display: inline; }
+  .signal .t-lang { display: none; }
+}
