@@ -14,16 +14,27 @@
 </div></header>
 <main>
   <div class="box">
-    <strong>📘 Erinnerung</strong><br>
-    Umfang: Rand, Einheit m · Flächeninhalt: Kästchen, Einheit m² · Rechteck A = a · b · Umrechnungszahl bei Flächen: 100 · 1 ha = 10 000 m²
-  </div>
-  <div class="box">
     <strong>📚 Wörter für heute:</strong> Umfang · Flächeninhalt · Einheitsquadrat · cm² · m² · Ar (a) · Hektar (ha) · Umrechnungszahl<br>
     <span class="klein">💬 So kannst du es aufschreiben: „Ich habe so gerechnet: …, weil …“</span>
   </div>
   <div id="ziele"></div>
 
-  <h2>📖 Aufgaben aus dem Buch</h2>
+  <h2>✏️ Aufgaben</h2>
+  <div class="box merkkasten">
+    <h3>📘 Merke</h3>
+    <p>Umfang u = Länge des Randes (m). Flächeninhalt A = Anzahl der Einheitsquadrate (m²). Flächeneinheiten: Umrechnungszahl 100 (1 m² = 100 dm²) · 1 ha = 10 000 m²</p>
+    <div class="formel">A = a · b</div>
+    <div class="beispielaufgabe">
+      <strong>Beispiel:</strong> Gehege 8 m × 4 m
+      <div class="schritte">u = 2 · 8 m + 2 · 4 m = 24 m<br>A = 8 m · 4 m = 32 m²</div>
+    </div>
+  </div>
+  <p class="klein">Rechne jede Aufgabe zuerst im Heft. Trage dann dein Ergebnis ein und prüfe es.</p>
+  <div id="niveaus"></div>
+  <div id="fortschritt"></div>
+  <div id="aufgaben"></div>
+
+  <h2>📖 Weiterarbeit im Buch</h2>
   <div class="box buch">
     <h3>Parallelo 8</h3>
     <ul>
@@ -31,13 +42,9 @@
       <li>●● Standard: <span class="platzhalter">[BUCH: S. __ Nr. __]</span></li>
       <li>●●● Profi: <span class="platzhalter">[BUCH: S. __ Nr. __]</span></li>
     </ul>
-    <p class="klein">Rechne im Heft. Unten findest du Aufgaben mit Tipps und Selbstkontrolle.</p>
+    <p class="klein">Fertig mit den Aufgaben oben? Dann rechne im Buch weiter.</p>
   </div>
 
-  <h2>Aufgaben</h2>
-  <div id="niveaus"></div>
-  <div id="fortschritt"></div>
-  <div id="aufgaben"></div>
   <h2>🎨 Werde kreativ</h2>
   <div class="box">
     Plane ein Gehege für ein Tier deiner Wahl mit 20 m Zaun. Welche Form gibt am meisten Platz? Zeichne zwei Möglichkeiten.
@@ -48,6 +55,7 @@
   <p><a href="exit-06.html">🎫 Weiter zum Exit-Ticket →</a> · <a href="./">← Lernlandkarte</a></p>
 </main>
 <script>
+// Die ersten Aufgaben = Aufgabenfolie der Präsentation; danach Zusatzaufgaben
 window.SEITE = {
   "speicher": "mathe-k8-rs-uf",
   "stunde": 6,
@@ -62,6 +70,61 @@ window.SEITE = {
     "Ich kann Flächeneinheiten umrechnen."
   ],
   "aufgaben": [
+    {
+      "typ": "zahl",
+      "loesung": 28,
+      "tipps": [
+        "u = 4 · a"
+      ],
+      "einheit": "cm",
+      "frage": "🔀 Mix: Raute mit a = 7 cm. Berechne den Umfang.",
+      "niveau": 1,
+      "erklaerung": "u = 4 · 7 cm = 28 cm"
+    },
+    {
+      "typ": "zahl",
+      "loesung": 36,
+      "tipps": [
+        "A = a · b"
+      ],
+      "einheit": "m²",
+      "frage": "Rechteck: 9 m lang, 4 m breit. Berechne den Flächeninhalt.",
+      "niveau": 1,
+      "erklaerung": "A = 9 m · 4 m = 36 m²"
+    },
+    {
+      "typ": "zahl",
+      "loesung": 500,
+      "tipps": [
+        "Umrechnungszahl 100"
+      ],
+      "einheit": "dm²",
+      "frage": "Rechne um: 5 m² = ? dm²",
+      "niveau": 1,
+      "erklaerung": "5 · 100 = 500 dm²"
+    },
+    {
+      "typ": "zahl",
+      "loesung": 224,
+      "tipps": [
+        "Erst die Fläche in m², dann eine Fliese in m².",
+        "50 cm = 0,5 m → 0,5 · 0,5 = 0,25 m²"
+      ],
+      "frage": "Ein Klassenzimmer ist 8 m × 7 m groß. Teppichfliesen sind 50 cm × 50 cm. Wie viele Fliesen braucht man?",
+      "niveau": 2,
+      "erklaerung": "A = 56 m² · 1 Fliese = 0,25 m² · 56 : 0,25 = 224 Fliesen"
+    },
+    {
+      "typ": "zahl",
+      "loesung": 25,
+      "tipps": [
+        "a + b = 10 m. Probiere 9 × 1, 7 × 3, 5 × 5 …"
+      ],
+      "einheit": "m²",
+      "erklaerung": "Das Quadrat 5 m × 5 m hat mit 25 m² den größten Flächeninhalt.",
+      "frage": "Ein Rechteck hat den Umfang 20 m. Welche Seitenlängen geben den größten Flächeninhalt?",
+      "niveau": 3
+    },
     {
       "niveau": 1,
       "typ": "zahl",

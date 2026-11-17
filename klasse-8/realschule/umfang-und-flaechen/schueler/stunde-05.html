@@ -14,16 +14,27 @@
 </div></header>
 <main>
   <div class="box">
-    <strong>📘 Erinnerung</strong><br>
-    Umfang = Summe aller Seitenlängen (Einheit cm, m) · Raute u = 4a · Parallelogramm, Drachen u = 2a + 2b · Dreieck u = a + b + c · Trapez u = a + b + c + d
-  </div>
-  <div class="box">
     <strong>📚 Wörter für heute:</strong> Umfang · Seitenlänge · addieren · Rand · Formel · u<br>
     <span class="klein">💬 So kannst du es aufschreiben: „Ich habe so gerechnet: …, weil …“</span>
   </div>
   <div id="ziele"></div>
 
-  <h2>📖 Aufgaben aus dem Buch</h2>
+  <h2>✏️ Aufgaben</h2>
+  <div class="box merkkasten">
+    <h3>📘 Merke</h3>
+    <p>Der Umfang u ist die Länge des Randes: die <strong>Summe aller Seitenlängen</strong>. Abkürzungen: Raute u = 4 · a · Parallelogramm und Drachen u = 2 · a + 2 · b</p>
+    <div class="formel">u = a + b + c + d</div>
+    <div class="beispielaufgabe">
+      <strong>Beispiel:</strong> Kräuterbeet mit 4 m, 2,5 m, 2 m, 2,5 m
+      <div class="schritte">u = 4 m + 2,5 m + 2 m + 2,5 m<br>u = 11 m<br>Eine Rolle (10 m) reicht nicht.</div>
+    </div>
+  </div>
+  <p class="klein">Rechne jede Aufgabe zuerst im Heft. Trage dann dein Ergebnis ein und prüfe es.</p>
+  <div id="niveaus"></div>
+  <div id="fortschritt"></div>
+  <div id="aufgaben"></div>
+
+  <h2>📖 Weiterarbeit im Buch</h2>
   <div class="box buch">
     <h3>Parallelo 8</h3>
     <ul>
@@ -31,13 +42,9 @@
       <li>●● Standard: <span class="platzhalter">[BUCH: S. __ Nr. __]</span></li>
       <li>●●● Profi: <span class="platzhalter">[BUCH: S. __ Nr. __]</span></li>
     </ul>
-    <p class="klein">Rechne im Heft. Unten findest du Aufgaben mit Tipps und Selbstkontrolle.</p>
+    <p class="klein">Fertig mit den Aufgaben oben? Dann rechne im Buch weiter.</p>
   </div>
 
-  <h2>Aufgaben</h2>
-  <div id="niveaus"></div>
-  <div id="fortschritt"></div>
-  <div id="aufgaben"></div>
   <h2>🎨 Werde kreativ</h2>
   <div class="box">
     Miss den Umfang von drei Gegenständen zu Hause (Tischplatte, Buch, Bilderrahmen). Schätze vorher!
@@ -48,6 +55,7 @@
   <p><a href="exit-05.html">🎫 Weiter zum Exit-Ticket →</a> · <a href="./">← Lernlandkarte</a></p>
 </main>
 <script>
+// Die ersten Aufgaben = Aufgabenfolie der Präsentation; danach Zusatzaufgaben
 window.SEITE = {
   "speicher": "mathe-k8-rs-uf",
   "stunde": 5,
@@ -62,6 +70,66 @@ window.SEITE = {
     "Ich kann eine fehlende Seite aus dem Umfang berechnen."
   ],
   "aufgaben": [
+    {
+      "typ": "auswahl",
+      "optionen": [
+        "Ja",
+        "Nein"
+      ],
+      "loesung": 1,
+      "tipps": [
+        "Denk an die letzte Stunde: Grundseite verlängern."
+      ],
+      "frage": "🔀 Mix: Liegt beim stumpfwinkligen Dreieck jede Höhe innen?",
+      "niveau": 1,
+      "erklaerung": "Nein – zwei Höhen liegen außerhalb, dafür wird die Grundseite verlängert."
+    },
+    {
+      "typ": "zahl",
+      "loesung": 20,
+      "tipps": [
+        "Alle drei Seiten addieren."
+      ],
+      "einheit": "cm",
+      "frage": "Dreieck mit a = 5 cm, b = 7 cm, c = 8 cm. Berechne den Umfang.",
+      "niveau": 1,
+      "erklaerung": "u = 5 cm + 7 cm + 8 cm = 20 cm"
+    },
+    {
+      "typ": "zahl",
+      "loesung": 18,
+      "tipps": [
+        "Alle 4 Seiten sind gleich lang."
+      ],
+      "einheit": "cm",
+      "frage": "Raute mit a = 4,5 cm. Berechne den Umfang.",
+      "niveau": 1,
+      "erklaerung": "u = 4 · 4,5 cm = 18 cm"
+    },
+    {
+      "typ": "zahl",
+      "loesung": 585,
+      "tipps": [
+        "Erst den Umfang, dann das Tor abziehen.",
+        "39 m · 15 €"
+      ],
+      "einheit": "€",
+      "frage": "Garten 12 m × 8 m, Zaun mit 1 m Tor. Zaun kostet 15 € pro Meter. Was kostet er?",
+      "niveau": 2,
+      "erklaerung": "u = 2 · 12 m + 2 · 8 m = 40 m · ohne Tor 39 m · 39 · 15 € = 585 €"
+    },
+    {
+      "typ": "zahl",
+      "loesung": 6,
+      "tipps": [
+        "u = 2 · a + 2 · b",
+        "30 − 18 = 12 cm für beide b"
+      ],
+      "einheit": "cm",
+      "frage": "Ein Parallelogramm hat u = 30 cm und a = 9 cm. Wie lang ist b?",
+      "niveau": 3,
+      "erklaerung": "2 · 9 = 18 · 30 − 18 = 12 · b = 12 : 2 = 6 cm"
+    },
     {
       "niveau": 1,
       "typ": "zahl",

@@ -14,16 +14,27 @@
 </div></header>
 <main>
   <div class="box">
-    <strong>📘 Erinnerung</strong><br>
-    Jede Seite kann Grundseite sein · Grundseite und Höhe gehören zusammen · stumpfwinklig: verlängern · Messwerte sind gerundet
-  </div>
-  <div class="box">
     <strong>📚 Wörter für heute:</strong> Grundseite · zugehörige Höhe · stumpfwinklig · verlängern · messen · Messungenauigkeit<br>
     <span class="klein">💬 So kannst du es aufschreiben: „Ich habe so gerechnet: …, weil …“</span>
   </div>
   <div id="ziele"></div>
 
-  <h2>📖 Aufgaben aus dem Buch</h2>
+  <h2>✏️ Aufgaben</h2>
+  <div class="box merkkasten">
+    <h3>📘 Merke</h3>
+    <p>Jede Seite kann Grundseite sein. Die zugehörige Höhe geht senkrecht zur <strong>gegenüberliegenden</strong> Ecke. Stumpfwinklig: Grundseite verlängern, Höhe liegt außen.</p>
+    <div class="formel">A = g · h : 2 (h gehört zu g)</div>
+    <div class="beispielaufgabe">
+      <strong>Beispiel:</strong> Dreieck 6 cm, 8 cm, 10 cm
+      <div class="schritte">g = 10 cm, h = 4,8 cm → A = 24 cm²<br>g = 8 cm, h = 6 cm → A = 24 cm²</div>
+    </div>
+  </div>
+  <p class="klein">Rechne jede Aufgabe zuerst im Heft. Trage dann dein Ergebnis ein und prüfe es.</p>
+  <div id="niveaus"></div>
+  <div id="fortschritt"></div>
+  <div id="aufgaben"></div>
+
+  <h2>📖 Weiterarbeit im Buch</h2>
   <div class="box buch">
     <h3>Parallelo 8</h3>
     <ul>
@@ -31,13 +42,9 @@
       <li>●● Standard: <span class="platzhalter">[BUCH: S. __ Nr. __]</span></li>
       <li>●●● Profi: <span class="platzhalter">[BUCH: S. __ Nr. __]</span></li>
     </ul>
-    <p class="klein">Rechne im Heft. Unten findest du Aufgaben mit Tipps und Selbstkontrolle.</p>
+    <p class="klein">Fertig mit den Aufgaben oben? Dann rechne im Buch weiter.</p>
   </div>
 
-  <h2>Aufgaben</h2>
-  <div id="niveaus"></div>
-  <div id="fortschritt"></div>
-  <div id="aufgaben"></div>
   <h2>🎨 Werde kreativ</h2>
   <div class="box">
     Zeichne ein Dreieck mit A = 12 cm² auf drei verschiedene Arten (spitz, recht, stumpf).
@@ -48,6 +55,7 @@
   <p><a href="exit-09.html">🎫 Weiter zum Exit-Ticket →</a> · <a href="./">← Lernlandkarte</a></p>
 </main>
 <script>
+// Die ersten Aufgaben = Aufgabenfolie der Präsentation; danach Zusatzaufgaben
 window.SEITE = {
   "speicher": "mathe-k8-rs-uf",
   "stunde": 9,
@@ -62,6 +70,61 @@ window.SEITE = {
     "Ich kann durch Messen in einer Zeichnung einen Flächeninhalt bestimmen."
   ],
   "aufgaben": [
+    {
+      "typ": "zahl",
+      "loesung": 20,
+      "tipps": [
+        "u = 2 · a + 2 · b"
+      ],
+      "einheit": "m",
+      "frage": "🔀 Mix: Rechteck 6 m × 4 m. Berechne den Umfang.",
+      "niveau": 1,
+      "erklaerung": "u = 2 · 6 m + 2 · 4 m = 20 m"
+    },
+    {
+      "typ": "zahl",
+      "loesung": 30,
+      "tipps": [
+        "A = g · h : 2"
+      ],
+      "einheit": "cm²",
+      "frage": "Dreieck: g = 12 cm, h = 5 cm. Berechne A.",
+      "niveau": 1,
+      "erklaerung": "A = 12 · 5 : 2 = 30 cm²"
+    },
+    {
+      "typ": "zahl",
+      "loesung": 30,
+      "tipps": [
+        "Am rechten Winkel ist eine Seite die Höhe zur anderen."
+      ],
+      "einheit": "cm²",
+      "frage": "Rechtwinkliges Dreieck: Die Seiten am rechten Winkel sind 5 cm und 12 cm. Berechne A.",
+      "niveau": 1,
+      "erklaerung": "Eine Seite ist g, die andere h: A = 5 · 12 : 2 = 30 cm²"
+    },
+    {
+      "typ": "zahl",
+      "loesung": 6,
+      "tipps": [
+        "Die Formel gilt auch, wenn h außen liegt."
+      ],
+      "einheit": "cm²",
+      "frage": "Stumpfwinkliges Dreieck: g = 4 cm, die Höhe (außen) ist 3 cm. Berechne A.",
+      "niveau": 2,
+      "erklaerung": "A = 4 · 3 : 2 = 6 cm² – die Formel gilt auch hier."
+    },
+    {
+      "typ": "zahl",
+      "loesung": 4.8,
+      "tipps": [
+        "Rückwärts: · 2, dann : 10."
+      ],
+      "einheit": "cm",
+      "frage": "Ein Dreieck hat A = 24 cm². Zur Seite 10 cm gehört welche Höhe?",
+      "niveau": 3,
+      "erklaerung": "24 · 2 = 48 · 48 : 10 = 4,8 cm"
+    },
     {
       "niveau": 1,
       "typ": "zahl",

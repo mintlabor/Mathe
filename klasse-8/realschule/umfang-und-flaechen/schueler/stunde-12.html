@@ -14,16 +14,27 @@
 </div></header>
 <main>
   <div class="box">
-    <strong>📘 Erinnerung</strong><br>
-    Rechteck a · b · Parallelogramm g · h · Dreieck g · h : 2 · Trapez (a + c) : 2 · h · Raute/Drachen e · f : 2 · Einheiten angleichen!
-  </div>
-  <div class="box">
     <strong>📚 Wörter für heute:</strong> Formel · Sonderfall · Trapezformel · Einheiten angleichen · überschlagen · sinnvoll<br>
     <span class="klein">💬 So kannst du es aufschreiben: „Ich habe so gerechnet: …, weil …“</span>
   </div>
   <div id="ziele"></div>
 
-  <h2>📖 Aufgaben aus dem Buch</h2>
+  <h2>✏️ Aufgaben</h2>
+  <div class="box merkkasten">
+    <h3>📘 Merke</h3>
+    <p>Alle Formeln kommen vom Rechteck: verschieben (Parallelogramm), halbieren (Dreieck), verdoppeln (Trapez), ergänzen (Raute, Drachen). Vor dem Rechnen: gleiche Einheiten! Danach: Überschlag.</p>
+    <div class="formel">A = (a + c) : 2 · h</div>
+    <div class="beispielaufgabe">
+      <strong>Beispiel:</strong> Parallelogramm g = 6 m, h = 4 m mit der Trapezformel (c = a)
+      <div class="schritte">A = (6 + 6) : 2 · 4<br>A = 6 · 4 = 24 m² ✓</div>
+    </div>
+  </div>
+  <p class="klein">Rechne jede Aufgabe zuerst im Heft. Trage dann dein Ergebnis ein und prüfe es.</p>
+  <div id="niveaus"></div>
+  <div id="fortschritt"></div>
+  <div id="aufgaben"></div>
+
+  <h2>📖 Weiterarbeit im Buch</h2>
   <div class="box buch">
     <h3>Parallelo 8</h3>
     <ul>
@@ -31,13 +42,9 @@
       <li>●● Standard: <span class="platzhalter">[BUCH: S. __ Nr. __]</span></li>
       <li>●●● Profi: <span class="platzhalter">[BUCH: S. __ Nr. __]</span></li>
     </ul>
-    <p class="klein">Rechne im Heft. Unten findest du Aufgaben mit Tipps und Selbstkontrolle.</p>
+    <p class="klein">Fertig mit den Aufgaben oben? Dann rechne im Buch weiter.</p>
   </div>
 
-  <h2>Aufgaben</h2>
-  <div id="niveaus"></div>
-  <div id="fortschritt"></div>
-  <div id="aufgaben"></div>
   <h2>🎨 Werde kreativ</h2>
   <div class="box">
     Gestalte ein Lernplakat „Formel-Landkarte“ mit Pfeilen und kleinen Herleitungsbildern.
@@ -48,6 +55,7 @@
   <p><a href="exit-12.html">🎫 Weiter zum Exit-Ticket →</a> · <a href="./">← Lernlandkarte</a></p>
 </main>
 <script>
+// Die ersten Aufgaben = Aufgabenfolie der Präsentation; danach Zusatzaufgaben
 window.SEITE = {
   "speicher": "mathe-k8-rs-uf",
   "stunde": 12,
@@ -62,6 +70,65 @@ window.SEITE = {
     "Ich kann prüfen, ob ein Ergebnis sinnvoll ist."
   ],
   "aufgaben": [
+    {
+      "typ": "zahl",
+      "loesung": 26,
+      "tipps": [
+        "u = 2 · a + 2 · b"
+      ],
+      "einheit": "cm",
+      "frage": "🔀 Mix: Drachen mit a = 5 cm und b = 8 cm. Berechne den Umfang.",
+      "niveau": 1,
+      "erklaerung": "u = 2 · 5 cm + 2 · 8 cm = 26 cm"
+    },
+    {
+      "typ": "zahl",
+      "loesung": 2000,
+      "tipps": [
+        "Diagonalen → A = e · f : 2"
+      ],
+      "einheit": "cm²",
+      "frage": "Drachen: e = 50 cm, f = 80 cm. Berechne A.",
+      "niveau": 1,
+      "erklaerung": "A = e · f : 2 = 50 · 80 : 2 = 2000 cm²"
+    },
+    {
+      "typ": "zahl",
+      "loesung": 1.6,
+      "tipps": [
+        "Erst gleiche Einheiten!"
+      ],
+      "einheit": "m²",
+      "frage": "Parallelogramm: g = 2 m, h = 80 cm. Berechne A in m².",
+      "niveau": 1,
+      "erklaerung": "h = 0,8 m · A = 2 · 0,8 = 1,6 m²"
+    },
+    {
+      "typ": "zahl",
+      "loesung": 5000,
+      "tipps": [
+        "Alles in cm umrechnen.",
+        "1,2 m = 120 cm"
+      ],
+      "einheit": "cm²",
+      "frage": "Trapez: a = 1,2 m, c = 80 cm, h = 50 cm. Berechne A in cm².",
+      "niveau": 2,
+      "erklaerung": "a = 120 cm · (120 + 80) : 2 · 50 = 5000 cm² = 0,5 m²"
+    },
+    {
+      "typ": "auswahl",
+      "optionen": [
+        "Stimmt",
+        "Stimmt nicht"
+      ],
+      "loesung": 1,
+      "tipps": [
+        "Runde: 10 · 4 : 2"
+      ],
+      "erklaerung": "Überschlag 10 · 4 : 2 = 20 m². Richtig ist 9,8 · 4,1 : 2 = 20,09 m².",
+      "frage": "Leon: Dreieck g = 9,8 m, h = 4,1 m → A = 201 m². Prüfe mit Überschlag.",
+      "niveau": 3
+    },
     {
       "niveau": 1,
       "typ": "auswahl",

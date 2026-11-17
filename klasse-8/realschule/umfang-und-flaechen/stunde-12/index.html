@@ -4,15 +4,16 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Stunde 12: Eine Formel für alle? – Umfang und Flächen</title>
-<link rel="stylesheet" href="../../../../praesentation.css?v=13">
+<link rel="stylesheet" href="../../../../praesentation.css?v=14">
 <style>
   .platzhalter { background: #fff3bf; border-radius: 4px; padding: 0 .3rem; font-family: ui-monospace, monospace; font-size: .9em; }
   .exit-qr { display: flex; gap: 1.5rem; align-items: center; }
-  .exit-qr [data-qr] svg { width: 230px; height: 230px; display: block; border-radius: 8px; }
+  .exit-qr [data-qr] svg { width: 200px; height: 200px; display: block; border-radius: 8px; }
   .skizze { width: min(100%, 560px); height: auto; max-height: 30vh; display: block; margin: .3rem auto; flex-shrink: 0; }
 </style>
 </head>
-<body data-phasen='[["Abrufen", 4], ["Problem", 7], ["Erarbeitung", 12], ["Ideen vergleichen", 5], ["Sicherung", 6], ["Übung", 7], ["Reflexion", 4]]'>
+<body data-problemfrage="Brauchen wir wirklich sechs Formeln?"
+      data-phasen='[["Abrufen", 3], ["Problem", 7], ["Erarbeitung", 11], ["Ideen vergleichen", 5], ["Sicherung", 6], ["Übung", 7], ["Reflexion", 6]]'>
 
 <div class="leiste">
   <div class="pfad"><a href="../../../../">Start</a> › <a href="../../../">Klasse 8</a> › <a href="../../">Realschule</a> › <a href="../">Umfang und Flächen</a> › Stunde 12</div>
@@ -24,62 +25,63 @@
 
 <div class="buehne">
 
-  <!-- 1 · ABRUFEN -->
-  <section class="folie" data-phase="Abrufen">
+  <section class="folie" data-phase="Abrufen" data-sozialform="EA" data-ipad="rot">
     <div class="kennung">Umfang und Flächen · Stunde 12 · Warm-up</div>
     <h2>Was weißt du noch?</h2>
-    <p style="margin-top:0">Exit-Ticket von letzter Stunde: Drachen e = 40 cm, f = 70 cm. Wie groß ist A?</p>
+    <p class="auftrag">Exit-Ticket von letzter Stunde: Drachen e = 40 cm, f = 70 cm. Wie groß ist A?</p>
     <div data-abstimmung='["2800 cm²", "1400 cm²", "110 cm²", "220 cm²"]' data-loesung="1"></div>
     <div class="hinweis">Alle halten gleichzeitig die ABCD-Karte hoch. Begründungen per 🎲 einholen, nicht per Melden.</div>
   </section>
 
-  <!-- 2 · PROBLEM -->
-  <section class="folie" data-phase="Problem">
+  <section class="folie" data-phase="Problem" data-minuten="2">
     <div class="kennung">Problem<span class="leitmodell">Leitmodell: Rechteck-Trick</span></div>
-    <h2>Brauchen wir wirklich sechs Formeln?</h2>
-    <div class="problem"><div class="label">Problem</div><br>Rechteck, Parallelogramm, Dreieck, Trapez, Raute, Drachen – Jana stöhnt: „So viele Formeln kann ich mir nicht merken!“</div>
-    <div class="spannung" data-art="Stimmt das?">Mit der <strong>Trapezformel</strong> kann man auch Parallelogramme und Dreiecke berechnen.</div>
-    <div data-abstimmung='["Stimmt", "Stimmt nicht", "Nur beim Parallelogramm"]'></div>
-    <div class="hinweis">Abstimmung festhalten (Foto/Tafel), am Ende der Stunde auflösen. Noch nicht verraten!</div>
+    <h2>Zu viele Formeln?</h2>
+    <div class="problem">
+      <div class="label">Situation</div><br>
+      Rechteck, Parallelogramm, Dreieck, Trapez, Raute, Drachen – Jana stöhnt: „So viele Formeln kann ich mir nicht merken!“ Ihr Bruder sagt: „Mit der Trapezformel kannst du auch Parallelogramme und Dreiecke berechnen.“
+    </div>
+    <div class="frage-gross">Brauchen wir wirklich sechs Formeln?</div>
+    <div class="hinweis">Frage vorlesen lassen. Kurze Vermutung per Handzeichen an der Tafel festhalten – Auflösung am Ende.</div>
   </section>
 
-  <!-- 2a · LERNZIELE -->
-  <section class="folie" data-phase="Problem">
-    <div class="kennung">Problem · Ziele<span class="leitmodell">Leitmodell: Rechteck-Trick</span></div>
-    <h2>Heute lernst du …</h2>
-    <div class="lernziele schritt"><div class="titel">🎯 Heute lernst du …</div><ul><li>Ich kann erklären, wie die Flächenformeln zusammenhängen.</li><li>Ich kann für eine Figur die passende Formel auswählen.</li><li>Ich kann prüfen, ob ein Ergebnis sinnvoll ist.</li></ul></div>
-    <p class="schritt"><span class="projekt">Steckbrief-Mappe: Wir gestalten die Formel-Landkarte als Rückseite der Mappe.</span></p>
-    <div class="hinweis">Lernziele kurz vorlesen lassen (🎲). Sie stehen wörtlich gleich auf der Schülerseite und im Exit-Ticket.</div>
+  <section class="folie" data-phase="Problem" data-minuten="2">
+    <div class="kennung">Problem · Was fehlt uns?</div>
+    <h2>Können wir das schon?</h2>
+    <div class="bekannt-gesucht">
+      <div class="bekannt">Sechs Formeln: A = a · b · g · h · g · h : 2 · (a + c) : 2 · h · e · f : 2</div>
+      <div class="gesucht">Wie die Formeln zusammenhängen – und welche man wirklich braucht</div>
+    </div>
+    <div class="luecke schritt">Wir haben jede Formel einzeln gelernt. Hängen sie zusammen? Und hat Janas Bruder recht?</div>
+    <div class="lernziele schritt">
+      <div class="titel">🎯 Heute lernst du …</div>
+      <ul><li>Ich kann erklären, wie die Flächenformeln zusammenhängen.</li><li>Ich kann für eine Figur die passende Formel auswählen.</li><li>Ich kann prüfen, ob ein Ergebnis sinnvoll ist.</li></ul>
+    </div>
+    <div class="hinweis">„Was fehlt uns noch?“ erst von Schülern formulieren lassen (🎲), dann aufdecken.</div>
   </section>
 
-  <!-- 2c · EIGENE LÖSUNG -->
-  <section class="folie" data-phase="Problem" data-minuten="4">
+  <section class="folie" data-phase="Problem" data-minuten="3" data-sozialform="PA">
     <div class="kennung">Eigene Lösung</div>
     <h2>Was meinst du?</h2>
     <div data-denkzeit="60" data-text="Was passiert mit der Trapezformel A = (a + c) : 2 · h, wenn c = a ist? Und wenn c = 0 ist?"></div>
-    <div data-methode="tps" data-minuten="1,2,2"></div>
+    <div data-methode="tps" data-minuten="1,1,1"></div>
     <div data-tipps>
       <div class="tipp">Setze c = a ein: (a + a) : 2 = ?</div>
       <div class="tipp">Ein Trapez mit c = 0 hat oben nur noch eine Ecke.</div>
     </div>
-    <p class="satzhilfe">Ich vermute, dass … · Ich würde zuerst …</p>
   </section>
 
-  <!-- 3 · ERARBEITUNG E -->
-  <section class="folie" data-phase="Erarbeitung" data-minuten="7">
+  <section class="folie" data-phase="Erarbeitung" data-minuten="6" data-sozialform="GA">
     <div class="kennung">Erarbeitung · Gruppen<span class="eis" data-eis="E"></span></div>
     <h2>Formel-Trio</h2>
-    <p style="margin-top:0">Zu jeder Figur gehören eine Formel und ein Herleitungsbild (Verschieben, Verdoppeln, Ergänzen). Wählt:</p>
+    <p class="auftrag">Zu jeder Figur gehören eine Formel und ein Herleitungsbild (Verschieben, Verdoppeln, Ergänzen). Wählt:</p>
     <div class="wahlkarten">
       <div class="wahlkarte"><div class=icon>🃏</div><b>Trio-Memory</b>Karten Figur – Formel – Bild zuordnen</div>
       <div class="wahlkarte"><div class=icon>🗺️</div><b>Formel-Landkarte</b>Plakat: Welche Formel entsteht aus welcher? Pfeile mit Begründung</div>
       <div class="wahlkarte"><div class=icon>🌀</div><b>Verwandeln</b>Trapez aus Pfeifenreinigern auf Karopapier legen und die obere Seite c kürzer und länger biegen</div>
     </div>
-    <div data-methode="rollen"></div>
-    <div class="hinweis">Materialkiste: Trio-Karten (6 Figuren, 6 Formeln, 6 Herleitungsbilder), Plakate, Pfeifenreiniger, Karopapier.</div>
+    <div class="hinweis">Herumgehen und 2–4 verschiedene Lösungen mit 📷 fotografieren. Materialkiste: Trio-Karten (6 Figuren, 6 Formeln, 6 Herleitungsbilder), Plakate, Pfeifenreiniger, Karopapier.</div>
   </section>
 
-  <!-- 3 · ERARBEITUNG I/S -->
   <section class="folie" data-phase="Erarbeitung" data-minuten="5">
     <div class="kennung">Erarbeitung · Was passiert, wenn …?<span class="eis" data-eis="IS"></span></div>
     <h2>Trapez verwandeln: Was passiert, wenn …?</h2>
@@ -87,85 +89,73 @@
     <div class="vernetzen schritt">Stelle c = a ein: Welche Figur entsteht? Was wird aus der Formel? Stelle c = 0 ein: Welche Figur, welche Formel? Kann man auch die Rautenformel so finden?</div>
   </section>
 
-  <!-- 4 · IDEEN VERGLEICHEN -->
-  <section class="folie" data-phase="Ideen vergleichen">
-    <div class="kennung">Ideen vergleichen</div>
-    <h2>Wer hat recht?</h2>
-    <div class="fehlerkarte" data-wer="Nele">
-      <div class="rechnung">Dreieck: g = 2 m, h = 50 cm → A = 2 · 50 : 2 = <span class='fehler'>50 m²</span></div>
-      <div class="erklaerung">Nele hat Meter und Zentimeter gemischt. Erst angleichen: 2 m = 200 cm → A = 200 · 50 : 2 = 5000 cm² = 0,5 m². Überschlag: Ein Dreieck 2 m × 0,5 m kann nicht 50 m² groß sein.</div>
-    </div>
-    <div class="legende"><span class="l-ja">stimmt</span><span class="l-nein">stimmt nicht</span>
-      <button class="knopf" data-alle-auf style="margin-left:auto">Alle aufdecken</button><button class="knopf" data-alle-zu>Alle zudecken</button></div>
-    <div class="karten">
-      <div class="karte ja">Setzt man in die Trapezformel c = 0 ein, erhält man die Dreiecksformel.<span class="loesung">Ja: (a + 0) : 2 · h = a · h : 2.</span></div>
-      <div class="karte ja">Setzt man c = a ein, erhält man die Parallelogrammformel.<span class="loesung">Ja: (a + a) : 2 · h = a · h.</span></div>
-      <div class="karte ja">Die Formel e · f : 2 passt auch zum Quadrat.<span class="loesung">Ja, beim Quadrat stehen die Diagonalen senkrecht.</span></div>
-      <div class="karte nein">Ein Giebel mit 5000 m² ist realistisch.<span class="loesung">Nein, das wäre fast ein Fußballfeld. Einheiten prüfen!</span></div>
-    </div>
-    <p class="satzhilfe">Ich stimme zu / nicht zu, weil … · Der Fehler ist …</p>
-    <div class="hinweis">Erst Fehlerkarte: Denkzeit, dann 🎲. Karten einzeln: Daumen hoch/runter, dann aufdecken.</div>
+  <section class="folie" data-phase="Ideen vergleichen" data-layout="einspaltig">
+    <div class="kennung">Ideen vergleichen · Eure Lösungen</div>
+    <h2>Was ist gleich, was ist anders?</h2>
+    <p class="auftrag">Wie sieht eure Formel-Landkarte aus? Welche Pfeile habt ihr gefunden? Haltet eure Karte hoch.</p>
+    <div data-loesungswand="4"></div>
+    <p class="satzhilfe">Lösung … ist richtig, weil … · Bei Lösung … ist der Fehler …</p>
+    <div class="hinweis">„Freischalten“ erst hier. Zwei Formel-Landkarten mit unterschiedlicher Anordnung vergleichen.</div>
   </section>
 
-  <!-- 5 · SICHERUNG -->
-  <section class="folie" data-phase="Sicherung">
+  <section class="folie" data-sozialform="EA" data-phase="Sicherung">
     <div class="kennung">Sicherung<span class="eis" data-eis="EIS"></span></div>
     <h2>Formel-Landkarte</h2>
+    <p class="auftrag">Schreibe den Merkkasten ins Heft und in deine Steckbrief-Mappe. Löse dann das Lückenbeispiel.</p>
     <div class="merk">
       <h3>Merke</h3>
-      <ul>
-        <li class="schritt">Rechteck <strong>A = a · b</strong> → verschieben → Parallelogramm <strong>A = g · h</strong> → halbieren → Dreieck <strong>A = g · h : 2</strong></li>
-        <li class="schritt">Trapez <strong>A = (a + c) : 2 · h</strong> (verdoppeln) · Raute und Drachen <strong>A = e · f : 2</strong> (ergänzen)</li>
-        <li class="schritt">Die Trapezformel enthält Parallelogramm (c = a) und Dreieck (c = 0).</li>
-        <li class="schritt">Vor dem Rechnen: <strong>gleiche Einheiten</strong>! Nach dem Rechnen: Ist das Ergebnis sinnvoll (Überschlag)?</li>
-      </ul>
+      <ul><li>Alle Formeln kommen vom Rechteck: verschieben (Parallelogramm), halbieren (Dreieck), verdoppeln (Trapez), ergänzen (Raute, Drachen).</li><li>Vor dem Rechnen: gleiche Einheiten! Danach: Überschlag.</li></ul>
+      <div class="formel">A = (a + c) : 2 · h</div>
+      <div class="beispielaufgabe schritt"><b>Musterbeispiel:</b> Parallelogramm g = 6 m, h = 4 m mit der Trapezformel (c = a)
+        <div class="schritte">A = (6 + 6) : 2 · 4<br>A = 6 · 4 = 24 m² ✓</div>
+      </div>
     </div>
-    <div class="produkt schritt">Erkläre es deinem Nachbarn in <strong>eigenen Worten</strong> und mit einer <strong>Skizze</strong>. Er sagt, ob er es verstanden hat.</div>
-    <div class="hinweis">Ins Heft und in die Steckbrief-Mappe übertragen. Danach 1–2 Erklärungen per 🎲 vorstellen lassen.</div>
+    <div class="lueckenbeispiel schritt"><strong>Jetzt du:</strong> Dreieck g = 8 cm, h = 5 cm als Trapez mit c = 0: A = (8 + ___) : 2 · 5 = ___ cm²</div>
+    <div class="hinweis">Lösung Lückenbeispiel: (8 + 0) : 2 · 5 = 20 cm². Per 🎲 kontrollieren.</div>
   </section>
 
-  <!-- 6 · ÜBUNG: Niveau wählen -->
-  <section class="folie" data-phase="Übung">
-    <div class="kennung">Übung · Buch<span class="eis" data-eis="S"></span></div>
-    <h2>Jetzt du! Wähle dein Niveau</h2>
-    <p class="auftrag">Wähle ein Niveau und rechne die Buchaufgaben im Heft. Du darfst wechseln!</p>
-    <div class="wahlkarten">
-      <div class="wahlkarte"><b>● Basis</b>📖 <span class="platzhalter">[BUCH: S. __ Nr. __]</span></div>
-      <div class="wahlkarte"><b>●● Standard</b>📖 <span class="platzhalter">[BUCH: S. __ Nr. __]</span></div>
-      <div class="wahlkarte"><b>●●● Profi</b>📖 <span class="platzhalter">[BUCH: S. __ Nr. __]</span></div>
+  <section class="folie" data-ipad="gruen" data-phase="Übung">
+    <div class="kennung">Übung<span class="eis" data-eis="S"></span></div>
+    <h2>Jetzt rechnest du!</h2>
+    <p class="auftrag">Rechne im Heft – erst die Mix-Aufgabe, dann so weit du kommst.</p>
+    <ol class="aufgaben">
+      <li data-niveau="mix" data-loesung="u = 2 · 5 cm + 2 · 8 cm = 26 cm">Drachen mit a = 5 cm und b = 8 cm. Berechne den Umfang.</li>
+      <li data-niveau="1" data-loesung="A = e · f : 2 = 50 · 80 : 2 = 2000 cm²">Drachen: e = 50 cm, f = 80 cm. Berechne A.</li>
+      <li data-niveau="1" data-loesung="h = 0,8 m · A = 2 · 0,8 = 1,6 m²">Parallelogramm: g = 2 m, h = 80 cm. Berechne A in m².</li>
+      <li data-niveau="2" data-loesung="a = 120 cm · (120 + 80) : 2 · 50 = 5000 cm² = 0,5 m²">Trapez: a = 1,2 m, c = 80 cm, h = 50 cm. Berechne A in cm².</li>
+      <li data-niveau="3" data-loesung="Überschlag: 10 · 4 : 2 = 20 → Leon hat sich verrechnet (Komma/ : 2 vergessen). Richtig: 20,09 m²">Leon: Dreieck g = 9,8 m, h = 4,1 m → A = 201 m². Prüfe mit Überschlag.</li>
+    </ol>
+    <p class="klein">Weiter: 📖 Parallelo 8 <span class="platzhalter">[BUCH: S. __ Nr. __]</span> · <a class="schuelerlink" href="../schueler/stunde-12.html" target="_blank">📱 Schülerseite</a></p>
+    <div class="merk kompakt">
+      <h3>Merke</h3>
+      <div class="formel">Rechteck → Parallelogramm → Dreieck</div>
+      <p>Trapez: c = a → Parallelogramm · c = 0 → Dreieck · Raute/Drachen: A = e · f : 2</p>
+      <div class="beispielaufgabe"><b>Beispiel:</b> Parallelogramm g = 2 m, h = 80 cm
+        <div class="schritte">gleiche Einheit: h = 0,8 m<br>A = 2 · 0,8 = 1,6 m²</div>
+      </div>
     </div>
-    <p>Tipps und Selbstkontrolle: <a class="schuelerlink" href="../schueler/stunde-12.html" target="_blank">📱 Schülerseite · Stunde 12</a></p>
-    <div class="hinweis">Buchaufgaben im Heft. Rest als Hausaufgabe.</div>
+    <div class="hinweis">Lösungen einzeln aufdecken oder „Alle Lösungen zeigen“. Wer fertig ist: Buch oder Schülerseite.</div>
   </section>
 
-  <!-- 6b · ÜBUNG: So übt ihr -->
-  <section class="folie" data-phase="Übung">
-    <div class="kennung">Übung · So übt ihr<span class="eis" data-eis="S"></span></div>
-    <h2>Lerntempoduett</h2>
-    <div data-methode="lerntempoduett" data-minuten="5,0,2,0"></div>
-    <div class="produkt">Fertig? <strong>Erfinde eine eigene Aufgabe</strong> mit einem Einheiten-Fehler. Dein Partner findet und korrigiert ihn.</div>
-    <div class="hinweis">Wer fertig ist, wartet an der Haltestelle auf einen Partner.</div>
-  </section>
-
-  <!-- 7 · REFLEXION -->
   <section class="folie" data-phase="Reflexion">
     <div class="kennung">Zurück zum Problem · Reflexion</div>
-    <h2>Stimmt: Trapez mit c = a ist ein Parallelogramm, mit c = 0 ein Dreieck.</h2>
+    <h2>Jetzt können wir es!</h2>
+    <div class="frage-gross">Brauchen wir wirklich sechs Formeln?</div>
+    <p class="schritt"><strong>Antwort:</strong> Janas Bruder hat recht: Trapez mit c = a ist ein Parallelogramm, mit c = 0 ein Dreieck. Alle Formeln kommen vom Rechteck.</p>
     <div class="exit-qr">
       <div data-qr="../schueler/exit-12.html"></div>
       <div>
         <p style="margin-top:0;font-size:1.4rem"><strong>🎫 Exit-Ticket</strong></p>
-        <p>Scanne den Code oder öffne die Schülerseite. Gib dein <strong>Kürzel</strong> ein.<br>Am Ende zeigst du mir deinen QR-Code.</p>
-        <p><a class="schuelerlink" href="../schueler/exit-12.html" target="_blank">🎫 Zum Exit-Ticket</a></p>
+        <p>Scanne den Code. Gib dein <strong>Kürzel</strong> ein. Zeig mir am Ende deinen QR-Code.</p>
         <p class="klein">Nächste Stunde: Zusammengesetzte Figuren – Wie groß ist die Scheunenwand?</p>
       </div>
     </div>
-    <div class="hinweis">Tafelabstimmung vom Anfang zeigen: Wer lag richtig? QR-Codes der Schüler mit der Kamera-App scannen → Auswertung.</div>
+    <div class="hinweis">Vermutung vom Anfang zeigen: Wer lag richtig? Dann 4 Min. Exit-Ticket. „Ticket an der Tür“: QR-Codes beim Rausgehen mit der Handy-Kamera scannen → Auswertung.</div>
   </section>
 
 </div>
-<script src="../../../../praesentation.js?v=13"></script>
+<script src="../../../../praesentation.js?v=14"></script>
 <script src="../../../../qr.js"></script>
-<script src="../modelle.js?v=13"></script>
+<script src="../modelle.js?v=14"></script>
 </body>
 </html>

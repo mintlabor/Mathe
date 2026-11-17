@@ -4,15 +4,16 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Stunde 11: Raute und Drachen – Umfang und Flächen</title>
-<link rel="stylesheet" href="../../../../praesentation.css?v=13">
+<link rel="stylesheet" href="../../../../praesentation.css?v=14">
 <style>
   .platzhalter { background: #fff3bf; border-radius: 4px; padding: 0 .3rem; font-family: ui-monospace, monospace; font-size: .9em; }
   .exit-qr { display: flex; gap: 1.5rem; align-items: center; }
-  .exit-qr [data-qr] svg { width: 230px; height: 230px; display: block; border-radius: 8px; }
+  .exit-qr [data-qr] svg { width: 200px; height: 200px; display: block; border-radius: 8px; }
   .skizze { width: min(100%, 560px); height: auto; max-height: 30vh; display: block; margin: .3rem auto; flex-shrink: 0; }
 </style>
 </head>
-<body data-phasen='[["Abrufen", 4], ["Problem", 7], ["Erarbeitung", 12], ["Ideen vergleichen", 5], ["Sicherung", 6], ["Übung", 7], ["Reflexion", 4]]'>
+<body data-problemfrage="Wie viel Folie braucht der Drachen?"
+      data-phasen='[["Abrufen", 3], ["Problem", 7], ["Erarbeitung", 11], ["Ideen vergleichen", 5], ["Sicherung", 6], ["Übung", 7], ["Reflexion", 6]]'>
 
 <div class="leiste">
   <div class="pfad"><a href="../../../../">Start</a> › <a href="../../../">Klasse 8</a> › <a href="../../">Realschule</a> › <a href="../">Umfang und Flächen</a> › Stunde 11</div>
@@ -24,63 +25,64 @@
 
 <div class="buehne">
 
-  <!-- 1 · ABRUFEN -->
-  <section class="folie" data-phase="Abrufen">
+  <section class="folie" data-phase="Abrufen" data-sozialform="EA" data-ipad="rot">
     <div class="kennung">Umfang und Flächen · Stunde 11 · Warm-up</div>
     <h2>Was weißt du noch?</h2>
-    <p style="margin-top:0">Exit-Ticket von letzter Stunde: Trapez a = 9 cm, c = 5 cm, h = 4 cm. Wie groß ist A?</p>
+    <p class="auftrag">Exit-Ticket von letzter Stunde: Trapez a = 9 cm, c = 5 cm, h = 4 cm. Wie groß ist A?</p>
     <div data-abstimmung='["56 cm²", "28 cm²", "180 cm²", "18 cm²"]' data-loesung="1"></div>
     <div class="hinweis">Alle halten gleichzeitig die ABCD-Karte hoch. Begründungen per 🎲 einholen, nicht per Melden.</div>
   </section>
 
-  <!-- 2 · PROBLEM -->
-  <section class="folie" data-phase="Problem">
+  <section class="folie" data-phase="Problem" data-minuten="2">
     <div class="kennung">Problem<span class="leitmodell">Leitmodell: Rechteck-Trick</span></div>
-    <h2>Wie viel Folie für den Drachen?</h2>
-    <div class="problem"><div class="label">Problem</div><br>Für das Herbstfest bauen wir Drachen. Der Querstab ist 60 cm lang, der Längsstab 90 cm. Die Folie gibt es als Rechteck 60 cm × 90 cm.</div>
-    <div class="spannung" data-art="Wette">Wette: Der Drachen braucht <strong>genau die Hälfte</strong> der rechteckigen Folie.</div>
-    <div data-abstimmung='["Genau die Hälfte", "Mehr als die Hälfte", "Weniger als die Hälfte"]'></div>
-    <div class="hinweis">Abstimmung festhalten (Foto/Tafel), am Ende der Stunde auflösen. Noch nicht verraten!</div>
+    <h2>Der Drachen fürs Herbstfest</h2>
+    <div class="problem">
+      <div class="label">Situation</div><br>
+      Für das Herbstfest bauen wir Drachen. Der Querstab ist 60 cm lang, der Längsstab 90 cm. Die Folie gibt es als Rechteck 60 cm × 90 cm.
+    </div>
+    <div class="frage-gross">Wie viel Folie braucht der Drachen?</div>
+    <div class="hinweis">Frage vorlesen lassen. Kurze Vermutung per Handzeichen an der Tafel festhalten – Auflösung am Ende.</div>
   </section>
 
-  <!-- 2a · LERNZIELE -->
-  <section class="folie" data-phase="Problem">
-    <div class="kennung">Problem · Ziele<span class="leitmodell">Leitmodell: Rechteck-Trick</span></div>
-    <h2>Heute lernst du …</h2>
-    <div class="lernziele schritt"><div class="titel">🎯 Heute lernst du …</div><ul><li>Ich kann Raute und Drachen zu einem Rechteck aus den Diagonalen ergänzen.</li><li>Ich kann den Flächeninhalt mit A = e · f : 2 berechnen.</li><li>Ich kann bei der Raute zwei Wege nutzen: A = e · f : 2 und A = a · h.</li></ul></div>
-    <p class="schritt"><span class="projekt">Steckbriefe Raute und Drachen: Formel A = e · f : 2 mit Skizze „Ergänzen“ eintragen.</span></p>
-    <div class="hinweis">Lernziele kurz vorlesen lassen (🎲). Sie stehen wörtlich gleich auf der Schülerseite und im Exit-Ticket.</div>
+  <section class="folie" data-phase="Problem" data-minuten="2">
+    <div class="kennung">Problem · Was fehlt uns?</div>
+    <h2>Können wir das schon?</h2>
+    <div class="bekannt-gesucht">
+      <div class="bekannt">Stäbe (Diagonalen): e = 60 cm, f = 90 cm<br>Folie: Rechteck 60 cm × 90 cm</div>
+      <div class="gesucht">Flächeninhalt des Drachens</div>
+    </div>
+    <div class="luecke schritt">Beim Drachen gibt es keine Grundseite mit Höhe – nur die beiden <strong>Stäbe</strong> (Diagonalen). Wie rechnen wir damit?</div>
+    <div class="lernziele schritt">
+      <div class="titel">🎯 Heute lernst du …</div>
+      <ul><li>Ich kann Raute und Drachen zu einem Rechteck aus den Diagonalen ergänzen.</li><li>Ich kann den Flächeninhalt mit A = e · f : 2 berechnen.</li><li>Ich kann bei der Raute zwei Wege nutzen: A = e · f : 2 und A = a · h.</li></ul>
+    </div>
+    <div class="hinweis">„Was fehlt uns noch?“ erst von Schülern formulieren lassen (🎲), dann aufdecken.</div>
   </section>
 
-  <!-- 2c · EIGENE LÖSUNG -->
-  <section class="folie" data-phase="Problem" data-minuten="4">
+  <section class="folie" data-phase="Problem" data-minuten="3" data-sozialform="PA">
     <div class="kennung">Eigene Lösung</div>
     <h2>Was meinst du?</h2>
     <div data-denkzeit="60" data-text="Wie viel Folie braucht der Drachen? Zeichne den Drachen in das Rechteck 60 × 90 und überlege."></div>
-    <div data-methode="tps" data-minuten="1,2,2"></div>
+    <div data-methode="tps" data-minuten="1,1,1"></div>
     <div data-tipps>
       <div class="tipp">Die Stäbe sind die Diagonalen e und f.</div>
       <div class="tipp">Schau dir die vier Dreiecke außerhalb des Drachens an.</div>
     </div>
-    <p class="satzhilfe">Ich vermute, dass … · Ich würde zuerst …</p>
     <div class="hinweis">Erwartet: 60 · 90 = 5400 cm² (ganzes Rechteck). Im Vergleich klären.</div>
   </section>
 
-  <!-- 3 · ERARBEITUNG E -->
-  <section class="folie" data-phase="Erarbeitung" data-minuten="7">
+  <section class="folie" data-phase="Erarbeitung" data-minuten="6" data-sozialform="GA">
     <div class="kennung">Erarbeitung · Gruppen<span class="eis" data-eis="E"></span></div>
     <h2>Der Rechteck-Trick für Raute und Drachen</h2>
-    <p style="margin-top:0">Faltet einen Drachen oder eine Raute aus einem Rechteck und vergleicht die Reste mit der Figur. Wählt:</p>
+    <p class="auftrag">Faltet einen Drachen oder eine Raute aus einem Rechteck und vergleicht die Reste mit der Figur. Wählt:</p>
     <div class="wahlkarten">
       <div class="wahlkarte"><div class=icon>✂️</div><b>Falten und Schneiden</b>Rechteck 15 cm × 20 cm: Drachen einzeichnen, Ecken abschneiden, auf den Drachen legen</div>
       <div class="wahlkarte"><div class=icon>🔲</div><b>Kästchen zählen</b>Raute und Drachen auf Karopapier: innen und außen zählen</div>
       <div class="wahlkarte"><div class=icon>🪁</div><b>Echter Drachen</b>Bausatz: Stäbe messen, Folienbedarf berechnen</div>
     </div>
-    <div data-methode="rollen"></div>
-    <div class="hinweis">Materialkiste: Rechtecke 15 × 20 cm (farbig), Scheren, Klebestifte, Karopapier, Drachen-Bausatz (Holzstäbe 60 und 90 cm, Folie). Wer früh fertig ist: Raute als Parallelogramm (a · h) prüfen.</div>
+    <div class="hinweis">Herumgehen und 2–4 verschiedene Lösungen mit 📷 fotografieren. Materialkiste: Rechtecke 15 × 20 cm (farbig), Scheren, Klebestifte, Karopapier, Drachen-Bausatz (Holzstäbe 60 und 90 cm, Folie). Wer früh fertig ist: Raute als Parallelogramm (a · h) prüfen.</div>
   </section>
 
-  <!-- 3 · ERARBEITUNG I/S -->
   <section class="folie" data-phase="Erarbeitung" data-minuten="5">
     <div class="kennung">Erarbeitung · Was passiert, wenn …?<span class="eis" data-eis="IS"></span></div>
     <h2>Drachen: Was passiert, wenn …?</h2>
@@ -88,84 +90,73 @@
     <div class="vernetzen schritt">Was passiert mit A, wenn du die Kreuzung t verschiebst? Und mit dem Umfang? Erst vermuten, dann einschalten.</div>
   </section>
 
-  <!-- 4 · IDEEN VERGLEICHEN -->
-  <section class="folie" data-phase="Ideen vergleichen">
-    <div class="kennung">Ideen vergleichen</div>
-    <h2>Wer hat recht?</h2>
-    <div class="fehlerkarte" data-wer="Kai">
-      <div class="rechnung">Drachen e = 60 cm, f = 90 cm: A = 60 · 90 = <span class='fehler'>5400 cm²</span></div>
-      <div class="erklaerung">Kai hat das ganze Rechteck aus den Diagonalen berechnet. Die vier Dreiecke außen sind zusammen genauso groß wie der Drachen. Also: A = 60 · 90 : 2 = 2700 cm².</div>
-    </div>
-    <div class="legende"><span class="l-ja">stimmt</span><span class="l-nein">stimmt nicht</span>
-      <button class="knopf" data-alle-auf style="margin-left:auto">Alle aufdecken</button><button class="knopf" data-alle-zu>Alle zudecken</button></div>
-    <div class="karten">
-      <div class="karte ja">A = e · f : 2 gilt für jedes Viereck mit senkrechten Diagonalen.<span class="loesung">Ja, auch für das Quadrat.</span></div>
-      <div class="karte ja">Bei der Raute kann man auch A = a · h rechnen.<span class="loesung">Ja, denn eine Raute ist ein Parallelogramm.</span></div>
-      <div class="karte nein">Beim Drachen gilt A = a · b.<span class="loesung">Nein, a · b hat mit dem Flächeninhalt nichts zu tun.</span></div>
-      <div class="karte nein">Verschiebt man den Kreuzungspunkt, ändert sich A.<span class="loesung">Nein, e und f bleiben gleich – nur der Umfang ändert sich.</span></div>
-    </div>
-    <p class="satzhilfe">Ich stimme zu / nicht zu, weil … · Der Fehler ist …</p>
-    <div class="hinweis">Erst Fehlerkarte: Denkzeit, dann 🎲. Karten einzeln: Daumen hoch/runter, dann aufdecken.</div>
+  <section class="folie" data-phase="Ideen vergleichen" data-layout="einspaltig">
+    <div class="kennung">Ideen vergleichen · Eure Lösungen</div>
+    <h2>Was ist gleich, was ist anders?</h2>
+    <p class="auftrag">Wie viel Folie braucht ihr? Wer hat das ganze Rechteck genommen? Haltet eure Karte hoch.</p>
+    <div data-loesungswand="4"></div>
+    <p class="satzhilfe">Lösung … ist richtig, weil … · Bei Lösung … ist der Fehler …</p>
+    <div class="hinweis">„Freischalten“ erst hier. Eine Lösung mit 60 · 90 = 5400 cm² (ganzes Rechteck) zeigen.</div>
   </section>
 
-  <!-- 5 · SICHERUNG -->
-  <section class="folie" data-phase="Sicherung">
+  <section class="folie" data-sozialform="EA" data-phase="Sicherung">
     <div class="kennung">Sicherung<span class="eis" data-eis="EIS"></span></div>
     <h2>Flächeninhalt von Raute und Drachen</h2>
+    <p class="auftrag">Schreibe den Merkkasten ins Heft und in deine Steckbrief-Mappe. Löse dann das Lückenbeispiel.</p>
     <div class="merk">
       <h3>Merke</h3>
-      <ul>
-        <li class="schritt"><strong>A = e · f : 2</strong> (e und f sind die Diagonalen, sie stehen senkrecht)</li>
-        <li class="schritt">Begründung (Rechteck-Trick): Ergänzen zum Rechteck e × f. Die vier Dreiecke außen sind genauso groß wie die vier innen → Figur = Hälfte.</li>
-        <li class="schritt">Raute zusätzlich: A = a · h (Parallelogramm) · u = 4 · a · Drachen: u = 2 · a + 2 · b</li>
-      </ul>
+      <ul><li>e und f sind die Diagonalen. Ergänzt man zum Rechteck e × f, ist die Figur genau die <strong>Hälfte</strong>.</li><li>Raute zusätzlich: A = a · h</li></ul>
+      <div class="formel">A = e · f : 2</div>
+      <div class="beispielaufgabe schritt"><b>Musterbeispiel:</b> Drachen mit e = 60 cm, f = 90 cm
+        <div class="schritte">A = e · f : 2<br>A = 60 cm · 90 cm : 2 = 2700 cm²</div>
+      </div>
     </div>
-    <div class="produkt schritt">Erkläre es deinem Nachbarn in <strong>eigenen Worten</strong> und mit einer <strong>Skizze</strong>. Er sagt, ob er es verstanden hat.</div>
-    <div class="hinweis">Ins Heft und in die Steckbrief-Mappe übertragen. Danach 1–2 Erklärungen per 🎲 vorstellen lassen.</div>
+    <div class="lueckenbeispiel schritt"><strong>Jetzt du:</strong> Raute e = 8 cm, f = 6 cm → A = ___ · ___ : 2 = ___ cm²</div>
+    <div class="hinweis">Lösung Lückenbeispiel: 8 · 6 : 2 = 24 cm². Per 🎲 kontrollieren.</div>
   </section>
 
-  <!-- 6 · ÜBUNG: Niveau wählen -->
-  <section class="folie" data-phase="Übung">
-    <div class="kennung">Übung · Buch<span class="eis" data-eis="S"></span></div>
-    <h2>Jetzt du! Wähle dein Niveau</h2>
-    <p class="auftrag">Wähle ein Niveau und rechne die Buchaufgaben im Heft. Du darfst wechseln!</p>
-    <div class="wahlkarten">
-      <div class="wahlkarte"><b>● Basis</b>📖 <span class="platzhalter">[BUCH: S. __ Nr. __]</span></div>
-      <div class="wahlkarte"><b>●● Standard</b>📖 <span class="platzhalter">[BUCH: S. __ Nr. __]</span></div>
-      <div class="wahlkarte"><b>●●● Profi</b>📖 <span class="platzhalter">[BUCH: S. __ Nr. __]</span></div>
+  <section class="folie" data-ipad="gruen" data-phase="Übung">
+    <div class="kennung">Übung<span class="eis" data-eis="S"></span></div>
+    <h2>Jetzt rechnest du!</h2>
+    <p class="auftrag">Rechne im Heft – erst die Mix-Aufgabe, dann so weit du kommst.</p>
+    <ol class="aufgaben">
+      <li data-niveau="mix" data-loesung="A = (10 + 6) : 2 · 3 = 24 cm²">Trapez: a = 10 cm, c = 6 cm, h = 3 cm. Berechne A.</li>
+      <li data-niveau="1" data-loesung="A = 10 · 7 : 2 = 35 cm²">Raute: e = 10 cm, f = 7 cm. Berechne A.</li>
+      <li data-niveau="1" data-loesung="A = 30 · 50 : 2 = 750 cm²">Drachen: e = 30 cm, f = 50 cm. Berechne A.</li>
+      <li data-niveau="2" data-loesung="1 Fliese: 30 · 20 : 2 = 300 cm² = 0,03 m² · 6 : 0,03 = 200 Fliesen">Rautenförmige Fliesen haben e = 30 cm und f = 20 cm. Wie viele Fliesen braucht man für 6 m² Wand?</li>
+      <li data-niveau="3" data-loesung="1200 · 2 = 2400 · 2400 : 40 = 60 cm">Ein Drachen hat A = 1200 cm² und e = 40 cm. Wie lang ist f?</li>
+    </ol>
+    <p class="klein">Weiter: 📖 Parallelo 8 <span class="platzhalter">[BUCH: S. __ Nr. __]</span> · <a class="schuelerlink" href="../schueler/stunde-11.html" target="_blank">📱 Schülerseite</a></p>
+    <div class="merk kompakt">
+      <h3>Merke</h3>
+      <div class="formel">A = e · f : 2</div>
+      <p>e und f sind die <strong>Diagonalen</strong>, nicht die Seiten!</p>
+      <div class="beispielaufgabe"><b>Beispiel:</b> Drachen e = 40 cm, f = 70 cm
+        <div class="schritte">A = 40 · 70 : 2<br>A = 1400 cm²</div>
+      </div>
     </div>
-    <p>Tipps und Selbstkontrolle: <a class="schuelerlink" href="../schueler/stunde-11.html" target="_blank">📱 Schülerseite · Stunde 11</a></p>
-    <div class="hinweis">Buchaufgaben im Heft. Rest als Hausaufgabe.</div>
+    <div class="hinweis">Lösungen einzeln aufdecken oder „Alle Lösungen zeigen“. Wer fertig ist: Buch oder Schülerseite.</div>
   </section>
 
-  <!-- 6b · ÜBUNG: So übt ihr -->
-  <section class="folie" data-phase="Übung">
-    <div class="kennung">Übung · So übt ihr<span class="eis" data-eis="S"></span></div>
-    <h2>Lerntempoduett</h2>
-    <div data-methode="lerntempoduett" data-minuten="5,0,2,0"></div>
-    <div class="produkt">Fertig? <strong>Erfinde eine eigene Aufgabe</strong>: Plane einen Drachen für dich. Wie lang sind die Stäbe, wie viel Folie brauchst du?</div>
-    <div class="hinweis">Wer fertig ist, wartet an der Haltestelle auf einen Partner.</div>
-  </section>
-
-  <!-- 7 · REFLEXION -->
   <section class="folie" data-phase="Reflexion">
     <div class="kennung">Zurück zum Problem · Reflexion</div>
-    <h2>Stimmt: Der Drachen braucht 2700 cm² – genau die Hälfte von 5400 cm².</h2>
+    <h2>Jetzt können wir es!</h2>
+    <div class="frage-gross">Wie viel Folie braucht der Drachen?</div>
+    <p class="schritt"><strong>Antwort:</strong> Der Drachen braucht 60 cm · 90 cm : 2 = 2700 cm² – genau die Hälfte der Folie.</p>
     <div class="exit-qr">
       <div data-qr="../schueler/exit-11.html"></div>
       <div>
         <p style="margin-top:0;font-size:1.4rem"><strong>🎫 Exit-Ticket</strong></p>
-        <p>Scanne den Code oder öffne die Schülerseite. Gib dein <strong>Kürzel</strong> ein.<br>Am Ende zeigst du mir deinen QR-Code.</p>
-        <p><a class="schuelerlink" href="../schueler/exit-11.html" target="_blank">🎫 Zum Exit-Ticket</a></p>
+        <p>Scanne den Code. Gib dein <strong>Kürzel</strong> ein. Zeig mir am Ende deinen QR-Code.</p>
         <p class="klein">Nächste Stunde: Eine Formel für alle? – Brauchen wir wirklich sechs Formeln?</p>
       </div>
     </div>
-    <div class="hinweis">Tafelabstimmung vom Anfang zeigen: Wer lag richtig? QR-Codes der Schüler mit der Kamera-App scannen → Auswertung.</div>
+    <div class="hinweis">Vermutung vom Anfang zeigen: Wer lag richtig? Dann 4 Min. Exit-Ticket. „Ticket an der Tür“: QR-Codes beim Rausgehen mit der Handy-Kamera scannen → Auswertung.</div>
   </section>
 
 </div>
-<script src="../../../../praesentation.js?v=13"></script>
+<script src="../../../../praesentation.js?v=14"></script>
 <script src="../../../../qr.js"></script>
-<script src="../modelle.js?v=13"></script>
+<script src="../modelle.js?v=14"></script>
 </body>
 </html>

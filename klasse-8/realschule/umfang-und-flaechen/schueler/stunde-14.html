@@ -14,16 +14,27 @@
 </div></header>
 <main>
   <div class="box">
-    <strong>📘 Erinnerung</strong><br>
-    Rückwärts: Parallelogramm h = A : g · Dreieck h = 2 · A : g · Trapez h = A : ((a + c) : 2) · Probe!
-  </div>
-  <div class="box">
     <strong>📚 Wörter für heute:</strong> Umkehraufgabe · rückwärts rechnen · Gleichung · Probe · Pfeilbild · gesucht · gegeben<br>
     <span class="klein">💬 So kannst du es aufschreiben: „Ich habe so gerechnet: …, weil …“</span>
   </div>
   <div id="ziele"></div>
 
-  <h2>📖 Aufgaben aus dem Buch</h2>
+  <h2>✏️ Aufgaben</h2>
+  <div class="box merkkasten">
+    <h3>📘 Merke</h3>
+    <p>Formel aufschreiben, bekannte Werte einsetzen, rückwärts rechnen. Immer mit <strong>Probe</strong>!</p>
+    <div class="formel">Dreieck: h = A · 2 : g</div>
+    <div class="beispielaufgabe">
+      <strong>Beispiel:</strong> Beet mit A = 24 m², g = 8 m
+      <div class="schritte">24 = 8 · h : 2<br>48 = 8 · h → h = 6 m<br>Probe: 8 · 6 : 2 = 24 ✓</div>
+    </div>
+  </div>
+  <p class="klein">Rechne jede Aufgabe zuerst im Heft. Trage dann dein Ergebnis ein und prüfe es.</p>
+  <div id="niveaus"></div>
+  <div id="fortschritt"></div>
+  <div id="aufgaben"></div>
+
+  <h2>📖 Weiterarbeit im Buch</h2>
   <div class="box buch">
     <h3>Parallelo 8</h3>
     <ul>
@@ -31,13 +42,9 @@
       <li>●● Standard: <span class="platzhalter">[BUCH: S. __ Nr. __]</span></li>
       <li>●●● Profi: <span class="platzhalter">[BUCH: S. __ Nr. __]</span></li>
     </ul>
-    <p class="klein">Rechne im Heft. Unten findest du Aufgaben mit Tipps und Selbstkontrolle.</p>
+    <p class="klein">Fertig mit den Aufgaben oben? Dann rechne im Buch weiter.</p>
   </div>
 
-  <h2>Aufgaben</h2>
-  <div id="niveaus"></div>
-  <div id="fortschritt"></div>
-  <div id="aufgaben"></div>
   <h2>🎨 Werde kreativ</h2>
   <div class="box">
     Ein Drachen soll genau 2000 cm² Folie haben. Finde drei verschiedene Paare für e und f.
@@ -48,6 +55,7 @@
   <p><a href="exit-14.html">🎫 Weiter zum Exit-Ticket →</a> · <a href="./">← Lernlandkarte</a></p>
 </main>
 <script>
+// Die ersten Aufgaben = Aufgabenfolie der Präsentation; danach Zusatzaufgaben
 window.SEITE = {
   "speicher": "mathe-k8-rs-uf",
   "stunde": 14,
@@ -62,6 +70,61 @@ window.SEITE = {
     "Ich kann mein Ergebnis mit einer Probe prüfen."
   ],
   "aufgaben": [
+    {
+      "typ": "zahl",
+      "loesung": 56,
+      "tipps": [
+        "Groß minus Rest."
+      ],
+      "einheit": "m²",
+      "frage": "🔀 Mix: Ein Rechteck 10 m × 6 m, aus dem ein Quadrat 2 m × 2 m ausgeschnitten ist. Berechne die Restfläche.",
+      "niveau": 1,
+      "erklaerung": "60 m² − 4 m² = 56 m²"
+    },
+    {
+      "typ": "zahl",
+      "loesung": 6,
+      "tipps": [
+        "A = a · b → b = A : a"
+      ],
+      "einheit": "m",
+      "frage": "Rechteck: A = 48 m², a = 8 m. Wie lang ist b?",
+      "niveau": 1,
+      "erklaerung": "b = 48 : 8 = 6 m · Probe 8 · 6 = 48 ✓"
+    },
+    {
+      "typ": "zahl",
+      "loesung": 5,
+      "tipps": [
+        "Schau dir das Beispiel im Merkkasten an."
+      ],
+      "einheit": "cm",
+      "frage": "Parallelogramm: A = 45 cm², g = 9 cm. Wie lang ist h?",
+      "niveau": 1,
+      "erklaerung": "h = 45 : 9 = 5 cm"
+    },
+    {
+      "typ": "zahl",
+      "loesung": 5,
+      "tipps": [
+        "Erst · 2!"
+      ],
+      "einheit": "cm",
+      "frage": "Dreieck: A = 20 cm², g = 8 cm. Wie lang ist h?",
+      "niveau": 2,
+      "erklaerung": "20 · 2 = 40 · 40 : 8 = 5 cm · Probe 8 · 5 : 2 = 20 ✓"
+    },
+    {
+      "typ": "zahl",
+      "loesung": 5,
+      "tipps": [
+        "Erst (a + c) : 2 ausrechnen."
+      ],
+      "einheit": "m",
+      "frage": "Trapez: A = 30 m², a = 7 m, c = 5 m. Wie lang ist h?",
+      "niveau": 3,
+      "erklaerung": "(7 + 5) : 2 = 6 · 30 : 6 = 5 m"
+    },
     {
       "niveau": 1,
       "typ": "zahl",

@@ -14,17 +14,27 @@
 </div></header>
 <main>
   <div class="box">
-    <strong>📘 Erinnerung</strong><br>
-    Dreieck: 3 Seiten, Winkelsumme 180° · Parallelogramm: gegenüberliegende Seiten parallel und gleich lang · Trapez: ein Paar paralleler Seiten · Raute: 4 gleich lange Seiten · Drachen: 2 Paare benachbarter gleich langer Seiten, 1 Symmetrieachse
-  </div>
-  <div class="box">
     <strong>📚 Wörter für heute:</strong> Dreieck · Parallelogramm · Trapez · Raute · Drachen · parallel · senkrecht · Diagonale · Symmetrieachse · punktsymmetrisch<br>
     <span class="klein">💬 So kannst du es aufschreiben: „Ich habe so gerechnet: …, weil …“</span>
   </div>
-  <div class="box"><strong>🗂️ Material:</strong> <a href="steckbriefe.html">Steckbriefe aller fünf Figuren</a> · <a href="steckbriefe.html?luecke">Lückenversion</a> · <a href="steckbrief.html">Expertenkarten</a></div>
   <div id="ziele"></div>
 
-  <h2>📖 Aufgaben aus dem Buch</h2>
+  <h2>✏️ Aufgaben</h2>
+  <div class="box merkkasten">
+    <h3>📘 Merke</h3>
+    <p>Vergleiche die Eigenschaften Schritt für Schritt. Eine Figur passt nur, wenn <strong>alle</strong> Eigenschaften stimmen.</p>
+    <div class="formel">Ausschlussverfahren: Eigenschaft für Eigenschaft prüfen</div>
+    <div class="beispielaufgabe">
+      <strong>Beispiel:</strong> „4 gleich lange Seiten, keine rechten Winkel“
+      <div class="schritte">Quadrat? Nein – hat rechte Winkel.<br>Rechteck? Nein – Seiten nicht alle gleich.<br>Raute? Ja ✓</div>
+    </div>
+  </div>
+  <p class="klein">Rechne jede Aufgabe zuerst im Heft. Trage dann dein Ergebnis ein und prüfe es.</p>
+  <div id="niveaus"></div>
+  <div id="fortschritt"></div>
+  <div id="aufgaben"></div>
+
+  <h2>📖 Weiterarbeit im Buch</h2>
   <div class="box buch">
     <h3>Parallelo 8</h3>
     <ul>
@@ -32,13 +42,9 @@
       <li>●● Standard: <span class="platzhalter">[BUCH: S. __ Nr. __]</span></li>
       <li>●●● Profi: <span class="platzhalter">[BUCH: S. __ Nr. __]</span></li>
     </ul>
-    <p class="klein">Rechne im Heft. Unten findest du Aufgaben mit Tipps und Selbstkontrolle.</p>
+    <p class="klein">Fertig mit den Aufgaben oben? Dann rechne im Buch weiter.</p>
   </div>
 
-  <h2>Aufgaben</h2>
-  <div id="niveaus"></div>
-  <div id="fortschritt"></div>
-  <div id="aufgaben"></div>
   <h2>🎨 Werde kreativ</h2>
   <div class="box">
     Erfinde ein Figurenrätsel „Wer bin ich?“ mit drei Hinweisen. Tausche mit deinem Partner. Profi: Ein Hinweis darf über die Diagonalen gehen.
@@ -49,6 +55,7 @@
   <p><a href="exit-02.html">🎫 Weiter zum Exit-Ticket →</a> · <a href="./">← Lernlandkarte</a></p>
 </main>
 <script>
+// Die ersten Aufgaben = Aufgabenfolie der Präsentation; danach Zusatzaufgaben
 window.SEITE = {
   "speicher": "mathe-k8-rs-uf",
   "stunde": 2,
@@ -63,6 +70,77 @@ window.SEITE = {
     "Ich kann ein Figurenrätsel lösen und meine Lösung begründen."
   ],
   "aufgaben": [
+    {
+      "typ": "zahl",
+      "loesung": 180,
+      "tipps": [
+        "Wie groß sind die Winkel zusammen?"
+      ],
+      "einheit": "°",
+      "erklaerung": "Ein Dreieck hat 3 Ecken; die Winkel ergeben zusammen 180°.",
+      "frage": "🔀 Mix: Wie groß ist die Winkelsumme im Dreieck?",
+      "niveau": 1
+    },
+    {
+      "typ": "auswahl",
+      "optionen": [
+        "Raute",
+        "Quadrat",
+        "Rechteck"
+      ],
+      "loesung": 1,
+      "tipps": [
+        "Rechte Winkel UND gleich lange Seiten?"
+      ],
+      "frage": "Ich habe 4 gleich lange Seiten und 4 rechte Winkel. Wer bin ich?",
+      "niveau": 1,
+      "erklaerung": "Quadrat"
+    },
+    {
+      "typ": "auswahl",
+      "optionen": [
+        "gleichseitiges Dreieck",
+        "gleichschenkliges Dreieck",
+        "rechtwinkliges Dreieck"
+      ],
+      "loesung": 1,
+      "tipps": [
+        "Zwei gleich lange Schenkel …"
+      ],
+      "frage": "Ich habe 3 Seiten, zwei davon sind gleich lang. Wer bin ich?",
+      "niveau": 1,
+      "erklaerung": "gleichschenkliges Dreieck"
+    },
+    {
+      "typ": "auswahl",
+      "optionen": [
+        "Parallelogramm",
+        "Trapez",
+        "Drachen"
+      ],
+      "loesung": 1,
+      "tipps": [
+        "Beim Parallelogramm sind es zwei Paare."
+      ],
+      "frage": "Ich habe genau ein Paar parallele Seiten. Wer bin ich?",
+      "niveau": 2,
+      "erklaerung": "Trapez"
+    },
+    {
+      "typ": "auswahl",
+      "optionen": [
+        "4 gleich lange Seiten, keine rechten Winkel",
+        "4 rechte Winkel",
+        "genau 1 Symmetrieachse"
+      ],
+      "loesung": 0,
+      "tipps": [
+        "Was hat die Raute, aber das Quadrat nicht?"
+      ],
+      "erklaerung": "4 gleich lange Seiten ohne rechte Winkel passt nur zur Raute (das Quadrat hat rechte Winkel).",
+      "frage": "Erfinde ein Rätsel, auf das nur die <strong>Raute</strong> passt.",
+      "niveau": 3
+    },
     {
       "niveau": 1,
       "typ": "auswahl",

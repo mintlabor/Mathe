@@ -14,16 +14,27 @@
 </div></header>
 <main>
   <div class="box">
-    <strong>📘 Erinnerung</strong><br>
-    Pfeil = „ist ein Sonderfall von“ · Untere Figuren haben alle Eigenschaften der oberen · Quadrat = Rechteck + Raute
-  </div>
-  <div class="box">
     <strong>📚 Wörter für heute:</strong> Haus der Vierecke · Sonderfall · Trapez · Parallelogramm · Rechteck · Raute · Drachen · Quadrat · Eigenschaft<br>
     <span class="klein">💬 So kannst du es aufschreiben: „Ich habe so gerechnet: …, weil …“</span>
   </div>
   <div id="ziele"></div>
 
-  <h2>📖 Aufgaben aus dem Buch</h2>
+  <h2>✏️ Aufgaben</h2>
+  <div class="box merkkasten">
+    <h3>📘 Merke</h3>
+    <p>Ein Viereck gehört zu einer Art, wenn es <strong>alle</strong> Eigenschaften dieser Art hat. Je weiter unten im Haus, desto mehr Eigenschaften.</p>
+    <div class="formel">Quadrat → Raute → Drachen</div>
+    <div class="beispielaufgabe">
+      <strong>Beispiel:</strong> Ist eine Raute ein Parallelogramm?
+      <div class="schritte">Parallelogramm: gegenüberliegende Seiten parallel<br>Raute: gegenüberliegende Seiten parallel ✓<br>→ Ja, jede Raute ist ein Parallelogramm.</div>
+    </div>
+  </div>
+  <p class="klein">Rechne jede Aufgabe zuerst im Heft. Trage dann dein Ergebnis ein und prüfe es.</p>
+  <div id="niveaus"></div>
+  <div id="fortschritt"></div>
+  <div id="aufgaben"></div>
+
+  <h2>📖 Weiterarbeit im Buch</h2>
   <div class="box buch">
     <h3>Parallelo 8</h3>
     <ul>
@@ -31,13 +42,9 @@
       <li>●● Standard: <span class="platzhalter">[BUCH: S. __ Nr. __]</span></li>
       <li>●●● Profi: <span class="platzhalter">[BUCH: S. __ Nr. __]</span></li>
     </ul>
-    <p class="klein">Rechne im Heft. Unten findest du Aufgaben mit Tipps und Selbstkontrolle.</p>
+    <p class="klein">Fertig mit den Aufgaben oben? Dann rechne im Buch weiter.</p>
   </div>
 
-  <h2>Aufgaben</h2>
-  <div id="niveaus"></div>
-  <div id="fortschritt"></div>
-  <div id="aufgaben"></div>
   <h2>🎨 Werde kreativ</h2>
   <div class="box">
     Zeichne dein eigenes Haus der Vierecke als „Familien-Stammbaum“ mit einem Alltagsbeispiel zu jeder Figur.
@@ -48,6 +55,7 @@
   <p><a href="exit-03.html">🎫 Weiter zum Exit-Ticket →</a> · <a href="./">← Lernlandkarte</a></p>
 </main>
 <script>
+// Die ersten Aufgaben = Aufgabenfolie der Präsentation; danach Zusatzaufgaben
 window.SEITE = {
   "speicher": "mathe-k8-rs-uf",
   "stunde": 3,
@@ -62,6 +70,75 @@ window.SEITE = {
     "Ich kann Vierecke an ihren Eigenschaften erkennen."
   ],
   "aufgaben": [
+    {
+      "typ": "zahl",
+      "loesung": 2,
+      "tipps": [
+        "Falte ein Rechteck aus Papier."
+      ],
+      "erklaerung": "2 – entlang der beiden Mittellinien. Die Diagonalen sind keine Symmetrieachsen.",
+      "frage": "🔀 Mix: Wie viele Symmetrieachsen hat ein Rechteck, das kein Quadrat ist?",
+      "niveau": 1
+    },
+    {
+      "typ": "auswahl",
+      "optionen": [
+        "Ja",
+        "Nein",
+        "Nur manchmal"
+      ],
+      "loesung": 0,
+      "tipps": [
+        "Was braucht ein Parallelogramm?"
+      ],
+      "erklaerung": "Ja: Gegenüberliegende Seiten sind parallel – das reicht für ein Parallelogramm.",
+      "frage": "Ist jedes Rechteck ein Parallelogramm? Begründe.",
+      "niveau": 1
+    },
+    {
+      "typ": "auswahl",
+      "optionen": [
+        "Ja",
+        "Nein"
+      ],
+      "loesung": 1,
+      "tipps": [
+        "Welche Eigenschaft fehlt der Raute?"
+      ],
+      "erklaerung": "Nein: Nur eine Raute mit rechten Winkeln ist ein Quadrat.",
+      "frage": "Ist jede Raute ein Quadrat? Begründe.",
+      "niveau": 1
+    },
+    {
+      "typ": "auswahl",
+      "optionen": [
+        "Quadrat",
+        "Rechteck",
+        "Raute"
+      ],
+      "loesung": 1,
+      "tipps": [
+        "Rechte Winkel ja, gleiche Seiten nein …"
+      ],
+      "erklaerung": "Rechteck. Es ist auch ein Parallelogramm und ein Trapez.",
+      "frage": "4 rechte Winkel, aber nicht alle Seiten gleich lang: Wer bin ich – und wozu gehöre ich noch?",
+      "niveau": 2
+    },
+    {
+      "typ": "auswahl",
+      "optionen": [
+        "Drachen mit Seiten 3, 3, 6, 6 cm",
+        "Raute",
+        "Quadrat"
+      ],
+      "loesung": 0,
+      "tipps": [
+        "Raute und Quadrat sind Parallelogramme."
+      ],
+      "erklaerung": "Ein Drachen mit zwei verschieden langen Seitenpaaren hat keine parallelen Seiten.",
+      "frage": "Beschreibe ein Viereck, das ein Drachen, aber <strong>kein</strong> Parallelogramm ist.",
+      "niveau": 3
+    },
     {
       "niveau": 1,
       "typ": "auswahl",

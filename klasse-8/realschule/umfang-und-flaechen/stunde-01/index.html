@@ -4,15 +4,16 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Stunde 1: Steckbriefe: Expertengruppen – Umfang und Flächen</title>
-<link rel="stylesheet" href="../../../../praesentation.css?v=13">
+<link rel="stylesheet" href="../../../../praesentation.css?v=14">
 <style>
   .platzhalter { background: #fff3bf; border-radius: 4px; padding: 0 .3rem; font-family: ui-monospace, monospace; font-size: .9em; }
   .exit-qr { display: flex; gap: 1.5rem; align-items: center; }
-  .exit-qr [data-qr] svg { width: 230px; height: 230px; display: block; border-radius: 8px; }
+  .exit-qr [data-qr] svg { width: 200px; height: 200px; display: block; border-radius: 8px; }
   .skizze { width: min(100%, 560px); height: auto; max-height: 30vh; display: block; margin: .3rem auto; flex-shrink: 0; }
 </style>
 </head>
-<body data-phasen='[["Abrufen", 3], ["Problem", 5], ["Expertenarbeit", 25], ["Ideen vergleichen", 5], ["Sicherung", 3], ["Reflexion", 4]]'>
+<body data-problemfrage="Ist das Schild „Vorfahrtstraße“ eine Raute?"
+      data-phasen='[["Abrufen", 3], ["Problem", 4], ["Expertenarbeit", 24], ["Ideen vergleichen", 5], ["Sicherung", 3], ["Reflexion", 6]]'>
 
 <div class="leiste">
   <div class="pfad"><a href="../../../../">Start</a> › <a href="../../../">Klasse 8</a> › <a href="../../">Realschule</a> › <a href="../">Umfang und Flächen</a> › Stunde 1</div>
@@ -24,34 +25,41 @@
 
 <div class="buehne">
 
-  <!-- 1 · ABRUFEN -->
-  <section class="folie" data-phase="Abrufen">
+  <section class="folie" data-phase="Abrufen" data-sozialform="EA" data-ipad="rot">
     <div class="kennung">Umfang und Flächen · Stunde 1 · Vorwissen</div>
     <h2>Was weißt du noch aus Klasse 6 und 7?</h2>
-    <p style="margin-top:0">Welche Figur hat vier rechte Winkel und vier gleich lange Seiten?</p>
+    <p class="auftrag">Welche Figur hat vier rechte Winkel und vier gleich lange Seiten?</p>
     <div data-abstimmung='["Rechteck", "Quadrat", "Raute", "Drachen"]' data-loesung="1"></div>
     <div class="hinweis">Es gibt noch kein Exit-Ticket: Vorwissen abfragen. Wer „Raute“ wählt, hat nicht ganz unrecht – heute klären wir, warum.</div>
   </section>
 
-  <!-- 2 · PROBLEM -->
-  <section class="folie" data-phase="Problem">
+  <section class="folie" data-phase="Problem" data-minuten="2">
     <div class="kennung">Problem<span class="leitmodell">Leitmodell: Rechteck-Trick</span></div>
-    <h2>Figuren-Detektive: Welche Figur ist das?</h2>
-    <div class="problem"><div class="label">Problem</div><br>Fahrradrahmen, Dachgauben, Drachen, Pflastersteine, Verkehrsschilder: Überall stecken Figuren. Aber woran erkennt man sie sicher – auch wenn sie gedreht oder schief sind?</div>
-    <div class="spannung" data-art="Stimmt das?">Das gelbe Schild „Vorfahrtstraße“ ist eine <strong>Raute</strong>.</div>
-    <div data-abstimmung='["Stimmt", "Stimmt nicht – es ist ein Quadrat", "Beides stimmt"]'></div>
-    <div class="hinweis">Abstimmung festhalten (Foto/Tafel), am Ende der Stunde auflösen. Bilder aus dem Alltag zeigen (Schild, Drachen, Fahrrad, Dachgaube).</div>
+    <h2>Figuren-Detektive</h2>
+    <div class="problem">
+      <div class="label">Situation</div><br>
+      Fahrradrahmen, Dachgauben, Drachen, Pflastersteine, Verkehrsschilder: Überall stecken Figuren. Das Schild „Vorfahrtstraße“ steht auf der Spitze. Tim sagt: „Das ist eine Raute.“ Lea sagt: „Nein, ein Quadrat!“
+    </div>
+    <div class="frage-gross">Ist das Schild „Vorfahrtstraße“ eine Raute?</div>
+    <div class="hinweis">Frage vorlesen lassen. Kurze Vermutung per Handzeichen an der Tafel festhalten – Auflösung am Ende.</div>
   </section>
 
-  <section class="folie" data-phase="Problem">
-    <div class="kennung">Problem · Ziele<span class="leitmodell">Leitmodell: Rechteck-Trick</span></div>
-    <h2>Heute lernst du …</h2>
-    <div class="lernziele schritt"><div class="titel">🎯 Heute lernst du …</div><ul><li>Ich kann die Eigenschaften meiner Expertenfigur durch Falten, Messen und Legen herausfinden.</li><li>Ich kann einen Steckbrief mit Fachwörtern (Seiten, Winkel, Diagonalen, Symmetrie) erstellen.</li><li>Ich kann meine Figur im Alltag wiedererkennen.</li></ul></div>
-    <p class="schritt"><span class="projekt">Steckbrief-Mappe: Heute entsteht in eurer Expertengruppe der Steckbrief einer Figur. Er wächst in jeder Stunde weiter (Höhe, Umfang, Flächeninhalt).</span></p>
-    <div class="hinweis">Lernziele kurz vorlesen lassen (🎲).</div>
+  <section class="folie" data-phase="Problem" data-minuten="2">
+    <div class="kennung">Problem · Was fehlt uns?</div>
+    <h2>Können wir das schon?</h2>
+    <div class="bekannt-gesucht">
+      <div class="bekannt">Namen der Figuren aus Klasse 6/7: Quadrat, Rechteck, Raute, Drachen, Dreieck …</div>
+      <div class="gesucht">Woran man eine Figur <strong>sicher</strong> erkennt – auch wenn sie gedreht oder schief ist</div>
+    </div>
+    <div class="luecke schritt">Bisher erkennen wir Figuren am Aussehen. Gedreht sieht ein Quadrat aber aus wie eine Raute. Wir brauchen <strong>Eigenschaften</strong>, die man prüfen kann.</div>
+    <div class="lernziele schritt">
+      <div class="titel">🎯 Heute lernst du …</div>
+      <ul><li>Ich kann die Eigenschaften meiner Expertenfigur durch Falten, Messen und Legen herausfinden.</li><li>Ich kann einen Steckbrief mit Fachwörtern (Seiten, Winkel, Diagonalen, Symmetrie) erstellen.</li><li>Ich kann meine Figur im Alltag wiedererkennen.</li></ul>
+    </div>
+    <div class="hinweis">„Was fehlt uns noch?“ erst von Schülern formulieren lassen (🎲), dann aufdecken.</div>
   </section>
 
-  <section class="folie" data-phase="Expertenarbeit" data-minuten="2">
+  <section class="folie" data-phase="Expertenarbeit" data-minuten="2" data-sozialform="GA">
     <div class="kennung">Gruppenpuzzle · Teil 1</div>
     <h2>Stammgruppen und Expertengruppen</h2>
     <div class="zweispaltig">
@@ -103,7 +111,6 @@
     <p class="satzhilfe">Meine Figur heißt … · Sie hat … · Das erkennt man daran, dass … · Im Alltag findet man sie …</p>
   </section>
 
-  <!-- 4 · IDEEN VERGLEICHEN -->
   <section class="folie" data-phase="Ideen vergleichen">
     <div class="kennung">Ideen vergleichen</div>
     <h2>Wer hat recht?</h2>
@@ -123,8 +130,7 @@
     <div class="hinweis">Jede Expertengruppe meldet sich bei „ihrer“ Karte als Prüfer. Karten einzeln: Daumen hoch/runter, dann aufdecken.</div>
   </section>
 
-  <!-- 5 · SICHERUNG -->
-  <section class="folie" data-phase="Sicherung">
+  <section class="folie" data-phase="Sicherung" data-sozialform="EA">
     <div class="kennung">Sicherung<span class="eis" data-eis="EIS"></span></div>
     <h2>So untersucht man Figuren</h2>
     <div class="merk">
@@ -137,25 +143,25 @@
     <div class="produkt schritt">Hausaufgabe: Fotografiere oder zeichne zwei Beispiele deiner Figur aus deinem Alltag für den Steckbrief.</div>
   </section>
 
-  <!-- 7 · REFLEXION -->
   <section class="folie" data-phase="Reflexion">
     <div class="kennung">Zurück zum Problem · Reflexion</div>
-    <h2>Beides stimmt: Das Schild ist ein Quadrat – und jedes Quadrat ist eine Raute.</h2>
+    <h2>Jetzt können wir es!</h2>
+    <div class="frage-gross">Ist das Schild „Vorfahrtstraße“ eine Raute?</div>
+    <p class="schritt"><strong>Antwort:</strong> Beides stimmt: Das Schild ist ein Quadrat – und jedes Quadrat ist auch eine Raute (4 gleich lange Seiten).</p>
     <div class="exit-qr">
       <div data-qr="../schueler/exit-01.html"></div>
       <div>
         <p style="margin-top:0;font-size:1.4rem"><strong>🎫 Exit-Ticket</strong></p>
-        <p>Scanne den Code oder öffne die Schülerseite. Gib dein <strong>Kürzel</strong> ein.<br>Am Ende zeigst du mir deinen QR-Code.</p>
-        <p><a class="schuelerlink" href="../schueler/exit-01.html" target="_blank">🎫 Zum Exit-Ticket</a></p>
+        <p>Scanne den Code. Gib dein <strong>Kürzel</strong> ein. Zeig mir am Ende deinen QR-Code.</p>
         <p class="klein">Nächste Stunde: Stammgruppen – jeder erklärt seine Figur. Steckbrief mitbringen!</p>
       </div>
     </div>
-    <div class="hinweis">Steckbriefe einsammeln oder in der Mappe lassen. Tafelabstimmung vom Anfang zeigen: Wer lag richtig? QR-Codes der Schüler mit der Kamera-App scannen → Auswertung.</div>
+    <div class="hinweis">Vermutung vom Anfang zeigen: Wer lag richtig? Dann 4 Min. Exit-Ticket. „Ticket an der Tür“: QR-Codes beim Rausgehen mit der Handy-Kamera scannen → Auswertung.</div>
   </section>
 
 </div>
-<script src="../../../../praesentation.js?v=13"></script>
+<script src="../../../../praesentation.js?v=14"></script>
 <script src="../../../../qr.js"></script>
-<script src="../modelle.js?v=13"></script>
+<script src="../modelle.js?v=14"></script>
 </body>
 </html>

@@ -674,3 +674,10 @@ ol.aufgaben > li.offen .loesung-text { display: block; }
   .signal .t { display: inline; }
   .signal .t-lang { display: none; }
 }
+/* Aufgabenfolie etwas kompakter, damit 5 Aufgaben + Merkkasten sicher passen */
+ol.aufgaben > li { font-size: 1.3rem; padding-top: .35rem; padding-bottom: .35rem; line-height: 1.35; }
+ol.aufgaben > li::before { top: .35rem; }
+.spalte-auftrag .alle-loesungen { margin-top: .1rem; }
+.formeltabelle { width: 100%; border-collapse: collapse; font-size: 1.05rem; }
+.formeltabelle td { padding: .2rem .5rem; border-bottom: 1px solid rgba(0,0,0,.08); }
+.formeltabelle td:nth-child(even) { font-family: "Cambria Math", Georgia, serif; font-weight: 700; white-space: nowrap; }
