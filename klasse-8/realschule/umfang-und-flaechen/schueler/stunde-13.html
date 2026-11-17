@@ -14,16 +14,27 @@
 </div></header>
 <main>
   <div class="box">
-    <strong>📘 Erinnerung</strong><br>
-    Zerlegen: A = A₁ + A₂ · Ergänzen: A = A(groß) − A(Rest) · Skizze, Teilfiguren nummerieren, Antwortsatz
-  </div>
-  <div class="box">
     <strong>📚 Wörter für heute:</strong> zusammengesetzte Figur · Teilfigur · zerlegen · ergänzen · abziehen · Skizze · Rechenweg<br>
     <span class="klein">💬 So kannst du es aufschreiben: „Ich habe so gerechnet: …, weil …“</span>
   </div>
   <div id="ziele"></div>
 
-  <h2>📖 Aufgaben aus dem Buch</h2>
+  <h2>✏️ Aufgaben</h2>
+  <div class="box merkkasten">
+    <h3>📘 Merke</h3>
+    <p><strong>Zerlegen:</strong> Teilflächen addieren. <strong>Ergänzen:</strong> von einer großen Fläche den Rest abziehen. Skizze mit Maßen, Teilfiguren nummerieren, Antwortsatz.</p>
+    <div class="formel">A = A₁ + A₂</div>
+    <div class="beispielaufgabe">
+      <strong>Beispiel:</strong> Scheunenwand
+      <div class="schritte">A₁ = 8 m · 4 m = 32 m²<br>A₂ = 8 m · 3 m : 2 = 12 m²<br>A = 32 m² + 12 m² = 44 m²</div>
+    </div>
+  </div>
+  <p class="klein">Rechne jede Aufgabe zuerst im Heft. Trage dann dein Ergebnis ein und prüfe es.</p>
+  <div id="niveaus"></div>
+  <div id="fortschritt"></div>
+  <div id="aufgaben"></div>
+
+  <h2>📖 Weiterarbeit im Buch</h2>
   <div class="box buch">
     <h3>Parallelo 8</h3>
     <ul>
@@ -31,13 +42,9 @@
       <li>●● Standard: <span class="platzhalter">[BUCH: S. __ Nr. __]</span></li>
       <li>●●● Profi: <span class="platzhalter">[BUCH: S. __ Nr. __]</span></li>
     </ul>
-    <p class="klein">Rechne im Heft. Unten findest du Aufgaben mit Tipps und Selbstkontrolle.</p>
+    <p class="klein">Fertig mit den Aufgaben oben? Dann rechne im Buch weiter.</p>
   </div>
 
-  <h2>Aufgaben</h2>
-  <div id="niveaus"></div>
-  <div id="fortschritt"></div>
-  <div id="aufgaben"></div>
   <h2>🎨 Werde kreativ</h2>
   <div class="box">
     Entwirf ein Logo oder einen Buchstaben aus Rechtecken, Dreiecken und Trapezen auf Karopapier. Wie groß ist die Fläche?
@@ -48,6 +55,7 @@
   <p><a href="exit-13.html">🎫 Weiter zum Exit-Ticket →</a> · <a href="./">← Lernlandkarte</a></p>
 </main>
 <script>
+// Die ersten Aufgaben = Aufgabenfolie der Präsentation; danach Zusatzaufgaben
 window.SEITE = {
   "speicher": "mathe-k8-rs-uf",
   "stunde": 13,
@@ -62,6 +70,62 @@ window.SEITE = {
     "Ich kann meinen Rechenweg übersichtlich aufschreiben."
   ],
   "aufgaben": [
+    {
+      "typ": "zahl",
+      "loesung": 27,
+      "tipps": [
+        "A = e · f : 2"
+      ],
+      "einheit": "cm²",
+      "frage": "🔀 Mix: Raute: e = 6 cm, f = 9 cm. Berechne A.",
+      "niveau": 1,
+      "erklaerung": "A = 6 · 9 : 2 = 27 cm²"
+    },
+    {
+      "typ": "zahl",
+      "loesung": 36,
+      "tipps": [
+        "Zwei Rechtecke addieren."
+      ],
+      "einheit": "m²",
+      "frage": "L-Form aus Rechtecken 8 m × 3 m und 3 m × 4 m. Berechne A.",
+      "niveau": 1,
+      "erklaerung": "A = 24 m² + 12 m² = 36 m²"
+    },
+    {
+      "typ": "zahl",
+      "loesung": 24,
+      "tipps": [
+        "Dreieck: g · h : 2"
+      ],
+      "einheit": "m²",
+      "frage": "Giebel: Rechteck 6 m × 3 m, darauf Dreieck g = 6 m, h = 2 m. Berechne A.",
+      "niveau": 1,
+      "erklaerung": "A = 18 m² + 6 m² = 24 m²"
+    },
+    {
+      "typ": "zahl",
+      "loesung": 228,
+      "tipps": [
+        "Ergänzen: groß minus Rest."
+      ],
+      "einheit": "m²",
+      "frage": "Rasen 20 m × 12 m, darin ein Teich 4 m × 3 m. Wie groß ist die Rasenfläche?",
+      "niveau": 2,
+      "erklaerung": "A = 240 m² − 12 m² = 228 m²"
+    },
+    {
+      "typ": "zahl",
+      "loesung": 2,
+      "tipps": [
+        "Wand minus Fenster minus Tür.",
+        "14,2 : 8 = 1,775 → aufrunden"
+      ],
+      "einheit": "l",
+      "frage": "Wand 6 m × 3 m mit Fenster 1,5 m × 1,2 m und Tür 1 m × 2 m. 1 l Farbe reicht für 8 m². Wie viele Liter?",
+      "niveau": 3,
+      "erklaerung": "18 − 1,8 − 2 = 14,2 m² · 14,2 : 8 ≈ 1,8 l → 2 Liter"
+    },
     {
       "niveau": 1,
       "typ": "zahl",

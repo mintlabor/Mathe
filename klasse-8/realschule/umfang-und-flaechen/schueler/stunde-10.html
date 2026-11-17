@@ -14,16 +14,27 @@
 </div></header>
 <main>
   <div class="box">
-    <strong>📘 Erinnerung</strong><br>
-    Trapez: A = (a + c) : 2 · h · a ∥ c · Zwei Trapeze = Parallelogramm mit Grundseite a + c
-  </div>
-  <div class="box">
     <strong>📚 Wörter für heute:</strong> Trapez · parallele Seiten a und c · Schenkel · Höhe h · Mittellinie · verdoppeln · zerlegen<br>
     <span class="klein">💬 So kannst du es aufschreiben: „Ich habe so gerechnet: …, weil …“</span>
   </div>
   <div id="ziele"></div>
 
-  <h2>📖 Aufgaben aus dem Buch</h2>
+  <h2>✏️ Aufgaben</h2>
+  <div class="box merkkasten">
+    <h3>📘 Merke</h3>
+    <p>a und c sind die parallelen Seiten. Zwei gleiche Trapeze ergeben ein Parallelogramm mit Grundseite a + c – ein Trapez ist die Hälfte.</p>
+    <div class="formel">A = (a + c) : 2 · h</div>
+    <div class="beispielaufgabe">
+      <strong>Beispiel:</strong> Dachseite mit a = 10 m, c = 6 m, h = 4 m
+      <div class="schritte">A = (10 m + 6 m) : 2 · 4 m<br>A = 8 m · 4 m = 32 m²<br>32 · 12 = 384 Ziegel</div>
+    </div>
+  </div>
+  <p class="klein">Rechne jede Aufgabe zuerst im Heft. Trage dann dein Ergebnis ein und prüfe es.</p>
+  <div id="niveaus"></div>
+  <div id="fortschritt"></div>
+  <div id="aufgaben"></div>
+
+  <h2>📖 Weiterarbeit im Buch</h2>
   <div class="box buch">
     <h3>Parallelo 8</h3>
     <ul>
@@ -31,13 +42,9 @@
       <li>●● Standard: <span class="platzhalter">[BUCH: S. __ Nr. __]</span></li>
       <li>●●● Profi: <span class="platzhalter">[BUCH: S. __ Nr. __]</span></li>
     </ul>
-    <p class="klein">Rechne im Heft. Unten findest du Aufgaben mit Tipps und Selbstkontrolle.</p>
+    <p class="klein">Fertig mit den Aufgaben oben? Dann rechne im Buch weiter.</p>
   </div>
 
-  <h2>Aufgaben</h2>
-  <div id="niveaus"></div>
-  <div id="fortschritt"></div>
-  <div id="aufgaben"></div>
   <h2>🎨 Werde kreativ</h2>
   <div class="box">
     Ein Gartenbeet soll Trapezform und genau 20 m² bekommen. Finde zwei verschiedene Möglichkeiten für a, c und h.
@@ -48,6 +55,7 @@
   <p><a href="exit-10.html">🎫 Weiter zum Exit-Ticket →</a> · <a href="./">← Lernlandkarte</a></p>
 </main>
 <script>
+// Die ersten Aufgaben = Aufgabenfolie der Präsentation; danach Zusatzaufgaben
 window.SEITE = {
   "speicher": "mathe-k8-rs-uf",
   "stunde": 10,
@@ -62,6 +70,62 @@ window.SEITE = {
     "Ich kann im Trapez die parallelen Seiten a und c und die Höhe h erkennen."
   ],
   "aufgaben": [
+    {
+      "typ": "zahl",
+      "loesung": 20,
+      "tipps": [
+        "A = g · h : 2"
+      ],
+      "einheit": "cm²",
+      "frage": "🔀 Mix: Dreieck: g = 8 cm, h = 5 cm. Berechne A.",
+      "niveau": 1,
+      "erklaerung": "A = 8 · 5 : 2 = 20 cm²"
+    },
+    {
+      "typ": "zahl",
+      "loesung": 27,
+      "tipps": [
+        "Schau dir das Beispiel im Merkkasten an."
+      ],
+      "einheit": "m²",
+      "frage": "Trapez: a = 12 m, c = 6 m, h = 3 m. Berechne A.",
+      "niveau": 1,
+      "erklaerung": "A = (12 + 6) : 2 · 3 = 9 · 3 = 27 m²"
+    },
+    {
+      "typ": "zahl",
+      "loesung": 20,
+      "tipps": [
+        "A = (a + c) : 2 · h"
+      ],
+      "einheit": "cm²",
+      "frage": "Trapez: a = 7 cm, c = 3 cm, h = 4 cm. Berechne A.",
+      "niveau": 1,
+      "erklaerung": "A = (7 + 3) : 2 · 4 = 5 · 4 = 20 cm²"
+    },
+    {
+      "typ": "zahl",
+      "loesung": 8,
+      "tipps": [
+        "Erst A berechnen, dann : 2.",
+        "7,5 Säcke → aufrunden!"
+      ],
+      "frage": "Ein Beet ist ein Trapez: a = 7 m, c = 5 m, h = 2,5 m. Ein Sack Mulch reicht für 2 m². Wie viele Säcke braucht man?",
+      "niveau": 2,
+      "erklaerung": "A = (7 + 5) : 2 · 2,5 = 15 m² · 15 : 2 = 7,5 → 8 Säcke"
+    },
+    {
+      "typ": "zahl",
+      "loesung": 4,
+      "tipps": [
+        "Erst (a + c) : 2 ausrechnen.",
+        "40 = 10 · h"
+      ],
+      "einheit": "cm",
+      "frage": "Ein Trapez hat A = 40 cm², a = 12 cm und c = 8 cm. Wie lang ist h?",
+      "niveau": 3,
+      "erklaerung": "(12 + 8) : 2 = 10 · 40 : 10 = 4 cm"
+    },
     {
       "niveau": 1,
       "typ": "zahl",

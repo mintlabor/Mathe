@@ -4,15 +4,16 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Stunde 6: Gleicher Zaun – gleiche Weide? – Umfang und Flächen</title>
-<link rel="stylesheet" href="../../../../praesentation.css?v=13">
+<link rel="stylesheet" href="../../../../praesentation.css?v=14">
 <style>
   .platzhalter { background: #fff3bf; border-radius: 4px; padding: 0 .3rem; font-family: ui-monospace, monospace; font-size: .9em; }
   .exit-qr { display: flex; gap: 1.5rem; align-items: center; }
-  .exit-qr [data-qr] svg { width: 230px; height: 230px; display: block; border-radius: 8px; }
+  .exit-qr [data-qr] svg { width: 200px; height: 200px; display: block; border-radius: 8px; }
   .skizze { width: min(100%, 560px); height: auto; max-height: 30vh; display: block; margin: .3rem auto; flex-shrink: 0; }
 </style>
 </head>
-<body data-phasen='[["Abrufen", 4], ["Problem", 7], ["Erarbeitung", 12], ["Ideen vergleichen", 5], ["Sicherung", 6], ["Übung", 7], ["Reflexion", 4]]'>
+<body data-problemfrage="Haben die Ziegen bei 24 m Zaun immer gleich viel Platz?"
+      data-phasen='[["Abrufen", 3], ["Problem", 7], ["Erarbeitung", 11], ["Ideen vergleichen", 5], ["Sicherung", 6], ["Übung", 7], ["Reflexion", 6]]'>
 
 <div class="leiste">
   <div class="pfad"><a href="../../../../">Start</a> › <a href="../../../">Klasse 8</a> › <a href="../../">Realschule</a> › <a href="../">Umfang und Flächen</a> › Stunde 6</div>
@@ -24,62 +25,63 @@
 
 <div class="buehne">
 
-  <!-- 1 · ABRUFEN -->
-  <section class="folie" data-phase="Abrufen">
+  <section class="folie" data-phase="Abrufen" data-sozialform="EA" data-ipad="rot">
     <div class="kennung">Umfang und Flächen · Stunde 6 · Warm-up</div>
     <h2>Was weißt du noch?</h2>
-    <p style="margin-top:0">Exit-Ticket von letzter Stunde: Parallelogramm a = 7 cm, b = 4 cm. Wie groß ist u?</p>
+    <p class="auftrag">Exit-Ticket von letzter Stunde: Parallelogramm a = 7 cm, b = 4 cm. Wie groß ist u?</p>
     <div data-abstimmung='["11 cm", "22 cm", "28 cm", "14 cm"]' data-loesung="1"></div>
     <div class="hinweis">Alle halten gleichzeitig die ABCD-Karte hoch. Begründungen per 🎲 einholen, nicht per Melden.</div>
   </section>
 
-  <!-- 2 · PROBLEM -->
-  <section class="folie" data-phase="Problem">
+  <section class="folie" data-phase="Problem" data-minuten="2">
     <div class="kennung">Problem<span class="leitmodell">Leitmodell: Rechteck-Trick</span></div>
-    <h2>Gleicher Zaun – gleiche Weide?</h2>
-    <div class="problem"><div class="label">Problem</div><br>Für die Ziegen gibt es 24 m Weidezaun. Das Gehege soll rechteckig werden.</div>
-    <div class="spannung" data-art="Wette">Wette: Opa sagt: „Egal, wie wir die 24 m abstecken – die Ziegen haben immer gleich viel Platz.“</div>
-    <div data-abstimmung='["Opa hat recht", "Opa hat nicht recht", "Kommt darauf an"]'></div>
-    <div class="hinweis">Abstimmung festhalten (Foto/Tafel), am Ende der Stunde auflösen. Noch nicht verraten!</div>
+    <h2>Die Ziegenweide</h2>
+    <div class="problem">
+      <div class="label">Situation</div><br>
+      Für die Ziegen gibt es 24 m Weidezaun. Das Gehege soll rechteckig werden. Opa sagt: „Egal, wie wir die 24 m abstecken – die Ziegen haben immer gleich viel Platz.“
+    </div>
+    <div class="frage-gross">Haben die Ziegen bei 24 m Zaun immer gleich viel Platz?</div>
+    <div class="hinweis">Frage vorlesen lassen. Kurze Vermutung per Handzeichen an der Tafel festhalten – Auflösung am Ende.</div>
   </section>
 
-  <!-- 2a · LERNZIELE -->
-  <section class="folie" data-phase="Problem">
-    <div class="kennung">Problem · Ziele<span class="leitmodell">Leitmodell: Rechteck-Trick</span></div>
-    <h2>Heute lernst du …</h2>
-    <div class="lernziele schritt"><div class="titel">🎯 Heute lernst du …</div><ul><li>Ich kann Umfang und Flächeninhalt unterscheiden.</li><li>Ich kann den Flächeninhalt von Rechtecken mit Einheitsquadraten bestimmen und berechnen.</li><li>Ich kann Flächeneinheiten umrechnen.</li></ul></div>
-    <p class="schritt"><span class="projekt">Steckbrief-Mappe: Zeile „Flächeninhalt A = …“ vorbereiten. Pausenhof: Für Flächen rechnen wir in m², für Zäune in m.</span></p>
-    <div class="hinweis">Lernziele kurz vorlesen lassen (🎲). Sie stehen wörtlich gleich auf der Schülerseite und im Exit-Ticket.</div>
+  <section class="folie" data-phase="Problem" data-minuten="2">
+    <div class="kennung">Problem · Was fehlt uns?</div>
+    <h2>Können wir das schon?</h2>
+    <div class="bekannt-gesucht">
+      <div class="bekannt">Zaun = Umfang = 24 m<br>Gehege: Rechteck</div>
+      <div class="gesucht">Wie viel Platz (Fläche) die Ziegen bei verschiedenen Rechtecken haben</div>
+    </div>
+    <div class="luecke schritt">Den Umfang können wir berechnen. Der Platz innen ist aber eine <strong>Fläche</strong> – wie misst und vergleicht man Flächen?</div>
+    <div class="lernziele schritt">
+      <div class="titel">🎯 Heute lernst du …</div>
+      <ul><li>Ich kann Umfang und Flächeninhalt unterscheiden.</li><li>Ich kann den Flächeninhalt von Rechtecken mit Einheitsquadraten bestimmen und berechnen.</li><li>Ich kann Flächeneinheiten umrechnen.</li></ul>
+    </div>
+    <div class="hinweis">„Was fehlt uns noch?“ erst von Schülern formulieren lassen (🎲), dann aufdecken.</div>
   </section>
 
-  <!-- 2c · EIGENE LÖSUNG -->
-  <section class="folie" data-phase="Problem" data-minuten="4">
+  <section class="folie" data-phase="Problem" data-minuten="3" data-sozialform="PA">
     <div class="kennung">Eigene Lösung</div>
     <h2>Was meinst du?</h2>
     <div data-denkzeit="60" data-text="Zeichne zwei verschiedene Rechtecke mit dem Umfang 24 m (1 Kästchen = 1 m). Wie viele Kästchen passen hinein?"></div>
-    <div data-methode="tps" data-minuten="1,2,2"></div>
+    <div data-methode="tps" data-minuten="1,1,1"></div>
     <div data-tipps>
       <div class="tipp">a + b muss 12 m ergeben.</div>
       <div class="tipp">Probiere 10 m × 2 m und 6 m × 6 m.</div>
     </div>
-    <p class="satzhilfe">Ich vermute, dass … · Ich würde zuerst …</p>
   </section>
 
-  <!-- 3 · ERARBEITUNG E -->
-  <section class="folie" data-phase="Erarbeitung" data-minuten="7">
+  <section class="folie" data-phase="Erarbeitung" data-minuten="6" data-sozialform="GA">
     <div class="kennung">Erarbeitung · Gruppen<span class="eis" data-eis="E"></span></div>
     <h2>24 Meter Zaun: Wie viel Platz?</h2>
-    <p style="margin-top:0">Legt oder zeichnet möglichst viele Rechtecke mit dem Umfang 24 (Einheiten). Zählt die Kästchen und tragt alles in eine Tabelle ein: a · b · u · A. Wählt:</p>
+    <p class="auftrag">Legt oder zeichnet möglichst viele Rechtecke mit dem Umfang 24 (Einheiten). Zählt die Kästchen und tragt alles in eine Tabelle ein: a · b · u · A. Wählt:</p>
     <div class="wahlkarten">
       <div class="wahlkarte"><div class=icon>🌀</div><b>Biegen</b>24 cm Pfeifenreiniger zu einem Rechteck biegen und auf Karopapier legen</div>
       <div class="wahlkarte"><div class=icon>✏️</div><b>Zeichnen</b>Rechtecke mit 24 Kästchen Umfang auf Karopapier zeichnen</div>
       <div class="wahlkarte"><div class=icon>🔢</div><b>Tabelle</b>Alle Möglichkeiten systematisch rechnen</div>
     </div>
-    <div data-methode="rollen"></div>
-    <div class="hinweis">Materialkiste: Pfeifenreiniger (auf 24 cm gekürzt), Karopapier (1 cm), Tabellen-Vorlage, Einheitsquadrate aus Pappe (1 dm²), Zollstock und 1-m²-Zeitungsquadrat zum Vorstellen.</div>
+    <div class="hinweis">Herumgehen und 2–4 verschiedene Lösungen mit 📷 fotografieren. Materialkiste: Pfeifenreiniger (auf 24 cm gekürzt), Karopapier (1 cm), Tabellen-Vorlage, Einheitsquadrate aus Pappe (1 dm²), Zollstock und 1-m²-Zeitungsquadrat zum Vorstellen.</div>
   </section>
 
-  <!-- 3 · ERARBEITUNG I/S -->
   <section class="folie" data-phase="Erarbeitung" data-minuten="5">
     <div class="kennung">Erarbeitung · Was passiert, wenn …?<span class="eis" data-eis="IS"></span></div>
     <h2>Rechteck: Was passiert, wenn …?</h2>
@@ -87,84 +89,73 @@
     <div class="vernetzen schritt">Stelle u = 24 cm ein (a + b = 12). Bei welchem Rechteck passen die meisten Kästchen hinein? Was ändert sich, was bleibt gleich?</div>
   </section>
 
-  <!-- 4 · IDEEN VERGLEICHEN -->
-  <section class="folie" data-phase="Ideen vergleichen">
-    <div class="kennung">Ideen vergleichen</div>
-    <h2>Wer hat recht?</h2>
-    <div class="fehlerkarte" data-wer="Emil">
-      <div class="rechnung">Rechteck 6 m × 4 m: A = 6 + 4 + 6 + 4 = <span class='fehler'>20 m²</span></div>
-      <div class="erklaerung">Emil hat den Umfang (20 m) berechnet. Der Flächeninhalt zählt Einheitsquadrate: A = 6 m · 4 m = 24 m².</div>
-    </div>
-    <div class="legende"><span class="l-ja">stimmt</span><span class="l-nein">stimmt nicht</span>
-      <button class="knopf" data-alle-auf style="margin-left:auto">Alle aufdecken</button><button class="knopf" data-alle-zu>Alle zudecken</button></div>
-    <div class="karten">
-      <div class="karte ja">1 m² = 100 dm²<span class="loesung">Ja: 10 dm · 10 dm = 100 dm².</span></div>
-      <div class="karte nein">1 m² = 10 dm²<span class="loesung">Nein, bei Flächen ist die Umrechnungszahl 100.</span></div>
-      <div class="karte nein">Gleicher Umfang bedeutet gleicher Flächeninhalt.<span class="loesung">Nein: 10 m × 2 m = 20 m², 6 m × 6 m = 36 m².</span></div>
-      <div class="karte ja">Bei gleichem Umfang hat das Quadrat den größten Flächeninhalt unter den Rechtecken.<span class="loesung">Ja, das zeigt unsere Tabelle.</span></div>
-    </div>
-    <p class="satzhilfe">Ich stimme zu / nicht zu, weil … · Der Fehler ist …</p>
-    <div class="hinweis">Erst Fehlerkarte: Denkzeit, dann 🎲. Karten einzeln: Daumen hoch/runter, dann aufdecken.</div>
+  <section class="folie" data-phase="Ideen vergleichen" data-layout="einspaltig">
+    <div class="kennung">Ideen vergleichen · Eure Lösungen</div>
+    <h2>Was ist gleich, was ist anders?</h2>
+    <p class="auftrag">Welche Rechtecke habt ihr gefunden? Welches hat am meisten Platz? Haltet eure Karte hoch.</p>
+    <div data-loesungswand="4"></div>
+    <p class="satzhilfe">Lösung … ist richtig, weil … · Bei Lösung … ist der Fehler …</p>
+    <div class="hinweis">„Freischalten“ erst hier. Rechtecke mit gleichem Umfang, aber verschiedenem Flächeninhalt nebeneinander zeigen.</div>
   </section>
 
-  <!-- 5 · SICHERUNG -->
-  <section class="folie" data-phase="Sicherung">
+  <section class="folie" data-sozialform="EA" data-phase="Sicherung">
     <div class="kennung">Sicherung<span class="eis" data-eis="EIS"></span></div>
     <h2>Umfang oder Flächeninhalt?</h2>
+    <p class="auftrag">Schreibe den Merkkasten ins Heft und in deine Steckbrief-Mappe. Löse dann das Lückenbeispiel.</p>
     <div class="merk">
       <h3>Merke</h3>
-      <ul>
-        <li class="schritt"><strong>Umfang u</strong> = Länge des Randes (m) · <strong>Flächeninhalt A</strong> = Anzahl der Einheitsquadrate, die hineinpassen (m²).</li>
-        <li class="schritt">Rechteck: A = a · b · Quadrat: A = a · a</li>
-        <li class="schritt">Flächeneinheiten, Umrechnungszahl 100: mm² → cm² → dm² → m² → a → ha → km². 1 a = 100 m² · 1 ha = 10 000 m².</li>
-      </ul>
+      <ul><li>Umfang u = Länge des Randes (m). Flächeninhalt A = Anzahl der Einheitsquadrate (m²).</li><li>Flächeneinheiten: Umrechnungszahl 100 (1 m² = 100 dm²) · 1 ha = 10 000 m²</li></ul>
+      <div class="formel">A = a · b</div>
+      <div class="beispielaufgabe schritt"><b>Musterbeispiel:</b> Gehege 8 m × 4 m
+        <div class="schritte">u = 2 · 8 m + 2 · 4 m = 24 m<br>A = 8 m · 4 m = 32 m²</div>
+      </div>
     </div>
-    <div class="produkt schritt">Erkläre es deinem Nachbarn in <strong>eigenen Worten</strong> und mit einer <strong>Skizze</strong>. Er sagt, ob er es verstanden hat.</div>
-    <div class="hinweis">Ins Heft und in die Steckbrief-Mappe übertragen. Danach 1–2 Erklärungen per 🎲 vorstellen lassen.</div>
+    <div class="lueckenbeispiel schritt"><strong>Jetzt du:</strong> Gehege 7 m × 5 m: u = ___ m · A = ___ m²</div>
+    <div class="hinweis">Lösung Lückenbeispiel: u = 24 m, A = 35 m². Per 🎲 kontrollieren.</div>
   </section>
 
-  <!-- 6 · ÜBUNG: Niveau wählen -->
-  <section class="folie" data-phase="Übung">
-    <div class="kennung">Übung · Buch<span class="eis" data-eis="S"></span></div>
-    <h2>Jetzt du! Wähle dein Niveau</h2>
-    <p class="auftrag">Wähle ein Niveau und rechne die Buchaufgaben im Heft. Du darfst wechseln!</p>
-    <div class="wahlkarten">
-      <div class="wahlkarte"><b>● Basis</b>📖 <span class="platzhalter">[BUCH: S. __ Nr. __]</span></div>
-      <div class="wahlkarte"><b>●● Standard</b>📖 <span class="platzhalter">[BUCH: S. __ Nr. __]</span></div>
-      <div class="wahlkarte"><b>●●● Profi</b>📖 <span class="platzhalter">[BUCH: S. __ Nr. __]</span></div>
+  <section class="folie" data-ipad="gruen" data-phase="Übung">
+    <div class="kennung">Übung<span class="eis" data-eis="S"></span></div>
+    <h2>Jetzt rechnest du!</h2>
+    <p class="auftrag">Rechne im Heft – erst die Mix-Aufgabe, dann so weit du kommst.</p>
+    <ol class="aufgaben">
+      <li data-niveau="mix" data-loesung="u = 4 · 7 cm = 28 cm">Raute mit a = 7 cm. Berechne den Umfang.</li>
+      <li data-niveau="1" data-loesung="A = 9 m · 4 m = 36 m²">Rechteck: 9 m lang, 4 m breit. Berechne den Flächeninhalt.</li>
+      <li data-niveau="1" data-loesung="5 · 100 = 500 dm²">Rechne um: 5 m² = ? dm²</li>
+      <li data-niveau="2" data-loesung="A = 56 m² · 1 Fliese = 0,25 m² · 56 : 0,25 = 224 Fliesen">Ein Klassenzimmer ist 8 m × 7 m groß. Teppichfliesen sind 50 cm × 50 cm. Wie viele Fliesen braucht man?</li>
+      <li data-niveau="3" data-loesung="5 m × 5 m (Quadrat) → A = 25 m²">Ein Rechteck hat den Umfang 20 m. Welche Seitenlängen geben den größten Flächeninhalt?</li>
+    </ol>
+    <p class="klein">Weiter: 📖 Parallelo 8 <span class="platzhalter">[BUCH: S. __ Nr. __]</span> · <a class="schuelerlink" href="../schueler/stunde-06.html" target="_blank">📱 Schülerseite</a></p>
+    <div class="merk kompakt">
+      <h3>Merke</h3>
+      <div class="formel">A = a · b</div>
+      <p>1 m² = 100 dm² · 1 dm² = 100 cm² · 1 ha = 10 000 m²</p>
+      <div class="beispielaufgabe"><b>Beispiel:</b> Rechteck 9 m × 4 m
+        <div class="schritte">A = 9 m · 4 m<br>A = 36 m²</div>
+      </div>
     </div>
-    <p>Tipps und Selbstkontrolle: <a class="schuelerlink" href="../schueler/stunde-06.html" target="_blank">📱 Schülerseite · Stunde 6</a></p>
-    <div class="hinweis">Buchaufgaben im Heft. Rest als Hausaufgabe.</div>
+    <div class="hinweis">Lösungen einzeln aufdecken oder „Alle Lösungen zeigen“. Wer fertig ist: Buch oder Schülerseite.</div>
   </section>
 
-  <!-- 6b · ÜBUNG: So übt ihr -->
-  <section class="folie" data-phase="Übung">
-    <div class="kennung">Übung · So übt ihr<span class="eis" data-eis="S"></span></div>
-    <h2>Lerntempoduett</h2>
-    <div data-methode="lerntempoduett" data-minuten="5,0,2,0"></div>
-    <div class="produkt">Fertig? <strong>Erfinde eine eigene Aufgabe</strong>: Zwei Gehege mit gleichem Zaun, aber verschieden viel Platz. Dein Partner rechnet nach.</div>
-    <div class="hinweis">Wer fertig ist, wartet an der Haltestelle auf einen Partner.</div>
-  </section>
-
-  <!-- 7 · REFLEXION -->
   <section class="folie" data-phase="Reflexion">
     <div class="kennung">Zurück zum Problem · Reflexion</div>
-    <h2>Opa irrt: 6 m × 6 m ergibt 36 m², 10 m × 2 m nur 20 m² – bei gleichem Zaun!</h2>
+    <h2>Jetzt können wir es!</h2>
+    <div class="frage-gross">Haben die Ziegen bei 24 m Zaun immer gleich viel Platz?</div>
+    <p class="schritt"><strong>Antwort:</strong> Opa irrt: 6 m × 6 m ergibt 36 m², 10 m × 2 m nur 20 m² – bei gleichem Zaun!</p>
     <div class="exit-qr">
       <div data-qr="../schueler/exit-06.html"></div>
       <div>
         <p style="margin-top:0;font-size:1.4rem"><strong>🎫 Exit-Ticket</strong></p>
-        <p>Scanne den Code oder öffne die Schülerseite. Gib dein <strong>Kürzel</strong> ein.<br>Am Ende zeigst du mir deinen QR-Code.</p>
-        <p><a class="schuelerlink" href="../schueler/exit-06.html" target="_blank">🎫 Zum Exit-Ticket</a></p>
+        <p>Scanne den Code. Gib dein <strong>Kürzel</strong> ein. Zeig mir am Ende deinen QR-Code.</p>
         <p class="klein">Nächste Stunde: Das Parallelogramm – Welches Beet ist größer?</p>
       </div>
     </div>
-    <div class="hinweis">Tafelabstimmung vom Anfang zeigen: Wer lag richtig? QR-Codes der Schüler mit der Kamera-App scannen → Auswertung.</div>
+    <div class="hinweis">Vermutung vom Anfang zeigen: Wer lag richtig? Dann 4 Min. Exit-Ticket. „Ticket an der Tür“: QR-Codes beim Rausgehen mit der Handy-Kamera scannen → Auswertung.</div>
   </section>
 
 </div>
-<script src="../../../../praesentation.js?v=13"></script>
+<script src="../../../../praesentation.js?v=14"></script>
 <script src="../../../../qr.js"></script>
-<script src="../modelle.js?v=13"></script>
+<script src="../modelle.js?v=14"></script>
 </body>
 </html>

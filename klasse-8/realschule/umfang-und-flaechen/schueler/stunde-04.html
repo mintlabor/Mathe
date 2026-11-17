@@ -14,16 +14,27 @@
 </div></header>
 <main>
   <div class="box">
-    <strong>📘 Erinnerung</strong><br>
-    Höhe = senkrechter Abstand Ecke ↔ Grundseite · rechten Winkel markieren · stumpfwinklig: Grundseite verlängern
-  </div>
-  <div class="box">
     <strong>📚 Wörter für heute:</strong> Höhe · Grundseite · senkrecht · Abstand · Lot · rechter Winkel · stumpfwinklig · verlängern<br>
     <span class="klein">💬 So kannst du es aufschreiben: „Ich habe so gerechnet: …, weil …“</span>
   </div>
   <div id="ziele"></div>
 
-  <h2>📖 Aufgaben aus dem Buch</h2>
+  <h2>✏️ Aufgaben</h2>
+  <div class="box merkkasten">
+    <h3>📘 Merke</h3>
+    <p>Die Höhe h ist der <strong>senkrechte</strong> Abstand einer Ecke von der gegenüberliegenden Seite (Grundseite g). Liegt der Fußpunkt außerhalb, wird die Grundseite gestrichelt verlängert.</p>
+    <div class="formel">h ⊥ g</div>
+    <div class="beispielaufgabe">
+      <strong>Beispiel:</strong> Zelt im Maßstab 1 cm ≙ 20 cm
+      <div class="schritte">Zeichnen: g = 9 cm, Seiten je 8 cm<br>Höhe mit Geodreieck einzeichnen, messen: 6,6 cm<br>6,6 · 20 cm = 132 cm ≈ 1,32 m</div>
+    </div>
+  </div>
+  <p class="klein">Rechne jede Aufgabe zuerst im Heft. Trage dann dein Ergebnis ein und prüfe es.</p>
+  <div id="niveaus"></div>
+  <div id="fortschritt"></div>
+  <div id="aufgaben"></div>
+
+  <h2>📖 Weiterarbeit im Buch</h2>
   <div class="box buch">
     <h3>Parallelo 8</h3>
     <ul>
@@ -31,13 +42,9 @@
       <li>●● Standard: <span class="platzhalter">[BUCH: S. __ Nr. __]</span></li>
       <li>●●● Profi: <span class="platzhalter">[BUCH: S. __ Nr. __]</span></li>
     </ul>
-    <p class="klein">Rechne im Heft. Unten findest du Aufgaben mit Tipps und Selbstkontrolle.</p>
+    <p class="klein">Fertig mit den Aufgaben oben? Dann rechne im Buch weiter.</p>
   </div>
 
-  <h2>Aufgaben</h2>
-  <div id="niveaus"></div>
-  <div id="fortschritt"></div>
-  <div id="aufgaben"></div>
   <h2>🎨 Werde kreativ</h2>
   <div class="box">
     Suche im Klassenraum oder zu Hause drei Dinge, bei denen die „Höhe“ nicht die schräge Kante ist (Dach, Leiter an der Wand, Rampe). Zeichne sie mit Höhe.
@@ -48,6 +55,7 @@
   <p><a href="exit-04.html">🎫 Weiter zum Exit-Ticket →</a> · <a href="./">← Lernlandkarte</a></p>
 </main>
 <script>
+// Die ersten Aufgaben = Aufgabenfolie der Präsentation; danach Zusatzaufgaben
 window.SEITE = {
   "speicher": "mathe-k8-rs-uf",
   "stunde": 4,
@@ -62,6 +70,65 @@ window.SEITE = {
     "Ich kann Höhen auch außerhalb der Figur einzeichnen."
   ],
   "aufgaben": [
+    {
+      "typ": "zahl",
+      "loesung": 4,
+      "tipps": [
+        "Mittellinien und Diagonalen."
+      ],
+      "erklaerung": "4: zwei Mittellinien und zwei Diagonalen.",
+      "frage": "🔀 Mix: Wie viele Symmetrieachsen hat ein Quadrat?",
+      "niveau": 1
+    },
+    {
+      "typ": "zahl",
+      "loesung": 4,
+      "tipps": [
+        "Geodreieck mit der Mittellinie auf g legen."
+      ],
+      "einheit": "cm",
+      "frage": "Dreieck: g = 6 cm, Seiten 5 cm und 5 cm. Zeichne die Höhe auf g ein und miss sie.",
+      "niveau": 1,
+      "erklaerung": "h = 4 cm"
+    },
+    {
+      "typ": "zahl",
+      "loesung": 3.5,
+      "tipps": [
+        "Die Höhe ist der Abstand der parallelen Seiten."
+      ],
+      "einheit": "cm",
+      "toleranz": 0.2,
+      "frage": "Parallelogramm: g = 7 cm, schräge Seite 4 cm, Winkel 60°. Zeichne die Höhe ein und miss sie.",
+      "niveau": 1,
+      "erklaerung": "h ≈ 3,5 cm"
+    },
+    {
+      "typ": "zahl",
+      "loesung": 2.6,
+      "tipps": [
+        "Die Höhe liegt außerhalb – g verlängern!"
+      ],
+      "einheit": "cm",
+      "toleranz": 0.2,
+      "frage": "Dreieck: g = 4 cm, an einer Ecke 120°, dort eine Seite 3 cm. Zeichne die Höhe auf g ein.",
+      "niveau": 2,
+      "erklaerung": "Stumpfwinklig: g gestrichelt verlängern, Höhe liegt außen, h ≈ 2,6 cm"
+    },
+    {
+      "typ": "auswahl",
+      "optionen": [
+        "Ja",
+        "Nein"
+      ],
+      "loesung": 1,
+      "tipps": [
+        "Zeichne: g = 10 cm, Seiten 7,5 cm."
+      ],
+      "erklaerung": "h ≈ 5,6 cm in der Zeichnung ≙ 1,12 m. Das Kind ist 1,20 m groß → Nein.",
+      "frage": "Zelt: unten 2 m, schräge Seiten 1,50 m. Kann ein 1,20 m großes Kind darin stehen? (1 cm ≙ 20 cm)",
+      "niveau": 3
+    },
     {
       "niveau": 1,
       "typ": "auswahl",

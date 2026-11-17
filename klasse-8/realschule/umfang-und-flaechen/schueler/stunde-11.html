@@ -14,16 +14,27 @@
 </div></header>
 <main>
   <div class="box">
-    <strong>📘 Erinnerung</strong><br>
-    Raute und Drachen: A = e · f : 2 · Ergänzen zum Rechteck e × f · Raute auch A = a · h
-  </div>
-  <div class="box">
     <strong>📚 Wörter für heute:</strong> Raute · Drachen · Diagonale e · Diagonale f · senkrecht · ergänzen · Hälfte<br>
     <span class="klein">💬 So kannst du es aufschreiben: „Ich habe so gerechnet: …, weil …“</span>
   </div>
   <div id="ziele"></div>
 
-  <h2>📖 Aufgaben aus dem Buch</h2>
+  <h2>✏️ Aufgaben</h2>
+  <div class="box merkkasten">
+    <h3>📘 Merke</h3>
+    <p>e und f sind die Diagonalen. Ergänzt man zum Rechteck e × f, ist die Figur genau die <strong>Hälfte</strong>. Raute zusätzlich: A = a · h</p>
+    <div class="formel">A = e · f : 2</div>
+    <div class="beispielaufgabe">
+      <strong>Beispiel:</strong> Drachen mit e = 60 cm, f = 90 cm
+      <div class="schritte">A = e · f : 2<br>A = 60 cm · 90 cm : 2 = 2700 cm²</div>
+    </div>
+  </div>
+  <p class="klein">Rechne jede Aufgabe zuerst im Heft. Trage dann dein Ergebnis ein und prüfe es.</p>
+  <div id="niveaus"></div>
+  <div id="fortschritt"></div>
+  <div id="aufgaben"></div>
+
+  <h2>📖 Weiterarbeit im Buch</h2>
   <div class="box buch">
     <h3>Parallelo 8</h3>
     <ul>
@@ -31,13 +42,9 @@
       <li>●● Standard: <span class="platzhalter">[BUCH: S. __ Nr. __]</span></li>
       <li>●●● Profi: <span class="platzhalter">[BUCH: S. __ Nr. __]</span></li>
     </ul>
-    <p class="klein">Rechne im Heft. Unten findest du Aufgaben mit Tipps und Selbstkontrolle.</p>
+    <p class="klein">Fertig mit den Aufgaben oben? Dann rechne im Buch weiter.</p>
   </div>
 
-  <h2>Aufgaben</h2>
-  <div id="niveaus"></div>
-  <div id="fortschritt"></div>
-  <div id="aufgaben"></div>
   <h2>🎨 Werde kreativ</h2>
   <div class="box">
     Entwirf ein Fenster oder ein Muster aus Rauten (z. B. Kirchenfenster). Wie groß ist eine Raute, wie groß das ganze Muster?
@@ -48,6 +55,7 @@
   <p><a href="exit-11.html">🎫 Weiter zum Exit-Ticket →</a> · <a href="./">← Lernlandkarte</a></p>
 </main>
 <script>
+// Die ersten Aufgaben = Aufgabenfolie der Präsentation; danach Zusatzaufgaben
 window.SEITE = {
   "speicher": "mathe-k8-rs-uf",
   "stunde": 11,
@@ -62,6 +70,61 @@ window.SEITE = {
     "Ich kann bei der Raute zwei Wege nutzen: A = e · f : 2 und A = a · h."
   ],
   "aufgaben": [
+    {
+      "typ": "zahl",
+      "loesung": 24,
+      "tipps": [
+        "A = (a + c) : 2 · h"
+      ],
+      "einheit": "cm²",
+      "frage": "🔀 Mix: Trapez: a = 10 cm, c = 6 cm, h = 3 cm. Berechne A.",
+      "niveau": 1,
+      "erklaerung": "A = (10 + 6) : 2 · 3 = 24 cm²"
+    },
+    {
+      "typ": "zahl",
+      "loesung": 35,
+      "tipps": [
+        "Schau dir das Beispiel im Merkkasten an."
+      ],
+      "einheit": "cm²",
+      "frage": "Raute: e = 10 cm, f = 7 cm. Berechne A.",
+      "niveau": 1,
+      "erklaerung": "A = 10 · 7 : 2 = 35 cm²"
+    },
+    {
+      "typ": "zahl",
+      "loesung": 750,
+      "tipps": [
+        "A = e · f : 2"
+      ],
+      "einheit": "cm²",
+      "frage": "Drachen: e = 30 cm, f = 50 cm. Berechne A.",
+      "niveau": 1,
+      "erklaerung": "A = 30 · 50 : 2 = 750 cm²"
+    },
+    {
+      "typ": "zahl",
+      "loesung": 200,
+      "tipps": [
+        "1 m² = 10 000 cm²",
+        "300 cm² = 0,03 m²"
+      ],
+      "frage": "Rautenförmige Fliesen haben e = 30 cm und f = 20 cm. Wie viele Fliesen braucht man für 6 m² Wand?",
+      "niveau": 2,
+      "erklaerung": "1 Fliese: 30 · 20 : 2 = 300 cm² = 0,03 m² · 6 : 0,03 = 200 Fliesen"
+    },
+    {
+      "typ": "zahl",
+      "loesung": 60,
+      "tipps": [
+        "Rückwärts: · 2, dann : e."
+      ],
+      "einheit": "cm",
+      "frage": "Ein Drachen hat A = 1200 cm² und e = 40 cm. Wie lang ist f?",
+      "niveau": 3,
+      "erklaerung": "1200 · 2 = 2400 · 2400 : 40 = 60 cm"
+    },
     {
       "niveau": 1,
       "typ": "zahl",

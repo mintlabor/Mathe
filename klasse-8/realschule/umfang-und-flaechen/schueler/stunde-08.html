@@ -14,16 +14,27 @@
 </div></header>
 <main>
   <div class="box">
-    <strong>📘 Erinnerung</strong><br>
-    Dreieck: A = g · h : 2 · Zwei gleiche Dreiecke = Parallelogramm · Höhe gehört zur Grundseite
-  </div>
-  <div class="box">
     <strong>📚 Wörter für heute:</strong> Dreieck · Grundseite g · Höhe h · verdoppeln · Hälfte · Parallelogramm · kongruent (deckungsgleich)<br>
     <span class="klein">💬 So kannst du es aufschreiben: „Ich habe so gerechnet: …, weil …“</span>
   </div>
   <div id="ziele"></div>
 
-  <h2>📖 Aufgaben aus dem Buch</h2>
+  <h2>✏️ Aufgaben</h2>
+  <div class="box merkkasten">
+    <h3>📘 Merke</h3>
+    <p>Zwei gleiche Dreiecke ergeben ein Parallelogramm (A = g · h). Ein Dreieck ist die <strong>Hälfte</strong>.</p>
+    <div class="formel">A = g · h : 2</div>
+    <div class="beispielaufgabe">
+      <strong>Beispiel:</strong> Giebel mit g = 8 m, h = 3 m
+      <div class="schritte">A = g · h : 2<br>A = 8 m · 3 m : 2 = 12 m²<br>12 m² → 2 Eimer</div>
+    </div>
+  </div>
+  <p class="klein">Rechne jede Aufgabe zuerst im Heft. Trage dann dein Ergebnis ein und prüfe es.</p>
+  <div id="niveaus"></div>
+  <div id="fortschritt"></div>
+  <div id="aufgaben"></div>
+
+  <h2>📖 Weiterarbeit im Buch</h2>
   <div class="box buch">
     <h3>Parallelo 8</h3>
     <ul>
@@ -31,13 +42,9 @@
       <li>●● Standard: <span class="platzhalter">[BUCH: S. __ Nr. __]</span></li>
       <li>●●● Profi: <span class="platzhalter">[BUCH: S. __ Nr. __]</span></li>
     </ul>
-    <p class="klein">Rechne im Heft. Unten findest du Aufgaben mit Tipps und Selbstkontrolle.</p>
+    <p class="klein">Fertig mit den Aufgaben oben? Dann rechne im Buch weiter.</p>
   </div>
 
-  <h2>Aufgaben</h2>
-  <div id="niveaus"></div>
-  <div id="fortschritt"></div>
-  <div id="aufgaben"></div>
   <h2>🎨 Werde kreativ</h2>
   <div class="box">
     Entwirf einen Wimpel für eure Klasse (Dreieck). Wie viel Stoff braucht ihr für 20 Wimpel?
@@ -48,6 +55,7 @@
   <p><a href="exit-08.html">🎫 Weiter zum Exit-Ticket →</a> · <a href="./">← Lernlandkarte</a></p>
 </main>
 <script>
+// Die ersten Aufgaben = Aufgabenfolie der Präsentation; danach Zusatzaufgaben
 window.SEITE = {
   "speicher": "mathe-k8-rs-uf",
   "stunde": 8,
@@ -62,6 +70,62 @@ window.SEITE = {
     "Ich kann zur gewählten Grundseite die passende Höhe finden."
   ],
   "aufgaben": [
+    {
+      "typ": "zahl",
+      "loesung": 36,
+      "tipps": [
+        "A = g · h"
+      ],
+      "einheit": "cm²",
+      "frage": "🔀 Mix: Parallelogramm: g = 9 cm, h = 4 cm. Berechne A.",
+      "niveau": 1,
+      "erklaerung": "A = 9 cm · 4 cm = 36 cm²"
+    },
+    {
+      "typ": "zahl",
+      "loesung": 30,
+      "tipps": [
+        "Schau dir das Beispiel im Merkkasten an.",
+        "A = g · h : 2"
+      ],
+      "einheit": "cm²",
+      "frage": "Dreieck: g = 10 cm, h = 6 cm. Berechne A.",
+      "niveau": 1,
+      "erklaerung": "A = 10 · 6 : 2 = 30 cm²"
+    },
+    {
+      "typ": "zahl",
+      "loesung": 14,
+      "tipps": [
+        "A = g · h : 2"
+      ],
+      "einheit": "cm²",
+      "frage": "Dreieck: g = 7 cm, h = 4 cm. Berechne A.",
+      "niveau": 1,
+      "erklaerung": "A = 7 · 4 : 2 = 14 cm²"
+    },
+    {
+      "typ": "zahl",
+      "loesung": 81,
+      "tipps": [
+        "Erst die Fläche, dann mal 12 €."
+      ],
+      "einheit": "€",
+      "frage": "Ein dreieckiges Segel hat g = 3 m und h = 4,5 m. Segelstoff kostet 12 € pro m². Was kostet der Stoff?",
+      "niveau": 2,
+      "erklaerung": "A = 3 · 4,5 : 2 = 6,75 m² · 6,75 · 12 € = 81 €"
+    },
+    {
+      "typ": "zahl",
+      "loesung": 6,
+      "tipps": [
+        "Rückwärts: erst · 2, dann : g."
+      ],
+      "einheit": "cm",
+      "frage": "Ein Dreieck hat A = 18 cm² und g = 6 cm. Wie lang ist h?",
+      "niveau": 3,
+      "erklaerung": "18 · 2 = 36 · 36 : 6 = 6 cm"
+    },
     {
       "niveau": 1,
       "typ": "zahl",
