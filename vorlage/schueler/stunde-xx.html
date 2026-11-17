@@ -15,16 +15,27 @@
 </div></header>
 <main>
   <div class="box">
-    <strong>📘 Erinnerung</strong><br>
-    <span class="platzhalter">[Merkkasten der Stunde in Kurzform]</span>
-  </div>
-  <div class="box">
     <strong>📚 Wörter für heute:</strong> <span class="platzhalter">[Fachwort 1]</span> · <span class="platzhalter">[Fachwort 2]</span><br>
     <span class="klein">💬 So kannst du es aufschreiben: „Ich rechne zuerst …, weil …“</span>
   </div>
   <div id="ziele"></div>
 
-  <h2>📖 Aufgaben aus dem Buch</h2>
+  <h2>✏️ Aufgaben</h2>
+  <!-- Merkkasten mit Formel + kleine Beispielaufgabe: steht direkt über den Aufgaben -->
+  <div class="box merkkasten">
+    <h3>📘 Merke</h3>
+    <p><span class="platzhalter">[Merksatz in einfachen Worten]</span></p>
+    <div class="formel"><span class="platzhalter">[Formel, z. B. W = G · p %]</span></div>
+    <div class="beispielaufgabe">
+      <strong>Beispiel:</strong> <span class="platzhalter">[kleine Aufgabe mit Zahlen]</span>
+      <div class="schritte"><span class="platzhalter">[Schritt 1: … = …]</span><br><span class="platzhalter">[Schritt 2: … = …]</span><br><span class="platzhalter">[Antwortsatz]</span></div>
+    </div>
+  </div>
+  <p class="klein">Rechne jede Aufgabe zuerst im Heft. Trage dann dein Ergebnis ein und prüfe es.</p>
+  <div id="niveaus"></div>
+  <div id="fortschritt"></div>
+  <div id="aufgaben"></div>
+  <h2>📖 Weiterarbeit im Buch</h2>
   <div class="box buch">
     <h3><span class="platzhalter">[BUCH: Titel]</span></h3>
     <ul>
@@ -32,13 +43,9 @@
       <li>●● Standard: <span class="platzhalter">[BUCH: S. __ Nr. __]</span></li>
       <li>●●● Profi: <span class="platzhalter">[BUCH: S. __ Nr. __]</span></li>
     </ul>
-    <p class="klein">Rechne im Heft. Unten findest du Tipps und kannst deine Ergebnisse prüfen.</p>
+    <p class="klein">Fertig mit den Aufgaben oben? Dann rechne im Buch weiter.</p>
   </div>
 
-  <h2>Aufgaben</h2>
-  <div id="niveaus"></div>
-  <div id="fortschritt"></div>
-  <div id="aufgaben"></div>
   <h2>🎨 Werde kreativ</h2>
   <div class="box">
     Erfinde eine <strong>eigene Aufgabe</strong> zu <span class="platzhalter">[Kontext aus deinem Alltag]</span> und schreibe die Lösung auf die Rückseite.
@@ -54,14 +61,19 @@ window.SEITE = {
   speicher: "mathe-vorlage", stunde: 0,
   lernziele: ["[Lernziel 1]", "[Lernziel 2]"],
   ichKann: ["Ich kann [Lernziel 1].", "Ich kann [Lernziel 2]."],
+  // Dieselben Aufgaben wie auf der Aufgabenfolie der Präsentation (eigene Aufgaben, nicht aus dem Buch)
   aufgaben: [
-    { niveau: 1, typ: "zahl", frage: "📖 <span class='platzhalter'>[BUCH: S. __ Nr. __a]</span> Trage dein Ergebnis ein.",
+    { niveau: 1, typ: "zahl", frage: "🔀 Mix: <span class='platzhalter'>[Aufgabe aus einem älteren Thema]</span>",
       loesung: 0, tipps: ["[Tipp 1]", "[Tipp 2]"], erklaerung: "[Lösungsweg]" },
-    { niveau: 2, typ: "auswahl", frage: "<span class='platzhalter'>[Eigene Aufgabe]</span>",
-      optionen: ["[A]", "[B]", "[C]"], loesung: 0, tipps: ["[Tipp 1]"], erklaerung: "[Lösungsweg]" },
+    { niveau: 1, typ: "zahl", frage: "<span class='platzhalter'>[einfache Aufgabe, direkt wie das Beispiel]</span>",
+      loesung: 0, tipps: ["Schau dir das Beispiel im Merkkasten an.", "[Tipp 2]"], erklaerung: "[Lösungsweg]" },
+    { niveau: 1, typ: "zahl", frage: "<span class='platzhalter'>[einfache Aufgabe mit anderen Zahlen]</span>",
+      loesung: 0, tipps: ["[Tipp 1]"], erklaerung: "[Lösungsweg]" },
+    { niveau: 2, typ: "zahl", frage: "<span class='platzhalter'>[Textaufgabe aus dem Alltag]</span>",
+      loesung: 0, tipps: ["Was ist gegeben, was ist gesucht?", "[Tipp 2]"], erklaerung: "[Lösungsweg]" },
     { niveau: 2, typ: "auswahl", frage: "🔍 Fehler finden: <span class='platzhalter'>[Name] rechnet: [Rechnung mit typischem Fehler]</span> Was ist falsch?",
       optionen: ["[richtige Fehlerbeschreibung]", "[falsche Vermutung]", "Alles ist richtig."], loesung: 0, tipps: ["[Tipp 1]"], erklaerung: "[So geht es richtig]" },
-    { niveau: 3, typ: "zahl", frage: "📖 <span class='platzhalter'>[BUCH: S. __ Nr. __]</span> Trage dein Ergebnis ein.",
+    { niveau: 3, typ: "zahl", frage: "<span class='platzhalter'>[Umkehraufgabe oder Begründungsaufgabe]</span>",
       loesung: 0, tipps: ["[Tipp 1]", "[Tipp 2]"], erklaerung: "[Lösungsweg]" }
   ]
 };

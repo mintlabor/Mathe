@@ -37,6 +37,20 @@
         Fotos bleiben verdeckt („Foto A bereit“), bis „👁 Freischalten“ gedrückt wird. Freigeschaltetes Foto
         antippen = groß anzeigen. Fotos liegen nur im Arbeitsspeicher, nichts wird gespeichert oder hochgeladen.
 
+  PROBLEM UND AUFGABEN
+    <body data-problemfrage="Wie viel kostet die Jacke im Sale?">
+        Die Problemfrage steht klein auf jeder Folie in der Kennungszeile (roter Faden). Folien mit
+        .frage-gross oder data-ohne-frage zeigen sie nicht.
+    <div class="frage-gross">Wie viel …?</div>          Problemfrage groß
+    <div class="bekannt-gesucht"><div class="bekannt">…</div><div class="gesucht">…</div></div>
+    <div class="luecke">Warum reicht unser Wissen noch nicht? …</div>
+    <ol class="aufgaben">
+      <li data-niveau="1" data-loesung="Rechenweg … = 24 €">Aufgabentext</li>   (data-niveau: mix, 1, 2, 3)
+    </ol>
+        Übungsaufgaben zum direkten Rechnen im Heft, Lösung je Aufgabe per Knopf, dazu „Alle Lösungen“.
+    <div class="merk kompakt"> … <div class="formel">W = G · p %</div> … </div>
+    <div class="beispielaufgabe"><b>Beispiel:</b> … <div class="schritte">…</div></div>
+
   SPRACHE
     <aside class="wortspeicher" data-woerter='["Grundwert","Prozentwert"]'
            data-saetze='["Ich vermute, dass …","Das sieht man daran, dass …"]'></aside>
@@ -391,6 +405,52 @@
   }
   const ersteWand = document.querySelector("[data-loesungswand]");
   if (ersteWand) fussKnopf("📷", "Schülerlösung fotografieren (landet verdeckt auf der Lösungswand)", () => ersteWand.fotoAufnehmen());
+
+  // ---------- Problemfrage als roter Faden auf jeder Folie ----------
+  const pf = document.body.dataset.problemfrage;
+  if (pf) document.querySelectorAll(".folie").forEach(f => {
+    if (f.querySelector(".frage-gross") || f.hasAttribute("data-ohne-frage")) return;
+    const k = f.querySelector(".kennung");
+    if (!k) return;
+    const s = document.createElement("span");
+    s.className = "problemfrage"; s.title = "Unsere Problemfrage"; s.textContent = "❓ " + pf;
+    k.appendChild(s);
+  });
+
+  // ---------- Übungsaufgaben mit Lösung auf Knopfdruck ----------
+  const NIVEAU = { mix: "🔀 Mix", 1: "●", 2: "●●", 3: "●●●" };
+  document.querySelectorAll("ol.aufgaben").forEach(ol => {
+    const lis = [...ol.querySelectorAll(":scope > li")];
+    lis.forEach(li => {
+      const n = li.dataset.niveau;
+      if (n && NIVEAU[n]) {
+        const m = document.createElement("span");
+        m.className = "niveau-marke n-" + n; m.textContent = NIVEAU[n];
+        li.prepend(m);
+      }
+      if (li.dataset.loesung === undefined) return;
+      const b = document.createElement("button");
+      b.type = "button"; b.className = "loesung-knopf"; b.textContent = "Lösung";
+      const l = document.createElement("div");
+      l.className = "loesung-text"; l.innerHTML = "✅ " + li.dataset.loesung;
+      b.onclick = () => { const an = li.classList.toggle("offen"); b.textContent = an ? "Verbergen" : "Lösung"; };
+      li.append(b, l);
+    });
+    if (lis.some(li => li.dataset.loesung !== undefined)) {
+      const alle = document.createElement("button");
+      alle.type = "button"; alle.className = "knopf alle-loesungen"; alle.textContent = "Alle Lösungen zeigen";
+      alle.onclick = () => {
+        const zeigen = !lis.every(li => li.classList.contains("offen") || li.dataset.loesung === undefined);
+        lis.forEach(li => {
+          if (li.dataset.loesung === undefined) return;
+          li.classList.toggle("offen", zeigen);
+          li.querySelector(".loesung-knopf").textContent = zeigen ? "Verbergen" : "Lösung";
+        });
+        alle.textContent = zeigen ? "Alle Lösungen verbergen" : "Alle Lösungen zeigen";
+      };
+      ol.after(alle);
+    }
+  });
 
   // ---------- Schätzleiste ----------
   document.querySelectorAll("[data-schaetzen]").forEach(el => {
