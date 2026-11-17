@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>VORLAGE · Stunde [NR]: [TITEL] – [EINHEIT]</title>
 <!-- Beim Kopieren nach klasse-N/schulform/einheit/stunde-NN/ wird aus "../../" → "../../../../" -->
-<link rel="stylesheet" href="../../praesentation.css?v=11">
+<link rel="stylesheet" href="../../praesentation.css?v=12">
 <style>
   .platzhalter { background: #fff3bf; border-radius: 4px; padding: 0 .3rem; font-family: ui-monospace, monospace; font-size: .9em; }
   .exit-qr { display: flex; gap: 1.5rem; align-items: center; }
@@ -14,14 +14,18 @@
 </head>
 <!--
   SCHLANKE STUNDE: FESTER KERN (jede Stunde gleich, höchstens 10 Folien)
-  1–2  Abrufen        ABCD zum häufigsten Fehler im letzten Exit-Ticket + ABCD-Mixfrage aus einem ÄLTEREN Thema (verteiltes Üben)
-  3    Problem        Alltagsproblem + Lernziele
+  1    Abrufen        ABCD zum häufigsten Fehler im letzten Exit-Ticket
+  2    Problem A      Situation (Alltag, möglichst mit Bild) + EINE klare Problemfrage (.frage-gross)
+  3    Problem B      Das wissen wir / Das wollen wir wissen + Was fehlt uns noch? (Lücke zur letzten Stunde) → Lernziele
   4    Eigene Lösung  Denkzeit → Think-Pair-Share (Standardmethode, immer gleich)
   5–6  Erarbeitung    E: Handeln mit Material · I/S: „Was passiert, wenn …?“ am Leitmodell → Rechnung; dabei Lösungen fotografieren (📷)
   7    Ideen vergl.   Lösungswand (echte Schülerlösungen) – ODER Fehlerkarte aus dem Baukasten, nicht beides
-  8    Sicherung      Merkkasten mit Musterbeispiel + Lückenbeispiel
-  9    Übung          Mix-Aufgabe (älteres Thema) + Niveauwahl Buch
-  10   Reflexion      Problem auflösen + Exit-Ticket
+  8    Sicherung      Merkkasten mit FORMEL + vollständig gerechnetem Musterbeispiel + Lückenbeispiel
+  9    Übung          AUFGABENFOLIE: links 5 Übungsaufgaben zum direkten Rechnen (Mix, ●, ●, ●●, ●●●) mit Lösung per Knopf,
+                      rechts Merkkasten kompakt mit Formel + kleine Beispielaufgabe; Buch + Schülerseite als Weiterarbeit
+  10   Reflexion      Problemfrage ausdrücklich beantworten + Exit-Ticket
+
+  ROTER FADEN: data-problemfrage am <body> → die Frage steht klein auf jeder Folie.
 
   WAHLBAUSTEINE aus vorlage/baukasten/ – pro Stunde höchstens 1–2, über die Einheit verteilen:
   Wette/„Stimmt das?“ · Schätzen · Placemat · Gruppenpuzzle · Galeriegang · Rollenkarten · Lerntempoduett ·
@@ -30,9 +34,9 @@
   GRENZEN: höchstens 10 Folien · höchstens 3 Wechsel der Sozialform · Think-Pair-Share als Standard ·
   Sozialform und iPad-Regel per data-sozialform="EA|PA|GA" / data-ipad="gruen|gelb|rot" (Folien ohne Angabe behalten den Zustand) ·
   Summe der Minuten = 45 · alles passt ohne Scrollen bei 1366 × 768 (Prüfen: werkzeuge/folien-check.html)
-  LAYOUT: links (größer) Auftrag und Fragen, rechts (kleiner) Antworten und Material.
 -->
-<body data-phasen='[["Abrufen",3],["Problem",7],["Erarbeitung",11],["Ideen vergleichen",5],["Sicherung",6],["Übung",7],["Reflexion",6]]'>
+<body data-problemfrage="[Die Problemfrage der Stunde – kurz, eine Zeile]"
+      data-phasen='[["Abrufen",3],["Problem",7],["Erarbeitung",11],["Ideen vergleichen",5],["Sicherung",6],["Übung",7],["Reflexion",6]]'>
 
 <div class="leiste">
   <div class="pfad"><a href="../../">Start</a> › <a href="../">Vorlage</a> › Stunde [NR]</div>
@@ -54,23 +58,28 @@
     <div class="hinweis">Karten hoch (oder Finger). Bei vielen Fehlern: Begründung per 🎲 einholen.</div>
   </section>
 
-  <!-- 2 · ABRUFEN: Mixfrage aus einem älteren Thema (verteiltes Üben) -->
-  <section class="folie" data-phase="Abrufen">
-    <div class="kennung">Warm-up · Mix</div>
-    <h2>Weißt du das noch?</h2>
-    <p class="auftrag"><span class="platzhalter">[Frage aus einem ÄLTEREN Thema / einer früheren Einheit]</span></p>
-    <div data-abstimmung='["[Antwort A]","[Antwort B]","[Antwort C – richtig]","[Antwort D]"]' data-loesung="2"></div>
-    <div class="hinweis">Verteiltes Üben: Themen von vor 1–4 Wochen wählen, nicht von gestern.</div>
+  <!-- 2 · PROBLEM A: Situation + EINE klare Problemfrage -->
+  <section class="folie" data-phase="Problem" data-minuten="2">
+    <div class="kennung">Problem<span class="leitmodell">[Leitmodell der Einheit]</span></div>
+    <h2><span class="platzhalter">[Kurze Überschrift zur Situation]</span></h2>
+    <div class="problem">
+      <div class="label">Situation</div><br>
+      <span class="platzhalter">[Alltagsszene in 2–3 Sätzen, mit allen Zahlen, die man braucht]</span>
+    </div>
+    <div class="frage-gross"><span class="platzhalter">[Die Problemfrage – genau eine Frage]</span></div>
+    <div class="kasten"><span class="platzhalter">[Bild / Skizze / Foto zur Situation]</span></div>
+    <div class="hinweis">Frage vorlesen lassen. Noch nicht rechnen – erst klären, worum es geht.</div>
   </section>
 
-  <!-- 3 · PROBLEM + LERNZIELE (Wette/Spannung als Wahlbaustein aus dem Baukasten möglich) -->
-  <section class="folie" data-phase="Problem" data-minuten="3">
-    <div class="kennung">Problem<span class="leitmodell">[Leitmodell der Einheit]</span></div>
-    <h2><span class="platzhalter">[Überschrift als Frage]</span></h2>
-    <div class="problem">
-      <div class="label">Problem</div><br>
-      <span class="platzhalter">[Alltagssituation, die ohne das neue Wissen nicht sicher lösbar ist]</span>
+  <!-- 3 · PROBLEM B: Was wissen wir, was wollen wir wissen, was fehlt uns? → Lernziele -->
+  <section class="folie" data-phase="Problem" data-minuten="2">
+    <div class="kennung">Problem · Was fehlt uns?</div>
+    <h2>Können wir das schon?</h2>
+    <div class="bekannt-gesucht">
+      <div class="bekannt"><span class="platzhalter">[gegebene Größen aus der Situation]</span></div>
+      <div class="gesucht"><span class="platzhalter">[gesuchte Größe]</span></div>
     </div>
+    <div class="luecke schritt"><span class="platzhalter">[Letzte Stunde konnten wir … . Hier klappt das nicht, weil … ]</span></div>
     <div class="lernziele schritt">
       <div class="titel">🎯 Heute lernst du …</div>
       <ul>
@@ -78,15 +87,15 @@
         <li><span class="platzhalter">[Lernziel 2]</span></li>
       </ul>
     </div>
-    <div class="hinweis">Problem noch nicht auflösen. Vermutungen sammeln.</div>
+    <div class="hinweis">„Was fehlt uns noch?“ von den Schülern formulieren lassen (🎲), dann aufdecken.</div>
   </section>
 
   <!-- 4 · EIGENE LÖSUNG: erst schreiben, dann sprechen (Think-Pair-Share als feste Routine) -->
-  <section class="folie" data-sozialform="PA" data-phase="Problem" data-minuten="4">
+  <section class="folie" data-sozialform="PA" data-phase="Problem" data-minuten="3">
     <div class="kennung">Eigene Lösung</div>
     <h2>Was meinst du?</h2>
-    <div data-denkzeit="60" data-text="[Auftrag: Schreibe auf, wie du vorgehen würdest.]"></div>
-    <div data-methode="tps" data-minuten="1,2,1"></div>
+    <div data-denkzeit="60" data-text="[Auftrag: Schreibe auf, wie du die Problemfrage lösen würdest.]"></div>
+    <div data-methode="tps" data-minuten="1,1,1"></div>
     <div data-tipps>
       <div class="tipp"><span class="platzhalter">[Tipp 1 – Denkanstoß]</span></div>
       <div class="tipp"><span class="platzhalter">[Tipp 2 – konkreter Hinweis]</span></div>
@@ -121,7 +130,7 @@
     <div class="hinweis">„Freischalten“ erst hier. Gezielt zeigen: typischer Fehler · umständlicher Weg · geschickter Weg. Per 🎲 begründen lassen, dann den richtigen Weg festhalten. Fotos werden nicht gespeichert.</div>
   </section>
 
-  <!-- 8 · SICHERUNG: Merkkasten mit Musterbeispiel + Lückenbeispiel -->
+  <!-- 8 · SICHERUNG: Merkkasten mit Formel + Musterbeispiel + Lückenbeispiel -->
   <section class="folie" data-sozialform="EA" data-phase="Sicherung">
     <div class="kennung">Sicherung<span class="eis" data-eis="EIS"></span></div>
     <h2><span class="platzhalter">[Thema]</span></h2>
@@ -129,45 +138,58 @@
     <div class="merk">
       <h3>Merke</h3>
       <ul>
-        <li><span class="platzhalter">[Merksatz]</span></li>
-        <li class="schritt"><strong>Musterbeispiel:</strong> <span class="platzhalter">[vollständig gelöst, mit Bild und Rechnung]</span></li>
+        <li><span class="platzhalter">[Merksatz in einfachen Worten]</span></li>
       </ul>
+      <div class="formel"><span class="platzhalter">[Formel, z. B. W = G · p %]</span></div>
+      <div class="beispielaufgabe schritt"><b>Musterbeispiel:</b> <span class="platzhalter">[Aufgabe mit Zahlen]</span>
+        <div class="schritte"><span class="platzhalter">[Schritt 1: … = …]</span><br><span class="platzhalter">[Schritt 2: … = …]</span><br><span class="platzhalter">[Antwortsatz]</span></div>
+      </div>
     </div>
-    <div class="lueckenbeispiel schritt"><strong>Jetzt du:</strong> <span class="platzhalter">[gleiches Beispiel mit anderen Zahlen, Schritte teilweise vorgegeben: … = ___]</span></div>
+    <div class="lueckenbeispiel schritt"><strong>Jetzt du:</strong> <span class="platzhalter">[gleiche Aufgabe mit anderen Zahlen, Schritte vorgegeben: … = ___]</span></div>
     <div class="hinweis">Lückenbeispiel per 🎲 kontrollieren. Wer es kann, startet mit der Übung.</div>
   </section>
 
-  <!-- 9 · ÜBUNG: zuerst Mix-Aufgabe, dann Niveauwahl -->
+  <!-- 9 · ÜBUNG: Aufgabenfolie – Aufgaben links, Merkkasten mit Formel + Beispielaufgabe rechts -->
   <section class="folie" data-ipad="gruen" data-phase="Übung">
-    <div class="kennung">Übung · Buch<span class="eis" data-eis="S"></span></div>
-    <h2>Jetzt du!</h2>
-    <p class="auftrag">Zuerst die Mix-Aufgabe, dann dein Niveau. Fertig? Vergleiche mit einem Partner, der auch fertig ist.</p>
-    <p>Tipps und Lösungen: <a class="schuelerlink" href="../schueler/stunde-xx.html" target="_blank">📱 Schülerseite</a></p>
-    <div class="wahlkarten">
-      <div class="wahlkarte"><b>🔀 Mix (für alle)</b>📖 <span class="platzhalter">[BUCH: älteres Kapitel S. __ Nr. __]</span></div>
-      <div class="wahlkarte"><b>● Basis</b>📖 <span class="platzhalter">[BUCH: S. __ Nr. __]</span></div>
-      <div class="wahlkarte"><b>●● Standard</b>📖 <span class="platzhalter">[BUCH: S. __ Nr. __]</span></div>
-      <div class="wahlkarte"><b>●●● Profi</b>📖 <span class="platzhalter">[BUCH: S. __ Nr. __]</span></div>
+    <div class="kennung">Übung<span class="eis" data-eis="S"></span></div>
+    <h2>Jetzt rechnest du!</h2>
+    <p class="auftrag">Rechne im Heft. Erst die Mix-Aufgabe, dann so weit du kommst. Vergleiche danach mit deinem Partner.</p>
+    <ol class="aufgaben">
+      <li data-niveau="mix" data-loesung="[Lösung mit kurzem Rechenweg]"><span class="platzhalter">[Aufgabe aus einem älteren Thema]</span></li>
+      <li data-niveau="1" data-loesung="[Lösung mit kurzem Rechenweg]"><span class="platzhalter">[einfache Aufgabe, direkt wie das Beispiel]</span></li>
+      <li data-niveau="1" data-loesung="[Lösung mit kurzem Rechenweg]"><span class="platzhalter">[einfache Aufgabe mit anderen Zahlen]</span></li>
+      <li data-niveau="2" data-loesung="[Lösung mit kurzem Rechenweg]"><span class="platzhalter">[Textaufgabe aus dem Alltag]</span></li>
+      <li data-niveau="3" data-loesung="[Lösung mit kurzem Rechenweg]"><span class="platzhalter">[Umkehraufgabe oder Begründungsaufgabe]</span></li>
+    </ol>
+    <p class="klein">Weiter: 📖 <span class="platzhalter">[BUCH: S. __ Nr. __]</span> · <a class="schuelerlink" href="../schueler/stunde-xx.html" target="_blank">📱 Schülerseite</a></p>
+    <div class="merk kompakt">
+      <h3>Merke</h3>
+      <div class="formel"><span class="platzhalter">[Formel]</span></div>
+      <div class="beispielaufgabe"><b>Beispiel:</b> <span class="platzhalter">[kleine Aufgabe]</span>
+        <div class="schritte"><span class="platzhalter">[… = …]</span><br><span class="platzhalter">[Antwort]</span></div>
+      </div>
     </div>
+    <div class="hinweis">Lösungen einzeln aufdecken oder „Alle Lösungen zeigen“. Wer fertig ist: Buch oder Schülerseite.</div>
   </section>
 
-  <!-- 10 · REFLEXION: Problem auflösen + Exit-Ticket -->
+  <!-- 10 · REFLEXION: Problemfrage beantworten + Exit-Ticket -->
   <section class="folie" data-phase="Reflexion">
     <div class="kennung">Zurück zum Problem · Reflexion</div>
-    <h2><span class="platzhalter">[Antwort auf die Problemfrage]</span></h2>
+    <h2>Jetzt können wir es!</h2>
+    <div class="frage-gross"><span class="platzhalter">[Die Problemfrage]</span></div>
+    <p class="schritt"><strong>Antwort:</strong> <span class="platzhalter">[Antwortsatz mit Rechnung]</span></p>
     <div class="exit-qr">
       <div data-qr="../schueler/exit-vorlage.html"></div>
       <div>
         <p style="margin-top:0;font-size:1.4rem"><strong>🎫 Exit-Ticket</strong></p>
-        <p>Scanne den Code. Gib dein <strong>Kürzel</strong> ein.<br>Zeig mir am Ende deinen QR-Code.</p>
-        <p><a class="schuelerlink" href="../schueler/exit-vorlage.html" target="_blank">🎫 Zum Exit-Ticket</a></p>
+        <p>Scanne den Code. Gib dein <strong>Kürzel</strong> ein. Zeig mir am Ende deinen QR-Code.</p>
       </div>
     </div>
-    <div class="hinweis">Problem kurz auflösen, dann 4 Min. Exit-Ticket. „Ticket an der Tür“: Beim Rausgehen QR-Code mit der Handy-Kamera scannen → Auswertung.</div>
+    <div class="hinweis">Problemfrage gemeinsam beantworten, dann 4 Min. Exit-Ticket. „Ticket an der Tür“: Beim Rausgehen QR-Code mit der Handy-Kamera scannen → Auswertung.</div>
   </section>
 
 </div>
-<script src="../../praesentation.js?v=11"></script>
+<script src="../../praesentation.js?v=12"></script>
 <script src="../../qr.js"></script>
 </body>
 </html>

@@ -82,7 +82,7 @@
 
   // ---------- Folien zweispaltig: links Arbeitsauftrag, rechts Material ----------
   // Opt-out: <section class="folie" data-layout="einspaltig">
-  const LINKS = ".problem, .spannung, .lernziele, [data-denkzeit], [data-methode], [data-tipps], .satzhilfe, .produkt, .vernetzen, .fehlerkarte, .ampel, .auftrag, p, ol, ul";
+  const LINKS = ".problem, .frage-gross, .bekannt-gesucht, .luecke, .aufgaben, .spannung, .lernziele, [data-denkzeit], [data-methode], [data-tipps], .satzhilfe, .produkt, .vernetzen, .fehlerkarte, .ampel, .auftrag, p, ol, ul";
   folien.forEach(f => {
     if (f.classList.contains("mitte") || f.dataset.layout === "einspaltig") return;
     const links = [], rechts = [], unten = [];

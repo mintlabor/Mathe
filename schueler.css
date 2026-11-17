@@ -113,3 +113,13 @@ footer { text-align: center; color: var(--muted); font-size: .85rem; padding: 2r
 .buch ul { margin: 0; padding-left: 1.2rem; }
 .buch li { margin: .2rem 0; }
 .platzhalter { background: #fff3bf; border-radius: 4px; padding: 0 .25rem; font-family: ui-monospace, monospace; font-size: .92em; }
+
+/* Merkkasten mit Formel + Beispielaufgabe (direkt über den Aufgaben) */
+.merkkasten { border: 2px solid var(--accent); background: var(--accent-hell, #e6f6f8); }
+.merkkasten h3 { margin: 0 0 .3rem; color: var(--accent); }
+.merkkasten p { margin: .2rem 0 .4rem; }
+.formel { font-family: "Cambria Math", "STIX Two Math", Georgia, serif; font-size: 1.5rem; font-weight: 700; text-align: center;
+  background: #fff; border: 2px solid var(--accent); border-radius: 12px; padding: .3rem .8rem; margin: .4rem 0; }
+.beispielaufgabe { background: #fff; border: 2px solid #1c7ed6; border-radius: 12px; padding: .5rem .8rem; margin-top: .5rem; }
+.beispielaufgabe strong:first-child { color: #1c7ed6; }
+.beispielaufgabe .schritte { font-family: ui-monospace, "Cascadia Mono", monospace; line-height: 1.6; margin-top: .3rem; }
