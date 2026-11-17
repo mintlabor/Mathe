@@ -10,20 +10,31 @@
 <header><div class="inner">
   <div class="pfad"><a href="./">🗺️ Lernlandkarte</a> › Stunde 7</div>
   <h1>Üben: Das Parallelogramm</h1>
-  <p class="untertitel">Stunde 7 · Aus dem Parallelogramm wird ein Rechteck</p>
+  <p class="untertitel">Stunde 7 · Welches Beet ist größer? · Aus dem Parallelogramm wird ein Rechteck</p>
 </div></header>
 <main>
   <div class="box">
-    <strong>📘 Erinnerung</strong><br>
-    Parallelogramm: A = g · h (nicht die schräge Seite!) · Rechteck-Trick: Dreieck abschneiden, verschieben · u = 2a + 2b
-  </div>
-  <div class="box">
-    <strong>📚 Wörter für heute:</strong> Parallelogramm · Grundseite g · Höhe h · Flächeninhalt · zerlegen · verschieben · flächengleich<br>
-    <span class="klein">💬 So kannst du es aufschreiben: „Ich habe so gerechnet: …, weil …“</span>
+    <strong>📚 Wörter für heute:</strong> Parallelogramm · Grundseite g · Höhe h · senkrecht · Flächeninhalt · zerlegen · verschieben · flächengleich<br>
+    <span class="klein">💬 So kannst du es aufschreiben: „Ich habe so gerechnet: …, weil die Höhe senkrecht auf … steht.“</span>
   </div>
   <div id="ziele"></div>
 
-  <h2>📖 Aufgaben aus dem Buch</h2>
+  <h2>✏️ Aufgaben</h2>
+  <div class="box merkkasten">
+    <h3>📘 Merke</h3>
+    <p>Flächeninhalt des Parallelogramms: Grundseite mal zugehörige Höhe. Die Höhe steht <strong>senkrecht</strong> auf der Grundseite – nimm <strong>nicht</strong> die schräge Seite!</p>
+    <div class="formel">A = g · h</div>
+    <div class="beispielaufgabe">
+      <strong>Beispiel:</strong> Ein Beet ist ein Parallelogramm mit g = 6 m, schräger Seite 5 m und h = 4 m.
+      <div class="schritte">A = g · h<br>A = 6 m · 4 m = 24 m²<br>Das Beet ist 24 m² groß. (Die 5 m braucht man nicht.)</div>
+    </div>
+  </div>
+  <p class="klein">Rechne jede Aufgabe zuerst im Heft. Trage dann dein Ergebnis ein und prüfe es.</p>
+  <div id="niveaus"></div>
+  <div id="fortschritt"></div>
+  <div id="aufgaben"></div>
+
+  <h2>📖 Weiterarbeit im Buch</h2>
   <div class="box buch">
     <h3>Parallelo 8</h3>
     <ul>
@@ -31,13 +42,9 @@
       <li>●● Standard: <span class="platzhalter">[BUCH: S. __ Nr. __]</span></li>
       <li>●●● Profi: <span class="platzhalter">[BUCH: S. __ Nr. __]</span></li>
     </ul>
-    <p class="klein">Rechne im Heft. Unten findest du Aufgaben mit Tipps und Selbstkontrolle.</p>
+    <p class="klein">Fertig mit den Aufgaben oben? Dann rechne im Buch weiter.</p>
   </div>
 
-  <h2>Aufgaben</h2>
-  <div id="niveaus"></div>
-  <div id="fortschritt"></div>
-  <div id="aufgaben"></div>
   <h2>🎨 Werde kreativ</h2>
   <div class="box">
     Schneide aus einem Rechteck 8 cm × 4 cm drei verschiedene Parallelogramme (gleicher Flächeninhalt). Klebe sie ins Heft und beschrifte g und h.
@@ -48,6 +55,7 @@
   <p><a href="exit-07.html">🎫 Weiter zum Exit-Ticket →</a> · <a href="./">← Lernlandkarte</a></p>
 </main>
 <script>
+// Aufgaben 1–5 = Aufgabenfolie der Präsentation; danach Zusatzaufgaben
 window.SEITE = {
   "speicher": "mathe-k8-rs-uf",
   "stunde": 7,
@@ -62,76 +70,39 @@ window.SEITE = {
     "Ich kann erklären, warum man die Höhe und nicht die schräge Seite nimmt."
   ],
   "aufgaben": [
-    {
-      "niveau": 1,
-      "typ": "zahl",
-      "frage": "Parallelogramm: g = 8 cm, h = 5 cm. A = ?",
-      "loesung": 40,
-      "tipps": [
-        "A = g · h"
-      ],
-      "erklaerung": "A = 8 cm · 5 cm = 40 cm²",
-      "einheit": "cm²"
-    },
-    {
-      "niveau": 1,
-      "typ": "zahl",
-      "frage": "Parallelogramm: g = 7,5 cm, h = 4 cm. A = ?",
-      "loesung": 30,
-      "tipps": [
-        "7,5 · 4"
-      ],
-      "erklaerung": "A = 30 cm²",
-      "einheit": "cm²"
-    },
-    {
-      "niveau": 2,
-      "typ": "zahl",
-      "frage": "Parallelogramm: g = 10 cm, b = 6 cm, h = 4 cm. A = ?",
-      "loesung": 40,
-      "tipps": [
-        "Welche Strecke ist die Höhe?"
-      ],
-      "erklaerung": "A = 10 · 4 = 40 cm² (b wird nicht gebraucht)",
-      "einheit": "cm²"
-    },
-    {
-      "niveau": 2,
-      "typ": "auswahl",
-      "frage": "🔍 Fehler finden: g = 9 m, b = 5 m, h = 3 m. Lea: A = 9 · 5 = 45 m². Max: A = 9 · 3 = 27 m². Wer hat recht?",
-      "loesung": 1,
-      "tipps": [
-        "Rechteck-Trick: Welche Seiten hat das Rechteck?"
-      ],
-      "erklaerung": "Max. Lea nimmt die schräge Seite.",
-      "optionen": [
-        "Lea",
-        "Max",
-        "beide"
-      ]
-    },
-    {
-      "niveau": 3,
-      "typ": "zahl",
+    { "niveau": 1, "typ": "zahl", "einheit": "m",
+      "frage": "🔀 Mix: Ein rechteckiger Garten ist 7 m lang und 3 m breit. Wie lang muss der Zaun rundherum sein?",
+      "loesung": 20, "tipps": ["Der Zaun geht einmal ganz herum: Umfang.", "u = 2 · a + 2 · b"],
+      "erklaerung": "u = 2 · 7 m + 2 · 3 m = 14 m + 6 m = 20 m" },
+    { "niveau": 1, "typ": "zahl", "einheit": "cm²",
+      "frage": "Parallelogramm: g = 8 cm, h = 5 cm. Berechne A.",
+      "loesung": 40, "tipps": ["Schau dir das Beispiel im Merkkasten an.", "A = g · h"],
+      "erklaerung": "A = 8 cm · 5 cm = 40 cm²" },
+    { "niveau": 1, "typ": "zahl", "einheit": "cm²",
+      "frage": "Parallelogramm: g = 7,5 cm, h = 4 cm. Berechne A.",
+      "loesung": 30, "tipps": ["A = g · h", "7,5 · 4 = 7 · 4 + 0,5 · 4"],
+      "erklaerung": "A = 7,5 cm · 4 cm = 30 cm²" },
+    { "niveau": 2, "typ": "zahl", "einheit": "€",
+      "frage": "Ein Beet ist ein Parallelogramm: g = 9 m, schräge Seite 5 m, h = 3 m. Rasensamen kostet 0,80 € pro m². Wie teuer wird es?",
+      "loesung": 21.6, "tipps": ["Was ist gegeben, was ist gesucht? Erst die Fläche berechnen.", "A = 9 m · 3 m. Dann mal 0,80 €."],
+      "erklaerung": "A = 9 m · 3 m = 27 m² (die 5 m braucht man nicht). Kosten: 27 · 0,80 € = 21,60 €" },
+    { "niveau": 3, "typ": "zahl", "einheit": "cm",
+      "frage": "Ein Parallelogramm hat A = 48 cm² und g = 8 cm. Wie lang ist die Höhe h?",
+      "loesung": 6, "tipps": ["Setze ein: 48 = 8 · h", "Welche Zahl mal 8 ergibt 48?"],
+      "erklaerung": "48 cm² = 8 cm · h → h = 48 : 8 = 6 cm" },
+    { "niveau": 2, "typ": "auswahl",
+      "frage": "🔍 Fehler finden: g = 9 m, schräge Seite b = 5 m, h = 3 m. Lea: A = 9 · 5 = 45 m². Max: A = 9 · 3 = 27 m². Wer hat recht?",
+      "optionen": ["Lea", "Max", "beide"], "loesung": 1,
+      "tipps": ["Rechteck-Trick: Welche Seiten hat das Rechteck?"],
+      "erklaerung": "Max. Lea nimmt die schräge Seite – beim Rechteck-Trick entsteht aber ein Rechteck mit den Seiten g und h." },
+    { "niveau": 3, "typ": "zahl", "einheit": "cm",
       "frage": "Ein Parallelogramm hat g = 12 cm und h = 5 cm. Wie hoch ist die Höhe auf der Seite b = 10 cm?",
-      "loesung": 6,
-      "tipps": [
-        "A bleibt gleich: 60 cm² = 10 cm · h"
-      ],
-      "erklaerung": "A = 60 cm², h_b = 60 : 10 = 6 cm",
-      "einheit": "cm"
-    },
-    {
-      "niveau": 3,
-      "typ": "zahl",
-      "frage": "Ein Feld ist ein Parallelogramm mit g = 200 m und h = 150 m. Wie viel Hektar?",
-      "loesung": 3,
-      "tipps": [
-        "Erst m², dann : 10 000"
-      ],
-      "erklaerung": "200 · 150 = 30 000 m² = 3 ha",
-      "einheit": "ha"
-    }
+      "loesung": 6, "tipps": ["A bleibt gleich: erst A ausrechnen.", "60 cm² = 10 cm · h"],
+      "erklaerung": "A = 12 · 5 = 60 cm². Höhe auf b: 60 : 10 = 6 cm" },
+    { "niveau": 3, "typ": "zahl", "einheit": "ha",
+      "frage": "Ein Feld ist ein Parallelogramm mit g = 200 m und h = 150 m. Wie viel Hektar sind das?",
+      "loesung": 3, "tipps": ["Erst m² ausrechnen.", "1 ha = 10 000 m²"],
+      "erklaerung": "200 m · 150 m = 30 000 m² = 3 ha" }
   ]
 };
 </script>
