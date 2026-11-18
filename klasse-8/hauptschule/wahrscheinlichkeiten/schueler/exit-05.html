@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Exit-Ticket: Wie wahrscheinlich ist das? – Stunde 5</title>
+<link rel="stylesheet" href="../../../../schueler.css">
+</head>
+<body>
+<header><div class="inner">
+  <div class="pfad"><a href="./">🗺️ Lernlandkarte</a> › <a href="stunde-05.html">Stunde 5</a> › Exit-Ticket</div>
+  <h1>🎫 Exit-Ticket</h1>
+  <p class="untertitel">Stunde 5 · Wie wahrscheinlich ist das?</p>
+</div></header>
+<main>
+  <div id="exit"></div>
+</main>
+<script type="application/json" id="exit-daten">
+{
+  "titel": "Wie wahrscheinlich ist das?",
+  "stunde": 5,
+  "lernziele": [
+    {
+      "text": "Ich kann eine Wahrscheinlichkeit auf der Skala von 0 bis 1 einordnen.",
+      "foerdern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ● Basis",
+      "fordern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ●●● Profi"
+    },
+    {
+      "text": "Ich kann eine Wahrscheinlichkeit als Bruch, Dezimalzahl und Prozent schreiben.",
+      "foerdern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ● Basis",
+      "fordern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ●●● Profi"
+    },
+    {
+      "text": "Ich kann Wahrscheinlichkeiten in verschiedenen Schreibweisen vergleichen.",
+      "foerdern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ● Basis",
+      "fordern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ●●● Profi"
+    }
+  ],
+  "fehlertypen": {
+    "skala": "Wahrscheinlichkeit größer als 1 für möglich gehalten",
+    "umrechnen": "Bruch falsch in Prozent umgerechnet",
+    "groesse": "Ohne Umrechnen verglichen („größte Zahl gewinnt“)"
+  },
+  "fragen": [
+    {
+      "lz": 0,
+      "typ": "auswahl",
+      "frage": "Welche Zahl kann <strong>keine</strong> Wahrscheinlichkeit sein?",
+      "optionen": [
+        "1,5",
+        "0",
+        "0,99"
+      ],
+      "loesung": 0,
+      "erklaerung": "Mehr als 1 (sicher) geht nicht.",
+      "fehler": {
+        "1": "skala",
+        "2": "skala"
+      }
+    },
+    {
+      "lz": 1,
+      "typ": "zahl",
+      "frage": "Schreibe 1/5 in Prozent.",
+      "loesung": 20,
+      "erklaerung": "1 : 5 = 0,2 = 20 %",
+      "fehler": [
+        {
+          "wert": 0.2,
+          "id": "umrechnen"
+        },
+        {
+          "wert": 5,
+          "id": "umrechnen"
+        },
+        {
+          "wert": 15,
+          "id": "umrechnen"
+        }
+      ],
+      "einheit": "%"
+    },
+    {
+      "lz": 1,
+      "typ": "zahl",
+      "frage": "Schreibe 3/4 in Prozent.",
+      "loesung": 75,
+      "erklaerung": "3 : 4 = 0,75 = 75 %",
+      "fehler": [
+        {
+          "wert": 0.75,
+          "id": "umrechnen"
+        },
+        {
+          "wert": 34,
+          "id": "umrechnen"
+        }
+      ],
+      "einheit": "%"
+    },
+    {
+      "lz": 2,
+      "typ": "auswahl",
+      "frage": "Donnerstag: Regen 1/5. Dienstag: Regen 0,1. Welcher Tag ist trockener?",
+      "optionen": [
+        "Dienstag (10 % < 20 %)",
+        "Donnerstag",
+        "beide gleich"
+      ],
+      "loesung": 0,
+      "erklaerung": "1/5 = 20 %, 0,1 = 10 %",
+      "fehler": {
+        "1": "groesse",
+        "2": "groesse"
+      }
+    }
+  ]
+}
+</script>
+<script src="../../../../qr.js"></script>
+<script src="../../../../exit-ticket.js"></script>
+</body>
+</html>

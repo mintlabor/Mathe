@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Exit-Ticket: Die Streichholzschachtel – Stunde 6</title>
+<link rel="stylesheet" href="../../../../schueler.css">
+</head>
+<body>
+<header><div class="inner">
+  <div class="pfad"><a href="./">🗺️ Lernlandkarte</a> › <a href="stunde-06.html">Stunde 6</a> › Exit-Ticket</div>
+  <h1>🎫 Exit-Ticket</h1>
+  <p class="untertitel">Stunde 6 · Die Streichholzschachtel</p>
+</div></header>
+<main>
+  <div id="exit"></div>
+</main>
+<script type="application/json" id="exit-daten">
+{
+  "titel": "Die Streichholzschachtel",
+  "stunde": 6,
+  "lernziele": [
+    {
+      "text": "Ich kann erklären, was ein Nicht-Laplace-Experiment ist.",
+      "foerdern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ● Basis",
+      "fordern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ●●● Profi"
+    },
+    {
+      "text": "Ich kann eine Wahrscheinlichkeit mit vielen Versuchen schätzen.",
+      "foerdern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ● Basis",
+      "fordern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ●●● Profi"
+    },
+    {
+      "text": "Ich kann mit Schätzwerten gerechte Punkte begründen.",
+      "foerdern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ● Basis",
+      "fordern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ●●● Profi"
+    }
+  ],
+  "fehlertypen": {
+    "laplace": "Glaubt, man könne immer 1 : Anzahl der Lagen rechnen",
+    "rel": "Relative Häufigkeit falsch berechnet",
+    "punkte": "Punkte nicht passend zur Seltenheit verteilt"
+  },
+  "fragen": [
+    {
+      "lz": 0,
+      "typ": "auswahl",
+      "frage": "Warum kann man P(Stirn) nicht wie beim Würfel ausrechnen?",
+      "optionen": [
+        "Die Lagen haben nicht die gleiche Chance.",
+        "Weil die Schachtel nur 3 Lagen hat.",
+        "Doch: P = 1/3."
+      ],
+      "loesung": 0,
+      "erklaerung": "Die Seiten sind verschieden groß.",
+      "fehler": {
+        "1": "laplace",
+        "2": "laplace"
+      }
+    },
+    {
+      "lz": 1,
+      "typ": "zahl",
+      "frage": "100 Würfe, 25-mal Seite. Schätze P(Seite) in %.",
+      "loesung": 25,
+      "erklaerung": "25 : 100 = 25 %",
+      "fehler": [
+        {
+          "wert": 0.25,
+          "id": "rel"
+        },
+        {
+          "wert": 4,
+          "id": "rel"
+        }
+      ],
+      "einheit": "%"
+    },
+    {
+      "lz": 1,
+      "typ": "zahl",
+      "frage": "50 Würfe, 40-mal Fläche. Schätze P(Fläche) in %.",
+      "loesung": 80,
+      "erklaerung": "40 : 50 = 0,8 = 80 %",
+      "fehler": [
+        {
+          "wert": 0.8,
+          "id": "rel"
+        },
+        {
+          "wert": 40,
+          "id": "rel"
+        },
+        {
+          "wert": 125,
+          "id": "rel"
+        }
+      ],
+      "einheit": "%"
+    },
+    {
+      "lz": 2,
+      "typ": "auswahl",
+      "frage": "Fläche kommt 5-mal so oft wie Seite. Fläche gibt 1 Punkt. Punkte für Seite?",
+      "optionen": [
+        "5 Punkte",
+        "1 Punkt",
+        "1/5 Punkt"
+      ],
+      "loesung": 0,
+      "erklaerung": "Seltener → mehr Punkte.",
+      "fehler": {
+        "1": "punkte",
+        "2": "punkte"
+      }
+    }
+  ]
+}
+</script>
+<script src="../../../../qr.js"></script>
+<script src="../../../../exit-ticket.js"></script>
+</body>
+</html>

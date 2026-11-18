@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Exit-Ticket: Der geheime Beutel – Stunde 7</title>
+<link rel="stylesheet" href="../../../../schueler.css">
+</head>
+<body>
+<header><div class="inner">
+  <div class="pfad"><a href="./">🗺️ Lernlandkarte</a> › <a href="stunde-07.html">Stunde 7</a> › Exit-Ticket</div>
+  <h1>🎫 Exit-Ticket</h1>
+  <p class="untertitel">Stunde 7 · Der geheime Beutel</p>
+</div></header>
+<main>
+  <div id="exit"></div>
+</main>
+<script type="application/json" id="exit-daten">
+{
+  "titel": "Der geheime Beutel",
+  "stunde": 7,
+  "lernziele": [
+    {
+      "text": "Ich kann erklären, was „Ziehen mit Zurücklegen“ bedeutet.",
+      "foerdern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ● Basis",
+      "fordern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ●●● Profi"
+    },
+    {
+      "text": "Ich kann mit relativen Häufigkeiten den Inhalt einer Urne schätzen.",
+      "foerdern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ● Basis",
+      "fordern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ●●● Profi"
+    },
+    {
+      "text": "Ich kann P(Farbe) ausrechnen, wenn ich den Inhalt kenne.",
+      "foerdern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ● Basis",
+      "fordern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ●●● Profi"
+    }
+  ],
+  "fehlertypen": {
+    "zurueck": "Ziehen mit Zurücklegen nicht verstanden",
+    "hochrechnen": "Nicht mit der Anzahl aller Kugeln multipliziert",
+    "p": "P(Farbe) falsch berechnet"
+  },
+  "fragen": [
+    {
+      "lz": 0,
+      "typ": "auswahl",
+      "frage": "Warum legt man die Kugel nach jedem Zug zurück?",
+      "optionen": [
+        "Damit der Inhalt gleich bleibt.",
+        "Damit es schneller geht.",
+        "Damit keine Kugel verloren geht."
+      ],
+      "loesung": 0,
+      "erklaerung": "Nur so ist jeder Zug unter gleichen Bedingungen.",
+      "fehler": {
+        "1": "zurueck",
+        "2": "zurueck"
+      }
+    },
+    {
+      "lz": 1,
+      "typ": "zahl",
+      "frage": "10 Kugeln, 100 Züge, 70-mal schwarz. Wie viele schwarze Kugeln sind wohl drin?",
+      "loesung": 7,
+      "erklaerung": "0,7 · 10 = 7",
+      "fehler": [
+        {
+          "wert": 70,
+          "id": "hochrechnen"
+        },
+        {
+          "wert": 0.7,
+          "id": "hochrechnen"
+        }
+      ]
+    },
+    {
+      "lz": 1,
+      "typ": "zahl",
+      "frage": "20 Kugeln, 100 Züge, 25-mal rot. Wie viele rote Kugeln sind wohl drin?",
+      "loesung": 5,
+      "erklaerung": "0,25 · 20 = 5",
+      "fehler": [
+        {
+          "wert": 25,
+          "id": "hochrechnen"
+        },
+        {
+          "wert": 0.25,
+          "id": "hochrechnen"
+        },
+        {
+          "wert": 2.5,
+          "id": "hochrechnen"
+        }
+      ]
+    },
+    {
+      "lz": 2,
+      "typ": "zahl",
+      "frage": "Beutel: 3 rote und 7 blaue Kugeln. P(rot) in %?",
+      "loesung": 30,
+      "erklaerung": "3 : 10 = 0,3 = 30 %",
+      "fehler": [
+        {
+          "wert": 0.3,
+          "id": "p"
+        },
+        {
+          "wert": 3,
+          "id": "p"
+        },
+        {
+          "wert": 43,
+          "id": "p"
+        }
+      ],
+      "einheit": "%"
+    }
+  ]
+}
+</script>
+<script src="../../../../qr.js"></script>
+<script src="../../../../exit-ticket.js"></script>
+</body>
+</html>

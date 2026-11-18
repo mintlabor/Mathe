@@ -13,58 +13,206 @@
   <p class="untertitel">Stunde 7 · Ziehen aus einer Urne</p>
 </div></header>
 <main>
-  <div class="box">
-    <strong>📘 Erinnerung</strong><br>
-    <strong>Schätzen:</strong> geschätzte Anzahl ≈ relative Häufigkeit · Anzahl aller Kugeln<br>
-    <strong>Ausrechnen:</strong> P(rot) = Anzahl roter Kugeln : Anzahl aller Kugeln
-  </div>
   <div id="ziele"></div>
-  <h2>Aufgaben</h2>
+
+  <h2>✏️ Aufgaben</h2>
+  <div class="box merkkasten">
+    <h3>📘 Merke</h3>
+    <p><strong>Ziehen mit Zurücklegen:</strong> Kugel ziehen, Farbe notieren, zurücklegen, mischen – der Inhalt bleibt gleich. Kennt man den Inhalt, kann man P ausrechnen: P(rot) = rote Kugeln : alle Kugeln.</p>
+    <div class="formel">Anzahl ≈ relative Häufigkeit · alle Kugeln</div>
+    <div class="beispielaufgabe">
+      <strong>Beispiel:</strong> 100 Züge, 30-mal rot, 10 Kugeln im Beutel
+      <div class="schritte">30 : 100 = 0,3<br>0,3 · 10 = 3<br>etwa 3 rote Kugeln</div>
+    </div>
+  </div>
+  <p class="klein">Rechne jede Aufgabe zuerst im Heft. Trage dann dein Ergebnis ein und prüfe es.</p>
   <div id="niveaus"></div>
   <div id="fortschritt"></div>
   <div id="aufgaben"></div>
+
+  <h2>📖 Weiterarbeit im Buch</h2>
+  <div class="box buch">
+    <h3>Parallelo 8</h3>
+    <ul>
+      <li>● Basis: <span class="platzhalter">[BUCH: S. __ Nr. __]</span></li>
+      <li>●● Standard: <span class="platzhalter">[BUCH: S. __ Nr. __]</span></li>
+      <li>●●● Profi: <span class="platzhalter">[BUCH: S. __ Nr. __]</span></li>
+    </ul>
+    <p class="klein">Fertig mit den Aufgaben oben? Dann rechne im Buch weiter.</p>
+  </div>
+
   <h2>Wie sicher bist du jetzt?</h2>
   <div id="ampel"></div>
-  <p><a href="./">← Zurück zur Lernlandkarte</a></p>
+  <p><a href="exit-07.html">🎫 Weiter zum Exit-Ticket →</a> · <a href="./">← Lernlandkarte</a></p>
 </main>
 <script>
+// Die ersten Aufgaben = Aufgabenfolie der Präsentation; danach Zusatzaufgaben
 window.SEITE = {
-  speicher: "mathe-k8-hs-wk", stunde: 7,
-  lernziele: ["erklären, was „Ziehen mit Zurücklegen“ bedeutet", "mit relativen Häufigkeiten den Inhalt einer Urne schätzen", "P(Farbe) ausrechnen, wenn du den Inhalt kennst"],
-  ichKann: ["Ich kann erklären, was „Ziehen mit Zurücklegen“ bedeutet.", "Ich kann mit relativen Häufigkeiten den Inhalt einer Urne schätzen.", "Ich kann P(Farbe) ausrechnen, wenn ich den Inhalt kenne."],
-  aufgaben: [
-    { niveau: 1, typ: "auswahl", frage: "Warum legt man die Kugel nach dem Ziehen zurück?",
-      optionen: ["Damit der Beutel nicht leer wird und der Inhalt gleich bleibt.", "Damit man die Kugel noch einmal ansehen kann.", "Das ist egal."], loesung: 0,
-      tipps: ["Was passiert mit dem Beutel, wenn man nichts zurücklegt?"],
-      erklaerung: "Nur mit Zurücklegen sind bei jedem Zug wieder alle Kugeln im Beutel. Dann hat jeder Zug dieselben Chancen." },
-    { niveau: 1, typ: "zahl", einheit: "%", frage: "In einer Urne sind 10 Kugeln, davon 3 blau. Wie groß ist P(blau) in Prozent?",
-      loesung: 30,
-      tipps: ["P(blau) = 3 : 10", "0,3 · 100 = ?"],
-      erklaerung: "<sup>3</sup>/<sub>10</sub> = 0,3 = 30 %." },
-    { niveau: 1, typ: "zahl", frage: "In einer Urne sind 10 Kugeln. Bei 100 Zügen kam 60-mal rot. Wie viele rote Kugeln sind wohl drin?",
-      loesung: 6,
-      tipps: ["Relative Häufigkeit: 60 : 100 = 0,6", "0,6 · 10 = ?"],
-      erklaerung: "60 : 100 = 0,6 und 0,6 · 10 = 6. Also wohl 6 rote Kugeln." },
-    { niveau: 2, typ: "zahl", frage: "In einer Urne sind 20 Kugeln. Bei 400 Zügen kam 100-mal gelb. Wie viele gelbe Kugeln sind wohl drin?",
-      loesung: 5,
-      tipps: ["100 : 400 = ?", "0,25 · 20 = ?"],
-      erklaerung: "100 : 400 = 0,25 und 0,25 · 20 = 5 gelbe Kugeln." },
-    { niveau: 2, typ: "zahl", frage: "In einem Beutel sind 2 rote, 5 blaue und 3 grüne Kugeln. Wie groß ist P(grün) als Dezimalzahl?",
-      loesung: 0.3,
-      tipps: ["Wie viele Kugeln sind es insgesamt?", "3 : 10 = ?"],
-      erklaerung: "Insgesamt 10 Kugeln. P(grün) = 3 : 10 = 0,3." },
-    { niveau: 2, typ: "auswahl", frage: "Mia zieht 8-mal und bekommt nie Gelb. Was kann sie sagen?",
-      optionen: ["Im Beutel ist sicher keine gelbe Kugel.", "Gelbe Kugeln sind vielleicht selten. Sie sollte öfter ziehen.", "Gelb kommt beim nächsten Zug bestimmt."], loesung: 1,
-      tipps: ["Sind 8 Züge viele oder wenige?"],
-      erklaerung: "8 Züge sind wenige. Gelb kann selten sein. Erst bei vielen Zügen wird die Schätzung gut." },
-    { niveau: 3, typ: "zahl", frage: "In einem Beutel sind 25 Kugeln. Bei 200 Zügen kam 48-mal schwarz. Wie viele schwarze Kugeln sind wohl drin? (Runde.)",
-      loesung: 6,
-      tipps: ["48 : 200 = 0,24", "0,24 · 25 = 6"],
-      erklaerung: "48 : 200 = 0,24 und 0,24 · 25 = 6. Also wohl 6 schwarze Kugeln." },
-    { niveau: 3, typ: "zahl", frage: "Ein Beutel hat 12 Kugeln. Es soll gelten: P(rot) = <sup>1</sup>/<sub>4</sub>. Wie viele rote Kugeln musst du hineinlegen?",
-      loesung: 3,
-      tipps: ["Ein Viertel von 12 = ?", "12 : 4 = ?"],
-      erklaerung: "<sup>1</sup>/<sub>4</sub> von 12 = 12 : 4 = 3 rote Kugeln." }
+  "speicher": "mathe-k8-hs-wk",
+  "stunde": 7,
+  "lernziele": [
+    "erklären, was „Ziehen mit Zurücklegen“ bedeutet",
+    "mit relativen Häufigkeiten den Inhalt einer Urne schätzen",
+    "P(Farbe) ausrechnen, wenn du den Inhalt kennst"
+  ],
+  "ichKann": [
+    "Ich kann erklären, was „Ziehen mit Zurücklegen“ bedeutet.",
+    "Ich kann mit relativen Häufigkeiten den Inhalt einer Urne schätzen.",
+    "Ich kann P(Farbe) ausrechnen, wenn ich den Inhalt kenne."
+  ],
+  "aufgaben": [
+    {
+      "typ": "zahl",
+      "loesung": 20,
+      "tipps": [
+        "10 : 50 = ?"
+      ],
+      "einheit": "%",
+      "frage": "🔀 Mix: Schachtel: 50 Würfe, 10-mal Seite. Schätze P(Seite) in %.",
+      "niveau": 1,
+      "erklaerung": "10 : 50 = 0,2 = 20 %"
+    },
+    {
+      "typ": "zahl",
+      "loesung": 7,
+      "tipps": [
+        "Erst die relative Häufigkeit.",
+        "0,7 · 10"
+      ],
+      "frage": "Urne mit 10 Kugeln: 100 Züge, 70-mal schwarz. Wie viele schwarze Kugeln?",
+      "niveau": 1,
+      "erklaerung": "70 : 100 = 0,7 · 0,7 · 10 = 7"
+    },
+    {
+      "typ": "zahl",
+      "loesung": 40,
+      "tipps": [
+        "Wie viele sind es insgesamt?"
+      ],
+      "einheit": "%",
+      "frage": "Beutel: 4 rote und 6 grüne Gummibärchen. P(rot) in %?",
+      "niveau": 1,
+      "erklaerung": "4 : 10 = 0,4 = 40 %"
+    },
+    {
+      "typ": "zahl",
+      "loesung": 5,
+      "tipps": [
+        "50 : 200 = ?",
+        "· 20"
+      ],
+      "frage": "Urne mit 20 Kugeln: 200 Züge, 50-mal blau. Wie viele blaue Kugeln?",
+      "niveau": 2,
+      "erklaerung": "50 : 200 = 0,25 · 0,25 · 20 = 5"
+    },
+    {
+      "typ": "zahl",
+      "loesung": 2,
+      "tipps": [
+        "0,3 · 10 = ? gelbe",
+        "0,5 · 10 = ? rote"
+      ],
+      "frage": "Beutel mit 10 Kugeln: P(gelb) = 0,3 und P(rot) = 0,5. Wie viele Kugeln haben eine andere Farbe?",
+      "niveau": 3,
+      "erklaerung": "3 gelbe + 5 rote = 8 → 2 Kugeln in einer anderen Farbe"
+    },
+    {
+      "niveau": 1,
+      "typ": "auswahl",
+      "frage": "Warum legt man die Kugel nach dem Ziehen zurück?",
+      "optionen": [
+        "Damit der Beutel nicht leer wird und der Inhalt gleich bleibt.",
+        "Damit man die Kugel noch einmal ansehen kann.",
+        "Das ist egal."
+      ],
+      "loesung": 0,
+      "tipps": [
+        "Was passiert mit dem Beutel, wenn man nichts zurücklegt?"
+      ],
+      "erklaerung": "Nur mit Zurücklegen sind bei jedem Zug wieder alle Kugeln im Beutel. Dann hat jeder Zug dieselben Chancen."
+    },
+    {
+      "niveau": 1,
+      "typ": "zahl",
+      "einheit": "%",
+      "frage": "In einer Urne sind 10 Kugeln, davon 3 blau. Wie groß ist P(blau) in Prozent?",
+      "loesung": 30,
+      "tipps": [
+        "P(blau) = 3 : 10",
+        "0,3 · 100 = ?"
+      ],
+      "erklaerung": "<sup>3</sup>/<sub>10</sub> = 0,3 = 30 %."
+    },
+    {
+      "niveau": 1,
+      "typ": "zahl",
+      "frage": "In einer Urne sind 10 Kugeln. Bei 100 Zügen kam 60-mal rot. Wie viele rote Kugeln sind wohl drin?",
+      "loesung": 6,
+      "tipps": [
+        "Relative Häufigkeit: 60 : 100 = 0,6",
+        "0,6 · 10 = ?"
+      ],
+      "erklaerung": "60 : 100 = 0,6 und 0,6 · 10 = 6. Also wohl 6 rote Kugeln."
+    },
+    {
+      "niveau": 2,
+      "typ": "zahl",
+      "frage": "In einer Urne sind 20 Kugeln. Bei 400 Zügen kam 100-mal gelb. Wie viele gelbe Kugeln sind wohl drin?",
+      "loesung": 5,
+      "tipps": [
+        "100 : 400 = ?",
+        "0,25 · 20 = ?"
+      ],
+      "erklaerung": "100 : 400 = 0,25 und 0,25 · 20 = 5 gelbe Kugeln."
+    },
+    {
+      "niveau": 2,
+      "typ": "zahl",
+      "frage": "In einem Beutel sind 2 rote, 5 blaue und 3 grüne Kugeln. Wie groß ist P(grün) als Dezimalzahl?",
+      "loesung": 0.3,
+      "tipps": [
+        "Wie viele Kugeln sind es insgesamt?",
+        "3 : 10 = ?"
+      ],
+      "erklaerung": "Insgesamt 10 Kugeln. P(grün) = 3 : 10 = 0,3."
+    },
+    {
+      "niveau": 2,
+      "typ": "auswahl",
+      "frage": "Mia zieht 8-mal und bekommt nie Gelb. Was kann sie sagen?",
+      "optionen": [
+        "Im Beutel ist sicher keine gelbe Kugel.",
+        "Gelbe Kugeln sind vielleicht selten. Sie sollte öfter ziehen.",
+        "Gelb kommt beim nächsten Zug bestimmt."
+      ],
+      "loesung": 1,
+      "tipps": [
+        "Sind 8 Züge viele oder wenige?"
+      ],
+      "erklaerung": "8 Züge sind wenige. Gelb kann selten sein. Erst bei vielen Zügen wird die Schätzung gut."
+    },
+    {
+      "niveau": 3,
+      "typ": "zahl",
+      "frage": "In einem Beutel sind 25 Kugeln. Bei 200 Zügen kam 48-mal schwarz. Wie viele schwarze Kugeln sind wohl drin? (Runde.)",
+      "loesung": 6,
+      "tipps": [
+        "48 : 200 = 0,24",
+        "0,24 · 25 = 6"
+      ],
+      "erklaerung": "48 : 200 = 0,24 und 0,24 · 25 = 6. Also wohl 6 schwarze Kugeln."
+    },
+    {
+      "niveau": 3,
+      "typ": "zahl",
+      "frage": "Ein Beutel hat 12 Kugeln. Es soll gelten: P(rot) = <sup>1</sup>/<sub>4</sub>. Wie viele rote Kugeln musst du hineinlegen?",
+      "loesung": 3,
+      "tipps": [
+        "Ein Viertel von 12 = ?",
+        "12 : 4 = ?"
+      ],
+      "erklaerung": "<sup>1</sup>/<sub>4</sub> von 12 = 12 : 4 = 3 rote Kugeln."
+    }
   ]
 };
 </script>
