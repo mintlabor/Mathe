@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Stunde 8: Der Baustein-Würfel – Wahrscheinlichkeiten</title>
-<link rel="stylesheet" href="../../../../praesentation.css">
+<link rel="stylesheet" href="../../../../praesentation.css?v=15">
 <style>
   .sprechblase {
     position: relative; background: var(--card); border: 2px solid var(--text); border-radius: 18px;
@@ -30,19 +30,17 @@
   @media (max-width: 900px) { .rollen, .praes { grid-template-columns: 1fr 1fr; } }
 </style>
 </head>
-<body data-phasen='[["Abrufen",4],["Problem",5],["Experiment",14],["Präsentation",7],["Sicherung",6],["Übung",5],["Reflexion",4]]'>
-
+<body data-problemfrage="Hat jede Seite des Legosteins 1/6?"
+      data-phasen='[["Abrufen", 3], ["Problem", 4], ["Experiment", 12], ["Präsentation", 7], ["Sicherung", 6], ["Übung", 7], ["Reflexion", 6]]'>
 <div class="leiste">
   <div class="pfad"><a href="../../../../">Start</a> › <a href="../../../">Klasse 8</a> › <a href="../../">Hauptschule</a> › <a href="../">Wahrscheinlichkeiten</a> › Stunde 8</div>
 </div>
-
 <div class="buehne">
 
-  <!-- Abrufen -->
-  <section class="folie" data-phase="Abrufen">
+  <section class="folie" data-phase="Abrufen" data-minuten="3" data-sozialform="EA" data-ipad="rot">
     <div class="kennung">Wahrscheinlichkeiten · Stunde 8 · Warm-up</div>
     <h2>Was weißt du noch?</h2>
-    <p style="margin-top:0">Beantworte ohne ins Heft zu schauen.</p>
+    <p class="auftrag">Beantworte ohne ins Heft zu schauen.</p>
     <div class="uebung">
       <div class="zeile"><div class="n">1</div><div>
         <div class="frage">Exit-Ticket: 10 Kugeln, bei 100 Zügen 70-mal schwarz. Wie viele schwarze Kugeln sind wohl drin?</div>
@@ -60,30 +58,39 @@
     <div class="hinweis">Aufgabe 3 bereitet die heutige Regel vor (alle Wahrscheinlichkeiten zusammen = 100 %). Erst offen lassen, falls niemand eine Idee hat.</div>
   </section>
 
-  <!-- Problem -->
-  <section class="folie" data-phase="Problem">
-    <div class="kennung">Problem<span class="eis" data-eis="I"></span></div>
-    <h2>Hat jede Seite <span class="bruch"><span>1</span><span>6</span></span>?</h2>
-    <p style="margin-top:0">Jonas will einen Legostein (2 × 4 Noppen) als Würfel benutzen. Er sagt:</p>
-    <div class="sprechblase">„Ein Legostein hat 6 Seiten, genau wie ein Würfel. Also hat jede Seite die Wahrscheinlichkeit <span class="bruch"><span>1</span><span>6</span></span>.“</div>
-    <div class="lagen schritt">
+  <section class="folie" data-phase="Problem" data-minuten="2">
+    <div class="kennung">Problem</div>
+    <h2>Der Baustein-Würfel</h2>
+    <div class="problem">
+      <div class="label">Situation</div><br>
+      Jonas will einen Legostein (2 × 4 Noppen) als Würfel benutzen. Er sagt: „Ein Legostein hat 6 Seiten, genau wie ein Würfel. Also hat jede Seite die Wahrscheinlichkeit 1/6.“
+    </div>
+    <div class="frage-gross">Hat jede Seite des Legosteins 1/6?</div>
+    <div class="lagen">
       <figure><svg width="170" height="80" viewBox="0 0 170 80"><rect x="5" y="30" width="160" height="45" rx="3" fill="#e03131" stroke="#1f2430" stroke-width="3"/><g fill="#e03131" stroke="#1f2430" stroke-width="2.5"><rect x="15" y="14" width="26" height="16" rx="3"/><rect x="55" y="14" width="26" height="16" rx="3"/><rect x="95" y="14" width="26" height="16" rx="3"/><rect x="133" y="14" width="26" height="16" rx="3"/></g></svg><figcaption>Noppen oben</figcaption></figure>
       <figure><svg width="170" height="80" viewBox="0 0 170 80"><rect x="5" y="5" width="160" height="45" rx="3" fill="#e03131" stroke="#1f2430" stroke-width="3"/><g fill="#e03131" stroke="#1f2430" stroke-width="2.5"><rect x="15" y="50" width="26" height="16" rx="3"/><rect x="55" y="50" width="26" height="16" rx="3"/><rect x="95" y="50" width="26" height="16" rx="3"/><rect x="133" y="50" width="26" height="16" rx="3"/></g></svg><figcaption>Noppen unten</figcaption></figure>
       <figure><svg width="180" height="90" viewBox="0 0 180 90"><rect x="10" y="20" width="160" height="65" rx="3" fill="#e03131" stroke="#1f2430" stroke-width="3"/><g fill="#f56565" stroke="#1f2430" stroke-width="2"><circle cx="35" cy="40" r="9"/><circle cx="72" cy="40" r="9"/><circle cx="109" cy="40" r="9"/><circle cx="146" cy="40" r="9"/><circle cx="35" cy="66" r="9"/><circle cx="72" cy="66" r="9"/><circle cx="109" cy="66" r="9"/><circle cx="146" cy="66" r="9"/></g></svg><figcaption>lange Seite<br><span class="klein">Noppen zeigen zur Seite</span></figcaption></figure>
       <figure><svg width="90" height="170" viewBox="0 0 90 170"><rect x="10" y="5" width="70" height="160" rx="3" fill="#e03131" stroke="#1f2430" stroke-width="3"/><g fill="#f56565" stroke="#1f2430" stroke-width="2"><circle cx="31" cy="27" r="9"/><circle cx="59" cy="27" r="9"/><circle cx="31" cy="64" r="9"/><circle cx="59" cy="64" r="9"/><circle cx="31" cy="101" r="9"/><circle cx="59" cy="101" r="9"/><circle cx="31" cy="138" r="9"/><circle cx="59" cy="138" r="9"/></g></svg><figcaption>kurze Seite<br><span class="klein">Stein steht hochkant</span></figcaption></figure>
     </div>
-    <div class="lernziele schritt">
-      <div class="titel">🎯 Heute lernst du …</div>
-      <ul>
-        <li>einen <strong>Fehler</strong> in einer Begründung zu finden und zu erklären,</li>
-        <li>dass alle Wahrscheinlichkeiten <strong>zusammen 1</strong> (also 100 %) ergeben.</li>
-      </ul>
-    </div>
-    <div class="hinweis">Kurz abstimmen: Wer glaubt Jonas? Ergebnis an die Tafel. Die Skizzen zeigen die vier Lagen. Die zwei langen Seiten werden zusammen gezählt, ebenso die zwei kurzen Seiten. Falls keine Legosteine vorhanden sind: andere Bausteine in Quaderform (z. B. Holzbausteine) nehmen.</div>
+    <div class="hinweis">Frage vorlesen lassen. Kurze Vermutung per Handzeichen an der Tafel festhalten – Auflösung am Ende.</div>
   </section>
 
-  <!-- Eigene Lösung + Rollen -->
-  <section class="folie" data-phase="Experiment" data-minuten="3">
+  <section class="folie" data-phase="Problem" data-minuten="2">
+    <div class="kennung">Problem · Was fehlt uns?</div>
+    <h2>Können wir das schon?</h2>
+    <div class="bekannt-gesucht">
+      <div class="bekannt">Legostein: 6 Seiten<br>Würfel: jede Seite 1/6</div>
+      <div class="gesucht">Stimmt 1/6 auch beim Legostein?</div>
+    </div>
+    <div class="luecke schritt">Beim Würfel durften wir 1 : 6 rechnen. Aber sind die Seiten des Legosteins <strong>gleich groß</strong>? Wann darf man so rechnen – und wann nicht?</div>
+    <div class="lernziele schritt">
+      <div class="titel">🎯 Heute lernst du …</div>
+      <ul><li>Ich kann erklären, wann man „1 durch Anzahl der Seiten“ rechnen darf.</li><li>Ich weiß, dass alle Wahrscheinlichkeiten zusammen 1 ergeben.</li><li>Ich kann eine fehlende Wahrscheinlichkeit berechnen.</li></ul>
+    </div>
+    <div class="hinweis">„Was fehlt uns noch?“ erst von Schülern formulieren lassen (🎲), dann aufdecken.</div>
+  </section>
+
+  <section class="folie" data-phase="Experiment" data-minuten="3" data-sozialform="GA">
     <div class="kennung">Eigene Lösung · Planen</div>
     <h2>Wie könnt ihr Jonas überprüfen?</h2>
     <div class="tps">
@@ -101,10 +108,9 @@
       <div class="tipp">Was hat beim Würfel geholfen, eine Wahrscheinlichkeit zu <strong>schätzen</strong>?</div>
       <div class="tipp">Wie oft müsste „Noppen oben“ bei 60 Würfen ungefähr kommen, wenn Jonas recht hat? (60 : 6 = ?)</div>
     </div>
-    <div class="hinweis">Die Gruppen sollen selbst eine Versuchsanzahl festlegen (mindestens 60). Tipp 2 gibt eine Prüfgröße: Wenn Jonas recht hätte, käme jede Seite etwa 10-mal. Die lange und die kurze Seite gibt es je zweimal, dann wären es je etwa 20-mal.</div>
+    <div class="hinweis">Herumgehen und typische Lösungen ansehen (bei Bedarf mit 📷 festhalten). Die Gruppen sollen selbst eine Versuchsanzahl festlegen (mindestens 60). Tipp 2 gibt eine Prüfgröße: Wenn Jonas recht hätte, käme jede Seite etwa 10-mal. Die lange und die kurze Seite gibt es je zweimal, dann wären es je etwa 20-mal.</div>
   </section>
 
-  <!-- Experiment -->
   <section class="folie" data-phase="Experiment" data-minuten="9">
     <div class="kennung">Experiment · Gruppenarbeit<span class="eis" data-eis="E"></span></div>
     <h2>Wir werfen den Baustein</h2>
@@ -132,8 +138,7 @@
     <div class="hinweis">Material: pro Gruppe ein 2×4-Legostein (oder ähnlicher Baustein), Taschenrechner. Unterstützung: Schwächere Gruppen bekommen die Rechnung „Anzahl : Würfe · 100“ als Kärtchen. Die Summe der Prozente ist durch Runden manchmal 99 % oder 101 %: Das ist ein guter Anlass zum Nachfragen.</div>
   </section>
 
-  <!-- Präsentation + Klassentabelle -->
-  <section class="folie" data-phase="Präsentation">
+  <section class="folie" data-phase="Präsentation" data-minuten="4">
     <div class="kennung">Präsentation · Klassenergebnis<span class="eis" data-eis="IS"></span></div>
     <h2>Was haben die Gruppen herausgefunden?</h2>
     <div class="praes">
@@ -155,8 +160,7 @@
     <div class="hinweis">Jeder Sprecher stellt in höchstens einer Minute vor (3 Punkte oben). Danach trägst du die Zahlen ein. „Jonas’ Vorhersage“ zeigt, was bei 1/6 pro Seite zu erwarten wäre: Noppen oben 1/6, Noppen unten 1/6, lange Seite 2/6, kurze Seite 2/6. Die Daten werden in diesem Browser gespeichert.</div>
   </section>
 
-  <!-- Fehler erklären -->
-  <section class="folie" data-phase="Präsentation">
+  <section class="folie" data-phase="Präsentation" data-minuten="3">
     <div class="kennung">Ideen vergleichen · Fehler erklären</div>
     <h2>Wo steckt Jonas’ Fehler?</h2>
     <div class="legende">
@@ -174,72 +178,72 @@
     <div class="hinweis">Kommunizieren: Schüler sollen die Ursache des Fehlers erklären, nicht nur „falsch“ sagen. Satzanfang an die Tafel: „Jonas’ Fehler ist …, weil …“</div>
   </section>
 
-  <!-- Sicherung -->
-  <section class="folie" data-phase="Sicherung">
+  <section class="folie" data-sozialform="EA" data-phase="Sicherung" data-minuten="6">
     <div class="kennung">Sicherung<span class="eis" data-eis="S"></span></div>
     <h2>Alle zusammen ergeben 1</h2>
+    <p class="auftrag">Schreibe den Merkkasten ins Heft. Löse dann das Lückenbeispiel.</p>
     <div class="merk">
       <h3>Merke</h3>
-      <ul>
-        <li class="schritt">Man darf nur dann „1 durch Anzahl der Seiten“ rechnen, wenn alle Ergebnisse die <strong>gleiche Chance</strong> haben (Laplace).</li>
-        <li class="schritt">Die Wahrscheinlichkeiten <strong>aller</strong> Ergebnisse ergeben zusammen immer <strong>1</strong> (also <strong>100 %</strong>).<br>
-          Würfel: <span class="bruch"><span>1</span><span>6</span></span> + <span class="bruch"><span>1</span><span>6</span></span> + <span class="bruch"><span>1</span><span>6</span></span> + <span class="bruch"><span>1</span><span>6</span></span> + <span class="bruch"><span>1</span><span>6</span></span> + <span class="bruch"><span>1</span><span>6</span></span> = <span class="bruch"><span>6</span><span>6</span></span> = 1</li>
-        <li class="schritt">So kann man eine fehlende Wahrscheinlichkeit berechnen: <strong>100 % minus alle anderen</strong>.</li>
-      </ul>
+      <ul><li>„1 : Anzahl der Seiten“ darf man nur rechnen, wenn alle Ergebnisse die <strong>gleiche Chance</strong> haben.</li><li>Die Wahrscheinlichkeiten <strong>aller</strong> Ergebnisse ergeben zusammen immer <strong>1 = 100 %</strong>.</li></ul>
+      <div class="formel">fehlende Wahrscheinlichkeit = 100 % − alle anderen</div>
+      <div class="beispielaufgabe schritt"><b>Musterbeispiel:</b> Glücksrad: P(rot) = 50 %, P(blau) = 30 %, sonst gelb
+        <div class="schritte">50 % + 30 % = 80 %<br>100 % − 80 % = 20 %<br>P(gelb) = 20 %</div>
+      </div>
     </div>
-    <p class="schritt" id="summeSatz" style="margin-top:.8rem"></p>
-    <div class="vernetzen schritt">Zeige am <strong>Streifen</strong> der Klasse: Warum ist er immer ganz gefüllt?</div>
-    <div class="hinweis">Der Streifen in der Klassentabelle ist immer voll: Ein Wurf landet immer in einer der Lagen. Das ist die anschauliche Begründung für „zusammen 100 %“.</div>
+    <div class="lueckenbeispiel schritt"><strong>Jetzt du:</strong> Kronkorken: P(oben) = 35 % → P(unten) = 100 % − ___ % = ___ %</div>
+    <div class="hinweis">Lösung Lückenbeispiel: 100 % − 35 % = 65 %. Per 🎲 kontrollieren.</div>
   </section>
 
-  <!-- Übung -->
-  <section class="folie" data-phase="Übung">
-    <div class="kennung">Übung</div>
-    <h2>Jetzt du!</h2>
-    <div class="uebung">
-      <div class="zeile"><div class="n">a</div><div>
-        <div class="frage">Ein Kronkorken: P(Öffnung oben) = 0,35. Wie groß ist P(Öffnung unten)?</div>
-        <div class="antwort schritt">1 − 0,35 = <strong>0,65</strong> = 65 %</div>
-      </div></div>
-      <div class="zeile"><div class="n">b</div><div>
-        <div class="frage">Glücksrad: P(rot) = 50 %, P(blau) = 30 %. Es gibt nur noch Gelb. P(gelb) = ?</div>
-        <div class="antwort schritt">100 % − 50 % − 30 % = <strong>20 %</strong></div>
-      </div></div>
-      <div class="zeile"><div class="n">c</div><div>
-        <div class="frage">Lea schreibt für ihren Baustein: 40 %, 30 %, 20 %, 20 %. Was ist falsch?</div>
-        <div class="antwort schritt">Zusammen sind es 110 %. Das geht nicht, es müssen 100 % sein.</div>
-      </div></div>
+  <section class="folie" data-ipad="gruen" data-phase="Übung" data-minuten="7">
+    <div class="kennung">Übung<span class="eis" data-eis="S"></span></div>
+    <h2>Jetzt rechnest du!</h2>
+    <p class="auftrag">Rechne im Heft – erst die Mix-Aufgabe, dann so weit du kommst.</p>
+    <ol class="aufgaben">
+      <li data-niveau="mix" data-loesung="0,4 · 10 = 4">Urne mit 10 Kugeln: 100 Züge, 40-mal rot. Wie viele rote Kugeln?</li>
+      <li data-niveau="1" data-loesung="100 % − 35 % = 65 %">Kronkorken: P(Öffnung oben) = 35 %. P(Öffnung unten) in %?</li>
+      <li data-niveau="1" data-loesung="100 − 50 − 30 = 20 %">Glücksrad: P(rot) = 50 %, P(blau) = 30 %, sonst gelb. P(gelb) in %?</li>
+      <li data-niveau="2" data-loesung="110 % – zu viel! Es müssen genau 100 % sein.">Lea schreibt für ihren Baustein: 40 %, 30 %, 20 %, 20 %. Wie viel Prozent sind das zusammen?</li>
+      <li data-niveau="3" data-loesung="100 − 40 − 30 − 25 = 5 %">Legostein: Noppen oben 40 %, Noppen unten 30 %, lange Seiten zusammen 25 %. P(kurze Seiten zusammen)?</li>
+    </ol>
+    <p class="klein">Weiter: 📖 Parallelo 8 <span class="platzhalter">[BUCH: S. __ Nr. __]</span> · <a class="schuelerlink" href="../schueler/stunde-08.html" target="_blank">📱 Schülerseite</a></p>
+    <div class="merk kompakt">
+      <h3>Merke</h3>
+      <div class="formel">alle zusammen = 1 = 100 %</div>
+      <p>Fehlende Wahrscheinlichkeit: 100 % minus alle anderen</p>
+      <div class="beispielaufgabe"><b>Beispiel:</b> P(Kopf) = 0,62
+        <div class="schritte">P(Seite) = 1 − 0,62<br>= 0,38 = 38 %</div>
+      </div>
     </div>
-    <p class="schritt" style="margin-top:.8rem">Weiter üben: <a class="schuelerlink" href="../schueler/stunde-08.html" target="_blank">📱 Schülerseite · Stunde 8</a></p>
-    <div class="hinweis">c) ist eine Fehleranalyse wie bei Jonas. Den Fehler erklären lassen, nicht nur verbessern.</div>
+    <div class="hinweis">Lösungen einzeln aufdecken oder „Alle Lösungen zeigen“. Wer fertig ist: Buch oder Schülerseite. Taschenrechner erlaubt.</div>
   </section>
 
-  <!-- Reflexion -->
-  <section class="folie" data-phase="Reflexion">
+  <section class="folie" data-phase="Reflexion" data-minuten="6">
     <div class="kennung">Zurück zum Problem · Reflexion</div>
-    <h2>Jonas hat nicht recht: Der Legostein ist kein fairer Würfel.</h2>
-    <div class="zweispaltig">
+    <h2>Jetzt können wir es!</h2>
+    <div class="frage-gross">Hat jede Seite des Legosteins 1/6?</div>
+    <p class="schritt"><strong>Antwort:</strong> Nein: Die Seiten sind verschieden groß – „Noppen oben“ kommt viel öfter als „kurze Seite“. 1/6 gilt nur, wenn alle Seiten die gleiche Chance haben.</p>
+    <div class="exit-qr">
+      <div data-qr="../schueler/exit-08.html"></div>
       <div>
-        <div class="kasten">
-          <p style="margin:0 0 .3rem"><strong>🎫 Exit-Ticket:</strong></p>
-          <p style="margin:0">Vervollständige: „Jonas’ Fehler ist …, weil …“</p>
-        </div>
-        <p class="klein" style="margin-top:1rem">Nächste Stunde: Zweimal hintereinander. Ist das Doppel-Münz-Spiel fair?</p>
-      </div>
-      <div>
-        <div class="ampel-legende"><span>🟢 sicher</span><span>🟡 fast</span><span>🔴 noch nicht</span></div>
-        <div class="ampel">
-          <div class="zeile"><span>Ich kann erklären, wann man „1 durch Anzahl der Seiten“ rechnen darf.</span></div>
-          <div class="zeile"><span>Ich weiß, dass alle Wahrscheinlichkeiten zusammen 1 ergeben.</span></div>
-          <div class="zeile"><span>Ich kann eine fehlende Wahrscheinlichkeit berechnen.</span></div>
-        </div>
+        <p style="margin-top:0;font-size:1.4rem"><strong>🎫 Exit-Ticket</strong></p>
+        <p>Scanne den Code. Gib dein <strong>Kürzel</strong> ein. Zeig mir am Ende deinen QR-Code.</p>
+        <p class="klein">Nächste Stunde: Zweimal hintereinander. Ist das Doppel-Münz-Spiel fair?</p>
       </div>
     </div>
-    <div class="hinweis">Rückmeldung zur Gruppenarbeit: Hat jede Rolle funktioniert? Kurze Runde, 1 Satz pro Gruppe.</div>
+    <div class="hinweis">Vermutung vom Anfang zeigen: Wer lag richtig? Dann 4 Min. Exit-Ticket. „Ticket an der Tür“: QR-Codes beim Rausgehen mit der Handy-Kamera scannen → Auswertung.</div>
   </section>
 
 </div>
-<script src="../../../../praesentation.js"></script>
+<script src="../../../../praesentation.js?v=15"></script>
+<script src="../../../../qr.js"></script>
+<script>
+  // Fehlende Elemente (Folie entfernt) dürfen die übrigen Modelle nicht stoppen
+  (function () {
+    const g = document.getElementById.bind(document);
+    const ablage = document.createElement("section"); ablage.className = "folie";
+    document.getElementById = id => g(id) || ablage.appendChild(document.createElement("div"));
+  })();
+</script>
 <script>
   (function () {
     const SPEICHER = "mathe-k8-hs-baustein";

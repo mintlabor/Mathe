@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Exit-Ticket: Der Baustein-Würfel – Stunde 8</title>
+<link rel="stylesheet" href="../../../../schueler.css">
+</head>
+<body>
+<header><div class="inner">
+  <div class="pfad"><a href="./">🗺️ Lernlandkarte</a> › <a href="stunde-08.html">Stunde 8</a> › Exit-Ticket</div>
+  <h1>🎫 Exit-Ticket</h1>
+  <p class="untertitel">Stunde 8 · Der Baustein-Würfel</p>
+</div></header>
+<main>
+  <div id="exit"></div>
+</main>
+<script type="application/json" id="exit-daten">
+{
+  "titel": "Der Baustein-Würfel",
+  "stunde": 8,
+  "lernziele": [
+    {
+      "text": "Ich kann erklären, wann man „1 durch Anzahl der Seiten“ rechnen darf.",
+      "foerdern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ● Basis",
+      "fordern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ●●● Profi"
+    },
+    {
+      "text": "Ich weiß, dass alle Wahrscheinlichkeiten zusammen 1 ergeben.",
+      "foerdern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ● Basis",
+      "fordern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ●●● Profi"
+    },
+    {
+      "text": "Ich kann eine fehlende Wahrscheinlichkeit berechnen.",
+      "foerdern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ● Basis",
+      "fordern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ●●● Profi"
+    }
+  ],
+  "fehlertypen": {
+    "laplace": "1 : Anzahl der Seiten gerechnet, obwohl die Seiten verschieden sind",
+    "summe": "Nicht beachtet, dass alle zusammen 100 % ergeben",
+    "rechnung": "Fehlende Wahrscheinlichkeit falsch berechnet"
+  },
+  "fragen": [
+    {
+      "lz": 0,
+      "typ": "auswahl",
+      "frage": "Jonas’ Fehler ist …",
+      "optionen": [
+        "… dass die Seiten nicht die gleiche Chance haben.",
+        "… dass ein Legostein 8 Seiten hat.",
+        "… gar keiner, 1/6 stimmt."
+      ],
+      "loesung": 0,
+      "erklaerung": "1/6 gilt nur bei gleicher Chance.",
+      "fehler": {
+        "1": "laplace",
+        "2": "laplace"
+      }
+    },
+    {
+      "lz": 1,
+      "typ": "auswahl",
+      "frage": "Welche Angaben können für einen Baustein mit 4 Lagen stimmen?",
+      "optionen": [
+        "50 %, 30 %, 15 %, 5 %",
+        "50 %, 30 %, 20 %, 10 %",
+        "40 %, 30 %, 20 %, 5 %"
+      ],
+      "loesung": 0,
+      "erklaerung": "Zusammen müssen es 100 % sein.",
+      "fehler": {
+        "1": "summe",
+        "2": "summe"
+      }
+    },
+    {
+      "lz": 2,
+      "typ": "zahl",
+      "frage": "P(rot) = 45 %, P(blau) = 35 %, sonst grün. P(grün) in %?",
+      "loesung": 20,
+      "erklaerung": "100 − 45 − 35 = 20 %",
+      "fehler": [
+        {
+          "wert": 80,
+          "id": "rechnung"
+        },
+        {
+          "wert": 10,
+          "id": "rechnung"
+        }
+      ],
+      "einheit": "%"
+    },
+    {
+      "lz": 2,
+      "typ": "zahl",
+      "frage": "P(Kopf) = 0,6. Wie groß ist P(Seite) als Dezimalzahl?",
+      "loesung": 0.4,
+      "erklaerung": "1 − 0,6 = 0,4",
+      "fehler": [
+        {
+          "wert": 0.6,
+          "id": "rechnung"
+        },
+        {
+          "wert": 1.6,
+          "id": "rechnung"
+        }
+      ]
+    }
+  ]
+}
+</script>
+<script src="../../../../qr.js"></script>
+<script src="../../../../exit-ticket.js"></script>
+</body>
+</html>

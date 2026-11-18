@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Exit-Ticket: Zufall oder nicht? – Stunde 1</title>
+<link rel="stylesheet" href="../../../../schueler.css">
+</head>
+<body>
+<header><div class="inner">
+  <div class="pfad"><a href="./">🗺️ Lernlandkarte</a> › <a href="stunde-01.html">Stunde 1</a> › Exit-Ticket</div>
+  <h1>🎫 Exit-Ticket</h1>
+  <p class="untertitel">Stunde 1 · Zufall oder nicht?</p>
+</div></header>
+<main>
+  <div id="exit"></div>
+</main>
+<script type="application/json" id="exit-daten">
+{
+  "titel": "Zufall oder nicht?",
+  "stunde": 1,
+  "lernziele": [
+    {
+      "text": "Ich kann erklären, was ein Zufallsexperiment ist.",
+      "foerdern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ● Basis",
+      "fordern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ●●● Profi"
+    },
+    {
+      "text": "Ich kann alle möglichen Ergebnisse in { } aufschreiben.",
+      "foerdern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ● Basis",
+      "fordern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ●●● Profi"
+    },
+    {
+      "text": "Ich kann „sicher“, „möglich“ und „unmöglich“ unterscheiden.",
+      "foerdern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ● Basis",
+      "fordern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ●●● Profi"
+    }
+  ],
+  "fehlertypen": {
+    "kein_zufall": "Zufall mit Können oder Entscheiden verwechselt",
+    "menge": "Mögliche Ergebnisse unvollständig",
+    "sicher": "sicher / möglich / unmöglich verwechselt"
+  },
+  "fragen": [
+    {
+      "lz": 0,
+      "typ": "auswahl",
+      "frage": "Welcher Vorgang ist ein Zufallsexperiment?",
+      "optionen": [
+        "Einen Würfel werfen",
+        "Die Uhrzeit ablesen",
+        "Die Lehrkraft entscheidet"
+      ],
+      "loesung": 0,
+      "erklaerung": "Beim Würfeln weiß man vorher nicht, was kommt.",
+      "fehler": {
+        "1": "kein_zufall",
+        "2": "kein_zufall"
+      }
+    },
+    {
+      "lz": 1,
+      "typ": "auswahl",
+      "frage": "Welche Menge enthält alle möglichen Ergebnisse beim Würfeln?",
+      "optionen": [
+        "{ 1, 2, 3, 4, 5, 6 }",
+        "{ 1, 6 }",
+        "{ 6 }"
+      ],
+      "loesung": 0,
+      "erklaerung": "Ein Würfel hat 6 Ergebnisse.",
+      "fehler": {
+        "1": "menge",
+        "2": "menge"
+      }
+    },
+    {
+      "lz": 2,
+      "typ": "auswahl",
+      "frage": "Beim Würfeln fällt eine Zahl kleiner als 7.",
+      "optionen": [
+        "sicher",
+        "möglich",
+        "unmöglich"
+      ],
+      "loesung": 0,
+      "erklaerung": "Jede Würfelzahl ist kleiner als 7.",
+      "fehler": {
+        "1": "sicher",
+        "2": "sicher"
+      }
+    },
+    {
+      "lz": 2,
+      "typ": "auswahl",
+      "frage": "Aus einer Tüte mit nur roten Gummibärchen ziehe ich ein grünes.",
+      "optionen": [
+        "sicher",
+        "möglich",
+        "unmöglich"
+      ],
+      "loesung": 2,
+      "erklaerung": "Es gibt kein grünes in der Tüte.",
+      "fehler": {
+        "0": "sicher",
+        "1": "sicher"
+      }
+    }
+  ]
+}
+</script>
+<script src="../../../../qr.js"></script>
+<script src="../../../../exit-ticket.js"></script>
+</body>
+</html>

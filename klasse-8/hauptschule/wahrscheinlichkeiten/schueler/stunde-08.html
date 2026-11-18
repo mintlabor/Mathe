@@ -13,59 +13,210 @@
   <p class="untertitel">Stunde 8 · Alle Wahrscheinlichkeiten zusammen ergeben 1</p>
 </div></header>
 <main>
-  <div class="box">
-    <strong>📘 Erinnerung</strong><br>
-    Alle Wahrscheinlichkeiten zusammen = 1 = 100 %<br>
-    Fehlende Wahrscheinlichkeit = 100 % minus alle anderen<br>
-    „1 durch Anzahl der Seiten“ nur, wenn alle Seiten die <strong>gleiche Chance</strong> haben.
-  </div>
   <div id="ziele"></div>
-  <h2>Aufgaben</h2>
+
+  <h2>✏️ Aufgaben</h2>
+  <div class="box merkkasten">
+    <h3>📘 Merke</h3>
+    <p>„1 : Anzahl der Seiten“ darf man nur rechnen, wenn alle Ergebnisse die <strong>gleiche Chance</strong> haben. Die Wahrscheinlichkeiten <strong>aller</strong> Ergebnisse ergeben zusammen immer <strong>1 = 100 %</strong>.</p>
+    <div class="formel">fehlende Wahrscheinlichkeit = 100 % − alle anderen</div>
+    <div class="beispielaufgabe">
+      <strong>Beispiel:</strong> Glücksrad: P(rot) = 50 %, P(blau) = 30 %, sonst gelb
+      <div class="schritte">50 % + 30 % = 80 %<br>100 % − 80 % = 20 %<br>P(gelb) = 20 %</div>
+    </div>
+  </div>
+  <p class="klein">Rechne jede Aufgabe zuerst im Heft. Trage dann dein Ergebnis ein und prüfe es.</p>
   <div id="niveaus"></div>
   <div id="fortschritt"></div>
   <div id="aufgaben"></div>
+
+  <h2>📖 Weiterarbeit im Buch</h2>
+  <div class="box buch">
+    <h3>Parallelo 8</h3>
+    <ul>
+      <li>● Basis: <span class="platzhalter">[BUCH: S. __ Nr. __]</span></li>
+      <li>●● Standard: <span class="platzhalter">[BUCH: S. __ Nr. __]</span></li>
+      <li>●●● Profi: <span class="platzhalter">[BUCH: S. __ Nr. __]</span></li>
+    </ul>
+    <p class="klein">Fertig mit den Aufgaben oben? Dann rechne im Buch weiter.</p>
+  </div>
+
   <h2>Wie sicher bist du jetzt?</h2>
   <div id="ampel"></div>
-  <p><a href="./">← Zurück zur Lernlandkarte</a></p>
+  <p><a href="exit-08.html">🎫 Weiter zum Exit-Ticket →</a> · <a href="./">← Lernlandkarte</a></p>
 </main>
 <script>
+// Die ersten Aufgaben = Aufgabenfolie der Präsentation; danach Zusatzaufgaben
 window.SEITE = {
-  speicher: "mathe-k8-hs-wk", stunde: 8,
-  lernziele: ["erklären, wann man „1 durch Anzahl der Seiten“ rechnen darf", "wissen, dass alle Wahrscheinlichkeiten zusammen 1 ergeben", "eine fehlende Wahrscheinlichkeit berechnen"],
-  ichKann: ["Ich kann erklären, wann man „1 durch Anzahl der Seiten“ rechnen darf.", "Ich weiß, dass alle Wahrscheinlichkeiten zusammen 1 ergeben.", "Ich kann eine fehlende Wahrscheinlichkeit berechnen."],
-  aufgaben: [
-    { niveau: 1, typ: "zahl", einheit: "%", frage: "Eine Heftzwecke: P(Kopf) = 60 %. Wie groß ist P(Seite)?",
-      loesung: 40,
-      tipps: ["Es gibt nur zwei Lagen.", "100 % − 60 % = ?"],
-      erklaerung: "100 % − 60 % = 40 %." },
-    { niveau: 1, typ: "zahl", frage: "Ein Kronkorken: P(Öffnung oben) = 0,3. Wie groß ist P(Öffnung unten)? (als Dezimalzahl)",
-      loesung: 0.7,
-      tipps: ["Zusammen muss 1 herauskommen.", "1 − 0,3 = ?"],
-      erklaerung: "1 − 0,3 = 0,7." },
-    { niveau: 1, typ: "auswahl", frage: "Bei welchem Gegenstand darfst du „1 durch Anzahl der Seiten“ rechnen?",
-      optionen: ["Legostein", "normaler Spielwürfel", "Streichholzschachtel"], loesung: 1,
-      tipps: ["Bei welchem Gegenstand sind alle Seiten gleich?"],
-      erklaerung: "Beim normalen Würfel sind alle Seiten gleich. Nur dann hat jede Seite <sup>1</sup>/<sub>6</sub>." },
-    { niveau: 2, typ: "zahl", einheit: "%", frage: "Glücksrad: P(rot) = 45 %, P(grün) = 35 %. Die restlichen Felder sind blau. P(blau) = ?",
-      loesung: 20,
-      tipps: ["100 % − 45 % − 35 % = ?"],
-      erklaerung: "100 % − 45 % − 35 % = 20 %." },
-    { niveau: 2, typ: "auswahl", frage: "Tom notiert für seine Schachtel: Fläche 65 %, Seite 30 %, Stirn 15 %. Was stimmt?",
-      optionen: ["Das kann stimmen.", "Das kann nicht stimmen, zusammen sind es 110 %.", "Das kann nicht stimmen, Stirn muss 0 % sein."], loesung: 1,
-      tipps: ["Addiere die drei Werte."],
-      erklaerung: "65 % + 30 % + 15 % = 110 %. Alle zusammen müssen aber genau 100 % sein." },
-    { niveau: 2, typ: "zahl", frage: "Ein Baustein wurde 50-mal geworfen: Noppen oben 20, Noppen unten 12, lange Seite 15. Wie oft kam die kurze Seite?",
-      loesung: 3,
-      tipps: ["Alle vier Anzahlen zusammen sind 50.", "50 − 20 − 12 − 15 = ?"],
-      erklaerung: "50 − 20 − 12 − 15 = 3. Die kurze Seite kam 3-mal." },
-    { niveau: 3, typ: "zahl", einheit: "%", frage: "Baustein: P(Noppen oben) = 35 %, P(Noppen unten) = 25 %. Die lange und die kurze Seite zusammen? ",
-      loesung: 40,
-      tipps: ["100 % − 35 % − 25 % = ?"],
-      erklaerung: "100 % − 35 % − 25 % = 40 %. So viel bleibt für beide Seiten zusammen." },
-    { niveau: 3, typ: "auswahl", frage: "Mia: „Ein Kronkorken hat 2 Lagen, also ist P(oben) = <sup>1</sup>/<sub>2</sub>.“ Welche Erklärung zeigt ihren Fehler am besten?",
-      optionen: ["Sie hätte <sup>1</sup>/<sub>3</sub> rechnen müssen.", "Die zwei Lagen haben nicht unbedingt die gleiche Chance, weil der Kronkorken oben und unten verschieden ist.", "Ein Kronkorken ist kein Zufallsexperiment."], loesung: 1,
-      tipps: ["Wann darf man „1 durch Anzahl der Lagen“ rechnen?"],
-      erklaerung: "Mia rechnet wie bei einem Laplace-Experiment. Der Kronkorken ist aber oben und unten verschieden geformt. Man muss durch viele Würfe schätzen." }
+  "speicher": "mathe-k8-hs-wk",
+  "stunde": 8,
+  "lernziele": [
+    "erklären, wann man „1 durch Anzahl der Seiten“ rechnen darf",
+    "wissen, dass alle Wahrscheinlichkeiten zusammen 1 ergeben",
+    "eine fehlende Wahrscheinlichkeit berechnen"
+  ],
+  "ichKann": [
+    "Ich kann erklären, wann man „1 durch Anzahl der Seiten“ rechnen darf.",
+    "Ich weiß, dass alle Wahrscheinlichkeiten zusammen 1 ergeben.",
+    "Ich kann eine fehlende Wahrscheinlichkeit berechnen."
+  ],
+  "aufgaben": [
+    {
+      "typ": "zahl",
+      "loesung": 4,
+      "tipps": [
+        "40 : 100 = ?",
+        "· 10"
+      ],
+      "frage": "🔀 Mix: Urne mit 10 Kugeln: 100 Züge, 40-mal rot. Wie viele rote Kugeln?",
+      "niveau": 1,
+      "erklaerung": "0,4 · 10 = 4"
+    },
+    {
+      "typ": "zahl",
+      "loesung": 65,
+      "tipps": [
+        "Zusammen 100 %."
+      ],
+      "einheit": "%",
+      "frage": "Kronkorken: P(Öffnung oben) = 35 %. P(Öffnung unten) in %?",
+      "niveau": 1,
+      "erklaerung": "100 % − 35 % = 65 %"
+    },
+    {
+      "typ": "zahl",
+      "loesung": 20,
+      "tipps": [
+        "Schau dir das Beispiel im Merkkasten an."
+      ],
+      "einheit": "%",
+      "frage": "Glücksrad: P(rot) = 50 %, P(blau) = 30 %, sonst gelb. P(gelb) in %?",
+      "niveau": 1,
+      "erklaerung": "100 − 50 − 30 = 20 %"
+    },
+    {
+      "typ": "zahl",
+      "loesung": 110,
+      "tipps": [
+        "Addiere."
+      ],
+      "einheit": "%",
+      "erklaerung": "40 + 30 + 20 + 20 = 110 % – das geht nicht, es müssen 100 % sein.",
+      "frage": "Lea schreibt für ihren Baustein: 40 %, 30 %, 20 %, 20 %. Wie viel Prozent sind das zusammen?",
+      "niveau": 2
+    },
+    {
+      "typ": "zahl",
+      "loesung": 5,
+      "tipps": [
+        "100 % minus alle anderen."
+      ],
+      "einheit": "%",
+      "frage": "Legostein: Noppen oben 40 %, Noppen unten 30 %, lange Seiten zusammen 25 %. P(kurze Seiten zusammen)?",
+      "niveau": 3,
+      "erklaerung": "100 − 40 − 30 − 25 = 5 %"
+    },
+    {
+      "niveau": 1,
+      "typ": "zahl",
+      "einheit": "%",
+      "frage": "Eine Heftzwecke: P(Kopf) = 60 %. Wie groß ist P(Seite)?",
+      "loesung": 40,
+      "tipps": [
+        "Es gibt nur zwei Lagen.",
+        "100 % − 60 % = ?"
+      ],
+      "erklaerung": "100 % − 60 % = 40 %."
+    },
+    {
+      "niveau": 1,
+      "typ": "zahl",
+      "frage": "Ein Kronkorken: P(Öffnung oben) = 0,3. Wie groß ist P(Öffnung unten)? (als Dezimalzahl)",
+      "loesung": 0.7,
+      "tipps": [
+        "Zusammen muss 1 herauskommen.",
+        "1 − 0,3 = ?"
+      ],
+      "erklaerung": "1 − 0,3 = 0,7."
+    },
+    {
+      "niveau": 1,
+      "typ": "auswahl",
+      "frage": "Bei welchem Gegenstand darfst du „1 durch Anzahl der Seiten“ rechnen?",
+      "optionen": [
+        "Legostein",
+        "normaler Spielwürfel",
+        "Streichholzschachtel"
+      ],
+      "loesung": 1,
+      "tipps": [
+        "Bei welchem Gegenstand sind alle Seiten gleich?"
+      ],
+      "erklaerung": "Beim normalen Würfel sind alle Seiten gleich. Nur dann hat jede Seite <sup>1</sup>/<sub>6</sub>."
+    },
+    {
+      "niveau": 2,
+      "typ": "zahl",
+      "einheit": "%",
+      "frage": "Glücksrad: P(rot) = 45 %, P(grün) = 35 %. Die restlichen Felder sind blau. P(blau) = ?",
+      "loesung": 20,
+      "tipps": [
+        "100 % − 45 % − 35 % = ?"
+      ],
+      "erklaerung": "100 % − 45 % − 35 % = 20 %."
+    },
+    {
+      "niveau": 2,
+      "typ": "auswahl",
+      "frage": "Tom notiert für seine Schachtel: Fläche 65 %, Seite 30 %, Stirn 15 %. Was stimmt?",
+      "optionen": [
+        "Das kann stimmen.",
+        "Das kann nicht stimmen, zusammen sind es 110 %.",
+        "Das kann nicht stimmen, Stirn muss 0 % sein."
+      ],
+      "loesung": 1,
+      "tipps": [
+        "Addiere die drei Werte."
+      ],
+      "erklaerung": "65 % + 30 % + 15 % = 110 %. Alle zusammen müssen aber genau 100 % sein."
+    },
+    {
+      "niveau": 2,
+      "typ": "zahl",
+      "frage": "Ein Baustein wurde 50-mal geworfen: Noppen oben 20, Noppen unten 12, lange Seite 15. Wie oft kam die kurze Seite?",
+      "loesung": 3,
+      "tipps": [
+        "Alle vier Anzahlen zusammen sind 50.",
+        "50 − 20 − 12 − 15 = ?"
+      ],
+      "erklaerung": "50 − 20 − 12 − 15 = 3. Die kurze Seite kam 3-mal."
+    },
+    {
+      "niveau": 3,
+      "typ": "zahl",
+      "einheit": "%",
+      "frage": "Baustein: P(Noppen oben) = 35 %, P(Noppen unten) = 25 %. Die lange und die kurze Seite zusammen? ",
+      "loesung": 40,
+      "tipps": [
+        "100 % − 35 % − 25 % = ?"
+      ],
+      "erklaerung": "100 % − 35 % − 25 % = 40 %. So viel bleibt für beide Seiten zusammen."
+    },
+    {
+      "niveau": 3,
+      "typ": "auswahl",
+      "frage": "Mia: „Ein Kronkorken hat 2 Lagen, also ist P(oben) = <sup>1</sup>/<sub>2</sub>.“ Welche Erklärung zeigt ihren Fehler am besten?",
+      "optionen": [
+        "Sie hätte <sup>1</sup>/<sub>3</sub> rechnen müssen.",
+        "Die zwei Lagen haben nicht unbedingt die gleiche Chance, weil der Kronkorken oben und unten verschieden ist.",
+        "Ein Kronkorken ist kein Zufallsexperiment."
+      ],
+      "loesung": 1,
+      "tipps": [
+        "Wann darf man „1 durch Anzahl der Lagen“ rechnen?"
+      ],
+      "erklaerung": "Mia rechnet wie bei einem Laplace-Experiment. Der Kronkorken ist aber oben und unten verschieden geformt. Man muss durch viele Würfe schätzen."
+    }
   ]
 };
 </script>

@@ -13,58 +13,224 @@
   <p class="untertitel">Stunde 5 · Wahrscheinlichkeit als Zahl von 0 bis 1</p>
 </div></header>
 <main>
-  <div class="box">
-    <strong>📘 Erinnerung</strong><br>
-    0 = unmöglich · 1 = sicher · Bruch → Dezimalzahl: Zähler : Nenner · Dezimalzahl → Prozent: mal 100<br>
-    Beispiel: <sup>1</sup>/<sub>4</sub> = 1 : 4 = 0,25 = 25 %
-  </div>
   <div id="ziele"></div>
-  <h2>Aufgaben</h2>
+
+  <h2>✏️ Aufgaben</h2>
+  <div class="box merkkasten">
+    <h3>📘 Merke</h3>
+    <p>Eine Wahrscheinlichkeit ist eine Zahl von <strong>0</strong> (unmöglich) bis <strong>1</strong> (sicher). Vergleichen: Alle Zahlen erst in <strong>dieselbe Form</strong> bringen – am einfachsten Prozent.</p>
+    <div class="formel">Bruch → Zähler : Nenner → · 100 → Prozent</div>
+    <div class="beispielaufgabe">
+      <strong>Beispiel:</strong> 1/4 umrechnen
+      <div class="schritte">1 : 4 = 0,25<br>0,25 · 100 = 25 %<br>1/4 = 0,25 = 25 %</div>
+    </div>
+  </div>
+  <p class="klein">Rechne jede Aufgabe zuerst im Heft. Trage dann dein Ergebnis ein und prüfe es.</p>
   <div id="niveaus"></div>
   <div id="fortschritt"></div>
   <div id="aufgaben"></div>
+
+  <h2>📖 Weiterarbeit im Buch</h2>
+  <div class="box buch">
+    <h3>Parallelo 8</h3>
+    <ul>
+      <li>● Basis: <span class="platzhalter">[BUCH: S. __ Nr. __]</span></li>
+      <li>●● Standard: <span class="platzhalter">[BUCH: S. __ Nr. __]</span></li>
+      <li>●●● Profi: <span class="platzhalter">[BUCH: S. __ Nr. __]</span></li>
+    </ul>
+    <p class="klein">Fertig mit den Aufgaben oben? Dann rechne im Buch weiter.</p>
+  </div>
+
   <h2>Wie sicher bist du jetzt?</h2>
   <div id="ampel"></div>
-  <p><a href="./">← Zurück zur Lernlandkarte</a></p>
+  <p><a href="exit-05.html">🎫 Weiter zum Exit-Ticket →</a> · <a href="./">← Lernlandkarte</a></p>
 </main>
 <script>
+// Die ersten Aufgaben = Aufgabenfolie der Präsentation; danach Zusatzaufgaben
 window.SEITE = {
-  speicher: "mathe-k8-hs-wk", stunde: 5,
-  lernziele: ["eine Wahrscheinlichkeit auf der Skala von 0 bis 1 einordnen", "Wahrscheinlichkeiten als Bruch, Dezimalzahl und Prozent schreiben", "Wahrscheinlichkeiten in verschiedenen Schreibweisen vergleichen"],
-  ichKann: ["Ich kann eine Wahrscheinlichkeit auf der Skala von 0 bis 1 einordnen.", "Ich kann eine Wahrscheinlichkeit als Bruch, Dezimalzahl und Prozent schreiben.", "Ich kann Wahrscheinlichkeiten in verschiedenen Schreibweisen vergleichen."],
-  aufgaben: [
-    { niveau: 1, typ: "auswahl", frage: "Welche Wahrscheinlichkeit hat ein <strong>unmögliches</strong> Ereignis?",
-      optionen: ["0", "0,5", "1"], loesung: 0,
-      tipps: ["Unmöglich ist das linke Ende der Skala."],
-      erklaerung: "0. Unmöglich bedeutet: Es passiert nie. Darum ist die Wahrscheinlichkeit 0." },
-    { niveau: 1, typ: "zahl", einheit: "%", frage: "Schreibe <sup>1</sup>/<sub>2</sub> in Prozent.",
-      loesung: 50,
-      tipps: ["1 : 2 = 0,5", "0,5 · 100 = ?"],
-      erklaerung: "1 : 2 = 0,5 und 0,5 · 100 = 50. Also <sup>1</sup>/<sub>2</sub> = 50 %." },
-    { niveau: 1, typ: "zahl", frage: "Schreibe 75 % als Dezimalzahl.",
-      loesung: 0.75,
-      tipps: ["Prozent → Dezimalzahl: durch 100 teilen.", "75 : 100 = ?"],
-      erklaerung: "75 : 100 = 0,75." },
-    { niveau: 2, typ: "zahl", einheit: "%", frage: "Schreibe <sup>3</sup>/<sub>5</sub> in Prozent.",
-      loesung: 60,
-      tipps: ["Rechne zuerst 3 : 5.", "3 : 5 = 0,6. Jetzt mal 100."],
-      erklaerung: "3 : 5 = 0,6 = 60 %." },
-    { niveau: 2, typ: "auswahl", frage: "Welche Wahrscheinlichkeit ist am <strong>größten</strong>?",
-      optionen: ["0,35", "<sup>2</sup>/<sub>5</sub>", "38 %"], loesung: 1,
-      tipps: ["Schreibe alle drei in Prozent.", "<sup>2</sup>/<sub>5</sub> = 2 : 5 = 0,4"],
-      erklaerung: "0,35 = 35 %, <sup>2</sup>/<sub>5</sub> = 0,4 = 40 %, 38 %. Am größten ist <sup>2</sup>/<sub>5</sub>." },
-    { niveau: 2, typ: "auswahl", frage: "Die Regenwahrscheinlichkeit ist 0,9. Was bedeutet das?",
-      optionen: ["Es regnet ganz sicher.", "Regen ist sehr wahrscheinlich, aber nicht sicher.", "Es regnet 90 % des Tages."], loesung: 1,
-      tipps: ["Sicher wäre 1. Ist 0,9 gleich 1?"],
-      erklaerung: "0,9 = 90 % ist fast sicher, aber nicht ganz. An etwa 9 von 10 solchen Tagen regnet es." },
-    { niveau: 3, typ: "zahl", einheit: "%", frage: "Nutze den Taschenrechner: Schreibe <sup>1</sup>/<sub>8</sub> in Prozent. (Komma erlaubt)",
-      loesung: 12.5,
-      tipps: ["1 : 8 = 0,125", "0,125 · 100 = ?"],
-      erklaerung: "1 : 8 = 0,125 = 12,5 %." },
-    { niveau: 3, typ: "auswahl", frage: "Torwart Ben hält 6 von 20 Elfmetern. Torwartin Lea hält 30 % der Elfmeter. Wer ist besser?",
-      optionen: ["Ben", "Lea", "Beide sind gleich gut."], loesung: 2,
-      tipps: ["Schreibe <sup>6</sup>/<sub>20</sub> in Prozent.", "6 : 20 = 0,3"],
-      erklaerung: "6 : 20 = 0,3 = 30 %. Beide halten gleich gut." }
+  "speicher": "mathe-k8-hs-wk",
+  "stunde": 5,
+  "lernziele": [
+    "eine Wahrscheinlichkeit auf der Skala von 0 bis 1 einordnen",
+    "Wahrscheinlichkeiten als Bruch, Dezimalzahl und Prozent schreiben",
+    "Wahrscheinlichkeiten in verschiedenen Schreibweisen vergleichen"
+  ],
+  "ichKann": [
+    "Ich kann eine Wahrscheinlichkeit auf der Skala von 0 bis 1 einordnen.",
+    "Ich kann eine Wahrscheinlichkeit als Bruch, Dezimalzahl und Prozent schreiben.",
+    "Ich kann Wahrscheinlichkeiten in verschiedenen Schreibweisen vergleichen."
+  ],
+  "aufgaben": [
+    {
+      "typ": "zahl",
+      "loesung": 10,
+      "tipps": [
+        "60 : 6"
+      ],
+      "frage": "🔀 Mix: Ein Würfel wird 60-mal geworfen. Wie oft erwartest du ungefähr eine Sechs?",
+      "niveau": 1,
+      "erklaerung": "60 : 6 = 10-mal"
+    },
+    {
+      "typ": "zahl",
+      "loesung": 50,
+      "tipps": [
+        "1 : 2 = ?"
+      ],
+      "einheit": "%",
+      "frage": "Schreibe 1/2 in Prozent.",
+      "niveau": 1,
+      "erklaerung": "1 : 2 = 0,5 = 50 %"
+    },
+    {
+      "typ": "zahl",
+      "loesung": 0.6,
+      "tipps": [
+        "3 : 5 = ?"
+      ],
+      "frage": "Schreibe 3/5 als Dezimalzahl.",
+      "niveau": 1,
+      "erklaerung": "3 : 5 = 0,6"
+    },
+    {
+      "typ": "auswahl",
+      "optionen": [
+        "0,4",
+        "1/2",
+        "35 %"
+      ],
+      "loesung": 1,
+      "tipps": [
+        "Rechne alle in Prozent um."
+      ],
+      "erklaerung": "0,4 = 40 %, 1/2 = 50 %, 35 % → 1/2 ist am größten.",
+      "frage": "Welche Zahl ist am größten: 0,4 · 1/2 · 35 %?",
+      "niveau": 2
+    },
+    {
+      "typ": "auswahl",
+      "optionen": [
+        "der Spieler",
+        "die Spielerin",
+        "beide gleich"
+      ],
+      "loesung": 1,
+      "tipps": [
+        "17 : 20 = ?"
+      ],
+      "erklaerung": "17 : 20 = 0,85 = 85 % > 80 %.",
+      "frage": "Elfmeter: Ein Spieler trifft mit 0,8, eine Spielerin mit 17/20. Wer ist sicherer?",
+      "niveau": 3
+    },
+    {
+      "niveau": 1,
+      "typ": "auswahl",
+      "frage": "Welche Wahrscheinlichkeit hat ein <strong>unmögliches</strong> Ereignis?",
+      "optionen": [
+        "0",
+        "0,5",
+        "1"
+      ],
+      "loesung": 0,
+      "tipps": [
+        "Unmöglich ist das linke Ende der Skala."
+      ],
+      "erklaerung": "0. Unmöglich bedeutet: Es passiert nie. Darum ist die Wahrscheinlichkeit 0."
+    },
+    {
+      "niveau": 1,
+      "typ": "zahl",
+      "einheit": "%",
+      "frage": "Schreibe <sup>1</sup>/<sub>2</sub> in Prozent.",
+      "loesung": 50,
+      "tipps": [
+        "1 : 2 = 0,5",
+        "0,5 · 100 = ?"
+      ],
+      "erklaerung": "1 : 2 = 0,5 und 0,5 · 100 = 50. Also <sup>1</sup>/<sub>2</sub> = 50 %."
+    },
+    {
+      "niveau": 1,
+      "typ": "zahl",
+      "frage": "Schreibe 75 % als Dezimalzahl.",
+      "loesung": 0.75,
+      "tipps": [
+        "Prozent → Dezimalzahl: durch 100 teilen.",
+        "75 : 100 = ?"
+      ],
+      "erklaerung": "75 : 100 = 0,75."
+    },
+    {
+      "niveau": 2,
+      "typ": "zahl",
+      "einheit": "%",
+      "frage": "Schreibe <sup>3</sup>/<sub>5</sub> in Prozent.",
+      "loesung": 60,
+      "tipps": [
+        "Rechne zuerst 3 : 5.",
+        "3 : 5 = 0,6. Jetzt mal 100."
+      ],
+      "erklaerung": "3 : 5 = 0,6 = 60 %."
+    },
+    {
+      "niveau": 2,
+      "typ": "auswahl",
+      "frage": "Welche Wahrscheinlichkeit ist am <strong>größten</strong>?",
+      "optionen": [
+        "0,35",
+        "<sup>2</sup>/<sub>5</sub>",
+        "38 %"
+      ],
+      "loesung": 1,
+      "tipps": [
+        "Schreibe alle drei in Prozent.",
+        "<sup>2</sup>/<sub>5</sub> = 2 : 5 = 0,4"
+      ],
+      "erklaerung": "0,35 = 35 %, <sup>2</sup>/<sub>5</sub> = 0,4 = 40 %, 38 %. Am größten ist <sup>2</sup>/<sub>5</sub>."
+    },
+    {
+      "niveau": 2,
+      "typ": "auswahl",
+      "frage": "Die Regenwahrscheinlichkeit ist 0,9. Was bedeutet das?",
+      "optionen": [
+        "Es regnet ganz sicher.",
+        "Regen ist sehr wahrscheinlich, aber nicht sicher.",
+        "Es regnet 90 % des Tages."
+      ],
+      "loesung": 1,
+      "tipps": [
+        "Sicher wäre 1. Ist 0,9 gleich 1?"
+      ],
+      "erklaerung": "0,9 = 90 % ist fast sicher, aber nicht ganz. An etwa 9 von 10 solchen Tagen regnet es."
+    },
+    {
+      "niveau": 3,
+      "typ": "zahl",
+      "einheit": "%",
+      "frage": "Nutze den Taschenrechner: Schreibe <sup>1</sup>/<sub>8</sub> in Prozent. (Komma erlaubt)",
+      "loesung": 12.5,
+      "tipps": [
+        "1 : 8 = 0,125",
+        "0,125 · 100 = ?"
+      ],
+      "erklaerung": "1 : 8 = 0,125 = 12,5 %."
+    },
+    {
+      "niveau": 3,
+      "typ": "auswahl",
+      "frage": "Torwart Ben hält 6 von 20 Elfmetern. Torwartin Lea hält 30 % der Elfmeter. Wer ist besser?",
+      "optionen": [
+        "Ben",
+        "Lea",
+        "Beide sind gleich gut."
+      ],
+      "loesung": 2,
+      "tipps": [
+        "Schreibe <sup>6</sup>/<sub>20</sub> in Prozent.",
+        "6 : 20 = 0,3"
+      ],
+      "erklaerung": "6 : 20 = 0,3 = 30 %. Beide halten gleich gut."
+    }
   ]
 };
 </script>

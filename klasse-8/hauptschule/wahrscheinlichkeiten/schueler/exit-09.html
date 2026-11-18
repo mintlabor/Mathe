@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Exit-Ticket: Zweimal hintereinander – Stunde 9</title>
+<link rel="stylesheet" href="../../../../schueler.css">
+</head>
+<body>
+<header><div class="inner">
+  <div class="pfad"><a href="./">🗺️ Lernlandkarte</a> › <a href="stunde-09.html">Stunde 9</a> › Exit-Ticket</div>
+  <h1>🎫 Exit-Ticket</h1>
+  <p class="untertitel">Stunde 9 · Zweimal hintereinander</p>
+</div></header>
+<main>
+  <div id="exit"></div>
+</main>
+<script type="application/json" id="exit-daten">
+{
+  "titel": "Zweimal hintereinander",
+  "stunde": 9,
+  "lernziele": [
+    {
+      "text": "Ich kann alle Ergebnisse beim Werfen von zwei Münzen aufschreiben.",
+      "foerdern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ● Basis",
+      "fordern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ●●● Profi"
+    },
+    {
+      "text": "Ich kann ein einfaches Baumdiagramm zeichnen.",
+      "foerdern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ● Basis",
+      "fordern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ●●● Profi"
+    },
+    {
+      "text": "Ich kann mit Pfaden eine Wahrscheinlichkeit angeben.",
+      "foerdern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ● Basis",
+      "fordern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ●●● Profi"
+    }
+  ],
+  "fehlertypen": {
+    "drei": "KZ und ZK als ein Ergebnis gezählt",
+    "pfade": "Anzahl der Pfade addiert statt multipliziert",
+    "p": "Wahrscheinlichkeit falsch aus den Pfaden berechnet"
+  },
+  "fragen": [
+    {
+      "lz": 0,
+      "typ": "zahl",
+      "frage": "Zwei Münzen werden geworfen. Wie viele Ergebnisse (Pfade) gibt es?",
+      "loesung": 4,
+      "erklaerung": "KK, KZ, ZK, ZZ",
+      "fehler": [
+        {
+          "wert": 3,
+          "id": "drei"
+        },
+        {
+          "wert": 2,
+          "id": "drei"
+        }
+      ]
+    },
+    {
+      "lz": 1,
+      "typ": "zahl",
+      "frage": "2 Brotsorten und 4 Beläge. Wie viele Pfade hat das Baumdiagramm?",
+      "loesung": 8,
+      "erklaerung": "2 · 4 = 8",
+      "fehler": [
+        {
+          "wert": 6,
+          "id": "pfade"
+        }
+      ]
+    },
+    {
+      "lz": 2,
+      "typ": "zahl",
+      "frage": "Zwei Münzen: P(verschieden) in %?",
+      "loesung": 50,
+      "erklaerung": "KZ, ZK → 2 von 4 = 50 %",
+      "fehler": [
+        {
+          "wert": 33,
+          "id": "drei"
+        },
+        {
+          "wert": 33.3,
+          "id": "drei"
+        },
+        {
+          "wert": 0.5,
+          "id": "p"
+        }
+      ],
+      "einheit": "%"
+    },
+    {
+      "lz": 2,
+      "typ": "auswahl",
+      "frage": "Mia: „Drei Ergebnisse – das Spiel ist unfair.“ Was stimmt?",
+      "optionen": [
+        "KZ und ZK sind zwei Pfade – das Spiel ist fair.",
+        "Mia hat recht.",
+        "Lea gewinnt 2 von 3 Spielen."
+      ],
+      "loesung": 0,
+      "erklaerung": "4 Pfade: Lea 2, Ben 2.",
+      "fehler": {
+        "1": "drei",
+        "2": "drei"
+      }
+    }
+  ]
+}
+</script>
+<script src="../../../../qr.js"></script>
+<script src="../../../../exit-ticket.js"></script>
+</body>
+</html>

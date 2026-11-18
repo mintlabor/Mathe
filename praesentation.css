@@ -681,3 +681,8 @@ ol.aufgaben > li::before { top: .35rem; }
 .formeltabelle { width: 100%; border-collapse: collapse; font-size: 1.05rem; }
 .formeltabelle td { padding: .2rem .5rem; border-bottom: 1px solid rgba(0,0,0,.08); }
 .formeltabelle td:nth-child(even) { font-family: "Cambria Math", Georgia, serif; font-weight: 700; white-space: nowrap; }
+/* Problemfolie: großes Symbolbild, Exit-QR auf der Reflexionsfolie */
+.frage-bild { font-size: 7rem; line-height: 1.1; text-align: center; }
+.frage-bild span { display: inline-block; font-size: 1.4rem; font-weight: 800; letter-spacing: .05em; border: 3px dashed var(--accent, #e8a400); border-radius: 12px; padding: .4rem 1rem; }
+.exit-qr { display: flex; gap: 1.5rem; align-items: center; }
+.exit-qr [data-qr] svg { width: 200px; height: 200px; display: block; border-radius: 8px; }

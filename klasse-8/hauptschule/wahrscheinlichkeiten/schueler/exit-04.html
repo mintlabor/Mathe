@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Exit-Ticket: Je öfter, desto genauer – Stunde 4</title>
+<link rel="stylesheet" href="../../../../schueler.css">
+</head>
+<body>
+<header><div class="inner">
+  <div class="pfad"><a href="./">🗺️ Lernlandkarte</a> › <a href="stunde-04.html">Stunde 4</a> › Exit-Ticket</div>
+  <h1>🎫 Exit-Ticket</h1>
+  <p class="untertitel">Stunde 4 · Je öfter, desto genauer</p>
+</div></header>
+<main>
+  <div id="exit"></div>
+</main>
+<script type="application/json" id="exit-daten">
+{
+  "titel": "Je öfter, desto genauer",
+  "stunde": 4,
+  "lernziele": [
+    {
+      "text": "Ich kann erklären, warum Ergebnisse bei wenigen Versuchen schwanken.",
+      "foerdern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ● Basis",
+      "fordern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ●●● Profi"
+    },
+    {
+      "text": "Ich kann das Gesetz der großen Zahlen mit eigenen Worten erklären.",
+      "foerdern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ● Basis",
+      "fordern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ●●● Profi"
+    },
+    {
+      "text": "Ich kann mit vielen Versuchen eine Wahrscheinlichkeit schätzen.",
+      "foerdern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ● Basis",
+      "fordern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ●●● Profi"
+    }
+  ],
+  "fehlertypen": {
+    "vorhersage": "Glaubt, Zufall gleicht sich sofort aus",
+    "wenige": "Wenigen Versuchen zu sehr vertraut",
+    "rechnung": "Erwartete Anzahl falsch berechnet",
+    "prozent": "Dezimalzahl nicht in Prozent umgerechnet"
+  },
+  "fragen": [
+    {
+      "lz": 0,
+      "typ": "auswahl",
+      "frage": "Tim hat bei 8 Losen nur 1 Gewinn („Jedes 4. Los gewinnt“). Was stimmt?",
+      "optionen": [
+        "Bei wenigen Losen kann es stark schwanken.",
+        "Die Losbude betrügt.",
+        "Er hätte genau 2 Gewinne haben müssen."
+      ],
+      "loesung": 0,
+      "erklaerung": "8 Lose sind zu wenige.",
+      "fehler": {
+        "1": "wenige",
+        "2": "vorhersage"
+      }
+    },
+    {
+      "lz": 1,
+      "typ": "auswahl",
+      "frage": "Jonas: 30 Würfe, 40 % Kopf. Klasse: 600 Würfe, 34 % Kopf. Welchem Wert vertraust du mehr?",
+      "optionen": [
+        "dem Klassenwert",
+        "dem Wert von Jonas",
+        "beiden gleich"
+      ],
+      "loesung": 0,
+      "erklaerung": "Mehr Versuche → genauer.",
+      "fehler": {
+        "1": "wenige",
+        "2": "wenige"
+      }
+    },
+    {
+      "lz": 2,
+      "typ": "zahl",
+      "frage": "Ein Würfel wird 600-mal geworfen. Wie oft erwartest du ungefähr eine Sechs?",
+      "loesung": 100,
+      "erklaerung": "600 : 6 = 100",
+      "fehler": [
+        {
+          "wert": 6,
+          "id": "rechnung"
+        },
+        {
+          "wert": 3600,
+          "id": "rechnung"
+        }
+      ]
+    },
+    {
+      "lz": 2,
+      "typ": "zahl",
+      "frage": "1000 Würfe, 620-mal Kopf. Schätze die Wahrscheinlichkeit für Kopf in %.",
+      "loesung": 62,
+      "erklaerung": "620 : 1000 = 0,62 = 62 %",
+      "fehler": [
+        {
+          "wert": 0.62,
+          "id": "prozent"
+        },
+        {
+          "wert": 620,
+          "id": "rechnung"
+        }
+      ],
+      "einheit": "%"
+    }
+  ]
+}
+</script>
+<script src="../../../../qr.js"></script>
+<script src="../../../../exit-ticket.js"></script>
+</body>
+</html>

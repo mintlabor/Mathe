@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Stunde 9: Zweimal hintereinander – Wahrscheinlichkeiten</title>
-<link rel="stylesheet" href="../../../../praesentation.css">
+<link rel="stylesheet" href="../../../../praesentation.css?v=15">
 <style>
   .sprechblase {
     position: relative; background: var(--card); border: 2px solid var(--text); border-radius: 18px;
@@ -25,19 +25,17 @@
   table.strich td, table.strich th { padding: .35rem .9rem; }
 </style>
 </head>
-<body data-phasen='[["Abrufen",4],["Problem",6],["Experiment",10],["Ideen vergleichen",6],["Sicherung",9],["Übung",6],["Reflexion",4]]'>
-
+<body data-problemfrage="Ist das Doppel-Münz-Spiel unfair für Ben?"
+      data-phasen='[["Abrufen", 3], ["Problem", 4], ["Experiment", 10], ["Ideen vergleichen", 4], ["Sicherung", 11], ["Übung", 7], ["Reflexion", 6]]'>
 <div class="leiste">
   <div class="pfad"><a href="../../../../">Start</a> › <a href="../../../">Klasse 8</a> › <a href="../../">Hauptschule</a> › <a href="../">Wahrscheinlichkeiten</a> › Stunde 9</div>
 </div>
-
 <div class="buehne">
 
-  <!-- Abrufen -->
-  <section class="folie" data-phase="Abrufen">
+  <section class="folie" data-phase="Abrufen" data-minuten="3" data-sozialform="EA" data-ipad="rot">
     <div class="kennung">Wahrscheinlichkeiten · Stunde 9 · Warm-up</div>
     <h2>Was weißt du noch?</h2>
-    <p style="margin-top:0">Beantworte ohne ins Heft zu schauen.</p>
+    <p class="auftrag">Beantworte ohne ins Heft zu schauen.</p>
     <div class="uebung">
       <div class="zeile"><div class="n">1</div><div>
         <div class="frage">Glücksrad: P(rot) = 0,6. Wie groß ist P(nicht rot)?</div>
@@ -55,31 +53,34 @@
     <div class="hinweis">Aufgabe 3 wird beim Baumdiagramm gebraucht. Exit-Tickets der letzten Stunde (Jonas’ Fehler) kurz zurückgeben, zwei gute Sätze vorlesen.</div>
   </section>
 
-  <!-- Problem -->
-  <section class="folie" data-phase="Problem">
+  <section class="folie" data-phase="Problem" data-minuten="2">
     <div class="kennung">Problem</div>
     <h2>Das Doppel-Münz-Spiel</h2>
     <div class="problem">
-      <div class="label">Problem</div><br>
-      Lea und Ben werfen <strong>zwei Münzen gleichzeitig</strong>.
+      <div class="label">Situation</div><br>
+      Lea und Ben werfen zwei Münzen gleichzeitig. 👧 Lea bekommt einen Punkt, wenn beide Münzen <strong>gleich</strong> sind. 👦 Ben bekommt einen Punkt, wenn sie <strong>verschieden</strong> sind. Mia: „Es gibt drei Ergebnisse: zweimal Kopf, zweimal Zahl, gemischt. Lea hat zwei davon – unfair für Ben!“
     </div>
-    <div class="regeln">
-      <div class="kasten">👧 <strong>Lea</strong> bekommt einen Punkt, wenn beide Münzen <strong>gleich</strong> sind.</div>
-      <div class="kasten">👦 <strong>Ben</strong> bekommt einen Punkt, wenn die Münzen <strong>verschieden</strong> sind.</div>
-    </div>
-    <div class="sprechblase schritt" style="margin-top:1rem">Mia: „Es gibt drei Ergebnisse: zweimal Kopf, zweimal Zahl oder gemischt. Lea hat zwei davon, Ben nur eins. Das Spiel ist <strong>unfair</strong> für Ben!“</div>
-    <div class="lernziele schritt">
-      <div class="titel">🎯 Heute lernst du …</div>
-      <ul>
-        <li>alle Ergebnisse eines Experiments mit <strong>zwei Stufen</strong> zu finden,</li>
-        <li>sie in einem <strong>Baumdiagramm</strong> übersichtlich darzustellen.</li>
-      </ul>
-    </div>
-    <div class="hinweis">Abstimmen: Wer glaubt Mia? An der Tafel festhalten. Mias Denkfehler ist klassisch (schon bei d’Alembert): Sie zählt „gemischt“ nur einmal. Nicht auflösen, erst ausprobieren lassen.</div>
+    <div class="frage-gross">Ist das Doppel-Münz-Spiel unfair für Ben?</div>
+    <div class="frage-bild">🪙🪙</div>
+    <div class="hinweis">Frage vorlesen lassen. Kurze Vermutung per Handzeichen an der Tafel festhalten – Auflösung am Ende.</div>
   </section>
 
-  <!-- Experiment -->
-  <section class="folie" data-phase="Experiment" data-minuten="7">
+  <section class="folie" data-phase="Problem" data-minuten="2">
+    <div class="kennung">Problem · Was fehlt uns?</div>
+    <h2>Können wir das schon?</h2>
+    <div class="bekannt-gesucht">
+      <div class="bekannt">Lea: beide gleich · Ben: verschieden<br>Mia zählt 3 Ergebnisse</div>
+      <div class="gesucht"><strong>Alle</strong> Ergebnisse beim Werfen von zwei Münzen</div>
+    </div>
+    <div class="luecke schritt">Bei einer Münze kennen wir { Kopf, Zahl }. Bei <strong>zwei</strong> Münzen sind es mehr – wie finden wir sicher alle?</div>
+    <div class="lernziele schritt">
+      <div class="titel">🎯 Heute lernst du …</div>
+      <ul><li>Ich kann alle Ergebnisse beim Werfen von zwei Münzen aufschreiben.</li><li>Ich kann ein einfaches Baumdiagramm zeichnen.</li><li>Ich kann mit Pfaden eine Wahrscheinlichkeit angeben.</li></ul>
+    </div>
+    <div class="hinweis">„Was fehlt uns noch?“ erst von Schülern formulieren lassen (🎲), dann aufdecken.</div>
+  </section>
+
+  <section class="folie" data-phase="Experiment" data-minuten="7" data-sozialform="PA">
     <div class="kennung">Experiment · Partnerarbeit<span class="eis" data-eis="E"></span></div>
     <h2>Probiert es aus!</h2>
     <div class="zweispaltig">
@@ -106,8 +107,7 @@
     <div class="hinweis">Warum zwei verschiedene Münzen? So sieht man, dass „1 € Kopf, 10 ct Zahl“ und „1 € Zahl, 10 ct Kopf“ zwei verschiedene Ergebnisse sind. Die Tabelle gibt bewusst vier Zeilen vor (Unterstützung). Stärkere Paare: Tabelle selbst anlegen lassen. Punkte der Paare an der Tafel sammeln.</div>
   </section>
 
-  <!-- Simulation -->
-  <section class="folie" data-phase="Experiment">
+  <section class="folie" data-phase="Experiment" data-minuten="3">
     <div class="kennung">Simulation am Computer<span class="eis" data-eis="I"></span></div>
     <h2>Was passiert bei sehr vielen Würfen?</h2>
     <div class="steuerung">
@@ -124,8 +124,7 @@
     <div class="hinweis">Zuerst mit Mias drei Ergebnissen (KK, ZZ, gemischt). Nach +1.000: KK ≈ 25 %, ZZ ≈ 25 %, gemischt ≈ 50 %. Dann „gemischt aufteilen“: KZ ≈ 25 % und ZK ≈ 25 %. Lea und Ben bekommen also etwa gleich viele Punkte.</div>
   </section>
 
-  <!-- Ideen vergleichen -->
-  <section class="folie" data-phase="Ideen vergleichen">
+  <section class="folie" data-phase="Ideen vergleichen" data-minuten="4">
     <div class="kennung">Ideen vergleichen</div>
     <h2>Wo liegt Mias Fehler?</h2>
     <div class="legende">
@@ -143,8 +142,7 @@
     <div class="hinweis">Die Paare erklären mit ihren Strichlisten. Wichtig: Auch bei zwei gleichen Münzen gibt es diese vier Möglichkeiten, man sieht es nur nicht.</div>
   </section>
 
-  <!-- Baumdiagramm -->
-  <section class="folie" data-phase="Sicherung">
+  <section class="folie" data-phase="Sicherung" data-minuten="5">
     <div class="kennung">Sicherung · Baumdiagramm<span class="eis" data-eis="IS"></span></div>
     <h2>Das Baumdiagramm</h2>
     <svg class="baum" viewBox="0 0 900 360">
@@ -184,71 +182,72 @@
     <div class="hinweis">Schritt für Schritt aufdecken und parallel an die Tafel zeichnen lassen: erst die 1-€-Münze, dann an jedes Ende die 10-ct-Münze. Frage vor dem dritten Schritt: „Wie viele Enden hat der Baum?“ Ein Schüler fährt mit dem Finger einen Pfad nach und liest das Ergebnis vor.</div>
   </section>
 
-  <!-- Merke -->
-  <section class="folie" data-phase="Sicherung">
+  <section class="folie" data-sozialform="EA" data-phase="Sicherung" data-minuten="6">
     <div class="kennung">Sicherung<span class="eis" data-eis="S"></span></div>
     <h2>Zweistufige Zufallsexperimente</h2>
+    <p class="auftrag">Schreibe den Merkkasten ins Heft. Löse dann das Lückenbeispiel.</p>
     <div class="merk">
       <h3>Merke</h3>
-      <ul>
-        <li class="schritt">Werden <strong>zwei</strong> Zufallsexperimente nacheinander (oder zusammen) durchgeführt, heißt das <strong>zweistufiges Zufallsexperiment</strong>.</li>
-        <li class="schritt">Ein <strong>Baumdiagramm</strong> zeigt alle Ergebnisse: Jeder Weg vom Start bis zum Ende ist ein <strong>Pfad</strong>. Jeder Pfad ist ein Ergebnis.</li>
-        <li class="schritt">Haben alle Pfade die gleiche Chance (wie bei Münzen), gilt:<br>
-          Wahrscheinlichkeit = <span class="bruch"><span>Anzahl passender Pfade</span><span>Anzahl aller Pfade</span></span></li>
-      </ul>
+      <ul><li>Zwei Zufallsexperimente nacheinander heißen <strong>zweistufiges</strong> Zufallsexperiment.</li><li>Im Baumdiagramm ist jeder Weg vom Start bis zum Ende ein <strong>Pfad</strong> = ein Ergebnis.</li></ul>
+      <div class="formel">P = passende Pfade : alle Pfade</div>
+      <div class="beispielaufgabe schritt"><b>Musterbeispiel:</b> Zwei Münzen: P(beide gleich)
+        <div class="schritte">alle Pfade: KK, KZ, ZK, ZZ → 4<br>passend: KK, ZZ → 2<br>P = 2 : 4 = 0,5 = 50 %</div>
+      </div>
     </div>
-    <div class="vernetzen schritt">Verbinde: <strong>Zeile</strong> in der Strichliste ↔ <strong>Pfad</strong> im Baum ↔ <strong>Balken</strong> in der Simulation.</div>
-    <div class="hinweis">Ausblick, kein Pflichtstoff im Arbeitsplan: Es genügt, wenn die Schüler Pfade zählen. Die Pfadregeln (Multiplizieren) werden hier nicht eingeführt.</div>
+    <div class="lueckenbeispiel schritt"><strong>Jetzt du:</strong> P(zweimal Zahl) = ___ : 4 = ____ %</div>
+    <div class="hinweis">Lösung Lückenbeispiel: 1 : 4 = 25 %. Per 🎲 kontrollieren.</div>
   </section>
 
-  <!-- Übung -->
-  <section class="folie" data-phase="Übung">
-    <div class="kennung">Übung<span class="eis" data-eis="IS"></span></div>
-    <h2>Jetzt du!</h2>
-    <div class="uebung">
-      <div class="zeile"><div class="n">a</div><div>
-        <div class="frage">Eisdiele: Du wählst <strong>Waffel oder Becher</strong> und dann eine Sorte: <strong>Vanille, Schoko oder Erdbeer</strong>. Zeichne ein Baumdiagramm. Wie viele Möglichkeiten gibt es?</div>
-        <div class="antwort schritt">2 · 3 = <strong>6</strong> Pfade: WV, WS, WE, BV, BS, BE</div>
-      </div></div>
-      <div class="zeile"><div class="n">b</div><div>
-        <div class="frage">Zwei Münzen: Wie groß ist P(zweimal Zahl)?</div>
-        <div class="antwort schritt">1 von 4 Pfaden: <span class="bruch"><span>1</span><span>4</span></span> = 25 %</div>
-      </div></div>
-      <div class="zeile stern"><div class="n">★</div><div>
-        <div class="frage"><strong>Drei</strong> Münzen. Wie viele Pfade hat der Baum? Wie groß ist P(dreimal Kopf)?</div>
-        <div class="antwort schritt">2 · 2 · 2 = 8 Pfade · P(KKK) = <span class="bruch"><span>1</span><span>8</span></span> = 12,5 %</div>
-      </div></div>
+  <section class="folie" data-ipad="gruen" data-phase="Übung" data-minuten="7">
+    <div class="kennung">Übung<span class="eis" data-eis="S"></span></div>
+    <h2>Jetzt rechnest du!</h2>
+    <p class="auftrag">Rechne im Heft – erst die Mix-Aufgabe, dann so weit du kommst.</p>
+    <ol class="aufgaben">
+      <li data-niveau="mix" data-loesung="100 − 40 − 35 = 25 %">Glücksrad: P(rot) = 40 %, P(blau) = 35 %, sonst gelb. P(gelb) in %?</li>
+      <li data-niveau="1" data-loesung="1 von 4 Pfaden: 1 : 4 = 25 %">Zwei Münzen: Wie groß ist P(zweimal Zahl) in %?</li>
+      <li data-niveau="1" data-loesung="2 · 3 = 6">Eisdiele: Waffel oder Becher, dazu Vanille, Schoko oder Erdbeer. Wie viele Möglichkeiten?</li>
+      <li data-niveau="2" data-loesung="KK, KZ, ZK → 3 von 4 = 75 %">Zwei Münzen: Wie groß ist P(mindestens einmal Kopf) in %?</li>
+      <li data-niveau="3" data-loesung="2 · 2 · 2 = 8 Pfade · 1 : 8 = 12,5 %">Drei Münzen: Wie groß ist P(dreimal Kopf) in %?</li>
+    </ol>
+    <p class="klein">Weiter: 📖 Parallelo 8 <span class="platzhalter">[BUCH: S. __ Nr. __]</span> · <a class="schuelerlink" href="../schueler/stunde-09.html" target="_blank">📱 Schülerseite</a></p>
+    <div class="merk kompakt">
+      <h3>Merke</h3>
+      <div class="formel">P = passende Pfade : alle Pfade</div>
+      <p>Anzahl Pfade = Möglichkeiten 1. Stufe · Möglichkeiten 2. Stufe</p>
+      <div class="beispielaufgabe"><b>Beispiel:</b> Waffel oder Becher, dazu 3 Sorten
+        <div class="schritte">2 · 3 = 6 Pfade</div>
+      </div>
     </div>
-    <p class="schritt" style="margin-top:.8rem">Weiter üben: <a class="schuelerlink" href="../schueler/stunde-09.html" target="_blank">📱 Schülerseite · Stunde 9</a></p>
-    <div class="hinweis">a) ist ein reines Zählproblem (keine Wahrscheinlichkeit). Wer Schwierigkeiten mit dem Zeichnen hat, bekommt das Baumgerüst vorgezeichnet.</div>
+    <div class="hinweis">Lösungen einzeln aufdecken oder „Alle Lösungen zeigen“. Wer fertig ist: Buch oder Schülerseite. Taschenrechner erlaubt.</div>
   </section>
 
-  <!-- Reflexion -->
-  <section class="folie" data-phase="Reflexion">
+  <section class="folie" data-phase="Reflexion" data-minuten="6">
     <div class="kennung">Zurück zum Problem · Reflexion</div>
-    <h2>Mia hat nicht recht: Das Doppel-Münz-Spiel ist fair.</h2>
-    <div class="zweispaltig">
+    <h2>Jetzt können wir es!</h2>
+    <div class="frage-gross">Ist das Doppel-Münz-Spiel unfair für Ben?</div>
+    <p class="schritt"><strong>Antwort:</strong> Nein, das Spiel ist fair: Es gibt 4 Ergebnisse KK, KZ, ZK, ZZ. Lea hat 2, Ben hat 2 – beide 50 %.</p>
+    <div class="exit-qr">
+      <div data-qr="../schueler/exit-09.html"></div>
       <div>
-        <div class="kasten">
-          <p style="margin:0 0 .3rem"><strong>🎫 Exit-Ticket:</strong></p>
-          <p style="margin:0">Erkläre Mia mit dem Baumdiagramm in 1–2 Sätzen, warum das Spiel fair ist.</p>
-        </div>
-        <p class="klein" style="margin-top:1rem">Nächste Stunde: Stationen zum Zufall. Bring deinen Taschenrechner mit.</p>
-      </div>
-      <div>
-        <div class="ampel-legende"><span>🟢 sicher</span><span>🟡 fast</span><span>🔴 noch nicht</span></div>
-        <div class="ampel">
-          <div class="zeile"><span>Ich kann alle Ergebnisse beim Werfen von zwei Münzen aufschreiben.</span></div>
-          <div class="zeile"><span>Ich kann ein einfaches Baumdiagramm zeichnen.</span></div>
-          <div class="zeile"><span>Ich kann mit Pfaden eine Wahrscheinlichkeit angeben.</span></div>
-        </div>
+        <p style="margin-top:0;font-size:1.4rem"><strong>🎫 Exit-Ticket</strong></p>
+        <p>Scanne den Code. Gib dein <strong>Kürzel</strong> ein. Zeig mir am Ende deinen QR-Code.</p>
+        <p class="klein">Nächste Stunde: Stationen zum Zufall. Bring deinen Taschenrechner mit.</p>
       </div>
     </div>
-    <div class="hinweis">Die Exit-Tickets zeigen, wer für die Stationen (Stunde 10) die Basis-Station „Baumdiagramm“ braucht.</div>
+    <div class="hinweis">Vermutung vom Anfang zeigen: Wer lag richtig? Dann 4 Min. Exit-Ticket. „Ticket an der Tür“: QR-Codes beim Rausgehen mit der Handy-Kamera scannen → Auswertung.</div>
   </section>
 
 </div>
-<script src="../../../../praesentation.js"></script>
+<script src="../../../../praesentation.js?v=15"></script>
+<script src="../../../../qr.js"></script>
+<script>
+  // Fehlende Elemente (Folie entfernt) dürfen die übrigen Modelle nicht stoppen
+  (function () {
+    const g = document.getElementById.bind(document);
+    const ablage = document.createElement("section"); ablage.className = "folie";
+    document.getElementById = id => g(id) || ablage.appendChild(document.createElement("div"));
+  })();
+</script>
 <script>
   (function () {
     let z = { KK: 0, KZ: 0, ZK: 0, ZZ: 0 }, n = 0, aufteilen = false;
