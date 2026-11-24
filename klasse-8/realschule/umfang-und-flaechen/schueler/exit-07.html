@@ -34,13 +34,20 @@
       "text": "Ich kann erklären, warum man die Höhe und nicht die schräge Seite nimmt.",
       "foerdern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ● Basis",
       "fordern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ●●● Profi"
+    },
+    {
+      "text": "Ich kann den Umfang mit u = 2 · a + 2 · b berechnen.",
+      "foerdern": "[BUCH: Parallelo 8, S. __ Nr. __] + Übungsblatt Aufgabe 2 + Schülerseite ● Basis",
+      "fordern": "[BUCH: Parallelo 8, S. __ Nr. __] + Übungsblatt ★★★ + Schülerseite ●●● Profi"
     }
   ],
   "fehlertypen": {
     "schraeg": "Schräge Seite statt Höhe genommen",
     "plus": "Addiert statt multipliziert",
     "halb": "Durch 2 geteilt (Dreiecksformel)",
-    "trick": "Rechteck-Trick nicht verstanden"
+    "trick": "Rechteck-Trick nicht verstanden",
+    "hoehe_u": "Höhe statt schräger Seite für den Umfang genommen",
+    "flaeche_u": "Fläche statt Umfang berechnet"
   },
   "fragen": [
     {
@@ -120,6 +127,32 @@
           "id": "halb"
         }
       ]
+    },
+    {
+      "typ": "zahl",
+      "frage": "Parallelogramm: g = 10 cm, schräge Seite b = 6 cm, h = 4 cm. Wie groß ist der Umfang u?",
+      "loesung": 32,
+      "erklaerung": "u = 2 · 10 + 2 · 6 = 20 + 12 = 32 cm (die Höhe gehört nicht zum Rand)",
+      "einheit": "cm",
+      "fehler": [
+        {
+          "wert": 28,
+          "id": "hoehe_u"
+        },
+        {
+          "wert": 40,
+          "id": "flaeche_u"
+        },
+        {
+          "wert": 16,
+          "id": "hoehe_u"
+        },
+        {
+          "wert": 20,
+          "id": "hoehe_u"
+        }
+      ],
+      "lz": 3
     }
   ]
 }

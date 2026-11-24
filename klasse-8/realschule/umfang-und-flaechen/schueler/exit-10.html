@@ -34,13 +34,20 @@
       "text": "Ich kann im Trapez die parallelen Seiten a und c und die Höhe h erkennen.",
       "foerdern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ● Basis",
       "fordern": "[BUCH: Parallelo 8, S. __ Nr. __] + Schülerseite ●●● Profi"
+    },
+    {
+      "text": "Ich kann den Umfang mit u = a + b + c + d berechnen.",
+      "foerdern": "[BUCH: Parallelo 8, S. __ Nr. __] + Übungsblatt Aufgabe 2 + Schülerseite ● Basis",
+      "fordern": "[BUCH: Parallelo 8, S. __ Nr. __] + Übungsblatt ★★★ + Schülerseite ●●● Profi"
     }
   ],
   "fehlertypen": {
     "halb": "Nicht durch 2 geteilt",
     "mal": "a und c multipliziert statt addiert",
     "schenkel": "Schenkel statt Höhe verwendet",
-    "verdoppeln": "Herleitung (Verdoppeln) nicht verstanden"
+    "verdoppeln": "Herleitung (Verdoppeln) nicht verstanden",
+    "hoehe_u": "Höhe statt Schenkel für den Umfang genommen",
+    "flaeche_u": "Fläche statt Umfang berechnet"
   },
   "fragen": [
     {
@@ -118,6 +125,28 @@
         "1": "schenkel",
         "2": "schenkel"
       }
+    },
+    {
+      "typ": "zahl",
+      "frage": "Trapez: a = 12 cm, c = 6 cm, h = 4 cm, Schenkel je 5 cm. Wie groß ist der Umfang u?",
+      "loesung": 28,
+      "erklaerung": "u = 12 + 5 + 6 + 5 = 28 cm (die Höhe gehört nicht zum Rand)",
+      "einheit": "cm",
+      "fehler": [
+        {
+          "wert": 26,
+          "id": "hoehe_u"
+        },
+        {
+          "wert": 36,
+          "id": "flaeche_u"
+        },
+        {
+          "wert": 18,
+          "id": "hoehe_u"
+        }
+      ],
+      "lz": 3
     }
   ]
 }

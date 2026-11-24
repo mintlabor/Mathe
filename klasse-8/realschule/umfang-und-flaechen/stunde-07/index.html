@@ -12,7 +12,7 @@
   .skizze { width: 100%; max-width: 560px; height: auto; max-height: 34vh; display: block; margin: 0 auto; }
 </style>
 </head>
-<body data-problemfrage="Welches Beet ist größer?"
+<body data-problemfrage="Welches Beet ist größer – und welches braucht mehr Randsteine?"
       data-phasen='[["Abrufen",3],["Problem",7],["Erarbeitung",11],["Ideen vergleichen",5],["Sicherung",6],["Übung",7],["Reflexion",6]]'>
 
 <div class="leiste">
@@ -20,8 +20,8 @@
 </div>
 
 <aside class="wortspeicher"
-  data-woerter='["Parallelogramm", "Grundseite g", "Höhe h", "senkrecht", "Flächeninhalt", "zerlegen", "verschieben", "flächengleich"]'
-  data-saetze='["Ich vermute, dass …", "Ich habe so gerechnet: …", "Die Höhe steht senkrecht auf …", "Ich stimme zu / nicht zu, weil …"]'></aside>
+  data-woerter='["Parallelogramm", "Grundseite g", "Höhe h", "schräge Seite b", "senkrecht", "Flächeninhalt A", "Umfang u", "zerlegen", "verschieben", "flächengleich"]'
+  data-saetze='["Ich vermute, dass …", "Ich habe so gerechnet: …", "Die Höhe steht senkrecht auf …", "Für den Umfang brauche ich …, weil …", "Ich stimme zu / nicht zu, weil …"]'></aside>
 
 <div class="buehne">
 
@@ -42,8 +42,9 @@
       <div class="label">Situation</div><br>
       Im Schulgarten gibt es zwei Beete. <strong>Beet 1</strong> ist ein Rechteck: 6 m lang, 4 m breit.
       <strong>Beet 2</strong> ist ein Parallelogramm: unten 6 m lang, die schräge Seite ist 5 m, der Abstand zwischen oben und unten (rot) ist 4 m.
+      Beide Beete sollen Erde bekommen und ringsherum Randsteine.
     </div>
-    <div class="frage-gross">Welches Beet ist größer?</div>
+    <div class="frage-gross">Welches Beet ist größer – und welches braucht mehr Randsteine?</div>
     <svg class="skizze" viewBox="0 0 520 175" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Rechteck 6 m mal 4 m und Parallelogramm mit Grundseite 6 m, schräger Seite 5 m und Höhe 4 m">
       <rect x="20" y="30" width="180" height="120" fill="#d3f9d8" stroke="#2f9e44" stroke-width="4"/>
       <text x="90" y="170" font-size="18">6 m</text><text x="206" y="95" font-size="18">4 m</text>
@@ -54,7 +55,7 @@
       <text x="326" y="100" font-size="18" fill="#e03131">4 m</text>
       <text x="360" y="22" font-size="20" font-weight="700">Beet 2</text>
     </svg>
-    <div class="hinweis">Frage vorlesen lassen. Kurze Vermutung per Handzeichen (Beet 1 / Beet 2 / gleich) an der Tafel festhalten – Auflösung am Ende.</div>
+    <div class="hinweis">Frage vorlesen lassen. Zwei Vermutungen per Handzeichen an der Tafel festhalten: Fläche (Beet 1 / Beet 2 / gleich) und Randsteine (Beet 1 / Beet 2 / gleich). Auflösung am Ende.</div>
   </section>
 
   <!-- 3 · PROBLEM B: Was wissen wir, was fehlt uns? → Lernziele -->
@@ -62,45 +63,47 @@
     <div class="kennung">Problem · Was fehlt uns?</div>
     <h2>Können wir das schon?</h2>
     <div class="bekannt-gesucht">
-      <div class="bekannt">Beet 1: Rechteck, 6 m × 4 m<br>Beet 2: g = 6 m, schräge Seite 5 m, Höhe 4 m</div>
-      <div class="gesucht">Der Flächeninhalt von Beet 2 – und welches Beet größer ist</div>
+      <div class="bekannt">Beet 1: Rechteck, 6 m × 4 m<br>Beet 2: g = 6 m, schräge Seite b = 5 m, Höhe h = 4 m</div>
+      <div class="gesucht">Flächeninhalt (Erde) und Umfang (Randsteine) von Beet 2 – und der Vergleich mit Beet 1</div>
     </div>
-    <div class="luecke schritt">Letzte Stunde konnten wir Rechtecke berechnen: A = a · b. Beim Parallelogramm gibt es aber keine rechten Winkel. Darf man einfach 6 · 5 rechnen?</div>
+    <div class="luecke schritt">Rechtecke können wir schon: A = a · b und u = 2 · a + 2 · b. Beim Parallelogramm gibt es aber keine rechten Winkel. Darf man einfach 6 · 5 rechnen? Und welche Seiten gehören zum Rand?</div>
     <div class="lernziele schritt">
       <div class="titel">🎯 Heute lernst du …</div>
       <ul>
         <li>Ich kann ein Parallelogramm durch Zerlegen in ein Rechteck verwandeln.</li>
         <li>Ich kann den Flächeninhalt mit A = g · h berechnen.</li>
         <li>Ich kann erklären, warum man die Höhe und nicht die schräge Seite nimmt.</li>
+        <li>Ich kann den Umfang mit u = 2 · a + 2 · b berechnen.</li>
       </ul>
     </div>
-    <div class="hinweis">„Was fehlt uns noch?“ erst von Schülern formulieren lassen (🎲), dann aufdecken. Steckbrief Parallelogramm wird heute um die Formel ergänzt.</div>
+    <div class="hinweis">„Was fehlt uns noch?“ erst von Schülern formulieren lassen (🎲), dann aufdecken. Steckbrief Parallelogramm wird heute um Flächen- und Umfangsformel ergänzt.</div>
   </section>
 
   <!-- 4 · EIGENE LÖSUNG -->
   <section class="folie" data-sozialform="PA" data-phase="Problem" data-minuten="3">
     <div class="kennung">Eigene Lösung</div>
     <h2>Was meinst du?</h2>
-    <div data-denkzeit="60" data-text="Wie könntest du den Flächeninhalt von Beet 2 bestimmen? Schreibe oder skizziere deine Idee."></div>
+    <div data-denkzeit="60" data-text="Wie könntest du den Flächeninhalt und den Rand (Umfang) von Beet 2 bestimmen? Schreibe oder skizziere deine Idee."></div>
     <div data-methode="tps" data-minuten="1,1,1"></div>
     <div data-tipps>
-      <div class="tipp">Kann man ein Stück abschneiden und woanders anlegen?</div>
-      <div class="tipp">Schneide entlang der roten Höhe.</div>
+      <div class="tipp">Fläche: Kann man ein Stück abschneiden und woanders anlegen?</div>
+      <div class="tipp">Fläche: Schneide entlang der roten Höhe.</div>
+      <div class="tipp">Rand: Geh einmal ganz um das Beet herum. Welche Seiten kommen vor? Gehört die rote Linie dazu?</div>
     </div>
-    <div class="hinweis">Erwartet: 6 · 5 = 30 m². Nicht korrigieren – in der Erarbeitung durch Schneiden prüfen.</div>
+    <div class="hinweis">Erwartet bei der Fläche: 6 · 5 = 30 m². Beim Rand häufig: 6 + 5 + 6 + 5 = 22 m (richtig) oder die Höhe wird mitgezählt. Nicht korrigieren – in der Erarbeitung prüfen.</div>
   </section>
 
   <!-- 5 · ERARBEITUNG E: Rechteck-Trick mit Material -->
   <section class="folie" data-sozialform="GA" data-phase="Erarbeitung" data-minuten="6">
     <div class="kennung">Erarbeitung · Gruppen<span class="eis" data-eis="E"></span></div>
     <h2>Der Rechteck-Trick</h2>
-    <p class="auftrag">Verwandelt ein Parallelogramm in ein Rechteck mit demselben Flächeninhalt. Schreibt am Ende auf: Wie lang und wie breit ist euer Rechteck?</p>
+    <p class="auftrag">Verwandelt ein Parallelogramm in ein Rechteck mit demselben Flächeninhalt. Schreibt auf: Wie lang und wie breit ist euer Rechteck? Messt außerdem den <strong>Rand</strong> vorher und nachher. Bleibt er gleich?</p>
     <div class="wahlkarten">
       <div class="wahlkarte"><div class="icon">✂️</div><b>Schneiden</b>Papier-Parallelogramm entlang der Höhe schneiden, Dreieck verschieben</div>
       <div class="wahlkarte"><div class="icon">🔲</div><b>Kästchen zählen</b>Parallelogramm auf Karopapier: ganze und halbe Kästchen zählen</div>
-      <div class="wahlkarte"><div class="icon">✏️</div><b>Zeichnen</b>Auf Karopapier ein Rechteck mit gleich vielen Kästchen zeichnen</div>
+      <div class="wahlkarte"><div class="icon">🧵</div><b>Rand legen</b>Pfeifenreiniger oder Schnur einmal um Parallelogramm und Rechteck legen und vergleichen</div>
     </div>
-    <div class="hinweis">Materialkiste: Parallelogramme auf Karopapier (verschiedene Verschiebungen), Scheren, Klebestifte, Pfeifenreiniger. Herumgehen und 2–4 verschiedene Lösungen mit 📷 fotografieren – unbedingt auch eine mit 6 · 5 = 30.</div>
+    <div class="hinweis">Materialkiste: Parallelogramme auf Karopapier (verschiedene Verschiebungen), Scheren, Klebestifte, Pfeifenreiniger/Schnur, Lineale. Herumgehen und 2–4 verschiedene Lösungen mit 📷 fotografieren – unbedingt auch eine mit 6 · 5 = 30 und eine Rand-Messung. Erwartete Entdeckung: Fläche bleibt gleich, Rand wird kürzer (die schrägen Seiten werden durch die kürzere Höhe ersetzt).</div>
   </section>
 
   <!-- 6 · ERARBEITUNG I/S: am Modell -->
@@ -115,29 +118,31 @@
   <section class="folie" data-phase="Ideen vergleichen" data-layout="einspaltig">
     <div class="kennung">Ideen vergleichen · Eure Lösungen</div>
     <h2>Was ist gleich, was ist anders?</h2>
-    <p class="auftrag">Welche Gruppe hat richtig gerechnet? Warum ist 6 · 5 falsch? Haltet eure Karte hoch.</p>
+    <p class="auftrag">Welche Gruppe hat die Fläche richtig berechnet? Warum ist 6 · 5 falsch? Und warum gehört die Höhe nicht zum Rand? Haltet eure Karte hoch.</p>
     <div data-loesungswand="4"></div>
-    <p class="satzhilfe">Lösung … ist richtig, weil … · Bei Lösung … wurde die schräge Seite genommen …</p>
-    <div class="hinweis">„Freischalten“ erst hier. Die Lösung mit 6 · 5 = 30 m² bewusst zeigen: Beim Rechteck-Trick entsteht ein Rechteck mit den Seiten g und h, nicht g und b.</div>
+    <p class="satzhilfe">Lösung … ist richtig, weil … · Bei Lösung … wurde die schräge Seite genommen … · Für den Umfang braucht man …, weil …</p>
+    <div class="hinweis">„Freischalten“ erst hier. Die Lösung mit 6 · 5 = 30 m² bewusst zeigen: Beim Rechteck-Trick entsteht ein Rechteck mit den Seiten g und h, nicht g und b. Dann die Rand-Messung: Für die Fläche braucht man h, für den Umfang die schräge Seite b.</div>
   </section>
 
   <!-- 8 · SICHERUNG -->
   <section class="folie" data-sozialform="EA" data-phase="Sicherung">
     <div class="kennung">Sicherung<span class="eis" data-eis="EIS"></span></div>
-    <h2>Flächeninhalt des Parallelogramms</h2>
+    <h2>Flächeninhalt und Umfang des Parallelogramms</h2>
     <p class="auftrag">Schreibe den Merkkasten ins Heft und in deinen Steckbrief. Löse dann das Lückenbeispiel.</p>
     <div class="merk">
       <h3>Merke</h3>
       <ul>
-        <li>Grundseite mal zugehörige Höhe. Die Höhe steht <strong>senkrecht</strong> auf der Grundseite – nicht die schräge Seite nehmen!</li>
+        <li><strong>Fläche:</strong> Grundseite mal zugehörige Höhe. Die Höhe steht <strong>senkrecht</strong> auf der Grundseite – nicht die schräge Seite nehmen! Kein „: 2“.</li>
+        <li><strong>Umfang:</strong> Je zwei Seiten sind gleich lang. Die Höhe gehört <strong>nicht</strong> zum Rand.</li>
       </ul>
       <div class="formel">A = g · h</div>
-      <div class="beispielaufgabe schritt"><b>Musterbeispiel:</b> Beet 2 mit g = 6 m, h = 4 m
-        <div class="schritte">A = g · h<br>A = 6 m · 4 m = 24 m²<br>Beet 2 ist 24 m² groß.</div>
+      <div class="formel">u = 2 · a + 2 · b</div>
+      <div class="beispielaufgabe schritt"><b>Musterbeispiel (wie im Übungsblatt):</b> Feld mit g = 40 m, h = 25 m, schräge Seite b = 30 m
+        <div class="schritte">A = g · h = 40 m · 25 m = 1000 m²<br>u = 2 · 40 m + 2 · 30 m = 80 m + 60 m = 140 m<br>Das Feld ist 1000 m² groß und braucht 140 m Zaun.</div>
       </div>
     </div>
-    <div class="lueckenbeispiel schritt"><strong>Jetzt du:</strong> g = 8 m, h = 3 m, schräge Seite 5 m → A = ___ m · ___ m = ___ m²</div>
-    <div class="hinweis">Lösung Lückenbeispiel: 8 m · 3 m = 24 m² (die 5 m werden nicht gebraucht). Per 🎲 kontrollieren.</div>
+    <div class="lueckenbeispiel schritt"><strong>Jetzt du:</strong> g = 8 m, h = 3 m, schräge Seite b = 5 m → A = ___ m · ___ m = ___ m² · u = 2 · ___ m + 2 · ___ m = ___ m</div>
+    <div class="hinweis">Lösung Lückenbeispiel: A = 8 m · 3 m = 24 m² (die 5 m werden für die Fläche nicht gebraucht) · u = 2 · 8 m + 2 · 5 m = 26 m (die 3 m werden für den Umfang nicht gebraucht). Per 🎲 kontrollieren. Passendes Übungsblatt (PDF): „Das Parallelogramm“ – gleiche Formeln und gleiches Musterbeispiel.</div>
   </section>
 
   <!-- 9 · ÜBUNG: Aufgabenfolie -->
@@ -147,29 +152,31 @@
     <p class="auftrag">Rechne im Heft – erst die Mix-Aufgabe, dann so weit du kommst.</p>
     <ol class="aufgaben">
       <li data-niveau="mix" data-loesung="u = 2 · 7 m + 2 · 3 m = 14 m + 6 m = 20 m">Ein rechteckiger Garten ist 7 m lang und 3 m breit. Wie lang ist der Zaun rundherum?</li>
-      <li data-niveau="1" data-loesung="A = 8 cm · 5 cm = 40 cm²">Parallelogramm: g = 8 cm, h = 5 cm. Berechne A.</li>
-      <li data-niveau="1" data-loesung="A = 7,5 cm · 4 cm = 30 cm²">Parallelogramm: g = 7,5 cm, h = 4 cm. Berechne A.</li>
-      <li data-niveau="2" data-loesung="A = 9 m · 3 m = 27 m² (die 5 m braucht man nicht) · Kosten: 27 · 0,80 € = 21,60 €">Beet (Parallelogramm): g = 9 m, schräge Seite 5 m, h = 3 m. Rasensamen kostet 0,80 € pro m². Wie teuer?</li>
-      <li data-niveau="3" data-loesung="48 cm² = 8 cm · h → h = 48 : 8 = 6 cm">Ein Parallelogramm hat A = 48 cm² und g = 8 cm. Wie lang ist die Höhe h?</li>
+      <li data-niveau="1" data-loesung="A = 7 cm · 4 cm = 28 cm²">Parallelogramm: g = 7 cm, h = 4 cm. Berechne A.</li>
+      <li data-niveau="1" data-loesung="u = 2 · 6 cm + 2 · 4 cm = 12 cm + 8 cm = 20 cm">Parallelogramm: a = 6 cm, b = 4 cm. Berechne u.</li>
+      <li data-niveau="2" data-loesung="A = 8 cm · 4 cm = 32 cm² (die 5 cm braucht man nicht) · u = 2 · 8 cm + 2 · 5 cm = 26 cm (die 4 cm braucht man nicht)">Parallelogramm: g = 8 cm, schräge Seite b = 5 cm, h = 4 cm. Berechne A und u.</li>
+      <li data-niveau="2" data-loesung="ein Parkplatz: 2,5 m · 5 m = 12,5 m² · 8 Parkplätze: 100 m² · Kosten: 100 · 30 € = 3000 €">8 schräge Parkplätze, jeder ein Parallelogramm mit g = 2,5 m und h = 5 m. 1 m² Pflaster kostet 30 €. Was kostet das Pflaster?</li>
+      <li data-niveau="3" data-loesung="48 cm² = 8 cm · h → h = 48 : 8 = 6 cm · u = 30 cm → 2 · b = 30 − 16 = 14 → b = 7 cm">Ein Parallelogramm hat A = 48 cm², g = 8 cm und u = 30 cm. Wie lang sind h und die schräge Seite b?</li>
     </ol>
-    <p class="klein">Weiter: 📖 Parallelo 8 <span class="platzhalter">[BUCH: S. __ Nr. __]</span> · <a class="schuelerlink" href="../schueler/stunde-07.html" target="_blank">📱 Schülerseite</a></p>
+    <p class="klein">Weiter: 📖 Parallelo 8 <span class="platzhalter">[BUCH: S. __ Nr. __]</span> · <a class="schuelerlink" href="../schueler/stunde-07.html" target="_blank">📱 Schülerseite</a> · 📄 Übungsblatt „Das Parallelogramm“</p>
     <div class="merk kompakt">
       <h3>Merke</h3>
       <div class="formel">A = g · h</div>
-      <p>h steht senkrecht auf g – <strong>nicht</strong> die schräge Seite!</p>
-      <div class="beispielaufgabe"><b>Beispiel:</b> g = 6 m, h = 4 m
-        <div class="schritte">A = 6 m · 4 m<br>A = 24 m²</div>
+      <div class="formel">u = 2 · a + 2 · b</div>
+      <p>Fläche mit h, Umfang mit der schrägen Seite!</p>
+      <div class="beispielaufgabe"><b>Beispiel:</b> g = 6 m, h = 4 m, b = 5 m
+        <div class="schritte">A = 6 m · 4 m = 24 m²<br>u = 2 · 6 m + 2 · 5 m = 22 m</div>
       </div>
     </div>
-    <div class="hinweis">Lösungen einzeln aufdecken oder „Alle Lösungen zeigen“. Wer fertig ist: Buch oder Schülerseite. Hausaufgabe: Rest der Buchaufgaben.</div>
+    <div class="hinweis">Lösungen einzeln aufdecken oder „Alle Lösungen zeigen“. Wer fertig ist: Übungsblatt, Buch oder Schülerseite. Hausaufgabe: Rest vom Übungsblatt.</div>
   </section>
 
   <!-- 10 · REFLEXION -->
   <section class="folie" data-phase="Reflexion">
     <div class="kennung">Zurück zum Problem · Reflexion</div>
     <h2>Jetzt können wir es!</h2>
-    <div class="frage-gross">Welches Beet ist größer?</div>
-    <p class="schritt"><strong>Antwort:</strong> Beide sind gleich groß! Beet 1: 6 m · 4 m = 24 m². Beet 2: 6 m · 4 m = 24 m². Nur der Rand von Beet 2 ist länger (22 m statt 20 m).</p>
+    <div class="frage-gross">Welches Beet ist größer – und welches braucht mehr Randsteine?</div>
+    <p class="schritt"><strong>Antwort:</strong> Beide Beete sind <strong>gleich groß</strong>: 6 m · 4 m = 24 m². Aber Beet 2 braucht <strong>mehr Randsteine</strong>: u = 2 · 6 m + 2 · 5 m = 22 m statt 2 · 6 m + 2 · 4 m = 20 m. Gleiche Fläche heißt nicht gleicher Umfang!</p>
     <div class="exit-qr">
       <div data-qr="../schueler/exit-07.html"></div>
       <div>
@@ -178,7 +185,7 @@
         <p class="klein">Nächste Stunde: Das Dreieck – Wie viel Farbe für den Giebel?</p>
       </div>
     </div>
-    <div class="hinweis">Vermutung vom Anfang zeigen: Wer lag richtig? Dann 4 Min. Exit-Ticket. „Ticket an der Tür“: QR-Codes beim Rausgehen mit der Handy-Kamera scannen → Auswertung.</div>
+    <div class="hinweis">Beide Vermutungen vom Anfang zeigen: Wer lag richtig? Dann 4 Min. Exit-Ticket. „Ticket an der Tür“: QR-Codes beim Rausgehen mit der Handy-Kamera scannen → Auswertung.</div>
   </section>
 
 </div>

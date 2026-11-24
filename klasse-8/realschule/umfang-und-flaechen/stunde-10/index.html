@@ -12,7 +12,7 @@
   .skizze { width: min(100%, 560px); height: auto; max-height: 30vh; display: block; margin: .3rem auto; flex-shrink: 0; }
 </style>
 </head>
-<body data-problemfrage="Wie viele Dachziegel brauchen wir für diese Dachseite?"
+<body data-problemfrage="Wie viele Dachziegel und wie viel Blechkante brauchen wir für diese Dachseite?"
       data-phasen='[["Abrufen", 3], ["Problem", 7], ["Erarbeitung", 11], ["Ideen vergleichen", 5], ["Sicherung", 6], ["Übung", 7], ["Reflexion", 6]]'>
 
 <div class="leiste">
@@ -20,8 +20,8 @@
 </div>
 
 <aside class="wortspeicher"
-  data-woerter='["Trapez", "parallele Seiten a und c", "Schenkel", "Höhe h", "Mittellinie", "verdoppeln", "zerlegen"]'
-  data-saetze='["Ich vermute, dass …", "Ich habe so gerechnet: …", "Das sieht man daran, dass …", "Ich stimme zu / nicht zu, weil …"]'></aside>
+  data-woerter='["Trapez", "parallele Seiten a und c", "Schenkel b und d", "Höhe h", "Flächeninhalt A", "Umfang u", "Mittellinie", "verdoppeln", "zerlegen"]'
+  data-saetze='["Ich vermute, dass …", "Ich habe so gerechnet: …", "Das sieht man daran, dass …", "Für den Umfang brauche ich …, weil …", "Ich stimme zu / nicht zu, weil …"]'></aside>
 
 <div class="buehne">
 
@@ -38,24 +38,36 @@
     <h2>Das Walmdach</h2>
     <div class="problem">
       <div class="label">Situation</div><br>
-      Eine Dachseite des Walmdachs ist ein Trapez: unten 10 m, oben 6 m, 4 m hoch. Für 1 m² braucht man 12 Dachziegel.
+      Eine Dachseite des Walmdachs ist ein Trapez: unten 12 m, oben 6 m, 4 m hoch. Die schrägen Kanten sind je 5 m lang. Für 1 m² braucht man 12 Dachziegel. Ringsherum um die Dachseite kommt eine Blechkante.
     </div>
-    <div class="frage-gross">Wie viele Dachziegel brauchen wir für diese Dachseite?</div>
-    <svg class="skizze" viewBox="0 0 400 170" xmlns="http://www.w3.org/2000/svg"><polygon points="20,150 380,150 300,40 100,40" fill="#ffc9c9" stroke="#c92a2a" stroke-width="4"/><text x="180" y="168" font-size="18">10 m</text><text x="185" y="32" font-size="18">6 m</text><line x1="100" y1="40" x2="100" y2="150" stroke="#1f2430" stroke-width="3" stroke-dasharray="7 4"/><text x="106" y="100" font-size="18">4 m</text><text x="200" y="110" font-size="18" text-anchor="middle">Dachfläche</text></svg>
-    <div class="hinweis">Frage vorlesen lassen. Kurze Vermutung per Handzeichen an der Tafel festhalten – Auflösung am Ende.</div>
+    <div class="frage-gross">Wie viele Dachziegel und wie viel Blechkante brauchen wir für diese Dachseite?</div>
+    <svg class="skizze" viewBox="0 0 400 175" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Trapez mit unten 12 m, oben 6 m, Höhe 4 m und schrägen Seiten von 5 m">
+      <polygon points="20,150 380,150 290,30 110,30" fill="#ffc9c9" stroke="#c92a2a" stroke-width="4"/>
+      <text x="185" y="170" font-size="18">12 m</text><text x="188" y="22" font-size="18">6 m</text>
+      <line x1="110" y1="30" x2="110" y2="150" stroke="#1f2430" stroke-width="3" stroke-dasharray="7 4"/>
+      <text x="116" y="105" font-size="18">4 m</text>
+      <text x="30" y="85" font-size="18" fill="#5c5f66">5 m</text><text x="344" y="85" font-size="18" fill="#5c5f66">5 m</text>
+      <text x="215" y="110" font-size="18" text-anchor="middle">Dachfläche</text>
+    </svg>
+    <div class="hinweis">Frage vorlesen lassen. Zwei Vermutungen per Handzeichen an der Tafel festhalten (Anzahl Ziegel, Länge Blechkante) – Auflösung am Ende.</div>
   </section>
 
   <section class="folie" data-phase="Problem" data-minuten="2">
     <div class="kennung">Problem · Was fehlt uns?</div>
     <h2>Können wir das schon?</h2>
     <div class="bekannt-gesucht">
-      <div class="bekannt">a = 10 m · c = 6 m · h = 4 m<br>12 Ziegel pro m²</div>
-      <div class="gesucht">Flächeninhalt des Trapezes → Anzahl der Ziegel</div>
+      <div class="bekannt">a = 12 m · c = 6 m · h = 4 m · Schenkel b = d = 5 m<br>12 Ziegel pro m²</div>
+      <div class="gesucht">Flächeninhalt → Anzahl der Ziegel<br>Umfang → Länge der Blechkante</div>
     </div>
-    <div class="luecke schritt">Für Parallelogramm und Dreieck haben wir Formeln. Das Trapez hat aber <strong>zwei verschieden lange</strong> parallele Seiten – welche nehmen wir?</div>
+    <div class="luecke schritt">Für Parallelogramm und Dreieck haben wir Formeln. Das Trapez hat aber <strong>zwei verschieden lange</strong> parallele Seiten – welche nehmen wir? Und welche Strecken brauchen wir für den Rand?</div>
     <div class="lernziele schritt">
       <div class="titel">🎯 Heute lernst du …</div>
-      <ul><li>Ich kann die Flächenformel des Trapezes durch Verdoppeln oder Zerlegen begründen.</li><li>Ich kann den Flächeninhalt mit A = (a + c) : 2 · h berechnen.</li><li>Ich kann im Trapez die parallelen Seiten a und c und die Höhe h erkennen.</li></ul>
+      <ul>
+        <li>Ich kann die Flächenformel des Trapezes durch Verdoppeln oder Zerlegen begründen.</li>
+        <li>Ich kann den Flächeninhalt mit A = (a + c) : 2 · h berechnen.</li>
+        <li>Ich kann im Trapez die parallelen Seiten a und c und die Höhe h erkennen.</li>
+        <li>Ich kann den Umfang mit u = a + b + c + d berechnen.</li>
+      </ul>
     </div>
     <div class="hinweis">„Was fehlt uns noch?“ erst von Schülern formulieren lassen (🎲), dann aufdecken.</div>
   </section>
@@ -63,57 +75,62 @@
   <section class="folie" data-phase="Problem" data-minuten="3" data-sozialform="PA">
     <div class="kennung">Eigene Lösung</div>
     <h2>Was meinst du?</h2>
-    <div data-denkzeit="60" data-text="Wie könnte man den Flächeninhalt des Trapezes bestimmen? Nutze den Rechteck-Trick."></div>
+    <div data-denkzeit="60" data-text="Wie könnte man den Flächeninhalt und die Länge der Blechkante bestimmen? Nutze für die Fläche den Rechteck-Trick."></div>
     <div data-methode="tps" data-minuten="1,1,1"></div>
     <div data-tipps>
-      <div class="tipp">Zwei gleiche Trapeze – eins gedreht – ergeben eine bekannte Figur.</div>
-      <div class="tipp">Oder: Diagonale einzeichnen → zwei Dreiecke.</div>
+      <div class="tipp">Fläche: Zwei gleiche Trapeze – eins gedreht – ergeben eine bekannte Figur.</div>
+      <div class="tipp">Fläche: Oder Diagonale einzeichnen → zwei Dreiecke.</div>
+      <div class="tipp">Blechkante: Geh einmal um die Dachseite herum. Welche vier Strecken kommen vor?</div>
     </div>
-    <div class="hinweis">Erwartet: 10 · 6 · 4 oder (10 + 6) · 4. Im Vergleich klären.</div>
+    <div class="hinweis">Erwartet bei der Fläche: 12 · 6 · 4 oder (12 + 6) · 4 (ohne : 2). Beim Rand: 12 + 6 + 4 + 4 (Höhe statt Schenkel). Im Vergleich klären.</div>
   </section>
 
   <section class="folie" data-phase="Erarbeitung" data-minuten="6" data-sozialform="GA">
     <div class="kennung">Erarbeitung · Gruppen<span class="eis" data-eis="E"></span></div>
     <h2>Drei Wege zur Trapezformel</h2>
-    <p class="auftrag">Jede Gruppe untersucht einen Weg, danach stellen sich die Gruppen ihre Wege gegenseitig vor. Wählt:</p>
+    <p class="auftrag">Jede Gruppe untersucht einen Weg, danach stellen sich die Gruppen ihre Wege gegenseitig vor. Messt zum Schluss alle vier Seiten eures Trapezes und berechnet den Umfang. Wählt:</p>
     <div class="wahlkarten">
       <div class="wahlkarte"><div class=icon>👯</div><b>Verdoppeln</b>Zwei gleiche Papiertrapeze, eins gedreht, zu einem Parallelogramm legen</div>
       <div class="wahlkarte"><div class=icon>✂️</div><b>Zerlegen</b>Entlang einer Diagonale in zwei Dreiecke schneiden: a · h : 2 + c · h : 2</div>
       <div class="wahlkarte"><div class=icon>📏</div><b>Mittellinie</b>Auf halber Höhe falten, Ecken abschneiden und anlegen → Rechteck</div>
     </div>
-    <div class="hinweis">Herumgehen und 2–4 verschiedene Lösungen mit 📷 fotografieren. Materialkiste: Je Gruppe 2 deckungsgleiche Papiertrapeze (a = 10 cm, c = 6 cm, h = 4 cm) und 1 weiteres zum Schneiden, Scheren, Klebestifte, Karopapier. Danach: Gruppen „Verdoppeln“, „Zerlegen“, „Mittellinie“ mischen und vorstellen (je 1 Minute).</div>
+    <div class="hinweis">Herumgehen und 2–4 verschiedene Lösungen mit 📷 fotografieren. Materialkiste: Je Gruppe 2 deckungsgleiche Papiertrapeze (a = 12 cm, c = 6 cm, h = 4 cm, Schenkel je 5 cm – wie die Dachseite im Maßstab 1 : 100) und 1 weiteres zum Schneiden, Scheren, Klebestifte, Lineale, Karopapier. Danach: Gruppen „Verdoppeln“, „Zerlegen“, „Mittellinie“ mischen und vorstellen (je 1 Minute).</div>
   </section>
 
   <section class="folie" data-phase="Erarbeitung" data-minuten="5">
     <div class="kennung">Erarbeitung · Was passiert, wenn …?<span class="eis" data-eis="IS"></span></div>
     <h2>Trapez: Was passiert, wenn …?</h2>
-    <div data-figur='{"typ": "trapez", "a": 10, "c": 6, "h": 4, "v": 2, "regler": ["a", "c", "h", "v"], "bereich": {"a": [2, 12], "c": [0, 12], "h": [1, 7], "v": [-2, 6]}, "zeige": ["hoehe", "trick", "flaeche", "umfang"], "an": ["hoehe"]}'></div>
-    <div class="vernetzen schritt">Erst vermuten: Was passiert, wenn c genauso lang wird wie a? Was, wenn c = 0 wird? Prüfe mit dem Modell. Wo siehst du beim Verdoppeln die Länge a + c?</div>
+    <div data-figur='{"typ": "trapez", "a": 12, "c": 6, "h": 4, "v": 3, "regler": ["a", "c", "h", "v"], "bereich": {"a": [2, 12], "c": [0, 12], "h": [1, 7], "v": [-2, 6]}, "zeige": ["hoehe", "trick", "flaeche", "umfang"], "an": ["hoehe"]}'></div>
+    <div class="vernetzen schritt">Erst vermuten: Was passiert, wenn c genauso lang wird wie a? Was, wenn c = 0 wird? Was passiert mit Fläche und Umfang, wenn du nur v (die Verschiebung) änderst? Prüfe mit dem Modell. Wo siehst du beim Verdoppeln die Länge a + c?</div>
   </section>
 
   <section class="folie" data-phase="Ideen vergleichen" data-layout="einspaltig">
     <div class="kennung">Ideen vergleichen · Eure Lösungen</div>
     <h2>Was ist gleich, was ist anders?</h2>
-    <p class="auftrag">Welcher Weg führt zur Trapezformel? Welche Ergebnisse stimmen? Haltet eure Karte hoch.</p>
+    <p class="auftrag">Welcher Weg führt zur Trapezformel? Welche Ergebnisse stimmen? Welche Strecken gehören zum Umfang? Haltet eure Karte hoch.</p>
     <div data-loesungswand="4"></div>
-    <p class="satzhilfe">Lösung … ist richtig, weil … · Bei Lösung … ist der Fehler …</p>
-    <div class="hinweis">„Freischalten“ erst hier. Eine Lösung mit 10 · 4 oder (10 + 6) · 4 (ohne : 2) zeigen.</div>
+    <p class="satzhilfe">Lösung … ist richtig, weil … · Bei Lösung … ist der Fehler … · Für den Umfang braucht man …, nicht …</p>
+    <div class="hinweis">„Freischalten“ erst hier. Eine Lösung mit (12 + 6) · 4 (ohne : 2) zeigen. Für den Umfang klären: die Höhe gehört nicht zum Rand, dafür die Schenkel.</div>
   </section>
 
   <section class="folie" data-sozialform="EA" data-phase="Sicherung">
     <div class="kennung">Sicherung<span class="eis" data-eis="EIS"></span></div>
-    <h2>Flächeninhalt des Trapezes</h2>
+    <h2>Flächeninhalt und Umfang des Trapezes</h2>
     <p class="auftrag">Schreibe den Merkkasten ins Heft und in deine Steckbrief-Mappe. Löse dann das Lückenbeispiel.</p>
     <div class="merk">
       <h3>Merke</h3>
-      <ul><li>a und c sind die parallelen Seiten. Zwei gleiche Trapeze ergeben ein Parallelogramm mit Grundseite a + c – ein Trapez ist die Hälfte.</li></ul>
+      <ul>
+        <li><strong>Fläche:</strong> a und c sind die parallelen Seiten. Zwei gleiche Trapeze ergeben ein Parallelogramm mit Grundseite a + c – ein Trapez ist die Hälfte. Die Höhe steht senkrecht zwischen a und c.</li>
+        <li><strong>Umfang:</strong> alle vier Seiten addieren – die Höhe gehört nicht dazu.</li>
+      </ul>
       <div class="formel">A = (a + c) : 2 · h</div>
-      <div class="beispielaufgabe schritt"><b>Musterbeispiel:</b> Dachseite mit a = 10 m, c = 6 m, h = 4 m
-        <div class="schritte">A = (10 m + 6 m) : 2 · 4 m<br>A = 8 m · 4 m = 32 m²<br>32 · 12 = 384 Ziegel</div>
+      <div class="formel">u = a + b + c + d</div>
+      <div class="beispielaufgabe schritt"><b>Musterbeispiel (wie im Übungsblatt):</b> a = 12 m, c = 6 m, h = 4 m, Schenkel je 5 m
+        <div class="schritte">A = (12 m + 6 m) : 2 · 4 m = 9 m · 4 m = 36 m² → 36 · 12 = 432 Ziegel<br>u = 12 m + 5 m + 6 m + 5 m = 28 m Blechkante</div>
       </div>
     </div>
-    <div class="lueckenbeispiel schritt"><strong>Jetzt du:</strong> a = 9 cm, c = 5 cm, h = 4 cm → A = (___ + ___) : 2 · ___ = ___ cm²</div>
-    <div class="hinweis">Lösung Lückenbeispiel: (9 + 5) : 2 · 4 = 28 cm². Per 🎲 kontrollieren.</div>
+    <div class="lueckenbeispiel schritt"><strong>Jetzt du:</strong> rechtwinkliges Trapez mit a = 9 cm, c = 5 cm, h = 3 cm, Schenkel 3 cm und 5 cm → A = (___ + ___) : 2 · ___ = ___ cm² · u = ___ + ___ + ___ + ___ = ___ cm</div>
+    <div class="hinweis">Lösung Lückenbeispiel: A = (9 + 5) : 2 · 3 = 7 · 3 = 21 cm² · u = 9 + 3 + 5 + 5 = 22 cm (hier ist ein Schenkel gleichzeitig die Höhe). Per 🎲 kontrollieren. Passendes Übungsblatt (PDF): „Das Trapez“ – gleiche Formeln und gleiche Zahlen im Musterbeispiel.</div>
   </section>
 
   <section class="folie" data-ipad="gruen" data-phase="Übung">
@@ -122,28 +139,30 @@
     <p class="auftrag">Rechne im Heft – erst die Mix-Aufgabe, dann so weit du kommst.</p>
     <ol class="aufgaben">
       <li data-niveau="mix" data-loesung="A = 8 · 5 : 2 = 20 cm²">Dreieck: g = 8 cm, h = 5 cm. Berechne A.</li>
-      <li data-niveau="1" data-loesung="A = (12 + 6) : 2 · 3 = 9 · 3 = 27 m²">Trapez: a = 12 m, c = 6 m, h = 3 m. Berechne A.</li>
-      <li data-niveau="1" data-loesung="A = (7 + 3) : 2 · 4 = 5 · 4 = 20 cm²">Trapez: a = 7 cm, c = 3 cm, h = 4 cm. Berechne A.</li>
-      <li data-niveau="2" data-loesung="A = (7 + 5) : 2 · 2,5 = 15 m² · 15 : 2 = 7,5 → 8 Säcke">Ein Beet ist ein Trapez: a = 7 m, c = 5 m, h = 2,5 m. Ein Sack Mulch reicht für 2 m². Wie viele Säcke braucht man?</li>
-      <li data-niveau="3" data-loesung="(12 + 8) : 2 = 10 · 40 : 10 = 4 cm">Ein Trapez hat A = 40 cm², a = 12 cm und c = 8 cm. Wie lang ist h?</li>
+      <li data-niveau="1" data-loesung="A = (8 + 4) : 2 · 3 = 6 · 3 = 18 cm²">Trapez: a = 8 cm, c = 4 cm, h = 3 cm. Berechne A.</li>
+      <li data-niveau="1" data-loesung="u = 8 + 5 + 4 + 5 = 22 cm">Trapez mit den Seiten 8 cm, 5 cm, 4 cm und 5 cm. Berechne u.</li>
+      <li data-niveau="2" data-loesung="Ben hat die schräge Seite (5 cm) statt der Höhe genommen. Richtig: A = (10 + 4) : 2 · 4 = 7 · 4 = 28 cm² · u = 10 + 5 + 4 + 5 = 24 cm">Trapez: a = 10 cm, c = 4 cm, h = 4 cm, Schenkel je 5 cm. Ben rechnet A = (10 + 4) : 2 · 5 = 35 cm². Finde den Fehler. Berechne A und u richtig.</li>
+      <li data-niveau="2" data-loesung="A = (3 + 1) : 2 · 1,5 = 2 · 1,5 = 3 m²">Ein Graben hat einen trapezförmigen Querschnitt: oben 3 m, unten 1 m breit, 1,5 m tief. Wie groß ist die Querschnittsfläche?</li>
+      <li data-niveau="3" data-loesung="(7 + 5) : 2 = 6 → 6 · h = 30 → h = 5 cm">Ein Trapez hat A = 30 cm², a = 7 cm und c = 5 cm. Wie lang ist h?</li>
     </ol>
-    <p class="klein">Weiter: 📖 Parallelo 8 <span class="platzhalter">[BUCH: S. __ Nr. __]</span> · <a class="schuelerlink" href="../schueler/stunde-10.html" target="_blank">📱 Schülerseite</a></p>
+    <p class="klein">Weiter: 📖 Parallelo 8 <span class="platzhalter">[BUCH: S. __ Nr. __]</span> · <a class="schuelerlink" href="../schueler/stunde-10.html" target="_blank">📱 Schülerseite</a> · 📄 Übungsblatt „Das Trapez“</p>
     <div class="merk kompakt">
       <h3>Merke</h3>
       <div class="formel">A = (a + c) : 2 · h</div>
-      <p>Erst die Klammer, dann : 2, dann · h.</p>
-      <div class="beispielaufgabe"><b>Beispiel:</b> a = 8 cm, c = 4 cm, h = 5 cm
-        <div class="schritte">A = (8 + 4) : 2 · 5<br>A = 6 · 5 = 30 cm²</div>
+      <div class="formel">u = a + b + c + d</div>
+      <p>Erst die Klammer, dann : 2, dann · h. Für u alle vier Seiten, nicht h.</p>
+      <div class="beispielaufgabe"><b>Beispiel:</b> a = 12 m, c = 6 m, h = 4 m, Schenkel je 5 m
+        <div class="schritte">A = (12 + 6) : 2 · 4 = 9 · 4 = 36 m²<br>u = 12 + 5 + 6 + 5 = 28 m</div>
       </div>
     </div>
-    <div class="hinweis">Lösungen einzeln aufdecken oder „Alle Lösungen zeigen“. Wer fertig ist: Buch oder Schülerseite.</div>
+    <div class="hinweis">Lösungen einzeln aufdecken oder „Alle Lösungen zeigen“. Wer fertig ist: Übungsblatt, Buch oder Schülerseite.</div>
   </section>
 
   <section class="folie" data-phase="Reflexion">
     <div class="kennung">Zurück zum Problem · Reflexion</div>
     <h2>Jetzt können wir es!</h2>
-    <div class="frage-gross">Wie viele Dachziegel brauchen wir für diese Dachseite?</div>
-    <p class="schritt"><strong>Antwort:</strong> Die Dachseite hat (10 m + 6 m) : 2 · 4 m = 32 m² → 32 · 12 = 384 Ziegel.</p>
+    <div class="frage-gross">Wie viele Dachziegel und wie viel Blechkante brauchen wir für diese Dachseite?</div>
+    <p class="schritt"><strong>Antwort:</strong> Die Dachseite hat (12 m + 6 m) : 2 · 4 m = 36 m² → 36 · 12 = <strong>432 Ziegel</strong>. Die Blechkante ist u = 12 m + 5 m + 6 m + 5 m = <strong>28 m</strong> lang.</p>
     <div class="exit-qr">
       <div data-qr="../schueler/exit-10.html"></div>
       <div>
@@ -152,7 +171,7 @@
         <p class="klein">Nächste Stunde: Raute und Drachen – Wie viel Folie für den Drachen?</p>
       </div>
     </div>
-    <div class="hinweis">Vermutung vom Anfang zeigen: Wer lag richtig? Dann 4 Min. Exit-Ticket. „Ticket an der Tür“: QR-Codes beim Rausgehen mit der Handy-Kamera scannen → Auswertung.</div>
+    <div class="hinweis">Vermutungen vom Anfang zeigen: Wer lag richtig? Dann 4 Min. Exit-Ticket. „Ticket an der Tür“: QR-Codes beim Rausgehen mit der Handy-Kamera scannen → Auswertung.</div>
   </section>
 
 </div>

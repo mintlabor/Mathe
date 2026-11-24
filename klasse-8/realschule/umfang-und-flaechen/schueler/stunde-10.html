@@ -55,19 +55,21 @@
   <p><a href="exit-10.html">🎫 Weiter zum Exit-Ticket →</a> · <a href="./">← Lernlandkarte</a></p>
 </main>
 <script>
-// Die ersten Aufgaben = Aufgabenfolie der Präsentation; danach Zusatzaufgaben
+// Aufgaben 1–7 = Aufgabenfolie der Präsentation (Aufgaben mit A und u getrennt); danach Zusatzaufgaben
 window.SEITE = {
   "speicher": "mathe-k8-rs-uf",
   "stunde": 10,
   "lernziele": [
     "die Flächenformel des Trapezes durch Verdoppeln oder Zerlegen begründen",
     "den Flächeninhalt mit A = (a + c) : 2 · h berechnen",
-    "im Trapez die parallelen Seiten a und c und die Höhe h erkennen"
+    "im Trapez die parallelen Seiten a und c und die Höhe h erkennen",
+    "den Umfang mit u = a + b + c + d berechnen"
   ],
   "ichKann": [
     "Ich kann die Flächenformel des Trapezes durch Verdoppeln oder Zerlegen begründen.",
     "Ich kann den Flächeninhalt mit A = (a + c) : 2 · h berechnen.",
-    "Ich kann im Trapez die parallelen Seiten a und c und die Höhe h erkennen."
+    "Ich kann im Trapez die parallelen Seiten a und c und die Höhe h erkennen.",
+    "Ich kann den Umfang mit u = a + b + c + d berechnen."
   ],
   "aufgaben": [
     {
@@ -82,49 +84,73 @@ window.SEITE = {
       "erklaerung": "A = 8 · 5 : 2 = 20 cm²"
     },
     {
-      "typ": "zahl",
-      "loesung": 27,
-      "tipps": [
-        "Schau dir das Beispiel im Merkkasten an."
-      ],
-      "einheit": "m²",
-      "frage": "Trapez: a = 12 m, c = 6 m, h = 3 m. Berechne A.",
       "niveau": 1,
-      "erklaerung": "A = (12 + 6) : 2 · 3 = 9 · 3 = 27 m²"
-    },
-    {
       "typ": "zahl",
-      "loesung": 20,
-      "tipps": [
-        "A = (a + c) : 2 · h"
-      ],
       "einheit": "cm²",
-      "frage": "Trapez: a = 7 cm, c = 3 cm, h = 4 cm. Berechne A.",
-      "niveau": 1,
-      "erklaerung": "A = (7 + 3) : 2 · 4 = 5 · 4 = 20 cm²"
-    },
-    {
-      "typ": "zahl",
-      "loesung": 8,
+      "frage": "Trapez: a = 8 cm, c = 4 cm, h = 3 cm. Berechne A.",
+      "loesung": 18,
       "tipps": [
-        "Erst A berechnen, dann : 2.",
-        "7,5 Säcke → aufrunden!"
+        "Schau dir das Beispiel im Merkkasten an.",
+        "(8 + 4) : 2 = 6"
       ],
-      "frage": "Ein Beet ist ein Trapez: a = 7 m, c = 5 m, h = 2,5 m. Ein Sack Mulch reicht für 2 m². Wie viele Säcke braucht man?",
-      "niveau": 2,
-      "erklaerung": "A = (7 + 5) : 2 · 2,5 = 15 m² · 15 : 2 = 7,5 → 8 Säcke"
+      "erklaerung": "A = (8 + 4) : 2 · 3 = 6 · 3 = 18 cm²"
     },
     {
+      "niveau": 1,
       "typ": "zahl",
-      "loesung": 4,
+      "einheit": "cm",
+      "frage": "Trapez mit den Seiten 8 cm, 5 cm, 4 cm und 5 cm. Berechne u.",
+      "loesung": 22,
+      "tipps": [
+        "Alle vier Seiten addieren."
+      ],
+      "erklaerung": "u = 8 + 5 + 4 + 5 = 22 cm"
+    },
+    {
+      "niveau": 2,
+      "typ": "zahl",
+      "einheit": "cm²",
+      "frage": "Trapez: a = 10 cm, c = 4 cm, h = 4 cm, Schenkel je 5 cm. Ben rechnet (10 + 4) : 2 · 5 = 35 cm². Wie groß ist A richtig?",
+      "loesung": 28,
+      "tipps": [
+        "Welche Zahl hat Ben für h genommen?",
+        "Die Höhe ist 4 cm, nicht 5 cm."
+      ],
+      "erklaerung": "Ben hat den Schenkel statt der Höhe genommen. A = (10 + 4) : 2 · 4 = 7 · 4 = 28 cm²"
+    },
+    {
+      "niveau": 2,
+      "typ": "zahl",
+      "einheit": "cm",
+      "frage": "Dasselbe Trapez: a = 10 cm, c = 4 cm, h = 4 cm, Schenkel je 5 cm. Berechne u.",
+      "loesung": 24,
+      "tipps": [
+        "Für den Umfang die vier Seiten, nicht die Höhe."
+      ],
+      "erklaerung": "u = 10 + 5 + 4 + 5 = 24 cm"
+    },
+    {
+      "niveau": 2,
+      "typ": "zahl",
+      "einheit": "m²",
+      "frage": "Ein Graben hat einen trapezförmigen Querschnitt: oben 3 m, unten 1 m breit, 1,5 m tief. Wie groß ist die Querschnittsfläche?",
+      "loesung": 3,
+      "tipps": [
+        "Trapez mit a = 3, c = 1, h = 1,5"
+      ],
+      "erklaerung": "A = (3 + 1) : 2 · 1,5 = 2 · 1,5 = 3 m²"
+    },
+    {
+      "niveau": 3,
+      "typ": "zahl",
+      "einheit": "cm",
+      "frage": "Ein Trapez hat A = 30 cm², a = 7 cm und c = 5 cm. Wie lang ist h?",
+      "loesung": 5,
       "tipps": [
         "Erst (a + c) : 2 ausrechnen.",
-        "40 = 10 · h"
+        "30 = 6 · h"
       ],
-      "einheit": "cm",
-      "frage": "Ein Trapez hat A = 40 cm², a = 12 cm und c = 8 cm. Wie lang ist h?",
-      "niveau": 3,
-      "erklaerung": "(12 + 8) : 2 = 10 · 40 : 10 = 4 cm"
+      "erklaerung": "(7 + 5) : 2 = 6 → 6 · h = 30 → h = 5 cm"
     },
     {
       "niveau": 1,
@@ -164,37 +190,26 @@ window.SEITE = {
       ]
     },
     {
-      "niveau": 2,
-      "typ": "zahl",
-      "frage": "Querschnitt eines Grabens: oben 3 m, unten 1 m breit, 1,5 m tief. Wie groß ist die Querschnittsfläche?",
-      "loesung": 3,
-      "tipps": [
-        "Trapez mit a = 3, c = 1, h = 1,5"
-      ],
-      "erklaerung": "A = (3 + 1) : 2 · 1,5 = 3 m²",
-      "einheit": "m²"
-    },
-    {
       "niveau": 3,
       "typ": "zahl",
-      "frage": "Dach: a = 10 m, c = 6 m, h = 4 m. 12 Ziegel pro m². Wie viele Ziegel?",
-      "loesung": 384,
+      "einheit": "Ziegel",
+      "frage": "Dachseite: a = 12 m, c = 6 m, h = 4 m. 12 Ziegel pro m². Wie viele Ziegel?",
+      "loesung": 432,
       "tipps": [
         "Erst A, dann · 12."
       ],
-      "erklaerung": "A = 32 m² → 32 · 12 = 384 Ziegel",
-      "einheit": "Ziegel"
+      "erklaerung": "A = (12 + 6) : 2 · 4 = 36 m² → 36 · 12 = 432 Ziegel"
     },
     {
       "niveau": 3,
       "typ": "zahl",
-      "frage": "Trapez mit a = 8 cm, c = 4 cm, Schenkel b = 5 cm, d = 5 cm. Wie groß ist u?",
-      "loesung": 22,
+      "einheit": "m",
+      "frage": "Dieselbe Dachseite hat schräge Kanten von je 5 m. Wie lang ist die Blechkante ringsherum?",
+      "loesung": 28,
       "tipps": [
-        "Alle vier Seiten addieren."
+        "u = a + b + c + d"
       ],
-      "erklaerung": "u = 8 + 5 + 4 + 5 = 22 cm",
-      "einheit": "cm"
+      "erklaerung": "u = 12 + 5 + 6 + 5 = 28 m"
     }
   ]
 };
